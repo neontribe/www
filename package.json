@@ -21,6 +21,8 @@
   ],
   "license": "MIT",
   "scripts": {
+    "precommit": "lint-staged",
+    "postcommit": "git update-index --again",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "yarn run develop",
@@ -45,5 +47,20 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --single-quote --trailing-comma es5 --write",
+      "git add"
+    ],
+    "*.js": [
+      "eslint",
+      "git add"
+    ]
   }
 }
