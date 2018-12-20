@@ -21,6 +21,8 @@
   ],
   "license": "MIT",
   "scripts": {
+    "precommit": "lint-staged",
+    "postcommit": "git update-index --again",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "yarn run develop",
@@ -29,6 +31,15 @@
     "now-build": "npm run build"
   },
   "devDependencies": {
+    "babel-eslint": "9.x",
+    "eslint": "5.x",
+    "eslint-config-react-app": "^3.0.5",
+    "eslint-plugin-flowtype": "2.x",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-react": "7.x",
+    "husky": "1.2.0",
+    "lint-staged": "8.1.0",
     "prettier": "1.15.2"
   },
   "engines": {
@@ -37,5 +48,20 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.js": [
+      "eslint",
+      "git add"
+    ]
   }
 }
