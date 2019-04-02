@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <title>Neontribe</title>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
+    <style type="text/css">
+      /* ---------------
+         Global
+       -------------- */
+      :root {
+        --gutter: 30px;
+      }
+      html, body {
+        height: 100%;
+      }
+      body {
+        background-color: #1F1E1F;
+        color: #ffffff;
+      }
+      a {
+        list-style: none;
+        text-decoration: none;
+        color: #ffffff;
+      }
+      /* ---------------
+         Tachyons overrides
+       -------------- */
+      .list {
+        padding: 0;
+      }
+      /* ---------------
+         Layout
+       -------------- */
+      .layout {
+        display: grid;
+        grid-template-areas: 
+          ". header ."
+          ". main ."
+          ". footer .";
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: auto minmax(auto, 1200px) auto;
+        height: 100%;
+        padding: 0 calc(var(--gutter) / 2);
+      }
+      .header {
+        grid-area: header;
+      }
+      .main {
+        grid-area: main;
+      }
+      .footer {
+        grid-area: footer;
+      }
+      .footer-background {
+        grid-column: 1 / 4;
+        grid-row: 3;
+        background-color: #131313;
+        margin: 0 calc(var(--gutter) / 2 * -1);
+      }
+      /* ---------------
+         Header
+       -------------- */
+      .logo {
+        height: 70px;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="layout">
+      <header class="header flex justify-between items-center flex-column flex-row-ns tc tl-ns mt4 mb5">
+        <div class="fl w-100 w-third-ns">
+          <img class="logo" src="logo.svg" alt="neontribe logo" />
+        </div>
+        <div class="fl w-100 w-third-ns">
+          <nav>
+          <ul class="list flex justify-center flex-column flex-row-ns flex-wrap ttu">
+            <li>How We Work</li>
+            <li>The Tribe</li>
+          </ul>
+          </nav>
+        </div>
+        <div class="fl w-100 w-third-ns tr-ns">
+          <a href="mailto:hello@neontribe.co.uk">hello@neontribe.co.uk</a>
+        </div>
+
+      </header>
+      <main class="main">Main</main>
+      <footer class="footer">Footer</footer>
+      <div class="footer-background"></div>
+    </div>
+  </body>
+</html>
