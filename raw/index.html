@@ -2,11 +2,14 @@
   <head>
     <title>Neontribe</title>
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/zml8kck.css">
     <style type="text/css">
+    
       /* ---------------
          Global
        -------------- */
       :root {
+        --page-width: 960px;
         --gutter: 30px;
       }
       html, body {
@@ -15,17 +18,22 @@
       body {
         background-color: #1F1E1F;
         color: #ffffff;
+        font-family: elido, sans-serif;
       }
       a {
         list-style: none;
         text-decoration: none;
         color: #ffffff;
       }
+      footer li {
+        list-style: none;
+      }
       /* ---------------
          Tachyons overrides
        -------------- */
       .list {
         padding: 0;
+        margin: 0;
       }
       /* ---------------
          Layout
@@ -37,7 +45,7 @@
           ". main ."
           ". footer .";
         grid-template-rows: auto 1fr auto;
-        grid-template-columns: auto minmax(auto, 1200px) auto;
+        grid-template-columns: auto minmax(auto, var(--page-width)) auto;
         height: 100%;
         padding: 0 calc(var(--gutter) / 2);
       }
@@ -49,6 +57,7 @@
       }
       .footer {
         grid-area: footer;
+        color: #ffffff;
       }
       .footer-background {
         grid-column: 1 / 4;
@@ -62,7 +71,23 @@
       .logo {
         height: 70px;
       }
-
+      /* ---------------
+         Footer
+       -------------- */
+      .twitterlogo {
+        height: 22px;
+      }
+      /* ---------------
+         Typography
+      -------------- */
+      .text {
+        box-shadow: 0 0 0 8px #00baff;
+        background-color: #00baff;
+        line-height: 2.35;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        font-size: 1.125em;
+      }
 
     </style>
   </head>
@@ -83,11 +108,47 @@
         <div class="fl w-100 w-third-ns tr-ns">
           <a href="mailto:hello@neontribe.co.uk">hello@neontribe.co.uk</a>
         </div>
+    </header>
 
-      </header>
-      <main class="main">Main</main>
-      <footer class="footer">Footer</footer>
+      <main class="main">
+        <img class="w-100" src="frontpageillus.jpg" alt="illustration of neontribe working" />
+        <div class="mv4 center w-100 w-75-ns">
+          <p>
+            <span class="text">Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et 
+            justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Ut wisi enim ad minim veniam, quis nostrud 
+            exerci ex ea commodo consequat.</span>
+          </p>
+        </div>
+      </main>
+
       <div class="footer-background"></div>
+      <footer class="footer flex justify-between flex-column flex-row-ns pv3">
+        <div class="fl w-25-ns w-50-m tl">
+          <ul class="list">
+            <li><a href="mailto:hello@neontribe.co.uk">hello@neontribe.co.uk</a></li>
+            <li>0845 689 0896</li>
+            <li><a href="">Privacy and Legal Information</a></li>
+          </ul>
+        </div>
+        <div class="fl w-25-ns w-50-m tl">
+          <div class="flex items-center">
+            <img class="twitterlogo" src="twitterlogo.svg" alt="twitter" />
+            <span>@neontribe</span>
+          </div>
+        </div>
+        <div class="fl w-25-ns w-50-m tl">
+          Norwich<br />
+          21 Colegate<br /> 
+          Norwich<br /> 
+          NR3 1BN
+        </div>
+        <div class="fl w-25-ns w-50-m tl">
+          Exeter<br />
+          The Generator Hub<br />
+          Exeter<br />
+          EX2 4AN
+        </div>
+      </footer>
     </div>
   </body>
 </html>
