@@ -39,18 +39,18 @@ module.exports = {
          * The base URL of the Wordpress site without the trailingslash and the protocol. This is required.
          * Example : 'gatsbyjsexamplewordpress.wordpress.com' or 'www.example-site.com'
          */
-        baseUrl: 'gatsbyjsexamplewordpress.wordpress.com',
+        baseUrl: 'neontester.wordpress.com',
         // The protocol. This can be http or https.
-        protocol: 'http',
+        protocol: 'https',
         // Indicates whether the site is hosted on wordpress.com.
         // If false, then the assumption is made that the site is self hosted.
         // If true, then the plugin will source its content on wordpress.com using the JSON REST API V2.
         // If your site is hosted on wordpress.org, then set this to false.
-        hostingWPCOM: false,
+        hostingWPCOM: true,
         // If useACF is true, then the source plugin will try to import the Wordpress ACF Plugin contents.
         // This feature is untested for sites hosted on wordpress.com.
         // Defaults to true.
-        useACF: true,
+        useACF: false,
         // Include specific ACF Option Pages that have a set post ID
         // Regardless if an ID is set, the default options route will still be retrieved
         // Must be using V3 of ACF to REST to include these routes
@@ -61,12 +61,6 @@ module.exports = {
         // Dashes in IDs will be converted to underscores for use in GraphQL
         acfOptionPageIds: [],
         auth: {
-          // If auth.user and auth.pass are filled, then the source plugin will be allowed
-          // to access endpoints that are protected with .htaccess.
-          htaccess_user: 'your-htaccess-username',
-          htaccess_pass: 'your-htaccess-password',
-          htaccess_sendImmediately: false,
-
           // If hostingWPCOM is true then you will need to communicate with wordpress.com API
           // in order to do that you need to create an app (of type Web) at https://developer.wordpress.com/apps/
           // then add your clientId, clientSecret, username, and password here
@@ -74,16 +68,9 @@ module.exports = {
           // If two-factor authentication is enabled then you need to create an Application-Specific Password,
           // see https://en.support.wordpress.com/security/two-step-authentication/#application-specific-passwords
           wpcom_app_clientSecret: process.env.WORDPRESS_CLIENT_SECRET,
-          wpcom_app_clientId: '54793',
-          wpcom_user: 'gatsbyjswpexample@gmail.com',
+          wpcom_app_clientId: process.env.WORDPRESS_CLIENT_ID,
+          wpcom_user: process.env.WORDPRESS_USER,
           wpcom_pass: process.env.WORDPRESS_PASSWORD,
-
-          // If you use "JWT Authentication for WP REST API" (https://wordpress.org/plugins/jwt-authentication-for-wp-rest-api/)
-          // or (https://github.com/jonathan-dejong/simple-jwt-authentication) requires jwt_base_path, path can be found in wordpress wp-api.
-          // plugin, you can specify user and password to obtain access token and use authenticated requests against wordpress REST API.
-          jwt_user: process.env.JWT_USER,
-          jwt_pass: process.env.JWT_PASSWORD,
-          jwt_base_path: '/jwt-auth/v1/token', // Default - can skip if you are using https://wordpress.org/plugins/jwt-authentication-for-wp-rest-api/
         },
         // Set verboseOutput to true to display a verbose output on `npm run develop` or `npm run build`
         // It can help you debug specific API Endpoints problems.
