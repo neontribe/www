@@ -2,7 +2,7 @@
   <head>
     <title>Neontribe</title>
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
-    <link rel="stylesheet" href="https://use.typekit.net/zml8kck.css">
+    <link rel="stylesheet" href="https://use.typekit.net/zml8kck.css" />
     <style type="text/css">
     
       /* ---------------
@@ -33,19 +33,36 @@
       footer li {
         list-style: none;
       }
+
+      /* ---------------
+         Typography
+      -------------- */
+      h2 {
+        font-size: 2rem;
+        margin: 0;
+      }
       p { 
         background-color: var(--color-background);
         line-height: 1.25;
         font-size: 1.125rem;
         padding: 0.45rem;
       }
+
+      /* ---------------
+         Our Work Entry
+      -------------- */
+      .our-work-entry-problem, 
+      .our-work-entry-solution {
+        padding-bottom: 0 !important;
+        font-size: 1.125rem;
+      }
+      
       /* ---------------
          Utilities
       -------------- */
       .text {
         background-color: var(--color-background);
         line-height: 1.25;
-        font-size: 1.125rem;
         padding: 0.45rem;
         display: inline-block;
         text-align: center;
@@ -89,16 +106,17 @@
         margin: 0 calc(var(--gutter) / 2 * -1);
       }
       /* ---------------
-         Header
+         Logo
        -------------- */
       .logo {
         height: 70px;
       }
-      /* ---------------
-         Footer
-       -------------- */
       .twitterlogo {
         height: 22px;
+      }
+      .funderslogo {
+        height: 160px;
+        margin: 20px 10px;
       }
 
     </style>
@@ -120,7 +138,7 @@
         <div class="fl w-100 w-two-thirds-m w-third-l tr-ns">
           <a href="mailto:hello@neontribe.co.uk" class="text">hello@neontribe.co.uk</a>
         </div>
-    </header>
+      </header>
 
       <main class="main">
         <img class="w-100" src="frontpageillus.jpg" alt="illustration of neontribe working" />
@@ -130,15 +148,27 @@
             justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Ut wisi enim ad minim veniam, quis nostrud 
             exerci ex ea commodo consequat.
           </p>
+        </div>
+        <div class="w-100">
+          <h2 class="text">How We Work</h2>
           <p>
-            Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et 
-            justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Ut wisi enim ad minim veniam, quis nostrud 
-            exerci ex ea commodo consequat.
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+            At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie 
+            consequat, praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
           </p>
         </div>
+        <div class="w-100 tc">
+          <img class="funderslogo" src="./funderslogo1.png" alt="comic relief logo" />
+          <img class="funderslogo" src="./funderslogo2.png" alt="department for culture media and sport logo" />
+          <img class="funderslogo" src="./funderslogo3.png" alt="national lottery logo" />
+          <img class="funderslogo" src="./funderslogo4.png" alt="CAST logo" />
+          <img class="funderslogo" src="./funderslogo5.png" alt="Haven logo" />
+        </div>
+        <h2 class="text">Our Work</h2>
+        <div id="entries"><!-- injected by JS --></div>
       </main>
 
-      <div class="footer-background"></div>
+      <div class="footer-background"></div> 
       <footer class="footer flex justify-between flex-column flex-row-ns pv3">
         <div class="fl w-25-ns w-50-m tl">
           <ul class="list">
@@ -167,5 +197,83 @@
         </div>
       </footer>
     </div>
+
+    <script type="text/javascript">
+
+      const colours = ['hotpink', 'green', 'blue'];
+      
+      window.entries = [];
+
+      window.entries.push({
+        title: 'Mind of my Own',
+        image: 'ourwork-momo.jpg',
+        quote: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et 
+          justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctust.`,
+        description: `Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming lacerat facer possim assum. Lorem ipsum dolor sit amet, consetetur sadipscing 
+          elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.`,
+        problem: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.`,
+        solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
+        destination: 'https://mindofmyown.org.uk'
+      });
+
+      window.entries.push({
+        title: 'Alexander Rose',
+        image: 'ourwork-momo.jpg',
+        quote: `xxx`,
+        description: `Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming lacerat facer possim assum. Lorem ipsum dolor sit amet, consetetur sadipscing 
+          elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.`,
+        problem: `dolore magna aliquyam erat, sed diam voluptua.`,
+        solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
+        destination: 'https://mindofmyown.org.uk'
+      });
+
+      window.entries.push({
+        title: 'Alexander Rose',
+        image: 'ourwork-momo.jpg',
+        quote: `xxx`,
+        description: `Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming lacerat facer possim assum. Lorem ipsum dolor sit amet, consetetur sadipscing 
+          elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.`,
+        problem: `dolore magna aliquyam erat, sed diam voluptua.`,
+        solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
+        destination: 'https://mindofmyown.org.uk'
+      });
+
+      window.entries.push({
+        title: 'Alexander Rose',
+        image: 'ourwork-momo.jpg',
+        quote: `abc`,
+        description: `Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming lacerat facer possim assum. Lorem ipsum dolor sit amet, consetetur sadipscing 
+          elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.`,
+        problem: `dolore magna aliquyam erat, sed diam voluptua.`,
+        solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
+        destination: 'https://mindofmyown.org.uk'
+      });
+
+      document.getElementById('entries').innerHTML = window.entries.map((entry, index) => `
+        <div class="w-100">
+          <img class="fl mr3 mb3" src="./${entry.image}" alt="screenshot of mind of our own app" /> 
+          <h3>${entry.title}</h3>
+          <p class="fw7">${entry.quote}</p>
+          <p>
+            ${entry.description}
+            <a href="${entry.destination}" class="nowrap">
+              ${entry.destination.split('://')[1]}
+              <span style="color: ${colours[index % colours.length]};">&rarr;</span>
+            </a>
+          </p>
+          <div class="cb">
+            <div>
+              <h4 class="our-work-entry-problem text fl ma0">Problem:</h3>
+              <p>${entry.problem}</p>
+            </div>
+            <div>
+              <h4 class="our-work-entry-solution text fl ma0">Solution:</h3>
+              <p>${entry.solution}</p>
+            </div>
+          </div>
+        </div>
+      `);
+
+    </script>
   </body>
 </html>
