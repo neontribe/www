@@ -30,9 +30,19 @@
         text-decoration: none;
         color: #ffffff;
       }
+      *:focus {
+        outline: none;
+        border: 3px solid #FB37F1;
+        box-shadow: 0px 0px 8px #FB37F1;
+        padding: 2px 6px 8px 6px;
+      }
       footer li {
         list-style: none;
       }
+      /* Highlight code
+      ::-moz-selection { background: yellow; }
+      ::selection { background: yellow; } 
+      */
 
       /* ---------------
          Typography
@@ -315,6 +325,21 @@
           </div>
         </div>
       `).join('');
+
+      const focusable = document.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+
+      focusable.forEach((element, index) => {
+        element.addEventListener('focus', event => {
+          const color = colours[index % colours.length];
+          event.target.style.borderColor = color;
+          event.target.style.boxShadow = `0 0 8px ${color}`;
+        });
+
+        element.addEventListener('blur', event => {
+          event.target.style.borderColor = null;
+          event.target.style.boxShadow = null;
+        });
+      });
 
     </script>
   </body>
