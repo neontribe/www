@@ -1,4 +1,4 @@
-require('now-env')
+// require('now-env')
 
 module.exports = {
   siteMetadata: {
