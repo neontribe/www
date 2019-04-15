@@ -1,4 +1,12 @@
-require('now-env')
+/**
+ * If we're not in production then we'll use now-env
+ * This reads env secrets and vars from:
+ * - now-secrets.json => env vars which are defined as now.sh secrets.
+ * - now-required.json => env vars (including sectures) which are required for program to function.
+ */
+if (process.env.NODE_ENV !== 'production') {
+  require('now-env')
+}
 
 module.exports = {
   siteMetadata: {
