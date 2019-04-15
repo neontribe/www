@@ -1,6 +1,4 @@
-require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+require('now-env')
 
 module.exports = {
   siteMetadata: {

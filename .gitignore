@@ -69,3 +69,8 @@ yarn-error.log
 .pnp.js
 # Yarn Integrity file
 .yarn-integrity
+
+# Zeit Now CI ignores
+now-required.json
+now-secrets.json
+
