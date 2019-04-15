@@ -1,0 +1,6 @@
+{
+  "WORDPRESS_CLIENT_SECRET": "secret",
+  "WORDPRESS_CLIENT_ID": "client_id",
+  "WORDPRESS_USER": "username",
+  "WORDPRESS_PASSWORD": "password"
+}
