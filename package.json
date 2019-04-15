@@ -27,7 +27,7 @@
     "precommit": "lint-staged",
     "postcommit": "git update-index --again",
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "start": "yarn run develop",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
