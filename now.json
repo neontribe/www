@@ -9,14 +9,14 @@
       "config": {
         "distDir": "public",
         "useBuildUtils": "@now/build-utils@canary"
-      },
-      "env": {
-        "WORDPRESS_CLIENT_SECRET": "@neon-wp-client-secret",
-        "WORDPRESS_CLIENT_ID": "@neon-wp-client-id",
-        "WORDPRESS_USER": "@neon-wp-user",
-        "WORDPRESS_PASSWORD": "@neon-wp-password"
       }
     }
   ],
+  "env": {
+    "WORDPRESS_CLIENT_SECRET": "@neon-wp-client-secret",
+    "WORDPRESS_CLIENT_ID": "@neon-wp-client-id",
+    "WORDPRESS_USER": "@neon-wp-user",
+    "WORDPRESS_PASSWORD": "@neon-wp-password"
+  },
   "regions": ["bru1"]
 }
