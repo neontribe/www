@@ -12,11 +12,13 @@
       }
     }
   ],
-  "env": {
-    "WORDPRESS_CLIENT_SECRET": "@neon-wp-client-secret",
-    "WORDPRESS_CLIENT_ID": "@neon-wp-client-id",
-    "WORDPRESS_USER": "@neon-wp-user",
-    "WORDPRESS_PASSWORD": "@neon-wp-password"
+  "build": {
+    "env": {
+      "WORDPRESS_CLIENT_SECRET": "@neon-wp-client-secret",
+      "WORDPRESS_CLIENT_ID": "@neon-wp-client-id",
+      "WORDPRESS_USER": "@neon-wp-user",
+      "WORDPRESS_PASSWORD": "@neon-wp-password"
+    }
   },
   "regions": ["bru1"]
 }
