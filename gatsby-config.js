@@ -3,7 +3,7 @@
  *
  * Serves as the main configuration file for our Gatsby install.
  *
- * gatsby-source-wordpress config derived from https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-wordpress#how-to-use
+ * Based on example config provided here: https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-source-wordpress#how-to-use
  */
 
 /**

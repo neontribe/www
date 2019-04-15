@@ -1,3 +1,13 @@
+/**
+ * Gatsby Node Setup
+ *
+ * Serves as the main content population file for Gatsby.
+ * - Creates core site pages based on WP data: `allWordpressPage`
+ * - Creates core site posts based on WP data: `allWordpressPost`
+ *
+ * Based on: https://github.com/gatsbyjs/gatsby/blob/master/examples/using-wordpress/gatsby-node.js
+ */
+
 const path = require(`path`)
 const slash = require(`slash`)
 
