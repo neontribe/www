@@ -11,13 +11,12 @@
     "gatsby-plugin-react-helmet": "3.0.2",
     "gatsby-plugin-sharp": "2.0.12",
     "gatsby-source-filesystem": "2.0.8",
-    "gatsby-source-wordpress": "^3.0.53",
+    "gatsby-source-wordpress": "3.0.54",
     "gatsby-transformer-sharp": "2.1.8",
-    "now-env": "^3.1.0",
+    "now-env": "3.1.0",
     "react": "16.6.3",
     "react-dom": "16.6.3",
-    "react-helmet": "5.2.0",
-    "sharp": "^0.22.0"
+    "react-helmet": "5.2.0"
   },
   "keywords": [
     "gatsby"
