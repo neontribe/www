@@ -1,4 +1,4 @@
-// require('now-env')
+require('now-env')
 
 module.exports = {
   siteMetadata: {
@@ -41,7 +41,7 @@ module.exports = {
          * The base URL of the Wordpress site without the trailingslash and the protocol. This is required.
          * Example : 'gatsbyjsexamplewordpress.wordpress.com' or 'www.example-site.com'
          */
-        baseUrl: 'neontribeweb.wordpress.com',
+        baseUrl: process.env.WORDPRESS_BASE_URL || 'neontribeweb.wordpress.com',
         // The protocol. This can be http or https.
         protocol: 'https',
         // Indicates whether the site is hosted on wordpress.com.
