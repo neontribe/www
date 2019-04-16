@@ -3,155 +3,8 @@
     <title>Neontribe</title>
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
     <link rel="stylesheet" href="https://use.typekit.net/zml8kck.css" />
-    <style type="text/css">
-    
-      /* ---------------
-         Global
-       -------------- */
-      :root {
-        --page-width: 960px;
-        --gutter: 30px;
-        --color-background: #1F1E1F;
-      }
-      html, body {
-        height: 100%;
-      }
-      body {
-        background-color: var(--color-background);
-        color: #ffffff;
-        font-family: elido, sans-serif;
-        background-image: url('./hexagons-left.png'), url('./hexagons-right.png');
-        background-repeat: repeat-y;
-        background-position: top left, top right;
+    <link rel="stylesheet" href="./style.css" />
 
-      }
-      a {
-        list-style: none;
-        text-decoration: none;
-        color: #ffffff;
-      }
-      *:focus {
-        outline: none;
-        border: 3px solid #FB37F1;
-        box-shadow: 0px 0px 8px #FB37F1;
-        padding: 2px 6px 8px 6px;
-      }
-      footer li {
-        list-style: none;
-      }
-      /* Highlight code
-      ::-moz-selection { background: yellow; }
-      ::selection { background: yellow; } 
-      */
-
-      /* ---------------
-         Typography
-      -------------- */
-      h2 {
-        font-size: 2rem;
-        margin: 0;
-      }
-      h3 {
-        font-size: 1.5rem;
-        margin: 0;
-      }
-      p { 
-        background-color: var(--color-background);
-        line-height: 1.25;
-        font-size: 1.125rem;
-        padding: 0.25rem;
-      }
-
-      /* ---------------
-         Our Work Entry
-      -------------- */
-      .our-work-entry-problem, 
-      .our-work-entry-solution {
-        padding-bottom: 0 !important;
-        font-size: 1.125rem;
-      }
-
-      .our-work-entry-link {
-        border-bottom: 2px solid transparent;
-      }
-      
-      /* ---------------
-         The Tribe Grid
-      -------------- */
-      .tribeimage {
-        height: 250px;
-      }
-
-      /* ---------------
-         Utilities
-      -------------- */
-      .text {
-        background-color: var(--color-background);
-        line-height: 1.25;
-        padding: 0.25rem;
-        display: inline-block;
-        text-align: center;
-      }
-
-      /* ---------------
-         Tachyons overrides
-       -------------- */
-      .list {
-        padding: 0;
-        margin: 0;
-      }
-      /* ---------------
-         Layout
-       -------------- */
-      .layout {
-        display: grid;
-        grid-template-areas: 
-          ". header ."
-          ". main ."
-          ". footer .";
-        grid-template-rows: auto 1fr auto;
-        grid-template-columns: auto minmax(auto, var(--page-width)) auto;
-        height: 100%;
-        padding: 0 calc(var(--gutter) / 2);
-      }
-      .header {
-        grid-area: header;
-      }
-      .main {
-        grid-area: main;
-      }
-      .footer {
-        grid-area: footer;
-        color: #ffffff;
-      }
-      .footer-background {
-        grid-column: 1 / 4;
-        grid-row: 3;
-        background-color: #131313;
-        margin: 0 calc(var(--gutter) / 2 * -1);
-      }
-
-      /* ---------------
-         Colour
-       -------------- */
-      .arrowpink{
-        color: #FB37F1
-      }
-      /* ---------------
-         Logo
-       -------------- */
-      .logo {
-        height: 70px;
-      }
-      .twitterlogo {
-        height: 22px;
-      }
-      .funderslogo {
-        height: 130px;
-        margin: 30px 10px;
-      }
-
-    </style>
   </head>
   <body>
     <div class="layout">
@@ -180,6 +33,9 @@
             justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Ut wisi enim ad minim veniam, quis nostrud 
             exerci ex ea commodo consequat.
           </p>
+        </div>
+        <div class="w-100">
+          <h2 class="text">The Tribe</h2>
         </div>
         
 
@@ -213,13 +69,64 @@
 
       <div class="flex flex-wrap justify-center">
         <div class="fl pa2">
-          <img class="tribeimage" src="./thetribe1.png" alt="" />
+          <button
+            type="button"
+            class="flip-button"
+            onclick="const self = this; Array.from(document.getElementsByClassName('flip-container')).filter(el => { console.log(el, self.firstChildElement, el === self.firstChildElement); return el !== self.firstChildElement; }).forEach(item => item.classList.toggle('active'));"
+          >
+            <span class="flip-container">
+              <span class="flipper">
+                <span class="front relative flex flex-column items-center">
+                  <img class="tribe-image" src="./thetribe1.png" alt="" />
+                  <span class="absolute mb2 bottom-1">
+                    <span class="text w-100 fw7">
+                      Bruce Wayne
+                      <span class="arrowpink">&rarr;</span>
+                    </span>
+                  </span>
+                </span>
+                <span class="back">
+                  hedgehogs
+                </span>
+              </span>
+            </span>
+          </button>
         </div>
         <div class="fl pa2">
-          <img class="tribeimage" src="./thetribe1.png" alt="" />
+            <button
+              type="button"
+              class="flip-button"
+              onclick="Array.from(document.getElementsByClassName('flip-container')).filter(el => el !== this.firstChildElement).forEach(item => item.classList.toggle('active'));"
+            >
+              <span class="flip-container">
+                <span class="flipper">
+                  <span class="front relative flex flex-column items-center">
+                    <img class="tribe-image" src="./thetribe1.png" alt="" />
+                    <span class="absolute mb2 bottom-1">
+                      <span class="text w-100 fw7">
+                        Bruce Wayne
+                        <span class="arrowpink">&rarr;</span>
+                      </span>
+                    </span>
+                  </span>
+                  <span class="back">
+                    hedgehogs
+                  </span>
+                </span>
+              </span>
+            </button>
+          </div>
+        <div class="fl pa2">
+          <img class="tribe-image" src="./thetribe1.png" alt="" />
         </div>
         <div class="fl pa2">
-          <img class="tribeimage" src="./thetribe1.png" alt="" />
+          <img class="tribe-image" src="./thetribe1.png" alt="" />
+        </div>
+        <div class="fl pa2">
+          <img class="tribe-image" src="./thetribe1.png" alt="" />
+        </div>
+        <div class="fl pa2">
+          <img class="tribe-image" src="./thetribe1.png" alt="" />
         </div>
 
       </div>
@@ -254,8 +161,8 @@
         </div>
         <div class="fl w-25-ns w-50-m tl">
           Norwich<br />
-          21 Colegate<br /> 
-          Norwich<br /> 
+          21 Colegate<br />
+          Norwich<br />
           NR3 1BN
         </div>
         <div class="fl w-25-ns w-50-m tl">
@@ -343,7 +250,7 @@
       document.getElementById('entries').innerHTML = window.entries.map((entry, index) => `
         <div class="w-100">
           <img class="fl mr3 mb2" src="./${entry.image}" alt="screenshot of mind of our own app" /> 
-          <h3>${entry.title}</h3>
+          <h3 class="text">${entry.title}</h3>
           <p class="fw7">${entry.quote}</p>
           <p>
             ${entry.description}
