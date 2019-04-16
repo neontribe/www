@@ -7,7 +7,11 @@
     - git
     - [nvm](https://github.com/creationix/nvm)
 
-1.  **Get up and running**
+    **_Optional_**
+
+    - [now](https://github.com/zeit/now-cli)
+
+2.  **Get up and running**
 
     Navigate into your new site’s directory and start it up.
 
@@ -20,13 +24,15 @@
     yarn dev
     ```
 
-    Optionally provide environment variables (such as API auth) through the `now-secrets.json` file.
+    Optionally provide secret environment variables (such as API auth) through the `now-secrets.json` file.
+
+    API credentials are only required to build the front-end if the wp.com instance is set to _private_.
 
     ```sh
     cp now-secrets.example.json now-secrets.json
     ```
 
-    Enter API credentials in corresponding fields.
+    Expected format of now-secrets.json
 
     ```json
     {
@@ -37,7 +43,17 @@
     }
     ```
 
-1.  **Open the source code and start editing!**
+    Available environment variables
+
+    ```sh
+    WORDPRESS_BASE_URL="wordpress.com base url"
+    WORDPRESS_CLIENT_SECRET="wordpress.com api client secret"
+    WORDPRESS_CLIENT_ID="wordpress.com api client id"
+    WORDPRESS_USER="wordpress.com username"
+    WORDPRESS_PASSWORD="wordpress.com password"
+    ```
+
+3.  **Open the source code and start editing!**
 
     Your site is now running at `http://localhost:8000`!
 
