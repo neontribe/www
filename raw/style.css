@@ -19,6 +19,9 @@
         background-position: top left, top right;
 
       }
+      button {
+        cursor: pointer;
+      }
       a {
         list-style: none;
         text-decoration: none;
@@ -166,7 +169,7 @@
     perspective: 1000px;
 }
 
-.flip-container.active .flipper {
+.active .flipper {
     transform: rotateY(180deg);
 }
 
@@ -205,4 +208,58 @@
 /* back, initially hidden pane */
 .back {
 	transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+
+
+/* Carousel */
+
+.slides {
+  transition: transform 1s;
+  padding: 0 50px;
+}
+
+.prev,
+.next {
+  margin: auto;
+
+  /* reset button styles */
+  color: inherit;
+  border: 0;
+  background: none;
+}
+
+.prev::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 0; 
+  height: 0; 
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent; 
+  border-right: 30px solid hotpink; 
+}
+
+.next::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 0; 
+  height: 0; 
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  border-left: 30px solid hotpink;
 }
