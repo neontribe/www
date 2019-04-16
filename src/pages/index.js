@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
+import frontpageillus from '../images/frontpageillus.jpg'
 
 class IndexPage extends Component {
   render() {
@@ -9,7 +10,22 @@ class IndexPage extends Component {
 
     return (
       <Layout>
-        <div>
+        <img
+          className="w-100"
+          src={frontpageillus}
+          alt="illustration of neontribe working"
+        />
+        <div className="mv4 center w-100 w-75-ns">
+          <p>
+            Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+            ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero
+            eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
+            gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+            Ut wisi enim ad minim veniam, quis nostrud exerci ex ea commodo
+            consequat.
+          </p>
+        </div>
+        {/* <div>
           <h1>Pages</h1>
           {data.allWordpressPage.edges.map(({ node }) => (
             <div key={node.slug}>
@@ -30,7 +46,7 @@ class IndexPage extends Component {
             </Link>
             <div dangerouslySetInnerHTML={{ __html: node.excerpt }} />
           </div>
-        ))}
+        ))} */}
       </Layout>
     )
   }

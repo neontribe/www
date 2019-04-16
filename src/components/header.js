@@ -2,41 +2,45 @@ import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+import logo from '../images/logo.svg'
+
+const Header = ({ siteTitle, siteMenu }) => (
+  <header className="header flex justify-between items-center flex-column flex-row-ns tc tl-ns mt4 mb5">
+    <div className="fl w-100 w-third-ns mb4 mb0-ns">
+      {/* TODO: Import from props */}
+      <img className="logo" src={logo} alt="neontribe logo" />
     </div>
-  </div>
+    <div className="fl w-100 w-two-thirds-m w-third-l">
+      <nav>
+        <ul className="list flex justify-center flex-column flex-row-ns flex-wrap ttu nowrap">
+          {/* Refactor: take this into a <Menu /> component? */}
+          {siteMenu.edges.map(({ node }) => (
+            <li key={node.slug}>
+              <Link to={node.slug} className="text">
+                {node.title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </div>
+    <div className="fl w-100 w-two-thirds-m w-third-l tr-ns">
+      {/* TODO: Import from props */}
+      <a href="mailto:hello@neontribe.co.uk" className="text">
+        hello@neontribe.co.uk
+      </a>
+    </div>
+  </header>
 )
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
+  siteMenu: PropTypes.array,
 }
 
 Header.defaultProps = {
   siteTitle: '',
+  siteMenu: [],
 }
 
 export default Header
