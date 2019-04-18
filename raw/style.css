@@ -10,6 +10,9 @@
       html, body {
         height: 100%;
       }
+      img {
+        background: none;
+      }
       body {
         background-color: var(--color-background);
         color: #ffffff;
@@ -17,9 +20,6 @@
         background-image: url('./hexagons-left.png'), url('./hexagons-right.png');
         background-repeat: repeat-y;
         background-position: top left, top right;
-      }
-      button {
-        cursor: pointer;
       }
       a {
         list-style: none;
@@ -31,6 +31,9 @@
         outline: none;
         border: 3px solid #FB37F1;
         box-shadow: 0px 0px 8px #FB37F1;
+      }
+      button {
+        cursor: pointer;
       }
       footer li {
         list-style: none;
@@ -56,18 +59,21 @@
         margin: 0;
       }
       h4 {
-          font-size: 1.3rem;
-          margin: 10;
+          font-size: 1.2rem;
+          margin: 5;
       }
       h5 {
           font-size: 1rem;
-          margin: 10;
+          margin: 5;
       }
       p { 
         background-color: var(--color-background);
         line-height: 1.25;
         font-size: 1.125rem;
         padding: 0.25rem;
+      }
+      .smallparagraph {
+        font-size: 1rem;
       }
 
       .visually-hidden {
@@ -244,16 +250,14 @@
          THE TRIBE GRID
       ------------------ */
       .tribe-image {
-        height: 250px;
-      }
-      .flip-button:focus {
-        padding: 0;
+        height: 220px;
       }
       .flip-button {
         /* strip button styles */
         border: 0;
         background: none;
         color: inherit;
+        padding: 0;
       } 
       /* entire container, keeps perspective */
       .flip-container {
@@ -266,8 +270,8 @@
       .flip-container,
       .front,
       .back {
-        width: 250px;
-        height: 250px;
+        width: 220px;
+        height: 220px;
       }
       /* flip speed goes here */
       .flipper {
@@ -300,5 +304,6 @@
           background-color: #fff;
           color: #131313;
           padding: 10px;
+          overflow: auto;
       }
 
