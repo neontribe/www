@@ -306,4 +306,14 @@
           padding: 10px;
           overflow: auto;
       }
+      .back::-webkit-scrollbar {
+        width: 0.5em;
+      }
+      .back::-webkit-scrollbar-track {
+        background-color: lightgray;
+      }
+      .back::-webkit-scrollbar-thumb {
+        background-color: #9013FE;
+        border-radius: 20px;
+      }
 
