@@ -1,309 +1,320 @@
 
-      /* ---------------
-         GLOBAL STYLES
-       -------------- */
-      :root {
-        --page-width: 960px;
-        --gutter: 30px;
-        --color-background: #1F1E1F;
-      }
-      html, body {
-        height: 100%;
-      }
-      img {
-        background: none;
-      }
-      body {
-        background-color: var(--color-background);
-        color: #ffffff;
-        font-family: elido, sans-serif;
-        background-image: url('./hexagons-left.png'), url('./hexagons-right.png');
-        background-repeat: repeat-y;
-        background-position: top left, top right;
-      }
-      a {
-        list-style: none;
-        text-decoration: none;
-        color: #ffffff;
-      }
-      a:focus,
-      button:focus {
-        outline: none;
-        border: 3px solid #FB37F1;
-        box-shadow: 0px 0px 8px #FB37F1;
-      }
-      button {
-        cursor: pointer;
-      }
-      footer li {
-        list-style: none;
-      }
-      *, *::before, *::after {
-        box-sizing: border-box;
-      }
-      /* Highlight code
-      ::-moz-selection { background: yellow; }
-      ::selection { background: yellow; } 
-      */
+    /* ---------------
+        GLOBAL STYLES
+    -------------- */
+    :root {
+    --page-width: 960px;
+    --gutter: 30px;
+    --color-background: #1F1E1F;
+    }
+    html, body {
+    height: 100%;
+    }
+    img {
+    background: none;
+    }
+    body {
+    background-color: var(--color-background);
+    color: #ffffff;
+    font-family: elido, sans-serif;
+    background-image: url('./hexagons-left.png'), url('./hexagons-right.png');
+    background-repeat: repeat-y;
+    background-position: top left, top right;
+    }
+    a {
+    list-style: none;
+    text-decoration: none;
+    color: #ffffff;
+    }
+    a:focus,
+    button:focus {
+    outline: none;
+    border: 2px solid #FB37F1;
+    box-shadow: 0px 0px 4px #FB37F1;
+    }
+    button {
+    cursor: pointer;
+    }
+    footer li {
+    list-style: none;
+    }
+    *, *::before, *::after {
+    box-sizing: border-box;
+    }
+    /* Highlight code
+    ::-moz-selection { background: yellow; }
+    ::selection { background: yellow; } 
+    */
 
 
-      /* ---------------
-         TYPOGRAPHY
-      -------------- */
-      h2 {
-        font-size: 2rem;
-        margin: 0;
-      }
-      h3 {
-        font-size: 1.5rem;
-        margin: 0;
-      }
-      h4 {
-          font-size: 1.2rem;
-          margin: 5;
-      }
-      h5 {
-          font-size: 1rem;
-          margin: 5;
-      }
-      p { 
-        background-color: var(--color-background);
-        line-height: 1.25;
-        font-size: 1.125rem;
-        padding: 0.25rem;
-      }
-      .smallparagraph {
+    /* ---------------
+        TYPOGRAPHY
+    -------------- */
+    h2 {
+    font-size: 2rem;
+    margin: 0;
+    }
+    h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    }
+    h4 {
+        font-size: 1.2rem;
+        margin: 5;
+    }
+    h5 {
         font-size: 1rem;
-      }
+        margin: 5;
+    }
+    p { 
+    background-color: var(--color-background);
+    line-height: 1.25;
+    font-size: 1.125rem;
+    padding: 0.25rem;
+    }
+    .smallparagraph {
+    font-size: 1rem;
+    }
 
-      .visually-hidden {
-        border: 0;
-        clip: rect(1px, 1px, 1px, 1px);
-        height: 1px;
-        margin: -1px;
-        overflow: hidden;
-        padding: 0;
-        position: absolute;
-        width: 1px;
+    .visually-hidden {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    }
+    .text-name {
+    background-color: var(--color-background);
+    line-height: 1.25;
+    padding: 0.25rem;
+    display: inline-block;
+    text-align: center;
+    }
+
+    /* -----------
+        UTILITIES
+    ------------- */
+    .text {
+    background-color: var(--color-background);
+    line-height: 1.25;
+    display: inline-block;
+    text-align: center;
+    }
+
+    /* -----------------
+        TACHYON OVERIDES
+    ----------------- */
+    .list {
+    padding: 0;
+    margin: 0;
     }
 
 
-      /* -----------
-         UTILITIES
-      ------------- */
-      .text {
-        background-color: var(--color-background);
-        line-height: 1.25;
-        padding: 0.25rem;
-        display: inline-block;
-        text-align: center;
-      }
-      .text:focus {
-        padding: 2px 6px 8px 6px;
-      }
+    /* ---------------
+        LAYOUT
+    -------------- */
+    .layout {
+    display: grid;
+    grid-template-areas: 
+        ". header ."
+        ". main ."
+        ". footer .";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: auto minmax(auto, var(--page-width)) auto;
+    height: 100%;
+    padding: 0 calc(var(--gutter) / 2);
+    }
+    .header {
+    grid-area: header;
+    }
+    .main {
+    grid-area: main;
+    }
+    .footer {
+    grid-area: footer;
+    color: #ffffff;
+    }
+    .footer-background {
+    grid-column: 1 / 4;
+    grid-row: 3;
+    background-color: #131313;
+    margin: 0 calc(var(--gutter) / 2 * -1);
+    }
 
 
-      /* -----------------
-         TACHYON OVERIDES
-       ----------------- */
-      .list {
-        padding: 0;
-        margin: 0;
-      }
+    /* ---------------
+        COLOUR
+    -------------- */
+    .arrowpink{
+    color: #FB37F1
+    }
+    .arrowlightblue {
+    color: #54FCFD
+    }
 
 
-      /* ---------------
-         LAYOUT
-       -------------- */
-      .layout {
-        display: grid;
-        grid-template-areas: 
-          ". header ."
-          ". main ."
-          ". footer .";
-        grid-template-rows: auto 1fr auto;
-        grid-template-columns: auto minmax(auto, var(--page-width)) auto;
-        height: 100%;
-        padding: 0 calc(var(--gutter) / 2);
-      }
-      .header {
-        grid-area: header;
-      }
-      .main {
-        grid-area: main;
-      }
-      .footer {
-        grid-area: footer;
-        color: #ffffff;
-      }
-      .footer-background {
-        grid-column: 1 / 4;
-        grid-row: 3;
-        background-color: #131313;
-        margin: 0 calc(var(--gutter) / 2 * -1);
-      }
+    /* ---------------
+        LOGOS
+    -------------- */
+    .logo {
+    height: 70px;
+    }
+    .twitterlogo {
+    height: 22px;
+    }
+    .funderslogo {
+    height: 130px;
+    margin: 20px 10px;
+    }
 
 
-      /* ---------------
-         COLOUR
-       -------------- */
-      .arrowpink{
-        color: #FB37F1
-      }
-      .arrowlightblue {
-        color: #54FCFD
-      }
+    /* ---------------
+        CAROUSEL
+    ------------------ */
+    .slides {
+    transition: transform 1s;
+    }
+    .slide-image {
+    flex-shrink: 0;
+    max-width: 250px;
+    }
 
-
-      /* ---------------
-         LOGOS
-       -------------- */
-      .logo {
-        height: 70px;
-      }
-      .twitterlogo {
-        height: 22px;
-      }
-      .funderslogo {
-        height: 130px;
-        margin: 20px 10px;
-      }
-
-
-      /* ---------------
-         CAROUSEL
-      ------------------ */
-      .slides {
-        transition: transform 1s;
-      }
-      .slide-image {
-        flex-shrink: 0;
-        max-width: 250px;
-      }
+    .prev,
+    .next {
+    margin: auto;
+    width: 26px;
     
-      .prev,
-      .next {
-        margin: auto;
-        width: 26px;
-      
-        /* reset button styles */
-        color: inherit;
-        border: 0;
+    /* reset button styles */
+    color: inherit;
+    border: 0;
+    background: none;
+    }
+    
+    .prev::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent; 
+    border-right: 20px solid white; 
+    }
+    
+    .next::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 0; 
+    height: 0; 
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid white;
+    }
+    
+    .dot {
+        height: 15px;
+        width: 15px;
+        border: 3px solid grey;
+        border-radius: 50%;
         background: none;
-      }
-      
-      .prev::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        width: 0; 
-        height: 0; 
-        border-top: 20px solid transparent;
-        border-bottom: 20px solid transparent; 
-        border-right: 20px solid white; 
-      }
-      
-      .next::before {
-        content: '';
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        width: 0; 
-        height: 0; 
-        border-top: 20px solid transparent;
-        border-bottom: 20px solid transparent;
-        border-left: 20px solid white;
-      }
-      
-      .dot {
-          height: 15px;
-          width: 15px;
-          border: 3px solid grey;
-          border-radius: 50%;
-          background: none;
-          padding: 0;
-      }
-      .dot.active {
-          border-color: #fff;
-      }
-
-
-      /* -----------------
-         OUR WORK ENTRIES
-      ------------------ */
-      .our-work-entry-problem, 
-      .our-work-entry-solution {
-        padding-bottom: 0 !important;
-        font-size: 1.125rem;
-      }
-      .our-work-entry-link {
-        border-bottom: 2px solid transparent;
-      }
-      
-
-      /* ---------------
-         THE TRIBE GRID
-      ------------------ */
-      .tribe-image {
-        height: 220px;
-      }
-      .flip-button {
-        /* strip button styles */
-        border: 0;
-        background: none;
-        color: inherit;
         padding: 0;
-      } 
-      /* entire container, keeps perspective */
-      .flip-container {
-          display: block;
-          perspective: 1000px;
-      }
-      .active .flipper {
-          transform: rotateY(180deg);
-      }
-      .flip-container,
-      .front,
-      .back {
-        width: 220px;
-        height: 220px;
-      }
-      /* flip speed goes here */
-      .flipper {
-          display: block;
-        transition: 0.8s;
-        transform-style: preserve-3d;
-        position: relative;
-      }
-      
-      /* hide back of pane during swap */
-      .front,
-      .back {
-          display: block;
-        backface-visibility: hidden;
-        position: absolute;
-        top: 0;
-          left: 0;
-      }
-      
-      /* front pane, placed above back */
-      .front {
-        z-index: 2;
-        /* for firefox 31 */
-          transform: rotateY(0deg);
-      }
-      
-      /* back, initially hidden pane */
-      .back {
-          transform: rotateY(180deg);
-          background-color: #fff;
-          color: #131313;
-          padding: 10px;
-          overflow: auto;
-      }
+    }
+    .dot.active {
+        border-color: #fff;
+    }
+
+
+    /* -----------------
+        OUR WORK ENTRIES
+    ------------------ */
+    .our-work-entry-problem, 
+    .our-work-entry-solution {
+    padding-bottom: 0 !important;
+    font-size: 1.125rem;
+    }
+    .our-work-entry-link {
+    border-bottom: 2px solid transparent;
+    }
+    
+
+    /* ---------------
+        THE TRIBE GRID
+    ------------------ */
+    .tribe-image {
+    height: 220px;
+    }
+    .flip-button {
+    /* strip button styles */
+    border: 0;
+    background: none;
+    color: inherit;
+    padding: 0;
+    } 
+    /* entire container, keeps perspective */
+    .flip-container {
+        display: block;
+        perspective: 1000px;
+    }
+    .active .flipper {
+        transform: rotateY(180deg);
+    }
+    .flip-container,
+    .front,
+    .back {
+    width: 220px;
+    height: 220px;
+    }
+    /* flip speed goes here */
+    .flipper {
+        display: block;
+    transition: 0.8s;
+    transform-style: preserve-3d;
+    position: relative;
+    }
+    
+    /* hide back of pane during swap */
+    .front,
+    .back {
+        display: block;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+        left: 0;
+    }
+    
+    /* front pane, placed above back */
+    .front {
+    z-index: 2;
+    /* for firefox 31 */
+        transform: rotateY(0deg);
+    }
+    
+    /* back, initially hidden pane */
+    .back {
+        transform: rotateY(180deg);
+        background-color: #fff;
+        color: #131313;
+        padding: 10px;
+        overflow: auto;
+    }
+    .back::-webkit-scrollbar {
+    width: 0.5em;
+    }
+    .back::-webkit-scrollbar-track {
+    background-color: lightgray;
+    }
+    .back::-webkit-scrollbar-thumb {
+    background-color: #9013FE;
+    border-radius: 20px;
+    }
 
