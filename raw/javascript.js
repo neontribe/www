@@ -155,6 +155,134 @@ const profiles = [
       'At vero eos et accusam et justo duo dolores et ea rebumumy sed tempor et et invidunt justo labore Stet clita ea et gubergren. Rebumumy sed tempor. At vero eos et accusam et',
     skills: ['Design', 'Typography', 'Layout'],
   },
+  {
+    name: 'Bruce Wayne',
+    image: './thetribe1.png',
+    title: 'Back-end Developer',
+    description:
+      'At vero eos et accusam et justo duo dolores et ea rebumumy sed tempor et et invidunt justo labore Stet clita ea et gubergren. Rebumumy sed tempor. At vero eos et accusam et',
+    skills: ['CSS', 'Javascript', 'Python'],
+  },
+  {
+    name: 'Bruce Wayne',
+    image: './thetribe1.png',
+    title: 'Back-end Developer',
+    description:
+      'At vero eos et accusam et justo duo dolores et ea rebumumy sed tempor et et invidunt justo labore Stet clita ea et gubergren. Rebumumy sed tempor. At vero eos et accusam et',
+    skills: ['Design', 'Typography', 'Layout'],
+  },
+  {
+    name: 'Bruce Wayne',
+    image: './thetribe1.png',
+    title: 'Back-end Developer',
+    description:
+      'At vero eos et accusam et justo duo dolores et ea rebumumy sed tempor et et invidunt justo labore Stet clita ea et gubergren. Rebumumy sed tempor. At vero eos et accusam et',
+    skills: ['CSS', 'Javascript', 'Python'],
+  },
+  {
+    name: 'Bruce Wayne',
+    image: './thetribe1.png',
+    title: 'Back-end Developer',
+    description:
+      'At vero eos et accusam et justo duo dolores et ea rebumumy sed tempor et et invidunt justo labore Stet clita ea et gubergren. Rebumumy sed tempor. At vero eos et accusam et',
+    skills: ['Design', 'Typography', 'Layout'],
+  },
+  {
+    name: 'Bruce Wayne',
+    image: './thetribe1.png',
+    title: 'Back-end Developer',
+    description:
+      'At vero eos et accusam et justo duo dolores et ea rebumumy sed tempor et et invidunt justo labore Stet clita ea et gubergren. Rebumumy sed tempor. At vero eos et accusam et',
+    skills: ['CSS', 'Javascript', 'Python'],
+  },
+  {
+    name: 'Bruce Wayne',
+    image: './thetribe1.png',
+    title: 'Back-end Developer',
+    description:
+      'At vero eos et accusam et justo duo dolores et ea rebumumy sed tempor et et invidunt justo labore Stet clita ea et gubergren. Rebumumy sed tempor. At vero eos et accusam et',
+    skills: ['Design', 'Typography', 'Layout'],
+  },
+  {
+    name: 'Bruce Wayne',
+    image: './thetribe1.png',
+    title: 'Back-end Developer',
+    description:
+      'At vero eos et accusam et justo duo dolores et ea rebumumy sed tempor et et invidunt justo labore Stet clita ea et gubergren. Rebumumy sed tempor. At vero eos et accusam et',
+    skills: ['CSS', 'Javascript', 'Python'],
+  },
+  {
+    name: 'Bruce Wayne',
+    image: './thetribe1.png',
+    title: 'Back-end Developer',
+    description:
+      'At vero eos et accusam et justo duo dolores et ea rebumumy sed tempor et et invidunt justo labore Stet clita ea et gubergren. Rebumumy sed tempor. At vero eos et accusam et',
+    skills: ['Design', 'Typography', 'Layout'],
+  },
+  {
+    name: 'Bruce Wayne',
+    image: './thetribe1.png',
+    title: 'Back-end Developer',
+    description:
+      'At vero eos et accusam et justo duo dolores et ea rebumumy sed tempor et et invidunt justo labore Stet clita ea et gubergren. Rebumumy sed tempor. At vero eos et accusam et',
+    skills: ['CSS', 'Javascript', 'Python'],
+  },
+  {
+    name: 'Bruce Wayne',
+    image: './thetribe1.png',
+    title: 'Back-end Developer',
+    description:
+      'At vero eos et accusam et justo duo dolores et ea rebumumy sed tempor et et invidunt justo labore Stet clita ea et gubergren. Rebumumy sed tempor. At vero eos et accusam et',
+    skills: ['Design', 'Typography', 'Layout'],
+  },
+  {
+    name: 'Bruce Wayne',
+    image: './thetribe1.png',
+    title: 'Back-end Developer',
+    description:
+      'At vero eos et accusam et justo duo dolores et ea rebumumy sed tempor et et invidunt justo labore Stet clita ea et gubergren. Rebumumy sed tempor. At vero eos et accusam et',
+    skills: ['CSS', 'Javascript', 'Python'],
+  },
+  {
+    name: 'Bruce Wayne',
+    image: './thetribe1.png',
+    title: 'Back-end Developer',
+    description:
+      'At vero eos et accusam et justo duo dolores et ea rebumumy sed tempor et et invidunt justo labore Stet clita ea et gubergren. Rebumumy sed tempor. At vero eos et accusam et',
+    skills: ['Design', 'Typography', 'Layout'],
+  },
+  {
+    name: 'Bruce Wayne',
+    image: './thetribe1.png',
+    title: 'Back-end Developer',
+    description:
+      'At vero eos et accusam et justo duo dolores et ea rebumumy sed tempor et et invidunt justo labore Stet clita ea et gubergren. Rebumumy sed tempor. At vero eos et accusam et',
+    skills: ['CSS', 'Javascript', 'Python'],
+  },
+  {
+    name: 'Bruce Wayne',
+    image: './thetribe1.png',
+    title: 'Back-end Developer',
+    description:
+      'At vero eos et accusam et justo duo dolores et ea rebumumy sed tempor et et invidunt justo labore Stet clita ea et gubergren. Rebumumy sed tempor. At vero eos et accusam et',
+    skills: ['Design', 'Typography', 'Layout'],
+  },
+  {
+    name: 'Bruce Wayne',
+    image: './thetribe1.png',
+    title: 'Back-end Developer',
+    description:
+      'At vero eos et accusam et justo duo dolores et ea rebumumy sed tempor et et invidunt justo labore Stet clita ea et gubergren. Rebumumy sed tempor. At vero eos et accusam et',
+    skills: ['CSS', 'Javascript', 'Python'],
+  },
+  {
+    name: 'Bruce Wayne',
+    image: './thetribe1.png',
+    title: 'Back-end Developer',
+    description:
+      'At vero eos et accusam et justo duo dolores et ea rebumumy sed tempor et et invidunt justo labore Stet clita ea et gubergren. Rebumumy sed tempor. At vero eos et accusam et',
+    skills: ['Design', 'Typography', 'Layout'],
+  },
 ]
 
 //  Todo: add arrow color and border color on focus/hover
