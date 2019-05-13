@@ -83,7 +83,7 @@ if (entriesEl) {
         ${entry.description}
         <a
         href="${entry.destination}"
-        class="nowrap"
+        class="nowrap link"
         onmouseover="this.firstElementChild.style.borderBottomColor = '${
           colours[index % colours.length]
         }'"
