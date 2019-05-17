@@ -382,26 +382,34 @@ if (profilesEl) {
                         <span class="absolute bottom-1 flex justify-center right-0 top-0 w-100">
                             <span class="text-name absolute bottom--1 right-0 fw7">
                             ${profile.name}
-                            <span class="arrowpink">&rarr;</span>
-                        </span>
-                        <span class="absolute left-0 top-1 tl">
+                            <span class="arrowblack">&rarr;</span>
+                            <br><span>
                             ${profile.skills
                               .map(
-                                skill => `
-                                <div>
-                                    <span class="text-name fw4 f6 mb2 tl">
+                                skill => ` 
+                                   <span class="f6">
                                         ${skill} 
                                     </span>
-                                </div>
                             `
                               )
-                              .join('')}
+                              .join('|')}
                         </span>
+                        </span> 
                     </span>
                 </span>
                 <span class="back">
                     <h4>${profile.name}</h4>
-                    <div class="i f6 mb2">${profile.skills}</div>
+                    <div class="mb2">
+                            ${profile.skills
+                              .map(
+                                skill => ` 
+                                   <span class="f7 b-ns">
+                                        ${skill} 
+                                    </span>
+                            `
+                              )
+                              .join('|')}
+                        </div>
                     <div class="smallparagraph">${profile.description}</div>
                 </span>
             </span>

@@ -105,11 +105,14 @@ p {
   width: 1px;
 }
 .text-name {
-  background-color: var(--color-background);
+  background-color: #FFF;
+  border-top: 3px solid #fb37f1;
   line-height: 1.25;
   padding: 0.25rem;
   display: inline-block;
-  text-align: center;
+  text-align: left;
+  color: var(--color-background);
+  width: 100%
 }
 .link {
     font-weight: 700;
@@ -183,6 +186,9 @@ p {
 }
 .arrowlightblue {
   color: var(--color-blue);
+}
+.arrowblack {
+ color: var(--color-background);
 }
 
 /* ---------------
@@ -280,7 +286,14 @@ p {
     ------------------ */
 .tribe-image {
   height: 220px;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
 }
+.flip-button:hover .tribe-image, 
+.flip-button:focus .tribe-image {   
+    filter: none;
+    -webkit-filter: grayscale(0%);
+  }
 .flip-button {
   /* strip button styles */
   border: 0;
