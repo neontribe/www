@@ -52,22 +52,34 @@
             </div>
             <div>
                 <h2 class="text mb3">Our Work</h2>
-                <div>
-                    <button class="accordion">
+                <div></div>
+                <svg class="defs-only">
+                        <filter id="purple-tint" color-interpolation-filters="sRGB"
+                                x="0" y="0" height="100%" width="100%">
+                            <feColorMatrix type="matrix"
+                            values="0.56 0 0 0  0 
+                                    0 0.07 0 0  0  
+                                    0 0 1 0  0.16 
+                                        0  0 0 1  0" />
+                        </filter>
+                    </svg>
+                    <button class="accordion shaded tinted">
                         <h2 class="text justify-center">Alexandra Rose</h2>
                         <p class="text w-90 justify-center">A series of digital tools that help children centers provide market vouchers to families that are at risk of food poverty.</p>
                     </button>
                     <div class="panel">
-                      <h2 class="mt2">Alexandra Rose</h2>
-                      <div class="tl mt2">
-                            <a href="" class="link">www <span class="arrowpink">&rarr;</span></a>
-                     </div>
-                      <p><b>Problem:</b> Lorem ipsum dolor sit oming id quod mazim placerat facer possim assum.  Amet, consoal setetur sadipscing elitr, sed diam vel illum dollore eu nonumy eirmod.
-
+                        <img class="fl flex pr3 pt3 pb2 w-50-ns w-100" src="./ourwork-arc.jpg"></img>
+                    <div class="tl mt2 flex-nowrap-ns w-50-ns fr">
+                        <h2 class="text mt2">Alexandra Rose</h2>
+                        <br>
+                        <a href="" class="link-small">www.alexandrarose.org.uk<span class="arrowpink">&rarr;</span></a>
+                        <p>
+                          <b class="f4">Problem:</b> Lorem ipsum dolor sit oming id quod mazim placerat facer possim assum.  Amet, consoal setetur sadipscing elitr, sed diam vel illum dollore eu nonumy eirmod.
                         <br><br>
-                        <b>Solution:</b> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet solor sit oming id quod mazim placerat doming id quod mazim placerat facer possim assum. </p>
-                    </div>
-                    
+                            <b class="f4">Solution:</b> Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet solor sit oming id quod mazim placerat doming id quod mazim placerat facer possim assum. </p>
+                            <a href="" class="link">See the project<span class="arrowpink">&rarr;</span></a>
+                        <br><br>
+                    </div>               
                     <button class="accordion">Section 2</button>
                     <div class="panel">
                       <p>Lorem ipsum...</p>

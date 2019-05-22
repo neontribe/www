@@ -107,6 +107,14 @@ p {
     font-weight: 700;
     font-size: 1.25rem;
     border-bottom: 3px solid #FFF;
+    background-color: var(--color-background);
+    padding: 2px;
+}
+.link-small {
+    font-weight: 600;
+    font-size: 1rem;
+    border-bottom: 2px solid #FFF;
+    background-color: var(--color-background);
 }
 .link:focus {
     outline: none;
@@ -117,9 +125,10 @@ p {
     ------------- */
 .text {
   background-color: var(--color-background);
+  padding: 2px;
+  color: #FFF;
   line-height: 1.25;
   display: inline-block;
-  text-align: center;
 }
 
 /* -----------------
@@ -260,12 +269,12 @@ p {
 .our-work-entry-link {
   border-bottom: 3px solid transparent;
 }
+.our-work-image {
+    width: 50%;
+}
 
 .accordion {
-    background-image: url(./ourwork-arc.jpg);  
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
+    filter: url(#purple-tint);
     color: #444;
     cursor: pointer;
     padding: 18px;
@@ -275,6 +284,16 @@ p {
     outline: none;
     transition: 0.4s;
   }
+  .shaded {  
+    background-image: 
+      linear-gradient(
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.8)
+      ),
+      url(./ourwork-arc.jpg);
+    background-size: cover;
+  }
+  
 .accordion-title {
     background-color: var(--color-background);
     color: #ffffff;
