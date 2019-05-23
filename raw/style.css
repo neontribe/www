@@ -77,12 +77,13 @@ h5 {
 }
 p {
   background-color: var(--color-background);
-  line-height: 1.25;
+  line-height: 1.6rem;
   font-size: 1.125rem;
   padding: 0.25rem;
 }
 .smallparagraph {
   font-size: 1rem;
+  line-height: 1.3rem;
 }
 
 .visually-hidden {
@@ -116,7 +117,6 @@ p {
     ------------- */
 .text {
   background-color: var(--color-background);
-  line-height: 1.25;
   display: inline-block;
   text-align: center;
 }
