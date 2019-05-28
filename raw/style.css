@@ -5,6 +5,13 @@
   --page-width: 960px;
   --gutter: 30px;
   --color-background: #1f1e1f;
+  --color-white: #fff;
+  --color-pink: #FB37F1;
+  --color-purple: #9013FE;
+  --color-blue: #54FCFD;
+  --color-yellow: #FDF958;
+  --color-green: #48E6B6;
+  --color-black: #131313;
 }
 html,
 body {
@@ -15,7 +22,7 @@ img {
 }
 body {
   background-color: var(--color-background);
-  color: #ffffff;
+  color: var(--color-white);
   font-family: elido, sans-serif;
   background-image: url('./hexagons-left.png'), url('./hexagons-right.png');
   background-repeat: repeat-y;
@@ -24,13 +31,13 @@ body {
 a {
   list-style: none;
   text-decoration: none;
-  color: #ffffff;
+  color: var(--color-white);
 }
 a:focus {
   outline: none;
-  border: 2px solid #fb37f1;
+  border: 2px solid var(--color-pink);
   border-radius: 15px;
-  box-shadow: 0px 0px 4px #fb37f1;
+  box-shadow: 0px 0px 4px var(--color-pink);
   padding: 0px 10px;
 }
 button {
@@ -39,8 +46,8 @@ button {
 
 button:focus {
   outline: none;
-  border: 2px solid #fb37f1;
-  box-shadow: 0px 0px 4px #fb37f1;   
+  border: 2px solid var(--color-pink);
+  box-shadow: 0px 0px 4px var(--color-pink);   
 }
 
 footer li {
@@ -62,7 +69,7 @@ footer li {
 h2 {
   font-size: 2rem;
   margin: 0;
-  color: #FFF;
+  color: var(--color-white);
 }
 h3 {
   font-size: 1.5rem;
@@ -106,14 +113,14 @@ p {
 .link {
     font-weight: 700;
     font-size: 1.25rem;
-    border-bottom: 3px solid #FFF;
+    border-bottom: 3px solid var(--color-white);
     background-color: var(--color-background);
     padding: 2px;
 }
 .link-small {
     font-weight: 600;
     font-size: 1rem;
-    border-bottom: 2px solid #FFF;
+    border-bottom: 2px solid var(--color-white);
     background-color: var(--color-background);
 }
 .link:focus {
@@ -126,7 +133,7 @@ p {
 .text {
   background-color: var(--color-background);
   padding: 2px;
-  color: #FFF;
+  color: var(--color-white);
   line-height: 1.25;
   display: inline-block;
 }
@@ -161,12 +168,12 @@ p {
 }
 .footer {
   grid-area: footer;
-  color: #ffffff;
+  color: var(--color-white);
 }
 .footer-background {
   grid-column: 1 / 4;
   grid-row: 3;
-  background-color: #131313;
+  background-color: var(--color-black);
   margin: 0 calc(var(--gutter) / 2 * -1);
 }
 
@@ -174,10 +181,10 @@ p {
         COLOUR
     -------------- */
 .arrowpink {
-  color: #fb37f1;
+  color: var(--color-pink);
 }
 .arrowlightblue {
-  color: #54fcfd;
+  color: var(--color-blue);
 }
 
 /* ---------------
@@ -229,7 +236,7 @@ p {
   height: 0;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
-  border-right: 20px solid white;
+  border-right: 20px solid var(--color-white);
 }
 
 .next::before {
@@ -243,7 +250,7 @@ p {
   height: 0;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
-  border-left: 20px solid white;
+  border-left: 20px solid var(--color-white);
 }
 
 .dot {
@@ -255,56 +262,21 @@ p {
   padding: 0;
 }
 .dot.active {
-  border-color: #fff;
+  border-color: var(--color-white);
 }
 
 /* -----------------
         OUR WORK ENTRIES
     ------------------ */
-.our-work-entry-problem,
-.our-work-entry-solution {
-  padding-bottom: 0 !important;
-  font-size: 1.125rem;
-}
-.our-work-entry-link {
-  border-bottom: 3px solid transparent;
-}
-.our-work-image {
-    width: 50%;
-}
-
-.accordion {
-    filter: url(#purple-tint);
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-  }
-  .shaded {  
-    background-image: 
-      linear-gradient(
-        rgba(0, 0, 0, 0.8),
-        rgba(0, 0, 0, 0.8)
-      ),
-      url(./ourwork-arc.jpg);
-    background-size: cover;
-  }
-  
-.accordion-title {
-    background-color: var(--color-background);
-    color: #ffffff;
-    font-family: elido, sans-serif;
-}
-.panel {
-    padding: 0 18px;
+.work-entry article[aria-hidden] {
     display: none;
-    overflow: hidden;
 }
 
+.work-entry-bg-image {
+    background-size: 100%;
+    background-position: center;  
+    background-repeat: none;
+}
 /* ---------------
         THE TRIBE GRID
     ------------------ */
@@ -360,8 +332,8 @@ p {
 /* back, initially hidden pane */
 .back {
   transform: rotateY(180deg);
-  background-color: #fff;
-  color: #131313;
+  background-color: var(--color-white);
+  color: var(--color-black);
   padding: 10px;
   overflow: auto;
 }
@@ -372,6 +344,6 @@ p {
   background-color: lightgray;
 }
 .back::-webkit-scrollbar-thumb {
-  background-color: #9013fe;
+  background-color: var(--color-purple);
   border-radius: 20px;
 }

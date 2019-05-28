@@ -512,6 +512,6 @@ function getEntryTemplate(entry) {
     `;
 }
 
-document.getElementById('our-work').innerHTML = window.entries.filter(entry => entry.type !== 'talk').map(entry => getEntryTemplate(entry)).join('');
+document.getElementById('our-work').innerHTML = window.entries.filter(entry => entry.type !== 'talk').map(getEntryTemplate).join('');
 
-document.getElementById('our-talks').innerHTML = window.entries.filter(entry => entry.type === 'talk').map(entry => getEntryTemplate(entry)).join('');
+document.getElementById('our-talks').innerHTML = window.entries.filter(entry => entry.type === 'talk').map(getEntryTemplate).join('');
