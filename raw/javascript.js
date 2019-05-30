@@ -4,13 +4,10 @@ window.entries = []
 
 window.entries.push({
   title: 'Mind of my Own',
+  bannerimage: 'ourwork-momobanner.jpg',
   image: 'ourwork-momo.jpg',
-  quote: `I give Mind Of My Own 5 stars because it makes me feel happier” - Krystal, young person`,
   description: `We work with Mind of My Own to help young people participate fully in their care and make it easier to speak up anytime they want. We’ve built apps that make this happen, 
-    leading on many aspects of the process from early user research and UX design to product management and software development. From a small project funded by The Nominet Trust, 
-    Mind Of My Own has grown into a sustainable business with suite of 4 tools used by children and young people and organisations across the UK and abroad. Our work is currently 
-    focused on software development for improvements and additions and on supporting information security. We’re proud of our role in helping Mind Of My Own win awards, including best 
-    Public Sector Product in ScotlandIS Digital Technology Awards 2018; A Children and Young People Now Award in 2017 and The Observer’s New Radicals Award for Social Innovation as well as the crucial ISO 270001 standard.`,
+    leading on many aspects of the process.`,
   problem: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.`,
   solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
   destination: 'https://www.mindofmyown.org.uk',
@@ -18,11 +15,10 @@ window.entries.push({
 
 window.entries.push({
   title: 'Alexander Rose',
+  bannerimage: 'ourwork-arcbanner.jpg',
   image: 'ourwork-arc.jpg',
-  quote: `“My diet has got a lot better, my child’s diet has got a lot better and we’ve been doing a lot more home cooking since we’ve been using the vouchers” - Project Participant, Lambeth`,
   description: `Neontribe are helping Alexandra Rose Charity develop a series of digital tools so that they can scale up the number of areas, markets and families included in their award winning 
-    fruit and veg project for families in or at risk of food poverty. We’ve been handling user research, design and software development to create a comprehensive system, one component at a time. 
-    Individual elements have so far been funded by the Paul Hamlyn Foundation and Comic Relief via the Tech for Good programme; The Esmee Fairburn Foundation and the Alexandra Rose Charity’s own resources.`,
+    fruit and veg project for families in or at risk of food poverty.`,
   problem: `dolore magna aliquyam erat, sed diam voluptua.`,
   solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
   destination: 'https://www.alexandrarose.org.uk',
@@ -30,13 +26,10 @@ window.entries.push({
 
 window.entries.push({
   title: 'seAp',
-  image: 'ourwork-seap.jpg',
-  quote: `“Thanks to everyone for all your hard work – it’s been great fun and I’ve learned loads from all of you. I am eternally grateful to Comic Relief and LEF for giving us 
-    the opportunity to work with such an inspirational and expert team. I wish I had you all with me permanently!” - Liz Fenton, seAp`,
+  bannerimage: 'ourwork-seapbanner.jpg',
+  image: 'ourwork-.jpg',
   description: `A national advocacy charity, seAp, approached us in 2014 to create a virtual advocate tool that would help people through the confusing and intimidating process 
-    of applying for benefits. The problem that seAp needed to solve was that they had a limited number of volunteers who couldn’t support the growing number people needing their 
-    advocacy services. With funding from Comic Relief and the Legal Education Foundation we built two virtual advocating tools: one to help support people through the process of 
-    applying for Personal Independence Payment (PIP), and the other to help people prepare for Employment and Support Allowance (ESA). `,
+    of applying for benefits. `,
   problem: `dolore magna aliquyam erat, sed diam voluptua.`,
   solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
   destination: 'www.c-app.org.uk',
@@ -44,12 +37,10 @@ window.entries.push({
 
 window.entries.push({
   title: 'The Haven',
+  bannerimage: 'ourwork-havenbanner.jpg',
   image: 'ourwork-haven.jpg',
-  quote: `“That’s me, it took me 5 years to leave… I didn’t know I could get help” - Woman living in a refuge, during usability testing of “You Matter”`,
   description: `As part of the Comic Relief’s tech vs abuse initiative Neontribe and The Haven (Wolverhampton) worked with survivors to create a digital 
-    tool which helps women realise they are in an abusive relationship and dispel their fears about taking action. We’ve led the user research, ux design and software 
-    development and created a small collection of illustrated stories and bite size information that women from diverse ethnic backgrounds should be able to identify with. 
-    We went into a live beta in 2018 and The Haven were thrilled to get their first call from someone who said “I wasn’t sure it was abuse, then I used your app, and now I’d like to speak to someone” the first day a Facebook advert promoted the tool.`,
+    tool which helps women realise they are in an abusive relationship and dispel their fears about taking action. `,
   problem: `dolore magna aliquyam erat, sed diam voluptua.`,
   solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
   destination: 'www.youmatterhaven.org.uk',
@@ -57,16 +48,104 @@ window.entries.push({
 
 window.entries.push({
   title: 'Allegiant Air',
+  bannerimage: 'ourwork-allegiantbanner.jpg',
   image: 'ourwork-allegiant.jpg',
-  quote: `“The work you did to make the site accessible without a blip in revenue was like landing a jumbo on an aircraft carrier. Amazing” - Scott Allard, CTO, Allegiant Air`,
   description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently, 
-    Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. Our focus is on rebuilding the top two layers of the system, 
-    including the flight, hotel and vehicle hire bookings and customer profile management interfaces. We’re excited to be using Next.js and GraphQL to improve performance and maintainability, 
-    and we’re looking forward to building the next generation of customer-facing features once the new approach has bedded in. We are proud of our role in making Allegiant’s website compliant with the Americans with Disability Act before new federal regulations came into action in 2018.`,
+    Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
   problem: `dolore magna aliquyam erat, sed diam voluptua.`,
   solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
   destination: 'https://www.allegiantair.com',
 })
+
+window.entries.push({
+    title: 'NCVO',
+    bannerimage: 'ourwork-ncvobanner.jpg',
+    image: 'ourwork-ncvo.jpg',
+    description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently, 
+      Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
+    problem: `dolore magna aliquyam erat, sed diam voluptua.`,
+    solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
+    destination: 'https://www.allegiantair.com',
+})
+
+window.entries.push({
+    title: 'Open Data Studios',
+    bannerimage: 'banner-pink.jpg',
+    image: 'ourwork-opendata.jpg',
+    description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently, 
+      Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
+    problem: `dolore magna aliquyam erat, sed diam voluptua.`,
+    solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
+    destination: 'https://www.allegiantair.com',
+})
+
+window.entries.push({
+    title: 'UKCF',
+    bannerimage: 'banner-blue.jpg',
+    image: 'ourwork-ukcf.jpg',
+    description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently, 
+      Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
+    problem: `dolore magna aliquyam erat, sed diam voluptua.`,
+    solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
+    destination: 'https://www.allegiantair.com',
+})
+
+window.entries.push({
+    title: 'Addaction',
+    bannerimage: 'banner-yellow.jpg',
+    image: 'ourwork-addaction.jpg',
+    description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently, 
+      Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
+    problem: `dolore magna aliquyam erat, sed diam voluptua.`,
+    solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
+    destination: 'https://www.allegiantair.com',
+})
+
+window.entries.push({
+    title: 'Docready',
+    bannerimage: 'banner-green.jpg',
+    image: 'ourwork-docready.jpg',
+    description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently, 
+      Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
+    problem: `dolore magna aliquyam erat, sed diam voluptua.`,
+    solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
+    destination: 'https://www.allegiantair.com',
+})
+
+window.entries.push({
+    title: 'A Day In The Life',
+    bannerimage: 'banner-pink.jpg',
+    image: 'ourwork-day.jpg',
+    description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently, 
+      Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
+    problem: `dolore magna aliquyam erat, sed diam voluptua.`,
+    solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
+    destination: 'https://www.allegiantair.com',
+})
+
+window.entries.push({
+    title: 'Innovation Labs',
+    bannerimage: 'banner-purple.jpg',
+    image: 'ourwork-innovation.jpg',
+    description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently, 
+      Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
+    problem: `dolore magna aliquyam erat, sed diam voluptua.`,
+    solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
+    destination: 'https://www.allegiantair.com',
+})
+
+window.entries.push({
+    type: 'talk',
+    title: 'Harry and Rupert',
+    bannerimage: 'ourwork-innovationbanner.jpg',
+    image: 'ourwork-innovation.jpg',
+    description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently, 
+      Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
+    problem: `dolore magna aliquyam erat, sed diam voluptua.`,
+    solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
+    destination: 'https://www.allegiantair.com',
+})
+
 
 const entriesEl = document.getElementById('entries')
 if (entriesEl) {
@@ -386,3 +465,61 @@ window.next = carouselEl => {
 
   window.goTo(carouselEl, nextSlideIndex)
 }
+
+var acc = document.getElementsByClassName("accordion");
+
+for (var i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+// howwework -------------------------------------------------------------------------------------------------------------------
+
+window.toggleWorkEntry = function(el) {
+    const entryEl = el.closest('.work-entry');
+    const article = entryEl.querySelector('article');
+
+    document.querySelectorAll('.work-entry').forEach(entry => {
+        if (entryEl !== entry) {
+            entry.querySelector('article').setAttribute('aria-hidden', 'true');
+        } else {
+            entry.querySelector('article').toggleAttribute('aria-hidden');
+        }
+    });
+};
+
+function getEntryTemplate(entry) {
+    return `
+        <div class="work-entry mb3">
+            <div class="work-entry-${entry.title.split(' ').join('-').toLowerCase()} work-entry-bg-image pa3" onclick="toggleWorkEntry(this)" style="background-image: url('${entry.bannerimage}')">
+                <h3 class="text mb2">${entry.title}</h3>
+                <p class="text">${entry.description}</p>
+                <button type="button" class="visually-hidden" onclick="toggleWorkEntry(this)">View problem and solution for ${entry.title}</button>
+            </div>
+            <article class="pa3" aria-hidden>
+                <div class="mb2 text">
+                <img src="${entry.image}" class="fl mr3 mb2" alt="${entry.imagedescription}" />
+                <h3 class="mb1">${entry.title}</h3>
+                <a href="${entry.destination}" class="pl3 pr3 text link-small">${entry.destination.split('://')[1]} <span class="arrowpink">&rarr;</span></a>
+                    <p>Problem: ${entry.problem} </p>
+                    <p>Solution: ${entry.solution}</p>
+                </div>
+            </article>
+        </div>
+    `;
+}
+
+document.getElementById('our-work').innerHTML = window.entries.filter(entry => entry.type !== 'talk').map(getEntryTemplate).join('');
+
+document.getElementById('our-talks').innerHTML = window.entries.filter(entry => entry.type === 'talk').map(getEntryTemplate).join('');
