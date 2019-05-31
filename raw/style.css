@@ -6,11 +6,11 @@
   --gutter: 30px;
   --color-background: #1f1e1f;
   --color-white: #fff;
-  --color-pink: #FB37F1;
-  --color-purple: #9013FE;
-  --color-blue: #54FCFD;
-  --color-yellow: #FDF958;
-  --color-green: #48E6B6;
+  --color-pink: #fb37f1;
+  --color-purple: #9013fe;
+  --color-blue: #54fcfd;
+  --color-yellow: #fdf958;
+  --color-green: #48e6b6;
   --color-black: #131313;
 }
 html,
@@ -32,13 +32,10 @@ a {
   list-style: none;
   text-decoration: none;
   color: var(--color-white);
+  padding: 0px 10px;
 }
 a:focus {
   outline: none;
-  border: 2px solid var(--color-pink);
-  border-radius: 15px;
-  box-shadow: 0px 0px 4px var(--color-pink);
-  padding: 0px 10px;
 }
 button {
   cursor: pointer;
@@ -46,8 +43,6 @@ button {
 
 button:focus {
   outline: none;
-  border: 2px solid var(--color-pink);
-  box-shadow: 0px 0px 4px var(--color-pink);
 }
 
 footer li {
@@ -105,38 +100,36 @@ p {
   width: 1px;
 }
 .text-name {
-  background-color: #FFF;
+  background-color: #fff;
   border-top: 3px solid #fb37f1;
   line-height: 1.25;
   padding: 0.25rem;
   display: inline-block;
   text-align: left;
   color: var(--color-background);
-  width: 100%
+  width: 100%;
 }
 .link {
-    font-weight: 700;
-    font-size: 1.25rem;
-    border-bottom: 3px solid var(--color-white);
-    background-color: var(--color-background);
-    padding: 2px;
+  font-weight: 700;
+  font-size: 1.25rem;
+  border-bottom: 3px solid var(--color-white);
+  background-color: var(--color-background);
 }
 .link-small {
-    font-weight: 600;
-    font-size: 1rem;
-    border-bottom: 2px solid var(--color-white);
-    background-color: var(--color-background);
+  font-weight: 600;
+  font-size: 1rem;
+  border-bottom: 2px solid var(--color-white);
+  background-color: var(--color-background);
 }
 .link:focus {
-    outline: none;
-    padding: 0px 10px;
+  outline: none;
 }
 /* -----------
         UTILITIES
     ------------- */
 .text {
   background-color: var(--color-background);
-  padding: 2px;
+  /* padding: 2px; */
   color: var(--color-white);
   line-height: 1.25;
   display: inline-block;
@@ -191,7 +184,7 @@ p {
   color: var(--color-blue);
 }
 .arrowblack {
- color: var(--color-background);
+  color: var(--color-background);
 }
 
 /* ---------------
@@ -232,7 +225,12 @@ p {
   background: none;
 }
 
-.prev::before {
+.border-hack-prev,
+.border-hack-prev {
+  display: block;
+}
+
+.border-hack-prev::before {
   content: '';
   position: absolute;
   left: 0;
@@ -246,7 +244,7 @@ p {
   border-right: 20px solid var(--color-white);
 }
 
-.next::before {
+.border-hack-next::before {
   content: '';
   position: absolute;
   right: 0;
@@ -276,13 +274,13 @@ p {
         OUR WORK ENTRIES
     ------------------ */
 .work-entry article[aria-hidden] {
-    display: none;
+  display: none;
 }
 
 .work-entry-bg-image {
-    background-size: 100%;
-    background-position: center;
-    background-repeat: none;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: none;
 }
 /* ---------------
         THE TRIBE GRID
@@ -294,9 +292,9 @@ p {
 }
 .flip-button:hover .tribe-image,
 .flip-button:focus .tribe-image {
-    filter: none;
-    -webkit-filter: grayscale(0%);
-  }
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
 .flip-button {
   /* strip button styles */
   border: 0;
