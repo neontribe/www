@@ -58,94 +58,93 @@ window.entries.push({
 })
 
 window.entries.push({
-    title: 'NCVO',
-    bannerimage: 'ourwork-ncvobanner.jpg',
-    image: 'ourwork-ncvo.jpg',
-    description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently,
+  title: 'NCVO',
+  bannerimage: 'ourwork-ncvobanner.jpg',
+  image: 'ourwork-ncvo.jpg',
+  description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently,
       Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
-    problem: `dolore magna aliquyam erat, sed diam voluptua.`,
-    solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
-    destination: 'https://www.allegiantair.com',
+  problem: `dolore magna aliquyam erat, sed diam voluptua.`,
+  solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
+  destination: 'https://www.allegiantair.com',
 })
 
 window.entries.push({
-    title: 'Open Data Studios',
-    bannerimage: 'banner-pink.jpg',
-    image: 'ourwork-opendata.jpg',
-    description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently,
+  title: 'Open Data Studios',
+  bannerimage: 'banner-pink.jpg',
+  image: 'ourwork-opendata.jpg',
+  description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently,
       Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
-    problem: `dolore magna aliquyam erat, sed diam voluptua.`,
-    solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
-    destination: 'https://www.allegiantair.com',
+  problem: `dolore magna aliquyam erat, sed diam voluptua.`,
+  solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
+  destination: 'https://www.allegiantair.com',
 })
 
 window.entries.push({
-    title: 'UKCF',
-    bannerimage: 'banner-blue.jpg',
-    image: 'ourwork-ukcf.jpg',
-    description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently,
+  title: 'UKCF',
+  bannerimage: 'banner-blue.jpg',
+  image: 'ourwork-ukcf.jpg',
+  description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently,
       Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
-    problem: `dolore magna aliquyam erat, sed diam voluptua.`,
-    solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
-    destination: 'https://www.allegiantair.com',
+  problem: `dolore magna aliquyam erat, sed diam voluptua.`,
+  solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
+  destination: 'https://www.allegiantair.com',
 })
 
 window.entries.push({
-    title: 'Addaction',
-    bannerimage: 'banner-yellow.jpg',
-    image: 'ourwork-addaction.jpg',
-    description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently,
+  title: 'Addaction',
+  bannerimage: 'banner-yellow.jpg',
+  image: 'ourwork-addaction.jpg',
+  description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently,
       Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
-    problem: `dolore magna aliquyam erat, sed diam voluptua.`,
-    solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
-    destination: 'https://www.allegiantair.com',
+  problem: `dolore magna aliquyam erat, sed diam voluptua.`,
+  solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
+  destination: 'https://www.allegiantair.com',
 })
 
 window.entries.push({
-    title: 'Docready',
-    bannerimage: 'banner-green.jpg',
-    image: 'ourwork-docready.jpg',
-    description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently,
+  title: 'Docready',
+  bannerimage: 'banner-green.jpg',
+  image: 'ourwork-docready.jpg',
+  description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently,
       Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
-    problem: `dolore magna aliquyam erat, sed diam voluptua.`,
-    solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
-    destination: 'https://www.allegiantair.com',
+  problem: `dolore magna aliquyam erat, sed diam voluptua.`,
+  solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
+  destination: 'https://www.allegiantair.com',
 })
 
 window.entries.push({
-    title: 'A Day In The Life',
-    bannerimage: 'banner-pink.jpg',
-    image: 'ourwork-day.jpg',
-    description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently,
+  title: 'A Day In The Life',
+  bannerimage: 'banner-pink.jpg',
+  image: 'ourwork-day.jpg',
+  description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently,
       Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
-    problem: `dolore magna aliquyam erat, sed diam voluptua.`,
-    solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
-    destination: 'https://www.allegiantair.com',
+  problem: `dolore magna aliquyam erat, sed diam voluptua.`,
+  solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
+  destination: 'https://www.allegiantair.com',
 })
 
 window.entries.push({
-    title: 'Innovation Labs',
-    bannerimage: 'banner-purple.jpg',
-    image: 'ourwork-innovation.jpg',
-    description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently,
+  title: 'Innovation Labs',
+  bannerimage: 'banner-purple.jpg',
+  image: 'ourwork-innovation.jpg',
+  description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently,
       Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
-    problem: `dolore magna aliquyam erat, sed diam voluptua.`,
-    solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
-    destination: 'https://www.allegiantair.com',
+  problem: `dolore magna aliquyam erat, sed diam voluptua.`,
+  solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
+  destination: 'https://www.allegiantair.com',
 })
 
 window.entries.push({
-    type: 'talk',
-    title: 'Harry and Rupert',
-    bannerimage: 'ourwork-innovationbanner.jpg',
-    image: 'ourwork-innovation.jpg',
-    description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently,
+  type: 'talk',
+  title: 'Harry and Rupert',
+  bannerimage: 'ourwork-innovationbanner.jpg',
+  image: 'ourwork-innovation.jpg',
+  description: `We work with our colleagues at Lola Tech to build, maintain and update a responsive and reliable website for a major American airline, Allegiant Air. Currently,
       Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
-    problem: `dolore magna aliquyam erat, sed diam voluptua.`,
-    solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
-    destination: 'https://www.allegiantair.com',
+  problem: `dolore magna aliquyam erat, sed diam voluptua.`,
+  solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
+  destination: 'https://www.allegiantair.com',
 })
-
 
 const entriesEl = document.getElementById('entries')
 if (entriesEl) {
@@ -200,22 +199,6 @@ if (entriesEl) {
     )
     .join('')
 }
-const focusable = document.querySelectorAll(
-  'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-)
-
-focusable.forEach((element, index) => {
-  element.addEventListener('focus', event => {
-    const color = colours[index % colours.length]
-    event.target.style.borderColor = color
-    event.target.style.boxShadow = `0 0 8px ${color}`
-  })
-
-  element.addEventListener('blur', event => {
-    event.target.style.borderColor = null
-    event.target.style.boxShadow = null
-  })
-})
 
 const profiles = [
   {
@@ -384,12 +367,11 @@ if (profilesEl) {
             <span class="flip-container">
                 <span class="flipper">
                     <span class="front relative flex flex-column items-center">
-                        <img
-                        src="${profile.image}"
-                        class="tribe-image"
-                        alt="" />
-                        <span class="absolute bottom-1 flex justify-center right-0 w-100">
-                            <span class="text-name absolute bottom--1 right-0 fw7">
+                        <img class="tribe-image" src="${
+                          profile.image
+                        }" alt="" />
+                        <span class="absolute bottom-1 flex justify-center right-0 top-0 w-100">
+                            <span class="text-name absolute bottom--1 right-0 fw7" data-syncProps="borderTopColor">
                             ${profile.name}
                             <span class="arrowblack">&rarr;</span>
                             <br><span>
@@ -475,60 +457,82 @@ window.next = carouselEl => {
   window.goTo(carouselEl, nextSlideIndex)
 }
 
-var acc = document.getElementsByClassName("accordion");
+var acc = document.getElementsByClassName('accordion')
 
 for (var i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
+  acc[i].addEventListener('click', function() {
     /* Toggle between adding and removing the "active" class,
     to highlight the button that controls the panel */
-    this.classList.toggle("active");
+    this.classList.toggle('active')
 
     /* Toggle between hiding and showing the active panel */
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
+    var panel = this.nextElementSibling
+    if (panel.style.display === 'block') {
+      panel.style.display = 'none'
     } else {
-      panel.style.display = "block";
+      panel.style.display = 'block'
     }
-  });
+  })
 }
 
 // howwework -------------------------------------------------------------------------------------------------------------------
 
 window.toggleWorkEntry = function(el) {
-    const entryEl = el.closest('.work-entry');
-    const article = entryEl.querySelector('article');
+  const entryEl = el.closest('.work-entry')
+  const article = entryEl.querySelector('article')
 
-    document.querySelectorAll('.work-entry').forEach(entry => {
-        if (entryEl !== entry) {
-            entry.querySelector('article').setAttribute('aria-hidden', 'true');
-        } else {
-            entry.querySelector('article').toggleAttribute('aria-hidden');
-        }
-    });
-};
+  document.querySelectorAll('.work-entry').forEach(entry => {
+    if (entryEl !== entry) {
+      entry.querySelector('article').setAttribute('aria-hidden', 'true')
+    } else {
+      entry.querySelector('article').toggleAttribute('aria-hidden')
+    }
+  })
+}
 
 function getEntryTemplate(entry) {
-    return `
+  return `
         <div class="work-entry mb3">
-            <div class="work-entry-${entry.title.split(' ').join('-').toLowerCase()} work-entry-bg-image pa3" onclick="toggleWorkEntry(this)" style="background-image: url('${entry.bannerimage}')">
+            <div class="work-entry-${entry.title
+              .split(' ')
+              .join('-')
+              .toLowerCase()} work-entry-bg-image pa3" onclick="toggleWorkEntry(this)" style="background-image: url('${
+    entry.bannerimage
+  }')">
                 <h3 class="text mb2">${entry.title}</h3>
                 <p class="text">${entry.description}</p>
-                <button type="button" class="visually-hidden" onclick="toggleWorkEntry(this)">View problem and solution for ${entry.title}</button>
+                <button type="button" class="visually-hidden" onclick="toggleWorkEntry(this)">View problem and solution for ${
+                  entry.title
+                }</button>
             </div>
             <article class="pa3" aria-hidden>
                 <div class="mb2 text">
-                <img src="${entry.image}" class="fl mr3 mb2" alt="${entry.imagedescription}" />
+                <img src="${entry.image}" class="fl mr3 mb2" alt="${
+    entry.imagedescription
+  }" />
                 <h3 class="mb1">${entry.title}</h3>
-                <a href="${entry.destination}" class="pl3 pr3 text link-small">${entry.destination.split('://')[1]} <span class="arrowpink">&rarr;</span></a>
+                <a href="${
+                  entry.destination
+                }" class="pl3 pr3 text link-small">${
+    entry.destination.split('://')[1]
+  } <span class="arrowpink">&rarr;</span></a>
                     <p>Problem: ${entry.problem} </p>
                     <p>Solution: ${entry.solution}</p>
                 </div>
             </article>
         </div>
-    `;
+    `
 }
 
-document.getElementById('our-work').innerHTML = window.entries.filter(entry => entry.type !== 'talk').map(getEntryTemplate).join('');
-
-document.getElementById('our-talks').innerHTML = window.entries.filter(entry => entry.type === 'talk').map(getEntryTemplate).join('');
+if (document.getElementById('our-work')) {
+  document.getElementById('our-work').innerHTML = window.entries
+    .filter(entry => entry.type !== 'talk')
+    .map(getEntryTemplate)
+    .join('')
+}
+if (document.getElementById('our-talks')) {
+  document.getElementById('our-talks').innerHTML = window.entries
+    .filter(entry => entry.type === 'talk')
+    .map(getEntryTemplate)
+    .join('')
+}
