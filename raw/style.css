@@ -84,6 +84,7 @@ p {
   font-size: 1.125rem;
   padding: 0.25rem;
 }
+
 .smallparagraph {
   font-size: 1rem;
   line-height: 1.3rem;
@@ -129,10 +130,13 @@ p {
     ------------- */
 .text {
   background-color: var(--color-background);
-  /* padding: 2px; */
+  padding: 2px;
   color: var(--color-white);
   line-height: 1.25;
   display: inline-block;
+}
+a.text {
+  padding: 0px 10px;
 }
 
 /* -----------------
