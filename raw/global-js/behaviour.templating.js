@@ -1,4 +1,3 @@
-//  Todo: add arrow color and border color on focus/hover
 var profilesEl = document.getElementById('profiles');
 if (profilesEl && window.profiles) {
   profilesEl.innerHTML = window.profiles
