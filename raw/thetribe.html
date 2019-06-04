@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
     <link rel="stylesheet" href="https://use.typekit.net/zml8kck.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./neon-focus.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
@@ -12,7 +13,7 @@
     <div class="layout">
         <header class="header flex justify-between items-center flex-column flex-row-ns tc tl-ns mt4 mb5">
             <div class="fl w-100 w-third-ns mb4 mb0-ns">
-                <a href="./index.html"><img class="logo" src="logo.svg" alt="neontribe logo" /></a>
+                <a class="dib" href="./index.html"><img class="logo" src="logo.svg" alt="neontribe logo" /></a>
             </div>
             <div class="fl w-100 w-two-thirds-m w-third-l">
                 <nav>
@@ -40,7 +41,7 @@
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren.Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
                 </p>
                 <div class="tc pb4 pt2">
-                    <a href="" class="text link">Join the tribe <span class="arrowpink">&rarr;</span></a>
+                    <a href="" data-syncProps="borderBottomColor" class="text link">Join the tribe <span class="arrowpink">&rarr;</span></a>
                 </div>
             </div>
         </main>
@@ -49,7 +50,7 @@
             <div class="fl w-25-ns w-50-m tl">
                 <ul class="list">
                     <li><a href="mailto:hello@neontribe.co.uk">hello@neontribe.co.uk</a></li>
-                    <li>0845 689 0896</li>
+                    <li><a href="tel://0845 689 0896">0845 689 0896</a></li>
                     <li><a href="">Privacy and Legal Information</a></li>
                 </ul>
             </div>
@@ -76,6 +77,7 @@
         </footer>
     </div>
     <script type="text/javascript" src="./javascript.js"></script>
+    <script type="text/javascript" src="./neon-focus.js"></script>
 </body>
 
 </html>

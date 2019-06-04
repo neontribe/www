@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
     <link rel="stylesheet" href="https://use.typekit.net/zml8kck.css" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./neon-focus.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 
@@ -12,7 +13,7 @@
     <div class="layout">
         <header class="header flex justify-between items-center flex-column flex-row-ns tc tl-ns mt4 mb5">
             <div class="fl w-100 w-third-ns mb4 mb0-ns">
-                <a href="./index.html" class="logo"><img class="logo" src="logo.svg" alt="neontribe logo" /></a>
+                <a class="dib" href="./index.html" class="logo"><img class="logo" src="logo.svg" alt="neontribe logo" /></a>
             </div>
             <div class="fl w-100 w-two-thirds-m w-third-l">
                 <nav>
@@ -68,8 +69,22 @@
                         </div>
 
                         <div class="controls">
-                            <button type="button" class="prev absolute left-0 top-0 bottom-0" aria-label="Previous slide" onClick="prev(this.closest('.carousel'))"></button>
-                            <button type="button" class="next absolute right-0 top-0 bottom-0" aria-label="Next slide" onClick="next(this.closest('.carousel'))"></button>
+                            <button
+                                type="button"
+                                class="prev absolute left-0 top-0 bottom-0"
+                                aria-label="Previous slide"
+                                onClick="prev(this.closest('.carousel'))"
+                            >
+                                <span className="border-hack-prev"></span>
+                            </button>
+                            <button
+                                type="button"
+                                class="next absolute right-0 top-0 bottom-0" aria
+                                label="Next slide"
+                                onClick="next(this.closest('.carousel'))"
+                            >
+                                <span className="border-hack-next"></span>
+                            </button>
                         </div>
                     </div>
 
@@ -105,7 +120,7 @@
             <div class="fl w-25-ns w-50-m tl">
                 <ul class="list">
                     <li><a href="mailto:hello@neontribe.co.uk">hello@neontribe.co.uk</a></li>
-                    <li>0845 689 0896</li>
+                    <li><a href="tel://0845 689 0896">0845 689 0896</a></li>
                     <li><a href="">Privacy and Legal Information</a></li>
                 </ul>
             </div>
@@ -133,6 +148,7 @@
     </div>
 
     <script type="text/javascript" src="./javascript.js"></script>
+    <script type="text/javascript" src="./neon-focus.js"></script>
 </body>
 
 </html>
