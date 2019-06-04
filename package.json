@@ -1,0 +1,21 @@
+{
+  "name": "@neontribe/www",
+  "version": "1.0.0",
+  "description": "The neontribe MVP with static HTML, CSS, and JS.",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server static/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neontribe/www.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neontribe/www/issues"
+  },
+  "homepage": "https://github.com/neontribe/www#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
