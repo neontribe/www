@@ -1,5 +1,3 @@
-const colours = ['#54FCFD', '#9013FE', '#48E6B6', '#FB37F1', '#FDF958']
-
 window.entries = []
 
 window.entries.push({
@@ -145,60 +143,6 @@ window.entries.push({
   solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
   destination: 'https://www.allegiantair.com',
 })
-
-const entriesEl = document.getElementById('entries')
-if (entriesEl) {
-  entriesEl.innerHTML = window.entries
-    .map(
-      (entry, index) => `
-    <div class="w-100">
-    <img class="fl mr3 mb2" src="./${
-      entry.image
-    }" alt="screenshot of mind of our own app" />
-    <h3 class="text">${entry.title}</h3>
-    <p class="fw7">${entry.quote}</p>
-    <p>
-        ${entry.description}
-        <a
-        href="${entry.destination}"
-        class="nowrap link"
-        onmouseover="this.firstElementChild.style.borderBottomColor = '${
-          colours[index % colours.length]
-        }'"
-        onmouseout="this.firstElementChild.style.borderBottomColor = null"
-        onfocus="this.firstElementChild.style.borderBottomColor = '${
-          colours[index % colours.length]
-        }'"
-        onblur="this.firstElementChild.style.borderBottomColor = null"
-        >
-        <span class="our-work-entry-link" data-color="${
-          colours[index % colours.length]
-        }">
-            ${
-              entry.destination.indexOf('://') !== -1
-                ? entry.destination.split('://')[1]
-                : entry.destination
-            }
-        </span>
-        <span style="color: ${colours[index % colours.length]};">&rarr;</span>
-        </a>
-    </p>
-    <div class="cb">
-        <div>
-        <h4 class="our-work-entry-problem text fl ma0">Problem:</h3>
-        <p>${entry.problem}</p>
-        </div>
-        <div>
-        <h4 class="our-work-entry-solution text fl ma0">Solution:</h3>
-        <p>${entry.solution}</p>
-        </div>
-    </div>
-    </div>
-
-`
-    )
-    .join('')
-}
 
 const profiles = [
   {
