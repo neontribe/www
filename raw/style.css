@@ -114,6 +114,9 @@ p {
   color: var(--color-background);
   width: 100%
 }
+.text-skills {
+    font-size: 0.8rem;
+}
 .link {
     font-weight: 700;
     font-size: 1.25rem;
@@ -141,7 +144,6 @@ p {
   line-height: 1.25;
   display: inline-block;
 }
-
 /* -----------------
         TACHYON OVERIDES
     ----------------- */
@@ -203,7 +205,7 @@ p {
   padding: 10px 0px;
 }
 .twitterlogo {
-  height: 22px;
+  height: 12px;
 }
 .funderslogo {
   height: 130px;
@@ -288,15 +290,16 @@ p {
         THE TRIBE GRID
     ------------------ */
 .tribe-image {
-  height: 220px;
-  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: grayscale(100%);
+    height: 250px;
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
 }
+
 .flip-button:hover .tribe-image, 
 .flip-button:focus .tribe-image {   
     filter: none;
     -webkit-filter: grayscale(0%);
-  }
+}
 .flip-button {
   /* strip button styles */
   border: 0;
@@ -315,8 +318,8 @@ p {
 .flip-container,
 .front,
 .back {
-  width: 220px;
-  height: 220px;
+  width: 250px;
+  height: 250px;
 }
 /* flip speed goes here */
 .flipper {
