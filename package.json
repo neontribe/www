@@ -4,7 +4,8 @@
   "description": "The neontribe MVP with static HTML, CSS, and JS.",
   "main": "index.js",
   "scripts": {
-    "start": "live-server static/"
+    "start": "live-server static/",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -16,6 +17,12 @@
   },
   "homepage": "https://github.com/neontribe/www#readme",
   "devDependencies": {
+    "eslint": ">=5.0.0",
+    "eslint-config-standard": "12.0.0",
+    "eslint-plugin-import": ">=2.13.0",
+    "eslint-plugin-node": ">=7.0.0",
+    "eslint-plugin-promise": ">=4.0.0",
+    "eslint-plugin-standard": ">=4.0.0",
     "live-server": "^1.2.1"
   }
 }
