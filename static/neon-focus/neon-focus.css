@@ -1,0 +1,7 @@
+.neon-border-el {
+  display: none;
+}
+
+*:focus .neon-border-el {
+  display: inline !important;
+}
