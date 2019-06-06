@@ -11,7 +11,6 @@ cd www
 nvm install
 npm install -g yarn
 yarn
-yarn start
 yarn start-prototype
 ```
 
