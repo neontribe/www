@@ -1,0 +1,9 @@
+.cache
+.git
+build
+coverage
+node_modules
+package.json
+public
+static
+yarn.lock

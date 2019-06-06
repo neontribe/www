@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "neontribe-www",
+  "alias": ["neontribe.now.sh"],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "public",
+        "useBuildUtils": "@now/build-utils@canary"
+      }
+    }
+  ],
+  "regions": ["bru1"]
+}
