@@ -8,7 +8,7 @@ window.entries.push({
     leading on many aspects of the process.`,
   problem: `Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.`,
   solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
-  destination: 'https://www.mindofmyown.org.uk'
+  destination: 'https://www.mindofmyown.org.uk',
 })
 
 window.entries.push({
@@ -19,7 +19,7 @@ window.entries.push({
     fruit and veg project for families in or at risk of food poverty.`,
   problem: `dolore magna aliquyam erat, sed diam voluptua.`,
   solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
-  destination: 'https://www.alexandrarose.org.uk'
+  destination: 'https://www.alexandrarose.org.uk',
 })
 
 window.entries.push({
@@ -30,7 +30,7 @@ window.entries.push({
     of applying for benefits. `,
   problem: `dolore magna aliquyam erat, sed diam voluptua.`,
   solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
-  destination: 'www.c-app.org.uk'
+  destination: 'www.c-app.org.uk',
 })
 
 window.entries.push({
@@ -41,7 +41,7 @@ window.entries.push({
     tool which helps women realise they are in an abusive relationship and dispel their fears about taking action. `,
   problem: `dolore magna aliquyam erat, sed diam voluptua.`,
   solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
-  destination: 'www.youmatterhaven.org.uk'
+  destination: 'www.youmatterhaven.org.uk',
 })
 
 window.entries.push({
@@ -52,7 +52,7 @@ window.entries.push({
     Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
   problem: `dolore magna aliquyam erat, sed diam voluptua.`,
   solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
-  destination: 'https://www.allegiantair.com'
+  destination: 'https://www.allegiantair.com',
 })
 
 window.entries.push({
@@ -63,7 +63,7 @@ window.entries.push({
       Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
   problem: `dolore magna aliquyam erat, sed diam voluptua.`,
   solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
-  destination: 'https://www.allegiantair.com'
+  destination: 'https://www.allegiantair.com',
 })
 
 window.entries.push({
@@ -74,7 +74,7 @@ window.entries.push({
       Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
   problem: `dolore magna aliquyam erat, sed diam voluptua.`,
   solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
-  destination: 'https://www.allegiantair.com'
+  destination: 'https://www.allegiantair.com',
 })
 
 window.entries.push({
@@ -85,7 +85,7 @@ window.entries.push({
       Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
   problem: `dolore magna aliquyam erat, sed diam voluptua.`,
   solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
-  destination: 'https://www.allegiantair.com'
+  destination: 'https://www.allegiantair.com',
 })
 
 window.entries.push({
@@ -96,7 +96,7 @@ window.entries.push({
       Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
   problem: `dolore magna aliquyam erat, sed diam voluptua.`,
   solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
-  destination: 'https://www.allegiantair.com'
+  destination: 'https://www.allegiantair.com',
 })
 
 window.entries.push({
@@ -107,7 +107,7 @@ window.entries.push({
       Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
   problem: `dolore magna aliquyam erat, sed diam voluptua.`,
   solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
-  destination: 'https://www.allegiantair.com'
+  destination: 'https://www.allegiantair.com',
 })
 
 window.entries.push({
@@ -118,7 +118,7 @@ window.entries.push({
       Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
   problem: `dolore magna aliquyam erat, sed diam voluptua.`,
   solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
-  destination: 'https://www.allegiantair.com'
+  destination: 'https://www.allegiantair.com',
 })
 
 window.entries.push({
@@ -129,7 +129,7 @@ window.entries.push({
       Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
   problem: `dolore magna aliquyam erat, sed diam voluptua.`,
   solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
-  destination: 'https://www.allegiantair.com'
+  destination: 'https://www.allegiantair.com',
 })
 
 window.entries.push({
@@ -141,5 +141,5 @@ window.entries.push({
       Lola Tech and Neontribe are developing Allegiant's all-new stack that will replace the last version we built, which is now 7 years old. `,
   problem: `dolore magna aliquyam erat, sed diam voluptua.`,
   solution: `Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat`,
-  destination: 'https://www.allegiantair.com'
+  destination: 'https://www.allegiantair.com',
 })

@@ -1,6 +1,6 @@
 var profilesEl = document.getElementById('profiles')
 
-function createSkillItem (skill) {
+function createSkillItem(skill) {
   return `
     <span class="text-skills b-ns">
       ${skill}
@@ -9,21 +9,25 @@ function createSkillItem (skill) {
 }
 if (profilesEl && window.profiles) {
   profilesEl.innerHTML = window.profiles
-    .map(function (profile) {
+    .map(function(profile) {
       return `
         <div class="fl pa2">
             <button type="button" class="flip-button" onclick="flip(this)">
                 <span class="flip-container">
                     <span class="flipper">
                         <span class="front relative flex flex-column items-center">
-                            <img class="tribe-image" src="${profile.image}" alt="" />
+                            <img class="tribe-image" src="${
+                              profile.image
+                            }" alt="" />
                             <span class="absolute bottom-1 flex justify-center right-0 top-0 w-100">
                                 <span class="text-name absolute bottom--1 right-0 fw7" data-syncProps="borderTopColor">
                                 ${profile.name}
                                 <span class="arrowblack">&rarr;</span>
                                 <br>
                                 <span>
-                                  ${profile.skills.map(createSkillItem).join('|')}
+                                  ${profile.skills
+                                    .map(createSkillItem)
+                                    .join('|')}
                                 </span>
                             </span>
                         </span>
@@ -92,7 +96,7 @@ window.next = carouselEl => {
 var acc = document.getElementsByClassName('accordion')
 
 for (var i = 0; i < acc.length; i++) {
-  acc[i].addEventListener('click', function () {
+  acc[i].addEventListener('click', function() {
     /* Toggle between adding and removing the "active" class,
     to highlight the button that controls the panel */
     this.classList.toggle('active')
@@ -109,10 +113,10 @@ for (var i = 0; i < acc.length; i++) {
 
 // howwework -------------------------------------------------------------------------------------------------------------------
 
-window.toggleWorkEntry = function (el) {
+window.toggleWorkEntry = function(el) {
   const entryEl = el.closest('.work-entry')
 
-  document.querySelectorAll('.work-entry').forEach(function (entry) {
+  document.querySelectorAll('.work-entry').forEach(function(entry) {
     const article = entry.querySelector('article')
 
     if (entryEl !== entry) {
@@ -123,21 +127,28 @@ window.toggleWorkEntry = function (el) {
   })
 }
 
-function getEntryTemplate (entry) {
+function getEntryTemplate(entry) {
   return `
         <div class="work-entry mb3">
             <div
-              class="work-entry-${entry.title.split(' ').join('-').toLowerCase()} work-entry-bg-image pa3"
+              class="work-entry-${entry.title
+                .split(' ')
+                .join('-')
+                .toLowerCase()} work-entry-bg-image pa3"
               onclick="toggleWorkEntry(this)"
               style="background-image: url('${entry.bannerimage}')"
             >
                 <h3 class="text mb2">${entry.title}</h3>
                 <p class="text">${entry.description}</p>
-                <button type="button" class="visually-hidden" onclick="toggleWorkEntry(this)">View problem and solution for ${entry.title}</button>
+                <button type="button" class="visually-hidden" onclick="toggleWorkEntry(this)">View problem and solution for ${
+                  entry.title
+                }</button>
             </div>
             <article class="pa3" aria-hidden>
                 <div class="mb2 text">
-                <img src="${entry.image}" class="fl mr3 mb2" alt="${entry.imagedescription}" />
+                <img src="${entry.image}" class="fl mr3 mb2" alt="${
+    entry.imagedescription
+  }" />
                 <h3 class="mb1">${entry.title}</h3>
                 <a href="${entry.destination}" class="pl3 pr3 text link-small">
                   ${entry.destination.split('://')[1]}
