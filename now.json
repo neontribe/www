@@ -16,6 +16,12 @@
       "use": "@now/static"
     }
   ],
-  "routes": [{ "src": "/prototype", "dest": "/prototype/index.html" }],
+  "routes": [
+    {
+      "src": "/prototype",
+      "status": 301,
+      "headers": { "Location": "/prototype/" }
+    }
+  ],
   "regions": ["bru1"]
 }
