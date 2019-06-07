@@ -12,7 +12,7 @@
       }
     },
     {
-      "src": "prototype/*",
+      "src": "prototype/**/*",
       "use": "@now/static"
     }
   ],
