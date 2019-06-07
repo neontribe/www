@@ -1,0 +1,154 @@
+<html>
+
+<head>
+    <title>Neontribe</title>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/zml8kck.css" />
+    <link rel="stylesheet" href="./global-css/style.css" />
+    <link rel="stylesheet" href="./neon-focus/neon-focus.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+    <div class="layout">
+        <header class="header flex justify-between items-center flex-column flex-row-ns tc tl-ns mt4 mb5">
+            <div class="fl w-100 w-third-ns mb4 mb0-ns">
+                <a class="dib" href="./index.html" class="logo"><img class="logo" src="./global-images/logo.svg" alt="neontribe logo" /></a>
+            </div>
+            <div class="fl w-100 w-two-thirds-m w-third-l">
+                <nav>
+                    <ul class="list flex justify-center flex-column flex-row-ns flex-wrap ttu nowrap">
+                        <li class="pr4"><a href="howwework.html" class="pl3 pr3 text">How We Work</a></li>
+                        <li><a href="thetribe.html" class="pl3 pr3 text">The Tribe</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="fl w-100 w-two-thirds-m w-third-l tr-ns">
+                <a href="mailto:hello@neontribe.co.uk" class="text">hello@neontribe.co.uk</a>
+            </div>
+        </header>
+
+        <main class="main">
+            <img class="w-100-ns" src="./global-images/neontribe-illustration-final.svg" alt="illustration of neontribe working" />
+            <div class="mv4 center w-100 w-75-ns">
+                <p>
+                    Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Ut wisi enim ad minim veniam, quis nostrud exerci ex ea commodo consequat.
+                </p>
+            </div>
+            <div class="w-100">
+                <h2 class="text mt3">The Tribe</h2>
+                <div class="carousel w-100 overflow-hidden relative mb4 mt4">
+
+                    <div class="relative">
+                        <div class="slides flex" data-active-index="0">
+                            <div class="slide flex flex-column flex-row-ns w-100">
+                                <p class="ma0 pl0 pt0 pb0 pr4 flex flex-column items-center db-ns">
+                                    <span>
+                        <img src="./thetribe1.png" class="slide-image fl pl4 pr3" alt="" />
+                      </span> "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit ametna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum"
+                                </p>
+                            </div>
+
+                            <div class="slide w-100 flex">
+                                <div class="slide-image fl w-third">
+                                    <img src="./thetribe1.png" class="slide-image fl pl4 pr3" alt="" />
+                                </div>
+                                <div class=" fl w-two-thirds">
+                                    <p class="ma0 pl0 pt0 pb0 pr4 flex flex-column items-center db-ns">Slide 2</p>
+                                </div>
+                            </div>
+
+                            <div class="slide w-100 flex">
+                                <div class="slide-image fl w-third">
+                                    <img src="./thetribe1.png" class="slide-image fl pl4 pr3" alt="" />
+                                </div>
+                                <div class=" fl w-two-thirds">
+                                    <p class="ma0 pl0 pt0 pb0 pr4 flex flex-column items-center db-ns">Slide 3</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="controls">
+                            <button
+                                type="button"
+                                class="prev absolute left-0 top-0 bottom-0"
+                                aria-label="Previous slide"
+                                onClick="prev(this.closest('.carousel'))"
+                            >
+                                <span className="border-hack-prev"></span>
+                            </button>
+                            <button
+                                type="button"
+                                class="next absolute right-0 top-0 bottom-0" aria
+                                label="Next slide"
+                                onClick="next(this.closest('.carousel'))"
+                            >
+                                <span className="border-hack-next"></span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="pt4">
+                        <ol class="list flex justify-center">
+                            <li class="pl3 pr3">
+                                <button type="button" class="dot active" onClick="window.goTo(this.closest('.carousel'), 0)">
+                                    <span class="visually-hidden">Go to slide 1</span>
+                                </button>
+                            </li>
+                            <li class="pl3 pr3">
+                                <button type="button" class="dot" onClick="window.goTo(this.closest('.carousel'), 1)">
+                                    <span class="visually-hidden">Go to slide 1</span>
+                                </button>
+                            </li>
+                            <li class="pl3 pr3">
+                                <button type="button" class="dot" onClick="window.goTo(this.closest('.carousel'), 2)">
+                                    <span class="visually-hidden">Go to slide 1</span>
+                                </button>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tc pb4">
+                <a href="./thetribe.html" class="text link">Meet the tribe <span class="arrowlightblue">&rarr;</span></a>
+            </div>
+        </main>
+
+        <div class="footer-background"></div>
+        <footer class="footer flex justify-between flex-column flex-row-ns pv3">
+            <div class="fl w-25-ns w-50-m tl">
+                <ul class="list">
+                    <li><a href="mailto:hello@neontribe.co.uk">hello@neontribe.co.uk</a></li>
+                    <li><a href="tel://0845 689 0896">0845 689 0896</a></li>
+                    <li><a href="">Privacy and Legal Information</a></li>
+                </ul>
+            </div>
+            <div class="fl w-25-ns w-50-m tl">
+                <div class="flex items-center di">
+                    <a href="https://twitter.com/neontribe">
+                        <img class="twitterlogo" src="./global-images/twitterlogo.svg" alt="twitter" />
+                        <span>@neontribe</span>
+                    </a>
+                </div>
+            </div>
+            <div class="fl w-25-ns w-50-m tl">
+                Norwich
+                <br /> 21 Colegate
+                <br /> Norwich
+                <br /> NR3 1BN
+            </div>
+            <div class="fl w-25-ns w-50-m tl">
+                Exeter
+                <br /> The Generator Hub
+                <br /> Exeter
+                <br /> EX2 4AN
+            </div>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="./global-js/behaviour.templating.js"></script>
+    <script type="text/javascript" src="./neon-focus/neon-focus.js"></script>
+</body>
+
+</html>

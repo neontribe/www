@@ -1,28 +1,68 @@
 {
   "name": "@neontribe/www",
+  "description": "Neontribe website built with Gatsby",
   "version": "1.0.0",
-  "description": "The neontribe MVP with static HTML, CSS, and JS.",
-  "main": "index.js",
+  "dependencies": {
+    "gatsby": "2.0.53",
+    "gatsby-image": "2.0.20",
+    "gatsby-plugin-manifest": "2.0.9",
+    "gatsby-plugin-offline": "2.0.16",
+    "gatsby-plugin-react-helmet": "3.0.2",
+    "gatsby-plugin-sharp": "^2.1.3",
+    "gatsby-source-filesystem": "^2.0.37",
+    "gatsby-transformer-sharp": "2.1.8",
+    "react": "16.6.3",
+    "react-dom": "16.6.3",
+    "react-helmet": "5.2.0"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
   "scripts": {
-    "start": "live-server static/",
-    "lint": "eslint ."
+    "precommit": "lint-staged",
+    "postcommit": "git update-index --again",
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "yarn run develop",
+    "start-prototype": "live-server prototype/",
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "now-build": "npm run build"
+  },
+  "devDependencies": {
+    "babel-eslint": "9.x",
+    "eslint": "5.x",
+    "eslint-config-react-app": "^3.0.5",
+    "eslint-plugin-flowtype": "2.x",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-react": "7.x",
+    "husky": "1.2.0",
+    "lint-staged": "8.1.0",
+    "prettier": "1.15.2",
+    "live-server": "1.2.1"
+  },
+  "engines": {
+    "yarn": "1.16.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/neontribe/www.git"
+    "url": "https://github.com/neontribe/www"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/neontribe/www/issues"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
-  "homepage": "https://github.com/neontribe/www#readme",
-  "devDependencies": {
-    "eslint": ">=5.0.0",
-    "eslint-config-standard": "12.0.0",
-    "eslint-plugin-import": ">=2.13.0",
-    "eslint-plugin-node": ">=7.0.0",
-    "eslint-plugin-promise": ">=4.0.0",
-    "eslint-plugin-standard": ">=4.0.0",
-    "live-server": "^1.2.1"
+  "lint-staged": {
+    "*.{js,json,css,md}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.js": [
+      "eslint",
+      "git add"
+    ]
   }
 }
