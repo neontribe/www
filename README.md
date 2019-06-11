@@ -1,7 +1,21 @@
 # Neontribe Website
 
+The neontribe MVP with static HTML, CSS, and JS.
 
-# 🚀 Quick start
+## Dev on the prototype
+
+Use yarn
+```bash
+git clone git@github.com:neontribe/www.git
+cd www
+nvm install
+npm install -g yarn
+yarn
+yarn start
+yarn start-prototype
+```
+
+## 🚀 Quick start
 1.  **Prerequisites**
 
     * git
@@ -28,7 +42,7 @@
 
     Save your changes and the browser will update in real time!
 
-# 👷‍♀️ Maintenance
+## 👷‍♀️ Maintenance
 
 Please use `yarn` to manage the dependencies and scripts in this project. You shouldn't have to worry about which version you have, so long as it is better than 1.0.1 this system will take care of the details.
 
