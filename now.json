@@ -10,6 +10,17 @@
         "distDir": "public",
         "useBuildUtils": "@now/build-utils@canary"
       }
+    },
+    {
+      "src": "prototype/**/*",
+      "use": "@now/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/prototype",
+      "status": 301,
+      "headers": { "Location": "/prototype/" }
     }
   ],
   "regions": ["bru1"]
