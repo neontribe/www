@@ -20,8 +20,6 @@
   ],
   "license": "MIT",
   "scripts": {
-    "precommit": "lint-staged",
-    "postcommit": "git update-index --again",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "yarn run develop",
@@ -53,7 +51,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "postcommit": "git update-index --again"
     }
   },
   "lint-staged": {
