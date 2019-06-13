@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import { PAGE_WIDTH_REM } from '../../theme'
 
 const ConstrainedWidth = ({ children }) => (
-  <div className="root">
+  <div className="constrained-container">
     {children}
     <style jsx>{`
-      .root {
+      .constrained-container {
         width: 100%;
         max-width: ${PAGE_WIDTH_REM}rem;
         margin: auto;

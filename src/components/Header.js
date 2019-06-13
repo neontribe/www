@@ -8,15 +8,35 @@ import ConstrainedWidth from './Layout/ConstrainedWidth'
 
 const Nav = () => (
   <nav className="nav">
-    <Link to="/">foo</Link>
-    <Link to="/">foo</Link>
-    <Link to="/">foo</Link>
+    <ul className="list">
+      <li>
+        <Link to="/">fooooooooooo</Link>
+      </li>
+      <li>
+        <Link to="/">foo</Link>
+      </li>
+      <li>
+        <Link to="/">foo</Link>
+      </li>
+    </ul>
 
     <style jsx>{`
       .nav {
         display: flex;
+      }
+
+      .list {
+        padding: 0;
+        display: flex;
         align-items: center;
+        flex-wrap: wrap;
         justify-content: space-between;
+        margin: 0;
+        list-style: none;
+      }
+
+      .list li + li {
+        margin-left: 2rem;
       }
     `}</style>
   </nav>
@@ -25,15 +45,18 @@ const Nav = () => (
 const Header = ({ siteTitle }) => (
   <ConstrainedWidth>
     <div className="header">
-      <GatsbyLink to="/" title={`Link to ${siteTitle} homepage`}>
-        <Logo />
-      </GatsbyLink>
+      <div>
+        <GatsbyLink to="/" title={`Link to ${siteTitle} homepage`}>
+          <Logo />
+        </GatsbyLink>
+      </div>
       <Nav />
     </div>
     <style jsx>{`
       .header {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
         padding: 0.5rem;
       }
     `}</style>
