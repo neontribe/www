@@ -2,38 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import 'normalize.css'
-
-import Header from './Header'
-
-const Footer = () => <div style={{ backgroundColor: 'red', height: 150 }} />
-
-const Page = ({ title, children }) => (
-  <>
-    <div className="page-layout">
-      <Header siteTitle={title} />
-      <main role="main">{children}</main>
-      <Footer />
-
-      <style jsx>{`
-        .page-layout {
-          min-height: 100%;
-          display: flex;
-          flex-direction: column;
-        }
-
-        main {
-          flex: 1 0 auto;
-        }
-      `}</style>
-    </div>
-  </>
-)
-
-Page.propTypes = {
-  title: PropTypes.string,
-  children: PropTypes.node,
-}
+import Page from './Page'
+import { REM_PX, COLOUR_PRIMARY_BACKGROUND } from '../../theme'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -62,6 +32,12 @@ const Layout = ({ children }) => (
           *::before,
           *::after {
             box-sizing: border-box;
+          }
+
+          body {
+            background-color: ${COLOUR_PRIMARY_BACKGROUND};
+            font-size: ${REM_PX}px;
+            font-family: sans-serif;
           }
         `}</style>
         <Page title={data.site.siteMetadata.title}>{children}</Page>
