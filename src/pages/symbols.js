@@ -5,30 +5,33 @@ import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import Hexagon from '../components/Hexagon'
 import Text from '../components/Text'
 import logo from '../components/Logo/logo.svg'
+import Heading from '../components/Heading'
 import { COLOUR_NEONS } from '../theme'
 
 export default () => (
   <Layout>
     <ConstrainedWidth>
-      <h1>
+      <Heading level={1} size="large">
         <Text>Symbols</Text>
-      </h1>
+      </Heading>
       <div className="centered">
-        <div className="hex-container">
-          <h2>
+        <div>
+          <Heading>
             <Text>Hexagons</Text>
-          </h2>
-          <div className="hexagon">
-            <Hexagon />
-          </div>
-          <div className="hexagon">
-            <Hexagon src={logo} size={55} />
-          </div>
-          {COLOUR_NEONS.map(c => (
+          </Heading>
+          <div className="hex-container">
             <div className="hexagon">
-              <Hexagon size={55} bgColour={c} />
+              <Hexagon />
             </div>
-          ))}
+            <div className="hexagon">
+              <Hexagon src={logo} size={55} />
+            </div>
+            {COLOUR_NEONS.map(c => (
+              <div key={c} className="hexagon">
+                <Hexagon size={55} bgColour={c} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </ConstrainedWidth>
