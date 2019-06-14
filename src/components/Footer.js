@@ -3,15 +3,16 @@ import { COLOUR_PRIMARY_BACKGROUND_ALTERNATIVE } from '../theme'
 import ConstrainedWidth from './Layout/ConstrainedWidth'
 import Text from './Text'
 import { ExternalLink } from './Link'
+import Heading from './Heading'
 
 const HousekeepingList = ({ children, title }) => (
   <div>
-    <p className="heading">{title}</p>
+    <Heading level={3} size="small">
+      {title}
+    </Heading>
     <ul className="heading-list">{children}</ul>
 
     <style jsx>{`
-      .heading {
-      }
       .heading-list {
         list-style: none;
         margin: 0;
