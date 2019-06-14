@@ -5,6 +5,7 @@ import { Link as GatsbyLink } from 'gatsby'
 import Logo from './Logo'
 import Link from './Link'
 import ConstrainedWidth from './Layout/ConstrainedWidth'
+import { breakpoint } from '../theme'
 
 const Nav = () => (
   <nav className="nav">
@@ -21,22 +22,33 @@ const Nav = () => (
     </ul>
 
     <style jsx>{`
-      .nav {
-        display: flex;
-      }
-
       .list {
+        margin: 0;
         padding: 0;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        justify-content: space-between;
-        margin: 0;
+        justify-content: center;
+        flex-direction: column;
         list-style: none;
+        width: 100%;
       }
 
       .list li + li {
-        margin-left: 2rem;
+        margin-top: 1rem;
+      }
+
+      @media (${breakpoint('sm')}) {
+        .list {
+          justify-content: space-between;
+          flex-direction: row;
+          width: auto;
+        }
+
+        .list li + li {
+          margin-top: 0;
+          margin-left: 2rem;
+        }
       }
     `}</style>
   </nav>
@@ -45,12 +57,14 @@ const Nav = () => (
 const Header = ({ siteTitle }) => (
   <ConstrainedWidth>
     <div className="header">
-      <div>
+      <div className="logo-wrapper">
         <GatsbyLink to="/" title={`Link to ${siteTitle} homepage`}>
           <Logo />
         </GatsbyLink>
       </div>
-      <Nav />
+      <div className="nav-wrapper">
+        <Nav />
+      </div>
     </div>
     <style jsx>{`
       .header {
@@ -58,6 +72,28 @@ const Header = ({ siteTitle }) => (
         justify-content: space-between;
         flex-wrap: wrap;
         padding: 0.5rem;
+      }
+
+      .header > * {
+        flex: 1 0 auto;
+      }
+
+      .logo-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+
+      .nav-wrapper {
+        margin: auto 0;
+      }
+
+      @media (${breakpoint('sm')}) {
+        .header > * {
+          flex: initial;
+        }
+        .logo-wrapper {
+          justify-content: normal;
+        }
       }
     `}</style>
   </ConstrainedWidth>
