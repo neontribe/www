@@ -28,14 +28,9 @@ const Heading = ({ level, children, size }) => {
 }
 
 Heading.propTypes = {
-  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
+  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
   children: PropTypes.node,
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
-}
-
-Heading.defaultProps = {
-  level: 2,
-  size: 'medium',
+  size: PropTypes.oneOf(['small', 'medium', 'large']).isRequired,
 }
 
 export default Heading

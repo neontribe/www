@@ -17,7 +17,7 @@ export default () => (
       </Heading>
       <div className="centered">
         <div>
-          <Heading>
+          <Heading level={2} size="medium">
             <Text>Hexagons</Text>
           </Heading>
           <div className="hex-container">
@@ -34,7 +34,7 @@ export default () => (
             ))}
           </div>
           <div>
-            <Heading>
+            <Heading level={2} size="medium">
               <Text>Links</Text>
             </Heading>
             <div>
