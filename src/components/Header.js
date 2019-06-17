@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link as GatsbyLink } from 'gatsby'
 
+import { breakpoint, GUTTER_PX } from '../theme'
 import Logo from './Logo'
 import Link from './Link'
 import ConstrainedWidth from './Layout/ConstrainedWidth'
-import { breakpoint } from '../theme'
 
 const Nav = () => (
   <nav className="nav">
@@ -71,7 +71,7 @@ const Header = ({ siteTitle }) => (
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding: 0.5rem;
+        padding: ${GUTTER_PX}px;
       }
 
       .header > * {
