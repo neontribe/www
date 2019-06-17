@@ -45,7 +45,7 @@ const Hexagon = ({ src, bgColour, size }) => {
       </defs>
       <polygon
         className="hex"
-        points="300,150 225,280 75,280 0,150 75,20 225,20"
+        points="280,75 150,0 20,75 20,225 150,300 280,225"
         fill={`url('#${id}')`}
       ></polygon>
       <style jsx>{`
