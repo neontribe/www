@@ -56,7 +56,7 @@ const Nav = () => (
 
 const Header = ({ siteTitle }) => (
   <ConstrainedWidth>
-    <div className="header">
+    <header className="header">
       <div className="logo-wrapper">
         <GatsbyLink to="/" title={`Link to ${siteTitle} homepage`}>
           <Logo />
@@ -65,7 +65,7 @@ const Header = ({ siteTitle }) => (
       <div className="nav-wrapper">
         <Nav />
       </div>
-    </div>
+    </header>
     <style jsx>{`
       .header {
         display: flex;

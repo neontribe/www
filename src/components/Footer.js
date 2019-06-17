@@ -1,25 +1,40 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { COLOUR_PRIMARY_BACKGROUND_ALTERNATIVE } from '../theme'
 import ConstrainedWidth from './Layout/ConstrainedWidth'
 import Text from './Text'
 import { ExternalLink } from './Link'
 import Heading from './Heading'
 
+const mapListItems = children =>
+  React.Children.map(children, child => {
+    if (child.type === 'li') {
+      return child
+    }
+
+    return <li>{child}</li>
+  })
+
 const HousekeepingList = ({ children, title }) => (
   <div>
     <Heading level={3} size="small">
       {title}
     </Heading>
-    <ul className="heading-list">{children}</ul>
+    {children && <ul className="heading-list">{mapListItems(children)}</ul>}
 
     <style jsx>{`
       .heading-list {
         list-style: none;
         margin: 0;
+        padding: 0;
       }
     `}</style>
   </div>
 )
+
+HousekeepingList.propTypes = {
+  children: PropTypes.node,
+}
 
 export default () => (
   <footer>
@@ -45,7 +60,10 @@ export default () => (
               Norwich
             </Text>
           }
-        />
+        >
+          <li>some content</li>
+          <div>not an li!</div>
+        </HousekeepingList>
         <HousekeepingList
           title={
             <Text alternate heavy>
