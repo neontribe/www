@@ -1,15 +1,19 @@
 import React from 'react'
 
-import LogoImage from './logo.svg'
+import { COLOUR_LOGO_BACKGROUND } from '../../theme'
+import Hexagon from '../Hexagon'
+import logoImage from './logo.svg'
 
 export default () => (
-  <>
-    <img src={LogoImage} alt="Neontribe logo" />
+  <span className="logo-wrapper">
+    <Hexagon bgColour={COLOUR_LOGO_BACKGROUND} size={60} src={logoImage} />
+
     <style jsx>{`
-      img {
+      .logo-wrapper {
+        display: block;
         height: auto;
-        width: 80px;
+        width: 100px;
       }
     `}</style>
-  </>
+  </span>
 )
