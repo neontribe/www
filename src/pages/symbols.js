@@ -7,6 +7,7 @@ import Text from '../components/Text'
 import logo from '../components/Logo/logo.svg'
 import Heading from '../components/Heading'
 import { COLOUR_NEONS } from '../theme'
+import Link, { ExternalLink } from '../components/Link'
 
 export default () => (
   <Layout>
@@ -31,6 +32,21 @@ export default () => (
                 <Hexagon size={55} bgColour={c} />
               </div>
             ))}
+          </div>
+          <div>
+            <Heading>
+              <Text>Links</Text>
+            </Heading>
+            <div>
+              <Link to="/">Gatsby link</Link>
+              <Link button to="/">
+                Gatsby button
+              </Link>
+              <ExternalLink href="/">ExternalLink link</ExternalLink>
+              <ExternalLink button href="/">
+                ExternalLink button
+              </ExternalLink>
+            </div>
           </div>
         </div>
       </div>
