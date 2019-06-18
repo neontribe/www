@@ -11,6 +11,7 @@ const CarouselImages = ({ images, activeImage, goToItem, imageSize }) => (
         className={`carousel__image${
           i === activeImage ? ' carousel__image--is-active' : ''
         }`}
+        key={image}
         onClick={() => goToItem(i)}
       >
         <Hexagon src={image} />

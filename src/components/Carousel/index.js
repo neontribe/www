@@ -26,7 +26,7 @@ const Carousel = ({ children, imageSize = 400 }) => {
       <div className="carousel__controls">
         <CarouselControl onClick={prevItem}>◀</CarouselControl>
         <CarouselImages
-          images={children.map(child => child.props.image)}
+          images={React.Children.map(children, child => child.props.image)}
           activeImage={activeItem}
           goToItem={setActiveItem}
           imageSize={imageSize}
@@ -34,7 +34,9 @@ const Carousel = ({ children, imageSize = 400 }) => {
         <CarouselControl onClick={nextItem}>▶</CarouselControl>
       </div>
 
-      <div className="carousel__items">{children[activeItem]}</div>
+      <div className="carousel__items">
+        {React.Children.toArray(children)[activeItem]}
+      </div>
 
       <style jsx>{`
         .carousel {
@@ -63,7 +65,7 @@ const arrayOfLength = (expectedLength, props, propName, componentName) => {
 
 Carousel.propTypes = {
   // Must have 3 children
-  children: arrayOfLength.bind(null, 3).isRequired,
+  children: arrayOfLength.bind(null, 3),
   imageSize: PropTypes.number,
 }
 

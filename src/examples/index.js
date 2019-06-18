@@ -11,6 +11,12 @@ import {
   COLOUR_SECONDARY_BACKGROUND,
 } from '../theme'
 import Link, { ExternalLink } from '../components/Link'
+import Carousel from '../components/Carousel'
+import VerticalSpacing from '../components/VerticalSpacing'
+
+import steve from '../images/tribe-steve.jpg'
+import harry from '../images/tribe-harry.jpg'
+import kat from '../images/tribe-kat.jpg'
 
 const TextVariants = () => (
   <>
@@ -111,5 +117,57 @@ export const LinkExamples = () => (
         ExternalLink button
       </ExternalLink>
     </div>
+  </div>
+)
+
+export const CarouselExamples = () => (
+  <div>
+    <Heading level={2} size="medium">
+      <Text>Carousel</Text>
+    </Heading>
+    <Carousel>
+      <Carousel.Item image={steve}>
+        <Text type="secondary" size="medium">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.
+        </Text>
+        <VerticalSpacing size={1} />
+        <Heading level={3} size="medium">
+          Steve
+        </Heading>
+      </Carousel.Item>
+      <Carousel.Item image={harry}>
+        <Text type="secondary" size="medium">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.
+        </Text>
+        <VerticalSpacing size={1} />
+        <Heading level={3} size="medium">
+          Harry
+        </Heading>
+      </Carousel.Item>
+      <Carousel.Item image={kat}>
+        <Text type="secondary" size="medium">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur.
+        </Text>
+        <VerticalSpacing size={1} />
+        <Heading level={3} size="medium">
+          Kat
+        </Heading>
+      </Carousel.Item>
+    </Carousel>
   </div>
 )

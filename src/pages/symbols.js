@@ -5,7 +5,12 @@ import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import Text from '../components/Text'
 import Heading from '../components/Heading'
 
-import { HexExamples, LinkExamples, TextExamples } from '../examples'
+import {
+  HexExamples,
+  LinkExamples,
+  TextExamples,
+  CarouselExamples,
+} from '../examples'
 
 export default () => (
   <Layout>
@@ -17,6 +22,7 @@ export default () => (
         <HexExamples />
         <LinkExamples />
         <TextExamples />
+        <CarouselExamples />
       </div>
     </ConstrainedWidth>
     <style jsx>{`
