@@ -10,6 +10,7 @@ import {
   LinkExamples,
   TextExamples,
   CarouselExamples,
+  TribeMemberExample,
 } from '../examples'
 
 export default () => (
@@ -23,6 +24,7 @@ export default () => (
         <LinkExamples />
         <TextExamples />
         <CarouselExamples />
+        <TribeMemberExample />
       </div>
     </ConstrainedWidth>
     <style jsx>{`

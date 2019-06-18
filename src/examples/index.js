@@ -18,6 +18,8 @@ import steve from '../images/tribe-steve.jpg'
 import harry from '../images/tribe-harry.jpg'
 import kat from '../images/tribe-kat.jpg'
 
+export { default as TribeMemberExample } from './TribeMemberExample'
+
 const TextVariants = () => (
   <>
     <Text>Primary Text</Text>

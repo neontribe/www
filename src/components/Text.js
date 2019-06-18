@@ -7,6 +7,7 @@ import {
   COLOUR_PRIMARY_BACKGROUND_ALTERNATIVE,
   COLOUR_SECONDARY_TEXT,
   COLOUR_SECONDARY_BACKGROUND,
+  GUTTER_PX,
 } from '../theme'
 
 const Text = ({
@@ -32,7 +33,7 @@ const Text = ({
       span {
         display: inline-block;
         color: ${alternate ? COLOUR_SECONDARY_TEXT : COLOUR_PRIMARY_TEXT};
-        padding: 2px 1rem;
+        padding: 2px ${GUTTER_PX}px;
         line-height: 1.5;
         font-size: ${fontSizes[size] || 'inherit'};
       }

@@ -1,54 +1,84 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 
-const tribers = [
-  'tribe-alex.jpg',
-  'tribe-amanda.jpg',
-  'tribe-andy.jpg',
-  'tribe-charlie.jpg',
-  'tribe-ed.jpg',
-  'tribe-george.jpg',
-  'tribe-harry.jpg',
-  'tribe-holly.jpg',
-  'tribe-kara.jpg',
-  'tribe-karl.jpg',
-  'tribe-kat.jpg',
-  'tribe-katja.jpg',
-  'tribe-matt.jpg',
-  'tribe-neil.jpg',
-  'tribe-nick.jpg',
-  'tribe-ollie.jpg',
-  'tribe-rob.jpg',
-  'tribe-rose.jpg',
-  'tribe-rupert.jpg',
-  'tribe-steve.jpg',
-  'tribe-toby.jpg',
-]
-/*
- * This component is built using `gatsby-image` to automatically serve optimized
- * images with lazy loading and reduced file sizes. The image is loaded using a
- * `StaticQuery`, which allows us to load the image from directly within this
- * component, rather than having to pass the image data down from pages.
- *
- * For more information, see the docs:
- * - `gatsby-image`: https://gatsby.app/gatsby-image
- * - `StaticQuery`: https://gatsby.app/staticquery
- */
+import {
+  COLOUR_SECONDARY_BACKGROUND,
+  GUTTER_PX,
+  CUT_CORNER_PX,
+  COLOUR_NEONS,
+} from '../theme'
+import Heading from './Heading'
+import Text from './Text'
 
-export default () => (
-  <StaticQuery
-    query={graphql`
-      query {
-        placeholderImage: file(relativePath: { eq: "tribe-ed.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+let cardN = 0
+
+const nextNeon = () => COLOUR_NEONS[cardN++ % COLOUR_NEONS.length]
+
+const TribeMember = ({
+  fluid,
+  name,
+  headingLevel,
+  skills,
+  bio,
+  neonSeparatorColour = nextNeon(),
+}) => (
+  <figure className="person-card">
+    <Img fluid={fluid} alt={`Picture of ${name}`} />
+    <hr className="separator" />
+    <figcaption className="name-skills">
+      <div className="content">
+        <Heading level={headingLevel} size="small">
+          <Text type="secondary" heavy>
+            {name}
+          </Text>
+        </Heading>
+        <Text type="secondary">{skills.join(' | ')}</Text>
+      </div>
+    </figcaption>
+    <style jsx>{`
+      .separator {
+        background-color: ${neonSeparatorColour};
+        margin: 0;
+        height: ${GUTTER_PX}px;
+        border: none;
       }
-    `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
-  />
+
+      .person-card {
+        margin: 0;
+      }
+
+      .name-skills {
+        padding: ${GUTTER_PX}px;
+        /* Cut the corner off by CUT_CORNER_PX and later on we max-width the content */
+        background: linear-gradient(
+          -45deg,
+          transparent ${CUT_CORNER_PX}px,
+          ${COLOUR_SECONDARY_BACKGROUND} ${CUT_CORNER_PX}px
+        );
+      }
+
+      .content {
+        max-width: 80%;
+        max-width: calc(100% - ${CUT_CORNER_PX}px);
+        margin-right: auto;
+      }
+    `}</style>
+  </figure>
 )
+
+TribeMember.propTypes = {
+  name: PropTypes.string.isRequired,
+  skills: PropTypes.array,
+  bio: PropTypes.string,
+  neonSeparatorColour: PropTypes.oneOf(COLOUR_NEONS),
+  // Inherited prop types
+  fluid: Img.propTypes.fluid,
+  headingLevel: Heading.propTypes.level,
+}
+
+TribeMember.defaultProps = {
+  skills: [],
+}
+
+export default TribeMember
