@@ -49,9 +49,6 @@ const Hexagon = ({ src, bgColour, size }) => {
         fill={`url('#${id}')`}
       ></polygon>
       <style jsx>{`
-        .hex {
-          stroke: ${bgColour};
-        }
         .hex-background {
           fill: ${bgColour};
         }
