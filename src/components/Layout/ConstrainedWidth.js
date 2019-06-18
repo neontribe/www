@@ -8,7 +8,7 @@ const ConstrainedWidth = ({ children }) => (
     <style jsx>{`
       .constrained-container {
         width: 100%;
-        max-width: ${PAGE_WIDTH_REM}rem;
+        max-width: ${PAGE_WIDTH_REM};
         margin: auto;
       }
     `}</style>

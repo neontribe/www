@@ -1,8 +1,9 @@
 // SIZE contstants
+const PAGE_WIDTH_PX = 1020
+
 export const REM_PX = 16
-export const PAGE_WIDTH_PX = 960
-export const GUTTER_PX = 30
-export const PAGE_WIDTH_REM = PAGE_WIDTH_PX / REM_PX
+export const GUTTER_PX = 10
+export const PAGE_WIDTH_REM = `${PAGE_WIDTH_PX / REM_PX}rem`
 
 // ------ Media Queries (px taken from antd) -------
 // Media queries breakpoints in em
