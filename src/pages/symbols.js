@@ -8,12 +8,17 @@ import logo from '../components/Logo/logo.svg'
 import Heading from '../components/Heading'
 import { COLOUR_NEONS } from '../theme'
 import Link, { ExternalLink } from '../components/Link'
+import Carousel from '../components/Carousel'
+
+import harry from '../images/tribe-harry.jpg'
+import steve from '../images/tribe-steve.jpg'
+import kat from '../images/tribe-kat.jpg'
 
 export default () => (
   <Layout>
     <ConstrainedWidth>
       <Heading level={1} size="large">
-        <Text>Symbols</Text>
+        <Text type="secondary">Symbols</Text>
       </Heading>
       <div className="centered">
         <div>
@@ -47,6 +52,52 @@ export default () => (
                 ExternalLink button
               </ExternalLink>
             </div>
+          </div>
+          <div>
+            <Heading level={2} size="medium">
+              <Text>Carousel</Text>
+            </Heading>
+            <Carousel>
+              <Carousel.Item image={steve}>
+                <Text type="secondary">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur.
+                </Text>
+                <Heading level={3} size="x-small">
+                  Steve
+                </Heading>
+              </Carousel.Item>
+              <Carousel.Item image={harry}>
+                <Text type="secondary">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur.
+                </Text>
+                <Heading level={3} size="x-small">
+                  Harry
+                </Heading>
+              </Carousel.Item>
+              <Carousel.Item image={kat}>
+                <Text type="secondary">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur.
+                </Text>
+                <Heading level={3} size="x-small">
+                  Kat
+                </Heading>
+              </Carousel.Item>
+            </Carousel>
           </div>
         </div>
       </div>
