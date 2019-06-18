@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Hexagon from '../Hexagon'
 
-import { breakpoint } from '../../theme'
+import { breakpoint, REM_PX } from '../../theme'
 
-const CarouselImages = ({ images, activeImage, goToItem }) => (
+const CarouselImages = ({ images, activeImage, goToItem, imageSize }) => (
   <div className="carousel__images">
     {images.map((image, i) => (
       <button
@@ -21,12 +21,12 @@ const CarouselImages = ({ images, activeImage, goToItem }) => (
       .carousel__images {
         display: flex;
         align-items: center;
-        height: 200px;
+        height: ${imageSize / REM_PX}rem;
         position: relative;
         z-index: 1;
       }
       .carousel__image {
-        height: 125px;
+        height: 50%;
         filter: grayscale(100%);
         background: none;
         border: 0;
@@ -35,7 +35,7 @@ const CarouselImages = ({ images, activeImage, goToItem }) => (
         transition: all 0.2s ease-in-out;
       }
       .carousel__image--is-active {
-        height: 200px;
+        height: 100%;
         display: flex;
         filter: none;
       }
@@ -56,6 +56,7 @@ CarouselImages.propTypes = {
   images: PropTypes.array,
   activeImage: PropTypes.number,
   goToItem: PropTypes.func,
+  imageSize: PropTypes.number,
 }
 
 export default CarouselImages

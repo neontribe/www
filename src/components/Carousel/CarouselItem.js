@@ -15,9 +15,8 @@ const CarouselItem = ({ children }) => {
         .carousel__item {
           background-color: ${COLOUR_SECONDARY_BACKGROUND};
           color: ${COLOUR_SECONDARY_TEXT};
-          padding: ${REM_PX * 4}px;
+          padding: ${REM_PX * 5}px ${REM_PX * 4}px;
           text-align: center;
-          transform: translateY(-25px);
         }
       `}</style>
     </div>

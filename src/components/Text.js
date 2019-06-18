@@ -8,12 +8,19 @@ import {
   COLOUR_SECONDARY_BACKGROUND,
 } from '../theme'
 
+const fontSizes = {
+  small: '1.25rem',
+  medium: '1.5rem',
+  large: '2rem',
+}
+
 const Text = ({
   type = 'primary',
   alternate,
   transparent,
   children,
   heavy,
+  size,
 }) => (
   <span
     className={[
@@ -32,6 +39,7 @@ const Text = ({
         color: ${alternate ? COLOUR_SECONDARY_TEXT : COLOUR_PRIMARY_TEXT};
         padding: 2px 1rem;
         line-height: 1.5;
+        font-size: ${fontSizes[size] || 'inherit'};
       }
 
       .heavy {

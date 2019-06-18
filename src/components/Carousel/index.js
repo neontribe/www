@@ -1,11 +1,12 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import CarouselControl from './CarouselControl'
 import CarouselImages from './CarouselImages'
 import CarouselItem from './CarouselItem'
 
 const moduloWithMax = (num, max) => ((num % max) + max) % max
 
-const Carousel = ({ children }) => {
+const Carousel = ({ children, imageSize = 400 }) => {
   const [activeItem, setActiveItem] = React.useState(0)
 
   const nextItem = () => {
@@ -28,11 +29,12 @@ const Carousel = ({ children }) => {
           images={children.map(child => child.props.image)}
           activeImage={activeItem}
           goToItem={setActiveItem}
+          imageSize={imageSize}
         />
         <CarouselControl onClick={nextItem}>▶</CarouselControl>
       </div>
 
-      <div>{children[activeItem]}</div>
+      <div className="carousel__items">{children[activeItem]}</div>
 
       <style jsx>{`
         .carousel {
@@ -41,6 +43,9 @@ const Carousel = ({ children }) => {
         .carousel__controls {
           display: flex;
           justify-content: space-between;
+        }
+        .carousel__items {
+          transform: translateY(-${imageSize / 4}px);
         }
       `}</style>
     </div>
@@ -59,6 +64,7 @@ const arrayOfLength = (expectedLength, props, propName, componentName) => {
 Carousel.propTypes = {
   // Must have 3 children
   children: arrayOfLength.bind(null, 3).isRequired,
+  imageSize: PropTypes.number,
 }
 
 Carousel.Item = CarouselItem

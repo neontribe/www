@@ -13,6 +13,7 @@ import Carousel from '../components/Carousel'
 import harry from '../images/tribe-harry.jpg'
 import steve from '../images/tribe-steve.jpg'
 import kat from '../images/tribe-kat.jpg'
+import VerticalSpacing from '../components/VerticalSpacing'
 
 export default () => (
   <Layout>
@@ -59,7 +60,7 @@ export default () => (
             </Heading>
             <Carousel>
               <Carousel.Item image={steve}>
-                <Text type="secondary">
+                <Text type="secondary" size="medium">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -67,12 +68,13 @@ export default () => (
                   irure dolor in reprehenderit in voluptate velit esse cillum
                   dolore eu fugiat nulla pariatur.
                 </Text>
-                <Heading level={3} size="x-small">
+                <VerticalSpacing size={1} />
+                <Heading level={3} size="medium">
                   Steve
                 </Heading>
               </Carousel.Item>
               <Carousel.Item image={harry}>
-                <Text type="secondary">
+                <Text type="secondary" size="medium">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -80,12 +82,13 @@ export default () => (
                   irure dolor in reprehenderit in voluptate velit esse cillum
                   dolore eu fugiat nulla pariatur.
                 </Text>
-                <Heading level={3} size="x-small">
+                <VerticalSpacing size={1} />
+                <Heading level={3} size="medium">
                   Harry
                 </Heading>
               </Carousel.Item>
               <Carousel.Item image={kat}>
-                <Text type="secondary">
+                <Text type="secondary" size="medium">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   Ut enim ad minim veniam, quis nostrud exercitation ullamco
@@ -93,7 +96,8 @@ export default () => (
                   irure dolor in reprehenderit in voluptate velit esse cillum
                   dolore eu fugiat nulla pariatur.
                 </Text>
-                <Heading level={3} size="x-small">
+                <VerticalSpacing size={1} />
+                <Heading level={3} size="medium">
                   Kat
                 </Heading>
               </Carousel.Item>
