@@ -12,7 +12,9 @@ const Heading = ({ level, children, size }) => {
           padding: 0;
           margin: 0;
         }
-
+        .x-small {
+          font-size: 1rem;
+        }
         .small {
           font-size: 1.25rem;
         }
