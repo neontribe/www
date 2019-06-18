@@ -24,14 +24,21 @@ const Carousel = ({ children, imageSize = 400 }) => {
   return (
     <div className="carousel">
       <div className="carousel__controls">
-        <CarouselControl onClick={prevItem}>◀</CarouselControl>
+        <CarouselControl label="Previous Item" onClick={prevItem}>
+          ◀
+        </CarouselControl>
         <CarouselImages
-          images={React.Children.map(children, child => child.props.image)}
+          images={React.Children.map(children, child => ({
+            src: child.props.image,
+            title: child.props.imageTitle,
+          }))}
           activeImage={activeItem}
           goToItem={setActiveItem}
           imageSize={imageSize}
         />
-        <CarouselControl onClick={nextItem}>▶</CarouselControl>
+        <CarouselControl label="Next Item" onClick={nextItem}>
+          ▶
+        </CarouselControl>
       </div>
 
       <div className="carousel__items">

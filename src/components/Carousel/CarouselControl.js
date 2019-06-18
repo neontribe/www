@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 
 import { COLOUR_PRIMARY_TEXT } from '../../theme'
 
-const CarouselControl = ({ children, onClick }) => (
-  <button className="carousel_control" onClick={onClick}>
+const CarouselControl = ({ children, onClick, label }) => (
+  <button className="carousel_control" onClick={onClick} aria-label={label}>
     {children}
     <style jsx>{`
       background: none;
@@ -21,6 +21,7 @@ const CarouselControl = ({ children, onClick }) => (
 CarouselControl.propTypes = {
   children: PropTypes.node,
   onClick: PropTypes.func,
+  label: PropTypes.string,
 }
 
 export default CarouselControl

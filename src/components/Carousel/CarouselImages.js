@@ -11,10 +11,11 @@ const CarouselImages = ({ images, activeImage, goToItem, imageSize }) => (
         className={`carousel__image${
           i === activeImage ? ' carousel__image--is-active' : ''
         }`}
-        key={image}
+        key={image.src}
         onClick={() => goToItem(i)}
+        aria-label={`Go to item ${i + 1}`}
       >
-        <Hexagon src={image} />
+        <Hexagon src={image.src} title={image.title} />
       </button>
     ))}
 
