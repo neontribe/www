@@ -44,12 +44,9 @@ export default () => (
             <div className="hexagon">
               <Hexagon />
             </div>
-            <div className="hexagon">
-              <Hexagon src={logo} size={55} />
-            </div>
             {COLOUR_NEONS.map(c => (
               <div key={c} className="hexagon">
-                <Hexagon size={55} bgColour={c} />
+                <Hexagon src={logo} size={55} bgColour={c} />
               </div>
             ))}
           </div>
