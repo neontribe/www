@@ -7,6 +7,7 @@ import Heading from '../components/Heading'
 
 import {
   HexExamples,
+  HexagonGridExamples,
   LinkExamples,
   TextExamples,
   CarouselExamples,
@@ -20,6 +21,7 @@ export default () => (
       </Heading>
       <div className="centered">
         <HexExamples />
+        <HexagonGridExamples />
         <LinkExamples />
         <TextExamples />
         <CarouselExamples />

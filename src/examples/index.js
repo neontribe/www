@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Hexagon from '../components/Hexagon'
+import HexagonGrid from '../components/HexagonGrid'
 import Text from '../components/Text'
 import logo from '../components/Logo/logo.svg'
 import Heading from '../components/Heading'
@@ -99,6 +100,20 @@ export const HexExamples = () => (
         height: 100px;
       }
     `}</style>
+  </div>
+)
+
+export const HexagonGridExamples = () => (
+  <div>
+    <Heading level={2} size="medium">
+      <Text>Hexagon Grid</Text>
+    </Heading>
+    <HexagonGrid rows={2}>
+      <Hexagon bgColour={COLOUR_NEONS[0]} />
+      <Hexagon bgColour={COLOUR_NEONS[1]} />
+      <Hexagon bgColour={COLOUR_NEONS[2]} />
+      <Hexagon bgColour={COLOUR_NEONS[3]} />
+    </HexagonGrid>
   </div>
 )
 
