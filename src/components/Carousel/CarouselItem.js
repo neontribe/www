@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import {
   COLOUR_SECONDARY_TEXT,
   COLOUR_SECONDARY_BACKGROUND,
-  REM_PX,
+  GUTTER_PX,
 } from '../../theme'
 
 const CarouselItem = ({ children }) => {
@@ -15,7 +15,7 @@ const CarouselItem = ({ children }) => {
         .carousel__item {
           background-color: ${COLOUR_SECONDARY_BACKGROUND};
           color: ${COLOUR_SECONDARY_TEXT};
-          padding: ${REM_PX * 5}px ${REM_PX * 4}px;
+          padding: ${GUTTER_PX * 8}px ${GUTTER_PX * 6}px;
           text-align: center;
         }
       `}</style>
