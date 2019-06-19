@@ -11,9 +11,9 @@ const cloneWithProps = (node, props) => node && React.cloneElement(node, props)
 const FlipCard = ({ children, isFlipped, animTime }) => (
   <div className="card-container">
     <div className="card-body">
-      {findChild(children, CardBack)}
+      {cloneWithProps(findChild(children, CardBack), { isFlipped })}
       {/* Flip tell the front face to inform the animations */}
-      {cloneWithProps(findChild(children, CardFront), { animTime, isFlipped })}
+      {cloneWithProps(findChild(children, CardFront), { isFlipped })}
     </div>
     <style jsx>{`
       .card-body {
@@ -21,7 +21,7 @@ const FlipCard = ({ children, isFlipped, animTime }) => (
         height: 100%;
         transform-style: preserve-3d;
         transition: all ${animTime}s linear;
-        transform: ${isFlipped ? 'rotateY(180deg)' : 'none'};
+        transform: ${isFlipped ? 'rotate3d(0, 1, 0, -180deg)' : 'none'};
         display: flex;
       }
 
@@ -61,9 +61,7 @@ const cardSideStyles = css`
     width: 100%;
     position: relative;
     z-index: 1;
-    backface-visibility: hidden;
-    box-shadow: 0 10px 35px rgba(50, 50, 93, 0.1),
-      0 2px 15px rgba(0, 0, 0, 0.07);
+    backface-visibility: visible;
   }
 
   .card-side + .card-side {
@@ -72,16 +70,13 @@ const cardSideStyles = css`
 `
 
 // Card front
-const CardFront = ({ children, isFlipped, animTime }) => (
+const CardFront = ({ children, isFlipped }) => (
   <div className={`card-side card-front ${isFlipped ? 'is-flipped' : ''}`}>
     {children}
     <style jsx>{cardSideStyles}</style>
     <style jsx>{`
       .card-front.is-flipped {
-        transition: opacity ${animTime + 0.3}s ease-in,
-          visibility ${animTime + 0.05}s linear;
-        opacity: 0;
-        visibility: hidden;
+        pointer-events: none;
       }
     `}</style>
   </div>
@@ -92,25 +87,26 @@ CardFront.propTypes = {
   isFlipped: PropTypes.bool,
   // The children, should be CardFront and CardBack
   children: PropTypes.node,
-  // The time it should take for the animation to complete (in seconds)
-  animTime: PropTypes.number,
 }
 
 // Card back
-const CardBack = ({ children }) => (
+const CardBack = ({ children, isFlipped }) => (
   <div className="card-side card-back">
     {children}
     <style jsx>{cardSideStyles}</style>
     <style jsx>{`
       .card-back {
         z-index: 2;
-        transform: rotateY(180deg);
+        transform: rotate3d(0, 1, 0, 180deg);
+        pointer-events: ${isFlipped ? 'all' : 'none'};
       }
     `}</style>
   </div>
 )
 CardBack.displayName = 'FlipCardBack'
 CardBack.propTypes = {
+  // Whether the card is flipped or not
+  isFlipped: PropTypes.bool,
   // The children, should be CardFront and CardBack
   children: PropTypes.node,
 }
