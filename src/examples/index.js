@@ -13,6 +13,7 @@ import {
 import Link, { ExternalLink } from '../components/Link'
 import Carousel from '../components/Carousel'
 import VerticalSpacing from '../components/VerticalSpacing'
+import Squiggle from '../components/Squiggle'
 
 import steve from '../images/tribe-steve.jpg'
 import harry from '../images/tribe-harry.jpg'
@@ -171,5 +172,14 @@ export const CarouselExamples = () => (
         </Heading>
       </Carousel.Item>
     </Carousel>
+  </div>
+)
+
+export const SquiggleExample = () => (
+  <div>
+    <Heading level={2} size="medium">
+      <Text>Squiggle</Text>
+    </Heading>
+    <Squiggle color={COLOUR_NEONS[0]} repeats={8} />
   </div>
 )
