@@ -60,6 +60,7 @@ const cardSideStyles = css`
     height: 100%;
     width: 100%;
     position: relative;
+    z-index: 1;
     backface-visibility: hidden;
     box-shadow: 0 10px 35px rgba(50, 50, 93, 0.1),
       0 2px 15px rgba(0, 0, 0, 0.07);
