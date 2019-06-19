@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {
+  fontSizes,
   COLOUR_PRIMARY_TEXT,
   COLOUR_PRIMARY_BACKGROUND,
   COLOUR_PRIMARY_BACKGROUND_ALTERNATIVE,
@@ -14,6 +15,7 @@ const Text = ({
   transparent,
   children,
   heavy,
+  size,
 }) => (
   <span
     className={[
@@ -32,6 +34,7 @@ const Text = ({
         color: ${alternate ? COLOUR_SECONDARY_TEXT : COLOUR_PRIMARY_TEXT};
         padding: 2px 1rem;
         line-height: 1.5;
+        font-size: ${fontSizes[size] || 'inherit'};
       }
 
       .heavy {

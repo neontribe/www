@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 let id = 0
 const nextId = () => `image-bg-${id++}`
 
-const Hexagon = ({ src, bgColour, size }) => {
+const Hexagon = ({ src, bgColour, size, title }) => {
   const id = nextId()
 
   return (
@@ -16,6 +16,7 @@ const Hexagon = ({ src, bgColour, size }) => {
       xlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 300 300"
     >
+      {title && <title>{title}</title>}
       <defs>
         <pattern
           id={id}
@@ -49,9 +50,6 @@ const Hexagon = ({ src, bgColour, size }) => {
         fill={`url('#${id}')`}
       ></polygon>
       <style jsx>{`
-        .hex {
-          stroke: ${bgColour};
-        }
         .hex-background {
           fill: ${bgColour};
         }
@@ -64,6 +62,7 @@ Hexagon.propTypes = {
   src: PropTypes.string,
   bgColour: PropTypes.string,
   size: PropTypes.number,
+  title: PropTypes.string,
 }
 
 Hexagon.defaultProps = {

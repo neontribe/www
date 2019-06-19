@@ -80,3 +80,10 @@ export const COLOUR_SECONDARY_BACKGROUND = COLOUR_WHITE
 // UI
 export const COLOUR_CALL_TO_ACTION = COLOUR_NEON_PURPLE
 export const COLOUR_LOGO_BACKGROUND = COLOUR_WHITE
+
+// Typography
+export const fontSizes = {
+  small: '1.25rem',
+  medium: '1.5rem',
+  large: '2rem',
+}
