@@ -5,13 +5,7 @@ import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import Text from '../components/Text'
 import Heading from '../components/Heading'
 
-import {
-  HexExamples,
-  LinkExamples,
-  TextExamples,
-  CarouselExamples,
-  TribeMemberExample,
-} from '../examples'
+import * as examples from '../examples'
 
 export default () => (
   <Layout>
@@ -20,11 +14,9 @@ export default () => (
         <Text type="secondary">Symbols</Text>
       </Heading>
       <div className="centered">
-        <HexExamples />
-        <LinkExamples />
-        <TextExamples />
-        <CarouselExamples />
-        <TribeMemberExample />
+        {Object.entries(examples).map(([key, Component]) => (
+          <Component key={key} />
+        ))}
       </div>
     </ConstrainedWidth>
     <style jsx>{`
