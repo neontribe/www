@@ -61,7 +61,7 @@ const cardSideStyles = css`
     width: 100%;
     position: relative;
     z-index: 1;
-    backface-visibility: visible;
+    backface-visibility: hidden;
   }
 
   .card-side + .card-side {
@@ -96,7 +96,6 @@ const CardBack = ({ children, isFlipped }) => (
     <style jsx>{cardSideStyles}</style>
     <style jsx>{`
       .card-back {
-        z-index: 2;
         transform: rotate3d(0, 1, 0, 180deg);
         pointer-events: ${isFlipped ? 'all' : 'none'};
       }
