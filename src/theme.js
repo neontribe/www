@@ -82,6 +82,7 @@ export const COLOUR_CALL_TO_ACTION = COLOUR_NEON_PURPLE
 export const COLOUR_LOGO_BACKGROUND = COLOUR_WHITE
 
 // Typography
+export const FONT_STACK = '"Renner*", sans-serif'
 export const fontSizes = {
   small: '1.25rem',
   medium: '1.5rem',
