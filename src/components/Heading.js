@@ -1,25 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { fontSizes } from '../theme'
 
 const Heading = ({ level, children, size }) => {
   const HeadingTag = `h${level}`
 
   return (
-    <HeadingTag className={`heading ${size}`}>
+    <HeadingTag className={`heading`}>
       {children}
       <style jsx>{`
         .heading {
           padding: 0;
           margin: 0;
-        }
-        .small {
-          font-size: 1.25rem;
-        }
-        .medium {
-          font-size: 1.5rem;
-        }
-        .large {
-          font-size: 2rem;
+          font-size: ${fontSizes[size]};
         }
       `}</style>
     </HeadingTag>

@@ -1,18 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {
+  fontSizes,
   COLOUR_PRIMARY_TEXT,
   COLOUR_PRIMARY_BACKGROUND,
   COLOUR_PRIMARY_BACKGROUND_ALTERNATIVE,
   COLOUR_SECONDARY_TEXT,
   COLOUR_SECONDARY_BACKGROUND,
 } from '../theme'
-
-const fontSizes = {
-  small: '1.25rem',
-  medium: '1.5rem',
-  large: '2rem',
-}
 
 const Text = ({
   type = 'primary',
