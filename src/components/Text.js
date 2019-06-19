@@ -38,7 +38,7 @@ const Text = ({
       }
 
       .heavy {
-        font-weight: 700;
+        font-weight: bold;
         font-size: 1.25rem;
       }
 
