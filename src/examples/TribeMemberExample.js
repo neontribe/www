@@ -5,6 +5,7 @@ import Heading from '../components/Heading'
 import Text from '../components/Text'
 import TribeMember from '../components/TribeMember'
 import { GUTTER_PX } from '../theme'
+import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 
 const loremIpsum = `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -38,7 +39,7 @@ export default () => (
       }
     `}
     render={data => (
-      <div>
+      <ConstrainedWidth>
         <Heading level={2} size="medium">
           <Text>TribeMember</Text>
         </Heading>
@@ -91,7 +92,7 @@ export default () => (
             margin-left: ${3 * GUTTER_PX}px;
           }
         `}</style>
-      </div>
+      </ConstrainedWidth>
     )}
   />
 )

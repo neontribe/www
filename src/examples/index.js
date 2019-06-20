@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Hexagon from '../components/Hexagon'
+import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import Text from '../components/Text'
 import logo from '../components/Logo/logo.svg'
 import Heading from '../components/Heading'
@@ -20,9 +21,10 @@ import harry from '../images/tribe-harry.jpg'
 import kat from '../images/tribe-kat.jpg'
 
 export { default as TribeMemberExample } from './TribeMemberExample'
+export { default as WorkDescriptionExample } from './WorkDescriptionExample'
 
 const TextVariants = () => (
-  <>
+  <ConstrainedWidth>
     <Text>Primary Text</Text>
     <Text alternate>Primary alternate Text</Text>
     <Text type="secondary">Secondary Text</Text>
@@ -33,11 +35,11 @@ const TextVariants = () => (
     <Text type="secondary" transparent>
       Transparent Secondary Text
     </Text>
-  </>
+  </ConstrainedWidth>
 )
 
 export const TextExamples = () => (
-  <div>
+  <ConstrainedWidth>
     <Heading level={2} size="medium">
       <Text>Text</Text>
     </Heading>
@@ -75,11 +77,11 @@ export const TextExamples = () => (
         background-color: ${COLOUR_SECONDARY_BACKGROUND};
       }
     `}</style>
-  </div>
+  </ConstrainedWidth>
 )
 
 export const HexExamples = () => (
-  <div>
+  <ConstrainedWidth>
     <Heading level={2} size="medium">
       <Text>Hexagons</Text>
     </Heading>
@@ -102,11 +104,11 @@ export const HexExamples = () => (
         height: 100px;
       }
     `}</style>
-  </div>
+  </ConstrainedWidth>
 )
 
 export const LinkExamples = () => (
-  <div>
+  <ConstrainedWidth>
     <Heading level={2} size="medium">
       <Text>Links</Text>
     </Heading>
@@ -120,11 +122,11 @@ export const LinkExamples = () => (
         ExternalLink button
       </ExternalLink>
     </div>
-  </div>
+  </ConstrainedWidth>
 )
 
 export const CarouselExamples = () => (
-  <div>
+  <ConstrainedWidth>
     <Heading level={2} size="medium">
       <Text>Carousel</Text>
     </Heading>
@@ -172,14 +174,14 @@ export const CarouselExamples = () => (
         </Heading>
       </Carousel.Item>
     </Carousel>
-  </div>
+  </ConstrainedWidth>
 )
 
 export const SquiggleExample = () => (
-  <div>
+  <ConstrainedWidth>
     <Heading level={2} size="medium">
       <Text>Squiggle</Text>
     </Heading>
     <Squiggle color={COLOUR_NEONS[0]} repeats={8} />
-  </div>
+  </ConstrainedWidth>
 )
