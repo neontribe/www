@@ -41,7 +41,7 @@ const TextVariants = () => (
 export const TextExamples = () => (
   <ConstrainedWidth>
     <Heading level={2} size="medium">
-      <Text>Text</Text>
+      <Text heavy>Text</Text>
     </Heading>
     <div className="text-wrapper">
       <div className="primary">
@@ -83,7 +83,7 @@ export const TextExamples = () => (
 export const HexExamples = () => (
   <ConstrainedWidth>
     <Heading level={2} size="medium">
-      <Text>Hexagons</Text>
+      <Text heavy>Hexagons</Text>
     </Heading>
     <div className="hex-container">
       <div className="hexagon">
@@ -110,7 +110,7 @@ export const HexExamples = () => (
 export const LinkExamples = () => (
   <ConstrainedWidth>
     <Heading level={2} size="medium">
-      <Text>Links</Text>
+      <Text heavy>Links</Text>
     </Heading>
     <div>
       <Link to="/">Gatsby link</Link>
@@ -128,7 +128,7 @@ export const LinkExamples = () => (
 export const CarouselExamples = () => (
   <ConstrainedWidth>
     <Heading level={2} size="medium">
-      <Text>Carousel</Text>
+      <Text heavy>Carousel</Text>
     </Heading>
     <Carousel>
       <Carousel.Item image={steve}>
@@ -180,7 +180,7 @@ export const CarouselExamples = () => (
 export const SquiggleExample = () => (
   <ConstrainedWidth>
     <Heading level={2} size="medium">
-      <Text>Squiggle</Text>
+      <Text heavy>Squiggle</Text>
     </Heading>
     <Squiggle color={c_NEONS[0]} repeats={8} />
   </ConstrainedWidth>

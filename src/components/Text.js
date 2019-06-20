@@ -40,7 +40,6 @@ const Text = ({
 
       .heavy {
         font-weight: bold;
-        font-size: 1.25rem;
       }
 
       /* text color */
@@ -70,6 +69,7 @@ Text.propTypes = {
   transparent: PropTypes.bool,
   children: PropTypes.node,
   heavy: PropTypes.bool,
+  size: PropTypes.oneOf(Object.keys(fontSizes)),
 }
 
 export default Text

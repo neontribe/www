@@ -11,7 +11,9 @@ export default () => (
   <Layout>
     <ConstrainedWidth>
       <Heading level={1} size="large">
-        <Text type="secondary">Symbols</Text>
+        <Text heavy type="secondary">
+          Symbols
+        </Text>
       </Heading>
     </ConstrainedWidth>
     <div className="centered">

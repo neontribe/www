@@ -56,7 +56,7 @@ export default () => (
         />
         <HousekeepingList
           title={
-            <Text alternate heavy>
+            <Text alternate heavy size="medium">
               Norwich
             </Text>
           }
@@ -66,7 +66,7 @@ export default () => (
         </HousekeepingList>
         <HousekeepingList
           title={
-            <Text alternate heavy>
+            <Text alternate heavy size="medium">
               Exeter
             </Text>
           }

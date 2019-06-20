@@ -1,4 +1,5 @@
 import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 
 import WorkDescription from '../components/WorkDescription'
 import Heading from '../components/Heading'
@@ -11,7 +12,7 @@ Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliqu
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 `
-export default () => (
+const WorkDescriptionExample = ({ fluid }) => (
   <div className="work-description">
     <ConstrainedWidth>
       <Heading level={2} size="medium">
@@ -20,20 +21,43 @@ export default () => (
     </ConstrainedWidth>
 
     <WorkDescription
+      fluid={fluid}
       level={3}
-      title="Mind of my Own"
-      subtitle="At vero eos at accusam et justo duo dolores et ea rebum"
+      title="Helping more young families get fresh fruit and veg"
+      subtitle="Delivering simple technology for the Rose Voucher scheme"
       problem={loremIpsum}
       solution={loremIpsum}
     />
     <WorkDescription
+      fluid={fluid}
       alternate
       level={3}
-      title="NCVO"
-      subtitle="At vero eos at accusam et justo duo dolores et ea rebum"
+      title="Quis nostrud exercitation ullamco laboris nisi u"
+      subtitle="Delivering simple technology for the Rose Voucher scheme"
       problem={loremIpsum + ' ' + loremIpsum}
       solution={loremIpsum + ' ' + loremIpsum}
     />
     <style jsx>{``}</style>
   </div>
+)
+
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        placeholderImage: file(relativePath: { eq: "ourwork-arc.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 425) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <WorkDescriptionExample
+        fluid={data.placeholderImage.childImageSharp.fluid}
+      />
+    )}
+  />
 )
