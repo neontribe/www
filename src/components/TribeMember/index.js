@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import Img from 'gatsby-image'
 
-import { COLOUR_NEONS } from '../../theme'
+import { c_NEONS } from '../../theme'
 import FlipCard, { CardFront, CardBack } from '../FlipCard'
 import Heading from '../Heading'
 import TribeMemberFront from './TribeMemberFront'
 import TribeMemberBack from './TribeMemberBack'
 
 let neonN = 0
-const nextNeon = () => COLOUR_NEONS[neonN++ % COLOUR_NEONS.length]
+const nextNeon = () => c_NEONS[neonN++ % c_NEONS.length]
 
 const TribeMember = ({
   fluid,
@@ -60,7 +60,7 @@ TribeMember.propTypes = {
   name: PropTypes.string.isRequired,
   skills: PropTypes.array,
   bio: PropTypes.string,
-  neonSeparatorColour: PropTypes.oneOf(COLOUR_NEONS),
+  neonSeparatorColour: PropTypes.oneOf(c_NEONS),
   // Inherited prop types
   fluid: Img.propTypes.fluid,
   headingLevel: Heading.propTypes.level,

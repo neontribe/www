@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { COLOUR_PRIMARY_BACKGROUND_ALTERNATIVE } from '../theme'
+import { c_PRIMARY_BACKGROUND_ALTERNATIVE } from '../theme'
 import ConstrainedWidth from './Layout/ConstrainedWidth'
 import Text from './Text'
 import { ExternalLink } from './Link'
@@ -75,7 +75,7 @@ export default () => (
     </ConstrainedWidth>
     <style jsx>{`
       footer {
-        background-color: ${COLOUR_PRIMARY_BACKGROUND_ALTERNATIVE};
+        background-color: ${c_PRIMARY_BACKGROUND_ALTERNATIVE};
       }
 
       .housekeeping {

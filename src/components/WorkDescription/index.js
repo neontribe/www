@@ -1,6 +1,6 @@
 import React, { Children } from 'react'
 import PropTypes from 'prop-types'
-import { COLOUR_PRIMARY_BACKGROUND } from '../../theme'
+import { c_PRIMARY_BACKGROUND } from '../../theme'
 
 import ConstrainedWidth from '../Layout/ConstrainedWidth'
 import Heading from '../Heading'
@@ -30,7 +30,7 @@ const WorkDescription = ({
     </ConstrainedWidth>
     <style jsx>{`
       .work-description {
-        background-color: ${COLOUR_PRIMARY_BACKGROUND};
+        background-color: ${c_PRIMARY_BACKGROUND};
         width: 100%;
       }
     `}</style>

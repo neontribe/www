@@ -1,10 +1,6 @@
 import React from 'react'
 
-import {
-  COLOUR_SECONDARY_BACKGROUND,
-  GUTTER_PX,
-  CUT_CORNER_PX,
-} from '../../theme'
+import { c_SECONDARY_BACKGROUND, GUTTER_PX, CUT_CORNER_PX } from '../../theme'
 import Heading from '../Heading'
 import Text from '../Text'
 
@@ -31,7 +27,7 @@ const TribeMemberBack = ({ onClick, headingLevel, name, skills, bio }) => (
         background: linear-gradient(
           45deg,
           transparent ${CUT_CORNER_PX}px,
-          ${COLOUR_SECONDARY_BACKGROUND} ${CUT_CORNER_PX}px
+          ${c_SECONDARY_BACKGROUND} ${CUT_CORNER_PX}px
         );
       }
 

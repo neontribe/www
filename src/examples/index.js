@@ -6,10 +6,10 @@ import Text from '../components/Text'
 import logo from '../components/Logo/logo.svg'
 import Heading from '../components/Heading'
 import {
-  COLOUR_NEONS,
-  COLOUR_PRIMARY_BACKGROUND,
-  COLOUR_PRIMARY_BACKGROUND_ALTERNATIVE,
-  COLOUR_SECONDARY_BACKGROUND,
+  c_NEONS,
+  c_PRIMARY_BACKGROUND,
+  c_PRIMARY_BACKGROUND_ALTERNATIVE,
+  c_SECONDARY_BACKGROUND,
 } from '../theme'
 import Link, { ExternalLink } from '../components/Link'
 import Carousel from '../components/Carousel'
@@ -68,13 +68,13 @@ export const TextExamples = () => (
         padding: 1rem;
       }
       .text-wrapper .primary {
-        background-color: ${COLOUR_PRIMARY_BACKGROUND};
+        background-color: ${c_PRIMARY_BACKGROUND};
       }
       .text-wrapper .primary.alternate {
-        background-color: ${COLOUR_PRIMARY_BACKGROUND_ALTERNATIVE};
+        background-color: ${c_PRIMARY_BACKGROUND_ALTERNATIVE};
       }
       .text-wrapper .secondary {
-        background-color: ${COLOUR_SECONDARY_BACKGROUND};
+        background-color: ${c_SECONDARY_BACKGROUND};
       }
     `}</style>
   </ConstrainedWidth>
@@ -89,7 +89,7 @@ export const HexExamples = () => (
       <div className="hexagon">
         <Hexagon />
       </div>
-      {COLOUR_NEONS.map(c => (
+      {c_NEONS.map(c => (
         <div key={c} className="hexagon">
           <Hexagon src={logo} size={55} bgColour={c} />
         </div>
@@ -182,6 +182,6 @@ export const SquiggleExample = () => (
     <Heading level={2} size="medium">
       <Text>Squiggle</Text>
     </Heading>
-    <Squiggle color={COLOUR_NEONS[0]} repeats={8} />
+    <Squiggle color={c_NEONS[0]} repeats={8} />
   </ConstrainedWidth>
 )
