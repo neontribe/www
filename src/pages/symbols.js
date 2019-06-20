@@ -14,9 +14,10 @@ export default () => (
         <Text type="secondary">Symbols</Text>
       </Heading>
       <div className="centered">
-        {Object.entries(examples).map(([key, Component]) => (
-          <Component key={key} />
-        ))}
+        {/* Sort keys to ensure order is consistent between static client-side js */}
+        {Object.keys(examples)
+          .sort()
+          .map(key => React.createElement(examples[key], { key }))}
       </div>
     </ConstrainedWidth>
     <style jsx>{`
