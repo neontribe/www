@@ -1,6 +1,11 @@
 import React, { Children } from 'react'
 import PropTypes from 'prop-types'
-import { GUTTER_PX, breakpoint } from '../../theme'
+import {
+  GUTTER_PX,
+  breakpoint,
+  c_PRIMARY_BACKGROUND,
+  c_SECONDARY_BACKGROUND,
+} from '../../theme'
 
 // Copied from FlipCard
 const findChild = (children, { displayName }) =>
@@ -25,6 +30,7 @@ const Content = ({ alternate, children, imageWidth }) => (
     })}
     <style jsx>{`
       .work-description-content {
+        /* Used as a negative margin to pull image outside padding */
         padding: 0 ${GUTTER_PX}px;
       }
       .work-description-content::after {
@@ -48,6 +54,9 @@ export const Title = ({ alternate, imageWidth, children }) => (
       .header {
         margin-bottom: ${2 * GUTTER_PX}px;
         padding: 0 ${GUTTER_PX * 2}px;
+        background-color: ${alternate
+          ? c_SECONDARY_BACKGROUND
+          : c_PRIMARY_BACKGROUND};
       }
 
       @media (${breakpoint('md')}) {
@@ -59,7 +68,7 @@ export const Title = ({ alternate, imageWidth, children }) => (
           float: ${alternate ? 'right' : 'left'};
           padding-right: ${alternate ? 0 : GUTTER_PX * 4}px;
           padding-left: ${alternate ? GUTTER_PX * 4 : 0}px;
-          width: calc(100% - ${imageWidth + 2 * GUTTER_PX}px);
+          width: calc(100% - ${imageWidth}px);
         }
       }
     `}</style>
@@ -76,6 +85,9 @@ export const Image = ({ alternate, children }) => (
       .image {
         /* Pull the image outside of the padding of the .work-description-content */
         margin: 0 -${GUTTER_PX}px;
+        position: relative;
+        top: 0;
+        bottom: 0;
       }
 
       @media (${breakpoint('md')}) {
@@ -97,6 +109,9 @@ export const Description = ({ alternate, children, imageWidth }) => (
     <style jsx>{`
       .description {
         padding: 0 ${GUTTER_PX * 2}px;
+        background-color: ${alternate
+          ? c_SECONDARY_BACKGROUND
+          : c_PRIMARY_BACKGROUND};
       }
 
       @media (${breakpoint('md')}) {
@@ -104,7 +119,7 @@ export const Description = ({ alternate, children, imageWidth }) => (
           float: ${alternate ? 'right' : 'left'};
           padding-right: ${alternate ? 0 : GUTTER_PX * 4}px;
           padding-left: ${alternate ? GUTTER_PX * 4 : 0}px;
-          width: calc(100% - ${imageWidth + 2 * GUTTER_PX}px);
+          width: calc(100% - ${imageWidth}px);
         }
       }
     `}</style>

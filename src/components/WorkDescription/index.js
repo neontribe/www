@@ -74,7 +74,6 @@ const WorkDescription = ({
       {imageStyles.styles}
       <style jsx>{`
         .work-description {
-          padding: ${GUTTER_PX * 4}px 0;
           background-color: ${c_PRIMARY_BACKGROUND};
           width: 100%;
         }

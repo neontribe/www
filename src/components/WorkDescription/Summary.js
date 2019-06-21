@@ -9,8 +9,9 @@ import Heading from '../Heading'
 import Text from '../Text'
 import ProblemSolution from './ProblemSolution'
 import Content from './Content'
+import VerticalSpacing from '../VerticalSpacing'
 
-const imageWidth = 300
+const imageWidth = 250
 const imageStyles = css.resolve`
   .gatsby-image-wrapper {
     margin: 0 auto;
@@ -19,13 +20,11 @@ const imageStyles = css.resolve`
   @media (${breakpoint('md')}) {
     .gatsby-image-wrapper {
       width: ${imageWidth}px;
-      height: 100%;
+      height: ${imageWidth}px;
     }
   }
 `
 
-// This is mostly copy/pasted from ./index.js
-// TODO: Refactor index and summary to share more components, they don't currently feel similar enough
 const WorkDescription = ({ alternate, level, title, fluid, problem }) => {
   // Make sure the text is consistently styled
   const T = props => (
@@ -33,11 +32,12 @@ const WorkDescription = ({ alternate, level, title, fluid, problem }) => {
   )
 
   return (
-    <div className={`work-description ${alternate ? 'alternate' : ''}`}>
+    <div className="work-description">
       <ConstrainedWidth>
         <Content alternate={alternate} imageWidth={imageWidth}>
           <Content.Title>
             <Heading level={level} size="medium">
+              <VerticalSpacing size={2} />
               <T heavy>{title}</T>
             </Heading>
           </Content.Title>
@@ -45,31 +45,21 @@ const WorkDescription = ({ alternate, level, title, fluid, problem }) => {
             <Img className={imageStyles.className} fluid={fluid} />
           </Content.Image>
           <Content.Description>
-            <ProblemSolution
-              alternate={alternate}
-              level={level + 2}
-              problem={problem}
-            />
+            <div className="problem-solution-wrapper">
+              <ProblemSolution
+                alternate={alternate}
+                level={level + 2}
+                problem={problem}
+              />
+            </div>
           </Content.Description>
         </Content>
       </ConstrainedWidth>
       {imageStyles.styles}
       <style jsx>{`
-        .work-description {
-          padding: ${GUTTER_PX * 4}px 0;
-          width: 100%;
+        .problem-solution-wrapper {
+          padding-right: ${4 * GUTTER_PX}px;
         }
-
-        .description,
-        .header {
-          padding: 0 ${GUTTER_PX * 2}px;
-        }
-
-        /** MED + */
-        @media (${breakpoint('md')}) {
-          .work-description {
-            padding: ${GUTTER_PX * 4}px ${GUTTER_PX}px;
-          }
       `}</style>
     </div>
   )
