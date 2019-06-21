@@ -43,6 +43,7 @@ const TribeMemberFront = ({
         margin: 0;
         height: ${GUTTER_PX}px;
         border: none;
+        flex-shrink: 0;
       }
 
       .tribe-figure {

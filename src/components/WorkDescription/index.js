@@ -7,17 +7,25 @@ import {
   c_PRIMARY_BACKGROUND,
   c_SECONDARY_BACKGROUND,
   GUTTER_PX,
+  breakpoint,
+  CUT_CORNER_PX,
 } from '../../theme'
 import ConstrainedWidth from '../Layout/ConstrainedWidth'
 import Heading from '../Heading'
 import Text from '../Text'
-import VerticalSpacing from '../VerticalSpacing'
+import Description from './Description'
 
 const imageWidth = 300
 const imageStyles = css.resolve`
   .gatsby-image-wrapper {
-    width: ${imageWidth}px;
-    height: 400px;
+    margin: 0 auto;
+  }
+
+  @media (${breakpoint('md')}) {
+    .gatsby-image-wrapper {
+      width: ${imageWidth}px;
+      height: 400px;
+    }
   }
 `
 
@@ -32,54 +40,46 @@ const WorkDescription = ({
 }) => {
   // Make sure the text is consistently styled
   const T = props => (
-    <Text {...props} type={alternate ? 'secondary' : 'primary'} />
+    <Text gutter={0} {...props} type={alternate ? 'secondary' : 'primary'} />
   )
 
   return (
-    <div className="work-description">
+    <div className={`work-description ${alternate ? 'alternate' : ''}`}>
       <ConstrainedWidth>
         <div className="work-description-content">
           <div className="header">
             <Heading level={level} size="medium">
               <T heavy>{title}</T>
             </Heading>
-            <Heading level={level + 1} size="xsmall">
+            <Heading level={level + 1} size="normal">
               <T>{subtitle}</T>
             </Heading>
-            <VerticalSpacing size={2} />
           </div>
           <div className="image">
             <Img className={imageStyles.className} fluid={fluid} />
           </div>
           <div className="description">
-            <div>
-              <Heading level={level + 2} size="small">
-                <T heavy>Problem</T>
-              </Heading>
-              <p>
-                <T>{problem}</T>
-              </p>
-              <VerticalSpacing size={2} />
-            </div>
-            <div>
-              <Heading level={level + 2} size="small">
-                <T heavy>Solution</T>
-              </Heading>
-              <p>
-                <T>{solution}</T>
-              </p>
-            </div>
+            <Description
+              alternate={alternate}
+              level={level + 2}
+              problem={problem}
+              solution={solution}
+            />
           </div>
         </div>
       </ConstrainedWidth>
       {imageStyles.styles}
       <style jsx>{`
         .work-description {
-          background-color: ${alternate
-            ? c_SECONDARY_BACKGROUND
-            : c_PRIMARY_BACKGROUND};
-          width: 100%;
           padding: ${GUTTER_PX * 4}px 0;
+          background-color: ${c_PRIMARY_BACKGROUND};
+          width: 100%;
+        }
+        .work-description.alternate {
+          background-color: ${c_SECONDARY_BACKGROUND};
+        }
+        .work-description-content {
+          padding: 0 ${GUTTER_PX}px;
         }
         .work-description-content::after {
           content: '';
@@ -87,23 +87,67 @@ const WorkDescription = ({
           clear: both;
         }
 
+        .header {
+          margin-bottom: ${2 * GUTTER_PX}px;
+        }
+
         .image {
+          position: relative;
+        }
+        .image::after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          pointer-events: none;
+          /* Copy/pasted from TribeMember and Carousel: TODO centralise in theme? */
+          background: linear-gradient(
+            -45deg,
+            ${alternate ? c_SECONDARY_BACKGROUND : c_PRIMARY_BACKGROUND}
+              ${CUT_CORNER_PX}px,
+            transparent ${CUT_CORNER_PX}px
+          );
         }
 
-        .description p {
-          margin: 0;
+        .description,
+        .header {
+          padding: 0 ${GUTTER_PX * 2}px;
         }
 
-        /** MQ */
-        .image {
-          float: right;
-        }
+        /** MED + */
+        @media (${breakpoint('md')}) {
+          .work-description {
+            padding: ${GUTTER_PX * 4}px ${GUTTER_PX}px;
+          }
 
-        .header,
-        .description {
-          padding-right: ${GUTTER_PX * 4}px;
-          float: left;
-          width: calc(100% - ${imageWidth}px);
+          .header {
+            margin-bottom: 0;
+          }
+
+          .image {
+            float: right;
+          }
+          .alternate .image {
+            float: left;
+          }
+
+          .header,
+          .description {
+            float: left;
+            padding-right: ${GUTTER_PX * 4}px;
+            padding-left: 0;
+            width: calc(100% - ${imageWidth + 2 * GUTTER_PX}px); /*  */
+          }
+
+          .alternate .header,
+          .alternate .description {
+            padding-left: ${GUTTER_PX * 4}px;
+            padding-right: 0;
+            float: right;
+          }
         }
       `}</style>
     </div>
@@ -122,4 +166,5 @@ WorkDescription.propTypes = {
   solution: PropTypes.node,
 }
 
+export { default as WorkSummary } from './Summary'
 export default WorkDescription

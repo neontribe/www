@@ -47,7 +47,7 @@ export default () => (
       query {
         placeholderImage: file(relativePath: { eq: "ourwork-arc.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 425) {
+            fluid(maxWidth: 768) {
               ...GatsbyImageSharpFluid
             }
           }
