@@ -70,6 +70,7 @@ const Layout = ({ children }) => (
             background-color: ${c_PRIMARY_BACKGROUND};
             font-size: ${REM_PX}px;
             font-family: ${FONT_STACK};
+            color: ${COLOUR_PRIMARY_TEXT};
           }
         `}</style>
         <Page title={data.site.siteMetadata.title}>{children}</Page>
