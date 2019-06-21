@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
-import WorkDescription from '../components/WorkDescription'
+import WorkDescription, { WorkSummary } from '../components/WorkDescription'
 import Heading from '../components/Heading'
 import Text from '../components/Text'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
@@ -20,6 +20,19 @@ const WorkDescriptionExample = ({ fluid }) => (
       </Heading>
     </ConstrainedWidth>
 
+    <WorkSummary
+      fluid={fluid}
+      level={3}
+      title="Helping more young families get fresh fruit and veg"
+      problem={loremIpsum}
+    />
+    <WorkSummary
+      alternate
+      fluid={fluid}
+      level={3}
+      title="Helping more young families get fresh fruit and veg"
+      problem={loremIpsum}
+    />
     <WorkDescription
       fluid={fluid}
       level={3}
