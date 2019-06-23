@@ -8,6 +8,7 @@ import Paragraph from '../components/Paragraph'
 import Heading from '../components/Heading'
 import { ExternalLink } from '../components/Link'
 import VerticalSpacing from '../components/VerticalSpacing'
+import PageMeta from '../components/PageMeta'
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
@@ -19,14 +20,14 @@ const renderAst = new rehypeReact({
   },
 }).Compiler
 
-const UpdatedDate = ({ date }) => {
-  const updated = distanceInWordsToNow(new Date(date), {
+const PublishedDate = ({ date }) => {
+  const published = distanceInWordsToNow(date, {
     addSuffix: true,
   })
 
   return (
     <Heading level={2} size="small">
-      Updated <time datetime={date}>{updated}</time>
+      Published <time dateTime={date}>{published}</time>
     </Heading>
   )
 }
@@ -35,15 +36,23 @@ export default ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, htmlAst } = markdownRemark
 
+  const { title, published_at, updated_at } = frontmatter
+
   return (
     <Layout>
+      <PageMeta
+        type="article"
+        title={title}
+        publishedDate={new Date(published_at)}
+        modifiedDate={new Date(updated_at)}
+      />
       <ConstrainedWidth>
         <VerticalSpacing size={6} />
         <Heading level={1} size="xlarge">
-          {frontmatter.title}
+          {title}
         </Heading>
         <VerticalSpacing size={2} />
-        <UpdatedDate date={frontmatter.updated_at} />
+        <PublishedDate date={new Date(published_at)} />
         <VerticalSpacing size={8} />
         {renderAst(htmlAst)}
       </ConstrainedWidth>
@@ -57,6 +66,7 @@ export const query = graphql`
       htmlAst
       frontmatter {
         title
+        published_at
         updated_at
       }
     }
