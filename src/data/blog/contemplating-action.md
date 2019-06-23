@@ -3,13 +3,13 @@ id: '104'
 uuid: '52fdd023-e2f8-4d10-ba86-fc9c2e1ef485'
 title: 'Contemplating Action'
 slug: 'contemplating-action'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '1'
 created_at: '2019-02-27 13:53:17'
 created_by: '28'
@@ -18,8 +18,8 @@ updated_by: '27'
 published_at: '2019-03-28 16:04:24'
 published_by: '21'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 **Contemplating Action is a digital project based on a simple idea**

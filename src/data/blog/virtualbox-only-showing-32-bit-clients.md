@@ -3,13 +3,13 @@ id: '34'
 uuid: '0546f4d2-a0c0-4108-a029-64ec7a9e93ef'
 title: 'Virtualbox only showing 32-bit guests on Windows'
 slug: 'virtualbox-only-showing-32-bit-clients'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '2'
 created_at: '2016-07-29 08:16:15'
 created_by: '2'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2016-08-12 11:14:30'
 published_by: '2'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 When trying to create a Virtualbox VM recently I was only presented with the option of creating a 32-bit client. After a bit of research it turns out this can be caused by incorrect settings in the BIOS or by a competing Virtual Machine software cohabiting the system.

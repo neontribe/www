@@ -3,23 +3,23 @@ id: '84'
 uuid: '247c4278-9b9a-45b3-8ea7-2906cf2e648d'
 title: "You've been upgraded to the latest version of Ghost"
 slug: 'ghost-0-7'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'draft'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '1'
 created_at: '2018-01-31 11:11:06'
 created_by: '1'
 updated_at: '2019-04-12 10:29:00'
 updated_by: '21'
 published_at: '2018-01-31 11:11:06'
-published_by: 'null'
+published_by: null
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 You've just upgraded to the latest version of Ghost and we've made a few changes that you should probably know about!

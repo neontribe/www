@@ -3,13 +3,13 @@ id: '27'
 uuid: '2428f6e2-4fcc-4e99-a6f7-cd19a1e995d2'
 title: '#!++ install on late 2006 iMac 5,2'
 slug: 'crunchbangplusplus-install-on-imac-52'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '2'
 created_at: '2016-04-15 09:35:31'
 created_by: '2'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2016-07-01 09:37:57'
 published_by: '2'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 I have just retired an old iMac from our browser testing lab due to age, the model is an iMac 5,2 with 2GB memory and Core 2 Duo 1.83 Ghz processor.

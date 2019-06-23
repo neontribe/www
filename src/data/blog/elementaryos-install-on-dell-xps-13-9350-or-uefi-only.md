@@ -3,13 +3,13 @@ id: '22'
 uuid: '825cbda7-2094-4cdc-a9d9-d75285ab7ecc'
 title: 'ElementaryOS install on Dell XPS 13 (9350)'
 slug: 'elementaryos-install-on-dell-xps-13-9350-or-uefi-only'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '2'
 created_at: '2015-11-27 15:44:50'
 created_by: '2'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2015-11-27 15:55:40'
 published_by: '2'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 _Update: These steps should no longer be necessary if you are using the latest release of ElementaryOS which seems to have fixed the UEFI issues._

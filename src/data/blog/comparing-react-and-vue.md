@@ -3,13 +3,13 @@ id: '80'
 uuid: 'cd7bd15a-4c6d-4d5a-821a-ae665f242d86'
 title: 'Comparing React and Vue'
 slug: 'comparing-react-and-vue'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '25'
 created_at: '2017-12-04 08:33:56'
 created_by: '25'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2017-12-04 09:20:01'
 published_by: '25'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 As part of Neontribe's ongoing technology evaluation for projects, Nick and myself recently performed a comparative review of React and Vue, looking at both technical and community aspects. This post provides a very brief overview of what we discovered.

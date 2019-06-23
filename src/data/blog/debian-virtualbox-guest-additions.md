@@ -3,13 +3,13 @@ id: '78'
 uuid: 'b378d03f-80b8-4b8c-b094-6feb5e4899c4'
 title: 'Debian Stretch VirtualBox Guest Additions'
 slug: 'debian-virtualbox-guest-additions'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '2'
 created_at: '2017-10-03 08:39:26'
 created_by: '2'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2017-10-03 09:17:57'
 published_by: '2'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 I discovered recently that VirtualBox is no longer in the Debian official repositories, which prevents us from installing the Guest Additions from the package manager (apt).

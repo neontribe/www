@@ -3,13 +3,13 @@ id: '97'
 uuid: 'e0df3890-28e9-43de-9646-fee831f8d9cb'
 title: 'Crunchbangplusplus 9 tweaks'
 slug: 'crunchbangplusplus-9-tweaks'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '2'
 created_at: '2018-10-29 11:54:16'
 created_by: '2'
@@ -18,8 +18,8 @@ updated_by: '2'
 published_at: '2018-10-31 10:07:19'
 published_by: '2'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 **Crunchbangplusplus 9**

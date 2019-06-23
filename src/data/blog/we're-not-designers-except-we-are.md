@@ -3,13 +3,13 @@ id: '5'
 uuid: 'a440e569-36e1-4372-b9fd-c4a3194454d2'
 title: 'We’re not designers. Except we are.'
 slug: "we're-not-designers-except-we-are"
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '5'
 created_at: '2014-01-14 13:08:45'
 created_by: '1'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2014-01-14 13:08:45'
 published_by: '1'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 At Neontribe, we often say we aren’t web designers. In a way we’re right, because we don’t lead projects with visual design. But that doesn’t credit the importance of design in what we do. We view design as a problem-solving exercise, and function rather than form is our problem domain. Our problems are not “Make this static collection of text and images into a beautiful page!”, but “Make this interaction delightful.” Our work doesn’t end up static. Even the simplest web site is an interaction. What we aim to do is focus on the process that the web property is implementing, whether that is a booking path, or a form designed to help structure someone’s thoughts. Or, even, presenting a set of text and images as a web site.

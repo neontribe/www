@@ -3,13 +3,13 @@ id: '49'
 uuid: 'da37b350-cafb-46f6-b5e9-7b63065f068c'
 title: 'Discovery and direction'
 slug: 'discovery-and-direction'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '5'
 created_at: '2016-10-21 11:05:42'
 created_by: '5'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2016-10-21 11:08:19'
 published_by: '5'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 At Neontribe we’ve been all fired up by a tiny [discovery project](https://www.neontribe.co.uk/our-process-discovery/) that we’ve recently been doing for the [Alexandra Rose Charity](http://www.alexandrarose.org.uk/) and their partners [Food Matters](http://www.foodmatters.org/), a leading UK food policy and advocacy organisation. Using a simple model of a couple of workshops and some thinking funded by the [Big Lottery fund](https://www.biglotteryfund.org.uk/), we’ve been helping them set the direction for introducing digital solutions into their [Rose Voucher](http://www.alexandrarose.org.uk/rose-vouchers) schemes.

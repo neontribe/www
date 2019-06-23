@@ -3,13 +3,13 @@ id: '20'
 uuid: 'e7bf8834-a4d8-417f-907f-171dd0698e66'
 title: 'Were hiring'
 slug: 'were-hiring'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '5'
 created_at: '2015-08-20 15:56:01'
 created_by: '5'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2015-08-20 16:00:30'
 published_by: '5'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 (ETA: We've hired for this specific role - but we're usually on the look out for folk, and if you're interested in working with us, do drop us a CV. Particularly if you're a service designer, or a user researcher, and/or handy with a sharpie...)

@@ -3,13 +3,13 @@ id: '68'
 uuid: '3f4a7644-0273-4596-b4f5-dadb9ae3b3b0'
 title: 'Students of the class of 2017...'
 slug: 'students-of-the-class-of-2017'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '5'
 created_at: '2017-08-09 16:02:09'
 created_by: '5'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2017-08-09 16:08:03'
 published_by: '5'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 (Specifically, those of you on the [BSc user experience design](http://www.nua.ac.uk/bsc-user-experience-design/) or [interaction design](http://www.nua.ac.uk/bsc-interaction-design/) courses at [Norwich University of the Arts](http://www.nua.ac.uk/) to be honest. It's a comparatively tightly focused rant, is this.)

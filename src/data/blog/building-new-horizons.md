@@ -3,13 +3,13 @@ id: '92'
 uuid: '3f872fe6-6a9e-4886-9bb9-f955882438d7'
 title: 'Building New Horizons at the Women Techmakers Summit'
 slug: 'building-new-horizons'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '19'
 created_at: '2018-05-01 16:12:54'
 created_by: '19'
@@ -18,8 +18,8 @@ updated_by: '19'
 published_at: '2018-05-04 15:59:13'
 published_by: '19'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 At Neontribe, we often get the opportunity to attend many incredible events across the country. After applying for this summit to celebrate International Women’s Day, I was thrilled to receive an invite to represent Neontribe at this prestigious event.

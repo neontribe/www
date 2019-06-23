@@ -3,13 +3,13 @@ id: '63'
 uuid: 'ac7764f6-e51a-4f05-893f-d911917626d0'
 title: 'SNAKE GAME CHALLENGE for young programmers!'
 slug: 'snake-game-challenge-for-young-programmers'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '17'
 created_at: '2017-07-17 11:01:09'
 created_by: '17'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2017-08-25 16:04:21'
 published_by: '17'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 Here at Neontribe, we always want to help young people enter the world of web development. Amongst other things, we have been running a Computer club at Bacton Primary school (see <a href="/coding-with-kids/">our blog on this</a>). And from this, we have created a series of programming tasks that will result in a complete version of the popular game, 'Snake'.

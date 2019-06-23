@@ -3,13 +3,13 @@ id: '64'
 uuid: '22e51a95-41f4-4e6e-aa7f-0f5e8e98d887'
 title: 'When changing your mind is the right decision…'
 slug: 'when-changing-your-mind-is-the-right-decision'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '5'
 created_at: '2017-07-21 17:13:32'
 created_by: '5'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2017-07-21 17:31:25'
 published_by: '5'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 In 2016 Neontribe did a [little discovery work](https://www.neontribe.co.uk/discovery-and-direction/ 'A blog post about Discovery') for the Alexandra Rose charity. Their core project is the Rose Voucher scheme, which helps parents with young children on low incomes to buy fresh fruit and vegetables from market stalls.

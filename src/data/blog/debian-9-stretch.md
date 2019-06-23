@@ -3,13 +3,13 @@ id: '82'
 uuid: 'a62c40f5-337f-4186-8fbd-d4360d399cf3'
 title: 'Debian & VirtualBox Guest Additions Redux'
 slug: 'debian-9-stretch'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '2'
 created_at: '2018-01-30 09:30:13'
 created_by: '2'
@@ -18,8 +18,8 @@ updated_by: '2'
 published_at: '2018-01-31 09:28:55'
 published_by: '2'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 In my [previous look at Debian & VirtualBox](https://www.neontribe.co.uk/debian-virtualbox-guest-additions/) we looked at installing the Guest Additions from the CD image.

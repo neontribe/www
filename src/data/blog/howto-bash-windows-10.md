@@ -3,13 +3,13 @@ id: '25'
 uuid: '898d30cc-fe11-41a2-9f35-e823128c5026'
 title: 'Bashing Windows 10 Insider Preview Build'
 slug: 'howto-bash-windows-10'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '2'
 created_at: '2016-04-07 13:06:18'
 created_by: '2'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2016-06-17 10:45:03'
 published_by: '2'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 _Now the [Windows 10 Anniversary update](https://support.microsoft.com/en-us/help/12387/windows-10-update-history) is out, you won't need to go through the Insider Preview rigamarole to get the integrated Bash shell._

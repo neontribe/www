@@ -3,13 +3,13 @@ id: '11'
 uuid: '7e92a5c2-7819-47ec-92f9-7fba64c5da55'
 title: 'Smart Sass: Dynamic Sass with PHP Smarty'
 slug: 'smart-sass-dynamic-sass-variables-with-php-smarty'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '1'
 created_at: '2014-05-23 10:12:58'
 created_by: '1'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2014-05-23 10:15:11'
 published_by: '1'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 Sass is a language which makes use of server-side compilation in order to generate CSS. Variables are one of the core features of Sass and allow us to specify reusable style definitions. However, what if we want the values of these variables to be assigned dynamically? To add some context to the issue, lets imagine that we have a site but we would like for the client to define the background colour, font and text colour whilst also maintaining our nicely formatted Sass file. Well, here's how:

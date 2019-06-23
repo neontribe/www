@@ -3,13 +3,13 @@ id: '10'
 uuid: 'af6be0e3-03b3-49bb-9a8f-6f6ac2006adf'
 title: 'Fixing an SVG gotcha'
 slug: 'fixing-an-svg-gotcha'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '1'
 created_at: '2014-04-24 15:34:29'
 created_by: '1'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2014-04-24 15:34:29'
 published_by: '1'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 So there you are thinking I just need to put this graphic in to my web page and everyone will be happy. But your graphic just happens to be an SVG. Great, you think, that will look ace at all the sizes I need to show it. This is mostly true, but there are a few catches that will require you to do a little extra work. Firstly IE8 and older just won’t so you will need to provide an alternative for these browsers such as:

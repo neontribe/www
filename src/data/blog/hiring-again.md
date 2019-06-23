@@ -3,13 +3,13 @@ id: '51'
 uuid: 'c63dab28-0317-495f-a2ef-b5dd7c885712'
 title: 'Hiring again...'
 slug: 'hiring-again'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '5'
 created_at: '2016-12-09 15:07:43'
 created_by: '5'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2016-12-09 15:31:15'
 published_by: '5'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 ## Neontribe are looking for developers.
