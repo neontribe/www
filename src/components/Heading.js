@@ -12,6 +12,7 @@ const Heading = ({ level = 1, children, size = 'large' }) => {
         .heading {
           padding: 0;
           margin: 0;
+          line-height: 1.2;
           font-size: ${fontSizes[size]};
         }
       `}</style>
@@ -20,9 +21,9 @@ const Heading = ({ level = 1, children, size = 'large' }) => {
 }
 
 Heading.propTypes = {
-  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
+  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
   children: PropTypes.node,
-  size: PropTypes.oneOf(['small', 'medium', 'large']).isRequired,
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
 }
 
 export default Heading
