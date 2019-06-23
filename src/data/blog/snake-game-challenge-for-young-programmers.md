@@ -1,22 +1,22 @@
 ---
-id: '63'
+id: 63
 uuid: 'ac7764f6-e51a-4f05-893f-d911917626d0'
 title: 'SNAKE GAME CHALLENGE for young programmers!'
 slug: 'snake-game-challenge-for-young-programmers'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '17'
+author_id: 17
 created_at: '2017-07-17 11:01:09'
-created_by: '17'
+created_by: 17
 updated_at: '2017-08-25 16:04:21'
-updated_by: '1'
+updated_by: 1
 published_at: '2017-08-25 16:04:21'
-published_by: '17'
+published_by: 17
 visibility: 'public'
 mobiledoc: null
 amp: null

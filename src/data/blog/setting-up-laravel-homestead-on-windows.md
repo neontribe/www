@@ -1,22 +1,22 @@
 ---
-id: '79'
+id: 79
 uuid: 'ec7187ae-e304-4a1d-9339-c4d30d109d52'
 title: 'Setting up Laravel Homestead on Windows'
 slug: 'setting-up-laravel-homestead-on-windows'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '25'
+author_id: 25
 created_at: '2017-11-20 14:40:55'
-created_by: '25'
+created_by: 25
 updated_at: '2017-11-24 10:41:28'
-updated_by: '1'
+updated_by: 1
 published_at: '2017-11-24 10:41:28'
-published_by: '25'
+published_by: 25
 visibility: 'public'
 mobiledoc: null
 amp: null

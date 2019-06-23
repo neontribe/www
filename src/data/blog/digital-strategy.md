@@ -1,20 +1,20 @@
 ---
-id: '72'
+id: 72
 uuid: '7b9f93f4-6b76-43a1-b3bf-2cb8ac75873e'
 title: 'Digital Strategy...'
 slug: 'digital-strategy'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'draft'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '5'
+author_id: 5
 created_at: '2017-08-14 16:39:35'
-created_by: '5'
+created_by: 5
 updated_at: '2017-08-14 16:39:40'
-updated_by: '1'
+updated_by: 1
 published_at: null
 published_by: null
 visibility: 'public'

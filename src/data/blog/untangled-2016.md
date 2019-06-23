@@ -1,22 +1,22 @@
 ---
-id: '26'
+id: 26
 uuid: 'b8fe2c5c-3a5c-4262-ba43-259df6dc0134'
 title: 'Untangled 2016'
 slug: 'untangled-2016'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '5'
+author_id: 5
 created_at: '2016-04-13 14:40:55'
-created_by: '5'
+created_by: 5
 updated_at: '2016-04-26 15:07:50'
-updated_by: '1'
+updated_by: 1
 published_at: '2016-04-13 14:52:13'
-published_by: '5'
+published_by: 5
 visibility: 'public'
 mobiledoc: null
 amp: null

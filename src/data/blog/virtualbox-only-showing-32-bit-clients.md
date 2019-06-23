@@ -1,22 +1,22 @@
 ---
-id: '34'
+id: 34
 uuid: '0546f4d2-a0c0-4108-a029-64ec7a9e93ef'
 title: 'Virtualbox only showing 32-bit guests on Windows'
 slug: 'virtualbox-only-showing-32-bit-clients'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '2'
+author_id: 2
 created_at: '2016-07-29 08:16:15'
-created_by: '2'
+created_by: 2
 updated_at: '2016-08-15 13:13:56'
-updated_by: '1'
+updated_by: 1
 published_at: '2016-08-12 11:14:30'
-published_by: '2'
+published_by: 2
 visibility: 'public'
 mobiledoc: null
 amp: null

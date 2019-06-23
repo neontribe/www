@@ -1,22 +1,22 @@
 ---
-id: '62'
+id: 62
 uuid: 'a4c7ee51-fbee-462a-9d5d-3ca4a535a958'
 title: '2017 CAS SCRATCH OFF competition'
 slug: '2017-cas-scratch-off-competition'
 image: '/content/images/2017/07/DSC_0196.JPG'
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '17'
+author_id: 17
 created_at: '2017-07-17 10:15:16'
-created_by: '17'
+created_by: 17
 updated_at: '2017-07-19 14:05:57'
-updated_by: '1'
+updated_by: 1
 published_at: '2017-07-17 13:45:00'
-published_by: '17'
+published_by: 17
 visibility: 'public'
 mobiledoc: null
 amp: null

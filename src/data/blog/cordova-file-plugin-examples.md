@@ -1,22 +1,22 @@
 ---
-id: '16'
+id: 16
 uuid: '9503288c-db1b-43fd-a7cb-8e59d0b65ffe'
 title: 'Cordova File Plugin Examples'
 slug: 'cordova-file-plugin-examples'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '4'
+author_id: 4
 created_at: '2015-08-10 14:37:44'
-created_by: '4'
+created_by: 4
 updated_at: '2016-01-20 09:42:39'
-updated_by: '1'
+updated_by: 1
 published_at: '2015-08-11 10:37:40'
-published_by: '4'
+published_by: 4
 visibility: 'public'
 mobiledoc: null
 amp: null

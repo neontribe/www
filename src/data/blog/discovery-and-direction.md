@@ -1,22 +1,22 @@
 ---
-id: '49'
+id: 49
 uuid: 'da37b350-cafb-46f6-b5e9-7b63065f068c'
 title: 'Discovery and direction'
 slug: 'discovery-and-direction'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '5'
+author_id: 5
 created_at: '2016-10-21 11:05:42'
-created_by: '5'
+created_by: 5
 updated_at: '2016-10-21 12:28:02'
-updated_by: '1'
+updated_by: 1
 published_at: '2016-10-21 11:08:19'
-published_by: '5'
+published_by: 5
 visibility: 'public'
 mobiledoc: null
 amp: null

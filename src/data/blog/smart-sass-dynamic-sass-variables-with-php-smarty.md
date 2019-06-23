@@ -1,22 +1,22 @@
 ---
-id: '11'
+id: 11
 uuid: '7e92a5c2-7819-47ec-92f9-7fba64c5da55'
 title: 'Smart Sass: Dynamic Sass with PHP Smarty'
 slug: 'smart-sass-dynamic-sass-variables-with-php-smarty'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '1'
+author_id: 1
 created_at: '2014-05-23 10:12:58'
-created_by: '1'
+created_by: 1
 updated_at: '2015-11-02 14:48:17'
-updated_by: '1'
+updated_by: 1
 published_at: '2014-05-23 10:15:11'
-published_by: '1'
+published_by: 1
 visibility: 'public'
 mobiledoc: null
 amp: null

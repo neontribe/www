@@ -1,22 +1,22 @@
 ---
-id: '52'
+id: 52
 uuid: '8e5c7971-5881-46b4-a865-e36c9ea04c53'
 title: 'Agile apocrypha and an ad-hoc manifesto'
 slug: 'that-keynote'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '5'
+author_id: 5
 created_at: '2016-12-12 10:55:53'
-created_by: '5'
+created_by: 5
 updated_at: '2018-06-26 13:42:45'
-updated_by: '5'
+updated_by: 5
 published_at: '2017-03-13 11:20:02'
-published_by: '5'
+published_by: 5
 visibility: 'public'
 mobiledoc: null
 amp: null

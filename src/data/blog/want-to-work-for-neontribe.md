@@ -1,22 +1,22 @@
 ---
-id: '109'
+id: 109
 uuid: 'c6c9a3cb-7b2a-49ed-a352-7ec0fe34808d'
 title: 'Want to work for Neontribe?'
 slug: 'want-to-work-for-neontribe'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '1'
+author_id: 1
 created_at: '2019-03-27 13:51:43'
-created_by: '2'
+created_by: 2
 updated_at: '2019-03-28 09:48:19'
-updated_by: '1'
+updated_by: 1
 published_at: '2019-03-28 09:31:41'
-published_by: '21'
+published_by: 21
 visibility: 'public'
 mobiledoc: null
 amp: null

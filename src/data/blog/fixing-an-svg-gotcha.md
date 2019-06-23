@@ -1,22 +1,22 @@
 ---
-id: '10'
+id: 10
 uuid: 'af6be0e3-03b3-49bb-9a8f-6f6ac2006adf'
 title: 'Fixing an SVG gotcha'
 slug: 'fixing-an-svg-gotcha'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '1'
+author_id: 1
 created_at: '2014-04-24 15:34:29'
-created_by: '1'
+created_by: 1
 updated_at: '2014-04-24 15:41:30'
-updated_by: '1'
+updated_by: 1
 published_at: '2014-04-24 15:34:29'
-published_by: '1'
+published_by: 1
 visibility: 'public'
 mobiledoc: null
 amp: null

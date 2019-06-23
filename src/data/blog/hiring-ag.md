@@ -1,22 +1,22 @@
 ---
-id: '28'
+id: 28
 uuid: '1b4e2397-c719-4d7f-aeee-9f011d1c3e27'
 title: 'Hiring again'
 slug: 'hiring-ag'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '5'
+author_id: 5
 created_at: '2016-04-26 11:36:46'
-created_by: '5'
+created_by: 5
 updated_at: '2016-04-26 17:04:31'
-updated_by: '1'
+updated_by: 1
 published_at: '2016-04-26 15:08:36'
-published_by: '5'
+published_by: 5
 visibility: 'public'
 mobiledoc: null
 amp: null

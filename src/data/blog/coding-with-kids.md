@@ -1,22 +1,22 @@
 ---
-id: '61'
+id: 61
 uuid: 'f4890ea5-1990-46d0-9eef-7a5757d3ebad'
 title: 'THE KIDS ARE ALRIGHT'
 slug: 'coding-with-kids'
 image: '/content/images/2017/06/coding-club.jpg'
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '11'
+author_id: 11
 created_at: '2017-06-13 13:02:05'
-created_by: '11'
+created_by: 11
 updated_at: '2017-06-15 14:42:44'
-updated_by: '1'
+updated_by: 1
 published_at: '2017-06-15 11:37:53'
-published_by: '2'
+published_by: 2
 visibility: 'public'
 mobiledoc: null
 amp: null
