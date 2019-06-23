@@ -3,13 +3,13 @@ id: '21'
 uuid: '72024693-d1f0-48d7-b43b-9ee312acacc8'
 title: 'Windows 10 howto install VMware vSphere client 5.1'
 slug: 'windows-10-installing-vmware-vsphere-client-5-1'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '2'
 created_at: '2015-11-18 13:14:11'
 created_by: '2'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2015-11-18 13:23:58'
 published_by: '2'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 Neontribe uses VMware ESXI 5.1; however, we had issues installing the management client onto Windows 10.

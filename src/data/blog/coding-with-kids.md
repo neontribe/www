@@ -8,8 +8,8 @@ featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '11'
 created_at: '2017-06-13 13:02:05'
 created_by: '11'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2017-06-15 11:37:53'
 published_by: '2'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 Earlier in the year we offered to help out at a primary school in Bacton, Norfolk, who were already running a python based coding club of their own.

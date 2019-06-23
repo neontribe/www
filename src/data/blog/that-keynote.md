@@ -3,13 +3,13 @@ id: '52'
 uuid: '8e5c7971-5881-46b4-a865-e36c9ea04c53'
 title: 'Agile apocrypha and an ad-hoc manifesto'
 slug: 'that-keynote'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '5'
 created_at: '2016-12-12 10:55:53'
 created_by: '5'
@@ -18,8 +18,8 @@ updated_by: '5'
 published_at: '2017-03-13 11:20:02'
 published_by: '5'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 <a data-flickr-embed="true"  href="https://www.flickr.com/photos/micheleidesmith/16597694589" title="Agile Apocrypha and the Adhoc Manifesto - Harry Harrold and Rupert Redington"><img src="https://c1.staticflickr.com/9/8657/16597694589_704d74923b_z.jpg" width="640" height="453" alt="Agile Apocrypha and the Adhoc Manifesto - Harry Harrold and Rupert Redington"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>

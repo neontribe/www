@@ -3,13 +3,13 @@ id: '110'
 uuid: '6358b102-700f-44be-8fa0-4740709ea37d'
 title: 'How does a small organisation become “safer”?'
 slug: 'talking-about-making-charities-safe'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '1'
 created_at: '2019-04-12 10:18:41'
 created_by: '21'
@@ -18,8 +18,8 @@ updated_by: '21'
 published_at: '2019-04-12 10:27:41'
 published_by: '21'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 On 17th April we're in Liverpool at the Gateway Conference Centre, being looked after by theFSI.

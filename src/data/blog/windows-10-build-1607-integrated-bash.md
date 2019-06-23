@@ -3,13 +3,13 @@ id: '37'
 uuid: '565e3b5e-7859-4a2d-a3af-5ee36dd09ce4'
 title: 'Windows 10 integrated Bash'
 slug: 'windows-10-build-1607-integrated-bash'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '2'
 created_at: '2016-08-11 09:56:52'
 created_by: '2'
@@ -18,8 +18,8 @@ updated_by: '2'
 published_at: '2016-08-12 11:45:26'
 published_by: '2'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 Since the [release of Windows 10 anniversary update](https://www.neontribe.co.uk/windows-10-anniversary-update-1607/) the new integrated Bash is available, but requires a little bit of tweaking under the hood to get working.

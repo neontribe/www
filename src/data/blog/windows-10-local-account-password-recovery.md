@@ -3,13 +3,13 @@ id: '77'
 uuid: '983ad9db-1876-459e-9ad9-0e9c2e4a4cc1'
 title: 'Windows 10 local account password recovery'
 slug: 'windows-10-local-account-password-recovery'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '2'
 created_at: '2017-09-11 09:25:27'
 created_by: '2'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2017-09-12 09:22:52'
 published_by: '2'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 We are going to look at a solution to reset the password on a local Windows account, this will not work for Microsoft account (use the [Microsoft password reset form](https://account.live.com/password/reset)) or an Active Directory account (contact your network administrator).

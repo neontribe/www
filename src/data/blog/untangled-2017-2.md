@@ -8,8 +8,8 @@ featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '23'
 created_at: '2017-08-14 13:44:33'
 created_by: '23'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2017-08-14 15:38:34'
 published_by: '5'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 Neontribe has run a summer code camp every year for near a decade. Last year, we made it our own thing under the banner Untangled 2016. Local tech events for young people can be difficult to find, so doing it again was an easy call.

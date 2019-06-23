@@ -3,13 +3,13 @@ id: '67'
 uuid: '545b3118-b418-4ca5-8d5d-e90bf904d02c'
 title: 'Large and lean?'
 slug: 'post-post'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '5'
 created_at: '2017-08-08 11:12:01'
 created_by: '5'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2017-08-08 11:20:50'
 published_by: '5'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 Broadly speaking, Neontribe works with big organisations in the travel industry - alongside the [Lola Tech](https://www.lola.tech/) Team - and delivers much smaller projects for social good. What's interesting us at the moment is the lessons we can take between these two sorts of folk.

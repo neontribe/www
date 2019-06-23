@@ -8,8 +8,8 @@ featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '17'
 created_at: '2017-07-17 10:15:16'
 created_by: '17'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2017-07-17 13:45:00'
 published_by: '17'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 For the last couple of years, Neontribe have been sponsors of the annual CAS SCRATCH OFF competition.

@@ -3,13 +3,13 @@ id: '36'
 uuid: '78207ee6-a9a8-402c-9697-44f7d0a1235c'
 title: 'Windows 10 Anniversary Update (Build 1607)'
 slug: 'windows-10-anniversary-update-1607'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '2'
 created_at: '2016-08-09 09:38:38'
 created_by: '2'
@@ -18,8 +18,8 @@ updated_by: '2'
 published_at: '2016-08-09 14:58:27'
 published_by: '2'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 **Anniversary Update**

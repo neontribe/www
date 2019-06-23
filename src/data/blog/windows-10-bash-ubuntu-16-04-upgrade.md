@@ -3,13 +3,13 @@ id: '59'
 uuid: 'ec5cfa83-3dad-4b78-a41a-e5fcfd4eb228'
 title: 'Creators Update and BASH (Ubuntu 16.04 upgrade)'
 slug: 'windows-10-bash-ubuntu-16-04-upgrade'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '2'
 created_at: '2017-05-08 08:57:37'
 created_by: '2'
@@ -18,8 +18,8 @@ updated_by: '2'
 published_at: '2017-06-14 07:52:53'
 published_by: '2'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 Windows 10 Creators Update brings with it a new version of the Windows Subsystem for Linux, including upgrading the Ubuntu distribution from 14.04 (Trusty) to 16.04 (Xenial).

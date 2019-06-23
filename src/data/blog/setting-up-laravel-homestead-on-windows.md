@@ -3,13 +3,13 @@ id: '79'
 uuid: 'ec7187ae-e304-4a1d-9339-c4d30d109d52'
 title: 'Setting up Laravel Homestead on Windows'
 slug: 'setting-up-laravel-homestead-on-windows'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '25'
 created_at: '2017-11-20 14:40:55'
 created_by: '25'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2017-11-24 10:41:28'
 published_by: '25'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 My 1st task at Neontribe was to set up my Windows development environment for Lavarel PHP-powered service that exposes a website and an API.

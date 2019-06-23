@@ -3,13 +3,13 @@ id: '6'
 uuid: 'f6e6a675-5dc4-4fb1-beaa-7e1ba7579560'
 title: 'Thinking About Discovery'
 slug: 'thinking-about-discovery'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '1'
 created_at: '2014-01-17 13:57:05'
 created_by: '1'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2014-01-17 13:57:05'
 published_by: '1'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 Very interesting session at Agile tea camp last night about Discovery, led by <a href="http://twitter.com/lily_dart">@lily_dart</a> from **DXW**. She talked about how they do it: open conversations, surveys and card sorting.

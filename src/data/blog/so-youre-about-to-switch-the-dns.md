@@ -3,13 +3,13 @@ id: '19'
 uuid: 'e95caf49-249c-4e40-a107-ba7bf8529f61'
 title: "So, you're about to switch the DNS"
 slug: 'so-youre-about-to-switch-the-dns'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '4'
 created_at: '2015-08-20 08:34:22'
 created_by: '4'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2014-01-14 11:24:00'
 published_by: '4'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 It's a common scenario: You've built a new website locally to replace an older one, tested it fully (with your automated testing framework of choice), and now you're deploying it to a spanking new server it's going to live on. You're editing your local "hosts" file to tell your browser to resolve the domain name to the IP address of its new server, and you find that everything is well.

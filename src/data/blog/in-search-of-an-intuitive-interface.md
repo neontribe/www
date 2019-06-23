@@ -3,13 +3,13 @@ id: '53'
 uuid: 'f96ea13b-95e2-4a57-9c19-a27db2dc819c'
 title: 'In Search of an Intuitive Interface?'
 slug: 'in-search-of-an-intuitive-interface'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '21'
 created_at: '2017-01-03 16:49:02'
 created_by: '21'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2017-01-10 13:50:55'
 published_by: '21'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 Neontribe are big fans of open data, and last summer we got involved with a fascinating project using never-before-published data from the charitable sector. Our work made us revisit one of our fundamental assumptions about the goal of a user interface.

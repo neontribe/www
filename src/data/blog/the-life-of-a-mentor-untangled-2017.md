@@ -3,13 +3,13 @@ id: '74'
 uuid: '0b82b4e3-90ca-4036-ac5e-3e3e41808a7d'
 title: 'The life of a Mentor: Untangled 2017'
 slug: 'the-life-of-a-mentor-untangled-2017'
-image: 'null'
+image: null
 featured: '0'
 page: '0'
 status: 'published'
 language: 'en_US'
-meta_title: 'null'
-meta_description: 'null'
+meta_title: null
+meta_description: null
 author_id: '23'
 created_at: '2017-08-21 15:05:00'
 created_by: '23'
@@ -18,8 +18,8 @@ updated_by: '1'
 published_at: '2017-08-22 10:51:02'
 published_by: '23'
 visibility: 'public'
-mobiledoc: 'null'
-amp: 'null'
+mobiledoc: null
+amp: null
 ---
 
 Untangled is about learning but not just for the young people. In the week of the event I learnt more mentoring the enthusiastic youth of Norwich than during any week of my university life.
