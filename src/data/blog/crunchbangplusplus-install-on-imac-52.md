@@ -1,22 +1,22 @@
 ---
-id: '27'
+id: 27
 uuid: '2428f6e2-4fcc-4e99-a6f7-cd19a1e995d2'
 title: '#!++ install on late 2006 iMac 5,2'
 slug: 'crunchbangplusplus-install-on-imac-52'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '2'
+author_id: 2
 created_at: '2016-04-15 09:35:31'
-created_by: '2'
+created_by: 2
 updated_at: '2016-07-04 11:05:45'
-updated_by: '1'
+updated_by: 1
 published_at: '2016-07-01 09:37:57'
-published_by: '2'
+published_by: 2
 visibility: 'public'
 mobiledoc: null
 amp: null

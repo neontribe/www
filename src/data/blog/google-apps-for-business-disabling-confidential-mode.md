@@ -1,22 +1,22 @@
 ---
-id: '115'
+id: 115
 uuid: 'be9ac993-9807-48b1-b059-081da328b9ce'
 title: 'Google Apps for Business: Disabling Confidential Mode'
 slug: 'google-apps-for-business-disabling-confidential-mode'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '2'
+author_id: 2
 created_at: '2019-05-31 09:49:00'
-created_by: '2'
+created_by: 2
 updated_at: '2019-05-31 10:13:48'
-updated_by: '2'
+updated_by: 2
 published_at: '2019-05-31 10:13:48'
-published_by: '2'
+published_by: 2
 visibility: 'public'
 mobiledoc: null
 amp: null

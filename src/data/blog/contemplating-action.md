@@ -1,22 +1,22 @@
 ---
-id: '104'
+id: 104
 uuid: '52fdd023-e2f8-4d10-ba86-fc9c2e1ef485'
 title: 'Contemplating Action'
 slug: 'contemplating-action'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '1'
+author_id: 1
 created_at: '2019-02-27 13:53:17'
-created_by: '28'
+created_by: 28
 updated_at: '2019-04-08 11:15:34'
-updated_by: '27'
+updated_by: 27
 published_at: '2019-03-28 16:04:24'
-published_by: '21'
+published_by: 21
 visibility: 'public'
 mobiledoc: null
 amp: null

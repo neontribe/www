@@ -1,22 +1,22 @@
 ---
-id: '94'
+id: 94
 uuid: 'ae2cccdb-797e-4cc8-9a30-a2f1d5e810d0'
 title: 'Elementary on Dell XPS 15 (9570)'
 slug: 'elementary-on-dell-xps-15-9570'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '2'
+author_id: 2
 created_at: '2018-10-16 09:31:38'
-created_by: '2'
+created_by: 2
 updated_at: '2018-11-09 13:41:21'
-updated_by: '2'
+updated_by: 2
 published_at: '2018-10-24 11:47:20'
-published_by: '2'
+published_by: 2
 visibility: 'public'
 mobiledoc: null
 amp: null

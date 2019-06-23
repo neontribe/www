@@ -1,22 +1,22 @@
 ---
-id: '47'
+id: 47
 uuid: '0dc87953-5208-47c2-a196-13c0af4a15d0'
 title: 'Ubuntu 14.04 Server with PHP 7.0'
 slug: 'ubuntu-14-04-server-with-php-7-0'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '2'
+author_id: 2
 created_at: '2016-09-09 09:05:22'
-created_by: '2'
+created_by: 2
 updated_at: '2016-10-10 11:11:00'
-updated_by: '1'
+updated_by: 1
 published_at: '2016-09-15 13:57:30'
-published_by: '2'
+published_by: 2
 visibility: 'public'
 mobiledoc: null
 amp: null

@@ -1,22 +1,22 @@
 ---
-id: '53'
+id: 53
 uuid: 'f96ea13b-95e2-4a57-9c19-a27db2dc819c'
 title: 'In Search of an Intuitive Interface?'
 slug: 'in-search-of-an-intuitive-interface'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '21'
+author_id: 21
 created_at: '2017-01-03 16:49:02'
-created_by: '21'
+created_by: 21
 updated_at: '2017-01-11 12:14:30'
-updated_by: '1'
+updated_by: 1
 published_at: '2017-01-10 13:50:55'
-published_by: '21'
+published_by: 21
 visibility: 'public'
 mobiledoc: null
 amp: null

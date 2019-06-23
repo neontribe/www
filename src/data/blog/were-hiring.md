@@ -1,22 +1,22 @@
 ---
-id: '20'
+id: 20
 uuid: 'e7bf8834-a4d8-417f-907f-171dd0698e66'
 title: 'Were hiring'
 slug: 'were-hiring'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '5'
+author_id: 5
 created_at: '2015-08-20 15:56:01'
-created_by: '5'
+created_by: 5
 updated_at: '2016-04-21 11:14:51'
-updated_by: '1'
+updated_by: 1
 published_at: '2015-08-20 16:00:30'
-published_by: '5'
+published_by: 5
 visibility: 'public'
 mobiledoc: null
 amp: null

@@ -1,22 +1,22 @@
 ---
-id: '82'
+id: 82
 uuid: 'a62c40f5-337f-4186-8fbd-d4360d399cf3'
 title: 'Debian & VirtualBox Guest Additions Redux'
 slug: 'debian-9-stretch'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '2'
+author_id: 2
 created_at: '2018-01-30 09:30:13'
-created_by: '2'
+created_by: 2
 updated_at: '2018-11-09 13:41:41'
-updated_by: '2'
+updated_by: 2
 published_at: '2018-01-31 09:28:55'
-published_by: '2'
+published_by: 2
 visibility: 'public'
 mobiledoc: null
 amp: null

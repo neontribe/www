@@ -1,22 +1,22 @@
 ---
-id: '25'
+id: 25
 uuid: '898d30cc-fe11-41a2-9f35-e823128c5026'
 title: 'Bashing Windows 10 Insider Preview Build'
 slug: 'howto-bash-windows-10'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '2'
+author_id: 2
 created_at: '2016-04-07 13:06:18'
-created_by: '2'
+created_by: 2
 updated_at: '2016-08-08 10:08:06'
-updated_by: '1'
+updated_by: 1
 published_at: '2016-06-17 10:45:03'
-published_by: '2'
+published_by: 2
 visibility: 'public'
 mobiledoc: null
 amp: null

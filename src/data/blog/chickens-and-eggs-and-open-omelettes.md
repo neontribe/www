@@ -1,22 +1,22 @@
 ---
-id: '75'
+id: 75
 uuid: '60df142e-62f6-40aa-a5bf-2f419ae33f52'
 title: 'Chickens and eggs and an open omelette.'
 slug: 'chickens-and-eggs-and-open-omelettes'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '5'
+author_id: 5
 created_at: '2017-08-22 22:26:07'
-created_by: '5'
+created_by: 5
 updated_at: '2017-11-03 09:59:00'
-updated_by: '1'
+updated_by: 1
 published_at: '2017-11-02 16:12:19'
-published_by: '5'
+published_by: 5
 visibility: 'public'
 mobiledoc: null
 amp: null

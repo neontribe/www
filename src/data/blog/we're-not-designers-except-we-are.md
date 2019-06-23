@@ -1,22 +1,22 @@
 ---
-id: '5'
+id: 5
 uuid: 'a440e569-36e1-4372-b9fd-c4a3194454d2'
 title: 'We’re not designers. Except we are.'
 slug: "we're-not-designers-except-we-are"
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '5'
+author_id: 5
 created_at: '2014-01-14 13:08:45'
-created_by: '1'
+created_by: 1
 updated_at: '2016-01-06 11:23:46'
-updated_by: '1'
+updated_by: 1
 published_at: '2014-01-14 13:08:45'
-published_by: '1'
+published_by: 1
 visibility: 'public'
 mobiledoc: null
 amp: null

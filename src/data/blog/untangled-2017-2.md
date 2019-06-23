@@ -1,22 +1,22 @@
 ---
-id: '70'
+id: 70
 uuid: 'fc90425b-f77c-40fd-a3fa-7025b3015674'
 title: 'After-action report: Untangled 2017'
 slug: 'untangled-2017-2'
-image: ''
-featured: '0'
-page: '0'
+image: undefined
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '23'
+author_id: 23
 created_at: '2017-08-14 13:44:33'
-created_by: '23'
+created_by: 23
 updated_at: '2017-08-14 15:38:46'
-updated_by: '1'
+updated_by: 1
 published_at: '2017-08-14 15:38:34'
-published_by: '5'
+published_by: 5
 visibility: 'public'
 mobiledoc: null
 amp: null

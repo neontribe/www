@@ -1,22 +1,22 @@
 ---
-id: '67'
+id: 67
 uuid: '545b3118-b418-4ca5-8d5d-e90bf904d02c'
 title: 'Large and lean?'
 slug: 'post-post'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '5'
+author_id: 5
 created_at: '2017-08-08 11:12:01'
-created_by: '5'
+created_by: 5
 updated_at: '2017-08-10 11:44:33'
-updated_by: '1'
+updated_by: 1
 published_at: '2017-08-08 11:20:50'
-published_by: '5'
+published_by: 5
 visibility: 'public'
 mobiledoc: null
 amp: null

@@ -1,22 +1,22 @@
 ---
-id: '90'
+id: 90
 uuid: '983307b4-14fd-4e25-ba36-4a6837da8fa3'
 title: 'Making a difference with Code First: Girls'
 slug: 'making-a-difference-with-code-first-girls'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '19'
+author_id: 19
 created_at: '2018-04-06 14:01:45'
-created_by: '19'
+created_by: 19
 updated_at: '2018-04-10 14:42:41'
-updated_by: '19'
+updated_by: 19
 published_at: '2018-04-10 14:32:28'
-published_by: '19'
+published_by: 19
 visibility: 'public'
 mobiledoc: null
 amp: null

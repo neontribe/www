@@ -1,22 +1,22 @@
 ---
-id: '37'
+id: 37
 uuid: '565e3b5e-7859-4a2d-a3af-5ee36dd09ce4'
 title: 'Windows 10 integrated Bash'
 slug: 'windows-10-build-1607-integrated-bash'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '2'
+author_id: 2
 created_at: '2016-08-11 09:56:52'
-created_by: '2'
+created_by: 2
 updated_at: '2018-03-08 13:41:50'
-updated_by: '2'
+updated_by: 2
 published_at: '2016-08-12 11:45:26'
-published_by: '2'
+published_by: 2
 visibility: 'public'
 mobiledoc: null
 amp: null

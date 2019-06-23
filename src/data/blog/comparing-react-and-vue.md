@@ -1,22 +1,22 @@
 ---
-id: '80'
+id: 80
 uuid: 'cd7bd15a-4c6d-4d5a-821a-ae665f242d86'
 title: 'Comparing React and Vue'
 slug: 'comparing-react-and-vue'
 image: null
-featured: '0'
-page: '0'
+featured: 0
+page: 0
 status: 'published'
 language: 'en_US'
 meta_title: null
 meta_description: null
-author_id: '25'
+author_id: 25
 created_at: '2017-12-04 08:33:56'
-created_by: '25'
+created_by: 25
 updated_at: '2017-12-04 10:17:15'
-updated_by: '1'
+updated_by: 1
 published_at: '2017-12-04 09:20:01'
-published_by: '25'
+published_by: 25
 visibility: 'public'
 mobiledoc: null
 amp: null
