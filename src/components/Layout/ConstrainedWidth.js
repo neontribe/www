@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { PAGE_WIDTH_REM } from '../../theme'
+import { PAGE_WIDTH_REM, GUTTER_PX } from '../../theme'
 
-const ConstrainedWidth = ({ children }) => (
+const ConstrainedWidth = ({ fullWidth = true, children }) => (
   <div className="constrained-container">
     {children}
     <style jsx>{`
@@ -10,7 +10,7 @@ const ConstrainedWidth = ({ children }) => (
         width: 100%;
         max-width: ${PAGE_WIDTH_REM};
         margin: 0 auto;
-        padding: 0 1rem;
+        padding: ${fullWidth ? 0 : `0 ${GUTTER_PX * 2}px`};
       }
     `}</style>
   </div>
