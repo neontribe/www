@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link as GatsbyLink } from 'gatsby'
 
-import { breakpoint, GUTTER_PX } from '../theme'
+import { breakpoint } from '../theme'
 import Logo from './Logo'
 import Link from './Link'
 import Text from './Text'
@@ -27,7 +27,7 @@ const Nav = () => (
         <NavLink to="/">foo</NavLink>
       </li>
     </ul>
-
+    {styles}
     <style jsx>{`
       .list {
         margin: 0;
@@ -78,7 +78,7 @@ const Header = ({ siteTitle }) => (
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding: ${GUTTER_PX}px;
+        padding: 2rem 0;
       }
 
       .header > * {

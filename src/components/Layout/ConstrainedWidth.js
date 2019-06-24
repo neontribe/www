@@ -9,7 +9,8 @@ const ConstrainedWidth = ({ children }) => (
       .constrained-container {
         width: 100%;
         max-width: ${PAGE_WIDTH_REM};
-        margin: auto;
+        margin: 0 auto;
+        padding: 0 1rem;
       }
     `}</style>
   </div>

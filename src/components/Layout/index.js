@@ -71,10 +71,13 @@ const Layout = ({ children }) => (
             font-size: ${REM_PX}px;
             font-family: ${FONT_STACK};
             color: ${COLOUR_PRIMARY_TEXT};
+<<<<<<< HEAD
           }
 
           address {
             font-style: normal;
+=======
+>>>>>>> style improvements
           }
         `}</style>
         <Page title={data.site.siteMetadata.title}>{children}</Page>
