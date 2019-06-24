@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { fontSizes } from '../theme'
 
-const Heading = ({ level = 1, children, size = 'large' }) => {
+const Heading = ({ level, children, size }) => {
   const HeadingTag = `h${level}`
 
   return (
@@ -21,9 +21,9 @@ const Heading = ({ level = 1, children, size = 'large' }) => {
 }
 
 Heading.propTypes = {
-  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
+  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
   children: PropTypes.node,
-  size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']),
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']).isRequired,
 }
 
 export default Heading
