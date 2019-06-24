@@ -11,16 +11,10 @@ import ProblemSolution from './ProblemSolution'
 import Content from './Content'
 import VerticalSpacing from '../VerticalSpacing'
 
-const imageWidth = 250
 const imageStyles = css.resolve`
-  .gatsby-image-wrapper {
-    margin: 0 auto;
-  }
-
   @media (${breakpoint('md')}) {
     .gatsby-image-wrapper {
-      width: ${imageWidth}px;
-      height: ${imageWidth}px;
+      height: 100%;
     }
   }
 `
@@ -32,9 +26,9 @@ const WorkDescription = ({ alternate, level, title, fluid, problem }) => {
   )
 
   return (
-    <div className="work-description">
+    <div>
       <ConstrainedWidth>
-        <Content alternate={alternate} imageWidth={imageWidth}>
+        <Content alternate={alternate}>
           <Content.Title>
             <Heading level={level} size="medium">
               <VerticalSpacing size={2} />

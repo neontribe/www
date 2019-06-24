@@ -16,16 +16,10 @@ import Text from '../Text'
 import ProblemSolution from './ProblemSolution'
 import Content from './Content'
 
-const imageWidth = 300
 const imageStyles = css.resolve`
-  .gatsby-image-wrapper {
-    margin: 0 auto;
-  }
-
   @media (${breakpoint('md')}) {
     .gatsby-image-wrapper {
-      width: ${imageWidth}px;
-      height: 400px;
+      height: 100%;
     }
   }
 `
@@ -45,9 +39,9 @@ const WorkDescription = ({
   )
 
   return (
-    <div className={`work-description ${alternate ? 'alternate' : ''}`}>
+    <section className={`work-description ${alternate ? 'alternate' : ''}`}>
       <ConstrainedWidth>
-        <Content imageWidth={imageWidth} alternate={alternate}>
+        <Content alternate={alternate}>
           <Content.Title>
             <Heading level={level} size="medium">
               <T heavy>{title}</T>
@@ -57,7 +51,7 @@ const WorkDescription = ({
             </Heading>
           </Content.Title>
           <Content.Image>
-            <div className="image">
+            <div className="cut-corner">
               <Img className={imageStyles.className} fluid={fluid} />
             </div>
           </Content.Image>
@@ -74,6 +68,7 @@ const WorkDescription = ({
       {imageStyles.styles}
       <style jsx>{`
         .work-description {
+          padding: ${GUTTER_PX * 4}px 0;
           background-color: ${c_PRIMARY_BACKGROUND};
           width: 100%;
         }
@@ -81,10 +76,12 @@ const WorkDescription = ({
           background-color: ${c_SECONDARY_BACKGROUND};
         }
 
-        .image {
+        .cut-corner {
           position: relative;
+          height: 100%;
+          max-height: 600px;
         }
-        .image::after {
+        .cut-corner::after {
           content: '';
           display: block;
           position: absolute;
@@ -109,7 +106,7 @@ const WorkDescription = ({
           }
         }
       `}</style>
-    </div>
+    </section>
   )
 }
 

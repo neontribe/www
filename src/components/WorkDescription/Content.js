@@ -17,37 +17,49 @@ const cloneWithProps = (node, props) => node && React.cloneElement(node, props)
 const propTypes = {
   children: PropTypes.node,
   alternate: PropTypes.bool,
-  imageWidth: PropTypes.number,
 }
 
-const Content = ({ alternate, children, imageWidth }) => (
+const Content = ({ alternate, children }) => (
   <div className="work-description-content">
-    {cloneWithProps(findChild(children, Title), { alternate, imageWidth })}
-    {cloneWithProps(findChild(children, Image), { alternate, imageWidth })}
-    {cloneWithProps(findChild(children, Description), {
+    <div className="stacked-content">
+      {cloneWithProps(findChild(children, Title), {
+        alternate,
+        key: 'title',
+      })}
+      {cloneWithProps(findChild(children, Image), {
+        alternate,
+        middle: true,
+        key: 'image-middle',
+      })}
+      {cloneWithProps(findChild(children, Description), {
+        alternate,
+        key: 'description',
+      })}
+    </div>
+    {cloneWithProps(findChild(children, Image), {
       alternate,
-      imageWidth,
+      key: 'image-bottom',
     })}
     <style jsx>{`
       .work-description-content {
-        /* Used as a negative margin to pull image outside padding */
+        /* Used as a negative margin for the image, to pull the image outside padding horizontally */
         padding: 0 ${GUTTER_PX}px;
+        display: flex;
+        flex-direction: ${alternate ? 'row-reverse' : 'row'};
       }
-      .work-description-content::after {
-        content: '';
-        display: block;
-        clear: both;
+
+      .stacked-content {
+        background-color: ${alternate
+          ? c_SECONDARY_BACKGROUND
+          : c_PRIMARY_BACKGROUND};
       }
     `}</style>
   </div>
 )
-Content.propTypes = {
-  ...propTypes,
-  imageWidth: PropTypes.number.isRequired,
-}
+Content.propTypes = propTypes
 
 // Title -------------------------------------
-export const Title = ({ alternate, imageWidth, children }) => (
+export const Title = ({ alternate, children }) => (
   <div className="header">
     {children}
     <style jsx>{`
@@ -65,10 +77,8 @@ export const Title = ({ alternate, imageWidth, children }) => (
         }
 
         .header {
-          float: ${alternate ? 'right' : 'left'};
           padding-right: ${alternate ? 0 : GUTTER_PX * 4}px;
           padding-left: ${alternate ? GUTTER_PX * 4 : 0}px;
-          width: calc(100% - ${imageWidth}px);
         }
       }
     `}</style>
@@ -78,48 +88,46 @@ Title.displayName = 'WorkDescriptionTitle'
 Title.propTypes = propTypes
 
 // Image -------------------------------------
-export const Image = ({ alternate, children }) => (
+export const Image = ({ middle, children }) => (
   <div className="image">
     {children}
     <style jsx>{`
       .image {
         /* Pull the image outside of the padding of the .work-description-content */
         margin: 0 -${GUTTER_PX}px;
-        position: relative;
-        top: 0;
-        bottom: 0;
+        display: ${middle ? 'block' : 'none'};
       }
 
       @media (${breakpoint('md')}) {
         .image {
-          float: ${alternate ? 'left' : 'right'};
           margin: 0;
+          display: ${middle ? 'none' : 'block'};
+          width: 33.33%;
+          flex-shrink: 0;
         }
       }
     `}</style>
   </div>
 )
 Image.displayName = 'WorkDescriptionImage'
-Image.propTypes = propTypes
+Image.propTypes = {
+  ...propTypes,
+  middle: PropTypes.bool,
+}
 
 // Description -------------------------------------
-export const Description = ({ alternate, children, imageWidth }) => (
+export const Description = ({ alternate, children }) => (
   <div className="description">
     {children}
     <style jsx>{`
       .description {
         padding: 0 ${GUTTER_PX * 2}px;
-        background-color: ${alternate
-          ? c_SECONDARY_BACKGROUND
-          : c_PRIMARY_BACKGROUND};
       }
 
       @media (${breakpoint('md')}) {
         .description {
-          float: ${alternate ? 'right' : 'left'};
           padding-right: ${alternate ? 0 : GUTTER_PX * 4}px;
           padding-left: ${alternate ? GUTTER_PX * 4 : 0}px;
-          width: calc(100% - ${imageWidth}px);
         }
       }
     `}</style>
