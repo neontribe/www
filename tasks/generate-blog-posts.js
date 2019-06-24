@@ -1,19 +1,17 @@
 const fs = require('fs')
-const data = require('./src/data/blog/posts.json')
+const data = require('../ghost-source/blog-posts.json')
 
 const { posts, users } = data.db[0].data
 
 const authorKeys = ['name', 'slug', 'image', 'cover', 'facebook', 'twitter']
 
-// Converts "null" to null, "false" to false etc. Everything is returned as a string wrapped in "s
-const convertType = value => {
-  try {
-    return JSON.parse(value)
-  } catch (e) {
+const convertToRelativeImports = value => {
+  if (typeof value === 'string') {
     return JSON.stringify(
-      value.replace('(/content/', '(').replace('"/content/', '"')
+      value.replace(/\(\/content\//g, '(').replace(/"\/content\//g, '"')
     )
   }
+  return value
 }
 
 const getAuthorEntries = author =>
@@ -29,9 +27,9 @@ const createFrontmatter = post => {
   const postEntries = getPostEntries(post)
 
   return `---\n${postEntries
-    .map(([key, value]) => `${key}: ${convertType(value)}`)
+    .map(([key, value]) => `${key}: ${convertToRelativeImports(value)}`)
     .join('\n')}\n${authorEntries
-    .map(([key, value]) => `author_${key}: ${convertType(value)}`)
+    .map(([key, value]) => `author_${key}: ${convertToRelativeImports(value)}`)
     .join('\n')}\n---`
 }
 
