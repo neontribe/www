@@ -47,7 +47,7 @@ export default ({ data }) => {
         publishedDate={new Date(published_at)}
         modifiedDate={new Date(updated_at)}
       />
-      <ConstrainedWidth>
+      <ConstrainedWidth fullWidth={false}>
         <article>
           <VerticalSpacing size={10} />
           <header className="header">
