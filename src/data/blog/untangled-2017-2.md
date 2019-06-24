@@ -3,7 +3,7 @@ id: 70
 uuid: 'fc90425b-f77c-40fd-a3fa-7025b3015674'
 title: 'After-action report: Untangled 2017'
 slug: 'untangled-2017-2'
-image: undefined
+image: ''
 featured: 0
 page: 0
 status: 'published'
