@@ -20,6 +20,12 @@ published_by: 2
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Andy Barnes'
+author_slug: 'andy'
+author_image: 'images/2019/03/Andy-Barnes.jpg'
+author_cover: 'images/2018/01/knight-in-armour-cropped.jpg'
+author_facebook: null
+author_twitter: null
 ---
 
 ## What
@@ -45,7 +51,7 @@ Log into the [Admin Console](https://gsuite.google.com/) for your domain.
 - Choose `Apps -> G Suite -> Gmail -> User Settings`
 - Under `Confidential Mode` select `Disabled` and save.
 
-![Confidential Mode -> Disable](/content/images/2019/05/user-confidential-mode.png)
+![Confidential Mode -> Disable](images/2019/05/user-confidential-mode.png)
 
 ### Rejecting Confidential Mode inbound mail
 
@@ -62,13 +68,13 @@ From the [Admin Console](https://gsuite.google.com/) for your domain:
   _ Save the expression
   _ `If the above expressions match, do the following: Reject message` \* `Customize rejection notice: This domain does not accept messages sent with Gmail Confidential Mode enabled. Please disable and resend.`
 
-![Confidential Mode -> Reject](/content/images/2019/05/reject-confidential-mode.png)
+![Confidential Mode -> Reject](images/2019/05/reject-confidential-mode.png)
 
 ### Testing
 
 Once you have configured all the above, you'll want to test it's working. From a non business Gmail account, send a confidential mode email to one of your users. You should get a mail rejection.
 
-![Rejection Successful!](/content/images/2019/05/confidential-mode-rejection-successful-1.png)
+![Rejection Successful!](images/2019/05/confidential-mode-rejection-successful-1.png)
 
 ### Ramifications
 

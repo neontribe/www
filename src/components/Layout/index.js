@@ -77,6 +77,10 @@ const Layout = ({ children }) => (
             font-family: ${FONT_STACK};
             color: ${COLOUR_PRIMARY_TEXT};
           }
+
+          address {
+            font-style: normal;
+          }
         `}</style>
         <Page title={data.site.siteMetadata.title}>{children}</Page>
       </>

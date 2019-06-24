@@ -20,6 +20,12 @@ published_by: 2
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Andy Barnes'
+author_slug: 'andy'
+author_image: 'images/2019/03/Andy-Barnes.jpg'
+author_cover: 'images/2018/01/knight-in-armour-cropped.jpg'
+author_facebook: null
+author_twitter: null
 ---
 
 **Preperation**
@@ -32,7 +38,7 @@ We will need a USB stick with at least 2GiB of space.
 
 I updated the BIOS to [1.5.0](https://downloads.dell.com/FOLDER05186541M/1/XPS_9570_01_05_00.exe) (the latest version currently available). I formatted a USB stick to FAT32 and put the BIOS update executable onto the USB stick. Then while powering on the laptop, I pressed F12 to access the boot menu and chose the option BIOS Flash Update - which allowed me to select the XPS_9570_01_05_00.EXE and apply it without having to boot into Windows.
 
-![BIOS Flash Update](/content/images/2018/10/xps-9570.jpg)
+![BIOS Flash Update](images/2018/10/xps-9570.jpg)
 
 In the Dell XPS BIOS (accessed with F2 at startup) I set the following options.
 
@@ -47,8 +53,8 @@ I created a bootable USB installer using [Rufus](https://rufus.ie/) with [Elemen
 
 Whilst creating the USB in Rufus, I used GPT/UEFI mode and wrote the image in "DD" image mode.
 
-![Rufus](/content/images/2018/10/rufus-1.png)
-![Wite in DD Imag mode](/content/images/2018/10/rufus-2.png)
+![Rufus](images/2018/10/rufus-1.png)
+![Wite in DD Imag mode](images/2018/10/rufus-2.png)
 
 You may be able to use [Etcher](https://etcher.io/) on a Linux system in place of Rufus.
 

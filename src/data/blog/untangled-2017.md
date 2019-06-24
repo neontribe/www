@@ -20,6 +20,12 @@ published_by: 5
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Harry Harrold'
+author_slug: 'harry-harrold'
+author_image: '//www.gravatar.com/avatar/febf032ab16fef166824f5172cd87393?s=250&d=mm&r=x'
+author_cover: null
+author_facebook: null
+author_twitter: null
 ---
 
 This time last year, Neontribe developers ran [Untangled](https://www.neontribe.co.uk/untangled-2016/) - a week-long creative codecamp for young people who were interested. The theme that year was "Internet of junk"; Internet-enabled gadgets out of charity shop finds. My favourite was the toaster that knew how toasty you wanted your toast and turned the little browning knob round so you got it Your Way.

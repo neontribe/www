@@ -20,6 +20,12 @@ published_by: 1
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Neontribe'
+author_slug: 'neontribe'
+author_image: 'images/2019/03/neonround.png'
+author_cover: null
+author_facebook: null
+author_twitter: null
 ---
 
 So there you are thinking I just need to put this graphic in to my web page and everyone will be happy. But your graphic just happens to be an SVG. Great, you think, that will look ace at all the sizes I need to show it. This is mostly true, but there are a few catches that will require you to do a little extra work. Firstly IE8 and older just won’t so you will need to provide an alternative for these browsers such as:

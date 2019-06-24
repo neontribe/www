@@ -20,6 +20,12 @@ published_by: 5
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Harry Harrold'
+author_slug: 'harry-harrold'
+author_image: '//www.gravatar.com/avatar/febf032ab16fef166824f5172cd87393?s=250&d=mm&r=x'
+author_cover: null
+author_facebook: null
+author_twitter: null
 ---
 
 Neontribe's involvement with the IATI standard started this spring, with a small user research project as part of the [Open Ag Funding](https://www.interaction.org/project/open-ag-funding/overview) project. Our brief was to study the journeys of those engaged in publishing open data to the IATI standard and to produce a three-slide summary.

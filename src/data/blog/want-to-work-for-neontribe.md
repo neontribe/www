@@ -20,6 +20,12 @@ published_by: 21
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Neontribe'
+author_slug: 'neontribe'
+author_image: 'images/2019/03/neonround.png'
+author_cover: null
+author_facebook: null
+author_twitter: null
 ---
 
 ##Want to (web) develop your career with us?

@@ -20,6 +20,12 @@ published_by: 5
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Harry Harrold'
+author_slug: 'harry-harrold'
+author_image: '//www.gravatar.com/avatar/febf032ab16fef166824f5172cd87393?s=250&d=mm&r=x'
+author_cover: null
+author_facebook: null
+author_twitter: null
 ---
 
 (ETA: We've hired for this specific role - but we're usually on the look out for folk, and if you're interested in working with us, do drop us a CV. Particularly if you're a service designer, or a user researcher, and/or handy with a sharpie...)

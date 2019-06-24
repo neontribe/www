@@ -20,6 +20,12 @@ published_by: 2
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Andy Barnes'
+author_slug: 'andy'
+author_image: 'images/2019/03/Andy-Barnes.jpg'
+author_cover: 'images/2018/01/knight-in-armour-cropped.jpg'
+author_facebook: null
+author_twitter: null
 ---
 
 When trying to create a Virtualbox VM recently I was only presented with the option of creating a 32-bit client. After a bit of research it turns out this can be caused by incorrect settings in the BIOS or by a competing Virtual Machine software cohabiting the system.
@@ -52,7 +58,7 @@ If Hyper-V is enabled then Virtualbox will not be able to create 64-bit virtual 
 Start > type "Turn Windows features on or off" > ensure Hyper-V is unchecked
 ```
 
-![Turn Windows features on or off](/content/images/2016/07/turn-windows-features-on-or-off.png)
+![Turn Windows features on or off](images/2016/07/turn-windows-features-on-or-off.png)
 
 If Hyper-V was enabled this will require a reboot.
 

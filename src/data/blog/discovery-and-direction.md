@@ -20,6 +20,12 @@ published_by: 5
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Harry Harrold'
+author_slug: 'harry-harrold'
+author_image: '//www.gravatar.com/avatar/febf032ab16fef166824f5172cd87393?s=250&d=mm&r=x'
+author_cover: null
+author_facebook: null
+author_twitter: null
 ---
 
 At Neontribe we’ve been all fired up by a tiny [discovery project](https://www.neontribe.co.uk/our-process-discovery/) that we’ve recently been doing for the [Alexandra Rose Charity](http://www.alexandrarose.org.uk/) and their partners [Food Matters](http://www.foodmatters.org/), a leading UK food policy and advocacy organisation. Using a simple model of a couple of workshops and some thinking funded by the [Big Lottery fund](https://www.biglotteryfund.org.uk/), we’ve been helping them set the direction for introducing digital solutions into their [Rose Voucher](http://www.alexandrarose.org.uk/rose-vouchers) schemes.

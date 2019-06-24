@@ -20,6 +20,12 @@ published_by: 5
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Harry Harrold'
+author_slug: 'harry-harrold'
+author_image: '//www.gravatar.com/avatar/febf032ab16fef166824f5172cd87393?s=250&d=mm&r=x'
+author_cover: null
+author_facebook: null
+author_twitter: null
 ---
 
 <a data-flickr-embed="true"  href="https://www.flickr.com/photos/micheleidesmith/16597694589" title="Agile Apocrypha and the Adhoc Manifesto - Harry Harrold and Rupert Redington"><img src="https://c1.staticflickr.com/9/8657/16597694589_704d74923b_z.jpg" width="640" height="453" alt="Agile Apocrypha and the Adhoc Manifesto - Harry Harrold and Rupert Redington"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>

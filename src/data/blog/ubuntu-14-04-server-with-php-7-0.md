@@ -20,6 +20,12 @@ published_by: 2
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Andy Barnes'
+author_slug: 'andy'
+author_image: 'images/2019/03/Andy-Barnes.jpg'
+author_cover: 'images/2018/01/knight-in-armour-cropped.jpg'
+author_facebook: null
+author_twitter: null
 ---
 
 **Installation**
@@ -109,7 +115,7 @@ $ sudo service apache2 restart
 
 You can test by hitting _< your domain>/info.php_ and you should see the info.php page.
 
-![info.php](/content/images/2016/09/info_php-1.png)
+![info.php](images/2016/09/info_php-1.png)
 
 For added security the info.php file should be removed once testing is completed.
 

@@ -20,6 +20,12 @@ published_by: 2
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Andy Barnes'
+author_slug: 'andy'
+author_image: 'images/2019/03/Andy-Barnes.jpg'
+author_cover: 'images/2018/01/knight-in-armour-cropped.jpg'
+author_facebook: null
+author_twitter: null
 ---
 
 **Anniversary Update**
@@ -45,11 +51,11 @@ Check group policy settings in the Group Policy Editor.
 Start > type "group policy" > select "Edit Group Policy"
 ```
 
-![Group Policy](/content/images/2016/08/group-policy-editor1.png)
+![Group Policy](images/2016/08/group-policy-editor1.png)
 
 Navigate to "Local Configuration > Administrative Templates > System > Specify settings for optional component installation and component repair".
 
-![Specify settings for optional component installation and component repair](/content/images/2016/08/group-policy-editor-.png)
+![Specify settings for optional component installation and component repair](images/2016/08/group-policy-editor-.png)
 
 Ensure that "Enabled" is checked and that "Contact Windows Update directly to download repair content instead of Windows Server Update Services (WSUS)" is checked.
 
@@ -59,7 +65,7 @@ Open the command prompt as an administrator.
 Start > type "cmd" > right click and select "Run as administrator"
 ```
 
-![start > cmd > right click, run as administrator](/content/images/2016/08/cmd-run-as-admin.png)
+![start > cmd > right click, run as administrator](images/2016/08/cmd-run-as-admin.png)
 
 Begin a system scan with System File Checker (SFC).
 

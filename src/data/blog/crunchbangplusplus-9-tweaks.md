@@ -20,6 +20,12 @@ published_by: 2
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Andy Barnes'
+author_slug: 'andy'
+author_image: 'images/2019/03/Andy-Barnes.jpg'
+author_cover: 'images/2018/01/knight-in-armour-cropped.jpg'
+author_facebook: null
+author_twitter: null
 ---
 
 **Crunchbangplusplus 9**
@@ -60,7 +66,7 @@ $ sudo dpkg -i obapps_0.1.7_all.deb
 
 There is an incorrect menu entry for `Settings > Power Managment`, to fix the menu entry, select `Settings > Openbox > GUI Menu Editor` and change the `Settings > Power Management` entry from `mate-power-manager` to `xfce4-power-manager-settings`, once done you should select `File > Save` to ensure the change is persistent.
 
-![](/content/images/2018/10/xfce4-power-manager-settings-1.png)
+![](images/2018/10/xfce4-power-manager-settings-1.png)
 
 **Openbox Configuration Manager**
 
@@ -68,13 +74,13 @@ Using multiple monitors I prefer applications to start on the screen I launch th
 
 Go to `Settings > Openbox > Gui Config Tool` and on the `Windows` tab put a tick in the `Place new windows under the mouse pointer` checkbox. Also you can select your preference in the `Prefer to place new windows on` and `Primary monitor` dropdown.
 
-![](/content/images/2019/02/openbox-configuration-manager-1.png)
+![](images/2019/02/openbox-configuration-manager-1.png)
 
 **File Manager Previews**
 
 In the file manager Thunar, select from the menu `Edit > Preferences > Show thumbnails: Always` (it defaults to never) and click `close`.
 
-![](/content/images/2018/10/file-manager-preferences.png)
+![](images/2018/10/file-manager-preferences.png)
 
 That will fix image and pdf previews, if you would also like video and other media to use preview images you will also need to install an additional package:
 

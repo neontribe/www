@@ -20,6 +20,12 @@ published_by: 4
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Frank Reding'
+author_slug: 'frank-reding'
+author_image: 'images/2015/08/frank.jpg'
+author_cover: null
+author_facebook: null
+author_twitter: null
 ---
 
 It's a common scenario: You've built a new website locally to replace an older one, tested it fully (with your automated testing framework of choice), and now you're deploying it to a spanking new server it's going to live on. You're editing your local "hosts" file to tell your browser to resolve the domain name to the IP address of its new server, and you find that everything is well.

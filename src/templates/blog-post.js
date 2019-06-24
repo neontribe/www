@@ -27,9 +27,9 @@ const PublishedDate = ({ date }) => {
   })
 
   return (
-    <Heading level={2} size="small">
+    <span>
       Published <time dateTime={date}>{published}</time>
-    </Heading>
+    </span>
   )
 }
 
@@ -37,7 +37,7 @@ export default ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, htmlAst } = markdownRemark
 
-  const { title, published_at, updated_at } = frontmatter
+  const { title, published_at, updated_at, author_name } = frontmatter
 
   return (
     <Layout>
@@ -48,15 +48,27 @@ export default ({ data }) => {
         modifiedDate={new Date(updated_at)}
       />
       <ConstrainedWidth>
-        <VerticalSpacing size={6} />
-        <Heading level={1} size="xxlarge">
-          {title}
-        </Heading>
-        <VerticalSpacing size={2} />
-        <PublishedDate date={new Date(published_at)} />
-        <VerticalSpacing size={8} />
-        {renderAst(htmlAst)}
+        <article>
+          <VerticalSpacing size={10} />
+          <header className="header">
+            <Heading level={1} size="xlarge">
+              {title}
+            </Heading>
+            <VerticalSpacing size={5} />
+            <address>By {author_name}</address>
+            <PublishedDate date={new Date(published_at)} />
+          </header>
+          <VerticalSpacing size={10} />
+          {renderAst(htmlAst)}
+        </article>
       </ConstrainedWidth>
+      <style jsx>
+        {`
+          .header {
+            text-align: center;
+          }
+        `}
+      </style>
     </Layout>
   )
 }
@@ -69,6 +81,7 @@ export const query = graphql`
         title
         published_at
         updated_at
+        author_name
       }
     }
   }

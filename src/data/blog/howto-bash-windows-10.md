@@ -20,6 +20,12 @@ published_by: 2
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Andy Barnes'
+author_slug: 'andy'
+author_image: 'images/2019/03/Andy-Barnes.jpg'
+author_cover: 'images/2018/01/knight-in-armour-cropped.jpg'
+author_facebook: null
+author_twitter: null
 ---
 
 _Now the [Windows 10 Anniversary update](https://support.microsoft.com/en-us/help/12387/windows-10-update-history) is out, you won't need to go through the Insider Preview rigamarole to get the integrated Bash shell._
@@ -27,16 +33,16 @@ _Now the [Windows 10 Anniversary update](https://support.microsoft.com/en-us/hel
 The Insider Preview of Windows 10 (Build 14316 and later) has the beta of the new port of Bash shell from Ubuntu included, however it takes a bit of fiddling to get it going.
 
 First turn on Developer Mode via `Settings > Update & security > For developers`.
-![For Developers](/content/images/2016/04/for_developers.png)
+![For Developers](images/2016/04/for_developers.png)
 
 Next we want to check we are using the Insider Preview in `Settings > Update & Security > Advanced Options`.
-![Settings, Update & Security](/content/images/2016/04/settings-update-security.png)
+![Settings, Update & Security](images/2016/04/settings-update-security.png)
 
 You need to be running the Insider Preview "Fast" track to get build 14316 or later currently.
-![Advanced Options](/content/images/2016/04/settings-update-security-advanced_options.png)
+![Advanced Options](images/2016/04/settings-update-security-advanced_options.png)
 
 Then search for “Turn Windows Features on or off” and enable Windows Subsystem for Linux (Beta).
-![Turn Windows features on or off](/content/images/2016/06/windowsbash.png)
+![Turn Windows features on or off](images/2016/06/windowsbash.png)
 
 Now open `start > cmd` to open a command prompt and type `bash`. After a few moments it should have installed the bash shell.
 
@@ -52,7 +58,7 @@ Check which build of Windows you are running, the release build is 10586.
 
 `start > run > winver`
 
-![About Windows](/content/images/2016/04/about_windows.png)
+![About Windows](images/2016/04/about_windows.png)
 
 Check the registry entries for the Insider Preview:
 
@@ -65,7 +71,7 @@ Check that **BranchName** and **UserPreferredBranchName** strings are set to **r
 
 Also ensure that **EnablePreviewBuilds** and **ThresholdOptedin** DWORDs are set to **1**.
 
-![regedit](/content/images/2016/04/regedit.png)
+![regedit](images/2016/04/regedit.png)
 
 If the key
 

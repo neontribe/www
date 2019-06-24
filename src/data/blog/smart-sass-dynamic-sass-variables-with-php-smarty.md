@@ -20,6 +20,12 @@ published_by: 1
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Neontribe'
+author_slug: 'neontribe'
+author_image: 'images/2019/03/neonround.png'
+author_cover: null
+author_facebook: null
+author_twitter: null
 ---
 
 Sass is a language which makes use of server-side compilation in order to generate CSS. Variables are one of the core features of Sass and allow us to specify reusable style definitions. However, what if we want the values of these variables to be assigned dynamically? To add some context to the issue, lets imagine that we have a site but we would like for the client to define the background colour, font and text colour whilst also maintaining our nicely formatted Sass file. Well, here's how:

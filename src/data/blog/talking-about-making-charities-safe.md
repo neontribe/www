@@ -20,6 +20,12 @@ published_by: 21
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Neontribe'
+author_slug: 'neontribe'
+author_image: 'images/2019/03/neonround.png'
+author_cover: null
+author_facebook: null
+author_twitter: null
 ---
 
 On 17th April we're in Liverpool at the Gateway Conference Centre, being looked after by theFSI.

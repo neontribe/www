@@ -20,6 +20,12 @@ published_by: 23
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Matt Williams'
+author_slug: 'matt-williams'
+author_image: 'images/2017/08/Photo-16-03-2017--15-48-38.jpg'
+author_cover: null
+author_facebook: null
+author_twitter: null
 ---
 
 Untangled is about learning but not just for the young people. In the week of the event I learnt more mentoring the enthusiastic youth of Norwich than during any week of my university life.
@@ -32,7 +38,7 @@ By performing the trivial framework tasks such as implementing the network capab
 
 The difference between the [base game](https://github.com/Stansbridge/untangled-2017) and the [result of Untangled 2017](https://github.com/neontribe/untangled-2017) is astounding.
 
-![](/content/images/2017/08/contributions.png)
+![](images/2017/08/contributions.png)
 
 During the week the mentors were the young people’s guide, teaching them the basics of software development and then assisting them with any problems that arose. We would always guide them in a constructive direction, without solving the problem outright. This allowed the participants of the event to overcome obstacles themselves.
 
@@ -42,7 +48,7 @@ There weren’t many negatives with this year's Untangled, everyone made progres
 
 One of the most important skills in industry is the ability to work as part of a team, and this is especially relevant in software development. The current education system doesn’t emphasise this enough, with most schools teaching students how to create systems by themselves and rarely giving them the opportunity to work in larger teams. This makes events like Untangled even more important.
 
-![](/content/images/2017/08/oli.jpg)
+![](images/2017/08/oli.jpg)
 
 My final thoughts, as a mentor of Untangled 2017, are of satisfaction and relief. The week ran as smooth as any event such as this could, and with a successful result. Everyone learnt something, even the mentors, with teaching being the best way to learn.
 
@@ -50,7 +56,7 @@ I encourage anyone interested in this industry to get involved with Untangled or
 
 I hope to see you at the next Untangled and maybe you'll have as much fun as George did!
 
-![](/content/images/2017/08/GeorgeCard.png)
+![](images/2017/08/GeorgeCard.png)
 
 ####Get involved:
 

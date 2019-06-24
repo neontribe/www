@@ -20,6 +20,12 @@ published_by: 25
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Steve Lee'
+author_slug: 'steve-lee'
+author_image: 'images/2017/11/R-S.png'
+author_cover: null
+author_facebook: null
+author_twitter: null
 ---
 
 As part of Neontribe's ongoing technology evaluation for projects, Nick and myself recently performed a comparative review of React and Vue, looking at both technical and community aspects. This post provides a very brief overview of what we discovered.

@@ -20,6 +20,12 @@ published_by: 1
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Neontribe'
+author_slug: 'neontribe'
+author_image: 'images/2019/03/neonround.png'
+author_cover: null
+author_facebook: null
+author_twitter: null
 ---
 
 Very interesting session at Agile tea camp last night about Discovery, led by <a href="http://twitter.com/lily_dart">@lily_dart</a> from **DXW**. She talked about how they do it: open conversations, surveys and card sorting.

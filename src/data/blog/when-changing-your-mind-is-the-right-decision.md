@@ -20,6 +20,12 @@ published_by: 5
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Harry Harrold'
+author_slug: 'harry-harrold'
+author_image: '//www.gravatar.com/avatar/febf032ab16fef166824f5172cd87393?s=250&d=mm&r=x'
+author_cover: null
+author_facebook: null
+author_twitter: null
 ---
 
 In 2016 Neontribe did a [little discovery work](https://www.neontribe.co.uk/discovery-and-direction/ 'A blog post about Discovery') for the Alexandra Rose charity. Their core project is the Rose Voucher scheme, which helps parents with young children on low incomes to buy fresh fruit and vegetables from market stalls.
