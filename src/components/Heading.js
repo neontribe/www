@@ -6,7 +6,7 @@ const Heading = ({ level, children, size }) => {
   const HeadingTag = `h${level}`
 
   return (
-    <HeadingTag className={`heading`}>
+    <HeadingTag className="heading">
       {children}
       <style jsx>{`
         .heading {
@@ -23,7 +23,8 @@ const Heading = ({ level, children, size }) => {
 Heading.propTypes = {
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
   children: PropTypes.node,
-  size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge']).isRequired,
+  size: PropTypes.oneOf(['small', 'medium', 'large', 'xlarge', 'xxlarge'])
+    .isRequired,
 }
 
 export default Heading
