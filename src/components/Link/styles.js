@@ -5,13 +5,26 @@ import { COLOUR_CALL_TO_ACTION } from '../../theme'
 
 export const { className, styles } = css.resolve`
   a {
-    text-decoration: none;
     vertical-align: middle;
+    color: inherit;
   }
 
   a.button {
     display: inline-block;
-    padding: 10px;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
     background-color: ${COLOUR_CALL_TO_ACTION};
+    display: inline-flex;
+  }
+
+  a.button::after {
+    content: '➝';
+    margin-left: 1rem;
+    transition: transform 0.1s ease-in-out;
+  }
+
+  a.button:hover::after {
+    transform: translateX(5px);
   }
 `

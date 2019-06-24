@@ -1,26 +1,40 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link as GatsbyLink } from 'gatsby'
+import css from 'styled-jsx/css'
 
 import { breakpoint, GUTTER_PX } from '../theme'
 import Logo from './Logo'
 import Link from './Link'
 import ConstrainedWidth from './Layout/ConstrainedWidth'
 
+const { className, styles } = css.resolve`
+  a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+`
+
 const Nav = () => (
   <nav className="nav">
     <ul className="list">
       <li>
-        <Link to="/">fooooooooooo</Link>
+        <Link className={className} to="/">
+          fooooooooooo
+        </Link>
       </li>
       <li>
-        <Link to="/">foo</Link>
+        <Link className={className} to="/">
+          foo
+        </Link>
       </li>
       <li>
-        <Link to="/">foo</Link>
+        <Link className={className} to="/">
+          foo
+        </Link>
       </li>
     </ul>
-
+    {styles}
     <style jsx>{`
       .list {
         margin: 0;
@@ -71,7 +85,7 @@ const Header = ({ siteTitle }) => (
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding: ${GUTTER_PX}px;
+        padding: 2rem 0;
       }
 
       .header > * {
