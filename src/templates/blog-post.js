@@ -13,8 +13,9 @@ import PageMeta from '../components/PageMeta'
 const renderAst = new rehypeReact({
   createElement: React.createElement,
   components: {
-    h1: Heading,
-    h2: Heading,
+    h1: props => <Heading {...props} level={1} size="large" />,
+    h2: props => <Heading {...props} level={2} size="medium" />,
+    h3: props => <Heading {...props} level={3} size="small" />,
     p: Paragraph,
     a: ExternalLink,
   },

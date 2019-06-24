@@ -19,7 +19,7 @@ const Heading = ({ level, children }) => {
 }
 
 Heading.propTypes = {
-  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]),
+  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
   children: PropTypes.node,
 }
 
