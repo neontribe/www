@@ -30,7 +30,6 @@ const Text = ({
     {children}
     <style jsx>{`
       span {
-        display: inline-block;
         color: ${alternate ? COLOUR_SECONDARY_TEXT : COLOUR_PRIMARY_TEXT};
         padding: 2px 1rem;
         line-height: 1.5;
