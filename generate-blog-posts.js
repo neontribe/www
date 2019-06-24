@@ -23,6 +23,7 @@ const createFrontmatter = post => {
 
 posts
   .filter(post => !post.page)
+  .filter(post => post.status === 'published')
   .forEach(post => {
     const data = `${createFrontmatter(post)}\n${post.markdown}`
 
