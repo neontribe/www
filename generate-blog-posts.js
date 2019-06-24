@@ -6,13 +6,13 @@ const { posts } = data.db[0].data
 // Converts "null" to null, "false" to false etc. Everything is returned as a string wrapped in "s
 const convertType = value => {
   try {
-    return new Function('return ' + value + ';')()
+    return JSON.parse(value)
   } catch (e) {
     return JSON.stringify(value)
   }
 }
 
-// Creats frontmatter for all keys except 'markdown' and 'html'
+// Creates frontmatter for all keys except 'markdown' and 'html'
 const createFrontmatter = post => {
   const keysFilter = ([key]) => key !== 'markdown' && key !== 'html'
   const entries = Object.entries(post).filter(keysFilter)
