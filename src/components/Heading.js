@@ -5,7 +5,7 @@ const Heading = ({ level, children }) => {
   const HeadingTag = `h${level}`
 
   return (
-    <HeadingTag className={`heading`}>
+    <HeadingTag className="heading">
       {children}
       <style jsx>{`
         .heading {

@@ -49,7 +49,7 @@ export default ({ data }) => {
       />
       <ConstrainedWidth>
         <VerticalSpacing size={6} />
-        <Heading level={1} size="xlarge">
+        <Heading level={1} size="xxlarge">
           {title}
         </Heading>
         <VerticalSpacing size={2} />
