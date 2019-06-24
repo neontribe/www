@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link as GatsbyLink } from 'gatsby'
+import classNames from 'classnames'
 
 import Text from '../Text'
-import { className, styles } from './styles'
+import { className as resolveClassName, styles } from './styles'
 import Arrow from './Arrow'
 
 const InternalLink = ({
@@ -14,16 +15,14 @@ const InternalLink = ({
   // the background colour will be driven by anchor
   transparent = button,
   children,
+  className,
   ...linkProps
 }) => (
   <GatsbyLink
     {...linkProps}
-    className={`${className} ${button ? 'button' : ''}`}
+    className={classNames(resolveClassName, className, button && 'button')}
   >
-    <Text heavy type={type} alternate={alternate} transparent={transparent}>
-      {children}
-      {button && <Arrow />}
-    </Text>
+    {children}
     {styles}
   </GatsbyLink>
 )

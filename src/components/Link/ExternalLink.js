@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
 import Text from '../Text'
-import { className, styles } from './styles'
+import { className as resolveClassName, styles } from './styles'
 import Arrow from './Arrow'
 
 const ExternalLink = ({
@@ -11,13 +12,14 @@ const ExternalLink = ({
   alternate,
   transparent = button,
   children,
+  className,
   ...linkProps
 }) => (
-  <a {...linkProps} className={`${className} ${button ? 'button' : ''}`}>
-    <Text heavy type={type} alternate={alternate} transparent={transparent}>
-      {children}
-      {button && <Arrow />}
-    </Text>
+  <a
+    {...linkProps}
+    className={classNames(resolveClassName, className, button && 'button')}
+  >
+    {children}
     {styles}
   </a>
 )
