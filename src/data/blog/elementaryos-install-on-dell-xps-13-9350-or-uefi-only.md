@@ -20,6 +20,12 @@ published_by: 2
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Andy Barnes'
+author_slug: 'andy'
+author_image: 'images/2019/03/Andy-Barnes.jpg'
+author_cover: 'images/2018/01/knight-in-armour-cropped.jpg'
+author_facebook: null
+author_twitter: null
 ---
 
 _Update: These steps should no longer be necessary if you are using the latest release of ElementaryOS which seems to have fixed the UEFI issues._

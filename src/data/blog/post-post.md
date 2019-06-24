@@ -20,6 +20,12 @@ published_by: 5
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Harry Harrold'
+author_slug: 'harry-harrold'
+author_image: '//www.gravatar.com/avatar/febf032ab16fef166824f5172cd87393?s=250&d=mm&r=x'
+author_cover: null
+author_facebook: null
+author_twitter: null
 ---
 
 Broadly speaking, Neontribe works with big organisations in the travel industry - alongside the [Lola Tech](https://www.lola.tech/) Team - and delivers much smaller projects for social good. What's interesting us at the moment is the lessons we can take between these two sorts of folk.

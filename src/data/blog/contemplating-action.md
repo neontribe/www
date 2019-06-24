@@ -20,6 +20,12 @@ published_by: 21
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Neontribe'
+author_slug: 'neontribe'
+author_image: 'images/2019/03/neonround.png'
+author_cover: null
+author_facebook: null
+author_twitter: null
 ---
 
 **Contemplating Action is a digital project based on a simple idea**
@@ -45,7 +51,7 @@ People’s journeys fall broadly into the pattern:
 **Pre-contemplation ➞ Contemplation ➞ Preparation ➞ Action ➞ Maintenance**
 
 <img title="The theory of change for different situations" alt="The images uses overlapping circles and arrows to show theory of change as a cycle for 3 different situations, and then a larger version in the middle which represents the similarities. The words are: Domestic Abuse: Unaware; aware; Leaving; Recovering. Exercise: Not ready; Getting ready; Ready; Action; Continuing. Alcohol & Drugs: No, Not me; Well maybe; What do I do now; Lets do this; It is possible. Overall: Pre-contemplation; Contemplation; Preparation; Action; Maintenance.
-The last cycle has a phone and chat symbol at the centre" src="/content/images/2019/02/stages-of-change.png"/>
+The last cycle has a phone and chat symbol at the centre" src="images/2019/02/stages-of-change.png"/>
 
 **The solution we are testing**
 
@@ -53,7 +59,7 @@ We want to help people step out of contemplation and seek advice and support as 
 
 We are testing one particular digital intervention to see if it can be effective in helping people with different problems turn to organisations that can support them.
 
-<img title="A Flow Chart" alt="The chart has 4 boxes from left to right. 1) Individual is in their own thoughts, but engaged with a social media channel as a “downtime” activity. Fears and barriers are holding them back from actively seeking help. 2) An intervention in that channel takes them to a small app. 3) That app tackles those fears by a combination of short stories with illustrations demonstrating positive outcomes and short information passages in plain english. 4) The individual leaves that app by one of the routes it offers to real time support (a helpline or chatline). From the third box on the flow chart, a triangular loop can be followed visiting 2 additional steps. 3b) The individual has read enough for now, and closes the app to get on with other things. 3c) An incident occurs which reminds the individual of the pressure of their situation so they decide to look at the app again." src="/content/images/2019/03/Pathway.png"/>
+<img title="A Flow Chart" alt="The chart has 4 boxes from left to right. 1) Individual is in their own thoughts, but engaged with a social media channel as a “downtime” activity. Fears and barriers are holding them back from actively seeking help. 2) An intervention in that channel takes them to a small app. 3) That app tackles those fears by a combination of short stories with illustrations demonstrating positive outcomes and short information passages in plain english. 4) The individual leaves that app by one of the routes it offers to real time support (a helpline or chatline). From the third box on the flow chart, a triangular loop can be followed visiting 2 additional steps. 3b) The individual has read enough for now, and closes the app to get on with other things. 3c) An incident occurs which reminds the individual of the pressure of their situation so they decide to look at the app again." src="images/2019/03/Pathway.png"/>
 
 **The story behind our starting point:**
 

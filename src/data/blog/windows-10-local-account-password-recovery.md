@@ -20,17 +20,23 @@ published_by: 2
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Andy Barnes'
+author_slug: 'andy'
+author_image: 'images/2019/03/Andy-Barnes.jpg'
+author_cover: 'images/2018/01/knight-in-armour-cropped.jpg'
+author_facebook: null
+author_twitter: null
 ---
 
 We are going to look at a solution to reset the password on a local Windows account, this will not work for Microsoft account (use the [Microsoft password reset form](https://account.live.com/password/reset)) or an Active Directory account (contact your network administrator).
 
-![](/content/images/2017/09/password-incorrect.png)
+![](images/2017/09/password-incorrect.png)
 
 Enter your PC BIOS and set the computer to boot from CDROM (or usb key) and insert a [bootable Windows Installation Media](http://windowsiso.net/windows-10-iso/windows-10-creators-update-1703-download-build-15063/).
 
 At the Windows Setup screen press **Shift+F10** to bring up a command prompt.
 
-![](/content/images/2017/09/cmd-1.png)
+![](images/2017/09/cmd-1.png)
 
 We are going to replace the **Ease of access utility** from the login screen with the **cmd.exe** command prompt and then reboot the machine.
 
@@ -44,11 +50,11 @@ x:\>copy d:\windows\system32\cmd.exe d:\windows\system32\utilman.exe
 x:\> wpeutil reboot
 ```
 
-![](/content/images/2017/09/move-and-replace.png)
+![](images/2017/09/move-and-replace.png)
 
 Once Windows has rebooted and you are at the login screen click the **Ease of access** button (highlighted below), which should bring up a command prompt.
 
-![](/content/images/2017/09/ease-of-access.png)
+![](images/2017/09/ease-of-access.png)
 
 We will use this administrative prompt to create a new "neonrecovery" user and give them administrative permissions, followed by another reboot.
 
@@ -62,17 +68,17 @@ The command completed successfully.
 C:\Windows\System32>
 ```
 
-![](/content/images/2017/09/add-admin-user-1.png)
+![](images/2017/09/add-admin-user-1.png)
 
 Next reboot the computer by clicking the Power button in the bottom right of the login screen, and selecting restart. Once you click through to the login screen you should now see the new user account that we created in the previous steps.
 
-![](/content/images/2017/09/neonrecovery.png)
+![](images/2017/09/neonrecovery.png)
 
 Select the recovery account, it should let you straight in with no password. As we have given the account administrative permissions you should be able to follow the standard method of resetting the passwords.
 
 **Start > Control Panel > User Accounts > User Accounts > Manage another account > select the account > Change Password**
 
-![](/content/images/2017/09/change-password.png)
+![](images/2017/09/change-password.png)
 
 If you wish to keep the recovery account then you should set a password for it.
 

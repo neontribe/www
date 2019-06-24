@@ -20,15 +20,21 @@ published_by: 2
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Andy Barnes'
+author_slug: 'andy'
+author_image: 'images/2019/03/Andy-Barnes.jpg'
+author_cover: 'images/2018/01/knight-in-armour-cropped.jpg'
+author_facebook: null
+author_twitter: null
 ---
 
 I have just retired an old iMac from our browser testing lab due to age, the model is an iMac 5,2 with 2GB memory and Core 2 Duo 1.83 Ghz processor.
 
 It runs 10.6.8 (Snow Leopard) quite well, but 10.7.4 (Lion) runs like a dog. Neither Snow Leopard nor Lion are getting updates any time soon and I wanted to make it useful again so I am re-purposing it with a Linux install.
 
-![about this mac](/content/images/2016/04/about-this-mac.png)
+![about this mac](images/2016/04/about-this-mac.png)
 
-![more info](/content/images/2016/04/more-info-2.png)
+![more info](images/2016/04/more-info-2.png)
 
 I like to use [Crunchbangplusplus](https://crunchbangplusplus.org/) (#!++) as it's a nice low weight Debian based distribution and runs well in low footprint virtual machines.
 
@@ -78,7 +84,7 @@ Eject the usb stick as it is now ready and place it in one of the USB ports on t
 
 Power on the iMac and at the chime press and hold option/alt key (depending if you have apple/normal keyboard attached) and you will arrive at the EFI boot manager.
 
-![EFI boot manager](/content/images/2016/07/boot-manager.png)
+![EFI boot manager](images/2016/07/boot-manager.png)
 
 Select the EFI USB stick you have just prepared to boot from, even though it was a #!++ image dd'd onto a USB stick it still showed up in the apple boot manager as "windows".
 

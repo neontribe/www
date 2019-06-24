@@ -20,6 +20,12 @@ published_by: 5
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Harry Harrold'
+author_slug: 'harry-harrold'
+author_image: '//www.gravatar.com/avatar/febf032ab16fef166824f5172cd87393?s=250&d=mm&r=x'
+author_cover: null
+author_facebook: null
+author_twitter: null
 ---
 
 (Specifically, those of you on the [BSc user experience design](http://www.nua.ac.uk/bsc-user-experience-design/) or [interaction design](http://www.nua.ac.uk/bsc-interaction-design/) courses at [Norwich University of the Arts](http://www.nua.ac.uk/) to be honest. It's a comparatively tightly focused rant, is this.)

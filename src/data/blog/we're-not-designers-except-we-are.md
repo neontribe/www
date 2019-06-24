@@ -20,6 +20,12 @@ published_by: 1
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Harry Harrold'
+author_slug: 'harry-harrold'
+author_image: '//www.gravatar.com/avatar/febf032ab16fef166824f5172cd87393?s=250&d=mm&r=x'
+author_cover: null
+author_facebook: null
+author_twitter: null
 ---
 
 At Neontribe, we often say we aren’t web designers. In a way we’re right, because we don’t lead projects with visual design. But that doesn’t credit the importance of design in what we do. We view design as a problem-solving exercise, and function rather than form is our problem domain. Our problems are not “Make this static collection of text and images into a beautiful page!”, but “Make this interaction delightful.” Our work doesn’t end up static. Even the simplest web site is an interaction. What we aim to do is focus on the process that the web property is implementing, whether that is a booking path, or a form designed to help structure someone’s thoughts. Or, even, presenting a set of text and images as a web site.

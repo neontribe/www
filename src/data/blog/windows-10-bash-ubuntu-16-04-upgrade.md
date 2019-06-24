@@ -20,6 +20,12 @@ published_by: 2
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Andy Barnes'
+author_slug: 'andy'
+author_image: 'images/2019/03/Andy-Barnes.jpg'
+author_cover: 'images/2018/01/knight-in-armour-cropped.jpg'
+author_facebook: null
+author_twitter: null
 ---
 
 Windows 10 Creators Update brings with it a new version of the Windows Subsystem for Linux, including upgrading the Ubuntu distribution from 14.04 (Trusty) to 16.04 (Xenial).

@@ -20,6 +20,12 @@ published_by: 2
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Andy Barnes'
+author_slug: 'andy'
+author_image: 'images/2019/03/Andy-Barnes.jpg'
+author_cover: 'images/2018/01/knight-in-armour-cropped.jpg'
+author_facebook: null
+author_twitter: null
 ---
 
 I discovered recently that VirtualBox is no longer in the Debian official repositories, which prevents us from installing the Guest Additions from the package manager (apt).
@@ -36,7 +42,7 @@ $ sudo m-a prepare
 
 From the Virtualbox menu select "Devices > Insert Guest Additions CD image.." and after a few moments a dialog should appear prompting you to install the additions.
 
-![](/content/images/2017/10/guest-additions.png)
+![](images/2017/10/guest-additions.png)
 Select "Run" and let the installation proceed. If you have autorun disabled or the dialog does not appear you can manually start it:
 
 ```

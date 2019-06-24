@@ -20,6 +20,12 @@ published_by: 25
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Steve Lee'
+author_slug: 'steve-lee'
+author_image: 'images/2017/11/R-S.png'
+author_cover: null
+author_facebook: null
+author_twitter: null
 ---
 
 My 1st task at Neontribe was to set up my Windows development environment for Lavarel PHP-powered service that exposes a website and an API.

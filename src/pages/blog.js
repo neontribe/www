@@ -49,9 +49,6 @@ const BlogPage = ({
         ul li {
           margin: 8rem 0;
         }
-        ul li:hover {
-          background-color: rgba(255, 255, 255, 0.1);
-        }
       `}</style>
     </Layout>
   )

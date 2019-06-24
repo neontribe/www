@@ -3,7 +3,7 @@ id: 61
 uuid: 'f4890ea5-1990-46d0-9eef-7a5757d3ebad'
 title: 'THE KIDS ARE ALRIGHT'
 slug: 'coding-with-kids'
-image: '/content/images/2017/06/coding-club.jpg'
+image: 'images/2017/06/coding-club.jpg'
 featured: 0
 page: 0
 status: 'published'
@@ -20,6 +20,12 @@ published_by: 2
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Karl Jermy'
+author_slug: 'karl-jermy'
+author_image: 'images/2015/09/11800432_792097217555790_8546682678974278036_n.jpg'
+author_cover: 'images/2015/09/11822447_861790383898118_996632513419583158_n.jpg'
+author_facebook: null
+author_twitter: null
 ---
 
 Earlier in the year we offered to help out at a primary school in Bacton, Norfolk, who were already running a python based coding club of their own.
@@ -40,6 +46,6 @@ Here's what they said....
 
 > "....'Neil, Karl and George from Neontribe have been fantastic! Their skills, knowledge and enthusiasm have been infectious! As a school we encourage our children to learn how to use computers safely but in modern life it is more and more important to be able, not only to use technology, but to build it and the children at coding club are well on their way to being coders of the future. The children's typing speed have increased and their knowledge of the language of code has been very impressive. We are already looking forward to another successful coding club next year"....
 
-![Bacton Primary School Pupils](/content/images/2017/06/coding-club-1.jpg)
+![Bacton Primary School Pupils](images/2017/06/coding-club-1.jpg)
 
 We'll go again, we think they're alright........

@@ -20,6 +20,12 @@ published_by: 5
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Matt Williams'
+author_slug: 'matt-williams'
+author_image: 'images/2017/08/Photo-16-03-2017--15-48-38.jpg'
+author_cover: null
+author_facebook: null
+author_twitter: null
 ---
 
 Neontribe has run a summer code camp every year for near a decade. Last year, we made it our own thing under the banner Untangled 2016. Local tech events for young people can be difficult to find, so doing it again was an easy call.
@@ -30,7 +36,7 @@ The young people were mentored by Neontribe staff and local game developers, tea
 
 Using [Raspberry Pi’s](https://thepihut.com/products/raspberry-pi-3-retro-gaming-bundle) and the [Python](https://www.learnpython.org/) programming language they started their journey into software development…
 
-![](/content/images/2017/08/map_test-1.jpg)
+![](images/2017/08/map_test-1.jpg)
 
 Day 1 of the event consisted of orientation and planning:
 
@@ -49,7 +55,7 @@ The following days were spent developing the functionality:
 
 Development was successful enough that advanced functionality was eventually added to the engine; a minimap, displaying player locations, and a HUD which displayed information about the player, both by Harry [(@spannner)](https://github.com/spannner).
 
-![](/content/images/2017/08/everyone-1.jpg)
+![](images/2017/08/everyone-1.jpg)
 
 Neontribe kept to the industry standard for fixing bugs, 1 bug fix equals 1 Kit-Kat! Favourite bugs reports?
 
@@ -65,6 +71,6 @@ Neontribe believes learning never stops, so everyone was given their Raspberry P
 
 The code for the game can be found at [Untangled-2017.](https://github.com/neontribe/untangled-2017)
 
-![](/content/images/2017/08/bridge-1.jpg)
+![](images/2017/08/bridge-1.jpg)
 
 **Many thanks to Paul and Luke from [SoftApps](http://softapps.co.uk) for mentoring and helping with the event!**

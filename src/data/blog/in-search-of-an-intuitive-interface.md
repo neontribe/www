@@ -20,12 +20,18 @@ published_by: 21
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Kat Quatermass'
+author_slug: 'katq'
+author_image: 'images/2017/01/webheadshot.jpg'
+author_cover: null
+author_facebook: null
+author_twitter: null
 ---
 
 Neontribe are big fans of open data, and last summer we got involved with a fascinating project using never-before-published data from the charitable sector. Our work made us revisit one of our fundamental assumptions about the goal of a user interface.
 
 The opportunity came about thanks to a recommendation from a colleague at [Open Data Services](http://www.opendataservices.coop/), Steven Flower. Steven and his team, well-known for their work on the [OpenContracting Helpdesk](http://www.open-contracting.org/) and the [International Aid Transparency Initiative](http://www.aidtransparency.net/), were working with [360Giving](http://www.threesixtygiving.org/), a new initiative that supports organisations to publish their grants data and helps people to understand and use that data to improve decision making. 360Giving had already created a data standard and a data quality checking tool (CoVE) and engaged with some of the UK’s biggest and most influential donors including the Big Lottery Fund, BBC Children in Need and Comic Relief. Their next piece of development was to be [GrantNav:](http://grantnav.threesixtygiving.org/) an open access tool that allows anyone to explore the data published to the 360Giving Standard. When 360Giving approached us, the GrantNav project was ready for some user research.
-![](/content/images/2017/01/GrantNav.jpg)
+![](images/2017/01/GrantNav.jpg)
 
 The techniques we used would be familiar to anyone working in the field; starting with the creation of persona based on phone calls to some of the data publishers. These were then validated at a workshop which also explored story maps of journeys using the tool and the parallel journeys being taken in different types of charity offices across the sector. Once a beta of GrantNav was available, we also ran usability testing at various charity offices. These tests were flexible, carried out with both new and returning GrantNav users, and had as much value as a means of engaging with data publishers and discussing their overall interest in opening up their data as they did in exploring users' responses to the tool.
 

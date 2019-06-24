@@ -20,6 +20,12 @@ published_by: 17
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'George Deeks'
+author_slug: 'george-deeks'
+author_image: 'images/2017/07/profpic.jpg'
+author_cover: null
+author_facebook: null
+author_twitter: null
 ---
 
 Here at Neontribe, we always want to help young people enter the world of web development. Amongst other things, we have been running a Computer club at Bacton Primary school (see <a href="/coding-with-kids/">our blog on this</a>). And from this, we have created a series of programming tasks that will result in a complete version of the popular game, 'Snake'.

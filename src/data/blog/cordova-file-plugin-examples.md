@@ -20,6 +20,12 @@ published_by: 4
 visibility: 'public'
 mobiledoc: null
 amp: null
+author_name: 'Frank Reding'
+author_slug: 'frank-reding'
+author_image: 'images/2015/08/frank.jpg'
+author_cover: null
+author_facebook: null
+author_twitter: null
 ---
 
 I found myself in need of writing potentially large amounts of data to the file system in a Cordova app I'm working on. Naturally, I reached for the [Cordova File Plugin](https://github.com/apache/cordova-plugin-file), as a handful of cursory Google searches revealed it to be the _de facto_ plugin for this task. However: its documentation, while talking about the plugin's quirks, is lacking in examples, the main [blog post it points to for usage](http://www.html5rocks.com/en/tutorials/file/filesystem/) is old, and not all of it is relevant to the plugin. In this post, I aim to detail what I have learned, to make it easier for other people to get started with this useful plugin.
