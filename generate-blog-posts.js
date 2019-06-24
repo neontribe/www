@@ -10,7 +10,9 @@ const convertType = value => {
   try {
     return JSON.parse(value)
   } catch (e) {
-    return JSON.stringify(value.replace('/content/', ''))
+    return JSON.stringify(
+      value.replace('(/content/', '(').replace('"/content/', '"')
+    )
   }
 }
 
