@@ -109,9 +109,9 @@ export const HexExamples = () => (
 )
 
 export const HexagonGridExamples = () => (
-  <div>
+  <ConstrainedWidth>
     <Heading level={2} size="medium">
-      <Text>Hexagon Grid</Text>
+      <Text heavy>Hexagon Grid</Text>
     </Heading>
     <HexagonGrid rows={2}>
       <Hexagon bgColour={c_NEONS[0]} />
@@ -119,7 +119,7 @@ export const HexagonGridExamples = () => (
       <Hexagon bgColour={c_NEONS[2]} />
       <Hexagon bgColour={c_NEONS[3]} />
     </HexagonGrid>
-  </div>
+  </ConstrainedWidth>
 )
 
 export const LinkExamples = () => (
