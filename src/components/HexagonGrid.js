@@ -2,8 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Malarquee from 'react-malarquee'
 
-import Hexagon from './Hexagon'
-
+const makeArrayOfLength = len => Array.apply(null, Array(len))
 const HexagonGrid = ({ hexgonWidth, rows, animate, ...props }) => {
   const children = React.Children.toArray(props.children)
   const childCount = children.length
@@ -11,9 +10,9 @@ const HexagonGrid = ({ hexgonWidth, rows, animate, ...props }) => {
   return (
     <React.Fragment>
       <Malarquee fill hoverToPause rate={animate ? 50 : undefined}>
-        {new Array(rows).fill(null).map((row, rowIndex) => (
+        {makeArrayOfLength(rows).map((row, rowIndex) => (
           <div key={rowIndex} className="row">
-            {new Array(childCount).fill(null).map((item, columnIndex) => {
+            {makeArrayOfLength(childCount).map((item, columnIndex) => {
               const isAlternateRow = rowIndex % 2 !== 0
 
               let childIndex = columnIndex % childCount
