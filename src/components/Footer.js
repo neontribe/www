@@ -17,8 +17,10 @@ const mapListItems = children =>
 
 const HousekeepingList = ({ children, title }) => (
   <div>
-    <Heading level={3} size="small">
-      {title}
+    <Heading level={3}>
+      <Text transparent size="normal">
+        {title}
+      </Text>
     </Heading>
     {children && <ul className="heading-list">{mapListItems(children)}</ul>}
 

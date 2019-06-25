@@ -40,8 +40,10 @@ export default () => (
     `}
     render={data => (
       <ConstrainedWidth>
-        <Heading level={2} size="medium">
-          <Text heavy>TribeMember</Text>
+        <Heading level={2}>
+          <Text size="medium" heavy>
+            TribeMember
+          </Text>
         </Heading>
         <div className="person-example">
           <div className="person-wrapper">

@@ -30,9 +30,11 @@ const WorkDescription = ({ alternate, level, title, fluid, problem }) => {
       <ConstrainedWidth>
         <Content alternate={alternate}>
           <Content.Title>
-            <Heading level={level} size="medium">
+            <Heading level={level}>
               <VerticalSpacing size={2} />
-              <T heavy>{title}</T>
+              <T size="medium" heavy>
+                {title}
+              </T>
             </Heading>
           </Content.Title>
           <Content.Image>

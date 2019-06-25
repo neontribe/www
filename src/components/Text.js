@@ -16,8 +16,8 @@ const Text = ({
   transparent,
   children,
   heavy,
-  size,
-  gutter,
+  size = 'normal',
+  gutter = 1,
 }) => (
   <span
     className={[
@@ -72,10 +72,6 @@ Text.propTypes = {
   heavy: PropTypes.bool,
   size: PropTypes.oneOf(Object.keys(fontSizes)),
   gutter: PropTypes.number,
-}
-
-Text.defaultProps = {
-  gutter: 1,
 }
 
 export default Text

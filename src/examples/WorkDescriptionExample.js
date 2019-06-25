@@ -15,8 +15,8 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
 const WorkDescriptionExample = ({ fluid }) => (
   <div className="work-description">
     <ConstrainedWidth>
-      <Heading level={2} size="medium">
-        <Text>WorkDescription</Text>
+      <Heading level={2}>
+        <Text size="medium">WorkDescription</Text>
       </Heading>
     </ConstrainedWidth>
 

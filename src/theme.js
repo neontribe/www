@@ -1,7 +1,7 @@
 // SIZE contstants
 const PAGE_WIDTH_PX = 1020
 
-export const REM_PX = 16
+export const REM_PX = 18
 export const GUTTER_PX = 10
 export const PAGE_WIDTH_REM = `${PAGE_WIDTH_PX / REM_PX}rem`
 
@@ -86,10 +86,8 @@ export const c_LOGO_BACKGROUND = c_WHITE
 // Typography
 export const FONT_STACK = '"Renner*", sans-serif'
 export const fontSizes = {
-  xsmall: '.75rem',
-  normal: '1rem', // TODO normal is smaller than small?
-  small: '1.25rem',
-  medium: '1.5rem',
-  large: '2rem',
+  normal: '1rem',
+  medium: '2rem',
+  large: '3rem',
   xlarge: '4rem',
 }
