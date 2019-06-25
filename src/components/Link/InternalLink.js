@@ -20,7 +20,13 @@ const InternalLink = ({
     {...linkProps}
     className={`${className} ${button ? 'button' : ''}`}
   >
-    <Text heavy type={type} alternate={alternate} transparent={transparent}>
+    <Text
+      heavy
+      size="medium"
+      type={type}
+      alternate={alternate}
+      transparent={transparent}
+    >
       {children}
       {button && <Arrow />}
     </Text>

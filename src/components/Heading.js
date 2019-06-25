@@ -13,6 +13,7 @@ const Heading = ({ level, children, size }) => {
           padding: 0;
           margin: 0;
           font-size: ${fontSizes[size]};
+          font-weight: normal;
         }
       `}</style>
     </HeadingTag>
@@ -22,7 +23,8 @@ const Heading = ({ level, children, size }) => {
 Heading.propTypes = {
   level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
   children: PropTypes.node,
-  size: PropTypes.oneOf(['small', 'medium', 'large']).isRequired,
+  // TODO make a single source of truth for the font size, should be the Text component
+  size: PropTypes.oneOf(Object.keys(fontSizes)).isRequired,
 }
 
 export default Heading

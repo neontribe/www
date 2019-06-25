@@ -2,11 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {
   fontSizes,
-  COLOUR_PRIMARY_TEXT,
-  COLOUR_PRIMARY_BACKGROUND,
-  COLOUR_PRIMARY_BACKGROUND_ALTERNATIVE,
-  COLOUR_SECONDARY_TEXT,
-  COLOUR_SECONDARY_BACKGROUND,
+  c_PRIMARY_TEXT,
+  c_PRIMARY_BACKGROUND,
+  c_PRIMARY_BACKGROUND_ALTERNATIVE,
+  c_SECONDARY_TEXT,
+  c_SECONDARY_BACKGROUND,
+  GUTTER_PX,
 } from '../theme'
 
 const Text = ({
@@ -16,6 +17,7 @@ const Text = ({
   children,
   heavy,
   size,
+  gutter,
 }) => (
   <span
     className={[
@@ -31,33 +33,32 @@ const Text = ({
     <style jsx>{`
       span {
         display: inline-block;
-        color: ${alternate ? COLOUR_SECONDARY_TEXT : COLOUR_PRIMARY_TEXT};
-        padding: 2px 1rem;
+        color: ${alternate ? c_SECONDARY_TEXT : c_PRIMARY_TEXT};
+        padding: 2px ${GUTTER_PX * gutter}px;
         line-height: 1.5;
         font-size: ${fontSizes[size] || 'inherit'};
       }
 
       .heavy {
         font-weight: bold;
-        font-size: 1.25rem;
       }
 
       /* text color */
       .primary {
-        color: ${COLOUR_PRIMARY_TEXT};
+        color: ${c_PRIMARY_TEXT};
       }
       .secondary {
-        color: ${COLOUR_SECONDARY_TEXT};
+        color: ${c_SECONDARY_TEXT};
       }
       /* transparency */
       .primary:not(.transparent) {
-        background-color: ${COLOUR_PRIMARY_BACKGROUND};
+        background-color: ${c_PRIMARY_BACKGROUND};
       }
       .alternate:not(.transparent) {
-        background-color: ${COLOUR_PRIMARY_BACKGROUND_ALTERNATIVE};
+        background-color: ${c_PRIMARY_BACKGROUND_ALTERNATIVE};
       }
       .secondary:not(.transparent) {
-        background-color: ${COLOUR_SECONDARY_BACKGROUND};
+        background-color: ${c_SECONDARY_BACKGROUND};
       }
     `}</style>
   </span>
@@ -69,6 +70,12 @@ Text.propTypes = {
   transparent: PropTypes.bool,
   children: PropTypes.node,
   heavy: PropTypes.bool,
+  size: PropTypes.oneOf(Object.keys(fontSizes)),
+  gutter: PropTypes.number,
+}
+
+Text.defaultProps = {
+  gutter: 1,
 }
 
 export default Text

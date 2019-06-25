@@ -1,25 +1,30 @@
 import React from 'react'
 
 import Hexagon from '../components/Hexagon'
+import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import Text from '../components/Text'
 import logo from '../components/Logo/logo.svg'
 import Heading from '../components/Heading'
 import {
-  COLOUR_NEONS,
-  COLOUR_PRIMARY_BACKGROUND,
-  COLOUR_PRIMARY_BACKGROUND_ALTERNATIVE,
-  COLOUR_SECONDARY_BACKGROUND,
+  c_NEONS,
+  c_PRIMARY_BACKGROUND,
+  c_PRIMARY_BACKGROUND_ALTERNATIVE,
+  c_SECONDARY_BACKGROUND,
 } from '../theme'
 import Link, { ExternalLink } from '../components/Link'
 import Carousel from '../components/Carousel'
 import VerticalSpacing from '../components/VerticalSpacing'
+import Squiggle from '../components/Squiggle'
 
 import steve from '../images/tribe-steve.jpg'
 import harry from '../images/tribe-harry.jpg'
 import kat from '../images/tribe-kat.jpg'
 
+export { default as TribeMemberExample } from './TribeMemberExample'
+export { default as WorkDescriptionExample } from './WorkDescriptionExample'
+
 const TextVariants = () => (
-  <>
+  <ConstrainedWidth>
     <Text>Primary Text</Text>
     <Text alternate>Primary alternate Text</Text>
     <Text type="secondary">Secondary Text</Text>
@@ -30,13 +35,13 @@ const TextVariants = () => (
     <Text type="secondary" transparent>
       Transparent Secondary Text
     </Text>
-  </>
+  </ConstrainedWidth>
 )
 
 export const TextExamples = () => (
-  <div>
+  <ConstrainedWidth>
     <Heading level={2} size="medium">
-      <Text>Text</Text>
+      <Text heavy>Text</Text>
     </Heading>
     <div className="text-wrapper">
       <div className="primary">
@@ -63,28 +68,28 @@ export const TextExamples = () => (
         padding: 1rem;
       }
       .text-wrapper .primary {
-        background-color: ${COLOUR_PRIMARY_BACKGROUND};
+        background-color: ${c_PRIMARY_BACKGROUND};
       }
       .text-wrapper .primary.alternate {
-        background-color: ${COLOUR_PRIMARY_BACKGROUND_ALTERNATIVE};
+        background-color: ${c_PRIMARY_BACKGROUND_ALTERNATIVE};
       }
       .text-wrapper .secondary {
-        background-color: ${COLOUR_SECONDARY_BACKGROUND};
+        background-color: ${c_SECONDARY_BACKGROUND};
       }
     `}</style>
-  </div>
+  </ConstrainedWidth>
 )
 
 export const HexExamples = () => (
-  <div>
+  <ConstrainedWidth>
     <Heading level={2} size="medium">
-      <Text>Hexagons</Text>
+      <Text heavy>Hexagons</Text>
     </Heading>
     <div className="hex-container">
       <div className="hexagon">
         <Hexagon />
       </div>
-      {COLOUR_NEONS.map(c => (
+      {c_NEONS.map(c => (
         <div key={c} className="hexagon">
           <Hexagon src={logo} size={55} bgColour={c} />
         </div>
@@ -99,13 +104,13 @@ export const HexExamples = () => (
         height: 100px;
       }
     `}</style>
-  </div>
+  </ConstrainedWidth>
 )
 
 export const LinkExamples = () => (
-  <div>
+  <ConstrainedWidth>
     <Heading level={2} size="medium">
-      <Text>Links</Text>
+      <Text heavy>Links</Text>
     </Heading>
     <div>
       <Link to="/">Gatsby link</Link>
@@ -117,13 +122,13 @@ export const LinkExamples = () => (
         ExternalLink button
       </ExternalLink>
     </div>
-  </div>
+  </ConstrainedWidth>
 )
 
 export const CarouselExamples = () => (
-  <div>
+  <ConstrainedWidth>
     <Heading level={2} size="medium">
-      <Text>Carousel</Text>
+      <Text heavy>Carousel</Text>
     </Heading>
     <Carousel>
       <Carousel.Item image={steve}>
@@ -169,5 +174,14 @@ export const CarouselExamples = () => (
         </Heading>
       </Carousel.Item>
     </Carousel>
-  </div>
+  </ConstrainedWidth>
+)
+
+export const SquiggleExample = () => (
+  <ConstrainedWidth>
+    <Heading level={2} size="medium">
+      <Text heavy>Squiggle</Text>
+    </Heading>
+    <Squiggle color={c_NEONS[0]} repeats={8} />
+  </ConstrainedWidth>
 )

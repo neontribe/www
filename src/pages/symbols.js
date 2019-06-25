@@ -5,26 +5,23 @@ import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import Text from '../components/Text'
 import Heading from '../components/Heading'
 
-import {
-  HexExamples,
-  LinkExamples,
-  TextExamples,
-  CarouselExamples,
-} from '../examples'
+import * as examples from '../examples'
 
 export default () => (
   <Layout>
     <ConstrainedWidth>
       <Heading level={1} size="large">
-        <Text type="secondary">Symbols</Text>
+        <Text heavy type="secondary">
+          Symbols
+        </Text>
       </Heading>
-      <div className="centered">
-        <HexExamples />
-        <LinkExamples />
-        <TextExamples />
-        <CarouselExamples />
-      </div>
     </ConstrainedWidth>
+    <div className="centered">
+      {/* Sort keys to ensure order is consistent between static client-side js */}
+      {Object.keys(examples)
+        .sort()
+        .map(key => React.createElement(examples[key], { key }))}
+    </div>
     <style jsx>{`
       .centered {
         flex-direction: column;
