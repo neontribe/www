@@ -161,7 +161,7 @@ export const CarouselExamples = () => (
     </Heading>
     <Carousel>
       <Carousel.Item image={steve}>
-        <Text type="secondary" size="medium">
+        <Text type="secondary">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -171,13 +171,13 @@ export const CarouselExamples = () => (
         </Text>
         <VerticalSpacing size={1} />
         <Heading level={3}>
-          <Text type="secondary" size="medium" heavy>
+          <Text type="secondary" heavy>
             Steve
           </Text>
         </Heading>
       </Carousel.Item>
       <Carousel.Item image={harry}>
-        <Text type="secondary" size="medium">
+        <Text type="secondary">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -187,13 +187,13 @@ export const CarouselExamples = () => (
         </Text>
         <VerticalSpacing size={1} />
         <Heading level={3}>
-          <Text type="secondary" size="medium" heavy>
+          <Text type="secondary" heavy>
             Harry
           </Text>
         </Heading>
       </Carousel.Item>
       <Carousel.Item image={kat}>
-        <Text type="secondary" size="medium">
+        <Text type="secondary">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -203,7 +203,7 @@ export const CarouselExamples = () => (
         </Text>
         <VerticalSpacing size={1} />
         <Heading level={3}>
-          <Text type="secondary" size="medium" heavy>
+          <Text type="secondary" heavy>
             Kat
           </Text>
         </Heading>

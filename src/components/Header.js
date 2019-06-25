@@ -5,19 +5,26 @@ import { Link as GatsbyLink } from 'gatsby'
 import { breakpoint, GUTTER_PX } from '../theme'
 import Logo from './Logo'
 import Link from './Link'
+import Text from './Text'
 import ConstrainedWidth from './Layout/ConstrainedWidth'
+
+const NavLink = ({ children, ...props }) => (
+  <Link {...props}>
+    <Text heavy>{children}</Text>
+  </Link>
+)
 
 const Nav = () => (
   <nav className="nav">
     <ul className="list">
       <li>
-        <Link to="/">fooooooooooo</Link>
+        <NavLink to="/">fooooooooooo</NavLink>
       </li>
       <li>
-        <Link to="/">foo</Link>
+        <NavLink to="/">foo</NavLink>
       </li>
       <li>
-        <Link to="/">foo</Link>
+        <NavLink to="/">foo</NavLink>
       </li>
     </ul>
 
