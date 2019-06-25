@@ -5,6 +5,8 @@ export const REM_PX = 16
 export const GUTTER_PX = 10
 export const PAGE_WIDTH_REM = `${PAGE_WIDTH_PX / REM_PX}rem`
 
+export const CUT_CORNER_PX = GUTTER_PX * 3
+
 // ------ Media Queries (px taken from antd) -------
 // Media queries breakpoints in em
 // Extra small screen / phone
@@ -51,39 +53,43 @@ export const breakpoint = size => {
 }
 
 // ---------- COLOUR -----------
-const COLOUR_NEON_PINK = '#fb37f1'
-const COLOUR_NEON_PURPLE = '#9013fe'
-const COLOUR_NEON_BLUE = '#54fcfd'
-const COLOUR_NEON_YELLOW = '#fdf958'
-const COLOUR_NEON_GREEN = '#48e6b6'
-const COLOUR_BLACK = '#131313'
-const COLOUR_WHITE = '#fff'
+const c_NEON_PINK = '#fb37f1'
+const c_NEON_PURPLE = '#9013fe'
+const c_NEON_BLUE = '#54fcfd'
+const c_NEON_YELLOW = '#fdf958'
+const c_NEON_GREEN = '#48e6b6'
+const c_BLACK = '#131313'
+const c_WHITE = '#fff'
 
 // Neons, shouldn't be used with some kind of randomisation, so only export an array
-export const COLOUR_NEONS = [
-  COLOUR_NEON_PINK,
-  COLOUR_NEON_PURPLE,
-  COLOUR_NEON_BLUE,
-  COLOUR_NEON_YELLOW,
-  COLOUR_NEON_GREEN,
+export const c_NEONS = [
+  c_NEON_PINK,
+  c_NEON_PURPLE,
+  c_NEON_BLUE,
+  c_NEON_YELLOW,
+  c_NEON_GREEN,
 ]
 
 // Text + background colour combinations
 // PRIMARY
-export const COLOUR_PRIMARY_TEXT = COLOUR_WHITE
-export const COLOUR_PRIMARY_BACKGROUND = '#1f1e1f'
-export const COLOUR_PRIMARY_BACKGROUND_ALTERNATIVE = COLOUR_BLACK
+export const c_PRIMARY_TEXT = c_WHITE
+export const c_PRIMARY_BACKGROUND = '#1f1e1f'
+export const c_PRIMARY_BACKGROUND_ALTERNATIVE = c_BLACK
 // Secondary
-export const COLOUR_SECONDARY_TEXT = COLOUR_BLACK
-export const COLOUR_SECONDARY_BACKGROUND = COLOUR_WHITE
+export const c_SECONDARY_TEXT = c_BLACK
+export const c_SECONDARY_BACKGROUND = c_WHITE
 
 // UI
-export const COLOUR_CALL_TO_ACTION = COLOUR_NEON_PURPLE
-export const COLOUR_LOGO_BACKGROUND = COLOUR_WHITE
+export const c_CALL_TO_ACTION = c_NEON_PURPLE
+export const c_LOGO_BACKGROUND = c_WHITE
 
 // Typography
+export const FONT_STACK = '"Renner*", sans-serif'
 export const fontSizes = {
+  xsmall: '.75rem',
+  normal: '1rem', // TODO normal is smaller than small?
   small: '1.25rem',
   medium: '1.5rem',
   large: '2rem',
+  xlarge: '4rem',
 }

@@ -5,9 +5,15 @@ import Carousel from '../../../components/Carousel'
 
 const TestCarousel = () => (
   <Carousel>
-    <Carousel.Item imageTitle="image 1">slide 1</Carousel.Item>
-    <Carousel.Item imageTitle="image 2">slide 2</Carousel.Item>
-    <Carousel.Item imageTitle="image 3">slide 3</Carousel.Item>
+    <Carousel.Item image="a" imageTitle="image 1">
+      slide 1
+    </Carousel.Item>
+    <Carousel.Item image="b" imageTitle="image 2">
+      slide 2
+    </Carousel.Item>
+    <Carousel.Item image="c" imageTitle="image 3">
+      slide 3
+    </Carousel.Item>
   </Carousel>
 )
 

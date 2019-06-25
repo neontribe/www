@@ -4,11 +4,11 @@ import { GUTTER_PX } from '../theme'
 
 const VerticalSpacing = ({ size = 1 }) => (
   <div className="vertical-spacing">
-    <style jsx>
-      {`
+    <style jsx>{`
+      .vertical-spacing {
         margin-bottom: ${GUTTER_PX * size}px;
-      `}
-    </style>
+      }
+    `}</style>
   </div>
 )
 
