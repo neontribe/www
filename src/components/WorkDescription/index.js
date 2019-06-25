@@ -124,5 +124,5 @@ WorkDescription.propTypes = {
   solution: PropTypes.node,
 }
 
-export { default as WorkSummary } from './Summary'
+export { default as WorkSummary } from './WorkSummary'
 export default WorkDescription

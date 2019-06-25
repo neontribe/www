@@ -19,7 +19,7 @@ const imageStyles = css.resolve`
   }
 `
 
-const WorkDescription = ({ alternate, level, title, fluid, problem }) => {
+const WorkSummary = ({ alternate, level, title, fluid, problem }) => {
   // Make sure the text is consistently styled
   const T = props => (
     <Text gutter={0} {...props} type={alternate ? 'secondary' : 'primary'} />
@@ -61,7 +61,7 @@ const WorkDescription = ({ alternate, level, title, fluid, problem }) => {
   )
 }
 
-WorkDescription.propTypes = {
+WorkSummary.propTypes = {
   alternate: PropTypes.bool,
   level: PropTypes.oneOf([1, 2, 3, 4]).isRequired,
   fluid: Img.propTypes.fluid,
@@ -70,4 +70,4 @@ WorkDescription.propTypes = {
   problem: PropTypes.node,
 }
 
-export default WorkDescription
+export default WorkSummary
