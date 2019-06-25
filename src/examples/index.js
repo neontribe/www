@@ -5,6 +5,7 @@ import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import Text from '../components/Text'
 import logo from '../components/Logo/logo.svg'
 import Heading from '../components/Heading'
+import HexagonGrid from '../components/HexagonGrid'
 import {
   c_NEONS,
   c_PRIMARY_BACKGROUND,
@@ -104,6 +105,20 @@ export const HexExamples = () => (
         height: 100px;
       }
     `}</style>
+  </ConstrainedWidth>
+)
+
+export const HexagonGridExamples = () => (
+  <ConstrainedWidth>
+    <Heading level={2} size="medium">
+      <Text heavy>Hexagon Grid</Text>
+    </Heading>
+    <HexagonGrid rows={2}>
+      <Hexagon bgColour={c_NEONS[0]} />
+      <Hexagon bgColour={c_NEONS[1]} />
+      <Hexagon bgColour={c_NEONS[2]} />
+      <Hexagon bgColour={c_NEONS[3]} />
+    </HexagonGrid>
   </ConstrainedWidth>
 )
 
