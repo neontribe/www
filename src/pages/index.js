@@ -54,7 +54,7 @@ const IndexPage = () => (
           <VerticalSpacing size={1} />
           <Heading level={3} size="medium">
             <Text size="medium" type="secondary" heavy>
-              Steve
+              Rose
             </Text>
           </Heading>
         </Carousel.Item>
@@ -69,7 +69,7 @@ const IndexPage = () => (
           <VerticalSpacing size={1} />
           <Heading level={3} size="medium">
             <Text size="medium" type="secondary" heavy>
-              Harry
+              Katja
             </Text>
           </Heading>
         </Carousel.Item>
@@ -85,7 +85,7 @@ const IndexPage = () => (
           <VerticalSpacing size={1} />
           <Heading level={3}>
             <Text size="medium" type="secondary" heavy>
-              Kat
+              Rob
             </Text>
           </Heading>
         </Carousel.Item>
