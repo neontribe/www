@@ -6,18 +6,34 @@ import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import Paragraph from '../components/Paragraph'
 import Heading from '../components/Heading'
+import Text from '../components/Text'
+import SquiggleSeparator from '../components/SquiggleSeparator'
 import { ExternalLink } from '../components/Link'
 import VerticalSpacing from '../components/VerticalSpacing'
 import PageMeta from '../components/PageMeta'
 
+const BlogHeading = ({ size, children, ...props }) => (
+  <Heading {...props}>
+    <Text size={size} lineHeight={1.2} heavy>
+      {children}
+    </Text>
+  </Heading>
+)
+
 const renderAst = new rehypeReact({
   createElement: React.createElement,
   components: {
-    h1: props => <Heading {...props} level={1} size="large" />,
-    h2: props => <Heading {...props} level={2} size="medium" />,
-    h3: props => <Heading {...props} level={3} size="small" />,
+    h1: props => <BlogHeading {...props} level={1} size="large" />,
+    h2: props => <BlogHeading {...props} level={2} size="medium" />,
+    h3: props => <BlogHeading {...props} level={3} size="normal" />,
     p: Paragraph,
-    a: ExternalLink,
+    a: ({ children, ...props }) => (
+      <ExternalLink {...props}>
+        <Text gutter={0} underline>
+          {children}
+        </Text>
+      </ExternalLink>
+    ),
   },
 }).Compiler
 
@@ -51,14 +67,14 @@ export default ({ data }) => {
         <article>
           <VerticalSpacing size={10} />
           <header className="header">
-            <Heading level={1} size="xlarge">
+            <BlogHeading level={1} size="xlarge">
               {title}
-            </Heading>
+            </BlogHeading>
             <VerticalSpacing size={5} />
             <address>By {author_name}</address>
             <PublishedDate date={new Date(published_at)} />
           </header>
-          <VerticalSpacing size={10} />
+          <SquiggleSeparator />
           {renderAst(htmlAst)}
         </article>
       </ConstrainedWidth>
