@@ -1,9 +1,9 @@
 import React from 'react'
 import Text from './Text'
 
-const Paragraph = ({ children }) => (
+const Paragraph = ({ children, ...props }) => (
   <p>
-    <Text>{children}</Text>
+    <Text {...props}>{children}</Text>
     <style jsx>{`
       p {
         margin: 0;

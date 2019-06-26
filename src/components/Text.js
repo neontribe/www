@@ -21,6 +21,7 @@ const Text = ({
   size = 'normal',
   gutter = 1,
   lineHeight = 1.5,
+  underline,
 }) => (
   <span
     className={classNames(
@@ -39,6 +40,7 @@ const Text = ({
         letter-spacing: 0.015em;
         font-size: ${fontSizes[size] || 'inherit'};
         font-weight: ${heavy ? 'bold' : 'normal'};
+        text-decoration: ${underline ? 'underline' : 'none'};
       }
       /* text color */
       .primary {
@@ -67,6 +69,7 @@ Text.propTypes = {
   transparent: PropTypes.bool,
   children: PropTypes.node,
   heavy: PropTypes.bool,
+  underline: PropTypes.bool,
   size: PropTypes.oneOf(Object.keys(fontSizes)),
   gutter: PropTypes.number,
   lineHeight: PropTypes.number,
