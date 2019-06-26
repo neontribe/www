@@ -27,7 +27,6 @@ const Nav = () => (
         <NavLink to="/">foo</NavLink>
       </li>
     </ul>
-    {styles}
     <style jsx>{`
       .list {
         margin: 0;

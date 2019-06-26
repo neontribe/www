@@ -3,7 +3,12 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 import Page from './Page'
-import { REM_PX, c_PRIMARY_BACKGROUND, FONT_STACK } from '../../theme'
+import {
+  REM_PX,
+  c_PRIMARY_TEXT,
+  c_PRIMARY_BACKGROUND,
+  FONT_STACK,
+} from '../../theme'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -70,14 +75,11 @@ const Layout = ({ children }) => (
             background-color: ${c_PRIMARY_BACKGROUND};
             font-size: ${REM_PX}px;
             font-family: ${FONT_STACK};
-            color: ${COLOUR_PRIMARY_TEXT};
-<<<<<<< HEAD
+            color: ${c_PRIMARY_TEXT};
           }
 
           address {
             font-style: normal;
-=======
->>>>>>> style improvements
           }
         `}</style>
         <Page title={data.site.siteMetadata.title}>{children}</Page>
