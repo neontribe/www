@@ -85,6 +85,7 @@ export const c_LOGO_BACKGROUND = c_WHITE
 
 // Typography
 export const FONT_STACK = '"Renner*", sans-serif'
+
 export const fontSizes = {
   normal: '1rem',
   medium: '1.25rem',

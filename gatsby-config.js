@@ -7,12 +7,35 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `blog-posts`,
+        path: `${__dirname}/src/data/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1020,
+            },
+          },
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-prismjs`,
+        ],
+      },
+    },
+
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
