@@ -21,6 +21,247 @@
       "src": "/prototype",
       "status": 301,
       "headers": { "Location": "/prototype/" }
+    },
+    {
+      "src": "/we're-not-designers-except-we-are",
+      "status": 302,
+      "headers": { "Location": "/blog/we're-not-designers-except-we-are" }
+    },
+    {
+      "src": "/fixing-an-svg-gotcha",
+      "status": 302,
+      "headers": { "Location": "/blog/fixing-an-svg-gotcha" }
+    },
+    {
+      "src": "/thinking-about-discovery",
+      "status": 302,
+      "headers": { "Location": "/blog/thinking-about-discovery" }
+    },
+    {
+      "src": "/smart-sass-dynamic-sass-variables-with-php-smarty",
+      "status": 302,
+      "headers": {
+        "Location": "/blog/smart-sass-dynamic-sass-variables-with-php-smarty"
+      }
+    },
+    {
+      "src": "/cordova-file-plugin-examples",
+      "status": 302,
+      "headers": { "Location": "/blog/cordova-file-plugin-examples" }
+    },
+    {
+      "src": "/were-hiring",
+      "status": 302,
+      "headers": { "Location": "/blog/were-hiring" }
+    },
+    {
+      "src": "/so-youre-about-to-switch-the-dns",
+      "status": 302,
+      "headers": { "Location": "/blog/so-youre-about-to-switch-the-dns" }
+    },
+    {
+      "src": "/windows-10-installing-vmware-vsphere-client-5-1",
+      "status": 302,
+      "headers": {
+        "Location": "/blog/windows-10-installing-vmware-vsphere-client-5-1"
+      }
+    },
+    {
+      "src": "/elementaryos-install-on-dell-xps-13-9350-or-uefi-only",
+      "status": 302,
+      "headers": {
+        "Location": "/blog/elementaryos-install-on-dell-xps-13-9350-or-uefi-only"
+      }
+    },
+    {
+      "src": "/howto-bash-windows-10",
+      "status": 302,
+      "headers": { "Location": "/blog/howto-bash-windows-10" }
+    },
+    {
+      "src": "/untangled-2016",
+      "status": 302,
+      "headers": { "Location": "/blog/untangled-2016" }
+    },
+    {
+      "src": "/crunchbangplusplus-install-on-imac-52",
+      "status": 302,
+      "headers": { "Location": "/blog/crunchbangplusplus-install-on-imac-52" }
+    },
+    {
+      "src": "/hiring-ag",
+      "status": 302,
+      "headers": { "Location": "/blog/hiring-ag" }
+    },
+    {
+      "src": "/windows-10-anniversary-update-1607",
+      "status": 302,
+      "headers": { "Location": "/blog/windows-10-anniversary-update-1607" }
+    },
+    {
+      "src": "/virtualbox-only-showing-32-bit-clients",
+      "status": 302,
+      "headers": { "Location": "/blog/virtualbox-only-showing-32-bit-clients" }
+    },
+    {
+      "src": "/windows-10-build-1607-integrated-bash",
+      "status": 302,
+      "headers": { "Location": "/blog/windows-10-build-1607-integrated-bash" }
+    },
+    {
+      "src": "/ubuntu-14-04-server-with-php-7-0",
+      "status": 302,
+      "headers": { "Location": "/blog/ubuntu-14-04-server-with-php-7-0" }
+    },
+    {
+      "src": "/discovery-and-direction",
+      "status": 302,
+      "headers": { "Location": "/blog/discovery-and-direction" }
+    },
+    {
+      "src": "/that-keynote",
+      "status": 302,
+      "headers": { "Location": "/blog/that-keynote" }
+    },
+    {
+      "src": "/hiring-again",
+      "status": 302,
+      "headers": { "Location": "/blog/hiring-again" }
+    },
+    {
+      "src": "/in-search-of-an-intuitive-interface",
+      "status": 302,
+      "headers": { "Location": "/blog/in-search-of-an-intuitive-interface" }
+    },
+    {
+      "src": "/windows-10-bash-ubuntu-16-04-upgrade",
+      "status": 302,
+      "headers": { "Location": "/blog/windows-10-bash-ubuntu-16-04-upgrade" }
+    },
+    {
+      "src": "/2017-cas-scratch-off-competition",
+      "status": 302,
+      "headers": { "Location": "/blog/2017-cas-scratch-off-competition" }
+    },
+    {
+      "src": "/coding-with-kids",
+      "status": 302,
+      "headers": { "Location": "/blog/coding-with-kids" }
+    },
+    {
+      "src": "/snake-game-challenge-for-young-programmers",
+      "status": 302,
+      "headers": {
+        "Location": "/blog/snake-game-challenge-for-young-programmers"
+      }
+    },
+    {
+      "src": "/when-changing-your-mind-is-the-right-decision",
+      "status": 302,
+      "headers": {
+        "Location": "/blog/when-changing-your-mind-is-the-right-decision"
+      }
+    },
+    {
+      "src": "/post-post",
+      "status": 302,
+      "headers": { "Location": "/blog/post-post" }
+    },
+    {
+      "src": "/untangled-2017",
+      "status": 302,
+      "headers": { "Location": "/blog/untangled-2017" }
+    },
+    {
+      "src": "/students-of-the-class-of-2017",
+      "status": 302,
+      "headers": { "Location": "/blog/students-of-the-class-of-2017" }
+    },
+    {
+      "src": "/untangled-2017-2",
+      "status": 302,
+      "headers": { "Location": "/blog/untangled-2017-2" }
+    },
+    {
+      "src": "/chickens-and-eggs-and-open-omelettes",
+      "status": 302,
+      "headers": { "Location": "/blog/chickens-and-eggs-and-open-omelettes" }
+    },
+    {
+      "src": "/the-life-of-a-mentor-untangled-2017",
+      "status": 302,
+      "headers": { "Location": "/blog/the-life-of-a-mentor-untangled-2017" }
+    },
+    {
+      "src": "/windows-10-local-account-password-recovery",
+      "status": 302,
+      "headers": {
+        "Location": "/blog/windows-10-local-account-password-recovery"
+      }
+    },
+    {
+      "src": "/debian-virtualbox-guest-additions",
+      "status": 302,
+      "headers": { "Location": "/blog/debian-virtualbox-guest-additions" }
+    },
+    {
+      "src": "/setting-up-laravel-homestead-on-windows",
+      "status": 302,
+      "headers": { "Location": "/blog/setting-up-laravel-homestead-on-windows" }
+    },
+    {
+      "src": "/comparing-react-and-vue",
+      "status": 302,
+      "headers": { "Location": "/blog/comparing-react-and-vue" }
+    },
+    {
+      "src": "/debian-9-stretch",
+      "status": 302,
+      "headers": { "Location": "/blog/debian-9-stretch" }
+    },
+    {
+      "src": "/making-a-difference-with-code-first-girls",
+      "status": 302,
+      "headers": {
+        "Location": "/blog/making-a-difference-with-code-first-girls"
+      }
+    },
+    {
+      "src": "/building-new-horizons",
+      "status": 302,
+      "headers": { "Location": "/blog/building-new-horizons" }
+    },
+    {
+      "src": "/elementary-on-dell-xps-15-9570",
+      "status": 302,
+      "headers": { "Location": "/blog/elementary-on-dell-xps-15-9570" }
+    },
+    {
+      "src": "/crunchbangplusplus-9-tweaks",
+      "status": 302,
+      "headers": { "Location": "/blog/crunchbangplusplus-9-tweaks" }
+    },
+    {
+      "src": "/contemplating-action",
+      "status": 302,
+      "headers": { "Location": "/blog/contemplating-action" }
+    },
+    {
+      "src": "/want-to-work-for-neontribe",
+      "status": 302,
+      "headers": { "Location": "/blog/want-to-work-for-neontribe" }
+    },
+    {
+      "src": "/talking-about-making-charities-safe",
+      "status": 302,
+      "headers": { "Location": "/blog/talking-about-making-charities-safe" }
+    },
+    {
+      "src": "/google-apps-for-business-disabling-confidential-mode",
+      "status": 302,
+      "headers": {
+        "Location": "/blog/google-apps-for-business-disabling-confidential-mode"
+      }
     }
   ],
   "regions": ["bru1"]
