@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
+
 import {
   fontSizes,
   c_PRIMARY_TEXT,
@@ -18,16 +20,14 @@ const Text = ({
   heavy,
   size = 'normal',
   gutter = 1,
+  lineHeight = 1.5,
 }) => (
   <span
-    className={[
+    className={classNames(
       type,
-      heavy && 'heavy',
       transparent && 'transparent',
-      alternate && 'alternate',
-    ]
-      .filter(Boolean)
-      .join(' ')}
+      alternate && 'alternate'
+    )}
   >
     {children}
     <style jsx>{`
@@ -35,15 +35,11 @@ const Text = ({
         display: inline-block;
         color: ${alternate ? c_SECONDARY_TEXT : c_PRIMARY_TEXT};
         padding: 2px ${GUTTER_PX * gutter}px;
-        line-height: 1.5;
+        line-height: ${lineHeight};
         letter-spacing: 0.015em;
         font-size: ${fontSizes[size] || 'inherit'};
+        font-weight: ${heavy ? 'bold' : 'normal'};
       }
-
-      .heavy {
-        font-weight: bold;
-      }
-
       /* text color */
       .primary {
         color: ${c_PRIMARY_TEXT};
@@ -73,6 +69,7 @@ Text.propTypes = {
   heavy: PropTypes.bool,
   size: PropTypes.oneOf(Object.keys(fontSizes)),
   gutter: PropTypes.number,
+  lineHeight: PropTypes.number,
 }
 
 export default Text
