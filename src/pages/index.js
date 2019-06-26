@@ -15,6 +15,8 @@ import harry from '../images/tribe-harry.jpg'
 import kat from '../images/tribe-kat.jpg'
 import SquiggleSeparator from '../components/SquiggleSeparator'
 
+const randomItem = items => items[Math.floor(Math.random() * items.length)]
+
 const IndexPage = () => (
   <Layout>
     <ConstrainedWidth>
@@ -113,23 +115,37 @@ const IndexPage = () => (
         <StaticQuery
           query={graphql`
             query {
-              placeholderImage: file(relativePath: { eq: "ourwork-arc.jpg" }) {
-                childImageSharp {
-                  fluid(maxWidth: 768) {
-                    ...GatsbyImageSharpFluid
+              projects: allMarkdownRemark(
+                filter: { fields: { sourceName: { eq: "projects" } } }
+              ) {
+                nodes {
+                  frontmatter {
+                    title
+                    problem
+                    image {
+                      childImageSharp {
+                        fluid(maxWidth: 768) {
+                          ...GatsbyImageSharpFluid
+                        }
+                      }
+                    }
                   }
                 }
               }
             }
           `}
-          render={data => (
-            <WorkSummary
-              title="Blah blah blah"
-              problem="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-              fluid={data.placeholderImage.childImageSharp.fluid}
-              alternate
-            />
-          )}
+          render={data => {
+            const randProj = randomItem(data.projects.nodes)
+
+            return (
+              <WorkSummary
+                title={randProj.frontmatter.title}
+                problem={randProj.frontmatter.problem}
+                fluid={randProj.frontmatter.image.childImageSharp.fluid}
+                alternate
+              />
+            )
+          }}
         />
 
         <VerticalSpacing size={5} />
