@@ -5,7 +5,7 @@ import classNames from 'classnames'
 import { className, styles, LinkInternals } from './shared'
 
 const ExternalLink = ({ button, children, ...linkProps }) => (
-  <a {...linkProps} className={`${className} ${button ? 'button' : ''}`}>
+  <a {...linkProps} className={classNames(className, button && 'button')}>
     <LinkInternals button={button}>{children}</LinkInternals>
     {styles}
   </a>
