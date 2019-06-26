@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { COLOUR_PRIMARY_TEXT } from '../../theme'
+import { c_PRIMARY_TEXT } from '../../theme'
 
 const CarouselControl = ({ children, onClick, label }) => (
   <button className="carousel_control" onClick={onClick} aria-label={label}>
@@ -11,7 +11,7 @@ const CarouselControl = ({ children, onClick, label }) => (
       border: 0;
       font-family: inherit;
       font-size: 2rem;
-      color: ${COLOUR_PRIMARY_TEXT};
+      color: ${c_PRIMARY_TEXT};
       cursor: pointer;
       user-select: none;
     `}</style>

@@ -5,9 +5,9 @@ import { StaticQuery, graphql } from 'gatsby'
 import Page from './Page'
 import {
   REM_PX,
-  COLOUR_PRIMARY_BACKGROUND,
+  c_PRIMARY_TEXT,
+  c_PRIMARY_BACKGROUND,
   FONT_STACK,
-  COLOUR_PRIMARY_TEXT,
 } from '../../theme'
 
 const Layout = ({ children }) => (
@@ -72,10 +72,10 @@ const Layout = ({ children }) => (
           }
 
           body {
-            background-color: ${COLOUR_PRIMARY_BACKGROUND};
+            background-color: ${c_PRIMARY_BACKGROUND};
             font-size: ${REM_PX}px;
             font-family: ${FONT_STACK};
-            color: ${COLOUR_PRIMARY_TEXT};
+            color: ${c_PRIMARY_TEXT};
           }
 
           address {

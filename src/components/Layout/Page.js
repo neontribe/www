@@ -7,11 +7,14 @@ import Footer from '../Footer'
 
 import hexagonsLeft from './hexagons-left.png'
 import hexagonsRight from './hexagons-right.png'
+import VerticalSpacing from '../VerticalSpacing'
 
 const Page = ({ title, children }) => (
   <div className="page-layout">
     <Header siteTitle={title} />
+    <VerticalSpacing size={10} />
     <main role="main">{children}</main>
+    <VerticalSpacing size={10} />
     <Footer />
     <style jsx>{`
       .page-layout {

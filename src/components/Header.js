@@ -1,40 +1,32 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link as GatsbyLink } from 'gatsby'
-import css from 'styled-jsx/css'
 
-import { breakpoint, GUTTER_PX } from '../theme'
+import { breakpoint } from '../theme'
 import Logo from './Logo'
 import Link from './Link'
+import Text from './Text'
 import ConstrainedWidth from './Layout/ConstrainedWidth'
 
-const { className, styles } = css.resolve`
-  a {
-    text-decoration: none;
-    font-weight: bold;
-  }
-`
+const NavLink = ({ children, ...props }) => (
+  <Link {...props}>
+    <Text heavy>{children}</Text>
+  </Link>
+)
 
 const Nav = () => (
   <nav className="nav">
     <ul className="list">
       <li>
-        <Link className={className} to="/">
-          fooooooooooo
-        </Link>
+        <NavLink to="/">fooooooooooo</NavLink>
       </li>
       <li>
-        <Link className={className} to="/">
-          foo
-        </Link>
+        <NavLink to="/">foo</NavLink>
       </li>
       <li>
-        <Link className={className} to="/">
-          foo
-        </Link>
+        <NavLink to="/">foo</NavLink>
       </li>
     </ul>
-    {styles}
     <style jsx>{`
       .list {
         margin: 0;

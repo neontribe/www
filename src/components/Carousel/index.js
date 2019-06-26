@@ -7,7 +7,7 @@ import CarouselItem from './CarouselItem'
 const moduloWithMax = (num, max) => ((num % max) + max) % max
 
 const Carousel = ({ children, imageSize = 400 }) => {
-  const [activeItem, setActiveItem] = React.useState(0)
+  const [activeItem, setActiveItem] = React.useState(1)
 
   const nextItem = () => {
     setActiveItem(prevActiveItem =>

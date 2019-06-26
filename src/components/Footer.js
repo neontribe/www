@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { COLOUR_PRIMARY_BACKGROUND_ALTERNATIVE } from '../theme'
+import { c_PRIMARY_BACKGROUND_ALTERNATIVE, GUTTER_PX } from '../theme'
 import ConstrainedWidth from './Layout/ConstrainedWidth'
 import Text from './Text'
 import { ExternalLink } from './Link'
@@ -17,8 +17,10 @@ const mapListItems = children =>
 
 const HousekeepingList = ({ children, title }) => (
   <div>
-    <Heading level={3} size="small">
-      {title}
+    <Heading level={3}>
+      <Text transparent size="normal">
+        {title}
+      </Text>
     </Heading>
     {children && <ul className="heading-list">{mapListItems(children)}</ul>}
 
@@ -43,14 +45,18 @@ export default () => (
         <HousekeepingList
           title={
             <ExternalLink href="mailto://hello@neontribe.co.uk" alternate>
-              hello@neontribe.co.uk
+              <Text alternate heavy>
+                hello@neontribe.co.uk
+              </Text>
             </ExternalLink>
           }
         />
         <HousekeepingList
           title={
             <ExternalLink href="http://twitter.com" alternate>
-              @neontribe
+              <Text alternate heavy>
+                @neontribe
+              </Text>
             </ExternalLink>
           }
         />
@@ -75,7 +81,8 @@ export default () => (
     </ConstrainedWidth>
     <style jsx>{`
       footer {
-        background-color: ${COLOUR_PRIMARY_BACKGROUND_ALTERNATIVE};
+        background-color: ${c_PRIMARY_BACKGROUND_ALTERNATIVE};
+        padding: ${GUTTER_PX * 10}px 0;
       }
 
       .housekeeping {

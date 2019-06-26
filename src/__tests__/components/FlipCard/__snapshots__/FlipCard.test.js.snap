@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default render matches snapshot 1`] = `
+<div>
+  <div
+    class="card-container"
+  >
+    <div
+      class="card-body"
+    >
+      <div
+        class="card-side card-back"
+      >
+        back 2
+        <style />
+        <style>
+          
+      .card-back {
+        transform: rotate3d(0, 1, 0, 180deg);
+        pointer-events: none;
+      }
+    
+        </style>
+      </div>
+      <div
+        class="card-side card-front "
+      >
+        front 1
+        <style />
+        <style>
+          
+      .card-front.is-flipped {
+        pointer-events: none;
+      }
+    
+        </style>
+      </div>
+    </div>
+    <style>
+      
+      .card-body {
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: all 0.7s linear;
+        transform: none;
+        display: flex;
+      }
+
+      .card-body::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      .card-container {
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        perspective: 1000px;
+      }
+    
+    </style>
+  </div>
+</div>
+`;
+
+exports[`isFlipped render matches snapshot 1`] = `
+<div>
+  <div
+    class="card-container"
+  >
+    <div
+      class="card-body"
+    >
+      <div
+        class="card-side card-back"
+      >
+        back 2
+        <style />
+        <style>
+          
+      .card-back {
+        transform: rotate3d(0, 1, 0, 180deg);
+        pointer-events: none;
+      }
+    
+        </style>
+      </div>
+      <div
+        class="card-side card-front "
+      >
+        front 1
+        <style />
+        <style>
+          
+      .card-front.is-flipped {
+        pointer-events: none;
+      }
+    
+        </style>
+      </div>
+    </div>
+    <style>
+      
+      .card-body {
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: all 0.7s linear;
+        transform: none;
+        display: flex;
+      }
+
+      .card-body::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      .card-container {
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        perspective: 1000px;
+      }
+    
+    </style>
+  </div>
+</div>
+`;
+
+exports[`snapshots 1`] = `
+<div>
+  <div
+    class="card-container"
+  >
+    <div
+      class="card-body"
+    >
+      <div
+        class="card-side card-back"
+      >
+        back 2
+        <style />
+        <style>
+          
+      .card-back {
+        transform: rotate3d(0, 1, 0, 180deg);
+        pointer-events: none;
+      }
+    
+        </style>
+      </div>
+      <div
+        class="card-side card-front "
+      >
+        front 1
+        <style />
+        <style>
+          
+      .card-front.is-flipped {
+        pointer-events: none;
+      }
+    
+        </style>
+      </div>
+    </div>
+    <style>
+      
+      .card-body {
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: all 0.7s linear;
+        transform: none;
+        display: flex;
+      }
+
+      .card-body::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      .card-container {
+        height: 100%;
+        position: relative;
+        z-index: 1;
+        perspective: 1000px;
+      }
+    
+    </style>
+  </div>
+</div>
+`;
