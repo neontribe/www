@@ -1,35 +1,41 @@
 const path = require(`path`)
 
-exports.createPages = ({ actions, graphql }) => {
+exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
   const blogPostTemplate = path.resolve(`src/templates/blog-post.js`)
 
-  return graphql(`
+  const result = await graphql(`
     {
-      allMarkdownRemark(limit: 1000) {
+      allMarkdownRemark(
+        limit: 1000
+        filter: { fields: { sourceName: { eq: "blog-posts" } } }
+      ) {
         edges {
           node {
             frontmatter {
               slug
             }
+            fields {
+              sourceName
+            }
           }
         }
       }
     }
-  `).then(result => {
-    if (result.errors) {
-      return Promise.reject(result.errors)
-    }
+  `)
 
-    return result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: `blog/${node.frontmatter.slug}`,
-        component: blogPostTemplate,
-        context: {
-          slug: node.frontmatter.slug,
-        },
-      })
+  if (result.errors) {
+    throw result.errors
+  }
+
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: `blog/${node.frontmatter.slug}`,
+      component: blogPostTemplate,
+      context: {
+        slug: node.frontmatter.slug,
+      },
     })
   })
 }
