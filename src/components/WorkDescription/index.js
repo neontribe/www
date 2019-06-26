@@ -43,11 +43,13 @@ const WorkDescription = ({
       <ConstrainedWidth>
         <Content alternate={alternate}>
           <Content.Title>
-            <Heading level={level} size="medium">
-              <T heavy>{title}</T>
+            <Heading level={level}>
+              <T size="medium" heavy>
+                {title}
+              </T>
             </Heading>
-            <Heading level={level + 1} size="normal">
-              <T>{subtitle}</T>
+            <Heading level={level + 1}>
+              <T size="normal">{subtitle}</T>
             </Heading>
           </Content.Title>
           <Content.Image>
@@ -122,5 +124,5 @@ WorkDescription.propTypes = {
   solution: PropTypes.node,
 }
 
-export { default as WorkSummary } from './Summary'
+export { default as WorkSummary } from './WorkSummary'
 export default WorkDescription

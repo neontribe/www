@@ -41,25 +41,31 @@ const TextVariants = () => (
 
 export const TextExamples = () => (
   <ConstrainedWidth>
-    <Heading level={2} size="medium">
-      <Text heavy>Text</Text>
+    <Heading level={2}>
+      <Text size="medium" heavy>
+        Text
+      </Text>
     </Heading>
     <div className="text-wrapper">
       <div className="primary">
-        <Heading level={3} size="small">
-          <Text>Background primary</Text>
+        <Heading level={3}>
+          <Text size="normal">Background primary</Text>
         </Heading>
         <TextVariants />
       </div>
       <div className="primary alternate">
-        <Heading level={3} size="small">
-          <Text alternate>Background primary alternate</Text>
+        <Heading level={3}>
+          <Text size="normal" alternate>
+            Background primary alternate
+          </Text>
         </Heading>
         <TextVariants />
       </div>
       <div className="secondary">
-        <Heading level={3} size="small">
-          <Text type="secondary">Background secondary</Text>
+        <Heading level={3}>
+          <Text size="normal" type="secondary">
+            Background secondary
+          </Text>
         </Heading>
         <TextVariants />
       </div>
@@ -83,8 +89,10 @@ export const TextExamples = () => (
 
 export const HexExamples = () => (
   <ConstrainedWidth>
-    <Heading level={2} size="medium">
-      <Text heavy>Hexagons</Text>
+    <Heading level={2}>
+      <Text size="medium" heavy>
+        Hexagons
+      </Text>
     </Heading>
     <div className="hex-container">
       <div className="hexagon">
@@ -110,8 +118,10 @@ export const HexExamples = () => (
 
 export const HexagonGridExamples = () => (
   <ConstrainedWidth>
-    <Heading level={2} size="medium">
-      <Text heavy>Hexagon Grid</Text>
+    <Heading level={2}>
+      <Text size="medium" heavy>
+        Hexagon Grid
+      </Text>
     </Heading>
     <HexagonGrid rows={2}>
       <Hexagon bgColour={c_NEONS[0]} />
@@ -124,8 +134,10 @@ export const HexagonGridExamples = () => (
 
 export const LinkExamples = () => (
   <ConstrainedWidth>
-    <Heading level={2} size="medium">
-      <Text heavy>Links</Text>
+    <Heading level={2}>
+      <Text size="medium" heavy>
+        Links
+      </Text>
     </Heading>
     <div>
       <Link to="/">Gatsby link</Link>
@@ -142,12 +154,14 @@ export const LinkExamples = () => (
 
 export const CarouselExamples = () => (
   <ConstrainedWidth>
-    <Heading level={2} size="medium">
-      <Text heavy>Carousel</Text>
+    <Heading level={2}>
+      <Text size="medium" heavy>
+        Carousel
+      </Text>
     </Heading>
     <Carousel>
       <Carousel.Item image={steve}>
-        <Text type="secondary" size="medium">
+        <Text type="secondary">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -156,12 +170,14 @@ export const CarouselExamples = () => (
           pariatur.
         </Text>
         <VerticalSpacing size={1} />
-        <Heading level={3} size="medium">
-          Steve
+        <Heading level={3}>
+          <Text type="secondary" heavy>
+            Steve
+          </Text>
         </Heading>
       </Carousel.Item>
       <Carousel.Item image={harry}>
-        <Text type="secondary" size="medium">
+        <Text type="secondary">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -170,12 +186,14 @@ export const CarouselExamples = () => (
           pariatur.
         </Text>
         <VerticalSpacing size={1} />
-        <Heading level={3} size="medium">
-          Harry
+        <Heading level={3}>
+          <Text type="secondary" heavy>
+            Harry
+          </Text>
         </Heading>
       </Carousel.Item>
       <Carousel.Item image={kat}>
-        <Text type="secondary" size="medium">
+        <Text type="secondary">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -184,8 +202,10 @@ export const CarouselExamples = () => (
           pariatur.
         </Text>
         <VerticalSpacing size={1} />
-        <Heading level={3} size="medium">
-          Kat
+        <Heading level={3}>
+          <Text type="secondary" heavy>
+            Kat
+          </Text>
         </Heading>
       </Carousel.Item>
     </Carousel>
@@ -194,8 +214,10 @@ export const CarouselExamples = () => (
 
 export const SquiggleExample = () => (
   <ConstrainedWidth>
-    <Heading level={2} size="medium">
-      <Text heavy>Squiggle</Text>
+    <Heading level={2}>
+      <Text size="medium" heavy>
+        Squiggle
+      </Text>
     </Heading>
     <Squiggle color={c_NEONS[0]} repeats={8} />
   </ConstrainedWidth>

@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { c_PRIMARY_BACKGROUND_ALTERNATIVE } from '../theme'
+import { c_PRIMARY_BACKGROUND_ALTERNATIVE, GUTTER_PX } from '../theme'
 import ConstrainedWidth from './Layout/ConstrainedWidth'
 import Text from './Text'
 import { ExternalLink } from './Link'
@@ -17,8 +17,10 @@ const mapListItems = children =>
 
 const HousekeepingList = ({ children, title }) => (
   <div>
-    <Heading level={3} size="small">
-      {title}
+    <Heading level={3}>
+      <Text transparent size="normal">
+        {title}
+      </Text>
     </Heading>
     {children && <ul className="heading-list">{mapListItems(children)}</ul>}
 
@@ -43,20 +45,24 @@ export default () => (
         <HousekeepingList
           title={
             <ExternalLink href="mailto://hello@neontribe.co.uk" alternate>
-              hello@neontribe.co.uk
+              <Text alternate heavy>
+                hello@neontribe.co.uk
+              </Text>
             </ExternalLink>
           }
         />
         <HousekeepingList
           title={
             <ExternalLink href="http://twitter.com" alternate>
-              @neontribe
+              <Text alternate heavy>
+                @neontribe
+              </Text>
             </ExternalLink>
           }
         />
         <HousekeepingList
           title={
-            <Text alternate heavy size="medium">
+            <Text alternate heavy>
               Norwich
             </Text>
           }
@@ -66,7 +72,7 @@ export default () => (
         </HousekeepingList>
         <HousekeepingList
           title={
-            <Text alternate heavy size="medium">
+            <Text alternate heavy>
               Exeter
             </Text>
           }
@@ -76,6 +82,7 @@ export default () => (
     <style jsx>{`
       footer {
         background-color: ${c_PRIMARY_BACKGROUND_ALTERNATIVE};
+        padding: ${GUTTER_PX * 10}px 0;
       }
 
       .housekeeping {

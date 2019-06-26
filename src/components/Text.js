@@ -16,8 +16,8 @@ const Text = ({
   transparent,
   children,
   heavy,
-  size,
-  gutter,
+  size = 'normal',
+  gutter = 1,
 }) => (
   <span
     className={[
@@ -36,6 +36,7 @@ const Text = ({
         color: ${alternate ? c_SECONDARY_TEXT : c_PRIMARY_TEXT};
         padding: 2px ${GUTTER_PX * gutter}px;
         line-height: 1.5;
+        letter-spacing: 0.015em;
         font-size: ${fontSizes[size] || 'inherit'};
       }
 
@@ -72,10 +73,6 @@ Text.propTypes = {
   heavy: PropTypes.bool,
   size: PropTypes.oneOf(Object.keys(fontSizes)),
   gutter: PropTypes.number,
-}
-
-Text.defaultProps = {
-  gutter: 1,
 }
 
 export default Text

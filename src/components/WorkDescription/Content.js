@@ -19,9 +19,9 @@ const propTypes = {
   alternate: PropTypes.bool,
 }
 
-const Content = ({ alternate, children }) => (
+const Content = ({ alternate, children, stackedContentClassName = '' }) => (
   <div className="work-description-content">
-    <div className="stacked-content">
+    <div className={`stacked-content ${stackedContentClassName}`}>
       {cloneWithProps(findChild(children, Title), {
         alternate,
         key: 'title',
@@ -47,16 +47,13 @@ const Content = ({ alternate, children }) => (
         display: flex;
         flex-direction: ${alternate ? 'row-reverse' : 'row'};
       }
-
-      .stacked-content {
-        background-color: ${alternate
-          ? c_SECONDARY_BACKGROUND
-          : c_PRIMARY_BACKGROUND};
-      }
     `}</style>
   </div>
 )
-Content.propTypes = propTypes
+Content.propTypes = {
+  propTypes,
+  stackedContentClassName: PropTypes.string,
+}
 
 // Title -------------------------------------
 export const Title = ({ alternate, children }) => (

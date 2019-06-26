@@ -28,7 +28,7 @@ const TribeMemberFront = ({
     <hr className="separator" />
     <figcaption className="name-skills">
       <div className="content">
-        <Heading level={headingLevel} size="small">
+        <Heading level={headingLevel}>
           <Text type="secondary" heavy size="medium">
             {name}
           </Text>

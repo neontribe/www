@@ -14,8 +14,10 @@ export default ({ alternate, level, problem, solution }) => {
     <>
       <div className="problem">
         <VerticalSpacing size={2} />
-        <Heading level={level} size="small">
-          <T heavy>Problem</T>
+        <Heading level={level}>
+          <T size="normal" heavy>
+            Problem
+          </T>
         </Heading>
         <p>
           <T>{problem}</T>
@@ -24,8 +26,10 @@ export default ({ alternate, level, problem, solution }) => {
       </div>
       {solution && (
         <div className="solution">
-          <Heading level={level} size="small">
-            <T heavy>Solution</T>
+          <Heading level={level}>
+            <T size="normal" heavy>
+              Solution
+            </T>
           </Heading>
           <p>
             <T>{solution}</T>
