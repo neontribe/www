@@ -1,17 +1,16 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import rehypeReact from 'rehype-react'
 import { distanceInWordsToNow } from 'date-fns'
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
-import Paragraph from '../components/Paragraph'
-import Heading from '../components/Heading'
-import Text from '../components/Text'
 import SquiggleSeparator from '../components/SquiggleSeparator'
-import { ExternalLink } from '../components/Link'
 import VerticalSpacing from '../components/VerticalSpacing'
 import PageMeta from '../components/PageMeta'
+import Heading from '../components/Heading'
+import Text from '../components/Text'
+import RenderContent from '../components/RenderContent'
 
+// Copied to components/RenderContent
 const BlogHeading = ({ size, children, ...props }) => (
   <Heading {...props}>
     <Text size={size} lineHeight={1.2} heavy>
@@ -19,23 +18,6 @@ const BlogHeading = ({ size, children, ...props }) => (
     </Text>
   </Heading>
 )
-
-const renderAst = new rehypeReact({
-  createElement: React.createElement,
-  components: {
-    h1: props => <BlogHeading {...props} level={1} size="large" />,
-    h2: props => <BlogHeading {...props} level={2} size="medium" />,
-    h3: props => <BlogHeading {...props} level={3} size="normal" />,
-    p: Paragraph,
-    a: ({ children, ...props }) => (
-      <ExternalLink {...props}>
-        <Text gutter={0} underline>
-          {children}
-        </Text>
-      </ExternalLink>
-    ),
-  },
-}).Compiler
 
 const PublishedDate = ({ date }) => {
   const published = distanceInWordsToNow(date, {
@@ -75,16 +57,14 @@ export default ({ data }) => {
             <PublishedDate date={new Date(published_at)} />
           </header>
           <SquiggleSeparator />
-          {renderAst(htmlAst)}
+          <RenderContent htmlAst={htmlAst} />
         </article>
       </ConstrainedWidth>
-      <style jsx>
-        {`
-          .header {
-            text-align: center;
-          }
-        `}
-      </style>
+      <style jsx>{`
+        .header {
+          text-align: center;
+        }
+      `}</style>
     </Layout>
   )
 }

@@ -13,4 +13,8 @@ const Paragraph = ({ children, ...props }) => (
   </p>
 )
 
+Paragraph.propTypes = {
+  ...Text.propTypes,
+}
+
 export default Paragraph
