@@ -5,6 +5,7 @@ import ConstrainedWidth from './Layout/ConstrainedWidth'
 import Text from './Text'
 import { ExternalLink } from './Link'
 import Heading from './Heading'
+import GatsbyLink from 'gatsby-link'
 
 const mapListItems = children =>
   React.Children.map(children, child => {
@@ -50,10 +51,17 @@ export default () => (
               </Text>
             </ExternalLink>
           }
-        />
+        >
+          <Text alternate>
+            <li>0845 689 0896</li>
+          </Text>
+          <GatsbyLink to="/" title={`Link to privacy policy`}>
+            Privacy Policy
+          </GatsbyLink>
+        </HousekeepingList>
         <HousekeepingList
           title={
-            <ExternalLink href="http://twitter.com" alternate>
+            <ExternalLink href="http://twitter.com/neontribe" alternate>
               <Text alternate heavy>
                 @neontribe
               </Text>
@@ -67,8 +75,11 @@ export default () => (
             </Text>
           }
         >
-          <li>some content</li>
-          <div>not an li!</div>
+          <Text alternate size="small">
+            <li>21 Colegate</li>
+            <li>Norwich </li>
+            <li>NR3 1BN</li>
+          </Text>
         </HousekeepingList>
         <HousekeepingList
           title={
@@ -76,7 +87,13 @@ export default () => (
               Exeter
             </Text>
           }
-        />
+        >
+          <Text alternate size="small">
+            <li>21 Colegate</li>
+            <li>Norwich </li>
+            <li>NR3 1BN</li>
+          </Text>
+        </HousekeepingList>
       </div>
     </ConstrainedWidth>
     <style jsx>{`
