@@ -7,6 +7,7 @@ import Logo from './Logo'
 import Link from './Link'
 import Text from './Text'
 import ConstrainedWidth from './Layout/ConstrainedWidth'
+import { ExternalLink } from './Link'
 
 const NavLink = ({ children, ...props }) => (
   <Link {...props}>
@@ -18,13 +19,15 @@ const Nav = () => (
   <nav className="nav">
     <ul className="list">
       <li>
-        <NavLink to="/">fooooooooooo</NavLink>
+        <NavLink to="/what-we-are-doing">What we're doing</NavLink>
       </li>
       <li>
-        <NavLink to="/">foo</NavLink>
+        <NavLink to="/the-tribe">The tribe</NavLink>
       </li>
       <li>
-        <NavLink to="/">foo</NavLink>
+        <ExternalLink href="mailto://hello@neontribe.co.uk">
+          <Text>hello@neontribe.co.uk</Text>
+        </ExternalLink>
       </li>
     </ul>
     <style jsx>{`
