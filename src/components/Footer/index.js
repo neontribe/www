@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { c_PRIMARY_BACKGROUND_ALTERNATIVE, GUTTER_PX } from '../theme'
-import ConstrainedWidth from './Layout/ConstrainedWidth'
-import Text from './Text'
-import { ExternalLink } from './Link'
-import Heading from './Heading'
+import { c_PRIMARY_BACKGROUND_ALTERNATIVE, GUTTER_PX } from '../../theme'
+import ConstrainedWidth from '../Layout/ConstrainedWidth'
+import Text from '../Text'
+import { ExternalLink } from '../Link'
+import Heading from '../Heading'
 import GatsbyLink from 'gatsby-link'
+import twitterlogo from './twitterlogo.svg'
 
 const mapListItems = children =>
   React.Children.map(children, child => {
@@ -18,11 +19,7 @@ const mapListItems = children =>
 
 const HousekeepingList = ({ children, title }) => (
   <div>
-    <Heading level={3}>
-      <Text transparent size="normal">
-        {title}
-      </Text>
-    </Heading>
+    <Heading level={3}>{title}</Heading>
     {children && <ul className="heading-list">{mapListItems(children)}</ul>}
 
     <style jsx>{`
@@ -45,24 +42,37 @@ export default () => (
       <div className="housekeeping">
         <HousekeepingList
           title={
-            <ExternalLink href="mailto://hello@neontribe.co.uk" alternate>
+            <ExternalLink href="mailto://hello@neontribe.co.uk">
               <Text alternate heavy>
                 hello@neontribe.co.uk
               </Text>
             </ExternalLink>
           }
         >
-          <Text alternate>
-            <li>0845 689 0896</li>
-          </Text>
-          <GatsbyLink to="/" title={`Link to privacy policy`}>
-            Privacy Policy
-          </GatsbyLink>
+          <li>
+            <ExternalLink href="tel://0845 689 0896">
+              <Text alternate size="small">
+                0845 689 0896
+              </Text>
+            </ExternalLink>
+          </li>
+          <li>
+            <GatsbyLink to="/privacy-policy" title={`Link to privacy policy`}>
+              <Text alternate underline size="small">
+                Privacy Policy
+              </Text>
+            </GatsbyLink>
+          </li>
         </HousekeepingList>
         <HousekeepingList
           title={
-            <ExternalLink href="http://twitter.com/neontribe" alternate>
+            <ExternalLink href="http://twitter.com/neontribe">
               <Text alternate heavy>
+                <img
+                  src={twitterlogo}
+                  className="twitterlogo"
+                  role="presentation"
+                />{' '}
                 @neontribe
               </Text>
             </ExternalLink>
@@ -75,11 +85,17 @@ export default () => (
             </Text>
           }
         >
-          <Text alternate size="small">
-            <li>21 Colegate</li>
-            <li>Norwich </li>
-            <li>NR3 1BN</li>
-          </Text>
+          <li>
+            <address>
+              <Text alternate size="small">
+                21 Colegate
+                <br />
+                Norwich
+                <br />
+                NR3 1BN
+              </Text>
+            </address>
+          </li>
         </HousekeepingList>
         <HousekeepingList
           title={
@@ -88,18 +104,24 @@ export default () => (
             </Text>
           }
         >
-          <Text alternate size="small">
-            <li>21 Colegate</li>
-            <li>Norwich </li>
-            <li>NR3 1BN</li>
-          </Text>
+          <li>
+            <address>
+              <Text alternate size="small">
+                The Generator Quayhouse
+                <br />
+                Exeter
+                <br />
+                EX2 4AN
+              </Text>
+            </address>
+          </li>
         </HousekeepingList>
       </div>
     </ConstrainedWidth>
     <style jsx>{`
       footer {
         background-color: ${c_PRIMARY_BACKGROUND_ALTERNATIVE};
-        padding: ${GUTTER_PX * 10}px 0;
+        padding: ${GUTTER_PX * 7}px 0;
       }
 
       .housekeeping {
@@ -107,6 +129,11 @@ export default () => (
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: stretch;
+      }
+
+      .twitterlogo {
+        display: inline-block;
+        height: 1rem;
       }
     `}</style>
   </footer>
