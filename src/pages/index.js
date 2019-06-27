@@ -20,7 +20,7 @@ const randomItem = items => items[Math.floor(Math.random() * items.length)]
 const IndexPage = () => (
   <Layout>
     <ConstrainedWidth>
-      <section style={{ textAlign: 'center' }}>
+      <section className="centered">
         <Heading level={1}>
           <Text heavy size="xlarge">
             We solve problems
@@ -36,7 +36,7 @@ const IndexPage = () => (
       </section>
       <SquiggleSeparator />
 
-      <section style={{ textAlign: 'center' }}>
+      <section className="centered">
         <Heading level={1}>
           <Text heavy size="large">
             The tribe
@@ -93,7 +93,7 @@ const IndexPage = () => (
         </Carousel>
       </section>
 
-      <section style={{ textAlign: 'center' }}>
+      <section className="centered">
         <Link button to="/">
           Meet the tribe
         </Link>
@@ -102,7 +102,7 @@ const IndexPage = () => (
       <SquiggleSeparator />
 
       <section>
-        <div style={{ textAlign: 'center' }}>
+        <div className="centered">
           <Heading level={1}>
             <Text size="large" heavy>
               What we're doing
@@ -151,7 +151,7 @@ const IndexPage = () => (
 
         <VerticalSpacing size={5} />
 
-        <div style={{ textAlign: 'center' }}>
+        <div className="centered">
           <Link to="/" button>
             View our solution
           </Link>
@@ -160,7 +160,7 @@ const IndexPage = () => (
 
       <SquiggleSeparator />
 
-      <section style={{ textAlign: 'center' }}>
+      <section className="centered">
         <Heading level={1}>
           <Text size="large" heavy>
             Get in touch
@@ -174,6 +174,12 @@ const IndexPage = () => (
         </ExternalLink>
       </section>
     </ConstrainedWidth>
+
+    <style jsx>{`
+      .centered {
+        text-align: center;
+      }
+    `}</style>
   </Layout>
 )
 
