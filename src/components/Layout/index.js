@@ -71,9 +71,12 @@ const Layout = ({ children }) => (
             box-sizing: border-box;
           }
 
+          html {
+            font-size: ${REM_PX}px;
+          }
+
           body {
             background-color: ${c_PRIMARY_BACKGROUND};
-            font-size: ${REM_PX}px;
             font-family: ${FONT_STACK};
             color: ${c_PRIMARY_TEXT};
           }
