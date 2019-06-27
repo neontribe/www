@@ -139,6 +139,7 @@ const IndexPage = () => (
 
             return (
               <WorkSummary
+                level={2}
                 title={randProj.frontmatter.title}
                 problem={randProj.frontmatter.problem}
                 fluid={randProj.frontmatter.image.childImageSharp.fluid}
@@ -151,7 +152,7 @@ const IndexPage = () => (
         <VerticalSpacing size={5} />
 
         <div style={{ textAlign: 'center' }}>
-          <Link to="" button>
+          <Link to="/" button>
             View our solution
           </Link>
         </div>
