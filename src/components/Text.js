@@ -17,7 +17,7 @@ const Text = ({
   alternate,
   transparent,
   children,
-  heavy,
+  weight = 'normal',
   size = 'normal',
   gutter = 1,
   lineHeight = 1.5,
@@ -39,7 +39,7 @@ const Text = ({
         line-height: ${lineHeight};
         letter-spacing: 0.015em;
         font-size: ${fontSizes[size] || 'inherit'};
-        font-weight: ${heavy ? 'bold' : 'normal'};
+        font-weight: ${weight};
         text-decoration: ${underline ? 'underline' : 'none'};
       }
       /* text color */
@@ -68,7 +68,7 @@ Text.propTypes = {
   alternate: PropTypes.bool,
   transparent: PropTypes.bool,
   children: PropTypes.node,
-  heavy: PropTypes.bool,
+  weight: PropTypes.oneOf([400, 500, 700]),
   underline: PropTypes.bool,
   size: PropTypes.oneOf(Object.keys(fontSizes)),
   gutter: PropTypes.number,
