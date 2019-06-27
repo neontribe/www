@@ -14,7 +14,7 @@ import PageMeta from '../components/PageMeta'
 
 const BlogHeading = ({ size, children, ...props }) => (
   <Heading {...props}>
-    <Text size={size} lineHeight={1.2} heavy>
+    <Text size={size} lineHeight={1.2} weight={700}>
       {children}
     </Text>
   </Heading>
