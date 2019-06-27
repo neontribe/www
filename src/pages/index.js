@@ -10,9 +10,9 @@ import Heading from '../components/Heading'
 import Link, { ExternalLink } from '../components/Link'
 import { WorkSummary } from '../components/WorkDescription'
 
-import steve from '../images/tribe-steve.jpg'
-import harry from '../images/tribe-harry.jpg'
-import kat from '../images/tribe-kat.jpg'
+import steve from '../data/tribers/images/steve.jpg'
+import harry from '../data/tribers/images/collins.jpg'
+import kat from '../data/tribers/images/Kat.jpg'
 import SquiggleSeparator from '../components/SquiggleSeparator'
 
 const randomItem = items => items[Math.floor(Math.random() * items.length)]

@@ -15,15 +15,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `projects`,
+        path: `${__dirname}/src/data/projects`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `projects`,
-        path: `${__dirname}/src/data/projects`,
+        name: `tribers`,
+        path: `${__dirname}/src/data/tribers`,
       },
     },
     'gatsby-transformer-sharp',
