@@ -10,7 +10,7 @@ import ConstrainedWidth from './Layout/ConstrainedWidth'
 
 const NavLink = ({ children, ...props }) => (
   <Link {...props}>
-    <Text heavy>{children}</Text>
+    <Text weight={500}>{children}</Text>
   </Link>
 )
 

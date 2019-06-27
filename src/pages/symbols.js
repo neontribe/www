@@ -11,7 +11,7 @@ export default () => (
   <Layout>
     <ConstrainedWidth>
       <Heading level={1} size="large">
-        <Text heavy type="secondary">
+        <Text weight={700} type="secondary">
           Symbols
         </Text>
       </Heading>

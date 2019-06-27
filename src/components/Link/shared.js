@@ -18,7 +18,7 @@ export const { className, styles } = css.resolve`
 export const LinkInternals = ({ button, children }) => {
   if (button) {
     return (
-      <Text heavy size="medium" type="primary" transparent>
+      <Text weight={500} size="medium" type="primary" transparent>
         {children}
         <Arrow />
       </Text>

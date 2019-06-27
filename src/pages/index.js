@@ -20,7 +20,7 @@ const IndexPage = () => (
     <ConstrainedWidth>
       <section style={{ textAlign: 'center' }}>
         <Heading level={1}>
-          <Text heavy size="xlarge">
+          <Text weight={500} size="xlarge">
             We solve problems
           </Text>
         </Heading>
@@ -36,7 +36,7 @@ const IndexPage = () => (
 
       <section style={{ textAlign: 'center' }}>
         <Heading level={1}>
-          <Text heavy size="large">
+          <Text weight={500} size="large">
             The tribe
           </Text>
         </Heading>
@@ -52,7 +52,7 @@ const IndexPage = () => (
             </Text>
             <VerticalSpacing size={1} />
             <Heading level={3} size="medium">
-              <Text size="medium" type="secondary" heavy>
+              <Text size="medium" type="secondary" weight={700}>
                 Rose
               </Text>
             </Heading>
@@ -67,7 +67,7 @@ const IndexPage = () => (
             </Text>
             <VerticalSpacing size={1} />
             <Heading level={3} size="medium">
-              <Text size="medium" type="secondary" heavy>
+              <Text size="medium" type="secondary" weight={700}>
                 Katja
               </Text>
             </Heading>
@@ -83,7 +83,7 @@ const IndexPage = () => (
             </Text>
             <VerticalSpacing size={1} />
             <Heading level={3}>
-              <Text size="medium" type="secondary" heavy>
+              <Text size="medium" type="secondary" weight={700}>
                 Rob
               </Text>
             </Heading>
@@ -102,7 +102,7 @@ const IndexPage = () => (
       <section>
         <div style={{ textAlign: 'center' }}>
           <Heading level={1}>
-            <Text size="large" heavy>
+            <Text size="large" weight={500}>
               What we're doing
             </Text>
           </Heading>
@@ -145,7 +145,7 @@ const IndexPage = () => (
 
       <section style={{ textAlign: 'center' }}>
         <Heading level={1}>
-          <Text size="large" heavy>
+          <Text size="large" weight={500}>
             Get in touch
           </Text>
         </Heading>

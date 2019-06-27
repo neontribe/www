@@ -45,7 +45,7 @@ export default () => (
         <HousekeepingList
           title={
             <ExternalLink href="mailto://hello@neontribe.co.uk" alternate>
-              <Text alternate heavy>
+              <Text alternate weight={500}>
                 hello@neontribe.co.uk
               </Text>
             </ExternalLink>
@@ -54,7 +54,7 @@ export default () => (
         <HousekeepingList
           title={
             <ExternalLink href="http://twitter.com" alternate>
-              <Text alternate heavy>
+              <Text alternate weight={500}>
                 @neontribe
               </Text>
             </ExternalLink>
@@ -62,7 +62,7 @@ export default () => (
         />
         <HousekeepingList
           title={
-            <Text alternate heavy>
+            <Text alternate weight={500}>
               Norwich
             </Text>
           }
@@ -72,7 +72,7 @@ export default () => (
         </HousekeepingList>
         <HousekeepingList
           title={
-            <Text alternate heavy>
+            <Text alternate weight={500}>
               Exeter
             </Text>
           }

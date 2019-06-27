@@ -44,7 +44,7 @@ const WorkDescription = ({
         <Content alternate={alternate}>
           <Content.Title>
             <Heading level={level}>
-              <T size="medium" heavy>
+              <T size="medium" weight={700}>
                 {title}
               </T>
             </Heading>

@@ -29,7 +29,7 @@ const TribeMemberFront = ({
     <figcaption className="name-skills">
       <div className="content">
         <Heading level={headingLevel}>
-          <Text type="secondary" heavy size="medium">
+          <Text type="secondary" weight={700} size="medium">
             {name}
           </Text>
         </Heading>
