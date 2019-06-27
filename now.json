@@ -262,6 +262,12 @@
       "headers": {
         "Location": "/blog/google-apps-for-business-disabling-confidential-mode"
       }
+    },
+    { 
+      "handle": "filesystem",
+      "headers": {
+        "X-Clacks-Overhead": "GNU Terry Pratchett"
+      }
     }
   ],
   "regions": ["bru1"]
