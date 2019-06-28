@@ -59,7 +59,7 @@ const BlogPage = ({
           padding: 0;
         }
         ul li {
-          margin: 8rem 0;
+          margin: 0;
         }
       `}</style>
     </Layout>

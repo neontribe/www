@@ -15,9 +15,7 @@ const TribeMemberBack = ({ onClick, headingLevel, name, skills, bio }) => (
         </Heading>
         <Text type="secondary">{skills.join(' | ')}</Text>
       </div>
-      <p className="back-content">
-        <Text type="secondary">{bio}</Text>
-      </p>
+      <div className="back-content">{bio}</div>
     </div>
     <style jsx>{`
       .bio {
