@@ -14,7 +14,7 @@ import ExternalLink from '../components/Link'
 import castLogo from '../data/funders/cast-logo.png'
 import comicReliefLogo from '../data/funders/comic-relief-logo.png'
 import mhfLogo from '../data/funders/mhf-logo.png'
-import phfLogo from '../data/funders/phf-logo.png'
+import phfLogo from '../data/funders/PHF-logo.png'
 
 const WhatWeAreDoingPage = () => (
   <Layout>
