@@ -9,7 +9,11 @@ const HexagonGrid = ({ hexgonWidth, rows, rate, ...props }) => {
 
   return (
     <React.Fragment>
-      <Malarquee fill hoverToPause rate={rate || undefined}>
+      <Malarquee
+        fill
+        hoverToPause
+        rate={typeof rate === 'number' ? rate : undefined}
+      >
         {makeArrayOfLength(rows).map((row, rowIndex) => (
           <div key={rowIndex} className="row">
             {makeArrayOfLength(childCount).map((item, columnIndex) => {
