@@ -52,8 +52,8 @@ const Layout = ({ children }) => (
 
           @font-face {
             font-family: 'Renner*';
-            src: url('/fonts/Renner-it-medium.woff2') format('woff2'),
-              url('/fonts/Renner-it-medium.woff') format('woff');
+            src: url('/fonts/Renner-it-Medium.woff2') format('woff2'),
+              url('/fonts/Renner-it-Medium.woff') format('woff');
             font-weight: 500;
           }
 

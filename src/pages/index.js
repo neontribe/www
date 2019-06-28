@@ -11,8 +11,6 @@ import SquiggleSeparator from '../components/SquiggleSeparator'
 import StoryCarousel from '../components/StoryCarousel'
 import HomePageWorkSummary from '../components/HomePageWorkSummary'
 
-const randomItem = items => items[Math.floor(Math.random() * items.length)]
-
 const IndexPage = () => (
   <Layout>
     <ConstrainedWidth>
@@ -42,7 +40,7 @@ const IndexPage = () => (
       </section>
 
       <section className="centered">
-        <Link button to="/">
+        <Link button to="/the-tribe">
           Meet the tribe
         </Link>
       </section>
