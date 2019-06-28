@@ -42,7 +42,7 @@ const IndexPage = () => (
       </section>
 
       <section className="centered">
-        <Link button to="/">
+        <Link button to="/the-tribe">
           Meet the tribe
         </Link>
       </section>
