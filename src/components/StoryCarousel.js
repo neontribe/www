@@ -64,7 +64,7 @@ export default () => (
               />
               <VerticalSpacing size={1} />
               <Heading level={3} size="medium">
-                <Text size="medium" type="secondary" heavy>
+                <Text size="medium" type="secondary" weight={500}>
                   {triber.frontmatter.story.md.frontmatter.name ||
                     triber.frontmatter.name}
                 </Text>

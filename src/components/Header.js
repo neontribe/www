@@ -11,7 +11,7 @@ import { ExternalLink } from './Link'
 
 const NavLink = ({ children, ...props }) => (
   <Link {...props}>
-    <Text heavy>{children}</Text>
+    <Text weight={500}>{children}</Text>
   </Link>
 )
 

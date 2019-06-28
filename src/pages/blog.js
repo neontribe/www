@@ -28,7 +28,7 @@ const BlogPage = ({
       <ConstrainedWidth>
         <div style={{ textAlign: 'center ' }}>
           <Heading level={1}>
-            <Text size="xlarge" heavy>
+            <Text size="xlarge" weight={700}>
               Our Blog
             </Text>
           </Heading>
@@ -44,7 +44,7 @@ const BlogPage = ({
                   </Text>
                 </Heading>
                 <Heading level={2}>
-                  <Text size="large" heavy>
+                  <Text size="large" weight={700}>
                     {node.frontmatter.title}
                   </Text>
                 </Heading>

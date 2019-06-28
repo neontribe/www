@@ -18,7 +18,7 @@ const IndexPage = () => (
     <ConstrainedWidth>
       <section className="centered">
         <Heading level={1}>
-          <Text heavy size="xlarge">
+          <Text weight={500} size="xlarge">
             We solve problems
           </Text>
         </Heading>
@@ -34,7 +34,7 @@ const IndexPage = () => (
 
       <section className="centered">
         <Heading level={1}>
-          <Text heavy size="large">
+          <Text weight={500} size="large">
             The tribe
           </Text>
         </Heading>
@@ -52,7 +52,7 @@ const IndexPage = () => (
       <section>
         <div className="centered">
           <Heading level={1}>
-            <Text size="large" heavy>
+            <Text size="large" weight={500}>
               What we're doing
             </Text>
           </Heading>
@@ -72,7 +72,7 @@ const IndexPage = () => (
 
       <section className="centered">
         <Heading level={1}>
-          <Text size="large" heavy>
+          <Text size="large" weight={500}>
             Get in touch
           </Text>
         </Heading>

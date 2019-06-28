@@ -44,7 +44,7 @@ export default () => (
     render={data => (
       <ConstrainedWidth>
         <Heading level={2}>
-          <Text size="medium" heavy>
+          <Text size="medium" weight={700}>
             TribeMember
           </Text>
         </Heading>

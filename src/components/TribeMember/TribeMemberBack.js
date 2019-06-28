@@ -9,7 +9,7 @@ const TribeMemberBack = ({ onClick, headingLevel, name, skills, bio }) => (
     <div className="bio-content">
       <div role="presentation">
         <Heading level={headingLevel}>
-          <Text type="secondary" heavy size="medium">
+          <Text type="secondary" weight={700} size="medium">
             {name}
           </Text>
         </Heading>

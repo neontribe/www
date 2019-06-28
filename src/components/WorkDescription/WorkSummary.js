@@ -53,7 +53,7 @@ const WorkSummary = ({ alternate, level, title, fluid, problem }) => {
             <Heading level={level}>
               <VerticalSpacing size={2} />
               <div className="content-wrapper">
-                <T size="medium" heavy>
+                <T size="medium" weight={700}>
                   {title}
                 </T>
               </div>
