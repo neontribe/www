@@ -39,7 +39,12 @@ const NotFoundPage = () => (
         <VerticalSpacing size={2} />
         <TheTribeBottomParagraph />
         <VerticalSpacing size={5} />
-        <ExternalLink href="" button>
+        <ExternalLink
+          href="https://docs.google.com/forms/d/e/1FAIpQLScThzeOla4FG2tEGfUVthAb8ZyTIzSGb0nB_tcqSlYSbrIjZA/viewform?usp=sf_link"
+          button
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           Join The Tribe
         </ExternalLink>
       </div>
