@@ -11,6 +11,10 @@ import SquiggleSeparator from '../components/SquiggleSeparator'
 import WorkDescription from '../components/WorkDescription'
 import { StaticQuery, graphql } from 'gatsby'
 import ExternalLink from '../components/Link'
+import castLogo from '../data/funders/cast-logo.png'
+import comicReliefLogo from '../data/funders/comic-relief-logo.png'
+import mhfLogo from '../data/funders/mhf-logo.png'
+import phfLogo from '../data/funders/PHF-logo.png'
 
 const WhatWeAreDoingPage = () => (
   <Layout>
@@ -36,10 +40,10 @@ const WhatWeAreDoingPage = () => (
     <SquiggleSeparator></SquiggleSeparator>
 
     <HexagonGrid rate={25} rows={2}>
-      <Hexagon />
-      <Hexagon />
-      <Hexagon />
-      <Hexagon />
+      <Hexagon size={80} grey src={castLogo} />
+      <Hexagon size={80} grey src={comicReliefLogo} />
+      <Hexagon size={80} grey src={mhfLogo} />
+      <Hexagon size={80} grey src={phfLogo} />
     </HexagonGrid>
 
     <SquiggleSeparator />
