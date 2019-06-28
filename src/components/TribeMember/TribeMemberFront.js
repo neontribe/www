@@ -20,11 +20,19 @@ const TribeMemberFront = ({
   sepColour,
 }) => (
   <figure className="tribe-figure" onClick={onClick}>
-    <Img
-      className={imageStyles.className}
-      fluid={fluid}
-      alt={`Picture of ${name}`}
-    />
+    {fluid ? (
+      <Img
+        className={imageStyles.className}
+        fluid={fluid}
+        alt={`${name}'s profile`}
+      />
+    ) : (
+      <img
+        src="https://placeimg.com/700/1000/animals"
+        className="placeholder-image"
+        alt={`${name}'s placeholder profile`}
+      />
+    )}
     <hr className="separator" />
     <figcaption className="name-skills">
       <div className="content">
@@ -67,6 +75,12 @@ const TribeMemberFront = ({
         max-width: 80%;
         max-width: calc(100% - ${CUT_CORNER_PX}px);
         margin-right: auto;
+      }
+
+      .placeholder-image {
+        flex-grow: 1;
+        overflow: hidden;
+        display: block;
       }
     `}</style>
   </figure>

@@ -59,7 +59,7 @@ const TribeMember = ({
 TribeMember.propTypes = {
   name: PropTypes.string.isRequired,
   skills: PropTypes.array,
-  bio: PropTypes.string,
+  bio: PropTypes.node,
   neonSeparatorColour: PropTypes.oneOf(c_NEONS),
   // Inherited prop types
   fluid: Img.propTypes.fluid,
