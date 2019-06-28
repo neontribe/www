@@ -17,9 +17,9 @@ import Carousel from '../components/Carousel'
 import VerticalSpacing from '../components/VerticalSpacing'
 import Squiggle from '../components/Squiggle'
 
-import steve from '../images/tribe-steve.jpg'
-import harry from '../images/tribe-harry.jpg'
-import kat from '../images/tribe-kat.jpg'
+import steve from '../data/tribers/images/steve.jpg'
+import harry from '../data/tribers/images/collins.jpg'
+import kat from '../data/tribers/images/Kat.jpg'
 
 export { default as TribeMemberExample } from './TribeMemberExample'
 export { default as WorkDescriptionExample } from './WorkDescriptionExample'

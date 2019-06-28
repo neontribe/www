@@ -51,7 +51,7 @@ const Content = ({ alternate, children, stackedContentClassName = '' }) => (
   </div>
 )
 Content.propTypes = {
-  propTypes,
+  ...propTypes,
   stackedContentClassName: PropTypes.string,
 }
 

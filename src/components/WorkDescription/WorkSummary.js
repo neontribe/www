@@ -66,7 +66,7 @@ const WorkSummary = ({ alternate, level, title, fluid, problem }) => {
             <div className="content-wrapper">
               <ProblemSolution
                 alternate={alternate}
-                level={level + 2}
+                level={level + 1}
                 problem={problem}
               />
             </div>
@@ -92,7 +92,6 @@ WorkSummary.propTypes = {
   alternate: PropTypes.bool,
   level: PropTypes.oneOf([1, 2, 3, 4]).isRequired,
   fluid: Img.propTypes.fluid,
-  image: PropTypes.node,
   title: PropTypes.node,
   problem: PropTypes.node,
 }
