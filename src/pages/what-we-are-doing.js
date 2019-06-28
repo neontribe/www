@@ -1,4 +1,5 @@
 import React from 'react'
+import slugify from 'slugify'
 
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
@@ -77,6 +78,7 @@ const WhatWeAreDoingPage = () => (
           <WorkDescription
             alternate={index % 2 === 0}
             key={project.frontmatter.title}
+            id={slugify(project.frontmatter.title, '-')}
             fluid={project.frontmatter.image.childImageSharp.fluid}
             level={3}
             title={project.frontmatter.title}

@@ -57,13 +57,6 @@ const IndexPage = () => (
         </div>
         <VerticalSpacing size={5} />
         <HomePageWorkSummary />
-        <VerticalSpacing size={5} />
-
-        <div className="centered">
-          <Link to="/" button>
-            View our solution
-          </Link>
-        </div>
       </section>
 
       <SquiggleSeparator />
