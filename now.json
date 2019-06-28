@@ -1,7 +1,7 @@
 {
   "version": 2,
   "name": "neontribe-www",
-  "alias": ["neontribe.now.sh"],
+  "alias": ["neontribe.now.sh", "www.neontribe.co.uk"],
   "builds": [
     {
       "src": "package.json",
@@ -269,6 +269,12 @@
       "headers": {
         "Location": "/blog/google-apps-for-business-disabling-confidential-mode"
       }
+    },
+    { "handle": "filesystem" },
+    {
+      "src": "/.*",
+      "dest": "/404",
+      "status": 404
     }
   ],
   "regions": ["bru1"]
