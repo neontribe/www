@@ -100,7 +100,6 @@ const WhatWeAreDoingPage = () => (
         </ExternalLink>
       </div>
     </ConstrainedWidth>
-    <div className="text-bg"></div>
     <style jsx>{`
       .centered {
         text-align: center;

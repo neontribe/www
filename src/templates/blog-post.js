@@ -9,6 +9,7 @@ import PageMeta from '../components/PageMeta'
 import Heading from '../components/Heading'
 import Text from '../components/Text'
 import RenderContent from '../components/RenderContent'
+import { c_PRIMARY_BACKGROUND } from '../theme'
 
 // Copied to components/RenderContent
 const BlogHeading = ({ size, children, ...props }) => (
@@ -47,7 +48,6 @@ export default ({ data }) => {
       />
       <ConstrainedWidth fullWidth={false}>
         <article>
-          <VerticalSpacing size={10} />
           <header className="header">
             <BlogHeading level={1} size="xlarge">
               {title}
@@ -63,6 +63,9 @@ export default ({ data }) => {
       <style jsx>{`
         .header {
           text-align: center;
+        }
+        article {
+          background-color: ${c_PRIMARY_BACKGROUND};
         }
       `}</style>
     </Layout>
