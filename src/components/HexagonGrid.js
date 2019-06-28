@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 import Malarquee from 'react-malarquee'
 
 const makeArrayOfLength = len => Array.apply(null, Array(len))
-const HexagonGrid = ({ hexgonWidth, rows, animate, ...props }) => {
+const HexagonGrid = ({ hexgonWidth, rows, rate, ...props }) => {
   const children = React.Children.toArray(props.children)
   const childCount = children.length
 
   return (
     <React.Fragment>
-      <Malarquee fill hoverToPause rate={animate ? 50 : undefined}>
+      <Malarquee fill hoverToPause rate={rate || undefined}>
         {makeArrayOfLength(rows).map((row, rowIndex) => (
           <div key={rowIndex} className="row">
             {makeArrayOfLength(childCount).map((item, columnIndex) => {
@@ -64,13 +64,12 @@ HexagonGrid.propTypes = {
   // children: PropTypes.arrayOf(PropTypes.instanceOf(Hexagon)).isRequired,
   hexgonWidth: PropTypes.number,
   rows: PropTypes.number,
-  animate: PropTypes.bool,
+  rate: PropTypes.number,
 }
 
 HexagonGrid.defaultProps = {
   hexgonWidth: 150,
   rows: 1,
-  animate: false,
 }
 
 export default HexagonGrid
