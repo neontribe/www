@@ -1,7 +1,10 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+import slugify from 'slugify'
 
+import VerticalSpacing from '../components/VerticalSpacing'
 import { WorkSummary } from '../components/WorkDescription'
+import Link from '../components/Link'
 
 const randomItem = items => items[Math.floor(Math.random() * items.length)]
 
@@ -32,13 +35,35 @@ export default () => (
       const randProj = randomItem(data.projects.nodes)
 
       return (
-        <WorkSummary
-          level={2}
-          title={randProj.frontmatter.title}
-          problem={randProj.frontmatter.problem}
-          fluid={randProj.frontmatter.image.childImageSharp.fluid}
-          alternate
-        />
+        <React.Fragment>
+          <WorkSummary
+            level={2}
+            title={randProj.frontmatter.title}
+            problem={randProj.frontmatter.problem}
+            fluid={randProj.frontmatter.image.childImageSharp.fluid}
+            alternate
+          />
+
+          <VerticalSpacing size={5} />
+
+          <div className="centered">
+            <Link
+              to={`/what-we-are-doing#${slugify(
+                randProj.frontmatter.title,
+                '-'
+              )}`}
+              button
+            >
+              View our solution
+            </Link>
+          </div>
+
+          <style jsx>{`
+            .centered {
+              text-align: center;
+            }
+          `}</style>
+        </React.Fragment>
       )
     }}
   />

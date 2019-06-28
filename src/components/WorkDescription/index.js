@@ -25,6 +25,7 @@ const imageStyles = css.resolve`
 `
 
 const WorkDescription = ({
+  id,
   alternate,
   level,
   title,
@@ -39,7 +40,10 @@ const WorkDescription = ({
   )
 
   return (
-    <section className={`work-description ${alternate ? 'alternate' : ''}`}>
+    <section
+      id={id}
+      className={`work-description ${alternate ? 'alternate' : ''}`}
+    >
       <ConstrainedWidth>
         <Content alternate={alternate}>
           <Content.Title>
