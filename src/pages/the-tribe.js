@@ -11,6 +11,7 @@ import {
 } from '../components/TheTribeParagraphs'
 import TriberGrid from '../components/TriberGrid'
 import VerticalSpacing from '../components/VerticalSpacing'
+import { ExternalLink } from '../components/Link'
 
 const NotFoundPage = () => (
   <Layout>
@@ -37,6 +38,10 @@ const NotFoundPage = () => (
         </Heading>
         <VerticalSpacing size={2} />
         <TheTribeBottomParagraph />
+        <VerticalSpacing size={5} />
+        <ExternalLink href="" button>
+          Join The Tribe
+        </ExternalLink>
       </div>
     </ConstrainedWidth>
     <style jsx>{`
