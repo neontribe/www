@@ -57,8 +57,11 @@ const WorkDescriptionExample = ({ fluid }) => (
 export default () => (
   <StaticQuery
     query={graphql`
-      query {
-        placeholderImage: file(relativePath: { eq: "ourwork-arc.jpg" }) {
+      {
+        file(
+          relativePath: { eq: "images/arc.jpg" }
+          sourceInstanceName: { eq: "projects" }
+        ) {
           childImageSharp {
             fluid(maxWidth: 768) {
               ...GatsbyImageSharpFluid
@@ -68,9 +71,7 @@ export default () => (
       }
     `}
     render={data => (
-      <WorkDescriptionExample
-        fluid={data.placeholderImage.childImageSharp.fluid}
-      />
+      <WorkDescriptionExample fluid={data.file.childImageSharp.fluid} />
     )}
   />
 )

@@ -3,6 +3,7 @@ module.exports = {
     title: 'Neontribe',
   },
   plugins: [
+    'gatsby-remark-source-name',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
@@ -14,8 +15,22 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `projects`,
+        path: `${__dirname}/src/data/projects`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `tribers`,
+        path: `${__dirname}/src/data/tribers`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/data/pages`,
       },
     },
     'gatsby-transformer-sharp',
@@ -35,7 +50,6 @@ module.exports = {
         ],
       },
     },
-
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
