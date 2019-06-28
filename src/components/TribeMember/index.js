@@ -25,6 +25,13 @@ const TribeMember = ({
 
   return (
     <section className="tribe-member">
+      <button
+        className="visually-hidden"
+        type="button"
+        onClick={() => setFlipped(!isFlipped)}
+      >
+        Flip the person card
+      </button>
       <FlipCard isFlipped={isFlipped}>
         <CardFront>
           <TribeMemberFront
@@ -46,10 +53,22 @@ const TribeMember = ({
           />
         </CardBack>
       </FlipCard>
+
       <style jsx>{`
         .tribe-member {
           height: 100%;
           cursor: pointer;
+        }
+
+        .visually-hidden {
+          border: 0;
+          clip: rect(1px, 1px, 1px, 1px);
+          height: 1px;
+          margin: -1px;
+          overflow: hidden;
+          padding: 0;
+          position: absolute;
+          width: 1px;
         }
       `}</style>
     </section>

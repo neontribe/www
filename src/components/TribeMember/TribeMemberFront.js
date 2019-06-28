@@ -9,8 +9,15 @@ import Text from '../Text'
 const imageStyles = css.resolve`
   .gatsby-image-wrapper {
     flex-grow: 1;
+    filter: grayscale(1);
+    transition: filter 0.25s linear;
+  }
+
+  .gatsby-image-wrapper:hover {
+    filter: none;
   }
 `
+
 const TribeMemberFront = ({
   fluid,
   name,
@@ -81,6 +88,12 @@ const TribeMemberFront = ({
         flex-grow: 1;
         overflow: hidden;
         display: block;
+        filter: grayscale(1);
+        transition: filter 0.25s linear;
+      }
+
+      .placeholder-image:hover {
+        filter: none;
       }
     `}</style>
   </figure>
