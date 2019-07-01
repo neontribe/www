@@ -18,7 +18,7 @@ const mapListItems = children =>
   })
 
 const HousekeepingList = ({ children, title }) => (
-  <div>
+  <div className="housekeeping-list">
     <Heading level={3}>{title}</Heading>
     {children && <ul className="heading-list">{mapListItems(children)}</ul>}
 
@@ -27,6 +27,9 @@ const HousekeepingList = ({ children, title }) => (
         list-style: none;
         margin: 0;
         padding: 0;
+      }
+      .housekeeping-list {
+        margin-top: ${GUTTER_PX * 2}px;
       }
     `}</style>
   </div>
