@@ -4,7 +4,6 @@ import CarouselControl from './CarouselControl'
 import CarouselImages from './CarouselImages'
 import CarouselItem from './CarouselItem'
 import Arrow from '../../../prototype/global-images/arrow.svg'
-import { breakpoint } from '../../theme'
 
 const moduloWithMax = (num, max) => ((num % max) + max) % max
 
