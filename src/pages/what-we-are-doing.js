@@ -12,10 +12,10 @@ import SquiggleSeparator from '../components/SquiggleSeparator'
 import WorkDescription from '../components/WorkDescription'
 import { StaticQuery, graphql } from 'gatsby'
 import ExternalLink from '../components/Link'
-import castLogo from '../data/funders/cast-logo.png'
-import comicReliefLogo from '../data/funders/comic-relief-logo.png'
-import mhfLogo from '../data/funders/mhf-logo.png'
-import phfLogo from '../data/funders/PHF-logo.png'
+import castLogo from '../data/funders/cast-logo-bw.png'
+import comicReliefLogo from '../data/funders/comic-relief-logo-bw.png'
+import mhfLogo from '../data/funders/mhf-logo-bw.png'
+import phfLogo from '../data/funders/PHF-logo-bw.png'
 
 const WhatWeAreDoingPage = () => (
   <Layout>
