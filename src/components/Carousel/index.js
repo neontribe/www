@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import CarouselControl from './CarouselControl'
 import CarouselImages from './CarouselImages'
 import CarouselItem from './CarouselItem'
+import Arrow from '../../../prototype/global-images/arrow.svg'
+import { breakpoint } from '../../theme'
 
 const moduloWithMax = (num, max) => ((num % max) + max) % max
 
@@ -25,7 +27,7 @@ const Carousel = ({ children, imageSize = 400 }) => {
     <div className="carousel">
       <div className="carousel__controls">
         <CarouselControl label="Previous Item" onClick={prevItem}>
-          ◀
+          <img className="arrow previous-arrow" src={Arrow} />
         </CarouselControl>
         <CarouselImages
           images={React.Children.map(children, child => ({
@@ -37,7 +39,7 @@ const Carousel = ({ children, imageSize = 400 }) => {
           imageSize={imageSize}
         />
         <CarouselControl label="Next Item" onClick={nextItem}>
-          ▶
+          <img className="arrow next-arrow" src={Arrow} />
         </CarouselControl>
       </div>
 
@@ -55,6 +57,13 @@ const Carousel = ({ children, imageSize = 400 }) => {
         }
         .carousel__items {
           transform: translateY(-${imageSize / 4}px);
+        }
+        .arrow {
+          width: 30px;
+          height: 30px;
+        }
+        .previous-arrow {
+          transform: scaleX(-1);
         }
       `}</style>
     </div>
