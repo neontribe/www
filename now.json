@@ -1,7 +1,7 @@
 {
   "version": 2,
   "name": "neontribe-www",
-  "alias": ["neontribe.now.sh", "www.neontribe.co.uk"],
+  "alias": ["neontribe.now.sh", "www.neontribe.co.uk", "test.neontribe.co.uk"],
   "builds": [
     {
       "src": "package.json",
