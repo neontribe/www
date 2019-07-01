@@ -4,7 +4,7 @@ words:
   - User Research
   - UX Design
   - Sharpie-wielder
-image: images/Rose.jpg
+image: images/Rose_new.jpg
 story: stories/rose.md
 ---
 
