@@ -31,7 +31,7 @@ const RenderContent = ({ htmlAst, type, children }) => {
       // TODO: Discern external vs external links?
       a: ({ children, ...props }) => (
         <ExternalLink {...props}>
-          <Text gutter={0} type={type} underline>
+          <Text gutter={0} type={type} underline display="inline">
             {children}
           </Text>
         </ExternalLink>
