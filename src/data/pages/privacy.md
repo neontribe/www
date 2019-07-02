@@ -29,7 +29,7 @@ If we transfer information about you if Neontribe is acquired by or merged with 
 
 On our computers.
 On Google computers within Neontribe’s Google Apps for Business account.
-In Google Analytics. For more information see Google's privacy policy. https://policies.google.com/privacy?hl=en and Google Analytics privacy policy. https://policies.google.com/technologies/partner-sites?hl=en-GB&gl=uk
+For more information see Google's privacy policy. https://policies.google.com/privacy?hl=en
 
 ## Your rights
 
