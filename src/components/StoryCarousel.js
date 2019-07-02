@@ -36,6 +36,17 @@ export default () => (
                 md: childMarkdownRemark {
                   frontmatter {
                     name
+                    image {
+                      childImageSharp {
+                        fluid(
+                          maxWidth: 400
+                          maxHeight: 420
+                          cropFocus: CENTER
+                        ) {
+                          src
+                        }
+                      }
+                    }
                   }
                   htmlAst
                 }
@@ -54,6 +65,10 @@ export default () => (
             <Carousel.Item
               key={triber.frontmatter.name}
               image={
+                get(
+                  triber,
+                  'frontmatter.story.md.frontmatter.image.childImageSharp.fluid.src'
+                ) ||
                 get(triber, 'frontmatter.image.childImageSharp.fluid.src') ||
                 logo
               }
