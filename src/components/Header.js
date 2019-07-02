@@ -35,7 +35,7 @@ const activeLinkStyles = css.resolve`
 
 const NavLink = ({ children, active, ...props }) => (
   <Link {...props} activeClassName={activeLinkStyles.className}>
-    <Text weight={500} gutter={0}>
+    <Text lineHeight={2} weight={500}>
       {children}
     </Text>
     {activeLinkStyles.styles}
@@ -55,7 +55,7 @@ const Nav = () => (
       </li>
       <li>
         <ExternalLink href="mailto:hello@neontribe.co.uk">
-          <Text>hello@neontribe.co.uk</Text>
+          <Text lineHeight={2}>hello@neontribe.co.uk</Text>
         </ExternalLink>
       </li>
     </ul>
@@ -76,7 +76,8 @@ const Nav = () => (
         margin-top: 1rem;
       }
 
-      @media (${breakpoint('sm')}) {
+      @media (${breakpoint('md')}) {
+        /* Needs to be insync with the breakpoint below */
         .list {
           justify-content: space-between;
           flex-direction: row;
@@ -125,7 +126,8 @@ const Header = ({ siteTitle }) => (
         margin: auto 0;
       }
 
-      @media (${breakpoint('sm')}) {
+      @media (${breakpoint('md')}) {
+        /* Needs to be insync with the breakpoint above */
         .header > * {
           flex: initial;
         }
