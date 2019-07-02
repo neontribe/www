@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Neontribe',
+    siteUrl: 'https://www.neontribe.co.uk',
   },
   plugins: [
     'gatsby-remark-source-name',
@@ -72,6 +73,19 @@ module.exports = {
       },
     },
     'gatsby-plugin-styled-jsx',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        env: {
+          development: {
+            policy: [{ userAgent: '*', disallow: ['/'] }],
+          },
+          production: {
+            policy: [{ userAgent: '*', disallow: ['/prototype/'] }],
+          },
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
