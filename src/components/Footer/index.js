@@ -45,7 +45,7 @@ export default () => (
       <div className="housekeeping">
         <HousekeepingList
           title={
-            <ExternalLink href="mailto://hello@neontribe.co.uk">
+            <ExternalLink href="mailto:hello@neontribe.co.uk">
               <Text lineHeight={2} alternate weight={500}>
                 hello@neontribe.co.uk
               </Text>
@@ -53,7 +53,7 @@ export default () => (
           }
         >
           <li>
-            <ExternalLink href="tel://0845 689 0896">
+            <ExternalLink href="tel:0845 689 0896">
               <Text lineHeight={2} alternate size="small">
                 0845 689 0896
               </Text>

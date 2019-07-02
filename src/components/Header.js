@@ -54,7 +54,7 @@ const Nav = () => (
         <NavLink to="/the-tribe">The tribe</NavLink>
       </li>
       <li>
-        <ExternalLink href="mailto://hello@neontribe.co.uk">
+        <ExternalLink href="mailto:hello@neontribe.co.uk">
           <Text lineHeight={2}>hello@neontribe.co.uk</Text>
         </ExternalLink>
       </li>
