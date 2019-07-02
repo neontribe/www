@@ -76,6 +76,11 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
+        // TODO: do this with NODE_ENV
+        resolveEnv: () =>
+          process.env.NOW_GITHUB_COMMIT_REF === 'master'
+            ? 'production'
+            : 'development',
         env: {
           development: {
             policy: [{ userAgent: '*', disallow: ['/'] }],
