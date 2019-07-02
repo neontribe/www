@@ -3,7 +3,7 @@ name: 'Karl Jermy'
 words:
   - Projects
   - Testing
-  - People
+  - "Dad"
 image: images/KLJ.jpg
 ---
 
