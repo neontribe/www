@@ -16,9 +16,11 @@ import castLogo from '../data/funders/cast-logo-bw.png'
 import comicReliefLogo from '../data/funders/comic-relief-logo-bw.png'
 import mhfLogo from '../data/funders/mhf-logo-bw.png'
 import phfLogo from '../data/funders/PHF-logo-bw.png'
+import PageMeta from '../components/PageMeta'
 
 const WhatWeAreDoingPage = () => (
   <Layout>
+    <PageMeta title="What we're doing" />
     <ConstrainedWidth>
       <Heading level={1}>
         <div className="centered">

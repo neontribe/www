@@ -10,9 +10,11 @@ import Link, { ExternalLink } from '../components/Link'
 import SquiggleSeparator from '../components/SquiggleSeparator'
 import StoryCarousel from '../components/StoryCarousel'
 import HomePageWorkSummary from '../components/HomePageWorkSummary'
+import PageMeta from '../components/PageMeta'
 
 const IndexPage = () => (
   <Layout>
+    <PageMeta title="Welcome" />
     <ConstrainedWidth>
       <section className="centered">
         <Heading level={1}>

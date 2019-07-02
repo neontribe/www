@@ -12,9 +12,11 @@ import {
 import TriberGrid from '../components/TriberGrid'
 import VerticalSpacing from '../components/VerticalSpacing'
 import { ExternalLink } from '../components/Link'
+import PageMeta from '../components/PageMeta'
 
 const NotFoundPage = () => (
   <Layout>
+    <PageMeta title="The Tribe" />
     <ConstrainedWidth>
       <div className="centered">
         <Heading level={1}>

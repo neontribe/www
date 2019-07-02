@@ -10,6 +10,7 @@ import Text from '../components/Text'
 import SquiggleSeparator from '../components/SquiggleSeparator'
 
 import { capitalizeFirstLetter } from '../helpers'
+import PageMeta from '../components/PageMeta'
 
 const BlogPage = ({
   data: {
@@ -25,6 +26,7 @@ const BlogPage = ({
 
   return (
     <Layout>
+      <PageMeta title="Blogs" />
       <ConstrainedWidth>
         <div style={{ textAlign: 'center ' }}>
           <Heading level={1}>

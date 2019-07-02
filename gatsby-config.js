@@ -1,7 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: 'Neontribe',
+    defaultTitle: 'Welcome',
     siteUrl: 'https://www.neontribe.co.uk',
+    siteName: 'Neontribe',
+    titleTemplate: '%s · Neontribe',
+    description: 'Neontribe User Centered Design and Development',
+    image: '/static/site-meta-image.png',
   },
   plugins: [
     'gatsby-remark-source-name',

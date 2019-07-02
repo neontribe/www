@@ -4,9 +4,11 @@ import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import Heading from '../components/Heading'
 import Text from '../components/Text'
+import PageMeta from '../components/PageMeta'
 
 const NotFoundPage = () => (
   <Layout>
+    <PageMeta title="Not Found" />
     <ConstrainedWidth>
       <div className="centered">
         <Heading level={1}>

@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { Location } from '@reach/router'
+import { StaticQuery, graphql } from 'gatsby'
 
 const PageMeta = ({
   type = 'website',
@@ -11,43 +12,72 @@ const PageMeta = ({
   publishedDate,
   modifiedDate,
 }) => (
-  <Location>
-    {({ location }) => (
-      <Helmet>
-        <meta property="og:site_name" content="Neontribe" />
-        <meta property="og:type" content={type} />
-        <meta property="og:title" content={title} />
-        {description && (
-          <meta property="og:description" content={description} />
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          siteMetadata {
+            defaultTitle
+            siteUrl
+            siteName
+            titleTemplate
+            description
+            image
+          }
+        }
+      }
+    `}
+    render={({ site: { siteMetadata } }) => (
+      <Location>
+        {({ location }) => (
+          <Helmet
+            title={title || siteMetadata.defaultTitle}
+            titleTemplate={siteMetadata.titleTemplate}
+          >
+            <meta property="og:site_name" content="Neontribe" />
+            <meta property="og:type" content={type} />
+            <meta property="og:title" content={title} />
+            <meta
+              property="og:description"
+              content={description || siteMetadata.description}
+            />
+            <meta
+              property="og:image"
+              content={`${siteMetadata.siteUrl}${image || siteMetadata.image}`}
+            />
+            {type === 'article' && publishedDate && (
+              <meta
+                property="article:published_time"
+                content={publishedDate.toISOString()}
+              />
+            )}
+            {type === 'article' && modifiedDate && (
+              <meta
+                property="article:modified_time"
+                content={modifiedDate.toISOString()}
+              />
+            )}
+            <meta property="og:url" content={location.href} />}
+            <meta name="twitter:site" content="@neontribe" />
+            <meta
+              name="twitter:card"
+              content={image ? 'summary_large_image' : 'summary'}
+            />
+            <meta name="twitter:title" content={title} />
+            <meta
+              name="twitter:description"
+              content={description || siteMetadata.description}
+            />
+            <meta
+              name="twitter:image"
+              content={`${siteMetadata.siteUrl}${image || siteMetadata.image}`}
+            />
+            <meta property="twitter:url" content={location.href} />
+          </Helmet>
         )}
-        {image && <meta property="og:image" content={image} />}
-        {type === 'article' && publishedDate && (
-          <meta
-            property="article:published_time"
-            content={publishedDate.toISOString()}
-          />
-        )}
-        {type === 'article' && modifiedDate && (
-          <meta
-            property="article:modified_time"
-            content={modifiedDate.toISOString()}
-          />
-        )}
-        <meta property="og:url" content={location.href} />}
-        <meta name="twitter:site" content="@neontribe" />
-        <meta
-          name="twitter:card"
-          content={image ? 'summary_large_image' : 'summary'}
-        />
-        <meta name="twitter:title" content={title} />
-        {description && (
-          <meta name="twitter:description" content={description} />
-        )}
-        {image && <meta name="twitter:image" content={image} />}
-        <meta property="twitter:url" content={location.href} />
-      </Helmet>
+      </Location>
     )}
-  </Location>
+  />
 )
 
 PageMeta.propTypes = {

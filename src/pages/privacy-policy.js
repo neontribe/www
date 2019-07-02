@@ -4,9 +4,11 @@ import RenderContent from '../components/RenderContent'
 import { StaticQuery, graphql } from 'gatsby'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import { c_PRIMARY_BACKGROUND } from '../theme'
+import PageMeta from '../components/PageMeta'
 
 const NotFoundPage = () => (
   <Layout>
+    <PageMeta title="Privacy" />
     <StaticQuery
       query={graphql`
         query {
