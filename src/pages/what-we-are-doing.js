@@ -31,7 +31,7 @@ const WhatWeAreDoingPage = () => (
               and an international reputation in travel and tourism. Our work
               identifies the issues organisations have and finds ways to help
               them out. Our design and development focuses on the people those
-              organisations work with, their situations and stories
+              organisations work with, their situations and stories.
             </Text>
           </p>
         </div>
