@@ -1,22 +1,25 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Hexagon from '../Hexagon'
+import classNames from 'classnames'
 
 import { breakpoint, REM_PX } from '../../theme'
 
 const CarouselImages = ({ images, activeImage, goToItem, imageSize }) => (
   <div className="carousel__images">
     {images.map((image, i) => (
-      <button
-        className={`carousel__image${
-          i === activeImage ? ' carousel__image--is-active' : ''
-        }`}
-        key={image.src}
-        onClick={() => goToItem(i)}
-        aria-label={`Go to item ${i + 1}`}
-      >
-        <Hexagon src={image.src} title={image.title} />
-      </button>
+      <div className="carousel__image" key={image.src}>
+        <button
+          className={classNames(
+            'carousel__image__button',
+            i === activeImage && 'carousel__image__button--is-active'
+          )}
+          onClick={() => goToItem(i)}
+          aria-label={`Go to item ${i + 1}`}
+        >
+          <Hexagon src={image.src} title={image.title} />
+        </button>
+      </div>
     ))}
 
     <style jsx>{`
@@ -29,27 +32,32 @@ const CarouselImages = ({ images, activeImage, goToItem, imageSize }) => (
         z-index: 1;
       }
       .carousel__image {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+      .carousel__image__button {
+        background: none;
+        border: none;
+        display: inline-block;
         height: 50%;
         filter: grayscale(100%);
-        background: none;
-        border: 0;
-        cursor: pointer;
         display: none;
-        transition: all 0.2s ease-in-out;
       }
-      .carousel__image--is-active {
+      .carousel__image__button--is-active {
         height: 100%;
         display: block;
         filter: none;
       }
-      .carousel__image:not(.carousel__image--is-active):hover {
-        transform: scale(1.1, 1.1);
+
+      .carousel__image__button:not(.carousel__image__button--is-active):hover {
+        transform: none;
       }
 
       @media (${breakpoint('sm')}) {
-        .carousel__image {
+        .carousel__image__button {
           display: block;
-          width: 33.33%;
+          transition: all 0.2s ease-in-out;
         }
       }
     `}</style>
