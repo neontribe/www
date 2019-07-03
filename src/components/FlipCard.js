@@ -11,18 +11,14 @@ const cloneWithProps = (node, props) => node && React.cloneElement(node, props)
 const FlipCard = ({ children, isFlipped, animTime }) => (
   <div className="card-container">
     <div className="card-body">
-      {cloneWithProps(findChild(children, CardBack), { isFlipped })}
+      {cloneWithProps(findChild(children, CardBack), { isFlipped, animTime })}
       {/* Flip tell the front face to inform the animations */}
-      {cloneWithProps(findChild(children, CardFront), { isFlipped })}
+      {cloneWithProps(findChild(children, CardFront), { isFlipped, animTime })}
     </div>
     <style jsx>{`
       .card-body {
         width: 100%;
         height: 100%;
-        transform-style: preserve-3d;
-        transition: all ${animTime}s linear;
-        transform: ${isFlipped ? 'rotateY(-180deg)' : 'rotateY(0)'}
-          translateZ(0);
         display: flex;
       }
 
@@ -71,17 +67,16 @@ const cardSideStyles = css`
 `
 
 // Card front
-const CardFront = ({ children, isFlipped }) => (
-  <div className={`card-side card-front ${isFlipped ? 'is-flipped' : ''}`}>
+const CardFront = ({ children, isFlipped, animTime }) => (
+  <div className="card-side card-front">
     {children}
     <style jsx>{cardSideStyles}</style>
     <style jsx>{`
-      .card-front.is-flipped {
-        pointer-events: none;
-      }
-
       .card-front {
-        transform: rotateY(0) translateZ(1px);
+        pointer-events: ${isFlipped ? 'none' : 'all'};
+        transform: ${isFlipped ? 'rotateY(-180deg)' : 'rotateY(0deg)'}
+          translateZ(0px);
+        transition: all ${animTime}s linear;
       }
     `}</style>
   </div>
@@ -95,13 +90,15 @@ CardFront.propTypes = {
 }
 
 // Card back
-const CardBack = ({ children, isFlipped }) => (
+const CardBack = ({ children, isFlipped, animTime }) => (
   <div className="card-side card-back">
     {children}
     <style jsx>{cardSideStyles}</style>
     <style jsx>{`
       .card-back {
-        transform: rotateY(180deg) translateZ(0px);
+        transform: ${isFlipped ? 'rotateY(0deg)' : 'rotateY(180deg)'}
+          translateZ(0px);
+        transition: all ${animTime}s linear;
         pointer-events: ${isFlipped ? 'all' : 'none'};
       }
     `}</style>
