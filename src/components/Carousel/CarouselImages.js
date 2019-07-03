@@ -24,34 +24,39 @@ const CarouselImages = ({ images, activeImage, goToItem, imageSize }) => (
 
     <style jsx>{`
       .carousel__images {
+        width: 100%;
+        height: ${imageSize}px;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: ${imageSize}px;
         position: relative;
         z-index: 1;
       }
       .carousel__image {
+        width: 33.33%;
         height: 100%;
         display: flex;
         align-items: center;
       }
       .carousel__image__button {
+        width: 100%;
+        transform: scale(0.5);
+        height: 100%;
         background: none;
         border: none;
         display: inline-block;
-        height: 50%;
         filter: grayscale(100%);
         display: none;
+        cursor: pointer;
       }
       .carousel__image__button--is-active {
-        height: 100%;
+        transform: scale(1);
         display: block;
         filter: none;
       }
 
       .carousel__image__button:not(.carousel__image__button--is-active):hover {
-        transform: none;
+        transform: scale(0.6);
       }
 
       @media (${breakpoint('sm')}) {

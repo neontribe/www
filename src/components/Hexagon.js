@@ -15,8 +15,6 @@ const Hexagon = ({ src, bgColour, size, title }) => {
           className="hexagon-svg"
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
-          width="100%"
-          height="100%"
           xlink="http://www.w3.org/1999/xlink"
           viewBox="0 0 300 300"
         >
@@ -57,20 +55,10 @@ const Hexagon = ({ src, bgColour, size, title }) => {
             .hexagon-svg {
               height: 100%;
               width: 100%;
-              display: block;
             }
 
             .hex-background {
               fill: ${bgColour};
-            }
-          `}</style>
-          <style>{`
-            object {
-              width: 100%;
-              display: block;
-              height: auto;
-              position: relative;
-              padding-top: 100%;
             }
           `}</style>
         </svg>

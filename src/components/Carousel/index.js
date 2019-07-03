@@ -51,6 +51,7 @@ const Carousel = ({ children, imageSize = 400 }) => {
           position: relative;
         }
         .carousel__controls {
+          width: 100%;
           display: flex;
           justify-content: space-between;
         }
