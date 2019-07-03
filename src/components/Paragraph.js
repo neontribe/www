@@ -3,7 +3,9 @@ import Text from './Text'
 
 const Paragraph = ({ children, ...props }) => (
   <p>
-    <Text {...props}>{children}</Text>
+    <Text display="inline" {...props}>
+      {children}
+    </Text>
     <style jsx>{`
       p {
         margin: 0;

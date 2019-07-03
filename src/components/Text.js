@@ -12,6 +12,7 @@ import {
   GUTTER_PX,
 } from '../theme'
 
+// TODO: Should we have a block level version which uses a 0 margin p?
 const Text = ({
   type = 'primary',
   alternate,
@@ -22,9 +23,11 @@ const Text = ({
   gutter = 1,
   lineHeight = 1.5,
   underline,
+  display = 'inline-block',
 }) => (
   <span
     className={classNames(
+      'text',
       type,
       transparent && 'transparent',
       alternate && 'alternate'
@@ -32,8 +35,8 @@ const Text = ({
   >
     {children}
     <style jsx>{`
-      span {
-        display: inline-block;
+      .text {
+        display: ${display};
         color: ${alternate ? c_SECONDARY_TEXT : c_PRIMARY_TEXT};
         padding: 2px ${GUTTER_PX * gutter}px;
         line-height: ${lineHeight};
@@ -73,6 +76,7 @@ Text.propTypes = {
   size: PropTypes.oneOf(Object.keys(fontSizes)),
   gutter: PropTypes.number,
   lineHeight: PropTypes.number,
+  display: PropTypes.string, // TODO: Remove this.
 }
 
 export default Text

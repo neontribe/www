@@ -8,7 +8,7 @@ import { ExternalLink } from '../components/Link'
 // Copied from templates/blog-post.js
 const ContentHeadings = ({ size, children, type, ...props }) => (
   <Heading {...props}>
-    <Text size={size} lineHeight={1.2} heavy type={type}>
+    <Text size={size} lineHeight={1.2} gutter={0} heavy type={type}>
       {children}
     </Text>
   </Heading>
@@ -27,11 +27,11 @@ const RenderContent = ({ htmlAst, type, children }) => {
       h3: props => (
         <ContentHeadings {...props} type={type} level={3} size="normal" />
       ),
-      p: props => <Paragraph {...props} type={type} />,
+      p: props => <Paragraph gutter={0} {...props} type={type} />,
       // TODO: Discern external vs external links?
       a: ({ children, ...props }) => (
         <ExternalLink {...props}>
-          <Text gutter={0} underline type={type}>
+          <Text gutter={0} type={type} underline display="inline">
             {children}
           </Text>
         </ExternalLink>
