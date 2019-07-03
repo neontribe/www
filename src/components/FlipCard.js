@@ -62,6 +62,7 @@ const cardSideStyles = css`
     position: relative;
     z-index: 1;
     backface-visibility: hidden;
+    transform-style: preserve-3d;
   }
 
   .card-side + .card-side {
