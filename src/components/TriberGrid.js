@@ -23,7 +23,6 @@ const TriberGridComponent = ({ tribers }) => (
     <style jsx>{`
       .triber-grid {
         display: grid;
-        padding: 0 ${GUTTER_PX}px;
         grid-gap: ${GUTTER_PX * 5}px;
         grid-template-columns: repeat(auto-fill, 300px);
         justify-content: center;
