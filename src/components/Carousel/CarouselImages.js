@@ -22,8 +22,9 @@ const CarouselImages = ({ images, activeImage, goToItem, imageSize }) => (
     <style jsx>{`
       .carousel__images {
         display: flex;
+        justify-content: center;
         align-items: center;
-        height: ${imageSize / REM_PX}rem;
+        height: ${imageSize}px;
         position: relative;
         z-index: 1;
       }
@@ -38,7 +39,7 @@ const CarouselImages = ({ images, activeImage, goToItem, imageSize }) => (
       }
       .carousel__image--is-active {
         height: 100%;
-        display: flex;
+        display: block;
         filter: none;
       }
       .carousel__image:not(.carousel__image--is-active):hover {
@@ -47,7 +48,8 @@ const CarouselImages = ({ images, activeImage, goToItem, imageSize }) => (
 
       @media (${breakpoint('sm')}) {
         .carousel__image {
-          display: flex;
+          display: block;
+          width: 33.33%;
         }
       }
     `}</style>
