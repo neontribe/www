@@ -16,9 +16,14 @@ import castLogo from '../data/funders/cast-logo-bw.png'
 import comicReliefLogo from '../data/funders/comic-relief-logo-bw.png'
 import mhfLogo from '../data/funders/mhf-logo-bw.png'
 import phfLogo from '../data/funders/PHF-logo-bw.png'
+import PageMeta from '../components/PageMeta'
 
 const WhatWeAreDoingPage = () => (
   <Layout>
+    <PageMeta
+      title="What we're doing"
+      description="Neontribe is a digital agency. We research for context. We design for use. We code to completion. We test to exhaustion. Then we engineer enhancement."
+    />
     <ConstrainedWidth>
       <Heading level={1}>
         <div className="centered">
@@ -31,7 +36,7 @@ const WhatWeAreDoingPage = () => (
               and an international reputation in travel and tourism. Our work
               identifies the issues organisations have and finds ways to help
               them out. Our design and development focuses on the people those
-              organisations work with, their situations and stories
+              organisations work with, their situations and stories.
             </Text>
           </p>
         </div>

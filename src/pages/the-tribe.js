@@ -12,9 +12,14 @@ import {
 import TriberGrid from '../components/TriberGrid'
 import VerticalSpacing from '../components/VerticalSpacing'
 import { ExternalLink } from '../components/Link'
+import PageMeta from '../components/PageMeta'
 
 const NotFoundPage = () => (
   <Layout>
+    <PageMeta
+      title="The Tribe"
+      description="Neontribe is a digital agency. Why neon? It’s the colour of tech. Why tribe? Individuals collaborating, hand-making useful tools that do a job of work."
+    />
     <ConstrainedWidth>
       <div className="centered">
         <Heading level={1}>

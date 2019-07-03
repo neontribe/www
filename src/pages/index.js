@@ -10,9 +10,11 @@ import Link, { ExternalLink } from '../components/Link'
 import SquiggleSeparator from '../components/SquiggleSeparator'
 import StoryCarousel from '../components/StoryCarousel'
 import HomePageWorkSummary from '../components/HomePageWorkSummary'
+import PageMeta from '../components/PageMeta'
 
 const IndexPage = () => (
   <Layout>
+    <PageMeta title="Welcome" />
     <ConstrainedWidth>
       <section className="centered">
         <Heading level={1}>
@@ -24,7 +26,7 @@ const IndexPage = () => (
           <Text size="medium">
             Neontribe is a digital agency working in user research, software
             development and design. We're agile by instinct, and user-centred in
-            our practise. We work together to identify and deliver on user need.
+            our practice. We work together to identify and deliver on user need.
           </Text>
         </p>
       </section>

@@ -19,7 +19,7 @@ const mapListItems = children =>
 
 const HousekeepingList = ({ children, title }) => (
   <div className="housekeeping-list">
-    <Heading level={3}>{title}</Heading>
+    {title}
     {children && <ul className="heading-list">{mapListItems(children)}</ul>}
 
     <style jsx>{`
@@ -45,23 +45,23 @@ export default () => (
       <div className="housekeeping">
         <HousekeepingList
           title={
-            <ExternalLink href="mailto://hello@neontribe.co.uk">
-              <Text alternate weight={500}>
+            <ExternalLink href="mailto:hello@neontribe.co.uk">
+              <Text lineHeight={2} alternate weight={500}>
                 hello@neontribe.co.uk
               </Text>
             </ExternalLink>
           }
         >
           <li>
-            <ExternalLink href="tel://0845 689 0896">
-              <Text alternate size="small">
+            <ExternalLink href="tel:0845 689 0896">
+              <Text lineHeight={2} alternate size="small">
                 0845 689 0896
               </Text>
             </ExternalLink>
           </li>
           <li>
             <GatsbyLink to="/privacy-policy" title={`Link to privacy policy`}>
-              <Text alternate underline size="small">
+              <Text lineHeight={2} alternate underline size="small">
                 Privacy Policy
               </Text>
             </GatsbyLink>
