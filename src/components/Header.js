@@ -93,11 +93,11 @@ const Nav = () => (
   </nav>
 )
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <ConstrainedWidth>
     <header className="header">
       <div className="logo-wrapper">
-        <GatsbyLink to="/" title={`Link to ${siteTitle} homepage`}>
+        <GatsbyLink to="/" title={`Link to Neontribe homepage`}>
           <Logo />
         </GatsbyLink>
       </div>
@@ -138,13 +138,5 @@ const Header = ({ siteTitle }) => (
     `}</style>
   </ConstrainedWidth>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: '',
-}
 
 export default Header
