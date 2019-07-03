@@ -20,7 +20,10 @@ import PageMeta from '../components/PageMeta'
 
 const WhatWeAreDoingPage = () => (
   <Layout>
-    <PageMeta title="What we're doing" />
+    <PageMeta
+      title="What we're doing"
+      description="Neontribe is a digital agency. We research for context. We design for use. We code to completion. We test to exhaustion. Then we engineer enhancement."
+    />
     <ConstrainedWidth>
       <Heading level={1}>
         <div className="centered">
