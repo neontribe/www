@@ -21,7 +21,8 @@ const FlipCard = ({ children, isFlipped, animTime }) => (
         height: 100%;
         transform-style: preserve-3d;
         transition: all ${animTime}s linear;
-        transform: ${isFlipped ? 'rotate3d(0, 1, 0, -180deg)' : 'none'};
+        transform: ${isFlipped ? 'rotateY(-180deg)' : 'rotateY(0)'}
+          translateZ(0);
         display: flex;
       }
 
@@ -33,8 +34,8 @@ const FlipCard = ({ children, isFlipped, animTime }) => (
 
       .card-container {
         height: 100%;
+        transform-style: preserve-3d;
         position: relative;
-        z-index: 1;
         perspective: 1000px;
       }
     `}</style>
@@ -60,7 +61,6 @@ const cardSideStyles = css`
     height: 100%;
     width: 100%;
     position: relative;
-    z-index: 1;
     backface-visibility: hidden;
     transform-style: preserve-3d;
   }
@@ -78,6 +78,10 @@ const CardFront = ({ children, isFlipped }) => (
     <style jsx>{`
       .card-front.is-flipped {
         pointer-events: none;
+      }
+
+      .card-front {
+        transform: rotateY(0) translateZ(1px);
       }
     `}</style>
   </div>
@@ -97,7 +101,7 @@ const CardBack = ({ children, isFlipped }) => (
     <style jsx>{cardSideStyles}</style>
     <style jsx>{`
       .card-back {
-        transform: rotate3d(0, 1, 0, 180deg);
+        transform: rotateY(180deg) translateZ(0px);
         pointer-events: ${isFlipped ? 'all' : 'none'};
       }
     `}</style>
