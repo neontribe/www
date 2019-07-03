@@ -22,10 +22,27 @@ const TriberGridComponent = ({ tribers }) => (
     ))}
     <style jsx>{`
       .triber-grid {
-        display: grid;
-        grid-gap: ${GUTTER_PX * 5}px;
-        grid-template-columns: repeat(auto-fill, 300px);
-        justify-content: center;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: -${GUTTER_PX * 5}px;
+      }
+      .triber-container {
+        margin: ${GUTTER_PX * 2.5}px;
+      }
+
+      @supports (grid) {
+        /* IE11 doesn't support @support, but it supports grid! confusing */
+        .triber-grid {
+          display: grid;
+          grid-gap: ${GUTTER_PX * 5}px;
+          grid-template-columns: repeat(auto-fill, 300px);
+          justify-content: center;
+          margin: 0;
+        }
+        .triber-container {
+          margin: 0;
+        }
       }
 
       .triber-sizer {
