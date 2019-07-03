@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import get from 'lodash.get'
 import TribeMember from './TribeMember'
 import RenderContent from './RenderContent'
-import { GUTTER_PX, breakpoint } from '../theme'
+import { GUTTER_PX } from '../theme'
 
 const TriberGridComponent = ({ tribers }) => (
   <div className="triber-grid">
