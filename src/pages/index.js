@@ -35,7 +35,7 @@ const IndexPage = () => (
       <section className="centered">
         <Heading level={1}>
           <Text weight={500} size="large">
-            The tribe
+            Journeys to the Tribe
           </Text>
         </Heading>
         <StoryCarousel />
