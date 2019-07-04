@@ -6,14 +6,6 @@ const nextId = () => `image-bg-${id++}`
 
 const Hexagon = ({ src, bgColour, size, title }) => {
   const id = nextId()
-  const [href, setHref] = React.useState(null)
-
-  // TOOD make a custom hook
-  React.useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setHref(window.location.href)
-    }
-  }, [])
 
   return (
     <svg
@@ -55,7 +47,7 @@ const Hexagon = ({ src, bgColour, size, title }) => {
       <polygon
         className="hex"
         points="280,75 150,0 20,75 20,225 150,300 280,225"
-        fill={`url('${href}#${id}')`}
+        fill={`url('#${id}')`}
       ></polygon>
       <style jsx>{`
         .hexagon-svg {
