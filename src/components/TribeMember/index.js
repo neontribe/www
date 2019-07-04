@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import Img from 'gatsby-image'
+import Img from 'gatsby-image/withIEPolyfill'
+import ShimlessImg from 'gatsby-image'
 
 import { c_NEONS } from '../../theme'
 import FlipCard, { CardFront, CardBack } from '../FlipCard'
@@ -81,7 +82,7 @@ TribeMember.propTypes = {
   bio: PropTypes.node,
   neonSeparatorColour: PropTypes.oneOf(c_NEONS),
   // Inherited prop types
-  fluid: Img.propTypes.fluid,
+  fluid: ShimlessImg.propTypes.fluid,
   headingLevel: Heading.propTypes.level,
 }
 

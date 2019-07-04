@@ -21,6 +21,7 @@ const getPostEntries = post =>
 
 // Creates frontmatter for all keys except 'markdown' and 'html'
 const createFrontmatter = post => {
+  post = formatDates(post)
   const author = users.find(user => user.id === post.author_id)
   const authorEntries = getAuthorEntries(author)
 
@@ -32,6 +33,13 @@ const createFrontmatter = post => {
     .map(([key, value]) => `author_${key}: ${convertToRelativeImports(value)}`)
     .join('\n')}\n---`
 }
+
+const formatDates = post => ({
+  ...post,
+  created_at: new Date(post.created_at).toISOString(),
+  updated_at: new Date(post.updated_at).toISOString(),
+  published_at: new Date(post.published_at).toISOString(),
+})
 
 posts
   .filter(post => !post.page)

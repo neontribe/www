@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import get from 'lodash.get'
 import TribeMember from './TribeMember'
 import RenderContent from './RenderContent'
-import { GUTTER_PX, breakpoint } from '../theme'
+import { GUTTER_PX } from '../theme'
 
 const TriberGridComponent = ({ tribers }) => (
   <div className="triber-grid">
@@ -22,11 +22,27 @@ const TriberGridComponent = ({ tribers }) => (
     ))}
     <style jsx>{`
       .triber-grid {
-        display: grid;
-        padding: 0 ${GUTTER_PX}px;
-        grid-gap: ${GUTTER_PX * 5}px;
-        grid-template-columns: repeat(auto-fill, 300px);
-        justify-content: center;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      .triber-container {
+        margin: ${GUTTER_PX}px;
+      }
+
+      @supports (display: grid) {
+        /* IE11 doesn't support @support, but it supports grid! confusing */
+        .triber-grid {
+          display: grid;
+          grid-gap: ${GUTTER_PX * 5}px;
+          grid-template-columns: repeat(auto-fill, 300px);
+          justify-content: center;
+          margin: 0;
+        }
+        .triber-container {
+          margin: 0;
+        }
       }
 
       .triber-sizer {

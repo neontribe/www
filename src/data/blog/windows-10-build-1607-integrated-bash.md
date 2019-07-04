@@ -11,11 +11,11 @@ language: 'en_US'
 meta_title: null
 meta_description: null
 author_id: 2
-created_at: '2016-08-11 09:56:52'
+created_at: '2016-08-11T08:56:52.000Z'
 created_by: 2
-updated_at: '2018-03-08 13:41:50'
+updated_at: '2018-03-08T13:41:50.000Z'
 updated_by: 2
-published_at: '2016-08-12 11:45:26'
+published_at: '2016-08-12T10:45:26.000Z'
 published_by: 2
 visibility: 'public'
 mobiledoc: null

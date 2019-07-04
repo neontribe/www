@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { distanceInWordsToNow } from 'date-fns'
+import { distanceInWordsToNow, parse } from 'date-fns'
 
 import Link from '../components/Link'
 import Layout from '../components/Layout'
@@ -42,7 +42,7 @@ const BlogPage = ({
               <Link to={`/blog/${node.frontmatter.slug}`}>
                 <Heading level={3} size="small">
                   <Text size="normal">
-                    {getDateString(new Date(node.frontmatter.published_at))}
+                    {getDateString(parse(node.frontmatter.published_at))}
                   </Text>
                 </Heading>
                 <Heading level={2}>
