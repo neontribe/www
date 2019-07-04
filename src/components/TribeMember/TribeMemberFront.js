@@ -77,6 +77,7 @@ const TribeMemberFront = ({
           transparent ${CUT_CORNER_PX}px,
           ${c_SECONDARY_BACKGROUND} ${CUT_CORNER_PX}px
         );
+        flex-shrink: 0;
       }
 
       .content {
