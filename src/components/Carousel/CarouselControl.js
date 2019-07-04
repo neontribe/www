@@ -7,13 +7,15 @@ const CarouselControl = ({ children, onClick, label }) => (
   <button className="carousel_control" onClick={onClick} aria-label={label}>
     {children}
     <style jsx>{`
-      background: none;
-      border: 0;
-      font-family: inherit;
-      font-size: 2rem;
-      color: ${c_PRIMARY_TEXT};
-      cursor: pointer;
-      user-select: none;
+      .carousel_control {
+        background: none;
+        border: 0;
+        font-family: inherit;
+        font-size: 2rem;
+        color: ${c_PRIMARY_TEXT};
+        cursor: pointer;
+        user-select: none;
+      }
     `}</style>
   </button>
 )
