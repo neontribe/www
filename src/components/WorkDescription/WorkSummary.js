@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Img from 'gatsby-image'
+import Img from 'gatsby-image/withIEPolyfill'
+import ShimlessImg from 'gatsby-image'
 import css from 'styled-jsx/css'
 
 import {
@@ -91,7 +92,7 @@ const WorkSummary = ({ alternate, level, title, fluid, problem }) => {
 WorkSummary.propTypes = {
   alternate: PropTypes.bool,
   level: PropTypes.oneOf([1, 2, 3, 4]).isRequired,
-  fluid: Img.propTypes.fluid,
+  fluid: ShimlessImg.propTypes.fluid,
   title: PropTypes.node,
   problem: PropTypes.node,
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import Img from 'gatsby-image/withIEPolyfill'
 import css from 'styled-jsx/css'
 
 import { c_SECONDARY_BACKGROUND, GUTTER_PX, CUT_CORNER_PX } from '../../theme'
@@ -32,6 +32,7 @@ const TribeMemberFront = ({
         className={imageStyles.className}
         fluid={fluid}
         alt={`${name}'s profile`}
+        objectFit="cover"
       />
     ) : (
       <img
