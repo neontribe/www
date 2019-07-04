@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import CarouselControl from './CarouselControl'
 import CarouselImages from './CarouselImages'
 import CarouselItem from './CarouselItem'
@@ -7,7 +6,7 @@ import Arrow from '../../../prototype/global-images/arrow.svg'
 
 const moduloWithMax = (num, max) => ((num % max) + max) % max
 
-const Carousel = ({ children, imageSize = 400 }) => {
+const Carousel = ({ children }) => {
   const [activeItem, setActiveItem] = React.useState(1)
 
   const nextItem = () => {
@@ -35,7 +34,6 @@ const Carousel = ({ children, imageSize = 400 }) => {
           }))}
           activeImage={activeItem}
           goToItem={setActiveItem}
-          imageSize={imageSize}
         />
         <CarouselControl label="Next Item" onClick={nextItem}>
           <img className="arrow next-arrow" src={Arrow} />
@@ -51,12 +49,10 @@ const Carousel = ({ children, imageSize = 400 }) => {
           position: relative;
         }
         .carousel__controls {
+          margin-bottom: -5%;
           width: 100%;
           display: flex;
           justify-content: space-between;
-        }
-        .carousel__items {
-          transform: translateY(-${imageSize / 4}px);
         }
         .arrow {
           width: 30px;
@@ -82,7 +78,6 @@ const arrayOfLength = (expectedLength, props, propName, componentName) => {
 Carousel.propTypes = {
   // Must have 3 children
   children: arrayOfLength.bind(null, 3),
-  imageSize: PropTypes.number,
 }
 
 Carousel.Item = CarouselItem
