@@ -25,13 +25,13 @@ const TriberGridComponent = ({ tribers }) => (
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        margin: -${GUTTER_PX * 5}px;
+        width: 100%;
       }
       .triber-container {
-        margin: ${GUTTER_PX * 2.5}px;
+        margin: ${GUTTER_PX}px;
       }
 
-      @supports (grid) {
+      @supports (display: grid) {
         /* IE11 doesn't support @support, but it supports grid! confusing */
         .triber-grid {
           display: grid;
