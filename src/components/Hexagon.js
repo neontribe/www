@@ -20,7 +20,7 @@ const Hexagon = ({ src, bgColour, size, title }) => {
       className="hexagon-svg"
       xmlns="http://www.w3.org/2000/svg"
       version="1.1"
-      xlink="http://www.w3.org/1999/xlink"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 300 300"
     >
       {title && <title>{title}</title>}
@@ -42,11 +42,12 @@ const Hexagon = ({ src, bgColour, size, title }) => {
           ></rect>
           {src && (
             <image
+              className="image"
               x={`${(100 - size) / 2}%`}
               y={`${(100 - size) / 2}%`}
               width={`${size}%`}
               height={`${size}%`}
-              href={src}
+              xlinkHref={src}
             />
           )}
         </pattern>
