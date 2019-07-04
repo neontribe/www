@@ -78,24 +78,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-styled-jsx',
-    {
-      resolve: 'gatsby-plugin-robots-txt',
-      options: {
-        // TODO: do this with NODE_ENV
-        resolveEnv: () =>
-          process.env.NOW_GITHUB_COMMIT_REF === 'master'
-            ? 'production'
-            : 'development',
-        env: {
-          development: {
-            policy: [{ userAgent: '*', disallow: ['/'] }],
-          },
-          production: {
-            policy: [{ userAgent: '*', disallow: ['/prototype/'] }],
-          },
-        },
-      },
-    },
     'gatsby-plugin-sitemap',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
