@@ -16,6 +16,7 @@ const Layout = ({ children }) => (
         src: url('/fonts/Renner-it-Bold.woff2') format('woff2'),
           url('/fonts/Renner-it-Bold.woff') format('woff');
         font-weight: 700;
+        font-display: swap;
       }
 
       @font-face {
@@ -24,6 +25,7 @@ const Layout = ({ children }) => (
           url('/fonts/Renner-it-Book.woff') format('woff');
         font-weight: 400;
         font-style: normal;
+        font-display: swap;
       }
 
       @font-face {
@@ -32,6 +34,7 @@ const Layout = ({ children }) => (
           url('/fonts/Renner-it-BookItalic.woff') format('woff');
         font-weight: 400;
         font-style: italic;
+        font-display: swap;
       }
 
       @font-face {
@@ -39,6 +42,7 @@ const Layout = ({ children }) => (
         src: url('/fonts/Renner-it-Medium.woff2') format('woff2'),
           url('/fonts/Renner-it-Medium.woff') format('woff');
         font-weight: 500;
+        font-display: swap;
       }
 
       html,
