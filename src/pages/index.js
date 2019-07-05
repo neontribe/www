@@ -40,6 +40,8 @@ const IndexPage = () => (
         </Heading>
         <StoryCarousel />
 
+        <VerticalSpacing size={5} />
+
         <Link button to="/the-tribe">
           Meet the tribe
         </Link>
