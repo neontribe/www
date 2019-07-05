@@ -2,7 +2,7 @@
 title: |
   Helping more young families get fresh fruit and veg
 subtitle: |
-  Delivering simple technology for the the Alexandra Rose charity
+  Delivering simple technology for the Alexandra Rose charity
 problem: |
   Partners working on the Rose Vouchers for Fruit & Veg Project were writing out lists by hand and their team was copying them into several different spreadsheets. To help more people access healthy food they wanted to embrace technology.
 solution: |
