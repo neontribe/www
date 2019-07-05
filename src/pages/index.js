@@ -39,9 +39,7 @@ const IndexPage = () => (
           </Text>
         </Heading>
         <StoryCarousel />
-      </section>
 
-      <section className="centered">
         <Link button to="/the-tribe">
           Meet the tribe
         </Link>
