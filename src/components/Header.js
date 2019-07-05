@@ -34,7 +34,11 @@ const activeLinkStyles = css.resolve`
 `
 
 const NavLink = ({ children, active, ...props }) => (
-  <Link {...props} activeClassName={activeLinkStyles.className}>
+  <Link
+    {...props}
+    activeClassName={activeLinkStyles.className}
+    partiallyActive={true}
+  >
     <Text lineHeight={2} weight={500}>
       {children}
     </Text>
