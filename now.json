@@ -38,6 +38,11 @@
       "headers": { "Location": "/prototype/" }
     },
     {
+      "src": "/the-people-of-neontribe(/?)",
+      "status": 302,
+      "headers": { "Location": "/the-tribe" }
+    },
+    {
       "src": "/we're-not-designers-except-we-are(/?)",
       "status": 302,
       "headers": { "Location": "/blog/we're-not-designers-except-we-are" }
