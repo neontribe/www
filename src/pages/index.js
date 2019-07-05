@@ -39,9 +39,9 @@ const IndexPage = () => (
           </Text>
         </Heading>
         <StoryCarousel />
-      </section>
 
-      <section className="centered">
+        <VerticalSpacing size={5} />
+
         <Link button to="/the-tribe">
           Meet the tribe
         </Link>
