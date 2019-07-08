@@ -2,6 +2,17 @@
 
 This is the Neontribe website using Gatsby (React + Graphql), [Markdown](./src/data) and now.sh for deployments.
 
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+**Table of Contents**
+
+- [🚀 Quick start](#-quick-start)
+- [👷🏼‍♀️ Maintenance](#%E2%80%8D-maintenance)
+- [Deployment](#deployment)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 ## 🚀 Quick start
 
 1.  **Prerequisites**
@@ -30,7 +41,7 @@ This is the Neontribe website using Gatsby (React + Graphql), [Markdown](./src/d
 
     Save your changes and the browser will update in real time!
 
-## 👷‍♀️ Maintenance
+## 👷🏼‍♀️ Maintenance
 
 Please use `yarn` to manage the dependencies and scripts in this project. You shouldn't have to worry about which version you have, so long as it is better than 1.0.1 this system will take care of the details.
 
