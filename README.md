@@ -1,19 +1,6 @@
 # Neontribe Website
 
-The neontribe MVP with static HTML, CSS, and JS.
-
-## Dev on the prototype
-
-Use yarn
-
-```bash
-git clone git@github.com:neontribe/www.git
-cd www
-nvm install
-npm install -g yarn
-yarn
-yarn start-prototype
-```
+This is the Neontribe website using Gatsby (React + Graphql), [Markdown](./src/data) and now.sh for deployments.
 
 ## 🚀 Quick start
 
@@ -39,7 +26,7 @@ yarn start-prototype
 
     Your site is now running at `http://localhost:8000`!
 
-    _Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+    \_Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql).\_
 
     Save your changes and the browser will update in real time!
 
