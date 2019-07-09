@@ -9,6 +9,7 @@ import Link from './Link'
 import Text from './Text'
 import ConstrainedWidth from './Layout/ConstrainedWidth'
 import { ExternalLink } from './Link'
+import Loading from './Loading'
 
 const activeLinkStyles = css.resolve`
   a {

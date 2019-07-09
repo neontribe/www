@@ -83,6 +83,7 @@ export const c_SECONDARY_BACKGROUND = c_WHITE
 export const c_CALL_TO_ACTION = c_NEON_PURPLE
 export const c_LOGO_BACKGROUND = c_WHITE
 export const c_NAV_ACTIVE = c_NEON_PINK
+export const c_LOADING = c_NEON_YELLOW
 
 // Typography
 export const FONT_STACK = '"Renner*", sans-serif'

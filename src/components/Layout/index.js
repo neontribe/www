@@ -47,8 +47,8 @@ const Layout = ({ children }) => (
 
       html,
       body,
-      body > div,
-      body > div > div {
+      #___gatsby,
+      #___gatsby #mainPage {
         height: 100%;
       }
       *,
