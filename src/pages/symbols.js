@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import Text from '../components/Text'
 import Heading from '../components/Heading'
+import Centered from '../components/Centered'
 
 import * as examples from '../examples'
 
@@ -16,18 +17,11 @@ export default () => (
         </Text>
       </Heading>
     </ConstrainedWidth>
-    <div className="centered">
+    <Centered flex>
       {/* Sort keys to ensure order is consistent between static client-side js */}
       {Object.keys(examples)
         .sort()
         .map(key => React.createElement(examples[key], { key }))}
-    </div>
-    <style jsx>{`
-      .centered {
-        flex-direction: column;
-        display: flex;
-        justify-content: center;
-      }
-    `}</style>
+    </Centered>
   </Layout>
 )

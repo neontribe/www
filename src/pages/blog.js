@@ -8,6 +8,7 @@ import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import Heading from '../components/Heading'
 import Text from '../components/Text'
 import SquiggleSeparator from '../components/SquiggleSeparator'
+import Centered from '../components/Centered'
 
 import { capitalizeFirstLetter } from '../helpers'
 import PageMeta from '../components/PageMeta'
@@ -28,13 +29,13 @@ const BlogPage = ({
     <Layout>
       <PageMeta title="Blogs" />
       <ConstrainedWidth>
-        <div style={{ textAlign: 'center ' }}>
+        <Centered>
           <Heading level={1}>
             <Text size="xlarge" weight={700}>
               Our Blog
             </Text>
           </Heading>
-        </div>
+        </Centered>
         <SquiggleSeparator />
         <ul>
           {edges.map(({ node }) => (
