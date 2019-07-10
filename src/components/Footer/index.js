@@ -3,9 +3,8 @@ import PropTypes from 'prop-types'
 import { c_PRIMARY_BACKGROUND_ALTERNATIVE, GUTTER_PX } from '../../theme'
 import ConstrainedWidth from '../Layout/ConstrainedWidth'
 import Text from '../Text'
-import { ExternalLink } from '../Link'
+import InternalLink, { ExternalLink } from '../Link'
 import Heading from '../Heading'
-import GatsbyLink from 'gatsby-link'
 import twitterlogo from './twitterlogo.svg'
 
 const mapListItems = children =>
@@ -60,11 +59,11 @@ export default () => (
             </ExternalLink>
           </li>
           <li>
-            <GatsbyLink to="/privacy-policy" title={`Link to privacy policy`}>
+            <InternalLink to="/privacy-policy" title={`Link to privacy policy`}>
               <Text lineHeight={2} alternate underline size="small">
                 Privacy Policy
               </Text>
-            </GatsbyLink>
+            </InternalLink>
           </li>
         </HousekeepingList>
         <HousekeepingList
