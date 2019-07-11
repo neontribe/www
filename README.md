@@ -83,3 +83,31 @@ Please use `yarn` to manage the dependencies and scripts in this project. You sh
 The website is deployed using now.sh, the production website reflects master, pull requests which are made against master are considered staging branches.
 
 When contributing to the project branch from master and create a pull request, make sure that changes are approved and that your staging branch works as you expect. **When you merge into master the change will shortly be available on the production site.**
+
+## Updating `tribers`
+
+Don't like your bio? Want to change your words? Or maybe just give your social media links? You can change all of this data in the `tribers/` directory.
+
+Here is an example markdown file with all of the features you can have in it, exhaustively:
+
+    ---
+    name: 'John Smith'
+    words:
+      - Words
+      - Go
+      - Here
+    image: images/john.jpg
+    story: stories/john.md
+    social:
+      twitter: 'jsmith'
+      github: 'smithj'
+      linkedin: 'jsmith-23'     # this must be the bit after `in/` for your public linkedin profile URL
+      instagram: 'johns'
+      twitch: 'jsmithgaming'
+      facebook: 'john.smith'
+      youtube: 'johnschmidt'
+    ---
+
+    Your bio goes here
+
+Edit the file, commit, and make a pull request. (Don't add more than five social links though; they won't all fit.)

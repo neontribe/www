@@ -7,6 +7,9 @@ export const PAGE_WIDTH_REM = `${PAGE_WIDTH_PX / REM_PX}rem`
 
 export const CUT_CORNER_PX = GUTTER_PX * 3
 
+export const SOCIAL_MARGIN = REM_PX * 0.5
+export const SOCIAL_ICON_SIZE = REM_PX * 1.4
+
 // ------ Media Queries (px taken from antd) -------
 // Media queries breakpoints in em
 // Extra small screen / phone
