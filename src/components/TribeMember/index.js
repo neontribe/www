@@ -18,6 +18,7 @@ const TribeMember = ({
   headingLevel,
   skills,
   bio,
+  social,
   neonSeparatorColour,
 }) => {
   const [isFlipped, setFlipped] = useState(false)
@@ -51,6 +52,7 @@ const TribeMember = ({
             name={name}
             skills={skills}
             bio={bio}
+            social={social}
           />
         </CardBack>
       </FlipCard>
