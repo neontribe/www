@@ -16,6 +16,7 @@ const TriberGridComponent = ({ tribers }) => (
             headingLevel={2}
             skills={triber.frontmatter.words}
             bio={<RenderContent type="secondary" htmlAst={triber.htmlAst} />}
+            social={triber.frontmatter.social}
           />
         </div>
       </div>
@@ -75,6 +76,15 @@ export default () => (
                     ...GatsbyImageSharpFluid
                   }
                 }
+              }
+              social {
+                twitter
+                github
+                youtube
+                instagram
+                facebook
+                linkedin
+                twitch
               }
             }
           }
