@@ -17,6 +17,7 @@ import comicReliefLogo from '../data/funders/comic-relief-logo.png'
 import mhfLogo from '../data/funders/mhf-logo.png'
 import phfLogo from '../data/funders/PHF-logo.png'
 import PageMeta from '../components/PageMeta'
+import Centered from '../components/Centered'
 
 const WhatWeAreDoingPage = () => (
   <Layout>
@@ -25,22 +26,22 @@ const WhatWeAreDoingPage = () => (
       description="Neontribe is a digital agency. We research for context. We design for use. We code to completion. We test to exhaustion. Then we engineer enhancement."
     />
     <ConstrainedWidth>
-      <Heading level={1}>
-        <div className="centered">
+      <Centered>
+        <Heading level={1}>
           <Text size="large" weight={500}>
             What we're doing
           </Text>
-          <p>
-            <Text>
-              Neontribe has a national reputation for our work in tech-for-good,
-              and an international reputation in travel and tourism. Our work
-              identifies the issues organisations have and finds ways to help
-              them out. Our design and development focuses on the people those
-              organisations work with, their situations and stories.
-            </Text>
-          </p>
-        </div>
-      </Heading>
+        </Heading>
+        <p>
+          <Text>
+            Neontribe has a national reputation for our work in tech-for-good,
+            and an international reputation in travel and tourism. Our work
+            identifies the issues organisations have and finds ways to help them
+            out. Our design and development focuses on the people those
+            organisations work with, their situations and stories.
+          </Text>
+        </p>
+      </Centered>
     </ConstrainedWidth>
 
     <SquiggleSeparator></SquiggleSeparator>
@@ -97,7 +98,7 @@ const WhatWeAreDoingPage = () => (
     <SquiggleSeparator />
 
     <ConstrainedWidth>
-      <div className="centered">
+      <Centered>
         <Heading level={1}>
           <Text size="large" weight={500}>
             Get in touch
@@ -109,13 +110,8 @@ const WhatWeAreDoingPage = () => (
         <ExternalLink href="mailto:hello@neontribe.co.uk">
           <Text size="medium">hello@neontribe.co.uk</Text>
         </ExternalLink>
-      </div>
+      </Centered>
     </ConstrainedWidth>
-    <style jsx>{`
-      .centered {
-        text-align: center;
-      }
-    `}</style>
   </Layout>
 )
 

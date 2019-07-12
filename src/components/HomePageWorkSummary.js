@@ -4,6 +4,7 @@ import slugify from 'slugify'
 
 import VerticalSpacing from '../components/VerticalSpacing'
 import { WorkSummary } from '../components/WorkDescription'
+import Centered from '../components/Centered'
 import Link from '../components/Link'
 
 const randomItem = items => items[Math.floor(Math.random() * items.length)]
@@ -46,7 +47,7 @@ export default () => (
 
           <VerticalSpacing size={5} />
 
-          <div className="centered">
+          <Centered>
             <Link
               to={`/what-we-are-doing#${slugify(
                 randProj.frontmatter.title,
@@ -56,13 +57,7 @@ export default () => (
             >
               View our solution
             </Link>
-          </div>
-
-          <style jsx>{`
-            .centered {
-              text-align: center;
-            }
-          `}</style>
+          </Centered>
         </React.Fragment>
       )
     }}

@@ -10,7 +10,7 @@ const NotFoundPage = () => (
   <Layout>
     <PageMeta title="Not Found" />
     <ConstrainedWidth>
-      <div className="centered">
+      <div className="accessibility-centered">
         <Heading level={1}>
           <Text>404 Page Not Found</Text>
         </Heading>
@@ -25,7 +25,7 @@ const NotFoundPage = () => (
     </ConstrainedWidth>
 
     <style jsx>{`
-      .centered {
+      .accessibility-centered {
         text-align: center;
         display: flex;
         flex-direction: column-reverse;

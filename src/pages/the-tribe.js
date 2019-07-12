@@ -13,6 +13,7 @@ import TriberGrid from '../components/TriberGrid'
 import VerticalSpacing from '../components/VerticalSpacing'
 import { ExternalLink } from '../components/Link'
 import PageMeta from '../components/PageMeta'
+import Centered from '../components/Centered'
 
 const NotFoundPage = () => (
   <Layout>
@@ -21,7 +22,7 @@ const NotFoundPage = () => (
       description="Neontribe is a digital agency. Why neon? It’s the colour of tech. Why tribe? Individuals collaborating, hand-making useful tools that do a job of work."
     />
     <ConstrainedWidth>
-      <div className="centered">
+      <Centered>
         <Heading level={1}>
           <Text weight={500} lineHeight={1.2} size="large">
             The Tribe
@@ -29,13 +30,13 @@ const NotFoundPage = () => (
         </Heading>
         <VerticalSpacing size={2} />
         <TheTribeTopParagraph />
-      </div>
+      </Centered>
 
       <SquiggleSeparator />
       <TriberGrid />
       <SquiggleSeparator />
 
-      <div className="centered">
+      <Centered>
         <Heading level={2}>
           <Text weight={500} lineHeight={1.2} size="large">
             Join The Tribe
@@ -52,13 +53,8 @@ const NotFoundPage = () => (
         >
           Join The Tribe
         </ExternalLink>
-      </div>
+      </Centered>
     </ConstrainedWidth>
-    <style jsx>{`
-      .centered {
-        text-align: center;
-      }
-    `}</style>
   </Layout>
 )
 
