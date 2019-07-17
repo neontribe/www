@@ -101,9 +101,9 @@ const Header = () => (
   <ConstrainedWidth>
     <header className="header">
       <div className="logo-wrapper">
-        <GatsbyLink to="/" title={`Link to Neontribe homepage`}>
+        <Link to="/" title={`Link to Neontribe homepage`}>
           <Logo />
-        </GatsbyLink>
+        </Link>
       </div>
       <div className="nav-wrapper">
         <Nav />
