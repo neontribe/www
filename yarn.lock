@@ -3329,6 +3329,11 @@ commondir@^1.0.1:
   resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
   integrity sha1-3dgA2gxmEnOTzKWVDqloo6rxJTs=
 
+compiled-markov@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/compiled-markov/-/compiled-markov-1.0.1.tgz#1851840ba656719fa83526d3b34b5af65f484f48"
+  integrity sha512-EH99Q4zw9hlMBj8L3lmzDwL5rLEV1oGlNzybhwdvD7cGrdSAsGnaq2L+IG9R2chDRviuzSgZaECyQ3yayA8QQg==
+
 component-bind@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/component-bind/-/component-bind-1.0.0.tgz#00c608ab7dcd93897c0009651b1d3a8e1e73bbd1"
