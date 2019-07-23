@@ -5,7 +5,7 @@ import css from 'styled-jsx/css'
 
 import { breakpoint, c_NAV_ACTIVE } from '../theme'
 import Logo from './Logo'
-import Link from './Link'
+import { InternalLink } from './Link'
 import Text from './Text'
 import ConstrainedWidth from './Layout/ConstrainedWidth'
 import { ExternalLink } from './Link'
@@ -34,7 +34,7 @@ const activeLinkStyles = css.resolve`
 `
 
 const NavLink = ({ children, active, ...props }) => (
-  <Link
+  <InternalLink
     {...props}
     activeClassName={activeLinkStyles.className}
     partiallyActive={true}
@@ -43,7 +43,7 @@ const NavLink = ({ children, active, ...props }) => (
       {children}
     </Text>
     {activeLinkStyles.styles}
-  </Link>
+  </InternalLink>
 )
 
 const Nav = () => (
@@ -101,9 +101,9 @@ const Header = () => (
   <ConstrainedWidth>
     <header className="header">
       <div className="logo-wrapper">
-        <Link to="/" title={`Link to Neontribe homepage`}>
+        <InternalLink to="/" title={`Link to Neontribe homepage`}>
           <Logo />
-        </Link>
+        </InternalLink>
       </div>
       <div className="nav-wrapper">
         <Nav />

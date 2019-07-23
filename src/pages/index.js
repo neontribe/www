@@ -5,7 +5,7 @@ import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import Text from '../components/Text'
 import VerticalSpacing from '../components/VerticalSpacing'
 import Heading from '../components/Heading'
-import Link, { ExternalLink } from '../components/Link'
+import { InternalLink, ExternalLink } from '../components/Link'
 
 import SquiggleSeparator from '../components/SquiggleSeparator'
 import StoryCarousel from '../components/StoryCarousel'
@@ -47,9 +47,9 @@ const IndexPage = () => (
 
           <VerticalSpacing size={5} />
 
-          <Link button to="/the-tribe">
+          <InternalLink button to="/the-tribe">
             Meet the tribe
-          </Link>
+          </InternalLink>
         </Centered>
       </section>
 

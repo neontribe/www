@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { c_PRIMARY_BACKGROUND_ALTERNATIVE, GUTTER_PX } from '../../theme'
 import ConstrainedWidth from '../Layout/ConstrainedWidth'
 import Text from '../Text'
-import InternalLink, { ExternalLink } from '../Link'
+import { InternalLink, ExternalLink } from '../Link'
 import Heading from '../Heading'
 import twitterlogo from './twitterlogo.svg'
 

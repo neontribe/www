@@ -12,7 +12,7 @@ import {
   c_PRIMARY_BACKGROUND_ALTERNATIVE,
   c_SECONDARY_BACKGROUND,
 } from '../theme'
-import Link, { ExternalLink } from '../components/Link'
+import { InternalLink, ExternalLink } from '../components/Link'
 import Carousel from '../components/Carousel'
 import VerticalSpacing from '../components/VerticalSpacing'
 import Squiggle from '../components/Squiggle'
@@ -140,10 +140,10 @@ export const LinkExamples = () => (
       </Text>
     </Heading>
     <div>
-      <Link to="/">Gatsby link</Link>
-      <Link button to="/">
+      <InternalLink to="/">Gatsby link (InternalLink)</InternalLink>
+      <InternalLink button to="/">
         Gatsby button
-      </Link>
+      </InternalLink>
       <ExternalLink href="/">ExternalLink link</ExternalLink>
       <ExternalLink button href="/">
         ExternalLink button
