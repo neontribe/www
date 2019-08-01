@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import 'normalize.css'
 
+import CookieConsentBanner from '../CookieConsentBanner'
 import Header from '../Header'
 import Footer from '../Footer'
 
@@ -12,10 +13,17 @@ import VerticalSpacing from '../VerticalSpacing'
 const Page = ({ title, children }) => (
   <div className="page-layout">
     <Header siteTitle={title} />
+
     <VerticalSpacing size={10} />
+
     <main role="main">{children}</main>
+
     <VerticalSpacing size={10} />
+
     <Footer />
+
+    <CookieConsentBanner />
+
     <style jsx>{`
       .page-layout {
         min-height: 100%;
