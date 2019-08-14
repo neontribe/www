@@ -1,5 +1,5 @@
 ---
-name: 'Holly Stringer'
+name: 'Holly Allen'
 words:
   - Typography
   - Illustration
