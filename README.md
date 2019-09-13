@@ -1,19 +1,6 @@
-# Neontribe Website
+# :computer: Neontribe Website
 
-The neontribe MVP with static HTML, CSS, and JS.
-
-## Dev on the prototype
-
-Use yarn
-
-```bash
-git clone git@github.com:neontribe/www.git
-cd www
-nvm install
-npm install -g yarn
-yarn
-yarn start-prototype
-```
+The neontribe MVP with static HTML, CSS, and JS. 
 
 ## 🚀 Quick start
 
@@ -21,6 +8,9 @@ yarn start-prototype
 
     - git
     - [nvm](https://github.com/creationix/nvm)
+    - [yarn](https://github.com/yarnpkg/yarn)*
+
+    *install as a global package with `npm install -g yarn`
 
 1.  **Get up and running**
 
@@ -30,10 +20,11 @@ yarn start-prototype
     git clone git@github.com:neontribe/www.git
     cd www
     nvm use
-    npm install -g yarn
     yarn
     yarn develop
     ```
+
+    :warning: `git clone` might not work if the user is not the owner of the directory where he/she wants to clone this repository. The following error might be thrown: `Permission denied (publickey). fatal: Could not read from remote repository.` If that happens, change ownership of that directory `sudo chown <username>: <path-to-directory> -R`.
 
 1.  **Open the source code and start editing!**
 
@@ -43,13 +34,13 @@ yarn start-prototype
 
     Save your changes and the browser will update in real time!
 
-## 👷‍♀️ Maintenance
+## :wrench: Maintenance :construction:
 
-Please use `yarn` to manage the dependencies and scripts in this project. You shouldn't have to worry about which version you have, so long as it is better than 1.0.1 this system will take care of the details.
+Please use `yarn` to manage the dependencies and scripts in this project. You shouldn't have to worry about which version you have, so long as it is better than 1.0.1. This system will take care of the details.
 
 1. **Keeping your local copy up to date**
 
-   It's a good idea check that your node version and dependencies are in sync. When you pull from a branch we suggest running these commands to be sure:
+   It's a good idea check that your node version and dependencies are in sync. When you pull from a branch, we suggest running these commands to be sure:
 
    ```sh
    nvm use
@@ -66,23 +57,25 @@ Please use `yarn` to manage the dependencies and scripts in this project. You sh
 
    If the package is part of the test or build tools for this project please be sure to add `--dev`.
 
-   \*_why `--exact`? To avoid problems with dependencies updating unexpectedly because of semver masking we want to "pin" them to a specific version number. This'll also help our robots when they want to tell us about updates._
+   \*_why `--exact`? To avoid problems with dependencies updating unexpectedly because of semver masking we want to "pin" them to a specific version number. This will also help our robots when they want to tell us about updates._
 
 1. **Maintaining dependencies**
 
-   If you want to check for, and update to, new versions of our dependencies manually the easiest way to do so is by running
+   If you want to check for and update to new versions of our dependencies manually, the easiest way to do so is by running:
 
    ```sh
    yarn upgrade-interactive --latest
    ```
 
-   This will give you a nice menu of updates to choose from, and will maintain `package.json` and `yarn.lock` automatically.
+   This will give you a nice menu of updates to choose from and will maintain `package.json` and `yarn.lock` automatically.
 
-## Deployment
+## :fireworks: Deployment
 
-The website is deployed using now.sh, the production website reflects master, pull requests which are made against master are considered staging branches.
+The website is deployed using `now.sh`. The production website reflects the `master` branch. Pull requests which are made against master are considered staging branches.
 
 When contributing to the project branch from master and create a pull request, make sure that changes are approved and that your staging branch works as you expect. **When you merge into master the change will shortly be available on the production site.**
+
+## Adding `tribers`
 
 ## Updating `tribers`
 
