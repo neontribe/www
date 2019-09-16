@@ -77,30 +77,44 @@ When contributing to the project branch from master and create a pull request, m
 
 ## Adding `tribers`
 
-## Updating `tribers`
+To add yourself or another colleague to the `tribers`, you need to: 
 
-Don't like your bio? Want to change your words? Or maybe just give your social media links? You can change all of this data in the `tribers/` directory.
+1. navigate to `src/data/tribers`
+2. add a markdown file titled <first-name>.md -> e.g. in the command line you can do `touch jane.md`
+3. for content, here is an example markdown file with all of the features you can have in it, exhaustively:
 
-Here is an example markdown file with all of the features you can have in it, exhaustively:
-
+```sh
     ---
-    name: 'John Smith'
+    name: 'Jane Doe'
     words:
       - Words
       - Go
       - Here
-    image: images/john.jpg
-    story: stories/john.md
+    image: images/jane.jpg
+    story: stories/jane.md
     social:
-      twitter: 'jsmith'
-      github: 'smithj'
-      linkedin: 'jsmith-23'     # this must be the bit after `in/` for your public linkedin profile URL
-      instagram: 'johns'
-      twitch: 'jsmithgaming'
-      facebook: 'john.smith'
-      youtube: 'johnschmidt'
+      twitter: 'janedoe'
+      github: 'doej'
+      linkedin: 'jane-doe'     # this must be the bit after `in/` for your public linkedin profile URL
+      instagram: 'janeyd'
+      twitch: 'jdoegaming'
+      facebook: 'jane.doe'
+      youtube: 'janedoe'
     ---
 
     Your bio goes here
+```
+:rotating_light: You must follow the format included above and don't add more than five social links because they won't all fit.
 
-Edit the file, commit, and make a pull request. (Don't add more than five social links though; they won't all fit.)
+4. add a photo of you in the `src/data/tribers/images` directory. 
+:white_check_mark: Make sure that the name will match the one inserted next to the image field in the markdown file (see previous step).
+
+5. commit your changes and make a pull request
+
+## Updating `tribers`
+
+Don't like your bio? Want to change your words? Or maybe just add/remove your social media link(s)? You can change all of these in the `src/data/tribers` directory.
+
+1. find the related markdown file and edit it as needed and/or replace the image in the `src/data/tribers/images` directory
+
+2. commit your changes and make a pull request
