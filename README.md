@@ -2,7 +2,7 @@
 
 The neontribe MVP with static HTML, CSS, and JS. 
 
-## 🚀 Quick start
+## :checkered_flag: Quick start
 
 1.  **Prerequisites**
 
@@ -69,7 +69,7 @@ Please use `yarn` to manage the dependencies and scripts in this project. You sh
 
    This will give you a nice menu of updates to choose from and will maintain `package.json` and `yarn.lock` automatically.
 
-## :fireworks: Deployment
+## :rocket: Deployment
 
 The website is deployed using `now.sh`. The production website reflects the `master` branch. Pull requests which are made against master are considered staging branches.
 
