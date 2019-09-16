@@ -80,7 +80,7 @@ When contributing to the project branch from master and create a pull request, m
 To add yourself or another colleague to the `tribers`, you need to: 
 
 1. navigate to `src/data/tribers`
-2. create a markdown file titled <first-name>.md -> e.g. in the command line you can do `touch jane.md`
+2. create a markdown file titled `first-name.md` -> e.g. in the command line you can do `touch jane.md`
 3. add content and here is an example markdown file with all of the features you can have in it, exhaustively:
 
 ```sh
