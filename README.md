@@ -24,7 +24,7 @@ The neontribe MVP with static HTML, CSS, and JS.
     yarn develop
     ```
 
-    :warning: `git clone` might not work if the user is not the owner of the directory where he/she wants to clone this repository. The following error might be thrown: `Permission denied (publickey). fatal: Could not read from remote repository.` If that happens, change ownership of that directory `sudo chown <username>: <path-to-directory> -R`.
+    :warning: `git clone` might not work if you are not the owner of the directory where you want to clone this repository. The following error might be thrown: `Permission denied (publickey). fatal: Could not read from remote repository.` If that happens, change ownership of that directory `sudo chown <username>: <path-to-directory> -R`.
 
 1.  **Open the source code and start editing!**
 
@@ -80,8 +80,8 @@ When contributing to the project branch from master and create a pull request, m
 To add yourself or another colleague to the `tribers`, you need to: 
 
 1. navigate to `src/data/tribers`
-2. add a markdown file titled <first-name>.md -> e.g. in the command line you can do `touch jane.md`
-3. for content, here is an example markdown file with all of the features you can have in it, exhaustively:
+2. create a markdown file titled <first-name>.md -> e.g. in the command line you can do `touch jane.md`
+3. add content and here is an example markdown file with all of the features you can have in it, exhaustively:
 
 ```sh
     ---
@@ -106,8 +106,9 @@ To add yourself or another colleague to the `tribers`, you need to:
 ```
 :rotating_light: You must follow the format included above and don't add more than five social links because they won't all fit.
 
-4. add a photo of you in the `src/data/tribers/images` directory. 
-:white_check_mark: Make sure that the name will match the one inserted next to the image field in the markdown file (see previous step).
+4. add a photo of you in the `src/data/tribers/images` directory.
+
+:triangular_flag_on_post: Make sure that the name will match the one inserted next to the image field in the markdown file (see previous step).
 
 5. commit your changes and make a pull request
 
