@@ -75,7 +75,7 @@ The website is deployed using `now.sh`. The production website reflects the `mas
 
 When contributing to the project branch from master and create a pull request, make sure that changes are approved and that your staging branch works as you expect. **When you merge into master the change will shortly be available on the production site.**
 
-## Adding `tribers`
+## :construction_worker: Adding `tribers`
 
 To add yourself or another colleague to the `tribers`, you need to: 
 
@@ -111,7 +111,7 @@ To add yourself or another colleague to the `tribers`, you need to:
 
 5. commit your changes and make a pull request
 
-## Updating `tribers`
+## :recycle: Updating `tribers`
 
 Don't like your bio? Want to change your words? Or maybe just add/remove your social media link(s)? You can change all of these in the `src/data/tribers` directory.
 
