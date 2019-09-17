@@ -24,12 +24,12 @@ const activeLinkStyles = css.resolve`
     width: 100%;
     transform: rotate(180deg);
     background: 0 center repeat-x
-      url('data:image/svg+xml;utf-8,<?xml version="1.0" encoding="UTF-8"?>
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="8px" viewBox="0 0 9 6" enable-background="new 0 0 9 6" xml:space="preserve">
-        <polygon stroke="${encodeURIComponent(
+      url("data:image/svg+xml;charset=utf-8,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E
+    %3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' width='100%' height='8px' viewBox='0 0 9 6' enable-background='new 0 0 9 6' xml:space='preserve'%3E
+        %3Cpolygon stroke='${encodeURIComponent(
           c_NAV_ACTIVE
-        )}" points="4.5,4.5 0,0 0,1.208 4.5,5.708 9,1.208 9,0 "/>
-    </svg>');
+        )}' points='4.5,4.5 0,0 0,1.208 4.5,5.708 9,1.208 9,0 '/%3E
+    %3C/svg%3E");
   }
 `
 
