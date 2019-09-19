@@ -24,6 +24,7 @@ const Text = ({
   lineHeight = 1.5,
   underline,
   display = 'inline-block',
+  wordBreak = 'normal',
 }) => (
   <span
     className={classNames(
@@ -44,6 +45,7 @@ const Text = ({
         font-size: ${fontSizes[size] || 'inherit'};
         font-weight: ${weight};
         text-decoration: ${underline ? 'underline' : 'none'};
+        word-break: ${wordBreak};
       }
       /* text color */
       .primary {
