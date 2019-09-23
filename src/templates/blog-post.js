@@ -9,12 +9,7 @@ import PageMeta from '../components/PageMeta'
 import Heading from '../components/Heading'
 import Text from '../components/Text'
 import RenderContent from '../components/RenderContent'
-import {
-  c_PRIMARY_BACKGROUND,
-  breakpoint,
-  fontSizes,
-  GUTTER_PX,
-} from '../theme'
+import { c_PRIMARY_BACKGROUND, GUTTER_PX } from '../theme'
 
 // Copied to components/RenderContent
 const BlogHeading = ({ size, children, wordBreak, ...props }) => (
@@ -54,7 +49,7 @@ export default ({ data }) => {
       <ConstrainedWidth fullWidth={false}>
         <article>
           <header className="header">
-            <BlogHeading level={1} size="medium" wordBreak="break-word">
+            <BlogHeading level={1} size="large" wordBreak="break-word">
               {title}
             </BlogHeading>
             <VerticalSpacing size={5} />
@@ -72,12 +67,6 @@ export default ({ data }) => {
         article {
           background-color: ${c_PRIMARY_BACKGROUND};
           padding: 0 ${GUTTER_PX * 2}px;
-        }
-
-        @media (${breakpoint('sm')}) {
-          .header:first-child {
-            font-size: ${fontSizes['large']};
-          }
         }
       `}</style>
     </Layout>
