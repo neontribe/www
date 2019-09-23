@@ -82,7 +82,7 @@ const TribeMemberBack = ({
 
         .social-icons {
           display: flex;
-          justify-content: space-evenly;
+          justify-content: space-around;
           align-items: center;
           margin: ${socialCount ? SOCIAL_MARGIN : 0}px 0;
         }
