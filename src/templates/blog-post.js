@@ -17,7 +17,6 @@ const BlogHeading = ({
   children,
   wordBreak,
   overflowWrap,
-  wordWrap,
   WebkitHyphens,
   msHyphens,
   hyphens,
@@ -30,7 +29,6 @@ const BlogHeading = ({
       weight={700}
       wordBreak={wordBreak}
       overflowWrap={overflowWrap}
-      wordWrap={wordWrap}
       WebkitHyphens={WebkitHyphens}
       msHyphens={msHyphens}
       hyphens={hyphens}
@@ -69,7 +67,15 @@ export default ({ data }) => {
       <ConstrainedWidth fullWidth={false}>
         <article>
           <header className="header">
-            <BlogHeading level={1} size="large" wordBreak="break-word">
+            <BlogHeading
+              level={1}
+              size="large"
+              wordBreak="break-word"
+              overflowWrap="break-word"
+              WebkitHyphens="auto"
+              msHyphens="auto"
+              hyphens="auto"
+            >
               {title}
             </BlogHeading>
             <VerticalSpacing size={5} />

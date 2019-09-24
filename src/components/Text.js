@@ -25,11 +25,10 @@ const Text = ({
   underline,
   display = 'inline-block',
   wordBreak = 'normal',
-  overflowWrap = 'break-word',
-  wordWrap = 'break-word',
-  WebkitHyphens = 'auto',
-  msHyphens = 'auto',
-  hyphens = 'auto',
+  overflowWrap = 'normal',
+  WebkitHyphens = 'none',
+  msHyphens = 'none',
+  hyphens = 'none',
 }) => (
   <span
     className={classNames(
@@ -52,7 +51,6 @@ const Text = ({
         text-decoration: ${underline ? 'underline' : 'none'};
         word-break: ${wordBreak};
         overflow-wrap: ${overflowWrap};
-        word-wrap: ${wordWrap};
         -webkit-hyphens: ${WebkitHyphens};
         -ms-hyphens: ${msHyphens};
         hyphens: ${hyphens};
