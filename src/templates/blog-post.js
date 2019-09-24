@@ -12,9 +12,29 @@ import RenderContent from '../components/RenderContent'
 import { c_PRIMARY_BACKGROUND, GUTTER_PX } from '../theme'
 
 // Copied to components/RenderContent
-const BlogHeading = ({ size, children, wordBreak, ...props }) => (
+const BlogHeading = ({
+  size,
+  children,
+  wordBreak,
+  overflowWrap,
+  wordWrap,
+  WebkitHyphens,
+  msHyphens,
+  hyphens,
+  ...props
+}) => (
   <Heading {...props}>
-    <Text size={size} lineHeight={1.2} weight={700} wordBreak={wordBreak}>
+    <Text
+      size={size}
+      lineHeight={1.2}
+      weight={700}
+      wordBreak={wordBreak}
+      overflowWrap={overflowWrap}
+      wordWrap={wordWrap}
+      WebkitHyphens={WebkitHyphens}
+      msHyphens={msHyphens}
+      hyphens={hyphens}
+    >
       {children}
     </Text>
   </Heading>
