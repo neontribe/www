@@ -24,18 +24,15 @@ const Text = ({
   lineHeight = 1.5,
   underline,
   display = 'inline-block',
-  wordBreak = 'normal',
-  overflowWrap = 'normal',
-  WebkitHyphens = 'none',
-  msHyphens = 'none',
-  hyphens = 'none',
+  hyphenation = false,
 }) => (
   <span
     className={classNames(
       'text',
       type,
       transparent && 'transparent',
-      alternate && 'alternate'
+      alternate && 'alternate',
+      hyphenation && 'hyphenation'
     )}
   >
     {children}
@@ -49,12 +46,14 @@ const Text = ({
         font-size: ${fontSizes[size] || 'inherit'};
         font-weight: ${weight};
         text-decoration: ${underline ? 'underline' : 'none'};
-        word-break: ${wordBreak};
-        overflow-wrap: ${overflowWrap};
-        -webkit-hyphens: ${WebkitHyphens};
-        -ms-hyphens: ${msHyphens};
-        hyphens: ${hyphens};
       }
+
+      .hyphenation {
+        word-break: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+      }
+
       /* text color */
       .primary {
         color: ${c_PRIMARY_TEXT};
