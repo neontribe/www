@@ -13,7 +13,8 @@ let neonN = 0
 const nextNeon = () => c_NEONS[neonN++ % c_NEONS.length]
 
 const TribeMember = ({
-  fluid,
+  image,
+  grayscaleImage,
   name,
   headingLevel,
   skills,
@@ -37,7 +38,8 @@ const TribeMember = ({
       <FlipCard isFlipped={isFlipped}>
         <CardFront>
           <TribeMemberFront
-            fluid={fluid}
+            image={image}
+            grayscaleImage={grayscaleImage}
             name={name}
             headingLevel={headingLevel}
             skills={skills}
@@ -84,7 +86,7 @@ TribeMember.propTypes = {
   bio: PropTypes.node,
   neonSeparatorColour: PropTypes.oneOf(c_NEONS),
   // Inherited prop types
-  fluid: ShimlessImg.propTypes.fluid,
+  image: ShimlessImg.propTypes.fluid,
   headingLevel: Heading.propTypes.level,
 }
 
