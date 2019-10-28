@@ -25,6 +25,8 @@ const Text = ({
   underline,
   display = 'inline-block',
   hyphenation = false,
+  // this should only be applied when children is of type string
+  orphans = true,
 }) => (
   <span
     className={classNames(
@@ -35,7 +37,16 @@ const Text = ({
       hyphenation && 'hyphenation'
     )}
   >
-    {children}
+    {orphans ? (
+      children
+    ) : (
+      <span
+        dangerouslySetInnerHTML={{
+          __html: children.toString().replace(/ ([^ ]*)$/, '&nbsp;$1'),
+        }}
+      />
+    )}
+
     <style jsx>{`
       .text {
         display: ${display};

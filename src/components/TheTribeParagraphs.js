@@ -5,7 +5,7 @@ import Text from './Text'
 // TODO: drive this content from markdown
 export const TheTribeTopParagraph = () => (
   <p>
-    <Text>
+    <Text orphans={false}>
       Neontribe is an eclectic group of individuals with interlocking skills and
       enthusiasms. Without our differences, we'd not have our strength.
     </Text>
@@ -27,7 +27,7 @@ export const TheTribeTopParagraph = () => (
 // TODO: drive this content from markdown
 export const TheTribeBottomParagraph = () => (
   <p>
-    <Text>
+    <Text orphans={false}>
       We’re always happy to hear from people who like the sound of Neontribe,
       and want to grow their skills as a developer, or in user research or
       product management. Maybe you’re already experienced, or maybe you're just

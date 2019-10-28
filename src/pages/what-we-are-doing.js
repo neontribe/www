@@ -33,7 +33,7 @@ const WhatWeAreDoingPage = () => (
           </Text>
         </Heading>
         <p>
-          <Text>
+          <Text orphans={false}>
             Neontribe has a national reputation for our work in tech-for-good,
             and an international reputation in travel and tourism. Our work
             identifies the issues organisations have and finds ways to help them

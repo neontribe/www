@@ -7,7 +7,12 @@ import Text from '../Text'
 export default ({ alternate, level, problem, solution }) => {
   // Make sure the text is consistently styled
   const T = props => (
-    <Text gutter={0} {...props} type={alternate ? 'secondary' : 'primary'} />
+    <Text
+      gutter={0}
+      orphans={false}
+      {...props}
+      type={alternate ? 'secondary' : 'primary'}
+    />
   )
 
   return (

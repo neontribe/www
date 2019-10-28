@@ -28,7 +28,12 @@ const imageStyles = css.resolve`
 const WorkSummary = ({ alternate, level, title, fluid, problem }) => {
   // Make sure the text is consistently styled
   const T = props => (
-    <Text gutter={0} {...props} type={alternate ? 'secondary' : 'primary'} />
+    <Text
+      gutter={0}
+      orphans={false}
+      {...props}
+      type={alternate ? 'secondary' : 'primary'}
+    />
   )
 
   const stackedContentStyles = css.resolve`

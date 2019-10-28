@@ -25,7 +25,7 @@ const IndexPage = () => (
             </Text>
           </Heading>
           <p>
-            <Text size="medium">
+            <Text size="medium" orphans={false}>
               Neontribe is a digital agency working in user research, software
               development and design. We're agile by instinct, and user-centred
               in our practice. We work together to identify and deliver on user
