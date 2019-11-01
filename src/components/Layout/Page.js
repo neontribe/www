@@ -25,6 +25,9 @@ const Page = ({ title, children }) => (
         background-image: url('${hexagonsLeft}'), url('${hexagonsRight}');
         background-repeat: repeat-y;
         background-position: top left, top right;
+
+        /* scale background with viewport */
+        background-size: calc(100px + (300 - 100) * ((100vw - 320px) / (1920 - 320)));
       }
 
       main {
