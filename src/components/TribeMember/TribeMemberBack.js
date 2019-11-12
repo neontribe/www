@@ -17,6 +17,7 @@ const TribeMemberBack = ({
   skills,
   bio,
   social,
+  preventTabFocus,
 }) => {
   const socialKeys = social ? Object.keys(social) : []
   var socialCount = 0
@@ -47,6 +48,7 @@ const TribeMemberBack = ({
                   handle={social[site]}
                   count={socialCount}
                   key={site}
+                  preventTabFocus={preventTabFocus}
                 />
               ) : (
                 ''
