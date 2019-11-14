@@ -13,10 +13,13 @@ import HomePageWorkSummary from '../components/HomePageWorkSummary'
 import PageMeta from '../components/PageMeta'
 import Centered from '../components/Centered'
 
+import GaCookiesBanner from '../components/GaCookieBanner'
+
 const IndexPage = () => (
   <Layout>
     <PageMeta title="Welcome" />
     <ConstrainedWidth>
+      <GaCookiesBanner />
       <section>
         <Centered>
           <Heading level={1}>
