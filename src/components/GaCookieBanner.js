@@ -2,8 +2,8 @@ import React from 'react'
 
 const GaCookieBanner = () => {
   return (
-    <div className="gacookiebanner_block">
-      <section>
+    <div>
+      <section className="gacookiebanner_block">
         <div className="gacookiebanner">
           <h3 className="gacookiebanner__heading">Our use of cookies</h3>
           <div className="gacookiebanner__content">
@@ -46,15 +46,15 @@ const GaCookieBanner = () => {
         </div>
         <hr />
         <button className="save_close">Save and Close</button>
-        <button className="cc_icon"></button>
       </section>
+      <button className="cc_icon"></button>
       <style jsx>{`
         .gacookiebanner_block {
           background: #0b7474;
           position: fixed;
           top: 0;
           left: 0;
-          z-index: 99999;
+          z-index: 999;
           width: 90%;
           max-width: 500px;
           height: 100%;
@@ -62,6 +62,7 @@ const GaCookieBanner = () => {
           overflow: scroll;
           display: flex;
           flex-direction: column;
+          // display: none;
         }
 
         .save_close {
@@ -78,7 +79,7 @@ const GaCookieBanner = () => {
           width: 80px;
           height: 80px;
           cursor: pointer;
-          z-index: 10;
+          z-index: 9999;
           padding: 0;
           border: 0;
           background: transparent;
