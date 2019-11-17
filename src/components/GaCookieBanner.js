@@ -2,9 +2,9 @@ import React from 'react'
 
 const GaCookieBanner = () => {
   return (
-    <div>
-      <section className="gacookiebanner">
-        <div className="gacookiebanner_block">
+    <div className="gacookiebanner_block">
+      <section>
+        <div className="gacookiebanner">
           <h3 className="gacookiebanner__heading">Our use of cookies</h3>
           <div className="gacookiebanner__content">
             <p>
@@ -20,7 +20,7 @@ const GaCookieBanner = () => {
           </div>
         </div>
         <hr />
-        <div className="gacookiebanner_block">
+        <div className="gacookiebanner">
           <h3 className="gacookiebanner__heading">Necessary cookies</h3>
           <div className="gacookiebanner__content">
             <p>
@@ -32,7 +32,7 @@ const GaCookieBanner = () => {
           </div>
         </div>
         <hr />
-        <div className="gacookiebanner_block">
+        <div className="gacookiebanner">
           <h3 className="gacookiebanner__heading">Analytics cookies</h3>
           <div className="gacookiebanner__content">
             <p>
@@ -45,10 +45,11 @@ const GaCookieBanner = () => {
           </div>
         </div>
         <hr />
-        <button>Save and Close</button>
+        <button className="save_close">Save and Close</button>
+        <button className="cc_icon"></button>
       </section>
       <style jsx>{`
-        .gacookiebanner {
+        .gacookiebanner_block {
           background: #0b7474;
           position: fixed;
           top: 0;
@@ -56,11 +57,36 @@ const GaCookieBanner = () => {
           z-index: 99999;
           width: 90%;
           max-width: 500px;
-          height: auto;
+          height: 100%;
           padding: 1% 2%;
           overflow: scroll;
           display: flex;
           flex-direction: column;
+        }
+
+        .save_close {
+          padding: 1% 1.5%;
+          margin: 15% auto;
+          display: block;
+        }
+
+        .cc_icon {
+          position: fixed;
+          bottom: 0;
+          color: #ffffff;
+          left: 0;
+          width: 80px;
+          height: 80px;
+          cursor: pointer;
+          z-index: 10;
+          padding: 0;
+          border: 0;
+          background: transparent;
+          border-bottom: 100px solid #000025;
+          border-right: 100px solid transparent;
+        }
+
+        .cc_text {
         }
       `}</style>
     </div>
