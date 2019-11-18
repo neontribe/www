@@ -2,7 +2,7 @@ import React from 'react'
 
 const GaCookieBanner = () => {
   return (
-    <div>
+    <div className="gacookie_container">
       <section className="gacookiebanner_block">
         <div className="gacookiebanner">
           <h3 className="gacookiebanner__heading">Our use of cookies</h3>
@@ -64,7 +64,6 @@ const GaCookieBanner = () => {
           flex-direction: column;
           // display: none;
         }
-
         .save_close {
           padding: 1% 1.5%;
           margin: 15% auto;
@@ -86,7 +85,6 @@ const GaCookieBanner = () => {
           border-bottom: 100px solid #000025;
           border-right: 100px solid transparent;
         }
-
         .cc_text {
         }
       `}</style>

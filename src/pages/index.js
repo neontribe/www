@@ -17,6 +17,7 @@ import GaCookiesBanner from '../components/GaCookieBanner'
 
 const IndexPage = () => (
   <Layout>
+    <div className="overlay"></div>
     <PageMeta title="Welcome" />
     <ConstrainedWidth>
       <GaCookiesBanner />
@@ -88,6 +89,18 @@ const IndexPage = () => (
         </Centered>
       </section>
     </ConstrainedWidth>
+    <style jsx>{`
+      .overlay {
+        position: fixed;
+        background: rgba(0, 0, 0, 0.4);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        backface-visibility: hidden;
+      }
+    `}</style>
   </Layout>
 )
 
