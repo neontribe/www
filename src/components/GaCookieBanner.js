@@ -19,7 +19,7 @@ const GaCookieBanner = () => {
             </p>
           </div>
         </div>
-        <hr />
+        <hr class="cc_divider" />
         <div className="gacookiebanner">
           <h3 className="gacookiebanner__heading">Necessary cookies</h3>
           <div className="gacookiebanner__content">
@@ -31,7 +31,7 @@ const GaCookieBanner = () => {
             </p>
           </div>
         </div>
-        <hr />
+        <hr class="cc_divider" />
         <div className="gacookiebanner">
           <h3 className="gacookiebanner__heading">Analytics cookies</h3>
           <div className="gacookiebanner__content">
@@ -44,7 +44,7 @@ const GaCookieBanner = () => {
             </p>
           </div>
         </div>
-        <hr />
+        <hr class="cc_divider" />
         <button className="save_close">Save and Close</button>
       </section>
       <button className="cc_icon"></button>
@@ -64,6 +64,11 @@ const GaCookieBanner = () => {
           flex-direction: column;
           // display: none;
         }
+
+        .cc_divider {
+          width: 100%;
+        }
+
         .save_close {
           padding: 1% 1.5%;
           margin: 15% auto;
