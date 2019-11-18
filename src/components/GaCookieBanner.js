@@ -65,7 +65,8 @@ const GaCookieBanner = () => {
           // display: none;
         }
 
-        .cc_divider {
+        .cc_divider,
+        hr {
           width: 100%;
         }
 
