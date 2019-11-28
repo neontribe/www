@@ -1,7 +1,7 @@
 import React from 'react'
 
 const SQUIGGLE_WIDTH = 18
-const SQUIGGLE_HEIGHT = (SQUIGGLE_WIDTH / 3) * 2
+
 
 const Squiggle = ({ color, repeats }) => (
   <>
