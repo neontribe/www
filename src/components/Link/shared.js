@@ -1,7 +1,11 @@
 import React from 'react'
 import css from 'styled-jsx/css'
 
-import { c_CALL_TO_ACTION, c_PRIMARY_TEXT } from '../../theme'
+import {
+  c_PRIMARY_BACKGROUND,
+  c_CALL_TO_ACTION,
+  c_PRIMARY_TEXT,
+} from '../../theme'
 import Text from '../Text'
 import Arrow from './Arrow'
 
@@ -15,6 +19,7 @@ export const { className, styles } = css.resolve`
     display: inline-block;
     padding: 1rem 2rem;
     background-color: ${c_CALL_TO_ACTION};
+    box-shadow: 0 0 3px 3px ${c_PRIMARY_BACKGROUND};
   }
 `
 
