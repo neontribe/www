@@ -28,7 +28,7 @@ const TribeMember = ({
   return (
     <section className="tribe-member">
       <button
-        className="visually-hidden"
+        className="toggle visually-hidden"
         type="button"
         onClick={() => setFlipped(!isFlipped)}
       >
@@ -42,7 +42,7 @@ const TribeMember = ({
             headingLevel={headingLevel}
             skills={skills}
             onClick={() => setFlipped(true)}
-            sepColour={neonSeparatorColour || initialNeonColour}
+            sepColour={initialNeonColour}
           />
         </CardFront>
         <CardBack>
@@ -53,6 +53,7 @@ const TribeMember = ({
             skills={skills}
             bio={bio}
             social={social}
+            preventTabFocus={!isFlipped}
           />
         </CardBack>
       </FlipCard>
@@ -61,6 +62,12 @@ const TribeMember = ({
         .tribe-member {
           height: 100%;
           cursor: pointer;
+        }
+
+        .toggle:focus :global(+ *) {
+          border: 1px solid white;
+          outline: 2px solid ${initialNeonColour};
+          box-shadow: ${initialNeonColour} 0px 0px 9px;
         }
 
         .visually-hidden {
