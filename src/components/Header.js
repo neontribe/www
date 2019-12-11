@@ -62,6 +62,10 @@ const Nav = () => (
       </li>
     </ul>
     <style jsx>{`
+      .nav {
+        width: 100%;
+      }
+
       .list {
         margin: 0;
         padding: 0;
@@ -74,7 +78,7 @@ const Nav = () => (
         width: 100%;
       }
 
-      .list li + li {
+      .list > li + li {
         margin-top: 1rem;
       }
 
@@ -86,7 +90,7 @@ const Nav = () => (
           width: auto;
         }
 
-        .list li + li {
+        .list > li + li {
           margin-top: 0;
           margin-left: 2rem;
         }
@@ -124,17 +128,20 @@ const Header = () => (
         justify-content: center;
       }
 
-      .nav-wrapper {
-        margin: auto 0;
-      }
-
       @media (${breakpoint('md')}) {
-        /* Needs to be insync with the breakpoint above */
         .header > * {
-          flex: initial;
+          flex-grow: 0;
         }
+
         .logo-wrapper {
-          justify-content: normal;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .nav-wrapper {
+          display: flex;
+          align-items: center;
+          flex: 1 0 auto;
         }
       }
     `}</style>

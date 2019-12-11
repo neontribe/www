@@ -25,6 +25,15 @@ const Page = ({ title, children }) => (
         background-image: url('${hexagonsLeft}'), url('${hexagonsRight}');
         background-repeat: repeat-y;
         background-position: top left, top right;
+
+        /**
+         * scale background with viewport 
+         *
+         * calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])))
+         *
+         * https://css-tricks.com/snippets/css/fluid-typography
+         */
+        background-size: calc(100px + (300 - 100) * ((100vw - 320px) / (1920 - 320)));
       }
 
       main {
