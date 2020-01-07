@@ -12,7 +12,7 @@ When contributing to this project please do the following:
    - We expect you to learn while tackling issues, please don't be put off by a tasks' seeming complexity.
    - If you need more information please follow up with the person who spawned/created the task.
    - Check the [Definition of done](#definition-of-done) for the ticket
-1. Assign yourself and move the ticket to the In progress column.
+1. Assign yourself and move the ticket to the `In progress` column.
 1. Create a branch with a name to help match it to the ticket, e.g.: `307-contrib-docs`. _n.b._ [avoid slashes in branch names](https://stackoverflow.com/questions/2527355/using-the-slash-character-in-git-branch-name/2527452#2527452)
 1. Work on the feature branch, make small commits which include the _reason_ for each commit's change.
 1. Create a pull request when you're happy with the changeset, and happy that the ticket passes the ticket's [Definition of done](#definition-of-done).
