@@ -46,4 +46,4 @@ is done using feature branch deploys on pull request
 
 ## Definition of done
 
-Acceptance critera etc.
+Acceptance criteria etc.
