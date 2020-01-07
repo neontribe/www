@@ -10,7 +10,7 @@ When contributing to this project please do the following:
 
 1. Pick something near the top of the `To do` column, which you feel you have the time and confidence to tackle.
    - We expect you to learn while tackling issues, please don't be put off by a tasks' seeming complexity.
-   - If you need more information please follow up with the person who spawned the task.
+   - If you need more information please follow up with the person who spawned/created the task.
    - Check the [Definition of done](#definition-of-done) for the ticket
 1. Assign yourself and move the ticket to the In progress column.
 1. Create a branch with a name to help match it to the ticket, e.g.: `307-contrib-docs`. _n.b._ [avoid slashes in branch names](https://stackoverflow.com/questions/2527355/using-the-slash-character-in-git-branch-name/2527452#2527452)
