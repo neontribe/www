@@ -19,7 +19,7 @@ When contributing to this project please do the following:
    _n.b._ Pull requests are the pull requester's responsibility, when it receives the request number
 1. Await code review, see [Review proces](#review-process)
 
-Please make sure that you keep you activity up-to-date:
+Please make sure that you keep your activity up-to-date:
 
 - only assign one ticket at a time to yourself
 - name a branch based upon the ticket
