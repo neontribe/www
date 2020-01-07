@@ -38,7 +38,7 @@ WIP:
 
 ## Review process
 
-2 or more peers need to approve the commit, when reviewing check the code for errors and check that it achieves the definition of done for the ticket
+Two or more peers need to approve the commit, when reviewing check the code for errors and check that it achieves the definition of done for the ticket
 
 ## Testing
 
