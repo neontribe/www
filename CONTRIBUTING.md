@@ -8,7 +8,7 @@ Any issues in the `To do` column are assumed to be important enough and have bee
 
 When contributing to this project please do the following:
 
-1. Pick something near the top of the to do column, which you feel you have the time and confidence to tackle.
+1. Pick something near the top of the `To do` column, which you feel you have the time and confidence to tackle.
    - We expect you to learn while tackling issues, please don't be put off by a tasks' seeming complexity.
    - If you need more information please follow up with the person who spawned the task.
    - Check the [Definition of done](#definition-of-done) for the ticket
