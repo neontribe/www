@@ -9,6 +9,7 @@ exports[`default render matches snapshot 1`] = `
       class="card-body"
     >
       <div
+        aria-hidden="true"
         class="card-side card-back"
       >
         back 2
@@ -16,21 +17,26 @@ exports[`default render matches snapshot 1`] = `
         <style>
           
       .card-back {
-        transform: rotate3d(0, 1, 0, 180deg);
+        transform: rotateY(180deg)
+          translateZ(0px);
+        transition: all 0.7s linear;
         pointer-events: none;
       }
     
         </style>
       </div>
       <div
-        class="card-side card-front "
+        class="card-side card-front"
       >
         front 1
         <style />
         <style>
           
-      .card-front.is-flipped {
-        pointer-events: none;
+      .card-front {
+        pointer-events: all;
+        transform: rotateY(0deg)
+          translateZ(0px);
+        transition: all 0.7s linear;
       }
     
         </style>
@@ -41,9 +47,6 @@ exports[`default render matches snapshot 1`] = `
       .card-body {
         width: 100%;
         height: 100%;
-        transform-style: preserve-3d;
-        transition: all 0.7s linear;
-        transform: none;
         display: flex;
       }
 
@@ -55,8 +58,8 @@ exports[`default render matches snapshot 1`] = `
 
       .card-container {
         height: 100%;
+        transform-style: preserve-3d;
         position: relative;
-        z-index: 1;
         perspective: 1000px;
       }
     
@@ -74,6 +77,7 @@ exports[`isFlipped render matches snapshot 1`] = `
       class="card-body"
     >
       <div
+        aria-hidden="true"
         class="card-side card-back"
       >
         back 2
@@ -81,21 +85,26 @@ exports[`isFlipped render matches snapshot 1`] = `
         <style>
           
       .card-back {
-        transform: rotate3d(0, 1, 0, 180deg);
+        transform: rotateY(180deg)
+          translateZ(0px);
+        transition: all 0.7s linear;
         pointer-events: none;
       }
     
         </style>
       </div>
       <div
-        class="card-side card-front "
+        class="card-side card-front"
       >
         front 1
         <style />
         <style>
           
-      .card-front.is-flipped {
-        pointer-events: none;
+      .card-front {
+        pointer-events: all;
+        transform: rotateY(0deg)
+          translateZ(0px);
+        transition: all 0.7s linear;
       }
     
         </style>
@@ -106,9 +115,6 @@ exports[`isFlipped render matches snapshot 1`] = `
       .card-body {
         width: 100%;
         height: 100%;
-        transform-style: preserve-3d;
-        transition: all 0.7s linear;
-        transform: none;
         display: flex;
       }
 
@@ -120,73 +126,8 @@ exports[`isFlipped render matches snapshot 1`] = `
 
       .card-container {
         height: 100%;
-        position: relative;
-        z-index: 1;
-        perspective: 1000px;
-      }
-    
-    </style>
-  </div>
-</div>
-`;
-
-exports[`snapshots 1`] = `
-<div>
-  <div
-    class="card-container"
-  >
-    <div
-      class="card-body"
-    >
-      <div
-        class="card-side card-back"
-      >
-        back 2
-        <style />
-        <style>
-          
-      .card-back {
-        transform: rotate3d(0, 1, 0, 180deg);
-        pointer-events: none;
-      }
-    
-        </style>
-      </div>
-      <div
-        class="card-side card-front "
-      >
-        front 1
-        <style />
-        <style>
-          
-      .card-front.is-flipped {
-        pointer-events: none;
-      }
-    
-        </style>
-      </div>
-    </div>
-    <style>
-      
-      .card-body {
-        width: 100%;
-        height: 100%;
         transform-style: preserve-3d;
-        transition: all 0.7s linear;
-        transform: none;
-        display: flex;
-      }
-
-      .card-body::after {
-        content: '';
-        display: block;
-        clear: both;
-      }
-
-      .card-container {
-        height: 100%;
         position: relative;
-        z-index: 1;
         perspective: 1000px;
       }
     
