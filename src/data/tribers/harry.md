@@ -3,7 +3,7 @@ name: 'Harry Harrold'
 words:
   - Post-its
   - Performing
-  - Ptripey shirts
+  - Stripey shirts
 image: images/collins.jpg
 ---
 
