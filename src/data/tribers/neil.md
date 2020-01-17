@@ -2,8 +2,8 @@
 name: 'Neil Dabson'
 words:
   - Cyber security
-  - muddy fields
-  - holder of the Fun budget
+  - Muddy fields
+  - Holder of the Fun budget
 image: images/neil.jpg
 ---
 
