@@ -1,4 +1,4 @@
-.---
+---
 title: 'Value and effort and prioritisation.'
 slug: 'v-vvv-e-eee'
 image: null
