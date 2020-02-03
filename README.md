@@ -73,9 +73,9 @@ Please use `yarn` to manage the dependencies and scripts in this project. You sh
 
 The website is deployed using `now.sh`. The production website reflects the `master` branch. Pull requests which are made against master are considered staging branches.
 
-1. When contributing to the project branch from master and create a pull request, `now.sh` bot will post a status of PR being deployed automatically.
-2. `now.sh` will generate a build and deploy in a temporary site which is available to get inside your pull request page.
-3. Make sure that changes are approved and that your staging branch works as you expect.
+1. Contribute to the project branch from master and create a pull request.
+2. `now.sh` will generate a build and deploy in a temporary url which is available on your pull request page, along with the status of build.
+3. Before you merge, it is your responsibility to make sure that changes are approved and that your staging branch works as you expect.
 4. **When you merge into master the change will shortly be available on the production site.**
 
 ## :construction_worker: Adding `tribers`
