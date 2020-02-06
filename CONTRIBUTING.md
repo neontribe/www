@@ -2,6 +2,37 @@
 
 Ongoing development on this project is managed by this project board: https://github.com/neontribe/www/projects/6.
 
+## Getting tickets/issues ready to be worked on
+
+Before a thing can be worked on it must be both created as an issue, and prioritised.
+
+### Creating issues
+
+1. Open the `Issues` tab and click [`New issue`](https://github.com/neontribe/www/issues/new/choose) and choose the right template.
+   - anyone can create issues
+   - `Bug` is for bugs
+   - `Story` is for new things, e.g. code, content, dependency updates
+   - `Research` is for tasks that are not going to effect the site _yet_
+   - `Catch-up Meeting` is for the weekly catchup meeting [Prioritising issues](prioritising-issues)
+1. Follow the template so that the issue can be understood by others
+   - the template explains what you need to fill out
+   - don't worry about having everything, fill in as much as you can and focus on the [Definition of done](#definition-of-done)
+1. There is no need to attach the card to the project board, that step only happens during a prioritising session.
+
+### Prioritising issues
+
+This takes place during a weekly catchup meeting when we need more issues for the project board, or when someone asks for a particular issue to be considered.
+
+1. View new issues using this filter: [https://github.com/neontribe/www/issues](https://github.com/neontribe/www/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+no%3Aproject+).
+1. Decide whether the [Definition of done](#definition-of-done) is ready for action on a given ticket.
+   - if further work is needed then assign a related action in the meeting notes
+1. Take tickets that are ready for action and add to `Top priority issues` or `Backlog` columns based on group instincts of user value.
+   - not all tickets will be high enough priority to **make it**
+   - decisions from previous meetings should not be revisited in the weekly cycle
+1. Document reason for decision on tickets, so that it makes sense later.
+
+From time-to-time we may decide to hold more in depth prioritisation meetings to involve more people and to look at bigger issues.
+
 ## Getting started on development
 
 Any issues in the `Top priority issues` column are important enough and have been prioritised.
@@ -32,13 +63,6 @@ Please make sure that you keep your activity up-to-date:
 
 WIP:
 
-## Getting tickets ready to be worked on
-
-- weekly meeting to discuss open tickets
-- tickets should be left in the backlog or closed if vetoed
-- anyone can create issues
-- creating an issue involves writing up a compelling argument for a feature, perhaps pictures. Adding a definition of done is important, doesn't have to be acceptance criteria
-
 ## Review process
 
 Two or more peers need to approve the commit, when reviewing check the code for errors and check that it achieves the definition of done for the ticket
@@ -49,4 +73,8 @@ is done using feature branch deploys on pull request
 
 ## Definition of done
 
-Acceptance criteria etc.
+They differ for each thing:
+
+- [`Bug`](https://english.stackexchange.com/a/40935) has clearly documented steps to reproduce the error _and_ we are sure the error has been eliminated.
+- `Story` the definition of done uses Acceptance Criteria, this can be quite broad, specifically when the ticket is first created. We expect that the Acceptance Criteria will be refined during both prioritisation, and development, so that the final goal is clear and testable.
+- `Research` will depend on the context and may be a simple statement of research aims.
