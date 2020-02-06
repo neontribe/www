@@ -4,7 +4,7 @@ Ongoing development on this project is managed by this project board: https://gi
 
 ## Getting tickets/issues ready to be worked on
 
-Before a thing can be worked on it must be both created as an issue, and prioritised.
+Before a thing can be worked on it must be both created as an issue, and prioritised using a definition of done.
 
 ### Creating issues
 
@@ -32,6 +32,14 @@ This takes place during a weekly catchup meeting when we need more issues for th
 1. Document reason for decision on tickets, so that it makes sense later.
 
 From time-to-time we may decide to hold more in depth prioritisation meetings to involve more people and to look at bigger issues.
+
+### Definition of done
+
+These differ for each type of issue:
+
+- [`Bug`](https://english.stackexchange.com/a/40935) has clearly documented steps to reproduce the error _and_ we are sure the error has been eliminated.
+- `Story` the definition of done uses Acceptance Criteria, this can be quite broad, specifically when the ticket is first created. We expect that the Acceptance Criteria will be refined during both prioritisation, and development, so that the final goal is clear and testable.
+- `Research` will depend on the context and may be a simple statement of research aims.
 
 ## Getting started on development
 
@@ -70,11 +78,3 @@ Two or more peers need to approve the commit, when reviewing check the code for 
 ## Testing
 
 is done using feature branch deploys on pull request
-
-## Definition of done
-
-They differ for each thing:
-
-- [`Bug`](https://english.stackexchange.com/a/40935) has clearly documented steps to reproduce the error _and_ we are sure the error has been eliminated.
-- `Story` the definition of done uses Acceptance Criteria, this can be quite broad, specifically when the ticket is first created. We expect that the Acceptance Criteria will be refined during both prioritisation, and development, so that the final goal is clear and testable.
-- `Research` will depend on the context and may be a simple statement of research aims.
