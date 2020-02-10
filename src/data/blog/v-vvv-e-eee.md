@@ -1,5 +1,5 @@
 ---
-title: 'Value and effort and prioritisation.'
+title: 'Value and effort and prioritisation'
 slug: 'v-vvv-e-eee'
 image: null
 featured: 0
@@ -26,7 +26,7 @@ author_facebook: null
 author_twitter: null
 ---
 
-Every sprint, Neontribe’s developers are faced with a stack of work, in an order. Every sprint, we start with work from the top of the stack, and carry on for as long as we have planned
+Every sprint, Neontribe’s developers are faced with a stack of work, in an order. Every sprint, we start with work from the top of the stack, and carry on until the sprint finishes.
 
 We order this stack using Vs and Es; rough of the Value and Effort of a piece of work. Normally, these pieces of work at least start as user stories; value we are delivering to a user of the software we’re creating. Every piece of work will start with one to three Vs and one to three Es.
 
