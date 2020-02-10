@@ -11,7 +11,11 @@ const TriberGridComponent = ({ tribers }) => (
       <div className="triber-container" key={triber.frontmatter.name}>
         <div className="triber-sizer">
           <TribeMember
-            fluid={get(triber, 'frontmatter.image.childImageSharp.fluid')}
+            image={get(triber, 'frontmatter.image.childImageSharp.fluid')}
+            grayscaleImage={get(
+              triber,
+              'frontmatter.grayscaleImage.childImageSharp.fluid'
+            )}
             name={triber.frontmatter.name}
             headingLevel={2}
             skills={triber.frontmatter.words}
@@ -73,6 +77,13 @@ export default () => (
               image {
                 childImageSharp {
                   fluid(maxWidth: 768) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+              grayscaleImage: image {
+                childImageSharp {
+                  fluid(maxWidth: 768, grayscale: true) {
                     ...GatsbyImageSharpFluid
                   }
                 }
