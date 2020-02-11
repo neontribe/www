@@ -57,7 +57,7 @@ When contributing to this project please do the following:
    - We don't expect you to battle the problem alone, put any queries on the github issue and slack, people will help when they have time.
 1. When you're happy with the changeset/the commits you've made, and you're happy that the ticket passes its [Definition of done](#definition-of-done) create a pull request.
    _n.b._ Pull requests are the pull requester's responsibility, when it receives the request number
-1. Await code review, see [Review proces](#review-process)
+1. Await code review, see [Review process](#review-process)
 
 Please make sure that you keep your activity up-to-date:
 
