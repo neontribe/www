@@ -63,7 +63,7 @@ Please make sure that you keep your activity up-to-date:
 
 1. take each ticket as far as you can, before taking another one (e.g. ready for code review)
    - if the ticket needs to be put on hold because you've reached the limit of your availability or understanding then;
-     - put you findings/thoughts on the ticket
+     - put your findings/thoughts on the ticket
      - put the branch name (if any) on the ticket
      - unassign yourself and put it back in `Top priority issues`
 
