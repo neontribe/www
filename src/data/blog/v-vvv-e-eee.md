@@ -28,7 +28,7 @@ author_twitter: null
 
 Every sprint, Neontribe’s developers are faced with a stack of work, in an order. Every sprint, we start with work from the top of the stack, and carry on until the sprint finishes.
 
-We order this stack using Vs and Es; rough of the Value and Effort of a piece of work. Normally, these pieces of work at least start as user stories; value we are delivering to a user of the software we’re creating. Every piece of work will start with one to three Vs and one to three Es.
+We order this stack using Vs and Es; rough ideas of the Value and Effort of a piece of work. Normally, these pieces of work at least start as user stories; value we are delivering to a user of the software we’re creating. Every piece of work will start with one to three Vs and one to three Es.
 
 (V) means the team believes a user story is Valuable to the project. It is Valuable enough to include, and helps the project meet its objectives in the light of the user research. If a user story is without Value, it has no place in the software the project delivers.
 
