@@ -3,10 +3,10 @@ module.exports = {
     defaultTitle: 'Welcome',
     siteUrl: 'https://www.neontribe.co.uk',
     siteName: 'Neontribe',
-    titleTemplate: '%s · Neontribe',
+    titleTemplate: '%s | Neontribe',
     description:
       'Neontribe is a digital agency. We learn from users, build something small, then measure how that’s helped. We hit deadlines, and make best use of your budget.',
-    image: '/static/site-meta-image.png',
+    image: '/site-meta-image.png',
   },
   plugins: [
     'gatsby-remark-source-name',

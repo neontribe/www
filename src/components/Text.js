@@ -24,13 +24,15 @@ const Text = ({
   lineHeight = 1.5,
   underline,
   display = 'inline-block',
+  hyphenation = false,
 }) => (
   <span
     className={classNames(
       'text',
       type,
       transparent && 'transparent',
-      alternate && 'alternate'
+      alternate && 'alternate',
+      hyphenation && 'hyphenation'
     )}
   >
     {children}
@@ -45,6 +47,13 @@ const Text = ({
         font-weight: ${weight};
         text-decoration: ${underline ? 'underline' : 'none'};
       }
+
+      .hyphenation {
+        word-break: break-word;
+        overflow-wrap: break-word;
+        hyphens: auto;
+      }
+
       /* text color */
       .primary {
         color: ${c_PRIMARY_TEXT};

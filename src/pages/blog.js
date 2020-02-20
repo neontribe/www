@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { distanceInWordsToNow, parse } from 'date-fns'
 
-import Link from '../components/Link'
+import { InternalLink } from '../components/Link'
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import Heading from '../components/Heading'
@@ -40,7 +40,7 @@ const BlogPage = ({
         <ul>
           {edges.map(({ node }) => (
             <li key={node.id}>
-              <Link to={`/blog/${node.frontmatter.slug}`}>
+              <InternalLink to={`/blog/${node.frontmatter.slug}`}>
                 <Heading level={3} size="small">
                   <Text size="normal">
                     {getDateString(parse(node.frontmatter.published_at))}
@@ -51,7 +51,7 @@ const BlogPage = ({
                     {node.frontmatter.title}
                   </Text>
                 </Heading>
-              </Link>
+              </InternalLink>
             </li>
           ))}
         </ul>

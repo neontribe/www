@@ -5,7 +5,7 @@ import css from 'styled-jsx/css'
 
 import { breakpoint, c_NAV_ACTIVE } from '../theme'
 import Logo from './Logo'
-import Link from './Link'
+import { InternalLink } from './Link'
 import Text from './Text'
 import ConstrainedWidth from './Layout/ConstrainedWidth'
 import { ExternalLink } from './Link'
@@ -23,18 +23,16 @@ const activeLinkStyles = css.resolve`
     height: 8px;
     width: 100%;
     transform: rotate(180deg);
-    background: 0 center repeat-x
-      url('data:image/svg+xml;utf-8,<?xml version="1.0" encoding="UTF-8"?>
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" height="8px" viewBox="0 0 9 6" enable-background="new 0 0 9 6" xml:space="preserve">
-        <polygon stroke="${encodeURIComponent(
-          c_NAV_ACTIVE
-        )}" points="4.5,4.5 0,0 0,1.208 4.5,5.708 9,1.208 9,0 "/>
-    </svg>');
+    background-position-x: 0;
+    background-position-y: center;
+    background-repeat: repeat-x;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='100%25' height='8px' viewBox='0 0 9 6' enable-background='new 0 0 9 6' xml:space='preserve'%3e%3cpolygon stroke='%23fb37f1' points='4.5,4.5 0,0 0,1.208 4.5,5.708 9,1.208 9,0 '/%3e%3c/svg%3e");
+    background-size: 12px 12px;
   }
 `
 
 const NavLink = ({ children, active, ...props }) => (
-  <Link
+  <InternalLink
     {...props}
     activeClassName={activeLinkStyles.className}
     partiallyActive={true}
@@ -43,7 +41,7 @@ const NavLink = ({ children, active, ...props }) => (
       {children}
     </Text>
     {activeLinkStyles.styles}
-  </Link>
+  </InternalLink>
 )
 
 const Nav = () => (
@@ -64,6 +62,10 @@ const Nav = () => (
       </li>
     </ul>
     <style jsx>{`
+      .nav {
+        width: 100%;
+      }
+
       .list {
         margin: 0;
         padding: 0;
@@ -76,7 +78,7 @@ const Nav = () => (
         width: 100%;
       }
 
-      .list li + li {
+      .list > li + li {
         margin-top: 1rem;
       }
 
@@ -88,7 +90,7 @@ const Nav = () => (
           width: auto;
         }
 
-        .list li + li {
+        .list > li + li {
           margin-top: 0;
           margin-left: 2rem;
         }
@@ -101,9 +103,9 @@ const Header = () => (
   <ConstrainedWidth>
     <header className="header">
       <div className="logo-wrapper">
-        <Link to="/" title={`Link to Neontribe homepage`}>
+        <InternalLink to="/" title={`Link to Neontribe homepage`}>
           <Logo />
-        </Link>
+        </InternalLink>
       </div>
       <div className="nav-wrapper">
         <Nav />
@@ -126,17 +128,20 @@ const Header = () => (
         justify-content: center;
       }
 
-      .nav-wrapper {
-        margin: auto 0;
-      }
-
       @media (${breakpoint('md')}) {
-        /* Needs to be insync with the breakpoint above */
         .header > * {
-          flex: initial;
+          flex-grow: 0;
         }
+
         .logo-wrapper {
-          justify-content: normal;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .nav-wrapper {
+          display: flex;
+          align-items: center;
+          flex: 1 0 auto;
         }
       }
     `}</style>

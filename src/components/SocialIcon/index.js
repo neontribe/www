@@ -54,7 +54,7 @@ const { className, styles } = css.resolve`
   }
 `
 
-const SocialIcon = ({ site, handle, count }) => {
+const SocialIcon = ({ site, handle, count, preventTabFocus }) => {
   var icon
   var href
 
@@ -65,7 +65,6 @@ const SocialIcon = ({ site, handle, count }) => {
 
   // Prevent the click event from bubbling up any further, useful for use in flip cards
   const blockClick = event => {
-    console.log('clicked')
     event.stopPropagation()
   }
 
@@ -74,7 +73,13 @@ const SocialIcon = ({ site, handle, count }) => {
   return (
     <>
       {icon ? (
-        <ExternalLink href={href} newTab onClick={blockClick} title={tooltip}>
+        <ExternalLink
+          href={href}
+          newTab
+          onClick={blockClick}
+          title={tooltip}
+          tabIndex={preventTabFocus ? -1 : undefined}
+        >
           <FontAwesomeIcon className={className} icon={icon} />
           {styles}
         </ExternalLink>
