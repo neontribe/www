@@ -42,7 +42,7 @@ These assessments of Value are used to help prioritise user stories. The more Va
 
 (E) means a user story will take some Effort. Any user story needs design thinking, coding, testing and some discussions to deliver. No user story, however seemingly trivial, is without effort to finish to a satisfactory level of quality. A developer who gives a story an E probably knows exactly how to do it and that it’ll be only a few lines of code. 
 
-(EE) means a user story will take Extra Effort. It's more work than a user story that only takes Effort, but less than one which takes Extreme effort. It’s likely a developer who gives a story an EE will have a pretty good idea how to do it but it's more than a few lines of code. 
+(EE) means a user story will take Extra Effort. It's more work than a user story that only takes Effort, but less than one which takes Extra Extra effort. It’s likely a developer who gives a story an EE will have a pretty good idea how to do it but it's more than a few lines of code. 
 
 (EEE) means a user story will take Extra Extra Effort. This has some relationship to time, but it's not a linear quantity. Perhaps there's a complexity to the coding which will require time to work out the best way of doing the programming, perhaps it's simply a *lot* of code to write, perhaps there's no existing open source code which provides *just the right* solution to the problem, or *just the right* behaviour for the design that's been tested as the best solution to our users' problem. 
 
