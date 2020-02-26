@@ -4,7 +4,7 @@ import Cookies from 'js-cookie'
 
 import { c_PRIMARY_TEXT, c_PRIMARY_BACKGROUND_ALTERNATIVE } from '../theme'
 
-const Button = ({ onClick, className, children }) => (
+const Button = ({ onClick, className, children, open}) => (
   <button type="button" onClick={onClick} className={className}>
     {children}
   </button>
@@ -69,7 +69,7 @@ const CookieConsentBanner = () => {
 
   return (
     <div>
-      <div id="cookie-banner" aria-expanded={displayBanner}>
+      <div aria-expanded={displayBanner}>
         {displayBanner && (
           <div className="cookie-banner">
             This site uses cookies, is that cool?
@@ -83,44 +83,71 @@ const CookieConsentBanner = () => {
 
       {!displayBanner && (
         <button
-          onClick={() => setIsBannerOpen(true)}
+          onClick={() => setIsBannerOpen(true)} open={open}
           className="cookie-sidebar-button"
           aria-controls="cookie-banner"
         >
-          Change cookie settings
+          <div />
+          <div />
+          <div />
         </button>
       )}
 
       <style jsx>{`
         .cookie-banner {
-          width: 100%;
-          max-width: 900px;
-          position: fixed;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          z-index: 9999;
-          background-color: ${c_PRIMARY_BACKGROUND_ALTERNATIVE};
+          //nav
           display: flex;
-          box-shadow: 0px -10px 20px 0px rgba(0, 0, 0, 0.5);
-          padding: 3rem;
-          display: flex;
-          justify-content: space-between;
+          flex-direction: column;
+          justify-content: center;
+          background: #EFFFFA;
+          transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
+          height: 100vh;
+          text-align: left;
+          padding: 2rem;
+          position: absolute;
+          top: 0;
+          left: 0;
+          //words editting
+          padding: 3rem ;
+          letter-spacing: 0;
+          color:black;
+          text-decoration: none;
         }
+
+        @media (max-width: 576px) {
+          width: 100%;
+        }
+
         .cookie-sidebar-button {
-          color: ${c_PRIMARY_TEXT};
-          position: fixed;
-          height: 120px;
-          width: 120px;
+          position: absolute;
+          top: 0%;
+          left: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          width: 10rem;
+          height: 5rem;
+          background: white;
           border: none;
           cursor: pointer;
-          left: 0;
-          bottom: 0;
-          z-index: 9999;
-          background-color: ${c_PRIMARY_BACKGROUND_ALTERNATIVE};
-          display: flex;
-          box-shadow: 10px 0px 20px 0px rgba(0, 0, 0, 0.5);
-          padding: 1rem;
+          padding: 0;
+          z-index: 10;
+        }
+
+        .cookie-sidebar-button .focus {
+          outline: none;
+        }
+
+        .div {
+          width: 2rem;
+          height: 0.25rem;
+          background: blue;
+          border-radius: 10px;
+          transition: all 0.3s linear;
+          position: relative;
+          transform-origin: 1px;
+      
+
         }
       `}</style>
     </div>
