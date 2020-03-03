@@ -83,13 +83,11 @@ const CookieConsentBanner = () => {
 
       {!displayBanner && (
         <button
-          onClick={() => setIsBannerOpen(true)} open={open}
+          onClick={() => setIsBannerOpen(true)} 
           className="cookie-sidebar-button"
           aria-controls="cookie-banner"
         >
-          <div />
-          <div />
-          <div />
+          <p>Cookie</p>
         </button>
       )}
 
@@ -100,17 +98,16 @@ const CookieConsentBanner = () => {
           flex-direction: column;
           justify-content: center;
           background: #EFFFFA;
-          transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
-          height: 100vh;
+          height: 100%;
           text-align: left;
-          padding: 2rem;
-          position: absolute;
+          position: fixed;
           top: 0;
-          left: 0;
+          transition: transform 5.5s ease-in-out;
+        
           //words editting
-          padding: 3rem ;
+          padding: 2rem ;
           letter-spacing: 0;
-          color:black;
+          color: black;
           text-decoration: none;
         }
 
@@ -119,38 +116,21 @@ const CookieConsentBanner = () => {
         }
 
         .cookie-sidebar-button {
-          position: absolute;
-          top: 0%;
-          left: 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-          width: 10rem;
-          height: 5rem;
-          background: white;
-          border: none;
-          cursor: pointer;
-          padding: 0;
-          z-index: 10;
-        }
+          height: 100%;
+          width: 1.5rem;
+          position: fixed;
+          top: 0;
+          background-color: transparent;
+          transition: 0.5s
+          }
 
-        .cookie-sidebar-button .focus {
-          outline: none;
-        }
-
-        .div {
-          width: 2rem;
-          height: 0.25rem;
-          background: blue;
-          border-radius: 10px;
-          transition: all 0.3s linear;
-          position: relative;
-          transform-origin: 1px;
-      
-
+        p {
+          transform: rotate(90deg);
+          color: white;
         }
       `}</style>
     </div>
+
   )
 }
 
