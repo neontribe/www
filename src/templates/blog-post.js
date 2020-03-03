@@ -12,9 +12,9 @@ import RenderContent from '../components/RenderContent'
 import { c_PRIMARY_BACKGROUND, GUTTER_PX } from '../theme'
 
 // Copied to components/RenderContent
-const BlogHeading = ({ size, children, ...props }) => (
+const BlogHeading = ({ size, children, hyphenation, ...props }) => (
   <Heading {...props}>
-    <Text size={size} lineHeight={1.2} weight={700}>
+    <Text size={size} lineHeight={1.2} weight={700} hyphenation={hyphenation}>
       {children}
     </Text>
   </Heading>
@@ -49,7 +49,7 @@ export default ({ data }) => {
       <ConstrainedWidth fullWidth={false}>
         <article>
           <header className="header">
-            <BlogHeading level={1} size="xlarge">
+            <BlogHeading level={1} size="large" hyphenation>
               {title}
             </BlogHeading>
             <VerticalSpacing size={5} />
