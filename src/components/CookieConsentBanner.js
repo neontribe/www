@@ -98,10 +98,7 @@ const CookieConsentBanner = () => {
           flex-direction: column;
           justify-content: center;
           background: #effffa;
-
           height: 100%;
-          text-align: left;
-
           position: fixed;
           top: 0;
           left: 0;
@@ -120,11 +117,12 @@ const CookieConsentBanner = () => {
           height: 100%;
           width: 2%;
           position: fixed;
-          z-index: 1;
+
           top: 0;
           left: 0;
           background-color: #111;
-          transition: flex-basis 500ms ease-in-out;
+          transition: transform 2.6s;
+          cursor: pointer;
         }
 
         .cookie-sidebar-button .focus {
