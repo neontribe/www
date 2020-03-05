@@ -1,9 +1,9 @@
 ---
 name: 'Harry Harrold'
 words:
-  - post-its
-  - performing
-  - stripey shirts
+  - Post-its
+  - Performing
+  - Stripey shirts
 image: images/collins.jpg
 ---
 
