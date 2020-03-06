@@ -11,7 +11,8 @@ Before a thing can be worked on it must be both created as an issue, and priorit
 1. Open the `Issues` tab and click [`New issue`](https://github.com/neontribe/www/issues/new/choose) and choose the right template.
    - anyone can create issues
    - `Bug` is for bugs
-   - `Story` is for new things, e.g. code, content, dependency updates
+   - `Story` is for new things, e.g. code, content to meet a user need
+   -  `Tasks` is for simple actions such as dependency updates
    - `Research` is for tasks that are not going to effect the site _yet_
    - `Catch-up Meeting` is for the weekly catchup meeting [Prioritising issues](prioritising-issues)
 1. Follow the template so that the issue can be understood by others
