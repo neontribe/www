@@ -65,6 +65,7 @@ When contributing to this project please do the following:
 1. Await code review, see [Review process](#review-process)
    - Pull requests are the pull requester's responsibility, use slack and other channels to encourage people to review for you.
    - Before you merge, it is your responsibility to respond to suggestions and change requests.
+   - **It's not personal**. Lots of comments can be a good thing, even if they're all suggesting changes.
 
 Please make sure that you keep your activity up-to-date:
 
@@ -74,13 +75,17 @@ Please make sure that you keep your activity up-to-date:
      - put the branch name (if any) on the ticket
      - unassign yourself and put it back in `Top priority issues`
 
+## Review process
+
+Two or more tribers need to approve the pull request, often getting the person who wrote the ticket involved is best.
+
+Review is about: checking for errors, checking that the work achieves the definition of done for the ticket, and also about suggestions for different solutions.
+
+**Always assume that the author is not trying to be an arsehole, isn't an idiot, and is probably operating under constraints that you don't understand. Be gentle and ask questions.**
+
 ---
 
 WIP:
-
-## Review process
-
-Two or more peers need to approve the commit, when reviewing check the code for errors and check that it achieves the definition of done for the ticket
 
 ## Testing
 
