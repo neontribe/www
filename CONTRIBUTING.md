@@ -59,8 +59,12 @@ When contributing to this project please do the following:
 1. Work on the feature branch, make small commits which include the _reason_ for each commit's change.
    - We don't expect you to battle the problem alone, put any queries on the github issue and slack, people will help when they have time.
 1. When you're happy with the changeset/the commits you've made, and you're happy that the ticket passes its [Definition of done](#definition-of-done) create a pull request.
-   - Pull requests are the pull requester's responsibility, when it receives the request number
+1. `now.sh` will generate a build and deploy to a temporary URL which is available on your pull request page, along with the status of build.
+   - :star: Check it :star:
+   - Both you and reviewers should check that the changes you've made are available on the temporary URL.
 1. Await code review, see [Review process](#review-process)
+   - Pull requests are the pull requester's responsibility, use slack and other channels to encourage people to review for you.
+   - Before you merge, it is your responsibility to respond to suggestions and change requests.
 
 Please make sure that you keep your activity up-to-date:
 

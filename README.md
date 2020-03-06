@@ -1,6 +1,6 @@
 # :computer: Neontribe Website
 
-The neontribe MVP with static HTML, CSS, and JS. 
+The neontribe MVP with static HTML, CSS, and JS.
 
 ## :checkered_flag: Quick start
 
@@ -73,15 +73,12 @@ Please use `yarn` to manage the dependencies and scripts in this project. You sh
 
 The website is deployed using `now.sh`. The production website reflects the `master` branch. Pull requests which are made against master are considered staging branches.
 
-1. When contributing to the project branch from master and create a pull request.
-1. `now.sh` will generate a build and deploy to a temporary url which is available on your pull request page, along with the status of build.
-1. Before you merge, it is your responsibility to make sure that changes are approved and that your staging branch works as you expect.
-1. Please verify with reviewers or another person that the changes you've made are available on the temporary URL.
-1. **When you merge into master the change will shortly be available on the production site.**
+1. When contributing to the project you need to follow our development process. Please go and read [these instructions ./CONTRIBUTING.md](./CONTRIBUTING.md#getting-started-on-development).
+1. Beware, the website uses continuous deployments. **When you merge into master the change will shortly be available on the production site.**
 
 ## :construction_worker: Adding `tribers`
 
-To add yourself or another colleague to the `tribers`, you need to: 
+To add yourself or another colleague to the `tribers`, you need to:
 
 1. navigate to `src/data/tribers`
 2. create a markdown file titled `first-name.md` -> e.g. in the command line you can do `touch jane.md`
