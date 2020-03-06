@@ -12,7 +12,7 @@ Before a thing can be worked on it must be both created as an issue, and priorit
    - anyone can create issues
    - `Bug` is for bugs
    - `Story` is for new things, e.g. code, content to meet a user need
-   -  `Tasks` is for simple actions such as dependency updates
+   - `Tasks` is for simple actions such as dependency updates, they are often repeatable and related to maintenance
    - `Research` is for tasks that are not going to effect the site _yet_
    - `Catch-up Meeting` is for the weekly catchup meeting [Prioritising issues](prioritising-issues)
 1. Follow the template so that the issue can be understood by others
@@ -40,6 +40,7 @@ These differ for each type of issue:
 
 - [`Bug`](https://english.stackexchange.com/a/40935) has clearly documented steps to reproduce the error _and_ we are sure the error has been eliminated.
 - `Story` the definition of done uses Acceptance Criteria, this can be quite broad, specifically when the ticket is first created. We expect that the Acceptance Criteria will be refined during both prioritisation, and development, so that the final goal is clear and testable.
+- `Task` the description of the task usually contains its own definition of done, additional things such as security notes may be relevant.
 - `Research` will depend on the context and may be a simple statement of research aims.
 
 ## Getting started on development
@@ -54,11 +55,11 @@ When contributing to this project please do the following:
    - If you need more information please follow up with the person who spawned/created the task.
 1. Assign yourself and move the ticket to the `In progress` column.
 1. Create a branch with a name to help match it to the ticket, e.g.: `307-contrib-docs`.
-  - [avoid slashes in branch names](https://stackoverflow.com/questions/2527355/using-the-slash-character-in-git-branch-name/2527452#2527452)
+   - [avoid slashes in branch names](https://stackoverflow.com/questions/2527355/using-the-slash-character-in-git-branch-name/2527452#2527452)
 1. Work on the feature branch, make small commits which include the _reason_ for each commit's change.
    - We don't expect you to battle the problem alone, put any queries on the github issue and slack, people will help when they have time.
 1. When you're happy with the changeset/the commits you've made, and you're happy that the ticket passes its [Definition of done](#definition-of-done) create a pull request.
-    - Pull requests are the pull requester's responsibility, when it receives the request number
+   - Pull requests are the pull requester's responsibility, when it receives the request number
 1. Await code review, see [Review process](#review-process)
 
 Please make sure that you keep your activity up-to-date:
