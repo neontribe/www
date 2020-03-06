@@ -76,6 +76,8 @@ The website is deployed using `now.sh`. The production website reflects the `mas
 1. When contributing to the project you need to follow our development process. Please go and read [these instructions ./CONTRIBUTING.md](./CONTRIBUTING.md#getting-started-on-development).
 1. Beware, the website uses continuous deployments. **When you merge into master the change will shortly be available on the production site.**
 
+Please read the [./now.json configuration](./now.json) if you need more infrastructure specific information. [The documentation for the content of the configuration file is on the zeit website](https://zeit.co/docs/configuration#introduction/configuration-reference).
+
 ## :construction_worker: Adding `tribers`
 
 To add yourself or another colleague to the `tribers`, you need to:
