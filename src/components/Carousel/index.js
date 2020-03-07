@@ -25,7 +25,7 @@ const Carousel = ({ children }) => {
     <div className="carousel">
       <div className="carousel__controls">
         <CarouselControl label="Previous Item" onClick={prevItem}>
-          <img className="arrow previous-arrow" src={Arrow} />
+          <img className="arrow previous-arrow" src={Arrow} alt="" />
         </CarouselControl>
         <CarouselImages
           images={React.Children.map(children, child => ({
@@ -36,7 +36,7 @@ const Carousel = ({ children }) => {
           goToItem={setActiveItem}
         />
         <CarouselControl label="Next Item" onClick={nextItem}>
-          <img className="arrow next-arrow" src={Arrow} />
+          <img className="arrow next-arrow" src={Arrow} alt="" />
         </CarouselControl>
       </div>
 

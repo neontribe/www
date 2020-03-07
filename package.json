@@ -43,6 +43,7 @@
     "start-prototype": "live-server prototype/",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "jest",
+    "lint": "eslint .",
     "now-build": "npm run build"
   },
   "devDependencies": {

@@ -4,7 +4,6 @@ import { c_PRIMARY_BACKGROUND_ALTERNATIVE, GUTTER_PX } from '../../theme'
 import ConstrainedWidth from '../Layout/ConstrainedWidth'
 import Text from '../Text'
 import { InternalLink, ExternalLink } from '../Link'
-import Heading from '../Heading'
 import twitterlogo from './twitterlogo.svg'
 
 const mapListItems = children =>
@@ -70,11 +69,7 @@ export default () => (
           title={
             <ExternalLink href="http://twitter.com/neontribe">
               <Text alternate weight={500}>
-                <img
-                  src={twitterlogo}
-                  className="twitterlogo"
-                  role="presentation"
-                />{' '}
+                <img src={twitterlogo} className="twitterlogo" alt="" />{' '}
                 @neontribe
               </Text>
             </ExternalLink>
