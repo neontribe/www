@@ -2,7 +2,7 @@ import React from 'react'
 import CarouselControl from './CarouselControl'
 import CarouselImages from './CarouselImages'
 import CarouselItem from './CarouselItem'
-import Arrow from '../../../prototype/global-images/arrow.svg'
+import Arrow from './arrow.svg'
 
 const moduloWithMax = (num, max) => ((num % max) + max) % max
 

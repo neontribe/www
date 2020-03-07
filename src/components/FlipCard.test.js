@@ -1,7 +1,7 @@
 import React from 'react'
 import { render } from '@testing-library/react'
 
-import FlipCard, { CardFront, CardBack } from '../../../components/FlipCard'
+import FlipCard, { CardFront, CardBack } from './FlipCard'
 
 const TestFlipCard = () => (
   <FlipCard>
