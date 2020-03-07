@@ -42,7 +42,7 @@
     "start": "yarn run develop",
     "start-prototype": "live-server prototype/",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "jest",
+    "test": "yarn lint && jest",
     "lint": "eslint .",
     "now-build": "npm run build"
   },
