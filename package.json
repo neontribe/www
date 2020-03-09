@@ -42,26 +42,27 @@
     "start": "yarn run develop",
     "start-prototype": "live-server prototype/",
     "format": "prettier --write \"src/**/*.js\"",
-    "test": "jest",
+    "test": "yarn lint && jest",
+    "lint": "eslint .",
     "now-build": "npm run build"
   },
   "devDependencies": {
-    "@testing-library/react": "8.0.9",
-    "babel-eslint": "10.0.1",
-    "babel-jest": "24.8.0",
-    "eslint": "5.16.0",
-    "eslint-config-react-app": "4.0.1",
-    "eslint-plugin-flowtype": "3.10.1",
-    "eslint-plugin-import": "2.17.3",
-    "eslint-plugin-jsx-a11y": "6.2.1",
-    "eslint-plugin-react": "7.13.0",
-    "eslint-plugin-react-hooks": "1.6.0",
-    "husky": "2.7.0",
-    "jest": "24.8.0",
-    "jest-dom": "3.5.0",
-    "lint-staged": "8.2.0",
+    "@testing-library/jest-dom": "5.1.1",
+    "@testing-library/react": "9.5.0",
+    "babel-eslint": "10.1.0",
+    "babel-jest": "25.1.0",
+    "eslint": "6.8.0",
+    "eslint-config-react-app": "5.2.0",
+    "eslint-plugin-flowtype": "4.6.0",
+    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "7.19.0",
+    "eslint-plugin-react-hooks": "2.5.0",
+    "husky": "4.2.3",
+    "jest": "25.1.0",
+    "lint-staged": "10.0.8",
     "live-server": "1.2.1",
-    "prettier": "1.18.2"
+    "prettier": "1.19.1"
   },
   "engines": {
     "node": "12.x",
@@ -79,12 +80,10 @@
   },
   "lint-staged": {
     "*.{js,json,css,md}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ],
     "*.js": [
-      "eslint",
-      "git add"
+      "eslint"
     ]
   },
   "homepage": "https://github.com/neontribe/www#readme"

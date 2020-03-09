@@ -1,9 +1,7 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { Link as GatsbyLink } from 'gatsby'
 import css from 'styled-jsx/css'
 
-import { breakpoint, c_NAV_ACTIVE } from '../theme'
+import { breakpoint } from '../theme'
 import Logo from './Logo'
 import { InternalLink } from './Link'
 import Text from './Text'
