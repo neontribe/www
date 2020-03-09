@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import Img from 'gatsby-image/withIEPolyfill'
 import ShimlessImg from 'gatsby-image'
 
 import { c_NEONS } from '../../theme'
