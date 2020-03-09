@@ -6,7 +6,6 @@ import {
   c_PRIMARY_TEXT,
   c_PRIMARY_BACKGROUND,
   FONT_STACK,
-  c_NEONS,
 } from '../../theme'
 
 const Layout = ({ children }) => (
