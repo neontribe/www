@@ -31,15 +31,8 @@ const TribeMemberFront = ({
   onClick,
   sepColour,
 }) => {
-  const [hasMouseOver, setHasMouseOver] = React.useState(false)
-
   return (
-    <figure
-      className="tribe-figure"
-      onClick={onClick}
-      onMouseOver={() => setHasMouseOver(true)}
-      onMouseOut={() => setHasMouseOver(false)}
-    >
+    <figure className="tribe-figure" onClick={onClick}>
       {image ? (
         <div className="image-container">
           <Img
