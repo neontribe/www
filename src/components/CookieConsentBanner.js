@@ -97,9 +97,9 @@ const CookieConsentBanner = () => {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          background: #EFFFFA;
+          background: #effffa;
           height: 100%;
-          text-align: left;
+>>>>>>> 2dde8147e7699a3ceabf753e794978b733d7e08b
           position: fixed;
           top: 0;
           transition: transform 5.5s ease-in-out;
@@ -123,6 +123,7 @@ const CookieConsentBanner = () => {
           background-color: transparent;
           transition: 0.5s
           }
+
 
         p {
           transform: rotate(90deg);
