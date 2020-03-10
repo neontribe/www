@@ -91,7 +91,7 @@ CardFront.propTypes = {
 
 // Card back
 const CardBack = ({ children, isFlipped, animTime }) => (
-  <div className="card-side card-back">
+  <div className="card-side card-back" aria-hidden={!isFlipped}>
     {children}
     <style jsx>{cardSideStyles}</style>
     <style jsx>{`

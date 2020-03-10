@@ -4,7 +4,7 @@ import Cookies from 'js-cookie'
 
 import { c_PRIMARY_TEXT, c_PRIMARY_BACKGROUND_ALTERNATIVE } from '../theme'
 
-const Button = ({ onClick, className, children, open}) => (
+const Button = ({ onClick, className, children, open }) => (
   <button type="button" onClick={onClick} className={className}>
     {children}
   </button>

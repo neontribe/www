@@ -17,6 +17,7 @@ const TribeMemberBack = ({
   skills,
   bio,
   social,
+  preventTabFocus,
 }) => {
   const socialKeys = social ? Object.keys(social) : []
   var socialCount = 0
@@ -47,6 +48,7 @@ const TribeMemberBack = ({
                   handle={social[site]}
                   count={socialCount}
                   key={site}
+                  preventTabFocus={preventTabFocus}
                 />
               ) : (
                 ''
@@ -82,7 +84,7 @@ const TribeMemberBack = ({
 
         .social-icons {
           display: flex;
-          justify-content: space-evenly;
+          justify-content: space-around;
           align-items: center;
           margin: ${socialCount ? SOCIAL_MARGIN : 0}px 0;
         }

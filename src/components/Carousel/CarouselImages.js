@@ -35,6 +35,10 @@ const CarouselImage = ({ image, i, activeImage, goToItem }) => {
           display: none;
           align-items: center;
         }
+        .carousel__image :global(svg) {
+          height: 300px !important;
+          width: 300px !important;
+        }
         .carousel__image--is-active {
           display: flex;
         }
