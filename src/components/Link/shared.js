@@ -1,11 +1,7 @@
 import React from 'react'
 import css from 'styled-jsx/css'
 
-import {
-  c_PRIMARY_BACKGROUND,
-  c_CALL_TO_ACTION,
-  c_PRIMARY_TEXT,
-} from '../../theme'
+import { c_PRIMARY_BACKGROUND, c_CALL_TO_ACTION } from '../../theme'
 import Text from '../Text'
 import Arrow from './Arrow'
 
