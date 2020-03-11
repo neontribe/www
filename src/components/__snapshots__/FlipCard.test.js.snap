@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default render matches snapshot 1`] = `
+<div>
+  <div
+    class="jsx-3761235168 card-container"
+  >
+    <div
+      class="jsx-3761235168 card-body"
+    >
+      <div
+        aria-hidden="true"
+        class="jsx-3852085922 jsx-226274161 card-side card-back"
+      >
+        back 2
+      </div>
+      <div
+        class="jsx-3852085922 jsx-2255193976 card-side card-front"
+      >
+        front 1
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`isFlipped render matches snapshot 1`] = `
+<div>
+  <div
+    class="jsx-3761235168 card-container"
+  >
+    <div
+      class="jsx-3761235168 card-body"
+    >
+      <div
+        aria-hidden="true"
+        class="jsx-3852085922 jsx-226274161 card-side card-back"
+      >
+        back 2
+      </div>
+      <div
+        class="jsx-3852085922 jsx-2255193976 card-side card-front"
+      >
+        front 1
+      </div>
+    </div>
+  </div>
+</div>
+`;

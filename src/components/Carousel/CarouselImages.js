@@ -81,6 +81,7 @@ const CarouselImages = ({ images, activeImage, goToItem }) => (
   <div className="carousel__images">
     {images.map((image, i) => (
       <CarouselImage
+        key={`${image}-${i}`}
         image={image}
         i={i}
         activeImage={activeImage}
