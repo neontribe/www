@@ -87,7 +87,7 @@ const CookieConsentBanner = () => {
 
       {!displayBanner && (
         <button
-          onClick={() => setIsBannerOpen(true)} 
+          onClick={() => setIsBannerOpen(true)}
           className="cookie-sidebar-button"
           aria-controls="cookie-banner"
         >
@@ -106,7 +106,7 @@ const CookieConsentBanner = () => {
           position: fixed;
           top: 0;
           //words editting
-          padding: 2rem ;
+          padding: 2rem;
           letter-spacing: 0;
           color: black;
           text-decoration: none;
@@ -123,9 +123,8 @@ const CookieConsentBanner = () => {
           position: fixed;
           top: 0;
           background-color: transparent;
-          transition: 0.5s
-          }
-
+          transition: 0.5s;
+        }
 
         p {
           transform: rotate(90deg);
