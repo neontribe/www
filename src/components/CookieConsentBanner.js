@@ -72,7 +72,11 @@ const CookieConsentBanner = () => {
       <div aria-expanded={displayBanner}>
         {displayBanner && (
           <div className="cookie-banner">
-            This site uses cookies, is that cool?
+            Can we use cookies to help us improve this site? We'd like to use
+            Google Analytics cookies to collect and report information on how
+            people use the site. We will use this to help us improve our
+            website. Allowing us to use cookies does not allow us to identify
+            you. For more information please see our 'Privacy Policy' page.
             <div>
               <Button onClick={acceptCookies}>Accept</Button>
               <Button onClick={declineCookies}>Decline</Button>
@@ -107,6 +111,7 @@ const CookieConsentBanner = () => {
           letter-spacing: 0;
           color: black;
           text-decoration: none;
+          width: 300px;
         }
 
         @media (max-width: 576px) {
@@ -120,7 +125,7 @@ const CookieConsentBanner = () => {
 
           top: 0;
           left: 0;
-          background-color: #111;
+          background-color: transparent;
           transition: transform 2.6s;
           cursor: pointer;
         }
