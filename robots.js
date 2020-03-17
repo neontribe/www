@@ -1,7 +1,6 @@
 const prodRobots = `
 User-agent: *
 Allow: /
-Disallow: /prototype/
 Sitemap: https://www.neontribe.co.uk/sitemap.xml
 Host: https://www.neontribe.co.uk
 `.trim()

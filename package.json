@@ -40,7 +40,6 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "start": "yarn run develop",
-    "start-prototype": "live-server prototype/",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "yarn lint && jest",
     "lint": "eslint .",
@@ -61,7 +60,6 @@
     "husky": "4.2.3",
     "jest": "25.1.0",
     "lint-staged": "10.0.8",
-    "live-server": "1.2.1",
     "prettier": "1.19.1"
   },
   "engines": {
