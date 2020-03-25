@@ -104,11 +104,11 @@ export default () => (
           <li>
             <address>
               <Text alternate size="small">
-                The Generator Quayhouse
+                Kaleider Studios
                 <br />
-                Exeter
+                45 Preston Street
                 <br />
-                EX2 4AN
+                Exeter EX1 1DF
               </Text>
             </address>
           </li>
