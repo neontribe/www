@@ -72,11 +72,22 @@ const CookieConsentBanner = () => {
       <div aria-expanded={displayBanner}>
         {displayBanner && (
           <div className="cookie-banner">
-            Can we use cookies to help us improve this site? We'd like to use
-            Google Analytics cookies to collect and report information on how
-            people use the site. We will use this to help us improve our
-            website. Allowing us to use cookies does not allow us to identify
-            you. For more information please see our 'Privacy Policy' page.
+            <h1 id="cookie-content-p1">
+              Can we use cookies to help us improve this site?
+            </h1>
+            <div className="cookie-content-p2">
+              We'd like to use Google Analytics cookies to collect and report
+              information on how people use the site. We will use this to help
+              us improve our website.
+            </div>
+            <div className="cookie-content-p2">
+              Allowing us to use cookies does not allow us to identify you. For
+              more information please see our{' '}
+              <a href="https://www.neontribe.co.uk/privacy-policy">
+                'Privacy Policy'
+              </a>{' '}
+              page.
+            </div>
             <div>
               <Button onClick={acceptCookies}>Accept</Button>
               <Button onClick={declineCookies}>Decline</Button>
@@ -100,7 +111,7 @@ const CookieConsentBanner = () => {
           //nav
           display: flex;
           flex-direction: column;
-          justify-content: center;
+          /*justify-content: center;*/
           background: #effffa;
           height: 100%;
           position: fixed;
@@ -110,7 +121,7 @@ const CookieConsentBanner = () => {
           letter-spacing: 0;
           color: black;
           text-decoration: none;
-          width: 300px;
+          width: 400px;
         }
 
         @media (max-width: 576px) {
@@ -129,6 +140,18 @@ const CookieConsentBanner = () => {
         p {
           transform: rotate(90deg);
           color: white;
+        }
+
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        .cookie-content-p2 {
+          letter-spacing: 0.015em;
+          font-weight: normal;
+          disaply: inline-block;
+          line-height: 1.5;
+          padding: 5px 0px;
         }
       `}</style>
     </div>
