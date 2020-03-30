@@ -30,6 +30,8 @@ This takes place during a weekly catchup meeting when we need more issues for th
 1. Take tickets that are ready for action and add to `Top priority issues` or `Backlog` columns based on group instincts of user value.
    - not all tickets will be high enough priority to **make it**
    - decisions from previous meetings should not be revisited in the weekly cycle
+   - if an issue is agreed to be 'high priority' but the approach to take is not yet decided add a 'requires discussion' label to the issue, AND add an action to the meeting to note that it will be discussed the following week, tagging people that may be particularly interested
+
 1. Document reason for decision on tickets, so that it makes sense later.
 
 From time-to-time we may decide to hold more in depth prioritisation meetings to involve more people and to look at bigger issues.
@@ -38,7 +40,7 @@ From time-to-time we may decide to hold more in depth prioritisation meetings to
 
 These differ for each type of issue:
 
-- [`Bug`](https://english.stackexchange.com/a/40935) has clearly documented steps to reproduce the error _and_ we are sure the error has been eliminated.
+- [`Bug`](https://english.stackexchange.com/a/40935) Clear `Expected Behaviour` is what we use for the definition of done. It also needs clearly documented steps to reproduce the error so we can check the error has been elminated.
 - `Story` the definition of done uses Acceptance Criteria, this can be quite broad, specifically when the ticket is first created. We expect that the Acceptance Criteria will be refined during both prioritisation, and development, so that the final goal is clear and testable.
 - `Task` the description of the task usually contains its own definition of done, additional things such as security notes may be relevant.
 - `Research` will depend on the context and may be a simple statement of research aims.
