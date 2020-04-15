@@ -30,7 +30,7 @@ export default () => (
     query={graphql`
       query {
         placeholderImage: file(
-          relativePath: { eq: "images/alex.jpg" }
+          relativePath: { eq: "images/kenneth.jpg" }
           sourceInstanceName: { eq: "tribers" }
         ) {
           childImageSharp {
@@ -52,27 +52,27 @@ export default () => (
           <div className="person-wrapper">
             <TribeMember
               fluid={data.placeholderImage.childImageSharp.fluid}
-              name="Alex Moore"
+              name="Kenneth the Shark"
               headingLevel={3}
-              skills={['UX', 'HTML/CSS', 'JavaScript']}
+              skills={['Support', 'Cuddle', 'Spying']}
               bio={loremIpsum}
             />
           </div>
           <div className="person-wrapper">
             <TribeMember
               fluid={data.placeholderImage.childImageSharp.fluid}
-              name="Alex Moore"
+              name="Kenneth the Shark"
               headingLevel={3}
-              skills={['UX', 'HTML/CSS', 'JavaScript']}
+              skills={['Support', 'Cuddle', 'Spying']}
               bio={loremIpsum}
             />
           </div>
           <div className="person-wrapper">
             <TribeMember
               fluid={data.placeholderImage.childImageSharp.fluid}
-              name="Alex Moore"
+              name="Kenneth the Shark"
               headingLevel={3}
-              skills={['UX', 'HTML/CSS', 'JavaScript']}
+              skills={['Support', 'Cuddle', 'Spying']}
               bio={loremIpsum}
             />
           </div>

@@ -8,7 +8,7 @@ image: images/rob.jpg
 story: stories/rob.md
 social: # Rob carries the burden of having every social, so that the schema is correctly generated
   twitter: ''
-  github: 'rpprroger'
+  github: 'robpre'
   linkedin: ''
   instagram: ''
   twitch: ''

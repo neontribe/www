@@ -12,10 +12,6 @@
       }
     },
     {
-      "src": "prototype/**/*",
-      "use": "@now/static"
-    },
-    {
       "src": "robots.js",
       "use": "@now/node"
     }
@@ -31,11 +27,6 @@
     {
       "src": "/robots.txt",
       "dest": "/robots.js"
-    },
-    {
-      "src": "/prototype",
-      "status": 301,
-      "headers": { "Location": "/prototype/" }
     },
     {
       "src": "/the-people-of-neontribe(/?)",
