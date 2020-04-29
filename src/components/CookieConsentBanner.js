@@ -72,24 +72,23 @@ const CookieConsentBanner = () => {
       <div aria-expanded={displayBanner}>
         {displayBanner && (
           <div className="cookie-banner">
-            <h1 id="cookie-content-p1">
-              Can we use cookies to help us improve this site?
-            </h1>
+            Can we use cookies to help us improve this site?
             <div className="cookie-content-p2">
               We'd like to use Google Analytics cookies to collect and report
               information on how people use the site. We will use this to help
               us improve our website.
-            </div>
-            <div className="cookie-content-p2">
+              <br></br>
               Allowing us to use cookies does not allow us to identify you. For
               more information please see our{' '}
               <a href="https://www.neontribe.co.uk/privacy-policy">
                 'Privacy Policy'
-              </a>{' '}
+              </a>
               page.
             </div>
+            <br></br>
             <div>
               <Button onClick={acceptCookies}>Accept</Button>
+              &nbsp;&nbsp;&nbsp;
               <Button onClick={declineCookies}>Decline</Button>
             </div>
           </div>
@@ -116,6 +115,11 @@ const CookieConsentBanner = () => {
           height: 100%;
           position: fixed;
           top: 0;
+          letter-spacing: 0.015em;
+          font-weight: normal;
+          disaply: inline-block;
+          line-height: 1.5;
+          padding: 5px 0px;
           //words editting
           padding: 2rem;
           letter-spacing: 0;
@@ -134,7 +138,6 @@ const CookieConsentBanner = () => {
           position: fixed;
           top: 0;
           background-color: transparent;
-          transition: 0.5s;
         }
 
         p {
