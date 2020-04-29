@@ -86,7 +86,7 @@ const CookieConsentBanner = () => {
               page.
             </div>
             <br></br>
-            <div>
+            <div className="cookie-button">
               <Button onClick={acceptCookies}>Accept</Button>
               &nbsp;&nbsp;&nbsp;
               <Button onClick={declineCookies}>Decline</Button>
@@ -138,6 +138,10 @@ const CookieConsentBanner = () => {
           position: fixed;
           top: 0;
           background-color: transparent;
+        }
+
+        .cookie-button {
+          background-color: blue;
         }
 
         p {
