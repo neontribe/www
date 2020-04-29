@@ -2,7 +2,11 @@ import React from 'react'
 import ReactGA from 'react-ga'
 import Cookies from 'js-cookie'
 
-import { c_PRIMARY_TEXT, c_PRIMARY_BACKGROUND_ALTERNATIVE } from '../theme'
+import {
+  c_PRIMARY_TEXT,
+  c_PRIMARY_BACKGROUND_ALTERNATIVE,
+  c_PRIMARY_BACKGROUND,
+} from '../theme'
 
 const Button = ({ onClick, className, children, open }) => (
   <button type="button" onClick={onClick} className={className}>
@@ -86,10 +90,14 @@ const CookieConsentBanner = () => {
               page.
             </div>
             <br></br>
-            <div className="cookie-button">
-              <Button onClick={acceptCookies}>Accept</Button>
+            <div className="cookie-button-box">
+              <a href="#" className="cookie-button yes" onClick={acceptCookies}>
+                Accept
+              </a>
               &nbsp;&nbsp;&nbsp;
-              <Button onClick={declineCookies}>Decline</Button>
+              <a href="#" className="cookie-button no" onClick={declineCookies}>
+                Decline
+              </a>
             </div>
           </div>
         )}
@@ -106,11 +114,13 @@ const CookieConsentBanner = () => {
       )}
 
       <style jsx>{`
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-between;
+        align-items: stretch;
+
         .cookie-banner {
           //nav
-          display: flex;
-          flex-direction: column;
-          /*justify-content: center;*/
           background: #effffa;
           height: 100%;
           position: fixed;
@@ -120,12 +130,15 @@ const CookieConsentBanner = () => {
           disaply: inline-block;
           line-height: 1.5;
           padding: 5px 0px;
-          //words editting
+
+          //text
           padding: 2rem;
           letter-spacing: 0;
           color: black;
           text-decoration: none;
           width: 400px;
+          flex-basis: 50%;
+          text-align: center;
         }
 
         @media (max-width: 576px) {
@@ -140,8 +153,35 @@ const CookieConsentBanner = () => {
           background-color: transparent;
         }
 
+        .cookie-button-box {
+          display: flex;
+          flex-flow: row wrap;
+          align-items: center;
+          justify-content: space-between;
+        }
+
         .cookie-button {
-          background-color: blue;
+          padding: 10px;
+          flex-grow: 1;
+          margin: 5px;
+          font-size: 1rem;
+          color: ${c_PRIMARY_TEXT};
+          background-color: #9013fe;
+          text-align: center;
+          display: inline-block;
+          text-decoration: none;
+        }
+
+        .cookie-button:hover {
+          background-color: #6d10c9;
+        }
+
+        .cookie-button.no {
+          background-color: #620cad;
+        }
+
+        .cookie-button.no:hover {
+          background-color: #4e0a8a;
         }
 
         p {
@@ -159,6 +199,7 @@ const CookieConsentBanner = () => {
           disaply: inline-block;
           line-height: 1.5;
           padding: 5px 0px;
+          text-align: justify;
         }
       `}</style>
     </div>
