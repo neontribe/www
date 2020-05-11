@@ -86,15 +86,14 @@ const CookieConsentBanner = () => {
               more information please see our{' '}
               <a href="https://www.neontribe.co.uk/privacy-policy">
                 'Privacy Policy'
-              </a>
+              </a>{' '}
               page.
             </div>
-            <br></br>
             <div className="cookie-button-box">
               <a href="#" className="cookie-button yes" onClick={acceptCookies}>
                 Accept
               </a>
-              &nbsp;&nbsp;&nbsp;
+
               <a href="#" className="cookie-button no" onClick={declineCookies}>
                 Decline
               </a>
@@ -187,6 +186,8 @@ const CookieConsentBanner = () => {
         p {
           transform: rotate(90deg);
           color: white;
+
+          position: fixed;
         }
 
         h1 {
