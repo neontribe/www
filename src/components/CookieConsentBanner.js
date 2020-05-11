@@ -82,15 +82,19 @@ const CookieConsentBanner = () => {
               information on how people use the site. We will use this to help
               us improve our website.
               <br></br>
+              <br></br>
               Allowing us to use cookies does not allow us to identify you. For
-              more information please see our{' '}
-              <a href="https://www.neontribe.co.uk/privacy-policy">
+              more information please see our {` `}
+              <a
+                className="pp-link"
+                href="https://www.neontribe.co.uk/privacy-policy"
+              >
                 'Privacy Policy'
               </a>{' '}
               page.
             </div>
             <div className="cookie-button-box">
-              <a href="#" className="cookie-button yes" onClick={acceptCookies}>
+              <a href="#" className="cookie-button" onClick={acceptCookies}>
                 Accept
               </a>
 
@@ -123,25 +127,38 @@ const CookieConsentBanner = () => {
           background: #effffa;
           height: 100%;
           position: fixed;
+          flex-shrink: 2;
           top: 0;
           letter-spacing: 0.015em;
           font-weight: normal;
           disaply: inline-block;
           line-height: 1.5;
           padding: 5px 0px;
+          flex-basis: 400px;
+          min-width: 100px;
+          max-width: 450px;
 
           //text
           padding: 2rem;
           letter-spacing: 0;
           color: black;
           text-decoration: none;
-          width: 400px;
-          flex-basis: 50%;
+          flex-basis: 400px;
+          min-width: 100px;
           text-align: center;
         }
 
         @media (max-width: 576px) {
           width: 100%;
+        }
+
+        .cookie-content-p2 {
+          letter-spacing: 0.015em;
+          font-weight: normal;
+          disaply: inline-block;
+          line-height: 1.5;
+          padding: 5px 0px;
+          text-align: justify;
         }
 
         .cookie-sidebar-button {
@@ -183,6 +200,9 @@ const CookieConsentBanner = () => {
           background-color: #4e0a8a;
         }
 
+        .pp-link {
+          display: inline-block;
+        }
         p {
           transform: rotate(90deg);
           color: white;
@@ -192,15 +212,6 @@ const CookieConsentBanner = () => {
 
         h1 {
           font-size: 1.5rem;
-        }
-
-        .cookie-content-p2 {
-          letter-spacing: 0.015em;
-          font-weight: normal;
-          disaply: inline-block;
-          line-height: 1.5;
-          padding: 5px 0px;
-          text-align: justify;
         }
       `}</style>
     </div>
