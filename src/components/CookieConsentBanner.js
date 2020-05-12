@@ -101,13 +101,12 @@ const CookieConsentBanner = () => {
               page.
             </div>
             <div className="cookie-button-box">
-              <a href="#" className="cookie-button" onClick={acceptCookies}>
+              <button className="cookie-button" onClick={acceptCookies}>
                 Accept
-              </a>
-
-              <a href="#" className="cookie-button no" onClick={declineCookies}>
+              </button>
+              <button className="cookie-button no" onClick={declineCookies}>
                 Decline
-              </a>
+              </button>
             </div>
           </div>
         )}
@@ -126,16 +125,16 @@ const CookieConsentBanner = () => {
       <style jsx>{`
         .cookie-banner {
           background: #effffa;
-          height: 100%;
-          position: fixed;
-          top: 0;
           flex-direction: column;
+          height: 100%;
           padding: 2rem;
+          position: fixed;
+          min-width: 300px;
+          top: 0;
+          width: 25%;
+          z-index: 2;
 
           color: black;
-          flex-basis: 400px;
-          min-width: 100px;
-          max-width: 450px;
           text-align: center;
         }
 
@@ -169,14 +168,10 @@ const CookieConsentBanner = () => {
 
         .cookie-button {
           padding: 10px;
-          flex-grow: 1;
-          margin: 5px;
-          font-size: 1rem;
           color: ${c_PRIMARY_TEXT};
           background-color: #9013fe;
-          text-align: center;
           display: inline-block;
-          text-decoration: none;
+          border: none;
         }
 
         .cookie-button:hover {
