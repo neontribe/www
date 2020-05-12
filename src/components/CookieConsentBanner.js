@@ -126,13 +126,11 @@ const CookieConsentBanner = () => {
           background: #effffa;
           height: 100%;
           position: fixed;
-          flex-shrink: 2;
+
           top: 0;
-          font-weight: normal;
-          disaply: inline-block;
-          line-height: 1.5;
 
           //text
+          flex-flow: column wrap;
           padding: 2rem;
           letter-spacing: 0;
           color: black;
@@ -148,7 +146,6 @@ const CookieConsentBanner = () => {
         }
 
         .cookie-content-p2 {
-          flex-flow: column wrap;
           letter-spacing: 0.015em;
           font-weight: normal;
           disaply: inline-block;
