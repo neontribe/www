@@ -118,7 +118,6 @@ const CookieConsentBanner = () => {
 
       <style jsx>{`
         display: flex;
-        flex-flow: column wrap;
         justify-content: space-between;
         align-items: stretch;
 
@@ -129,14 +128,9 @@ const CookieConsentBanner = () => {
           position: fixed;
           flex-shrink: 2;
           top: 0;
-          letter-spacing: 0.015em;
           font-weight: normal;
           disaply: inline-block;
           line-height: 1.5;
-          padding: 5px 0px;
-          flex-basis: 400px;
-          min-width: 100px;
-          max-width: 450px;
 
           //text
           padding: 2rem;
@@ -145,6 +139,7 @@ const CookieConsentBanner = () => {
           text-decoration: none;
           flex-basis: 400px;
           min-width: 100px;
+          max-width: 450px;
           text-align: center;
         }
 
@@ -153,6 +148,7 @@ const CookieConsentBanner = () => {
         }
 
         .cookie-content-p2 {
+          flex-flow: column wrap;
           letter-spacing: 0.015em;
           font-weight: normal;
           disaply: inline-block;
@@ -203,6 +199,7 @@ const CookieConsentBanner = () => {
         .pp-link {
           display: inline-block;
         }
+
         p {
           transform: rotate(90deg);
           color: white;
