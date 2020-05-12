@@ -7,6 +7,9 @@ import {
   c_PRIMARY_BACKGROUND_ALTERNATIVE,
   c_PRIMARY_BACKGROUND,
 } from '../theme'
+import Text from './Text'
+import VerticalSpacing from './VerticalSpacing'
+import Heading from './Heading'
 
 const Button = ({ onClick, className, children, open }) => (
   <button type="button" onClick={onClick} className={className}>
@@ -76,7 +79,11 @@ const CookieConsentBanner = () => {
       <div aria-expanded={displayBanner}>
         {displayBanner && (
           <div className="cookie-banner">
-            Can we use cookies to help us improve this site?
+            <Heading level={2}>
+              <Text weight={500} size="medium" transparent type="secondary">
+                Can we use cookies to help us improve this site?
+              </Text>
+            </Heading>
             <div className="cookie-content-p2">
               We'd like to use Google Analytics cookies to collect and report
               information on how people use the site. We will use this to help
@@ -117,26 +124,15 @@ const CookieConsentBanner = () => {
       )}
 
       <style jsx>{`
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
-
         .cookie-banner {
-          //nav
           background: #effffa;
           height: 100%;
           position: fixed;
-          flex-shrink: 2;
           top: 0;
-          font-weight: normal;
-          disaply: inline-block;
-          line-height: 1.5;
-
-          //text
+          flex-direction: column;
           padding: 2rem;
-          letter-spacing: 0;
+
           color: black;
-          text-decoration: none;
           flex-basis: 400px;
           min-width: 100px;
           max-width: 450px;
@@ -151,7 +147,6 @@ const CookieConsentBanner = () => {
           flex-flow: column wrap;
           letter-spacing: 0.015em;
           font-weight: normal;
-          disaply: inline-block;
           line-height: 1.5;
           padding: 5px 0px;
           text-align: justify;
