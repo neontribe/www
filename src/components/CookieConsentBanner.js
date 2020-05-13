@@ -118,7 +118,7 @@ const CookieConsentBanner = () => {
           className="cookie-sidebar-button"
           aria-controls="cookie-banner"
         >
-          <p>Cookie</p>
+          Cookie
         </button>
       )}
 
@@ -133,10 +133,7 @@ const CookieConsentBanner = () => {
           top: 0;
           width: 25%;
           z-index: 2;
-          <<<<<<<HEAD
-=======
 
->>>>>>> bee519d608af5c41f1531fd974327ceb3098cd0c
           color: black;
           text-align: center;
         }
@@ -144,32 +141,30 @@ const CookieConsentBanner = () => {
           width: 100%;
         }
         .cookie-content-p2 {
-          flex-flow: column wrap;
           letter-spacing: 0.015em;
-          font-weight: normal;
           line-height: 1.5;
           padding: 5px 0px;
           text-align: justify;
         }
         .cookie-sidebar-button {
+          background-color: transparent;
+          color: white;
           height: 100%;
-          width: 1.5rem;
           position: fixed;
           top: 0;
-          background-color: transparent;
+          width: 1.5rem;
         }
         .cookie-button-box {
+          align-items: center;
           display: flex;
           flex-flow: row wrap;
-          align-items: center;
           justify-content: space-between;
         }
         .cookie-button {
-          padding: 10px;
-          color: ${c_PRIMARY_TEXT};
           background-color: #9013fe;
-          display: inline-block;
           border: none;
+          color: ${c_PRIMARY_TEXT};
+          padding: 10px;
         }
         .cookie-button:hover {
           background-color: #6d10c9;
@@ -185,8 +180,6 @@ const CookieConsentBanner = () => {
         }
         p {
           transform: rotate(90deg);
-          color: white;
-          position: fixed;
         }
         h1 {
           font-size: 1.5rem;
