@@ -133,6 +133,10 @@ const CookieConsentBanner = () => {
           top: 0;
           width: 25%;
           z-index: 2;
+          <<<<<<<HEAD
+=======
+
+>>>>>>> bee519d608af5c41f1531fd974327ceb3098cd0c
           color: black;
           text-align: center;
         }
