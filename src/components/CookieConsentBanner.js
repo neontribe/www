@@ -7,6 +7,9 @@ import {
   c_PRIMARY_BACKGROUND_ALTERNATIVE,
   c_PRIMARY_BACKGROUND,
 } from '../theme'
+import Text from './Text'
+import VerticalSpacing from './VerticalSpacing'
+import Heading from './Heading'
 
 const Button = ({ onClick, className, children, open }) => (
   <button type="button" onClick={onClick} className={className}>
@@ -76,7 +79,11 @@ const CookieConsentBanner = () => {
       <div aria-expanded={displayBanner}>
         {displayBanner && (
           <div className="cookie-banner">
-            Can we use cookies to help us improve this site?
+            <Heading level={2}>
+              <Text weight={500} size="medium" transparent type="secondary">
+                Can we use cookies to help us improve this site?
+              </Text>
+            </Heading>
             <div className="cookie-content-p2">
               We'd like to use Google Analytics cookies to collect and report
               information on how people use the site. We will use this to help
@@ -94,13 +101,12 @@ const CookieConsentBanner = () => {
               page.
             </div>
             <div className="cookie-button-box">
-              <a href="#" className="cookie-button" onClick={acceptCookies}>
+              <button className="cookie-button" onClick={acceptCookies}>
                 Accept
-              </a>
-
-              <a href="#" className="cookie-button no" onClick={declineCookies}>
+              </button>
+              <button className="cookie-button no" onClick={declineCookies}>
                 Decline
-              </a>
+              </button>
             </div>
           </div>
         )}
@@ -117,43 +123,30 @@ const CookieConsentBanner = () => {
       )}
 
       <style jsx>{`
-        display: flex;
-        justify-content: space-between;
-        align-items: stretch;
-
         .cookie-banner {
-          //nav
           background: #effffa;
+          flex-direction: column;
           height: 100%;
-          position: fixed;
-
-          top: 0;
-
-          //text
-          flex-flow: column wrap;
           padding: 2rem;
-          letter-spacing: 0;
+          position: fixed;
+          min-width: 300px;
+          top: 0;
+          width: 25%;
+          z-index: 2;
           color: black;
-          text-decoration: none;
-          flex-basis: 400px;
-          min-width: 100px;
-          max-width: 450px;
           text-align: center;
         }
-
         @media (max-width: 576px) {
           width: 100%;
         }
-
         .cookie-content-p2 {
+          flex-flow: column wrap;
           letter-spacing: 0.015em;
           font-weight: normal;
-          disaply: inline-block;
           line-height: 1.5;
           padding: 5px 0px;
           text-align: justify;
         }
-
         .cookie-sidebar-button {
           height: 100%;
           width: 1.5rem;
@@ -161,49 +154,36 @@ const CookieConsentBanner = () => {
           top: 0;
           background-color: transparent;
         }
-
         .cookie-button-box {
           display: flex;
           flex-flow: row wrap;
           align-items: center;
           justify-content: space-between;
         }
-
         .cookie-button {
           padding: 10px;
-          flex-grow: 1;
-          margin: 5px;
-          font-size: 1rem;
           color: ${c_PRIMARY_TEXT};
           background-color: #9013fe;
-          text-align: center;
           display: inline-block;
-          text-decoration: none;
+          border: none;
         }
-
         .cookie-button:hover {
           background-color: #6d10c9;
         }
-
         .cookie-button.no {
           background-color: #620cad;
         }
-
         .cookie-button.no:hover {
           background-color: #4e0a8a;
         }
-
         .pp-link {
           display: inline-block;
         }
-
         p {
           transform: rotate(90deg);
           color: white;
-
           position: fixed;
         }
-
         h1 {
           font-size: 1.5rem;
         }
