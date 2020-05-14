@@ -84,22 +84,23 @@ const CookieConsentBanner = () => {
                 Can we use cookies to help us improve this site?
               </Text>
             </Heading>
-            <div className="cookie-content-p2">
-              We'd like to use Google Analytics cookies to collect and report
-              information on how people use the site. We will use this to help
-              us improve our website.
-              <br></br>
-              <br></br>
-              Allowing us to use cookies does not allow us to identify you. For
-              more information please see our {` `}
-              <a
-                className="pp-link"
-                href="https://www.neontribe.co.uk/privacy-policy"
-              >
-                'Privacy Policy'
-              </a>{' '}
-              page.
-            </div>
+            <p>
+              <Text transparent type="secondary">
+                We'd like to use Google Analytics cookies to collect and report
+                information on how people use the site. We will use this to help
+                us improve our website.
+              </Text>
+            </p>
+            <p>
+              <Text transparent type="secondary">
+                Allowing us to use cookies does not allow us to identify you.
+                For more information please see our{` `}
+                <a href="https://www.neontribe.co.uk/privacy-policy">
+                  'Privacy Policy'
+                </a>{' '}
+                page.
+              </Text>
+            </p>
             <div className="cookie-button-box">
               <button className="cookie-button" onClick={acceptCookies}>
                 Accept
@@ -133,19 +134,12 @@ const CookieConsentBanner = () => {
           top: 0;
           width: 25%;
           z-index: 2;
-
-          color: black;
-          text-align: center;
         }
+
         @media (max-width: 576px) {
           width: 100%;
         }
-        .cookie-content-p2 {
-          letter-spacing: 0.015em;
-          line-height: 1.5;
-          padding: 5px 0px;
-          text-align: justify;
-        }
+
         .cookie-sidebar-button {
           background-color: transparent;
           color: white;
@@ -154,35 +148,23 @@ const CookieConsentBanner = () => {
           top: 0;
           width: 1.5rem;
         }
+
         .cookie-button-box {
           align-items: center;
           display: flex;
           flex-flow: row wrap;
           justify-content: space-between;
         }
+
         .cookie-button {
           background-color: #9013fe;
           border: none;
           color: ${c_PRIMARY_TEXT};
           padding: 10px;
         }
+
         .cookie-button:hover {
           background-color: #6d10c9;
-        }
-        .cookie-button.no {
-          background-color: #620cad;
-        }
-        .cookie-button.no:hover {
-          background-color: #4e0a8a;
-        }
-        .pp-link {
-          display: inline-block;
-        }
-        p {
-          transform: rotate(90deg);
-        }
-        h1 {
-          font-size: 1.5rem;
         }
       `}</style>
     </div>

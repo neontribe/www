@@ -12,6 +12,8 @@ import VerticalSpacing from '../VerticalSpacing'
 
 const Page = ({ title, children }) => (
   <div className="page-layout">
+    <CookieConsentBanner />
+
     <Header siteTitle={title} />
 
     <VerticalSpacing size={10} />
@@ -21,8 +23,6 @@ const Page = ({ title, children }) => (
     <VerticalSpacing size={10} />
 
     <Footer />
-
-    <CookieConsentBanner />
 
     <style jsx>{`
       .page-layout {
@@ -35,7 +35,7 @@ const Page = ({ title, children }) => (
         background-position: top left, top right;
 
         /**
-         * scale background with viewport 
+         * scale background with viewport
          *
          * calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])))
          *
