@@ -7,6 +7,7 @@ import {
   c_PRIMARY_BACKGROUND_ALTERNATIVE,
   c_PRIMARY_BACKGROUND,
   c_COOKIE_BACKGROUND,
+  c_COOKIE_BUTTON,
 } from '../theme'
 import Text from './Text'
 import VerticalSpacing from './VerticalSpacing'
@@ -158,7 +159,7 @@ const CookieConsentBanner = () => {
         }
 
         .cookie-button {
-          background-color: #9013fe;
+          background-color: ${c_COOKIE_BUTTON};
           border: none;
           color: ${c_PRIMARY_TEXT};
           padding: 10px;

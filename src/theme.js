@@ -64,6 +64,7 @@ const c_NEON_GREEN = '#48e6b6'
 const c_BLACK = '#131313'
 const c_WHITE = '#fff'
 const c_CLOUD_WHITE = '#effffa'
+const c_PURPLE = '#9013fe'
 
 // Neons, shouldn't be used with some kind of randomisation, so only export an array
 export const c_NEONS = [
@@ -80,6 +81,7 @@ export const c_PRIMARY_TEXT = c_WHITE
 export const c_PRIMARY_BACKGROUND = '#1f1e1f'
 export const c_PRIMARY_BACKGROUND_ALTERNATIVE = c_BLACK
 export const c_COOKIE_BACKGROUND = c_CLOUD_WHITE
+export const c_COOKIE_BUTTON = c_PURPLE
 // Secondary
 export const c_SECONDARY_TEXT = c_BLACK
 export const c_SECONDARY_BACKGROUND = c_WHITE
