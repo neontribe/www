@@ -6,6 +6,7 @@ import {
   c_PRIMARY_TEXT,
   c_PRIMARY_BACKGROUND_ALTERNATIVE,
   c_PRIMARY_BACKGROUND,
+  c_PRIMARY_COOKIE_BACKGROUND,
 } from '../theme'
 import Text from './Text'
 import VerticalSpacing from './VerticalSpacing'
@@ -125,7 +126,7 @@ const CookieConsentBanner = () => {
 
       <style jsx>{`
         .cookie-banner {
-          background: #effffa;
+          background: ${c_PRIMARY_COOKIE_BACKGROUND};
           flex-direction: column;
           height: 100%;
           padding: 2rem;
@@ -142,7 +143,7 @@ const CookieConsentBanner = () => {
 
         .cookie-sidebar-button {
           background-color: transparent;
-          color: white;
+          color: ${c_PRIMARY_TEXT};
           height: 100%;
           position: fixed;
           top: 0;
