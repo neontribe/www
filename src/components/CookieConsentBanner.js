@@ -8,6 +8,7 @@ import {
   c_PRIMARY_BACKGROUND,
   c_COOKIE_BACKGROUND,
   c_COOKIE_BUTTON,
+  c_COOKIE_BUTTON_HOVER,
 } from '../theme'
 import Text from './Text'
 import VerticalSpacing from './VerticalSpacing'
@@ -166,7 +167,7 @@ const CookieConsentBanner = () => {
         }
 
         .cookie-button:hover {
-          background-color: #6d10c9;
+          background-color: ${c_COOKIE_BUTTON_HOVER};
         }
       `}</style>
     </div>
