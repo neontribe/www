@@ -4,8 +4,7 @@ import Cookies from 'js-cookie'
 
 import {
   c_PRIMARY_TEXT,
-  c_PRIMARY_BACKGROUND_ALTERNATIVE,
-  c_PRIMARY_BACKGROUND,
+  breakpoint,
   c_COOKIE_BACKGROUND,
   c_COOKIE_BUTTON,
   c_COOKIE_BUTTON_HOVER,
@@ -127,31 +126,21 @@ const CookieConsentBanner = () => {
       )}
 
       <style jsx>{`
+        //destop//
+        .cookie-sidebar-button {
+          position: fixed;
+          bottom: 0;
+          min-height: 26px;
+        }
+
         .cookie-banner {
-          background: ${c_COOKIE_BACKGROUND};
-          flex-direction: column;
-          height: 100%;
+          background: yellow;
+          z-index: 2;
           padding: 2rem;
+          bottom: 0;
           position: fixed;
           min-width: 300px;
-          top: 0;
-          width: 25%;
-          z-index: 2;
         }
-
-        @media (max-width: 576px) {
-          width: 100%;
-        }
-
-        .cookie-sidebar-button {
-          background-color: transparent;
-          color: ${c_PRIMARY_TEXT};
-          height: 100%;
-          position: fixed;
-          top: 0;
-          width: 1.5rem;
-        }
-
         .cookie-button-box {
           align-items: center;
           display: flex;
@@ -168,6 +157,25 @@ const CookieConsentBanner = () => {
 
         .cookie-button:hover {
           background-color: ${c_COOKIE_BUTTON_HOVER};
+        }
+
+        @media (${breakpoint('sm')}) {
+          .cookie-banner {
+            background: ${c_COOKIE_BACKGROUND};
+            flex-direction: column;
+            top: 0;
+            height: 100%;
+
+            width: 25%;
+          }
+          .cookie-sidebar-button {
+            background-color: transparent;
+            color: ${c_PRIMARY_TEXT};
+            height: 100%;
+            position: fixed;
+            top: 0;
+            width: 1.5rem;
+          }
         }
       `}</style>
     </div>
