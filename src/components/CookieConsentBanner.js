@@ -4,10 +4,12 @@ import Cookies from 'js-cookie'
 
 import {
   c_PRIMARY_TEXT,
+  c_SECONDARY_TEXT,
   breakpoint,
   c_COOKIE_BACKGROUND,
   c_COOKIE_BUTTON,
   c_COOKIE_BUTTON_HOVER,
+  GUTTER_PX,
 } from '../theme'
 import Text from './Text'
 import VerticalSpacing from './VerticalSpacing'
@@ -139,7 +141,7 @@ const CookieConsentBanner = () => {
           padding: 2rem;
           bottom: 0;
           position: fixed;
-          min-width: 300px;
+          min-width: 400px;
         }
         .cookie-button-box {
           align-items: center;
