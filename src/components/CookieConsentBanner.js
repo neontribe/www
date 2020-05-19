@@ -132,7 +132,11 @@ const CookieConsentBanner = () => {
         .cookie-sidebar-button {
           position: fixed;
           bottom: 0;
-          min-height: 26px;
+
+          background-color: ${c_COOKIE_BUTTON};
+          border: none;
+          color: ${c_PRIMARY_TEXT};
+          padding: 10px;
         }
 
         .cookie-banner {
