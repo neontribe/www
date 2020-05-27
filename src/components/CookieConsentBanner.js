@@ -128,7 +128,7 @@ const CookieConsentBanner = () => {
       )}
 
       <style jsx>{`
-        //destop//
+        //mobile//
         .cookie-sidebar-button {
           position: fixed;
           bottom: 0;
@@ -166,6 +166,7 @@ const CookieConsentBanner = () => {
         }
 
         @media (${breakpoint('sm')}) {
+          //desktop//
           .cookie-banner {
             background: ${c_COOKIE_BACKGROUND};
             flex-direction: column;
@@ -181,6 +182,7 @@ const CookieConsentBanner = () => {
             position: fixed;
             top: 0;
             width: 1.5rem;
+            transform: rotate(90deg);
           }
         }
       `}</style>
