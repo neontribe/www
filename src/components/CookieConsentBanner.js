@@ -123,7 +123,7 @@ const CookieConsentBanner = () => {
           className="cookie-sidebar-button"
           aria-controls="cookie-banner"
         >
-          Cookie
+          Change Cookie Preferences
         </button>
       )}
 
@@ -132,13 +132,18 @@ const CookieConsentBanner = () => {
         .cookie-sidebar-button {
           position: fixed;
           bottom: 0;
-
           background-color: ${c_COOKIE_BUTTON};
           border: none;
           color: ${c_PRIMARY_TEXT};
           padding: 10px;
+          z-index: 2;
+          display: flex;
+          flex-flow: row wrap;
+          left: 5px;
         }
-
+        .cookie-sidebar-button:hover {
+          background-color: ${c_COOKIE_BUTTON_HOVER};
+        }
         .cookie-banner {
           background: yellow;
           z-index: 2;
@@ -172,17 +177,7 @@ const CookieConsentBanner = () => {
             flex-direction: column;
             top: 0;
             height: 100%;
-
             width: 25%;
-          }
-          .cookie-sidebar-button {
-            background-color: transparent;
-            color: ${c_PRIMARY_TEXT};
-            height: 100%;
-            position: fixed;
-            top: 0;
-            width: 1.5rem;
-            transform: rotate(90deg);
           }
         }
       `}</style>
