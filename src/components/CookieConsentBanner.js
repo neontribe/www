@@ -130,27 +130,27 @@ const CookieConsentBanner = () => {
       <style jsx>{`
         //mobile//
         .cookie-sidebar-button {
-          position: fixed;
-          bottom: 0;
           background-color: ${c_COOKIE_BUTTON};
+          bottom: 0;
           border: none;
           color: ${c_PRIMARY_TEXT};
-          padding: 10px;
-          z-index: 2;
           display: flex;
           flex-flow: row wrap;
           left: 5px;
+          padding: 10px;
+          position: fixed;
+          z-index: 2;
         }
         .cookie-sidebar-button:hover {
           background-color: ${c_COOKIE_BUTTON_HOVER};
         }
         .cookie-banner {
           background: yellow;
-          z-index: 2;
-          padding: 2rem;
           bottom: 0;
-          position: fixed;
           min-width: 400px;
+          padding: 2rem;
+          position: fixed;
+          z-index: 2;
         }
         .cookie-button-box {
           align-items: center;
@@ -158,25 +158,22 @@ const CookieConsentBanner = () => {
           flex-flow: row wrap;
           justify-content: space-between;
         }
-
         .cookie-button {
           background-color: ${c_COOKIE_BUTTON};
           border: none;
           color: ${c_PRIMARY_TEXT};
           padding: 10px;
         }
-
         .cookie-button:hover {
           background-color: ${c_COOKIE_BUTTON_HOVER};
         }
-
         @media (${breakpoint('sm')}) {
           //desktop//
           .cookie-banner {
             background: ${c_COOKIE_BACKGROUND};
             flex-direction: column;
-            top: 0;
             height: 100%;
+            top: 0;
             width: 25%;
           }
         }
