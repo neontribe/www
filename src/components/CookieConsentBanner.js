@@ -22,7 +22,7 @@ const Button = ({ onClick, className, children, open }) => (
 )
 
 const ACCEPTANCE_COOKIE = 'neontribe-cookies-accept'
-const NEONTRIBE_GA = 'UA-000000-01'
+const NEONTRIBE_GA = 'UA-30970110-1'
 
 const startGA = () => {
   ReactGA.initialize(NEONTRIBE_GA)
