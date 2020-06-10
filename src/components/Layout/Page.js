@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import 'normalize.css'
 
+import CookieConsentBanner from '../CookieConsentBanner'
 import Header from '../Header'
 import Footer from '../Footer'
 
@@ -11,11 +12,18 @@ import VerticalSpacing from '../VerticalSpacing'
 
 const Page = ({ title, children }) => (
   <div className="page-layout">
+    <CookieConsentBanner />
+
     <Header siteTitle={title} />
+
     <VerticalSpacing size={10} />
+
     <main role="main">{children}</main>
+
     <VerticalSpacing size={10} />
+
     <Footer />
+
     <style jsx>{`
       .page-layout {
         min-height: 100%;
@@ -27,7 +35,7 @@ const Page = ({ title, children }) => (
         background-position: top left, top right;
 
         /**
-         * scale background with viewport 
+         * scale background with viewport
          *
          * calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])))
          *
