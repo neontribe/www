@@ -893,29 +893,29 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@fortawesome/fontawesome-common-types@^0.2.27":
+"@fortawesome/fontawesome-common-types@^0.2.28":
   version "0.2.28"
   resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.28.tgz#1091bdfe63b3f139441e9cba27aa022bff97d8b2"
   integrity sha512-gtis2/5yLdfI6n0ia0jH7NJs5i/Z/8M/ZbQL6jXQhCthEOe5Cr5NcQPhgTvFxNOtURE03/ZqUcEskdn2M+QaBg==
 
-"@fortawesome/fontawesome-svg-core@1.2.27":
-  version "1.2.27"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.27.tgz#e4db8e3be81a40988213507c3e3d0c158a6641a3"
-  integrity sha512-sOD3DKynocnHYpuw2sLPnTunDj7rLk91LYhi2axUYwuGe9cPCw7Bsu9EWtVdNJP+IYgTCZIbyARKXuy5K/nv+Q==
+"@fortawesome/fontawesome-svg-core@1.2.28":
+  version "1.2.28"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.28.tgz#e5b8c8814ef375f01f5d7c132d3c3a2f83a3abf9"
+  integrity sha512-4LeaNHWvrneoU0i8b5RTOJHKx7E+y7jYejplR7uSVB34+mp3Veg7cbKk7NBCLiI4TyoWS1wh9ZdoyLJR8wSAdg==
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.27"
+    "@fortawesome/fontawesome-common-types" "^0.2.28"
 
-"@fortawesome/free-brands-svg-icons@5.12.1":
-  version "5.12.1"
-  resolved "https://registry.yarnpkg.com/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-5.12.1.tgz#67977addd15e21e57aa1ed71cd2ddecdfaa88647"
-  integrity sha512-IYUYcgGsQuwiIHjRGfeSTCIQKUSZMb6FsV6mDj78K0D+YzGJkM4cvEBBUMHtnla5D2HCxncMI/9JX5YIk2GHeQ==
+"@fortawesome/free-brands-svg-icons@5.13.0":
+  version "5.13.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-5.13.0.tgz#e79de73ba6555055204828dca9c0691e7ce5242b"
+  integrity sha512-/6xXiJFCMEQxqxXbL0FPJpwq5Cv6MRrjsbJEmH/t5vOvB4dILDpnY0f7zZSlA8+TG7jwlt12miF/yZpZkykucA==
   dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.27"
+    "@fortawesome/fontawesome-common-types" "^0.2.28"
 
-"@fortawesome/react-fontawesome@0.1.9":
-  version "0.1.9"
-  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.1.9.tgz#c865b9286c707407effcec99958043711367cd02"
-  integrity sha512-49V3WNysLZU5fZ3sqSuys4nGRytsrxJktbv3vuaXkEoxv22C6T7TEG0TW6+nqVjMnkfCQd5xOnmJoZHMF78tOw==
+"@fortawesome/react-fontawesome@0.1.10":
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.1.10.tgz#7ba2bd300036f95e2ac084000ba8ba26cd269c96"
+  integrity sha512-UGdpJiLBIqR/8xcLrCarf2pChqQFKjDTD02C7ZS/odpOVVl2YuHYRCLEOQ0GpfOk6jtYhmouSFOFoC8qNCe5cg==
   dependencies:
     prop-types "^15.7.2"
 
@@ -3334,6 +3334,14 @@ chalk@^3.0.0:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
+chalk@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.0.0.tgz#6e98081ed2d17faab615eb52ac66ec1fe6209e72"
+  integrity sha512-N9oWFcegS0sFr9oh1oz2d7Npos6vNoWW9HvtCg5N1KRFpUhaAhvTv5Y58g880fZaEYSNm3qDz8SU1UrGvp+n7A==
+  dependencies:
+    ansi-styles "^4.1.0"
+    supports-color "^7.1.0"
+
 character-entities-html4@^1.0.0:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/character-entities-html4/-/character-entities-html4-1.1.4.tgz#0e64b0a3753ddbf1fdc044c5fd01d0199a02e125"
@@ -3693,7 +3701,7 @@ commondir@^1.0.1:
   resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
   integrity sha1-3dgA2gxmEnOTzKWVDqloo6rxJTs=
 
-compare-versions@^3.5.1:
+compare-versions@^3.6.0:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/compare-versions/-/compare-versions-3.6.0.tgz#1a5689913685e5a87637b8d3ffca75514ec41d62"
   integrity sha512-W6Af2Iw1z4CB7q4uU4hv646dW9GQuBM+YpC0UvUCWSD8w90SJjp+ujJuXaEMtAXBtSqGfMPuFOVn4/+FlaqfBA==
@@ -7414,14 +7422,14 @@ human-signals@^1.1.1:
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-1.1.1.tgz#c5b1cd14f50aeae09ab6c59fe63ba3395fe4dfa3"
   integrity sha512-SEQu7vl8KjNL2eoGBLF3+wAjpsNfA9XMlXAYj/3EdaNfAlxKthD1xjEQfGOUhllCGGJVNY34bRr6lPINhNjyZw==
 
-husky@4.2.3:
-  version "4.2.3"
-  resolved "https://registry.yarnpkg.com/husky/-/husky-4.2.3.tgz#3b18d2ee5febe99e27f2983500202daffbc3151e"
-  integrity sha512-VxTsSTRwYveKXN4SaH1/FefRJYCtx+wx04sSVcOpD7N2zjoHxa+cEJ07Qg5NmV3HAK+IRKOyNVpi2YBIVccIfQ==
+husky@4.2.5:
+  version "4.2.5"
+  resolved "https://registry.yarnpkg.com/husky/-/husky-4.2.5.tgz#2b4f7622673a71579f901d9885ed448394b5fa36"
+  integrity sha512-SYZ95AjKcX7goYVZtVZF2i6XiZcHknw50iXvY7b0MiGoj5RwdgRQNEHdb+gPDPCXKlzwrybjFjkL6FOj8uRhZQ==
   dependencies:
-    chalk "^3.0.0"
+    chalk "^4.0.0"
     ci-info "^2.0.0"
-    compare-versions "^3.5.1"
+    compare-versions "^3.6.0"
     cosmiconfig "^6.0.0"
     find-versions "^3.2.0"
     opencollective-postinstall "^2.0.2"
@@ -8778,7 +8786,7 @@ jpeg-js@^0.3.4:
   resolved "https://registry.yarnpkg.com/jpeg-js/-/jpeg-js-0.3.7.tgz#471a89d06011640592d314158608690172b1028d"
   integrity sha512-9IXdWudL61npZjvLuVe/ktHiA41iE8qFyLB+4VDTblEsWBzeg8WQTlktdUK4CdncUqtUgUg0bbOmTE2bKBKaBQ==
 
-js-cookie@^2.2.1:
+js-cookie@2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/js-cookie/-/js-cookie-2.2.1.tgz#69e106dc5d5806894562902aa5baec3744e9b2b8"
   integrity sha512-HvdH2LzI/EAZcUwA8+0nKNtWHqS+ZmijLA30RwZA0bo7ToCckjK5MkGhjED9KoRcXO6BaGI3I9UIzSA1FKFPOQ==
@@ -11870,7 +11878,7 @@ react-fast-compare@^2.0.2:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
   integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
 
-react-ga@^2.7.0:
+react-ga@2.7.0:
   version "2.7.0"
   resolved "https://registry.yarnpkg.com/react-ga/-/react-ga-2.7.0.tgz#24328f157f31e8cffbf4de74a3396536679d8d7c"
   integrity sha512-AjC7UOZMvygrWTc2hKxTDvlMXEtbmA0IgJjmkhgmQQ3RkXrWR11xEagLGFGaNyaPnmg24oaIiaNPnEoftUhfXA==
