@@ -14,6 +14,7 @@ import {
 import Text from './Text'
 import VerticalSpacing from './VerticalSpacing'
 import Heading from './Heading'
+import { InternalLink } from './Link'
 
 const Button = ({ onClick, className, children, open }) => (
   <button type="button" onClick={onClick} className={className}>
@@ -79,7 +80,7 @@ const CookieConsentBanner = () => {
   const displayBanner = !acceptanceCookieExists || isBannerOpen
 
   return (
-    <div>
+    <aside>
       <div aria-expanded={displayBanner}>
         {displayBanner && (
           <div className="cookie-banner">
@@ -99,9 +100,9 @@ const CookieConsentBanner = () => {
               <Text transparent type="secondary">
                 Allowing us to use cookies does not allow us to identify you.
                 For more information please see our{` `}
-                <a href="https://www.neontribe.co.uk/privacy-policy">
+                <InternalLink to="/privacy-policy">
                   'Privacy Policy'
-                </a>{' '}
+                </InternalLink>{' '}
                 page.
               </Text>
             </p>
@@ -178,7 +179,7 @@ const CookieConsentBanner = () => {
           }
         }
       `}</style>
-    </div>
+    </aside>
   )
 }
 
