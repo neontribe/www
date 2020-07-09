@@ -9,13 +9,12 @@ import { ExternalLink } from '../components/Link'
 import PageMeta from '../components/PageMeta'
 import Centered from '../components/Centered'
 
+const description =
+  'Want to get better at helping developers learn? Join our accredited course to improve your teaching skills'
+
 const TeachingTech = () => (
   <Layout>
-    <PageMeta
-      title="Teaching Tech"
-      description="Want to get better at helping developers learn? Join our accredited course to improve
-              your teaching skills"
-    />
+    <PageMeta title="Teaching Tech" description={description} />
     <ConstrainedWidth>
       <Centered>
         <Heading level={1}>
