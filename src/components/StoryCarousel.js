@@ -73,17 +73,17 @@ export default () => (
                 logo
               }
             >
-              <RenderContent
-                htmlAst={triber.frontmatter.story.md.htmlAst}
-                type="secondary"
-              />
-              <VerticalSpacing size={1} />
               <Heading level={3} size="medium">
                 <Text size="medium" type="secondary" weight={500}>
                   {triber.frontmatter.story.md.frontmatter.name ||
                     triber.frontmatter.name}
                 </Text>
               </Heading>
+              <VerticalSpacing size={1} />
+              <RenderContent
+                htmlAst={triber.frontmatter.story.md.htmlAst}
+                type="secondary"
+              />
             </Carousel.Item>
           ))}
         </Carousel>

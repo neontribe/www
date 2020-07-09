@@ -14,6 +14,8 @@ const CarouselItem = ({ children }) => {
       {children}
       <style jsx>{`
         .carousel__item {
+          display: flex;
+          flex-direction: column-reverse;
           color: ${c_SECONDARY_TEXT};
           padding: ${GUTTER_PX * 8}px ${GUTTER_PX * 6}px;
           text-align: center;
