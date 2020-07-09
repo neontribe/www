@@ -73,7 +73,7 @@ export default () => (
                 logo
               }
             >
-              <Heading level={3} size="medium">
+              <Heading level={2} size="medium">
                 <Text size="medium" type="secondary" weight={500}>
                   {triber.frontmatter.story.md.frontmatter.name ||
                     triber.frontmatter.name}
