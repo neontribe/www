@@ -152,8 +152,11 @@ const TeachingTech = () => (
 
       <VerticalSpacing size={1} />
       <Text>Interested? Write to us at</Text>
-      <ExternalLink href="mailto:teachingtech@neontribe.co.uk">
-        <Text>teachingtech@neontribe.co.uk</Text>
+      <ExternalLink
+        href="mailto:teachingtech@neontribe.co.uk"
+        style={{ color: 'inherit' }}
+      >
+        teachingtech@neontribe.co.uk
       </ExternalLink>
       <Text>to apply</Text>
     </ConstrainedWidth>
