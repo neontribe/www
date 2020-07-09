@@ -38,9 +38,12 @@ const stopGA = () => {
 const CookieConsentBanner = () => {
   const [isBannerOpen, setIsBannerOpen] = React.useState(false)
   const [hasTrackedView, setHasTrackedView] = React.useState(false)
-  const [acceptanceCookie, setAcceptanceCookie] = React.useState(
-    Cookies.get(ACCEPTANCE_COOKIE)
-  )
+  const [acceptanceCookie, setAcceptanceCookie] = React.useState(false)
+
+  // #438: perform check client side to avoid cookie banner briefly appearing
+  React.useEffect(() => {
+    setAcceptanceCookie(Cookies.get(ACCEPTANCE_COOKIE))
+  }, [])
 
   React.useEffect(() => {
     if (acceptanceCookie === 'true') {
@@ -145,7 +148,7 @@ const CookieConsentBanner = () => {
           background-color: ${c_COOKIE_BUTTON_HOVER};
         }
         .cookie-banner {
-          background: yellow;
+          background: ${c_COOKIE_BACKGROUND};
           bottom: 0;
           min-width: 400px;
           padding: 2rem;
@@ -170,7 +173,6 @@ const CookieConsentBanner = () => {
         @media (${breakpoint('sm')}) {
           //desktop//
           .cookie-banner {
-            background: ${c_COOKIE_BACKGROUND};
             flex-direction: column;
             height: 100%;
             top: 0;
