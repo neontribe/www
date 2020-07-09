@@ -81,7 +81,15 @@ const CookieConsentBanner = () => {
 
   return (
     <aside>
-      <div aria-expanded={displayBanner}>
+      <div>
+        <button
+          onClick={() => setIsBannerOpen(true)}
+          className="cookie-sidebar-button"
+          aria-expanded={isBannerOpen}
+        >
+          Change Cookie Preferences
+        </button>
+
         {displayBanner && (
           <div className="cookie-banner">
             <Heading level={2}>
@@ -117,16 +125,6 @@ const CookieConsentBanner = () => {
           </div>
         )}
       </div>
-
-      {!displayBanner && (
-        <button
-          onClick={() => setIsBannerOpen(true)}
-          className="cookie-sidebar-button"
-          aria-controls="cookie-banner"
-        >
-          Change Cookie Preferences
-        </button>
-      )}
 
       <style jsx>{`
         //mobile//
