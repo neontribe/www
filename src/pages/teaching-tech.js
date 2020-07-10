@@ -16,7 +16,7 @@ const description =
 
 const TeachingTech = () => (
   <Layout>
-    <PageMeta title="Privacy" description={description} />
+    <PageMeta title="Teaching Tech" description={description} />
 
     <StaticQuery
       query={graphql`
