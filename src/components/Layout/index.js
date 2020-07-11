@@ -51,6 +51,7 @@ const Layout = ({ children }) => (
       body > div > div {
         height: 100%;
       }
+
       *,
       *::before,
       *::after {
