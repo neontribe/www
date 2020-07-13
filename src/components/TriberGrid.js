@@ -19,7 +19,16 @@ const TriberGridComponent = ({ tribers }) => (
             name={triber.frontmatter.name}
             headingLevel={2}
             skills={triber.frontmatter.words}
-            bio={<RenderContent type="secondary" htmlAst={triber.htmlAst} />}
+            bio={
+              <RenderContent
+                type="secondary"
+                htmlAst={triber.htmlAst}
+                components={{
+                  // avoid dark background from Text
+                  p: props => <p {...props} />,
+                }}
+              />
+            }
             social={triber.frontmatter.social}
           />
         </div>

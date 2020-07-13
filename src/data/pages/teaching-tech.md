@@ -1,6 +1,6 @@
 # Teaching Tech
 
-## Want to get better at helping developers learn? Join our accredited course to improve your teaching skills
+## Want to get better at helping developers learn?<br>Join our accredited course to improve your teaching skills
 
 We get training to support our learning, so why don’t we get training to support our teaching? When developers understand how to teach, everyone wins. It gets easier to deliver work and teams become more resilient.
 
