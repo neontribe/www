@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import ShimlessImg from 'gatsby-image'
 
-import { c_NEONS } from '../../theme'
+import { c_NEONS, c_SECONDARY_TEXT } from '../../theme'
 import FlipCard, { CardFront, CardBack } from '../FlipCard'
 import Heading from '../Heading'
 import TribeMemberFront from './TribeMemberFront'
@@ -63,6 +63,7 @@ const TribeMember = ({
         .tribe-member {
           height: 100%;
           cursor: pointer;
+          color: ${c_SECONDARY_TEXT};
         }
 
         .toggle:focus :global(+ *) {

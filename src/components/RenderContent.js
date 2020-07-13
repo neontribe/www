@@ -1,33 +1,70 @@
 import React from 'react'
 import RehypeReact from 'rehype-react'
 import Paragraph from '../components/Paragraph'
-import Heading from '../components/Heading'
 import Text from '../components/Text'
+import Centered from '../components/Centered'
 import { ExternalLink } from '../components/Link'
 
-// Copied from templates/blog-post.js
-const ContentHeadings = ({ size, children, type, ...props }) => (
-  <Heading {...props}>
-    <Text size={size} lineHeight={1.2} gutter={0} heavy type={type}>
-      {children}
-    </Text>
-  </Heading>
+const Content = props => (
+  <>
+    <div className="content" {...props} />
+    <style jsx global>{`
+      .content * {
+        margin: 0;
+      }
+
+      .content * + * {
+        margin-top: 1em;
+      }
+
+      .content * + h2 {
+        margin-top: 2em;
+      }
+
+      .content p {
+        line-height: 1.5;
+      }
+
+      .content li + li {
+        margin-top: 0.25em;
+      }
+    `}</style>
+  </>
 )
 
-const RenderContent = ({ htmlAst, type, children }) => {
+const Heading = ({ size, level, children, type, ...props }) => {
+  const H = p => React.createElement(`h${level}`, p)
+
+  return (
+    <H {...props}>
+      <Text size={size} lineHeight={1.2} heavy type={type}>
+        {children}
+      </Text>
+    </H>
+  )
+}
+
+const RenderAst = ({ htmlAst, type, components = {}, children }) => {
   const renderAst = new RehypeReact({
     createElement: React.createElement,
     components: {
       h1: props => (
-        <ContentHeadings {...props} type={type} level={1} size="large" />
+        <Centered>
+          <Heading {...props} type={type} level={1} size="large" />
+        </Centered>
       ),
-      h2: props => (
-        <ContentHeadings {...props} type={type} level={2} size="medium" />
+      h2: props => <Heading {...props} type={type} level={2} size="medium" />,
+      h3: props => <Heading {...props} type={type} level={3} size="normal" />,
+      p: ({ children, ...props }) => (
+        <p {...props}>
+          <Text children={children} />
+        </p>
       ),
-      h3: props => (
-        <ContentHeadings {...props} type={type} level={3} size="normal" />
+      li: ({ children, ...props }) => (
+        <li {...props}>
+          <Text display="inline" children={children} />
+        </li>
       ),
-      p: props => <Paragraph gutter={0} {...props} type={type} />,
       // TODO: Discern external vs external links?
       a: ({ children, ...props }) => (
         <ExternalLink {...props}>
@@ -36,6 +73,7 @@ const RenderContent = ({ htmlAst, type, children }) => {
           </Text>
         </ExternalLink>
       ),
+      ...components,
     },
   }).Compiler
 
@@ -47,8 +85,14 @@ const RenderContent = ({ htmlAst, type, children }) => {
   return children
 }
 
-RenderContent.propTypes = {
+RenderAst.propTypes = {
   type: Text.propTypes.type,
 }
+
+const RenderContent = props => (
+  <Content>
+    <RenderAst {...props} />
+  </Content>
+)
 
 export default RenderContent

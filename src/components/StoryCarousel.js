@@ -76,6 +76,10 @@ export default () => (
               <RenderContent
                 htmlAst={triber.frontmatter.story.md.htmlAst}
                 type="secondary"
+                components={{
+                  // avoid dark background from Text
+                  p: props => <p {...props} />,
+                }}
               />
               <VerticalSpacing size={1} />
               <Heading level={3} size="medium">
