@@ -109,7 +109,7 @@ const CookieConsentBanner = () => {
                 Allowing us to use cookies does not allow us to identify you.
                 For more information please see our{` `}
                 <InternalLink to="/privacy-policy">
-                  'Privacy Policy'
+                  <span className="link">'Privacy Policy'</span>
                 </InternalLink>{' '}
                 page.
               </Text>
@@ -128,6 +128,9 @@ const CookieConsentBanner = () => {
 
       <style jsx>{`
         //mobile//
+        .link {
+          text-decoration: underline;
+        }
         .cookie-sidebar-button {
           background-color: ${c_COOKIE_BUTTON};
           bottom: 0;
