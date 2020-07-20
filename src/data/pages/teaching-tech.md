@@ -10,10 +10,6 @@ The skills you’ll learn on this course will help you and your team get the mos
 
 This is an intensive course that takes place over three full consecutive days. It is about practical learning. On the last day you will get the opportunity to deliver your own fifteen minute ‘micro teach’.
 
-The course is a Level 3 Award in Education and Training (AET) that we have adapted specifically for developers teaching on the job. It is an ideal qualification for those who have no previous classroom experience or qualifications and is recognised as a licence to teach in the lifelong learning sector (16+).
-
-To receive the qualification, you’ll need to complete 3 written assessments of between 1000-1500 words on the subjects covered within a month of the course end.
-
 ## What will the course cover?
 
 Course modules have been selected to be the most appropriate for those working in tech and include:
