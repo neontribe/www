@@ -3,25 +3,23 @@ import { StaticQuery, graphql } from 'gatsby'
 import get from 'lodash.get'
 import TribeMember from './TribeMember'
 import RenderContent from './RenderContent'
-import { GUTTER_PX } from '../theme'
+
+const CONTAINER_WIDTH = 1020 // px
+const COLUMN_HEIGHT = 420 // px
+const COLUMN_WIDTH = 260 // px
+const MAX_COLUMNS = 3
 
 const TriberGridComponent = ({ tribers }) => (
   <div className="triber-grid">
     {tribers.nodes.map(triber => (
-      <div className="triber-container" key={triber.frontmatter.name}>
+      <div key={triber.frontmatter.name}>
         <div className="triber-sizer">
           <TribeMember
             image={get(triber, 'frontmatter.image.childImageSharp.fluid')}
-            grayscaleImage={get(
-              triber,
-              'frontmatter.grayscaleImage.childImageSharp.fluid'
-            )}
             name={triber.frontmatter.name}
-            headingLevel={2}
             skills={triber.frontmatter.words}
             bio={
               <RenderContent
-                type="secondary"
                 htmlAst={triber.htmlAst}
                 components={{
                   // avoid dark background from Text
@@ -34,6 +32,7 @@ const TriberGridComponent = ({ tribers }) => (
         </div>
       </div>
     ))}
+
     <style jsx>{`
       .triber-grid {
         display: flex;
@@ -41,27 +40,22 @@ const TriberGridComponent = ({ tribers }) => (
         flex-wrap: wrap;
         width: 100%;
       }
-      .triber-container {
-        margin: ${GUTTER_PX}px;
-      }
 
       @supports (display: grid) {
         /* IE11 doesn't support @support, but it supports grid! confusing */
         .triber-grid {
           display: grid;
-          grid-gap: ${GUTTER_PX * 5}px;
-          grid-template-columns: repeat(auto-fill, 300px);
+          grid-gap: 6rem
+            ${(CONTAINER_WIDTH - COLUMN_WIDTH * MAX_COLUMNS) /
+              (MAX_COLUMNS - 1)}px;
+          grid-template-columns: repeat(auto-fill, ${COLUMN_WIDTH}px);
           justify-content: center;
-          margin: 0;
-        }
-        .triber-container {
-          margin: 0;
         }
       }
 
       .triber-sizer {
-        width: 300px;
-        height: 520px;
+        width: ${COLUMN_WIDTH}px;
+        height: ${COLUMN_HEIGHT}px;
       }
     `}</style>
   </div>
@@ -86,13 +80,6 @@ export default () => (
               image {
                 childImageSharp {
                   fluid(maxWidth: 768) {
-                    ...GatsbyImageSharpFluid
-                  }
-                }
-              }
-              grayscaleImage: image {
-                childImageSharp {
-                  fluid(maxWidth: 768, grayscale: true) {
                     ...GatsbyImageSharpFluid
                   }
                 }

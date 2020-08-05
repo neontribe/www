@@ -12,33 +12,33 @@ const TestCarousel = () => (
 )
 
 test('displays the first item by default', () => {
-  const { getByTitle } = render(<TestCarousel />)
+  const { getByAltText } = render(<TestCarousel />)
 
-  expect(getByTitle('image 1')).toBeInTheDocument()
+  expect(getByAltText('image 1')).toBeInTheDocument()
 })
 
 test('displays second slide after Next is clicked', () => {
-  const { getByTitle, getByLabelText } = render(<TestCarousel />)
+  const { getByAltText, getByLabelText } = render(<TestCarousel />)
 
   fireEvent.click(getByLabelText('Next Item'))
 
-  expect(getByTitle('image 2')).toBeInTheDocument()
+  expect(getByAltText('image 2')).toBeInTheDocument()
 })
 
 test('loops to last item when Previous is clicked', () => {
-  const { getByTitle, getByLabelText } = render(<TestCarousel />)
+  const { getByAltText, getByLabelText } = render(<TestCarousel />)
 
   fireEvent.click(getByLabelText('Previous Item'))
 
-  expect(getByTitle('image 3')).toBeInTheDocument()
+  expect(getByAltText('image 3')).toBeInTheDocument()
 })
 
 test('displays correct item after image is clicked', () => {
   const slideNumber = 3
 
-  const { getByTitle, getByLabelText } = render(<TestCarousel />)
+  const { getByAltText, getByLabelText } = render(<TestCarousel />)
 
   fireEvent.click(getByLabelText(`Go to item ${slideNumber}`))
 
-  expect(getByTitle(`image ${slideNumber}`)).toBeInTheDocument()
+  expect(getByAltText(`image ${slideNumber}`)).toBeInTheDocument()
 })

@@ -1,45 +1,53 @@
 import React from 'react'
 import css from 'styled-jsx/css'
 
-import { breakpoint } from '../theme'
-import Logo from './Logo'
+import { breakpoint, c_NAV_ACTIVE, FONT_SECONDARY } from '../theme'
 import { InternalLink } from './Link'
 import Text from './Text'
 import ConstrainedWidth from './Layout/ConstrainedWidth'
 import { ExternalLink } from './Link'
 
+import logo from './logo.svg'
+import menuActive from './menu-active.svg'
+
 const activeLinkStyles = css.resolve`
   a {
-    position: relative;
+    padding-bottom: 4px;
+    border-bottom: 4px solid ${c_NAV_ACTIVE};
   }
 
-  a::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    display: block;
-    height: 8px;
-    width: 100%;
-    transform: rotate(180deg);
-    background-position-x: 0;
-    background-position-y: center;
-    background-repeat: repeat-x;
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='100%25' height='8px' viewBox='0 0 9 6' enable-background='new 0 0 9 6' xml:space='preserve'%3e%3cpolygon stroke='%23fb37f1' points='4.5,4.5 0,0 0,1.208 4.5,5.708 9,1.208 9,0 '/%3e%3c/svg%3e");
-    background-size: 12px 12px;
+  @media (${breakpoint('md')}) {
+    a {
+      position: relative;
+      border-bottom: none;
+    }
+
+    a:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -100%;
+      margin: auto;
+      height: 26px;
+      width: 50px;
+      background-image: url('${menuActive}');
+      background-repeat: no-repeat;
+    }
   }
 `
 
 const NavLink = ({ children, active, ...props }) => (
-  <InternalLink
-    {...props}
-    activeClassName={activeLinkStyles.className}
-    partiallyActive={true}
-  >
-    <Text lineHeight={2} weight={500}>
-      {children}
-    </Text>
+  <Text lineHeight={2}>
+    <InternalLink
+      {...props}
+      activeClassName={activeLinkStyles.className}
+      partiallyActive={true}
+      children={children}
+    />
+
     {activeLinkStyles.styles}
-  </InternalLink>
+  </Text>
 )
 
 const Nav = () => (
@@ -47,7 +55,7 @@ const Nav = () => (
     <ul className="list">
       <li>
         <NavLink active to="/teaching-tech">
-          Teaching Tech
+          Teaching tech
         </NavLink>
       </li>
       <li>
@@ -60,15 +68,12 @@ const Nav = () => (
       </li>
       <li>
         <ExternalLink href="mailto:hello@neontribe.co.uk">
-          <Text lineHeight={2}>hello@neontribe.co.uk</Text>
+          hello@neontribe.co.uk
         </ExternalLink>
       </li>
     </ul>
-    <style jsx>{`
-      .nav {
-        width: 100%;
-      }
 
+    <style jsx>{`
       .list {
         margin: 0;
         padding: 0;
@@ -81,7 +86,7 @@ const Nav = () => (
         width: 100%;
       }
 
-      .list > li + li {
+      .list > * + * {
         margin-top: 1rem;
       }
 
@@ -93,9 +98,9 @@ const Nav = () => (
           width: auto;
         }
 
-        .list > li + li {
+        .list > * + * {
           margin-top: 0;
-          margin-left: 2rem;
+          margin-left: 3rem;
         }
       }
     `}</style>
@@ -105,46 +110,47 @@ const Nav = () => (
 const Header = () => (
   <ConstrainedWidth>
     <header className="header">
-      <div className="logo-wrapper">
-        <InternalLink to="/" title={`Link to Neontribe homepage`}>
-          <Logo />
+      <div>
+        <InternalLink to="/" title="Link to Neontribe homepage">
+          <img className="logo" src={logo} alt="Neontribe" />
         </InternalLink>
       </div>
+
       <div className="nav-wrapper">
         <Nav />
       </div>
     </header>
+
     <style jsx>{`
       .header {
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;
-        padding: 2rem 0;
+        margin: 1rem -1rem 0;
+        font-family: ${FONT_SECONDARY};
       }
 
       .header > * {
-        flex: 1 0 auto;
-      }
-
-      .logo-wrapper {
         display: flex;
+        flex: 1 0 auto;
         justify-content: center;
+        align-items: center;
+        margin: 1rem;
       }
 
-      @media (${breakpoint('md')}) {
+      .logo {
+        height: 2rem;
+      }
+
+      @media (${breakpoint('lg')}) {
+        .header {
+          align-items: flex-end;
+          justify-content: space-between;
+        }
+
         .header > * {
           flex-grow: 0;
-        }
-
-        .logo-wrapper {
-          justify-content: center;
-          align-items: center;
-        }
-
-        .nav-wrapper {
-          display: flex;
-          align-items: center;
-          flex: 1 0 auto;
+          flex-direction: column;
+          align-items: flex-start;
         }
       }
     `}</style>

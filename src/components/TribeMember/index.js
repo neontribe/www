@@ -2,28 +2,12 @@ import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import ShimlessImg from 'gatsby-image'
 
-import { c_NEONS, c_SECONDARY_TEXT } from '../../theme'
 import FlipCard, { CardFront, CardBack } from '../FlipCard'
-import Heading from '../Heading'
 import TribeMemberFront from './TribeMemberFront'
 import TribeMemberBack from './TribeMemberBack'
 
-let neonN = 0
-const nextNeon = () => c_NEONS[neonN++ % c_NEONS.length]
-
-const TribeMember = ({
-  image,
-  grayscaleImage,
-  name,
-  headingLevel,
-  skills,
-  bio,
-  social,
-  neonSeparatorColour,
-}) => {
+const TribeMember = ({ image, name, skills, bio, social }) => {
   const [isFlipped, setFlipped] = useState(false)
-  // So this component will remember its colour between re-renders.
-  const [initialNeonColour] = useState(neonSeparatorColour || nextNeon())
 
   return (
     <section className="tribe-member">
@@ -34,22 +18,19 @@ const TribeMember = ({
       >
         Flip the person card
       </button>
+
       <FlipCard isFlipped={isFlipped}>
         <CardFront>
           <TribeMemberFront
             image={image}
-            grayscaleImage={grayscaleImage}
             name={name}
-            headingLevel={headingLevel}
             skills={skills}
             onClick={() => setFlipped(true)}
-            sepColour={initialNeonColour}
           />
         </CardFront>
         <CardBack>
           <TribeMemberBack
             onClick={() => setFlipped(false)}
-            headingLevel={headingLevel}
             name={name}
             skills={skills}
             bio={bio}
@@ -63,13 +44,12 @@ const TribeMember = ({
         .tribe-member {
           height: 100%;
           cursor: pointer;
-          color: ${c_SECONDARY_TEXT};
         }
 
         .toggle:focus :global(+ *) {
-          border: 1px solid white;
-          outline: 2px solid ${initialNeonColour};
-          box-shadow: ${initialNeonColour} 0px 0px 9px;
+          /* duplicated at Layout/index */
+          outline: 1px dashed currentColor;
+          outline-offset: 5px;
         }
 
         .visually-hidden {
@@ -91,10 +71,8 @@ TribeMember.propTypes = {
   name: PropTypes.string.isRequired,
   skills: PropTypes.array,
   bio: PropTypes.node,
-  neonSeparatorColour: PropTypes.oneOf(c_NEONS),
   // Inherited prop types
   image: ShimlessImg.propTypes.fluid,
-  headingLevel: Heading.propTypes.level,
 }
 
 TribeMember.defaultProps = {

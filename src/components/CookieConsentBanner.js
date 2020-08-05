@@ -3,23 +3,17 @@ import ReactGA from 'react-ga'
 import Cookies from 'js-cookie'
 
 import {
-  c_PRIMARY_TEXT,
-  c_SECONDARY_TEXT,
   breakpoint,
   c_COOKIE_BACKGROUND,
-  c_COOKIE_BUTTON,
-  c_COOKIE_BUTTON_HOVER,
-  GUTTER_PX,
+  c_CALL_TO_ACTION,
+  c_CALL_TO_ACTION_HOVER,
+  c_TEXT_DARK,
+  FONT_SECONDARY,
+  c_TEXT_LIGHT,
 } from '../theme'
 import Text from './Text'
 import VerticalSpacing from './VerticalSpacing'
-import Heading from './Heading'
-
-const Button = ({ onClick, className, children, open }) => (
-  <button type="button" onClick={onClick} className={className}>
-    {children}
-  </button>
-)
+import { InternalLink } from './Link'
 
 const ACCEPTANCE_COOKIE = 'neontribe-cookies-accept'
 const NEONTRIBE_GA = 'UA-30970110-1'
@@ -38,9 +32,12 @@ const stopGA = () => {
 const CookieConsentBanner = () => {
   const [isBannerOpen, setIsBannerOpen] = React.useState(false)
   const [hasTrackedView, setHasTrackedView] = React.useState(false)
-  const [acceptanceCookie, setAcceptanceCookie] = React.useState(
-    Cookies.get(ACCEPTANCE_COOKIE)
-  )
+  const [acceptanceCookie, setAcceptanceCookie] = React.useState(false)
+
+  // #438: perform check client side to avoid cookie banner briefly appearing
+  React.useEffect(() => {
+    setAcceptanceCookie(Cookies.get(ACCEPTANCE_COOKIE))
+  }, [])
 
   React.useEffect(() => {
     if (acceptanceCookie === 'true') {
@@ -79,32 +76,40 @@ const CookieConsentBanner = () => {
   const displayBanner = !acceptanceCookieExists || isBannerOpen
 
   return (
-    <div>
-      <div aria-expanded={displayBanner}>
+    <>
+      <aside>
+        <button
+          onClick={() => setIsBannerOpen(true)}
+          className="cookie-sidebar-button"
+          aria-expanded={isBannerOpen}
+        >
+          Change Cookie Preferences
+        </button>
+
         {displayBanner && (
           <div className="cookie-banner">
-            <Heading level={2}>
-              <Text weight={500} size="medium" transparent type="secondary">
-                Can we use cookies to help us improve this site?
-              </Text>
-            </Heading>
+            <Text size="medium">
+              <h2>Can we use cookies to help us improve this site?</h2>
+            </Text>
+
+            <VerticalSpacing size={2} />
+
             <p>
-              <Text transparent type="secondary">
-                We'd like to use Google Analytics cookies to collect and report
-                information on how people use the site. We will use this to help
-                us improve our website.
-              </Text>
+              We'd like to use Google Analytics cookies to collect and report
+              information on how people use the site. We will use this to help
+              us improve our website.
             </p>
             <p>
-              <Text transparent type="secondary">
-                Allowing us to use cookies does not allow us to identify you.
-                For more information please see our{` `}
-                <a href="https://www.neontribe.co.uk/privacy-policy">
-                  'Privacy Policy'
-                </a>{' '}
-                page.
-              </Text>
+              Allowing us to use cookies does not allow us to identify you. For
+              more information please see our{` `}
+              <InternalLink to="/privacy-policy">
+                <span className="link">'Privacy Policy'</span>
+              </InternalLink>{' '}
+              page.
             </p>
+
+            <VerticalSpacing size={2} />
+
             <div className="cookie-button-box">
               <button className="cookie-button" onClick={acceptCookies}>
                 Accept
@@ -115,70 +120,72 @@ const CookieConsentBanner = () => {
             </div>
           </div>
         )}
-      </div>
-
-      {!displayBanner && (
-        <button
-          onClick={() => setIsBannerOpen(true)}
-          className="cookie-sidebar-button"
-          aria-controls="cookie-banner"
-        >
-          Change Cookie Preferences
-        </button>
-      )}
+      </aside>
 
       <style jsx>{`
-        //mobile//
+        .link {
+          text-decoration: underline;
+        }
+
         .cookie-sidebar-button {
-          background-color: ${c_COOKIE_BUTTON};
+          position: fixed;
           bottom: 0;
+          left: 0;
+          z-index: 5;
+          padding: 1rem;
+          cursor: pointer;
+          border-radius: 25px;
+          background: rgba(0, 0, 0, 0.7);
+          font: inherit;
+          color: inherit;
           border: none;
-          color: ${c_PRIMARY_TEXT};
-          display: flex;
-          flex-flow: row wrap;
-          left: 5px;
-          padding: 10px;
-          position: fixed;
-          z-index: 2;
         }
-        .cookie-sidebar-button:hover {
-          background-color: ${c_COOKIE_BUTTON_HOVER};
-        }
+
         .cookie-banner {
-          background: yellow;
-          bottom: 0;
-          min-width: 400px;
-          padding: 2rem;
           position: fixed;
-          z-index: 2;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          background: ${c_COOKIE_BACKGROUND};
+          padding: 2rem;
+          z-index: 10;
+          color: ${c_TEXT_DARK};
         }
+
         .cookie-button-box {
           align-items: center;
           display: flex;
           flex-flow: row wrap;
           justify-content: space-between;
         }
+
         .cookie-button {
-          background-color: ${c_COOKIE_BUTTON};
+          color: ${c_TEXT_LIGHT};
           border: none;
-          color: ${c_PRIMARY_TEXT};
-          padding: 10px;
+          vertical-align: middle;
+          display: inline-block;
+          padding: 1rem 2rem;
+          border-radius: 60px;
+          font-family: ${FONT_SECONDARY};
+          background-color: ${c_CALL_TO_ACTION};
+          cursor: pointer;
         }
+
         .cookie-button:hover {
-          background-color: ${c_COOKIE_BUTTON_HOVER};
+          background-color: ${c_CALL_TO_ACTION_HOVER};
         }
+
         @media (${breakpoint('sm')}) {
-          //desktop//
           .cookie-banner {
-            background: ${c_COOKIE_BACKGROUND};
             flex-direction: column;
             height: 100%;
             top: 0;
             width: 25%;
+            min-width: 300px;
           }
         }
       `}</style>
-    </div>
+    </>
   )
 }
 

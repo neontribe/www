@@ -1,12 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { GUTTER_PX } from '../theme'
 
 const VerticalSpacing = ({ size = 1 }) => (
   <div className="vertical-spacing">
     <style jsx>{`
       .vertical-spacing {
-        margin-bottom: ${GUTTER_PX * size}px;
+        margin-bottom: ${size / 2}rem;
       }
     `}</style>
   </div>

@@ -1,32 +1,33 @@
 import React from 'react'
 import css from 'styled-jsx/css'
 
-import { c_PRIMARY_BACKGROUND, c_CALL_TO_ACTION } from '../../theme'
+import {
+  FONT_SECONDARY,
+  c_CALL_TO_ACTION,
+  c_CALL_TO_ACTION_HOVER,
+} from '../../theme'
+
 import Text from '../Text'
-import Arrow from './Arrow'
 
 export const { className, styles } = css.resolve`
-  a {
-    text-decoration: none;
-  }
-
   a.button {
     vertical-align: middle;
     display: inline-block;
     padding: 1rem 2rem;
+    border-radius: 60px;
+    font-family: ${FONT_SECONDARY};
     background-color: ${c_CALL_TO_ACTION};
-    box-shadow: 0 0 3px 3px ${c_PRIMARY_BACKGROUND};
+    cursor: pointer;
+  }
+
+  a.button:hover {
+    background-color: ${c_CALL_TO_ACTION_HOVER};
   }
 `
 
 export const LinkInternals = ({ button, children }) => {
   if (button) {
-    return (
-      <Text weight={500} size="medium" type="primary" transparent>
-        {children}
-        <Arrow />
-      </Text>
-    )
+    return <Text size="medium">{children}</Text>
   }
 
   return children

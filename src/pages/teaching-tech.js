@@ -4,12 +4,7 @@ import { StaticQuery, graphql } from 'gatsby'
 import RenderContent from '../components/RenderContent'
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
-import Heading from '../components/Heading'
-import Text from '../components/Text'
-import VerticalSpacing from '../components/VerticalSpacing'
-import { ExternalLink } from '../components/Link'
 import PageMeta from '../components/PageMeta'
-import Centered from '../components/Centered'
 
 const description =
   'Want to get better at helping developers learn? Join our accredited course to improve your teaching skills'
