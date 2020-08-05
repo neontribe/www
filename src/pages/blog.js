@@ -5,13 +5,12 @@ import { distanceInWordsToNow, parse } from 'date-fns'
 import { InternalLink } from '../components/Link'
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
-import Heading from '../components/Heading'
+import H from '../components/Heading'
 import Text from '../components/Text'
-import SquiggleSeparator from '../components/SquiggleSeparator'
-import Centered from '../components/Centered'
 
 import { capitalizeFirstLetter } from '../helpers'
 import PageMeta from '../components/PageMeta'
+import Section from '../components/Section'
 
 const BlogPage = ({
   data: {
@@ -29,38 +28,35 @@ const BlogPage = ({
     <Layout>
       <PageMeta title="Blogs" />
       <ConstrainedWidth>
-        <Centered>
-          <Heading level={1}>
-            <Text size="xlarge" weight={700}>
-              Our Blog
-            </Text>
-          </Heading>
-        </Centered>
-        <SquiggleSeparator />
+        <Text size="large" weight={700}>
+          <h1>Our Blog</h1>
+        </Text>
+
         <ul>
           {edges.map(({ node }) => (
             <li key={node.id}>
               <InternalLink to={`/blog/${node.frontmatter.slug}`}>
-                <Heading level={3} size="small">
+                <Section>
                   <Text size="normal">
-                    {getDateString(parse(node.frontmatter.published_at))}
+                    <H>{getDateString(parse(node.frontmatter.published_at))}</H>
                   </Text>
-                </Heading>
-                <Heading level={2}>
-                  <Text size="large" weight={700}>
-                    {node.frontmatter.title}
-                  </Text>
-                </Heading>
+                </Section>
+
+                <Text size="large" weight={700}>
+                  <H>{node.frontmatter.title}</H>
+                </Text>
               </InternalLink>
             </li>
           ))}
         </ul>
       </ConstrainedWidth>
+
       <style jsx>{`
         ul {
           list-style: none;
           padding: 0;
         }
+
         ul li {
           margin: 0;
         }

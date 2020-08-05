@@ -1,7 +1,11 @@
 import React from 'react'
+
 import CarouselControl from './CarouselControl'
 import CarouselImages from './CarouselImages'
 import CarouselItem from './CarouselItem'
+
+import { breakpoint, c_TEXT_LIGHT } from '../../theme'
+
 import Arrow from './arrow.svg'
 
 const moduloWithMax = (num, max) => ((num % max) + max) % max
@@ -46,20 +50,30 @@ const Carousel = ({ children }) => {
 
       <style jsx>{`
         .carousel {
-          position: relative;
+          color: ${c_TEXT_LIGHT};
         }
+
         .carousel__controls {
-          margin-bottom: -5%;
+          margin-bottom: -4rem;
           width: 100%;
           display: flex;
           justify-content: space-between;
         }
+
         .arrow {
-          width: 30px;
-          height: 30px;
+          width: 1rem;
+          height: 1rem;
         }
+
         .previous-arrow {
           transform: scaleX(-1);
+        }
+
+        @media (${breakpoint('sm')}) {
+          .arrow {
+            width: 2rem;
+            height: 2rem;
+          }
         }
       `}</style>
     </div>

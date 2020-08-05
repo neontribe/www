@@ -4,12 +4,12 @@ import get from 'lodash.get'
 
 import Carousel from '../components/Carousel'
 import Text from '../components/Text'
+import H from '../components/Heading'
 import VerticalSpacing from '../components/VerticalSpacing'
-import Heading from '../components/Heading'
 
 import RenderContent from '../components/RenderContent'
 
-import logo from '../components/Logo/logo.svg'
+import logo from '../components/logo.svg'
 
 export default () => (
   <StaticQuery
@@ -75,19 +75,20 @@ export default () => (
             >
               <RenderContent
                 htmlAst={triber.frontmatter.story.md.htmlAst}
-                type="secondary"
                 components={{
                   // avoid dark background from Text
                   p: props => <p {...props} />,
                 }}
               />
+
               <VerticalSpacing size={1} />
-              <Heading level={3} size="medium">
-                <Text size="medium" type="secondary" weight={500}>
+
+              <Text size="medium">
+                <H>
                   {triber.frontmatter.story.md.frontmatter.name ||
                     triber.frontmatter.name}
-                </Text>
-              </Heading>
+                </H>
+              </Text>
             </Carousel.Item>
           ))}
         </Carousel>

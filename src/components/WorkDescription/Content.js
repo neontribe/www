@@ -1,11 +1,7 @@
 import React, { Children } from 'react'
 import PropTypes from 'prop-types'
-import {
-  GUTTER_PX,
-  breakpoint,
-  c_PRIMARY_BACKGROUND,
-  c_SECONDARY_BACKGROUND,
-} from '../../theme'
+import { breakpoint } from '../../theme'
+import VerticalSpacing from '../VerticalSpacing'
 
 // Copied from FlipCard
 const findChild = (children, { displayName }) =>
@@ -15,121 +11,91 @@ const findChild = (children, { displayName }) =>
 const cloneWithProps = (node, props) => node && React.cloneElement(node, props)
 
 const propTypes = {
+  imagePosition: PropTypes.oneOf(['left', 'right']),
   children: PropTypes.node,
-  alternate: PropTypes.bool,
 }
 
-const Content = ({ alternate, children, stackedContentClassName = '' }) => (
+const Content = ({ imagePosition = 'right', children }) => (
   <div className="work-description-content">
-    <div className={`stacked-content ${stackedContentClassName}`}>
+    <div className="stacked-content">
       {cloneWithProps(findChild(children, Title), {
-        alternate,
         key: 'title',
       })}
+
+      <VerticalSpacing size={3} />
+
       {cloneWithProps(findChild(children, Image), {
-        alternate,
-        middle: true,
         key: 'image-middle',
+        middle: true,
+        imagePosition,
       })}
+
       {cloneWithProps(findChild(children, Description), {
-        alternate,
         key: 'description',
       })}
     </div>
+
     {cloneWithProps(findChild(children, Image), {
-      alternate,
       key: 'image-bottom',
+      imagePosition,
     })}
+
     <style jsx>{`
       .work-description-content {
-        /* Used as a negative margin for the image, to pull the image outside padding horizontally */
-        padding: 0 ${GUTTER_PX}px;
         display: flex;
-        flex-direction: ${alternate ? 'row-reverse' : 'row'};
+        justify-content: space-between;
+        ${imagePosition === 'left' ? 'flex-direction: row-reverse;' : ''}
+      }
+
+      .stacked-content {
+        flex: 1;
       }
     `}</style>
   </div>
 )
-Content.propTypes = {
-  ...propTypes,
-  stackedContentClassName: PropTypes.string,
-}
 
 // Title -------------------------------------
-export const Title = ({ alternate, children }) => (
-  <div className="header">
-    {children}
-    <style jsx>{`
-      .header {
-        margin-bottom: ${2 * GUTTER_PX}px;
-        padding: 0 ${GUTTER_PX * 2}px;
-        background-color: ${alternate
-          ? c_SECONDARY_BACKGROUND
-          : c_PRIMARY_BACKGROUND};
-      }
+export const Title = ({ children }) => <div>{children}</div>
 
-      @media (${breakpoint('md')}) {
-        .header {
-          margin-bottom: 0;
-        }
-
-        .header {
-          padding-right: ${alternate ? 0 : GUTTER_PX * 4}px;
-          padding-left: ${alternate ? GUTTER_PX * 4 : 0}px;
-        }
-      }
-    `}</style>
-  </div>
-)
 Title.displayName = 'WorkDescriptionTitle'
 Title.propTypes = propTypes
 
 // Image -------------------------------------
-export const Image = ({ middle, children }) => (
+export const Image = ({ middle, imagePosition, children }) => (
   <div className="image">
     {children}
+
     <style jsx>{`
       .image {
-        /* Pull the image outside of the padding of the .work-description-content */
-        margin: 0 -${GUTTER_PX}px;
         display: ${middle ? 'block' : 'none'};
+        margin-bottom: 2rem;
       }
 
       @media (${breakpoint('md')}) {
         .image {
-          margin: 0;
           display: ${middle ? 'none' : 'block'};
-          width: 33.33%;
           flex-shrink: 0;
+          width: 33.33%;
+          margin-bottom: 0;
+          margin-${imagePosition === 'right' ? 'left' : 'right'}: 2rem;
         }
       }
     `}</style>
   </div>
 )
+
 Image.displayName = 'WorkDescriptionImage'
 Image.propTypes = {
   ...propTypes,
   middle: PropTypes.bool,
+  imagePosition: PropTypes.oneOf(['left', 'right']),
 }
 
 // Description -------------------------------------
-export const Description = ({ alternate, children }) => (
-  <div className="description">
-    {children}
-    <style jsx>{`
-      .description {
-        padding: 0 ${GUTTER_PX * 2}px;
-      }
-
-      @media (${breakpoint('md')}) {
-        .description {
-          padding-right: ${alternate ? 0 : GUTTER_PX * 4}px;
-          padding-left: ${alternate ? GUTTER_PX * 4 : 0}px;
-        }
-      }
-    `}</style>
-  </div>
+export const Description = ({ children }) => (
+  <div className="description">{children}</div>
 )
+
 Description.displayName = 'WorkDescriptionDescription'
 Description.propTypes = propTypes
 

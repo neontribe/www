@@ -2,9 +2,9 @@ import React from 'react'
 import Img from 'gatsby-image/withIEPolyfill'
 import css from 'styled-jsx/css'
 
-import { c_SECONDARY_BACKGROUND, GUTTER_PX, CUT_CORNER_PX } from '../../theme'
-import Heading from '../Heading'
+import H from '../Heading'
 import Text from '../Text'
+import VerticalSpacing from '../VerticalSpacing'
 
 const imageStyles = css.resolve`
   .gatsby-image-wrapper {
@@ -14,111 +14,68 @@ const imageStyles = css.resolve`
     left: 0;
     height: 100%;
     width: 100%;
-    transition: opacity 0.25s linear;
-  }
-
-  .gatsby-image-wrapper:last-child:hover {
-    opacity: 0;
   }
 `
 
-const TribeMemberFront = ({
-  image,
-  grayscaleImage,
-  name,
-  headingLevel,
-  skills,
-  onClick,
-  sepColour,
-}) => {
-  return (
-    <figure className="tribe-figure" onClick={onClick}>
+const TribeMemberFront = ({ image, name, skills, onClick }) => (
+  <figure className="tribe-figure" onClick={onClick}>
+    <div className="image-container">
       {image ? (
-        <div className="image-container">
-          <Img
-            className={imageStyles.className}
-            fluid={image}
-            alt={`${name}'s profile`}
-            objectFit="cover"
-          />
-          <Img
-            className={imageStyles.className}
-            fluid={grayscaleImage}
-            alt={`${name}'s profile`}
-            objectFit="cover"
-          />
-        </div>
+        <Img
+          className={imageStyles.className}
+          fluid={image}
+          alt={`${name}'s profile`}
+          objectFit="cover"
+        />
       ) : (
         <img
           src="https://placeimg.com/700/1000/animals"
-          className="placeholder-image"
-          alt={`${name}'s placeholder profile`}
+          className="fallback-image"
+          alt={`${name}'s fallback profile`}
         />
       )}
-      <hr className="separator" />
-      <figcaption className="name-skills">
-        <div className="content">
-          <Heading level={headingLevel}>
-            <Text type="secondary" weight={700} size="medium">
-              {name}
-            </Text>
-          </Heading>
-          <Text type="secondary">{skills.join(' | ')}</Text>
-        </div>
-      </figcaption>
-      {imageStyles.styles}
-      <style jsx>{`
-        .separator {
-          background-color: ${sepColour};
-          margin: 0;
-          height: ${GUTTER_PX}px;
-          border: none;
-          flex-shrink: 0;
-        }
+    </div>
 
-        .tribe-figure {
-          height: 100%;
-          margin: 0;
-          display: flex;
-          flex-direction: column;
-        }
+    <VerticalSpacing size={2} />
 
-        .image-container {
-          position: relative;
-          height: 100%;
-        }
+    <figcaption className="name-skills">
+      <Text weight={700} size="medium">
+        <H>{name}</H>
+      </Text>
 
-        .name-skills {
-          padding: ${GUTTER_PX}px;
-          /* Cut the corner off by CUT_CORNER_PX and later on we max-width the content */
-          background: linear-gradient(
-            -45deg,
-            transparent ${CUT_CORNER_PX}px,
-            ${c_SECONDARY_BACKGROUND} ${CUT_CORNER_PX}px
-          );
-          flex-shrink: 0;
-        }
+      <VerticalSpacing size={1} />
 
-        .content {
-          max-width: 80%;
-          max-width: calc(100% - ${CUT_CORNER_PX}px);
-          margin-right: auto;
-        }
+      <Text lineHeight={1.2}>{skills.join(' | ')}</Text>
+    </figcaption>
 
-        .placeholder-image {
-          flex-grow: 1;
-          overflow: hidden;
-          display: block;
-          filter: grayscale(1);
-          transition: filter 0.25s linear;
-        }
+    {imageStyles.styles}
 
-        .placeholder-image:hover {
-          filter: none;
-        }
-      `}</style>
-    </figure>
-  )
-}
+    <style jsx>{`
+      .tribe-figure {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .image-container {
+        position: relative;
+        height: 100%;
+        border-bottom-right-radius: 50px;
+        overflow: hidden;
+      }
+
+      .name-skills {
+        flex-shrink: 0;
+      }
+
+      .fallback-image {
+        flex-grow: 1;
+        overflow: hidden;
+        display: block;
+      }
+    `}</style>
+  </figure>
+)
 
 export default TribeMemberFront

@@ -1,26 +1,50 @@
-import React from 'react'
+import React, { createContext, useContext } from 'react'
 import PropTypes from 'prop-types'
+import classNames from 'classnames'
 
-const Heading = ({ level, children }) => {
-  const HeadingTag = `h${level}`
+import arcs from './arcs.svg'
+
+const HeadingContext = createContext(2)
+
+const H = ({ withArcs, ...props }) => {
+  const headingLevel = useContext(HeadingContext)
+  const Heading = 'h' + Math.min(headingLevel, 6)
+
+  const className = classNames('heading', {
+    'with-arcs': withArcs,
+  })
 
   return (
-    <HeadingTag className="heading">
-      {children}
+    <>
+      <div>
+        <Heading className={className} {...props} />
+      </div>
+
       <style jsx>{`
         .heading {
-          padding: 0;
-          margin: 0;
-          font-weight: normal;
+          display: inline-flex;
+          align-items: center;
+          line-height: 1.5;
+        }
+
+        .with-arcs:before {
+          content: '';
+          display: block;
+          background-image: url('${arcs}');
+          background-position: left center;
+          background-repeat: no-repeat;
+          height: 2rem;
+          width: 2rem;
+          margin-right: 1.5rem;
         }
       `}</style>
-    </HeadingTag>
+    </>
   )
 }
 
-Heading.propTypes = {
-  level: PropTypes.oneOf([1, 2, 3, 4, 5, 6]).isRequired,
-  children: PropTypes.node,
+H.propTypes = {
+  withArcs: PropTypes.bool,
 }
 
-export default Heading
+export { HeadingContext }
+export default H
