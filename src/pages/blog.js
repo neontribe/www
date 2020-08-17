@@ -11,6 +11,7 @@ import Text from '../components/Text'
 import { capitalizeFirstLetter } from '../helpers'
 import PageMeta from '../components/PageMeta'
 import Section from '../components/Section'
+import VerticalSpacing from '../components/VerticalSpacing'
 
 const BlogPage = ({
   data: {
@@ -28,9 +29,11 @@ const BlogPage = ({
     <Layout>
       <PageMeta title="Blogs" />
       <ConstrainedWidth>
-        <Text size="large" weight={700}>
+        <Text size="large" weight={700} align="center">
           <h1>Our Blog</h1>
         </Text>
+
+        <VerticalSpacing size={4} />
 
         <ul>
           {edges.map(({ node }) => (
@@ -55,10 +58,11 @@ const BlogPage = ({
         ul {
           list-style: none;
           padding: 0;
+          margin: 0;
         }
 
-        ul li {
-          margin: 0;
+        li + li {
+          margin-top: 2rem;
         }
       `}</style>
     </Layout>

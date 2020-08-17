@@ -37,15 +37,21 @@ export default ({ data }) => {
       <ConstrainedWidth fullWidth={false}>
         <article>
           <header>
-            <Text size="large" weight={700} hyphenation>
+            <Text size="large" weight={700} align="center" hyphenation>
               <h1>{title}</h1>
             </Text>
 
-            <VerticalSpacing size={5} />
+            <VerticalSpacing size={4} />
 
-            <address>By {author_name}</address>
+            <Text weight={700}>
+              <address>By {author_name}</address>
 
-            <PublishedDate date={parse(published_at)} />
+              <VerticalSpacing size={2} />
+
+              <PublishedDate date={parse(published_at)} />
+            </Text>
+
+            <VerticalSpacing size={4} />
           </header>
 
           <RenderContent htmlAst={htmlAst} />
