@@ -4,7 +4,6 @@ import slugify from 'slugify'
 
 import VerticalSpacing from '../components/VerticalSpacing'
 import { WorkSummary } from '../components/WorkDescription'
-import Centered from '../components/Centered'
 import { InternalLink } from '../components/Link'
 
 const randomItem = items => items[Math.floor(Math.random() * items.length)]
@@ -38,26 +37,22 @@ export default () => (
       return (
         <React.Fragment>
           <WorkSummary
-            level={2}
             title={randProj.frontmatter.title}
             problem={randProj.frontmatter.problem}
             fluid={randProj.frontmatter.image.childImageSharp.fluid}
-            alternate
           />
 
           <VerticalSpacing size={5} />
 
-          <Centered>
-            <InternalLink
-              to={`/what-we-are-doing#${slugify(
-                randProj.frontmatter.title,
-                '-'
-              )}`}
-              button
-            >
-              View our solution
-            </InternalLink>
-          </Centered>
+          <InternalLink
+            to={`/what-we-are-doing#${slugify(
+              randProj.frontmatter.title,
+              '-'
+            )}`}
+            button
+          >
+            View our solution
+          </InternalLink>
         </React.Fragment>
       )
     }}

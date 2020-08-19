@@ -1,81 +1,65 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Hexagon from '../Hexagon'
 import classNames from 'classnames'
-import useFocusStyles from '../../focus'
 
 import { breakpoint } from '../../theme'
 
-const CarouselImage = ({ image, i, activeImage, goToItem }) => {
-  const focusStyle = useFocusStyles()
-
-  return (
-    <div
-      className={classNames(
-        'carousel__image',
-        i === activeImage && 'carousel__image--is-active'
-      )}
-      key={image.src}
+const CarouselImage = ({ image, i, activeImage, goToItem }) => (
+  <div
+    key={image.src}
+    className={classNames(
+      'carousel__image',
+      i === activeImage && 'carousel__image--is-active'
+    )}
+  >
+    <button
+      className="carousel__image__button"
+      onClick={() => goToItem(i)}
+      aria-label={`Go to item ${i + 1}`}
     >
-      <button
-        className={classNames(
-          'carousel__image__button',
-          i === activeImage && 'carousel__image__button--is-active',
-          focusStyle.className
-        )}
-        onClick={() => goToItem(i)}
-        aria-label={`Go to item ${i + 1}`}
-      >
-        <Hexagon src={image.src} title={image.title} />
-        {focusStyle.styles}
-      </button>
-      <style jsx>{`
-        .carousel__image {
-          width: 100%;
-          display: none;
-          align-items: center;
-        }
-        .carousel__image :global(svg) {
-          height: 300px !important;
-          width: 300px !important;
-        }
-        .carousel__image--is-active {
-          display: flex;
-        }
-        .carousel__image__button {
-          width: 100%;
-          transform: scale(0.5);
-          background: none;
-          border: none;
-          height: auto;
-          padding: 0;
-          display: inline-block;
-          filter: grayscale(100%);
-          cursor: pointer;
-        }
-        .carousel__image__button--is-active {
-          transform: scale(1);
-          filter: none;
-        }
+      <img
+        className="carousel__image__image"
+        src={image.src}
+        alt={image.title}
+      />
+    </button>
 
-        .carousel__image__button:not(.carousel__image__button--is-active):hover {
-          transform: scale(0.6);
-        }
+    <style jsx>{`
+      .carousel__image__image {
+        width: 70%;
+        border-radius: 50%;
+      }
 
-        @media (${breakpoint('sm')}) {
-          .carousel__image__button {
-            transition: all 0.2s ease-in-out;
-          }
+      .carousel__image--is-active .carousel__image__image {
+        width: 90%;
+      }
 
-          .carousel__image {
-            width: 33.33%;
-            display: flex;
-          }
+      .carousel__image__button {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        color: inherit;
+        filter: none;
+      }
+
+      :not(.carousel__image--is-active) .carousel__image__button {
+        transition: transform 0.2s ease-in-out;
+        filter: grayscale(100%);
+      }
+
+      :not(.carousel__image--is-active):hover .carousel__image__button {
+        transform: scale(1.5);
+      }
+
+      @media (${breakpoint('sm')}) {
+        .carousel__image__image {
+          width: 50%;
         }
-      `}</style>
-    </div>
-  )
-}
+      }
+    `}</style>
+  </div>
+)
 
 const CarouselImages = ({ images, activeImage, goToItem }) => (
   <div className="carousel__images">
@@ -91,12 +75,8 @@ const CarouselImages = ({ images, activeImage, goToItem }) => (
 
     <style jsx>{`
       .carousel__images {
-        flex: 1 1 auto;
         display: flex;
-        justify-content: center;
         align-items: center;
-        position: relative;
-        z-index: 1;
       }
     `}</style>
   </div>

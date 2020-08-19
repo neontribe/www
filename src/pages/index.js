@@ -4,85 +4,83 @@ import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import Text from '../components/Text'
 import VerticalSpacing from '../components/VerticalSpacing'
-import Heading from '../components/Heading'
+import H from '../components/Heading'
+import Section from '../components/Section'
 import { InternalLink, ExternalLink } from '../components/Link'
 
-import SquiggleSeparator from '../components/SquiggleSeparator'
 import StoryCarousel from '../components/StoryCarousel'
 import HomePageWorkSummary from '../components/HomePageWorkSummary'
 import PageMeta from '../components/PageMeta'
-import Centered from '../components/Centered'
 
 const IndexPage = () => (
   <Layout>
     <PageMeta title="Welcome" />
+
     <ConstrainedWidth>
       <section>
-        <Centered>
-          <Heading level={1}>
-            <Text weight={500} size="xlarge">
-              We solve problems
-            </Text>
-          </Heading>
+        <Text size="large" align="center">
+          <h1>We solve problems</h1>
+        </Text>
+
+        <VerticalSpacing size={2} />
+
+        <Text size="medium">
           <p>
-            <Text size="medium">
-              Neontribe is a digital agency working in user research, software
-              development and design. We're agile by instinct, and user-centred
-              in our practice. We work together to identify and deliver on user
-              need.
-            </Text>
+            Neontribe is a digital agency working in user research, software
+            development and design. We're agile by instinct, and user-centred in
+            our practice. We work together to identify and deliver on user need.
           </p>
-        </Centered>
+        </Text>
       </section>
-      <SquiggleSeparator />
+
+      <VerticalSpacing size={16} />
 
       <section>
-        <Centered>
-          <Heading level={1}>
-            <Text weight={500} size="large">
-              Journeys to the Tribe
-            </Text>
-          </Heading>
+        <Text size="large">
+          <H withArcs>What we're doing</H>
+        </Text>
+
+        <VerticalSpacing size={4} />
+
+        <Section>
+          <HomePageWorkSummary />
+        </Section>
+      </section>
+
+      <VerticalSpacing size={16} />
+
+      <section>
+        <Text size="large">
+          <H withArcs>Journeys to the Tribe</H>
+        </Text>
+
+        <VerticalSpacing size={4} />
+
+        <Section>
           <StoryCarousel />
+        </Section>
 
-          <VerticalSpacing size={5} />
+        <VerticalSpacing size={4} />
 
-          <InternalLink button to="/the-tribe">
-            Meet the tribe
-          </InternalLink>
-        </Centered>
+        <InternalLink button to="/the-tribe">
+          Meet the tribe
+        </InternalLink>
       </section>
 
-      <SquiggleSeparator />
+      <VerticalSpacing size={16} />
 
       <section>
-        <Centered>
-          <Heading level={1}>
-            <Text size="large" weight={500}>
-              What we're doing
-            </Text>
-          </Heading>
-        </Centered>
-        <VerticalSpacing size={5} />
-        <HomePageWorkSummary />
-      </section>
-
-      <SquiggleSeparator />
-
-      <section>
-        <Centered>
-          <Heading level={1}>
-            <Text size="large" weight={500}>
-              Get in touch
-            </Text>
-          </Heading>
+        <Text align="center">
+          <Text size="large">
+            <H>Get in touch</H>
+          </Text>
 
           <VerticalSpacing size={1} />
 
           <ExternalLink href="mailto:hello@neontribe.co.uk">
             <Text size="medium">hello@neontribe.co.uk</Text>
           </ExternalLink>
-        </Centered>
+        </Text>
       </section>
     </ConstrainedWidth>
   </Layout>

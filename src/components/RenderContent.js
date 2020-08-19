@@ -1,78 +1,84 @@
 import React from 'react'
 import RehypeReact from 'rehype-react'
-import Paragraph from '../components/Paragraph'
+import classNames from 'classnames'
+
 import Text from '../components/Text'
-import Centered from '../components/Centered'
 import { ExternalLink } from '../components/Link'
+
+import arcs from './arcs.svg'
 
 const Content = props => (
   <>
     <div className="content" {...props} />
     <style jsx global>{`
-      .content * {
-        margin: 0;
-      }
-
       .content * + * {
-        margin-top: 1em;
-      }
-
-      .content * + h2 {
-        margin-top: 2em;
-      }
-
-      .content p {
-        line-height: 1.5;
+        margin-top: 1.5em;
       }
 
       .content li + li {
-        margin-top: 0.25em;
+        margin-top: 1em;
+      }
+
+      .content > div > div:not(:first-child) {
+        margin-top: 2rem;
+      }
+
+      .content a {
+        text-decoration: underline;
       }
     `}</style>
   </>
 )
 
-const Heading = ({ size, level, children, type, ...props }) => {
-  const H = p => React.createElement(`h${level}`, p)
+const Heading = ({ size, level, children, ...props }) => {
+  const H = 'h' + Math.min(level, 6)
 
   return (
-    <H {...props}>
-      <Text size={size} lineHeight={1.2} heavy type={type}>
-        {children}
-      </Text>
-    </H>
+    <Text size={size}>
+      <H
+        className={classNames('heading', level === 2 && 'with-arcs')}
+        children={children}
+        {...props}
+      />
+
+      <style jsx>{`
+        .heading {
+          display: inline-flex;
+        }
+
+        .with-arcs:before {
+          content: '';
+          display: block;
+          background-image: url('${arcs}');
+          background-position: left center;
+          background-repeat: no-repeat;
+          height: 2rem;
+          width: 2rem;
+          margin-right: 1.5rem;
+        }
+      `}</style>
+    </Text>
   )
 }
 
-const RenderAst = ({ htmlAst, type, components = {}, children }) => {
+const RenderAst = ({ htmlAst, components = {}, children }) => {
   const renderAst = new RehypeReact({
     createElement: React.createElement,
     components: {
       h1: props => (
-        <Centered>
-          <Heading {...props} type={type} level={1} size="large" />
-        </Centered>
+        <Text align="center">
+          <Heading {...props} level={1} size="large" />
+        </Text>
       ),
-      h2: props => <Heading {...props} type={type} level={2} size="medium" />,
-      h3: props => <Heading {...props} type={type} level={3} size="normal" />,
-      p: ({ children, ...props }) => (
-        <p {...props}>
-          <Text children={children} />
-        </p>
-      ),
+      h2: props => <Heading {...props} level={2} size="medium" />,
+      h3: props => <Heading {...props} level={3} size="normal" />,
       li: ({ children, ...props }) => (
         <li {...props}>
-          <Text display="inline" children={children} />
+          <Text children={children} />
         </li>
       ),
       // TODO: Discern external vs external links?
-      a: ({ children, ...props }) => (
-        <ExternalLink {...props}>
-          <Text gutter={0} type={type} underline display="inline">
-            {children}
-          </Text>
-        </ExternalLink>
-      ),
+      a: props => <ExternalLink {...props} />,
       ...components,
     },
   }).Compiler
@@ -83,10 +89,6 @@ const RenderAst = ({ htmlAst, type, components = {}, children }) => {
 
   // TODO: Support passing markdown to this as children and rendering it?
   return children
-}
-
-RenderAst.propTypes = {
-  type: Text.propTypes.type,
 }
 
 const RenderContent = props => (

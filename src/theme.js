@@ -1,13 +1,10 @@
 // SIZE contstants
 const PAGE_WIDTH_PX = 1020
 
-export const REM_PX = 18
+export const REM_PX = 16
 export const GUTTER_PX = 10
 export const PAGE_WIDTH_REM = `${PAGE_WIDTH_PX / REM_PX}rem`
 
-export const CUT_CORNER_PX = GUTTER_PX * 3
-
-export const SOCIAL_MARGIN = REM_PX * 0.5
 export const SOCIAL_ICON_SIZE = REM_PX * 1.4
 
 // ------ Media Queries (px taken from antd) -------
@@ -56,50 +53,31 @@ export const breakpoint = size => {
 }
 
 // ---------- COLOUR -----------
-const c_NEON_PINK = '#fb37f1'
-const c_NEON_PURPLE = '#9013fe'
-const c_NEON_BLUE = '#54fcfd'
-const c_NEON_YELLOW = '#fdf958'
-const c_NEON_GREEN = '#48e6b6'
-const c_BLACK = '#131313'
+const c_NEON_PINK = '#ff37ab'
+const c_NEON_PURPLE = '#5600ee'
+const c_BLACK = '#000'
 const c_WHITE = '#fff'
-const c_CLOUD_WHITE = '#effffa'
-const c_PURPLE = '#9013fe'
-const c_DARK_PURPLE = '#6d10c9'
 
-// Neons, shouldn't be used with some kind of randomisation, so only export an array
-export const c_NEONS = [
-  c_NEON_PINK,
-  c_NEON_PURPLE,
-  c_NEON_BLUE,
-  c_NEON_YELLOW,
-  c_NEON_GREEN,
-]
+// Text + background colours
+export const c_TEXT_LIGHT = c_WHITE
+export const c_TEXT_DARK = c_BLACK
 
-// Text + background colour combinations
-// PRIMARY
-export const c_PRIMARY_TEXT = c_WHITE
-export const c_PRIMARY_BACKGROUND = '#1f1e1f'
-export const c_PRIMARY_BACKGROUND_ALTERNATIVE = c_BLACK
-export const c_COOKIE_BACKGROUND = c_CLOUD_WHITE
-export const c_COOKIE_BUTTON = c_PURPLE
-export const c_COOKIE_BUTTON_HOVER = c_DARK_PURPLE
-// Secondary
-export const c_SECONDARY_TEXT = c_BLACK
+export const c_PRIMARY_BACKGROUND = c_BLACK
+export const c_COOKIE_BACKGROUND = c_WHITE
 export const c_SECONDARY_BACKGROUND = c_WHITE
 
 // UI
 export const c_CALL_TO_ACTION = c_NEON_PURPLE
-export const c_LOGO_BACKGROUND = c_WHITE
+export const c_CALL_TO_ACTION_HOVER = '#620aff'
 export const c_NAV_ACTIVE = c_NEON_PINK
 
 // Typography
-export const FONT_STACK = '"Renner*", sans-serif'
+export const FONT_PRIMARY = 'Muli, sans-serif'
+export const FONT_SECONDARY = 'KeepCalm, sans-serif'
 
 export const fontSizes = {
   small: '0.85rem',
   normal: '1rem',
   medium: '1.25rem',
-  large: '2rem',
-  xlarge: '3.5rem',
+  large: '1.5rem',
 }

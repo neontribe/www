@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Heading from '../components/Heading'
+import H from '../components/Heading'
 import Text from '../components/Text'
 import TribeMember from '../components/TribeMember'
 import { GUTTER_PX } from '../theme'
@@ -43,35 +43,33 @@ export default () => (
     `}
     render={data => (
       <ConstrainedWidth>
-        <Heading level={2}>
-          <Text size="medium" weight={700}>
-            TribeMember
-          </Text>
-        </Heading>
+        <Text size="medium" weight={700}>
+          <H>TribeMember</H>
+        </Text>
+
         <div className="person-example">
           <div className="person-wrapper">
             <TribeMember
               fluid={data.placeholderImage.childImageSharp.fluid}
               name="Kenneth the Shark"
-              headingLevel={3}
               skills={['Support', 'Cuddle', 'Spying']}
               bio={loremIpsum}
             />
           </div>
+
           <div className="person-wrapper">
             <TribeMember
               fluid={data.placeholderImage.childImageSharp.fluid}
               name="Kenneth the Shark"
-              headingLevel={3}
               skills={['Support', 'Cuddle', 'Spying']}
               bio={loremIpsum}
             />
           </div>
+
           <div className="person-wrapper">
             <TribeMember
               fluid={data.placeholderImage.childImageSharp.fluid}
               name="Kenneth the Shark"
-              headingLevel={3}
               skills={['Support', 'Cuddle', 'Spying']}
               bio={loremIpsum}
             />
