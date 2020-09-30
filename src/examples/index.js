@@ -45,7 +45,7 @@ export const CarouselExamples = () => (
 
     <Section>
       <Carousel>
-        <Carousel.Item image={steve}>
+        <Carousel.Item image={kenneth}>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
