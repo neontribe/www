@@ -8,7 +8,7 @@ import { InternalLink, ExternalLink } from '../components/Link'
 import Carousel from '../components/Carousel'
 import VerticalSpacing from '../components/VerticalSpacing'
 
-import steve from '../data/tribers/images/steve.jpg'
+import kenneth from '../data/tribers/images/kenneth.jpg'
 import harry from '../data/tribers/images/collins.jpg'
 import kat from '../data/tribers/images/Kat.jpg'
 
@@ -45,7 +45,7 @@ export const CarouselExamples = () => (
 
     <Section>
       <Carousel>
-        <Carousel.Item image={steve}>
+        <Carousel.Item image={kenneth}>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
