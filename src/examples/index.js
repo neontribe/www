@@ -8,7 +8,7 @@ import { InternalLink, ExternalLink } from '../components/Link'
 import Carousel from '../components/Carousel'
 import VerticalSpacing from '../components/VerticalSpacing'
 
-import steve from '../data/tribers/images/steve.jpg'
+import kenneth from '../data/tribers/images/kenneth.jpg'
 import harry from '../data/tribers/images/collins.jpg'
 import kat from '../data/tribers/images/Kat.jpg'
 
