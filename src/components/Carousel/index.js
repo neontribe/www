@@ -11,7 +11,7 @@ import Arrow from './arrow.svg'
 const moduloWithMax = (num, max) => ((num % max) + max) % max
 
 const Carousel = ({ children }) => {
-  const [activeItem, setActiveItem] = React.useState(1)
+  const [activeItem, setActiveItem] = React.useState(0)
 
   const nextItem = () => {
     setActiveItem(prevActiveItem =>
@@ -90,8 +90,8 @@ const arrayOfLength = (expectedLength, props, propName, componentName) => {
 }
 
 Carousel.propTypes = {
-  // Must have 3 children
-  children: arrayOfLength.bind(null, 3),
+  // Should have 3 children, currently only 2
+  children: arrayOfLength.bind(null, 2),
 }
 
 Carousel.Item = CarouselItem

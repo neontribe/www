@@ -57,7 +57,7 @@ export default () => (
       }
     `}
     render={data => {
-      const tribers = data.triberStories.nodes.slice(0, 3)
+      const tribers = data.triberStories.nodes.slice(0, 2)
 
       return (
         <Carousel>
