@@ -1,8 +1,8 @@
 ---
 title: |
   Reducing the stress of disability benefit assessments
-subtitle: |
-  Designing digital tools that help claimants alongside our partner seAp
+client: |
+  seAp
 problem: |
   People in need of assistance because of long term health problems or disabilities often find the process of applying for PIP and ESA benefits confusing, overwhelming and frustrating. We wanted to remove some of that pain.
 solution: |

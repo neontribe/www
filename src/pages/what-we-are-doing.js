@@ -91,7 +91,7 @@ const WhatWeAreDoingPage = () => (
                   title
                   problem
                   solution
-                  subtitle
+                  client
                   image {
                     childImageSharp {
                       fluid(maxWidth: 768) {
@@ -119,7 +119,7 @@ const WhatWeAreDoingPage = () => (
                 id={slugify(project.frontmatter.title, '-')}
                 fluid={project.frontmatter.image.childImageSharp.fluid}
                 title={project.frontmatter.title}
-                subtitle={project.frontmatter.subtitle}
+                client={project.frontmatter.client}
                 imagePosition={index % 2 === 0 ? 'left' : 'right'}
                 problem={project.frontmatter.problem}
                 solution={project.frontmatter.solution}
