@@ -11,6 +11,8 @@ meta_description: null
 author_id: 1
 created_at: '2021-07-09T13:29:43.000Z'
 created_by: 1
+published_at: '2021-07-09T13:29:43.000Z'
+published_by: 1
 visibility: 'public'
 mobiledoc: null
 amp: null
