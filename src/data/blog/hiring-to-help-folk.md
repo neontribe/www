@@ -24,7 +24,7 @@ author_facebook: null
 author_twitter: null
 ---
 
-##WWant to help us help folk who need it most?
+##Want to help us help folk who need it most?
 
 We're a software development company working on web user interfaces and the APIs that power them. We've got a national reputation for our work in tech-for-good, and we have more and more work coming our way.
 
