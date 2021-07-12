@@ -34,7 +34,7 @@ Right now, we’re recruiting to fill a specific role in our team. However, we�
 
 You’ll be joining a team working on an established ISO27001 certified project for a valued client with an existing development process. It’s a great opportunity for growth and enjoyment. Neontribe prides itself on skills development, flexible working, part-time hours and supporting return to work and other initiatives to help you enjoy your work. You’ll get 34 days holiday (including bank holidays and a company break midwinter), and £1,000 a year to spend on training. If you like working in an office, we're based in Norwich and Exeter. If you don't, we've been working remotely for years and were very used to doing so. 
 
-##WWorking mainly in PHP
+##Working mainly in PHP
 
 We're looking for someone with demonstrable experience of developing software which treats its users' data with the utmost respect. You'll need to be able to speak knowledgeably about security issues, and spot problems before they arise. If you've experience of modern web application development methods and tools that would be helpful, but we aren't looking for a 'full-stack developer'.
 
