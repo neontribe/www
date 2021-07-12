@@ -30,7 +30,7 @@ We're a software development company working on web user interfaces and the APIs
 
 Right now, we’re recruiting to fill a specific role in our team. However, we’re also always on the look out for people who would make our teams stronger, so if this doesn’t suit you please see the information at the end.
 
-##WWorking in software development
+##Working in software development
 
 You’ll be joining a team working on an established ISO27001 certified project for a valued client with an existing development process. It’s a great opportunity for growth and enjoyment. Neontribe prides itself on skills development, flexible working, part-time hours and supporting return to work and other initiatives to help you enjoy your work. You’ll get 34 days holiday (including bank holidays and a company break midwinter), and £1,000 a year to spend on training. If you like working in an office, we're based in Norwich and Exeter. If you don't, we've been working remotely for years and were very used to doing so. 
 
