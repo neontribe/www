@@ -34,7 +34,7 @@ const linkMap = {
   linkedin: 'https://linkedin.com/in/???',
 }
 
-const capitalize = string => {
+const capitalize = (string) => {
   return string.charAt(0).toUpperCase() + string.slice(1)
 }
 
@@ -63,7 +63,7 @@ const SocialIcon = ({ site, handle, count, preventTabFocus }) => {
   }
 
   // Prevent the click event from bubbling up any further, useful for use in flip cards
-  const blockClick = event => {
+  const blockClick = (event) => {
     event.stopPropagation()
   }
 

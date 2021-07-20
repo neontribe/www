@@ -41,8 +41,8 @@ const TribeMemberBack = ({
       {socialCount ? (
         <div className="social-icons">
           {socialKeys
-            .filter(site => social[site])
-            .map(site => (
+            .filter((site) => social[site])
+            .map((site) => (
               <SocialIcon
                 site={site}
                 handle={social[site]}

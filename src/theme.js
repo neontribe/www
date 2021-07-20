@@ -33,7 +33,7 @@ const MQ_XL_MIN = MQ_XL_PX / REM_PX
 const MQ_XXL_PX = 1600
 const MQ_XXL_MIN = MQ_XXL_PX / REM_PX
 
-export const breakpoint = size => {
+export const breakpoint = (size) => {
   switch (size) {
     case 'xs':
       return `min-width: ${MQ_XS_MIN}em`

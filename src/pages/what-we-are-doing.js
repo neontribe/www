@@ -104,7 +104,7 @@ const WhatWeAreDoingPage = () => (
             }
           }
         `}
-        render={data => {
+        render={(data) => {
           return data.projects.nodes.map((project, index) => (
             <React.Fragment key={project.frontmatter.title}>
               {index !== 0 ? (

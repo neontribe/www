@@ -26,7 +26,7 @@ const TeachingTech = () => (
           }
         }
       `}
-      render={data => (
+      render={(data) => (
         <ConstrainedWidth>
           <RenderContent htmlAst={data.file.childMarkdownRemark.htmlAst} />
         </ConstrainedWidth>

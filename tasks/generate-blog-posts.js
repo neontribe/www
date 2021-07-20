@@ -5,7 +5,7 @@ const { posts, users } = data.db[0].data
 
 const authorKeys = ['name', 'slug', 'image', 'cover', 'facebook', 'twitter']
 
-const convertToRelativeImports = value => {
+const convertToRelativeImports = (value) => {
   if (typeof value === 'string') {
     return JSON.stringify(
       value.replace(/\(\/content\//g, '(').replace(/"\/content\//g, '"')
@@ -14,15 +14,15 @@ const convertToRelativeImports = value => {
   return value
 }
 
-const getAuthorEntries = author =>
+const getAuthorEntries = (author) =>
   Object.entries(author).filter(([key]) => authorKeys.includes(key))
-const getPostEntries = post =>
+const getPostEntries = (post) =>
   Object.entries(post).filter(([key]) => key !== 'markdown' && key !== 'html')
 
 // Creates frontmatter for all keys except 'markdown' and 'html'
-const createFrontmatter = post => {
+const createFrontmatter = (post) => {
   post = formatDates(post)
-  const author = users.find(user => user.id === post.author_id)
+  const author = users.find((user) => user.id === post.author_id)
   const authorEntries = getAuthorEntries(author)
 
   const postEntries = getPostEntries(post)
@@ -34,7 +34,7 @@ const createFrontmatter = post => {
     .join('\n')}\n---`
 }
 
-const formatDates = post => ({
+const formatDates = (post) => ({
   ...post,
   created_at: new Date(post.created_at).toISOString(),
   updated_at: new Date(post.updated_at).toISOString(),
@@ -42,12 +42,12 @@ const formatDates = post => ({
 })
 
 posts
-  .filter(post => !post.page)
-  .filter(post => post.status === 'published')
-  .forEach(post => {
+  .filter((post) => !post.page)
+  .filter((post) => post.status === 'published')
+  .forEach((post) => {
     const data = `${createFrontmatter(post)}\n${post.markdown}`
 
-    fs.writeFile(`./src/data/blog/${post.slug}.md`, data, err => {
+    fs.writeFile(`./src/data/blog/${post.slug}.md`, data, (err) => {
       if (err) return console.log(err)
       console.log(`${post.slug}.md was saved.`)
     })

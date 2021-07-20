@@ -64,7 +64,7 @@ export default () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <WorkDescriptionExample fluid={data.file.childImageSharp.fluid} />
     )}
   />

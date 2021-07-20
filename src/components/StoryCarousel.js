@@ -56,12 +56,12 @@ export default () => (
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       const tribers = data.triberStories.nodes.slice(0, 2)
 
       return (
         <Carousel>
-          {tribers.map(triber => (
+          {tribers.map((triber) => (
             <Carousel.Item
               key={triber.frontmatter.name}
               image={
@@ -77,7 +77,7 @@ export default () => (
                 htmlAst={triber.frontmatter.story.md.htmlAst}
                 components={{
                   // avoid dark background from Text
-                  p: props => <p {...props} />,
+                  p: (props) => <p {...props} />,
                 }}
               />
 

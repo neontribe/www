@@ -17,6 +17,6 @@ export default () => (
     {/* Sort keys to ensure order is consistent between static client-side js */}
     {Object.keys(examples)
       .sort()
-      .map(key => React.createElement(examples[key], { key }))}
+      .map((key) => React.createElement(examples[key], { key }))}
   </Layout>
 )

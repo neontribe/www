@@ -6,7 +6,7 @@ import VerticalSpacing from '../VerticalSpacing'
 // Copied from FlipCard
 const findChild = (children, { displayName }) =>
   Children.toArray(children).find(
-    child => child.type && child.type.displayName === displayName
+    (child) => child.type && child.type.displayName === displayName
   )
 const cloneWithProps = (node, props) => node && React.cloneElement(node, props)
 

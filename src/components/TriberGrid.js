@@ -11,7 +11,7 @@ const MAX_COLUMNS = 3
 
 const TriberGridComponent = ({ tribers }) => (
   <div className="triber-grid">
-    {tribers.nodes.map(triber => (
+    {tribers.nodes.map((triber) => (
       <div key={triber.frontmatter.name}>
         <div className="triber-sizer">
           <TribeMember
@@ -23,7 +23,7 @@ const TriberGridComponent = ({ tribers }) => (
                 htmlAst={triber.htmlAst}
                 components={{
                   // avoid dark background from Text
-                  p: props => <p {...props} />,
+                  p: (props) => <p {...props} />,
                 }}
               />
             }
@@ -47,7 +47,7 @@ const TriberGridComponent = ({ tribers }) => (
           display: grid;
           grid-gap: 6rem
             ${(CONTAINER_WIDTH - COLUMN_WIDTH * MAX_COLUMNS) /
-              (MAX_COLUMNS - 1)}px;
+            (MAX_COLUMNS - 1)}px;
           grid-template-columns: repeat(auto-fill, ${COLUMN_WIDTH}px);
           justify-content: center;
         }
@@ -98,6 +98,6 @@ export default () => (
         }
       }
     `}
-    render={data => <TriberGridComponent tribers={data.tribers} />}
+    render={(data) => <TriberGridComponent tribers={data.tribers} />}
   />
 )
