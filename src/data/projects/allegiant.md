@@ -1,11 +1,16 @@
 ---
 title: |
-  1 billion customers flying around the USA need top of the line booking systems that don’t let them down.
-subtitle: |
-  Delivering enterprise interfaces for Allegiant Air
+  Delivering an enterprise interface for flying customers around the USA
+client: |
+  Allegiant Air
 problem: |
-  Allegiant require engineering excellence based on a solid long-term technology strategy. Currently, they’re focused on ensuring the highest quality user experience across a digital estate which is rapidly growing to keep up with their business expansion.
+  Allegiant needed top of the line booking systems for over 1 billion customers. They wanted to provide the highest quality user experience at the same time as expanding their business and their digital estate.
 solution: |
-  We work with our partners Lola Tech to provide development and support services with an emphasis on accessibility. We help them make the kind of technology choices that mean they can lead a rapidly evolving market. Right now we’re using Next.js and GraphQL to improve performance and maintainability, and we’re looking forward to building the next generation of customer-facing features in the top layers of booking systems.
+  - Working in partnership with other software companies (our partner Lola Tech)
+  - Creating a strategy so that Allegiant could make the right technology choices
+  - Providing an emphasis on accessibility
+  - Leading problem-solving in agile development teams
+  - Focusing on Next.js and GraphQL to improve performance and maintainability
+
 image: images/allegiant.jpg
 ---

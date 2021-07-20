@@ -1,8 +1,8 @@
 ---
 title: |
   Exploring whether visual storytelling persuades more people to seek help earlier.
-subtitle: |
-  Working with women at The Haven Wolverhampton
+client: |
+  The Haven Wolverhampton
 problem: |
   Abusive behaviour in a relationship can be hard to recognise. Women experiencing abuse often are unaware that support is available. Online support tools can be jargon laden and lack relatable examples.
 solution: |

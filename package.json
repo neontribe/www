@@ -33,6 +33,9 @@
     "react-helmet": "5.2.1",
     "react-malarquee": "0.0.13",
     "rehype-react": "3.1.0",
+    "remark": "13.0.0",
+    "remark-html": "13.0.1",
+    "remark-preset-lint-recommended": "5.0.0",
     "slugify": "1.4.0",
     "styled-jsx": "3.3.0"
   },
