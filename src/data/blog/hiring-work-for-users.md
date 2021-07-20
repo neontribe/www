@@ -49,7 +49,7 @@ This is not a beginner role. You’ll need to have worked in user research and u
 
 ##What this role is:
 
-A great opportunity for growth and enjoyment. Neontribe prides itself on skills development, flexible working, part-time hours and supporting return to work and other initiatives to help you enjoy your work. You’ll get 34 days holiday (including bank holidays and a company break midwinter, and £1,000 a year to spend on training. If you like working in an office, we're based in Norwich and Exeter. If you prefer to be remote except when visiting clients (post pandemic) we’re used to supporting that too. 
+A great opportunity for growth and enjoyment. Neontribe prides itself on skills development, flexible working, part-time hours and supporting return to work and other initiatives to help you enjoy your work. You’ll get 34 days holiday (including bank holidays and a company break midwinter, and £500 a year to spend on training. If you like working in an office, we're based in Norwich and Exeter. If you prefer to be remote except when visiting clients (post pandemic) we’re used to supporting that too. 
 
 ##Salary
 
