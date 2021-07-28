@@ -1,6 +1,6 @@
 ---
 title: |
-  Helping more than 75 organisations across the UK hear young people’s voices
+  Helping more than 450 services across the UK hear young people’s voices
 subtitle: |
   Developing apps for Mind of my Own
 problem: |
