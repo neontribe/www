@@ -4,10 +4,10 @@ title: |
 subtitle: |
   Developing a small storytelling app to help persuade women to seek help
   
-Challenges: |
+problem: |
   Abusive behaviour in a relationship can be hard to recognise. Women experiencing abuse often are unaware that support is available. Online support tools can be jargon laden and lack relatable examples.
   
-How we helped: |
+solution: |
 * Designed safe, inclusive user research activities that women felt helped them as well as helping us
 * Listened to women who had been through this journey to understand the fears and barriers they wanted us to focus on
 * Collaborated with frontline workers and volunteers to collect women’s stories.
