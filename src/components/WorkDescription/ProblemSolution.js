@@ -7,7 +7,7 @@ import Text from '../Text'
 export default ({ problem, solution }) => (
   <>
     <Text size="normal" weight={700}>
-      <H>Problem</H>
+      <H>Challenges</H>
     </Text>
 
     <VerticalSpacing size={1} />
@@ -19,7 +19,7 @@ export default ({ problem, solution }) => (
         <VerticalSpacing size={2} />
 
         <Text size="normal" weight={700}>
-          <H>Solution</H>
+          <H>How we helped</H>
         </Text>
 
         <VerticalSpacing size={1} />
