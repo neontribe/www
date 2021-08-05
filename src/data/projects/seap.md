@@ -1,11 +1,16 @@
 ---
 title: |
-  Reducing the stress of disability benefit assessments
+  Help for young people visiting their GP with mental health issues
 client: |
-  Seap
+  Docready
 problem: |
-  People in need of assistance because of long term health problems or disabilities often find the process of applying for PIP and ESA benefits confusing, overwhelming and frustrating. We wanted to remove some of that pain.
+  Comic Relief’s 2012 Innovation Labs brought the voice of young people right into the design of services for them to use. Neontribe were one of a consortium who facilitated the labs. Eight of the ideas that came out of that process were selected for funding. One was Docready, which we were chosen to develop. 8 years later, it’s still helping hundreds of people every week.
 solution: |
-  - Good practice questions, presented simply, that you can dip in and out of when you feel able helps some of the people seAp work with feel more prepared for assessments. - That means seAp staff have more time to offer other support.
+  - Empowered users to remember what they wanted to say to their GP, and how they wanted to say it. 
+  - Developed, tested and iterated a digital service with young people.
+  - Balanced user needs for security and functionality with an eye to keeping maintenance very low cost.
+  - Built a tool to last with technologies that wouldn’t go out of date.
+  - Collaborated with 3 organisations to deliver the project.
+
 image: images/seap.jpg
 ---
