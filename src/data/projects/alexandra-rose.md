@@ -10,7 +10,7 @@ solution: |
 * Mapping the journey of vouchers and the feelings of families and workers.
 * Throwing out “great” solutions when they turned out not to fit reality.
 * Building the technology in stages, starting in the place where we could make the biggest impact 
-* Creating a system that currently supports over 2000 families to get fresh fruit and veg every week
+* Creating a system that currently supports over 1900 families to get fresh fruit and veg every week
 * Supporting the charity to make successful funding bids to Comic Relief, Esmee Fairbairn and National Lottery Community Foundation.
 
 image: images/arc.jpg
