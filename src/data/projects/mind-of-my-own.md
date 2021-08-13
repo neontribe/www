@@ -1,6 +1,6 @@
 ---
 title: |
-  Developing apps that help young people make their voices heard
+  Helping more than 450 services across the UK hear young people’s voices
 client: |
   Mind Of My Own
 problem: |
