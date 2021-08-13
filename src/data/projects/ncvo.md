@@ -13,5 +13,5 @@ solution: |
   - Collaborated on evaluation for the funders: DCMS and the National Lottery Community Fund.
   - Took learning from this project into 2 more content design projects with NCVO.
 
-image: images/allegiant.jpg
+image: images/NCVO mockup copy.jpg
 ---
