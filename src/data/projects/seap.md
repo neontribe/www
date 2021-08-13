@@ -12,5 +12,5 @@ solution: |
   - Built a tool to last with technologies that wouldn’t go out of date.
   - Collaborated with 3 organisations to deliver the project.
 
-image: images/seap.jpg
+image: Doc ready mock up copy.jpg
 ---
