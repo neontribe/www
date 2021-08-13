@@ -1,31 +1,70 @@
 import React from 'react'
+import remark from 'remark'
+import recommended from 'remark-preset-lint-recommended'
+import remarkHtml from 'remark-html'
 
 import H from '../Heading'
 import VerticalSpacing from '../VerticalSpacing'
 import Text from '../Text'
 
-export default ({ problem, solution }) => (
+const Content = props => (
   <>
-    <Text size="normal" weight={700}>
-      <H>Problem</H>
-    </Text>
+    <div className="content" {...props} />
+    <style jsx global>{`
+      .content * + * {
+        margin-top: 1.5em;
+      }
 
-    <VerticalSpacing size={1} />
+      .content li + li {
+        margin-top: 1em;
+      }
 
-    <p>{problem}</p>
+      .content li {
+        line-height: 1.5;
+      }
 
-    {solution && (
-      <>
-        <VerticalSpacing size={2} />
+      .content > div > div:not(:first-child) {
+        margin-top: 2rem;
+      }
 
-        <Text size="normal" weight={700}>
-          <H>Solution</H>
-        </Text>
-
-        <VerticalSpacing size={1} />
-
-        <p>{solution}</p>
-      </>
-    )}
+      .content a {
+        text-decoration: underline;
+      }
+    `}</style>
   </>
 )
+
+export default ({ problem, solution }) => {
+  solution = remark()
+    .use(recommended)
+    .use(remarkHtml)
+    .processSync(solution)
+    .toString()
+
+  return (
+    <>
+      <Text size="normal" weight={700}>
+        <H>Challenges</H>
+      </Text>
+
+      <VerticalSpacing size={1} />
+
+      <p>{problem}</p>
+
+      {solution && (
+        <>
+          <VerticalSpacing size={2} />
+          <Text size="normal" weight={700}>
+            <H>How we helped</H>
+          </Text>
+          <VerticalSpacing size={1} />
+
+          <Content
+            className="content"
+            dangerouslySetInnerHTML={{ __html: solution }}
+          />
+        </>
+      )}
+    </>
+  )
+}

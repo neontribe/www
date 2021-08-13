@@ -24,7 +24,7 @@ const imageStyles = css.resolve`
 const WorkDescription = ({
   id,
   title,
-  subtitle,
+  client,
   fluid,
   problem,
   solution,
@@ -34,17 +34,17 @@ const WorkDescription = ({
     <ConstrainedWidth>
       <Content imagePosition={imagePosition}>
         <Content.Title>
-          <Text size="medium" weight={700}>
-            <H>{title}</H>
-          </Text>
+          <Section>
+            <Text size="normal">
+              <H>{client}</H>
+            </Text>
+          </Section>
 
           <VerticalSpacing size={1} />
 
-          <Section>
-            <Text size="normal">
-              <H>{subtitle}</H>
-            </Text>
-          </Section>
+          <Text size="medium" weight={700}>
+            <H>{title}</H>
+          </Text>
         </Content.Title>
 
         <Content.Image>

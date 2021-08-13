@@ -1,11 +1,17 @@
 ---
 title: |
-  Exploring whether visual storytelling persuades more people to seek help earlier.
-subtitle: |
-  Working with women at The Haven Wolverhampton
+  Developing a small storytelling app to help persuade women to seek help
+client: |
+  The Haven Wolverhampton
 problem: |
   Abusive behaviour in a relationship can be hard to recognise. Women experiencing abuse often are unaware that support is available. Online support tools can be jargon laden and lack relatable examples.
 solution: |
-  Women who had been through this journey themselves encouraged us to focus on breaking down the fears and barriers to getting help. We built an app that combines womens’ stories with illustrations and encourages people to call a helpline.  We’re also testing whether the app can be used with different content for other support services.
+  - Designed safe, inclusive user research activities that women felt helped them as well as helping us
+  - Listened to women who had been through this journey to understand the fears and barriers they wanted us to focus on
+  - Collaborated with frontline workers and volunteers to collect women’s stories.
+  - Shared with the women the version we wanted to put online to help others
+  - Built an award winning app that combines women’s stories with illustrations and encourages people to call a helpline
+  - Helped convert elements of the app to social media and poster based advertising
+
 image: images/haven.jpg
 ---
