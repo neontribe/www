@@ -12,5 +12,5 @@ solution: |
   - Passed on skills in service design that charities decided to use across their work, not only for digital projects.
   - Supported people to understand how to choose a new piece of software or technology.
 
-image: images/arc.jpg
+image: images/discovery learning.jpg
 ---
