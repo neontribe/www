@@ -62,11 +62,6 @@ const Nav = () => (
         <NavLink to="/the-tribe">The tribe</NavLink>
       </li>
       <li>
-        <NavLink active to="/teaching-tech">
-          Teaching tech
-        </NavLink>
-      </li>
-      <li>
         <ExternalLink href="mailto:hello@neontribe.co.uk">
           hello@neontribe.co.uk
         </ExternalLink>
