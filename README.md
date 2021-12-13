@@ -47,6 +47,17 @@ Please use `yarn` to manage the dependencies and scripts in this project. You sh
    yarn
    ```
 
+   As of December 2021 the `main` branch was renamed from `master`. If you have a local copy of the site installed before this date you will need to update your local clone of the project.
+
+   From the local clone of the repository on a computer, run the following commands to update the name of the default branch.
+
+   ```sh
+   git branch -m OLD-BRANCH-NAME NEW-BRANCH-NAME
+   git fetch origin
+   git branch -u origin/NEW-BRANCH-NAME NEW-BRANCH-NAME
+   git remote set-head origin -a
+   ```
+
 1. **Adding dependencies**
 
    The best way to add a new dependency is via `yarn` as follows:
@@ -71,10 +82,10 @@ Please use `yarn` to manage the dependencies and scripts in this project. You sh
 
 ## :rocket: Deployment
 
-The website is deployed using `now.sh`. The production website reflects the `master` branch. Pull requests which are made against master are considered staging branches.
+The website is deployed using `now.sh`. The production website reflects the `main` branch. Pull requests which are made against main are considered staging branches.
 
 1. When contributing to the project you need to follow our development process. Please go and read [these instructions ./CONTRIBUTING.md](./CONTRIBUTING.md#getting-started-on-development).
-1. Beware, the website uses continuous deployments. **When you merge into master the change will shortly be available on the production site.**
+1. Beware, the website uses continuous deployments. **When you merge into main the change will shortly be available on the production site.**
 
 Please read the [./now.json configuration](./now.json) if you need more infrastructure specific information. [The documentation for the content of the configuration file is on the zeit website](https://zeit.co/docs/configuration#introduction/configuration-reference).
 

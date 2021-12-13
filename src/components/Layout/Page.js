@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import CookieConsentBanner from '../CookieConsentBanner'
 import Header from '../Header'
 import Footer from '../Footer'
 
@@ -9,8 +8,6 @@ import VerticalSpacing from '../VerticalSpacing'
 
 const Page = ({ title, children }) => (
   <div className="page-layout">
-    <CookieConsentBanner />
-
     <Header siteTitle={title} />
 
     <VerticalSpacing size={12} />
