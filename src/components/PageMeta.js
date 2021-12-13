@@ -73,6 +73,11 @@ const PageMeta = ({
               content={`${siteMetadata.siteUrl}${image || siteMetadata.image}`}
             />
             <meta property="twitter:url" content={location.href} />
+            <script
+              defer
+              data-domain="neontribe.co.uk"
+              src="https://plausible.io/js/plausible.js"
+            />
           </Helmet>
         )}
       </Location>
