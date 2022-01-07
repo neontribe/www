@@ -65,8 +65,8 @@
     "prettier": "1.19.1"
   },
   "engines": {
-    "node": "12.x",
-    "yarn": "1.22.4"
+    "node": "12.22.8",
+    "yarn": "1.22.17"
   },
   "repository": {
     "type": "git",
