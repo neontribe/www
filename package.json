@@ -65,7 +65,7 @@
     "prettier": "1.19.1"
   },
   "engines": {
-    "node": "12.22.8",
+    "node": "12.22.x",
     "yarn": "1.22.17"
   },
   "repository": {
