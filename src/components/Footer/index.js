@@ -17,11 +17,15 @@ export default () => (
             <div>
               <Text lineHeight={1.5}>
                 <address>
-                  21 Colegate
+                  <b>Norwich Head Office</b>
+                  <br />
+                  Unit B, Seymour House
+                  <br />
+                  30-34 Muspole Street
                   <br />
                   Norwich
                   <br />
-                  NR3 1BN
+                  NR3 1DJ
                 </address>
               </Text>
             </div>
@@ -29,11 +33,15 @@ export default () => (
             <div>
               <Text lineHeight={1.5}>
                 <address>
+                  <b>Exeter Office</b>
+                  <br />
                   Kaleider Studios
                   <br />
                   45 Preston Street
                   <br />
-                  Exeter EX1 1DF
+                  Exeter
+                  <br />
+                  EX1 1DF
                 </address>
               </Text>
             </div>
@@ -95,6 +103,10 @@ export default () => (
       .addresses > * {
         margin-top: 2rem;
         margin-bottom: 2rem;
+      }
+
+      b {
+        font-weight: bold;
       }
 
       .twitterlogo {
