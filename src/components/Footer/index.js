@@ -17,7 +17,7 @@ export default () => (
             <div>
               <Text lineHeight={1.5}>
                 <address>
-                  <b>Norwich Head Office</b>
+                  <b>Norwich Office</b>
                   <br />
                   Unit B, Seymour House
                   <br />
