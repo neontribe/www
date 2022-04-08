@@ -37,7 +37,7 @@ We’re looking for someone who:
 - works mainly in HTML/CSS and Javascript
 - has a flair for implementing user interfaces using web technologies. 
 - understands they are developing interactions, on screens that vary in size, that must be accessible to all their users. 
-- is passionate about how  HTML/CSS and Javascript work together, and familiarity with React would be an advantage0
+- is passionate about how  HTML/CSS and Javascript work together, and familiarity with React would be an advantage.
 - can work in a team with other developers, and alongside user researchers and designers to build systems that meet user needs.
 
 Alongside your core technical skills, you’ll also need to be:
