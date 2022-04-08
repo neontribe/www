@@ -62,7 +62,7 @@ A great opportunity for growth and enjoyment. Neontribe prides itself on skills 
 
 We’d expect to pay in the region of £35,000.00 - £42,000.00 for this role.
 
-To Apply  
+##To apply  
 
 Send us your CV, or a list of skills and relevant experience, and we’ll arrange to set up a chat. We will interview anyone with the right skill set when we hear from them, so we advise getting your application in as soon as possible: future@neontribe.co.uk
 
