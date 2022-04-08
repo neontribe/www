@@ -35,16 +35,16 @@ We’re recruiting to fill a specific role in our team. If you want to spend tim
 We’re looking for someone who:
 
 - works mainly in HTML/CSS and Javascript
-- has a flair for implementing user interfaces using web technologies. 
-- understands they are developing interactions, on screens that vary in size, that must be accessible to all their users. 
-- is passionate about how  HTML/CSS and Javascript work together, and familiarity with React would be an advantage.
-- can work in a team with other developers, and alongside user researchers and designers to build systems that meet user needs.
+- has a flair for implementing user interfaces using web technologies
+- understands they are developing interactions, on screens that vary in size, that must be accessible to all their users
+- is passionate about how  HTML/CSS and Javascript work together, and familiarity with React would be an advantage
+- can work in a team with other developers, and alongside user researchers and designers to build systems that meet user needs
 
 Alongside your core technical skills, you’ll also need to be:
 
-- comfortable communicating in a remote team;
-- happy taking part in conversations about technical subjects;
-- able to demonstrate that you enjoy expanding your knowledge and thinking critically (this can be via a degree, but 1/3rd of our team members don’t have one, so doesn’t have to be);
+- comfortable communicating in a remote team
+- happy taking part in conversations about technical subjects
+- able to demonstrate that you enjoy expanding your knowledge and thinking critically (this can be via a degree, but 1/3rd of our team members don’t have one, so doesn’t have to be)
 - value agility in software development (experience of working in an agile environment is an advantage but not essential)
 - passionate about accessibility
 - keen to work in an organisation that delivers social good projects
