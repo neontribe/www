@@ -10,12 +10,12 @@ exports[`default render matches snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="jsx-3852085922 jsx-226274161 card-side card-back"
+        class="jsx-3852085922 jsx-2114952886 card-side card-back"
       >
         back 2
       </div>
       <div
-        class="jsx-3852085922 jsx-2255193976 card-side card-front"
+        class="jsx-3852085922 jsx-680621392 card-side card-front"
       >
         front 1
       </div>
@@ -34,12 +34,12 @@ exports[`isFlipped render matches snapshot 1`] = `
     >
       <div
         aria-hidden="true"
-        class="jsx-3852085922 jsx-226274161 card-side card-back"
+        class="jsx-3852085922 jsx-2114952886 card-side card-back"
       >
         back 2
       </div>
       <div
-        class="jsx-3852085922 jsx-2255193976 card-side card-front"
+        class="jsx-3852085922 jsx-680621392 card-side card-front"
       >
         front 1
       </div>

@@ -7,7 +7,6 @@ const TestCarousel = () => (
   <Carousel>
     <Carousel.Item image="a" imageTitle="image 1" />
     <Carousel.Item image="b" imageTitle="image 2" />
-    <Carousel.Item image="c" imageTitle="image 3" />
   </Carousel>
 )
 
@@ -30,11 +29,11 @@ test('loops to last item when Previous is clicked', () => {
 
   fireEvent.click(getByLabelText('Previous Item'))
 
-  expect(getByAltText('image 3')).toBeInTheDocument()
+  expect(getByAltText('image 2')).toBeInTheDocument()
 })
 
 test('displays correct item after image is clicked', () => {
-  const slideNumber = 3
+  const slideNumber = 2
 
   const { getByAltText, getByLabelText } = render(<TestCarousel />)
 

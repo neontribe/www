@@ -8,9 +8,8 @@ The neontribe MVP with static HTML, CSS, and JS.
 
     - git
     - [nvm](https://github.com/creationix/nvm)
-    - [yarn](https://github.com/yarnpkg/yarn)*
 
-    *install as a global package with `npm install -g yarn`
+    A standalon version of Yarn is bundled with the project.
 
 1.  **Get up and running**
 
@@ -79,6 +78,15 @@ Please use `yarn` to manage the dependencies and scripts in this project. You sh
    ```
 
    This will give you a nice menu of updates to choose from and will maintain `package.json` and `yarn.lock` automatically.
+
+1. **Updating Yarn**
+
+   A standalone version of Yarn is included in [./.yarn/](./.yarn/). This is to make sure everyone making changes to the site is using the same version, regardless of what they may have installed. To update this:
+
+   1. Download a new version from [Yarn's releases page](https://github.com/yarnpkg/yarn/releases)
+   1. Replace the existing version in [./.yarn/](./.yarn/)
+   1. Update the yarn-path in [./.yarnrc](./.yarnrc)
+   1. Update the version in engines.yarn in [package.json](./package.json)
 
 ## :rocket: Deployment
 
