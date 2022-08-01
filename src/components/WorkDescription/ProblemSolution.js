@@ -7,7 +7,7 @@ import H from '../Heading'
 import VerticalSpacing from '../VerticalSpacing'
 import Text from '../Text'
 
-const Content = props => (
+const Content = (props) => (
   <>
     <div className="content" {...props} />
     <style jsx global>{`

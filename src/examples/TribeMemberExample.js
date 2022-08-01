@@ -41,7 +41,7 @@ export default () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <ConstrainedWidth>
         <Text size="medium" weight={700}>
           <H>TribeMember</H>

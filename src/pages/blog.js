@@ -18,7 +18,7 @@ const BlogPage = ({
     allMarkdownRemark: { edges },
   },
 }) => {
-  const getDateString = date =>
+  const getDateString = (date) =>
     capitalizeFirstLetter(
       distanceInWordsToNow(date, {
         addSuffix: true,
