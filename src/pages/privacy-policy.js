@@ -22,7 +22,7 @@ const NotFoundPage = () => (
           }
         }
       `}
-      render={data => (
+      render={(data) => (
         <ConstrainedWidth>
           <div className="text-bg">
             <RenderContent htmlAst={data.file.childMarkdownRemark.htmlAst} />

@@ -7,7 +7,7 @@ import { ExternalLink } from '../components/Link'
 
 import arcs from './arcs.svg'
 
-const Content = props => (
+const Content = (props) => (
   <>
     <div className="content" {...props} />
     <style jsx global>{`
@@ -65,20 +65,20 @@ const RenderAst = ({ htmlAst, components = {}, children }) => {
   const renderAst = new RehypeReact({
     createElement: React.createElement,
     components: {
-      h1: props => (
+      h1: (props) => (
         <Text align="center">
           <Heading {...props} level={1} size="large" />
         </Text>
       ),
-      h2: props => <Heading {...props} level={2} size="medium" />,
-      h3: props => <Heading {...props} level={3} size="normal" />,
+      h2: (props) => <Heading {...props} level={2} size="medium" />,
+      h3: (props) => <Heading {...props} level={3} size="normal" />,
       li: ({ children, ...props }) => (
         <li {...props}>
           <Text children={children} />
         </li>
       ),
       // TODO: Discern external vs external links?
-      a: props => <ExternalLink {...props} />,
+      a: (props) => <ExternalLink {...props} />,
       ...components,
     },
   }).Compiler
@@ -91,7 +91,7 @@ const RenderAst = ({ htmlAst, components = {}, children }) => {
   return children
 }
 
-const RenderContent = props => (
+const RenderContent = (props) => (
   <Content>
     <RenderAst {...props} />
   </Content>
