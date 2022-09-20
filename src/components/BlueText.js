@@ -13,19 +13,17 @@ const Text = ({
   color,
   hyphenation = false,
   lineHeight,
-  maxCharacter,
 }) => (
-  <div className={classNames('text', hyphenation && 'hyphenation')}>
+  <h1 className={classNames('text', hyphenation && 'hyphenation')}>
     {children}
 
     <style jsx>{`
       .text {
         ${weight ? `font-weight: ${weight};` : ''}
+        ${color ? `color: ${color};` : ''}
         ${fontSizes[size] ? `font-size: ${fontSizes[size]};` : ''}
         ${lineHeight ? `line-height: ${lineHeight};` : ''}
         ${align ? `text-align: ${align};` : ''}
-        ${color ? `color: ${color};` : ''}
-        ${maxCharacter ? `max-width: ${maxCharacter};` : ''}
       }
 
       .hyphenation {
@@ -34,18 +32,16 @@ const Text = ({
         hyphens: auto;
       }
     `}</style>
-  </div>
+  </h1>
 )
 
 Text.propTypes = {
   children: PropTypes.node,
   weight: PropTypes.string,
   align: PropTypes.string,
+  color: PropTypes.string,
   lineHeight: PropTypes.number,
   size: PropTypes.oneOf(Object.keys(fontSizes)),
-  color: PropTypes.string,
-  maxCharacter: PropTypes.string,
-  whiteSpace: PropTypes.string,
 }
 
 export default Text

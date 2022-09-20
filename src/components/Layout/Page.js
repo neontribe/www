@@ -8,13 +8,14 @@ import VerticalSpacing from '../VerticalSpacing'
 
 const Page = ({ title, children }) => (
   <div className="page-layout">
-    <Header siteTitle={title} />
+    <div className="introduction">
+      <Header siteTitle={title} />
 
-    <VerticalSpacing size={12} />
-
+      <VerticalSpacing size={12} />
+    </div>
     <main role="main">{children}</main>
 
-    <VerticalSpacing size={8} />
+    <VerticalSpacing size={17} />
 
     <Footer />
 
@@ -25,6 +26,11 @@ const Page = ({ title, children }) => (
         min-height: 100%;
         display: flex;
         flex-direction: column;
+        background-color: #f2f2f2;
+      }
+
+      .introduction {
+        background-color: black;
       }
 
       main {

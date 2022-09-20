@@ -55,16 +55,14 @@ const Nav = () => (
     <ul className="list">
       <li>
         <NavLink active to="/what-we-are-doing">
-          What we're doing
+          Our Work
         </NavLink>
       </li>
       <li>
         <NavLink to="/the-tribe">The tribe</NavLink>
       </li>
       <li>
-        <ExternalLink href="mailto:hello@neontribe.co.uk">
-          hello@neontribe.co.uk
-        </ExternalLink>
+        <ExternalLink href="mailto:hello@neontribe.co.uk">Contact</ExternalLink>
       </li>
     </ul>
 
@@ -79,6 +77,7 @@ const Nav = () => (
         flex-direction: column;
         list-style: none;
         width: 100%;
+        font-size: 20px;
       }
 
       .list > * + * {

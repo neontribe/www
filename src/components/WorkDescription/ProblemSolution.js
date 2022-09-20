@@ -12,15 +12,26 @@ const Content = (props) => (
     <div className="content" {...props} />
     <style jsx global>{`
       .content * + * {
-        margin-top: 1.5em;
+        margin: 0;
+        padding: 0;
+        border: none;
       }
 
       .content li + li {
-        margin-top: 1em;
+      }
+
+      .content ul {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-inline-start: 0;
+        white-space: normal;
       }
 
       .content li {
         line-height: 1.5;
+        list-style: none;
+        padding: 0;
+        margin: 0;
       }
 
       .content > div > div:not(:first-child) {
@@ -43,18 +54,18 @@ export default ({ problem, solution }) => {
 
   return (
     <>
-      <Text size="normal" weight={700}>
+      <Text size="normal" color="#561dee" weight={700}>
         <H>Challenges</H>
       </Text>
 
-      <VerticalSpacing size={1} />
+      <VerticalSpacing size={0.5} />
 
-      <p>{problem}</p>
+      <p className="challenge">{problem}</p>
 
       {solution && (
         <>
           <VerticalSpacing size={2} />
-          <Text size="normal" weight={700}>
+          <Text size="normal" color="#561dee" weight={700}>
             <H>How we helped</H>
           </Text>
           <VerticalSpacing size={1} />
@@ -65,6 +76,13 @@ export default ({ problem, solution }) => {
           />
         </>
       )}
+      <style jsx>{`
+        .challenge {
+          max-width: 60ch;
+          font-size: 18px;
+          line-height: 1.5;
+        }
+      `}</style>
     </>
   )
 }

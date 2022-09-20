@@ -3,86 +3,71 @@ import React from 'react'
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import Text from '../components/Text'
+
+import BlueText from '../components/BlueText'
+import Good from '../components/Good'
 import VerticalSpacing from '../components/VerticalSpacing'
 import H from '../components/Heading'
 import Section from '../components/Section'
 import { InternalLink, ExternalLink } from '../components/Link'
-
+import arc from '../components/pinkArc.png'
+import Container from '../components/Container'
 import StoryCarousel from '../components/StoryCarousel'
 import HomePageWorkSummary from '../components/HomePageWorkSummary'
 import PageMeta from '../components/PageMeta'
+import StyledLink from '../components/Button'
+import Smile from '../components/Smile'
+import Top from '../components/Top'
 
 const IndexPage = () => (
   <Layout>
     <PageMeta title="Welcome" />
+    <Top>
+      <ConstrainedWidth>
+        <BlueText size="title" align="left" color="white">
+          {' '}
+          <span> We are a digital agency</span>
+        </BlueText>
 
-    <ConstrainedWidth>
-      <section>
-        <Text size="large" align="center">
-          <h1>We solve problems</h1>
-        </Text>
+        <BlueText size="title" align="left" color="white">
+          <Good>committed to tech for </Good>
+          <Smile>
+            <Good>g</Good>
+            <Good color="#48e9ce">oo</Good>
+            <Good>d</Good>{' '}
+          </Smile>
+        </BlueText>
+        <VerticalSpacing size={3.5} />
 
-        <VerticalSpacing size={2} />
-
-        <Text size="medium">
-          <p>
-            Neontribe is a digital agency working in user research, software
-            development and design. We're agile by instinct, and user-centred in
-            our practice. We work together to identify and deliver on user need.
-          </p>
-        </Text>
-      </section>
-
-      <VerticalSpacing size={16} />
-
-      <section>
-        <Text size="large">
-          <H withArcs>What we're doing</H>
-        </Text>
-
-        <VerticalSpacing size={4} />
-
-        <Section>
-          <HomePageWorkSummary />
-        </Section>
-      </section>
-
-      <VerticalSpacing size={16} />
-
-      <section>
-        <Text size="large">
-          <H withArcs>Journeys to the Tribe</H>
-        </Text>
-
-        <VerticalSpacing size={4} />
-
-        <Section>
-          <StoryCarousel />
-        </Section>
-
-        <VerticalSpacing size={4} />
-
-        <InternalLink button to="/the-tribe">
-          Meet the tribe
-        </InternalLink>
-      </section>
-
-      <VerticalSpacing size={16} />
-
-      <section>
-        <Text align="center">
-          <Text size="large">
-            <H>Get in touch</H>
+        <Container paddingTop="1rem">
+          <Text size="large" color="#48e9ce">
+            {' '}
+            <h2>We work with you to solve problems through</h2>{' '}
           </Text>
-
-          <VerticalSpacing size={1} />
-
-          <ExternalLink href="mailto:hello@neontribe.co.uk">
-            <Text size="medium">hello@neontribe.co.uk</Text>
-          </ExternalLink>
+        </Container>
+        <Text size="large" color="#48e9ce">
+          {' '}
+          <h2>user research, software development and design </h2>{' '}
         </Text>
-      </section>
-    </ConstrainedWidth>
+        <VerticalSpacing size={10} />
+
+        <section>
+          <StyledLink
+            connect="/what-we-are-doing"
+            background="#5600ee"
+            border_color="#5600ee"
+          ></StyledLink>
+          <StyledLink
+            connect="/what-we-are-doing"
+            background="black"
+            border_color="#48e9ce"
+            margin_left="4rem"
+          >
+            Meet the tribe
+          </StyledLink>
+        </section>
+      </ConstrainedWidth>
+    </Top>
   </Layout>
 )
 

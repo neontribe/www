@@ -17,33 +17,29 @@ const propTypes = {
 
 const Content = ({ imagePosition = 'right', children }) => (
   <div className="work-description-content">
-    <div className="stacked-content">
-      {cloneWithProps(findChild(children, Title), {
-        key: 'title',
-      })}
+    {cloneWithProps(findChild(children, Title), {
+      key: 'title',
+    })}
 
-      <VerticalSpacing size={3} />
-
-      {cloneWithProps(findChild(children, Image), {
-        key: 'image-middle',
-        middle: true,
-        imagePosition,
-      })}
-
-      {cloneWithProps(findChild(children, Description), {
-        key: 'description',
-      })}
-    </div>
+    <VerticalSpacing size={3} />
 
     {cloneWithProps(findChild(children, Image), {
-      key: 'image-bottom',
-      imagePosition,
+      key: 'image',
+    })}
+
+    {cloneWithProps(findChild(children, Description), {
+      key: 'description',
     })}
 
     <style jsx>{`
       .work-description-content {
         display: flex;
         justify-content: space-between;
+        padding-top: 2.3rem;
+        padding-left: 2.3rem;
+        padding-right: 3.5rem;
+        border-radius: 38px;
+
         ${imagePosition === 'left' ? 'flex-direction: row-reverse;' : ''}
       }
 
@@ -61,24 +57,17 @@ Title.displayName = 'WorkDescriptionTitle'
 Title.propTypes = propTypes
 
 // Image -------------------------------------
-export const Image = ({ middle, imagePosition, children }) => (
+export const Image = ({ children }) => (
   <div className="image">
     {children}
 
     <style jsx>{`
       .image {
-        display: ${middle ? 'block' : 'none'};
-        margin-bottom: 2rem;
-      }
+        width: 100%;
+        height: 30%;
+        display: inline-block;
 
-      @media (${breakpoint('md')}) {
-        .image {
-          display: ${middle ? 'none' : 'block'};
-          flex-shrink: 0;
-          width: 33.33%;
-          margin-bottom: 0;
-          margin-${imagePosition === 'right' ? 'left' : 'right'}: 2rem;
-        }
+        margin-top: 1em;
       }
     `}</style>
   </div>
@@ -87,13 +76,26 @@ export const Image = ({ middle, imagePosition, children }) => (
 Image.displayName = 'WorkDescriptionImage'
 Image.propTypes = {
   ...propTypes,
-  middle: PropTypes.bool,
+
   imagePosition: PropTypes.oneOf(['left', 'right']),
 }
 
 // Description -------------------------------------
 export const Description = ({ children }) => (
-  <div className="description">{children}</div>
+  <div className="description">
+    {children}
+
+    <style jsx>{`
+      .description {
+        color: black;
+        padding-top: 5.5rem;
+        width: 50%;
+        float: right;
+
+        white-space: pre-line;
+      }
+    `}</style>
+  </div>
 )
 
 Description.displayName = 'WorkDescriptionDescription'

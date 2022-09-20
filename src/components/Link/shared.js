@@ -11,13 +11,16 @@ import Text from '../Text'
 
 export const { className, styles } = css.resolve`
   a.button {
+    display: table-cell;
     vertical-align: middle;
-    display: inline-block;
     padding: 1rem 2rem;
-    border-radius: 60px;
+    border-radius: 350px;
     font-family: ${FONT_SECONDARY};
     background-color: ${c_CALL_TO_ACTION};
     cursor: pointer;
+    width: 17rem;
+    height: 3rem;
+    text-align: center;
   }
 
   a.button:hover {

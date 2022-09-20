@@ -3,12 +3,7 @@ import PropTypes from 'prop-types'
 
 import { PAGE_WIDTH_REM } from '../../theme'
 
-const ConstrainedWidth = ({
-  children,
-  background,
-  borderRadius,
-  paddingTop,
-}) => (
+const ProjectConstrainedWidth = ({ children, background }) => (
   <div className="constrained-container">
     {children}
 
@@ -18,20 +13,20 @@ const ConstrainedWidth = ({
         max-width: ${PAGE_WIDTH_REM};
         margin-left: auto;
         margin-right: auto;
-        ${borderRadius ? `border-radius: ${borderRadius};` : ''}
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+        border-radius: 38px;
 
         ${background ? `background-color: ${background};` : ''}
-        ${paddingTop ? `padding-top: ${paddingTop};` : ''}
       }
     `}</style>
   </div>
 )
 
-ConstrainedWidth.propTypes = {
+ProjectConstrainedWidth.propTypes = {
   children: PropTypes.node,
   background: PropTypes.string,
-  borderRadius: PropTypes.string,
-  paddingTop: PropTypes.string,
 }
 
-export default ConstrainedWidth
+export default ProjectConstrainedWidth

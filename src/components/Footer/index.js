@@ -83,6 +83,9 @@ export default () => (
     </div>
 
     <style jsx>{`
+      footer {
+        margin-top: auto;
+      }
       .row {
         display: flex;
         flex-wrap: wrap;

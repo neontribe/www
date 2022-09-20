@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames'
-
 import { fontSizes } from '../theme'
 
+import arc from '../components/pinkArc.png'
+
 // TODO: Should we have a block level version which uses a 0 margin p?
-const Text = ({
+const Good = ({
   children,
   weight,
   size,
@@ -13,19 +14,34 @@ const Text = ({
   color,
   hyphenation = false,
   lineHeight,
-  maxCharacter,
 }) => (
-  <div className={classNames('text', hyphenation && 'hyphenation')}>
+  <span className={classNames('text', hyphenation && 'hyphenation')}>
     {children}
 
     <style jsx>{`
       .text {
         ${weight ? `font-weight: ${weight};` : ''}
+        ${color ? `color: ${color};` : ''}
         ${fontSizes[size] ? `font-size: ${fontSizes[size]};` : ''}
         ${lineHeight ? `line-height: ${lineHeight};` : ''}
         ${align ? `text-align: ${align};` : ''}
-        ${color ? `color: ${color};` : ''}
-        ${maxCharacter ? `max-width: ${maxCharacter};` : ''}
+        position:relative;
+        display: inline-block;
+      }
+
+      .text:after {
+        content: '';
+        position: absolute;
+        background-image: url('${arc}');
+        background-size: 128px 65px;
+        background-position: left;
+
+        width: 8.1rem;
+        height: 4.1rem;
+        background-repeat: no-repeat;
+        top: 6rem;
+
+        left: 0.9rem;
       }
 
       .hyphenation {
@@ -34,18 +50,16 @@ const Text = ({
         hyphens: auto;
       }
     `}</style>
-  </div>
+  </span>
 )
 
-Text.propTypes = {
+Good.propTypes = {
   children: PropTypes.node,
-  weight: PropTypes.string,
+  weight: PropTypes.oneOf([400, 500, 700]),
   align: PropTypes.string,
+  color: PropTypes.string,
   lineHeight: PropTypes.number,
   size: PropTypes.oneOf(Object.keys(fontSizes)),
-  color: PropTypes.string,
-  maxCharacter: PropTypes.string,
-  whiteSpace: PropTypes.string,
 }
 
-export default Text
+export default Good

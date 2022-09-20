@@ -28,15 +28,14 @@ const Layout = ({ children }) => (
 
       @font-face {
         font-family: 'KeepCalm';
-        src: url('/fonts/keepcalmmediumitalic.woff2') format('woff2'),
-          url('/fonts/keepcalmmediumitalic.woff') format('woff');
+        ///src: url('/fonts/keepcalmmediumitalic.woff2') format('woff2'),
+        ///url('/fonts/keepcalmmediumitalic.woff') format('woff');
         font-style: italic;
         font-display: swap;
       }
 
       html,
       body,
-      body > div,
       body > div > div {
         height: 100%;
       }
@@ -54,13 +53,16 @@ const Layout = ({ children }) => (
 
       html {
         font-size: ${REM_PX}px;
+        background-color: #f2f2f2;
       }
 
       body {
-        background-color: ${c_PRIMARY_BACKGROUND};
+        background-color: black;
         font-family: ${FONT_PRIMARY};
         color: ${c_TEXT_LIGHT};
-        margin: 0 2rem;
+        margin-top: 0.5rem;
+        display: flex;
+        flex-direction: column;
       }
 
       a {
@@ -70,7 +72,7 @@ const Layout = ({ children }) => (
 
       p {
         margin: 0;
-        line-height: 2;
+        line-height: 1;
       }
 
       p + p {

@@ -9,11 +9,15 @@ import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import H from '../components/Heading'
 import Section from '../components/Section'
 import Text from '../components/Text'
+import BlueText from '../components/BlueText'
 import VerticalSpacing from '../components/VerticalSpacing'
 import WorkDescription from '../components/WorkDescription'
 import { ExternalLink } from '../components/Link'
 import PageMeta from '../components/PageMeta'
-import Divider from '../components/Divider'
+
+import Container from '../components/Container'
+import Top from '../components/Top'
+import circles from '../components/circle-progression.png'
 
 import castLogo from '../data/funders/cast-logo.png'
 import comicReliefLogo from '../data/funders/comic-relief-logo.png'
@@ -33,49 +37,39 @@ const WhatWeAreDoingPage = () => (
       title="What we do"
       description="Neontribe is a digital agency. We research for context. We design for use. We code to completion. We test to exhaustion. Then we engineer enhancement."
     />
+    <Top>
+      <ConstrainedWidth>
+        <BlueText size="larger" color="#48e9ce">
+          <h1>Explore our projects</h1>
+        </BlueText>
 
-    <ConstrainedWidth>
-      <Text size="large" align="center">
-        <h1>What we do</h1>
-      </Text>
+        <Container align="center">
+          <Text size="normal">
+            <p>
+              Neontribe help people provide better digital services. We work
+              with you to{' '}
+            </p>
+            <p>
+              understand your users' needs and we produce digital tools
+              including code
+            </p>
+            <p> content and design </p>
+          </Text>
 
-      <VerticalSpacing size={4} />
+          <Container paddingBottom="0.5rem" paddingRight="2rem">
+            <img src={circles} height={128} width={277} />{' '}
+          </Container>
+        </Container>
 
-      <Text size="medium">
-        <p>
-          Neontribe has a national reputation for our work in tech-for-good, and
-          an international reputation in travel and tourism. Our work identifies
-          the issues organisations have and finds ways to help them out. Our
-          design and development focuses on the people those organisations work
-          with, their situations and stories.
-        </p>
-      </Text>
-    </ConstrainedWidth>
-
+        <VerticalSpacing size={6} />
+        <Text>
+          <p>Browse our favourite projects to find out more</p>
+        </Text>
+      </ConstrainedWidth>
+    </Top>
     <VerticalSpacing size={10} />
 
-    <div className="carousel">
-      <Malarquee fill hoverToPause rate={25}>
-        <div className="logos">
-          {collaborationsMap.map(({ id, ...item }) => (
-            <img
-              key={id}
-              className={classNames('logo', id)}
-              {...item}
-              alt={item.alt || ''}
-            />
-          ))}
-        </div>
-      </Malarquee>
-    </div>
-
     <VerticalSpacing size={10} />
-
-    <ConstrainedWidth>
-      <Text size="large">
-        <H withArcs>Recent Projects</H>
-      </Text>
-    </ConstrainedWidth>
 
     <VerticalSpacing size={4} />
 
@@ -110,7 +104,7 @@ const WhatWeAreDoingPage = () => (
               {index !== 0 ? (
                 <>
                   <VerticalSpacing size={8} />
-                  <Divider />
+
                   <VerticalSpacing size={8} />
                 </>
               ) : null}

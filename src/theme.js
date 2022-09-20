@@ -76,7 +76,9 @@ export const FONT_SECONDARY = 'KeepCalm, sans-serif'
 
 export const fontSizes = {
   small: '0.85rem',
-  normal: '1rem',
+  normal: '1.1rem',
   medium: '1.25rem',
-  large: '1.5rem',
+  large: '1.47rem',
+  larger: '2.5rem',
+  title: '3.4rem',
 }

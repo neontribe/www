@@ -5,7 +5,7 @@ import ShimlessImg from 'gatsby-image'
 import css from 'styled-jsx/css'
 
 import { breakpoint } from '../../theme'
-import ConstrainedWidth from '../Layout/ConstrainedWidth'
+import ProjectConstrainedWidth from '../Layout/ConstrainedWidth'
 import H from '../Heading'
 import Section from '../Section'
 import Text from '../Text'
@@ -21,37 +21,29 @@ const imageStyles = css.resolve`
   }
 `
 
-const WorkDescription = ({
-  id,
-  title,
-  client,
-  fluid,
-  problem,
-  solution,
-  imagePosition,
-}) => (
+const WorkDescription = ({ id, title, client, fluid, problem, solution }) => (
   <section id={id}>
-    <ConstrainedWidth>
-      <Content imagePosition={imagePosition}>
+    <ProjectConstrainedWidth background="white">
+      <Content>
         <Content.Title>
           <Section>
             <Text size="normal">
-              <H>{client}</H>
+              <div className="leaf">
+                <H>{client}</H>
+              </div>
             </Text>
+
+            <VerticalSpacing size={1} />
+            <div className="title">
+              <Text size="medium" color="black" weight={700}>
+                <H>{title}</H>
+              </Text>
+              <Content.Image>
+                <Img className={imageStyles.className} fluid={fluid} />
+              </Content.Image>
+            </div>
           </Section>
-
-          <VerticalSpacing size={1} />
-
-          <Text size="medium" weight={700}>
-            <H>{title}</H>
-          </Text>
         </Content.Title>
-
-        <Content.Image>
-          <div className="image">
-            <Img className={imageStyles.className} fluid={fluid} />
-          </div>
-        </Content.Image>
 
         <Content.Description>
           <Section>
@@ -61,14 +53,29 @@ const WorkDescription = ({
           </Section>
         </Content.Description>
       </Content>
-    </ConstrainedWidth>
+    </ProjectConstrainedWidth>
 
     {imageStyles.styles}
 
     <style jsx>{`
       .image {
         height: 100%;
-        max-height: 600px;
+        max-height: 200px;
+      }
+
+      .title {
+        max-width: 45ch;
+      }
+
+      .leaf {
+        background-color: #561dee;
+        margin: 0 250px 23px 0;
+        padding: 12px 24px 13px 21px;
+        float: left;
+        font-size: 22px;
+
+        border-radius: 0 0 38px 0;
+        display: inline-block;
       }
     `}</style>
   </section>

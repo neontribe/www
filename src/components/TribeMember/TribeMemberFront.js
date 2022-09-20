@@ -39,13 +39,15 @@ const TribeMemberFront = ({ image, name, skills, onClick }) => (
     <VerticalSpacing size={2} />
 
     <figcaption className="name-skills">
-      <Text weight={700} size="medium">
+      <Text weight={700} size="medium" color="black">
         <H>{name}</H>
       </Text>
 
       <VerticalSpacing size={1} />
 
-      <Text lineHeight={1.2}>{skills.join(' | ')}</Text>
+      <Text lineHeight={1.2} color="black">
+        {skills.join(' | ')}
+      </Text>
     </figcaption>
 
     {imageStyles.styles}
