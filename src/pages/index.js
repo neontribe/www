@@ -56,9 +56,12 @@ const IndexPage = () => (
             connect="/what-we-are-doing"
             background="#5600ee"
             border_color="#5600ee"
-          ></StyledLink>
+          >
+            See our work
+          </StyledLink>
+
           <StyledLink
-            connect="/what-we-are-doing"
+            connect="/the-tribe"
             background="black"
             border_color="#48e9ce"
             margin_left="4rem"

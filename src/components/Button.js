@@ -7,14 +7,20 @@ import Text from './Text'
 
 import { navigate as NavTrial } from 'gatsby'
 
-const StyledLink = ({ border_color, connect, background, margin_left }) => (
+const StyledLink = ({
+  children,
+  border_color,
+  connect,
+  background,
+  margin_left,
+}) => (
   <>
     <button
       onClick={() => {
         NavTrial(connect)
       }}
     >
-      See our work
+      {children}
     </button>
     <style jsx>{`
       button {
@@ -41,6 +47,7 @@ const StyledLink = ({ border_color, connect, background, margin_left }) => (
 )
 Text.propTypes = {
   connect: PropTypes.string,
+  children: PropTypes.node,
   border_color: PropTypes.string,
   background: PropTypes.string,
   margin_left: PropTypes.string,
