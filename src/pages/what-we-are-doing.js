@@ -3,7 +3,7 @@ import slugify from 'slugify'
 import Malarquee from 'react-malarquee'
 import { StaticQuery, graphql } from 'gatsby'
 import classNames from 'classnames'
-
+import ContactFooter from '../components/Layout/ContactFooter'
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import H from '../components/Heading'
@@ -16,14 +16,16 @@ import { ExternalLink } from '../components/Link'
 import PageMeta from '../components/PageMeta'
 
 import Container from '../components/Container'
+import ImageContainer from '../components/imageContainer'
 import Top from '../components/Top'
 import circles from '../components/circle-progression.png'
-
+import logo from '../components/logo.svg'
 import castLogo from '../data/funders/cast-logo.png'
 import comicReliefLogo from '../data/funders/comic-relief-logo.png'
 import mhfLogo from '../data/funders/mhf-logo.png'
 import phfLogo from '../data/funders/PHF-logo.jpg'
-
+import StyledLink from '../components/Button'
+import Arcs from '../components/join.svg'
 const collaborationsMap = [
   { id: 'cast', src: castLogo, alt: 'Cast' },
   { id: 'comic-relief', src: comicReliefLogo, alt: 'Comic Relief' },
@@ -43,7 +45,7 @@ const WhatWeAreDoingPage = () => (
           <h1>Explore our projects</h1>
         </BlueText>
 
-        <Container align="center">
+        <Container align="center" justifyContent="space-between">
           <Text size="normal">
             <p>
               Neontribe help people provide better digital services. We work
@@ -56,7 +58,11 @@ const WhatWeAreDoingPage = () => (
             <p> content and design </p>
           </Text>
 
-          <Container paddingBottom="0.5rem" paddingRight="2rem">
+          <Container
+            paddingBottom="0.5rem"
+            paddingRight="2rem"
+            justify-content="space-between"
+          >
             <img src={circles} height={128} width={277} />{' '}
           </Container>
         </Container>
@@ -86,6 +92,9 @@ const WhatWeAreDoingPage = () => (
                   problem
                   solution
                   client
+                  fund
+                  budget
+                  timescale
                   image {
                     childImageSharp {
                       fluid(maxWidth: 768) {
@@ -117,6 +126,9 @@ const WhatWeAreDoingPage = () => (
                 imagePosition={index % 2 === 0 ? 'left' : 'right'}
                 problem={project.frontmatter.problem}
                 solution={project.frontmatter.solution}
+                fund={project.frontmatter.fund}
+                budget={project.frontmatter.budget}
+                timescale={project.frontmatter.timescale}
               />
             </React.Fragment>
           ))
@@ -126,21 +138,49 @@ const WhatWeAreDoingPage = () => (
 
     <VerticalSpacing size={10} />
 
-    <ConstrainedWidth>
-      <Text align="center">
-        <Text size="large">
-          <H>Get in touch</H>
-        </Text>
+    <ConstrainedWidth paddingLeft="2.4rem">
+      <Text size="large" color="black">
+        <H>Get in touch</H>
+      </Text>
+      <VerticalSpacing size={3} />
+      <Container>
+        <div>
+          <Text size="normal" color="black" maxCharacter="49ch">
+            Filler copy- why/ when they should get in touch/ when to expect a
+            reply- do we have a multiple ways to contact block here or stick
+            with just the email funnel?
+          </Text>
 
-        <VerticalSpacing size={1} />
+          <VerticalSpacing size={5} />
 
-        <Text size="medium">
-          <ExternalLink href="mailto:hello@neontribe.co.uk">
-            hello@neontribe.co.uk
-          </ExternalLink>
-        </Text>
+          <StyledLink
+            connect="mailto:hello@neontribe.co.uk"
+            background="#5600ee"
+            border_color="#5600ee"
+          >
+            Email: hello@neontribe.co.uk
+          </StyledLink>
+        </div>
+        <ImageContainer paddingLeft="10rem" paddingBottom="4rem">
+          <img src={Arcs} height={136} width={191} />
+        </ImageContainer>
+      </Container>
+      <Text size="medium">
+        <ExternalLink href="mailto:hello@neontribe.co.uk">
+          hello@neontribe.co.uk
+        </ExternalLink>
       </Text>
     </ConstrainedWidth>
+    <ContactFooter background="#561dee">
+      <ConstrainedWidth paddingTop="2rem">
+        <Container justifyContent="space-between">
+          <div>
+            <img className="logo" src={logo} alt="Neontribe" />
+          </div>
+          <Text size="normal">Privacy policy</Text>
+        </Container>
+      </ConstrainedWidth>
+    </ContactFooter>
 
     <style jsx>{`
       .carousel {

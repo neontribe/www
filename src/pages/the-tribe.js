@@ -1,8 +1,9 @@
 import React from 'react'
-
+import Arcs from '../arcs.png'
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import H from '../components/Heading'
+import ContactFooter from '../components/Layout/ContactFooter'
 import Text from '../components/Text'
 import {
   TheTribeTopParagraph,
@@ -19,6 +20,8 @@ import ImageContainer from '../components/imageContainer'
 import Top from '../components/Top'
 import StyledLink from '../components/Button'
 import TribeArc from '../components/tribeArcs.png'
+import { Image } from '../components/WorkDescription/Content'
+import logo from '../components/logo.svg'
 
 const TheTribePage = () => (
   <Layout>
@@ -29,7 +32,7 @@ const TheTribePage = () => (
 
     <Top>
       <ConstrainedWidth>
-        <Container>
+        <Container justifyContent="space-between">
           <div>
             <BlueText size="larger" color="#48e9ce">
               <h1>Working at Neontribe</h1>
@@ -61,7 +64,9 @@ const TheTribePage = () => (
           connect="/what-we-are-doing"
           background="#5600ee"
           border_color="#5600ee"
-        ></StyledLink>
+        >
+          Join the tribe
+        </StyledLink>
       </ConstrainedWidth>
     </Top>
 
@@ -79,21 +84,43 @@ const TheTribePage = () => (
         </Text>
 
         <VerticalSpacing size={2} />
-
-        <TheTribeBottomParagraph />
+        <Container justify-content="space-between">
+          <TheTribeBottomParagraph />
+          <ImageContainer paddingTop="1rem"></ImageContainer>
+        </Container>
 
         <VerticalSpacing size={5} />
+        <Container justifyContent="start">
+          <StyledLink
+            connect="https://docs.google.com/forms/d/e/1FAIpQLScThzeOla4FG2tEGfUVthAb8ZyTIzSGb0nB_tcqSlYSbrIjZA/viewform?usp=sf_link"
+            background="#5600ee"
+            border_color="#5600ee"
+          >
+            Tell us about you
+          </StyledLink>
 
-        <ExternalLink
-          href="https://docs.google.com/forms/d/e/1FAIpQLScThzeOla4FG2tEGfUVthAb8ZyTIzSGb0nB_tcqSlYSbrIjZA/viewform?usp=sf_link"
-          button
-          rel="noopener noreferrer"
-          target="_blank"
-        >
-          Join The Tribe
-        </ExternalLink>
+          <Text
+            paddingLeft="2rem"
+            paddingTop="1rem"
+            size="normal"
+            color="#48e9ce"
+            align="center"
+          >
+            Or email: hello@neontribe.co.uk
+          </Text>
+        </Container>
       </ConstrainedWidth>
     </Top>
+    <ContactFooter background="#561dee">
+      <ConstrainedWidth paddingTop="2rem">
+        <Container justifyContent="space-between">
+          <div>
+            <img className="logo" src={logo} alt="Neontribe" />
+          </div>
+          <Text size="normal">Privacy policy</Text>
+        </Container>
+      </ConstrainedWidth>
+    </ContactFooter>
   </Layout>
 )
 

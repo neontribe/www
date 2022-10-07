@@ -14,6 +14,9 @@ const Text = ({
   hyphenation = false,
   lineHeight,
   maxCharacter,
+  paddingRight,
+  paddingLeft,
+  paddingTop,
 }) => (
   <div className={classNames('text', hyphenation && 'hyphenation')}>
     {children}
@@ -25,6 +28,10 @@ const Text = ({
         ${lineHeight ? `line-height: ${lineHeight};` : ''}
         ${align ? `text-align: ${align};` : ''}
         ${color ? `color: ${color};` : ''}
+        ${paddingLeft ? `padding-left: ${paddingLeft};` : ''}
+        ${paddingTop ? `padding-top: ${paddingTop};` : ''}
+        ${paddingRight ? `padding-right: ${paddingRight};` : ''}
+
         ${maxCharacter ? `max-width: ${maxCharacter};` : ''}
       }
 
@@ -46,6 +53,9 @@ Text.propTypes = {
   color: PropTypes.string,
   maxCharacter: PropTypes.string,
   whiteSpace: PropTypes.string,
+  paddingLeft: PropTypes.string,
+  paddingTop: PropTypes.string,
+  paddingRight: PropTypes.string,
 }
 
 export default Text

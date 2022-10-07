@@ -15,13 +15,17 @@ const propTypes = {
   children: PropTypes.node,
 }
 
-const Content = ({ imagePosition = 'right', children }) => (
+const Content = ({ children }) => (
   <div className="work-description-content">
-    {cloneWithProps(findChild(children, Title), {
-      key: 'title',
-    })}
+    <div className="title-description">
+      {cloneWithProps(findChild(children, Name), {
+        key: 'client',
+      })}
 
-    <VerticalSpacing size={3} />
+      {cloneWithProps(findChild(children, Title), {
+        key: 'title',
+      })}
+    </div>
 
     {cloneWithProps(findChild(children, Image), {
       key: 'image',
@@ -33,14 +37,16 @@ const Content = ({ imagePosition = 'right', children }) => (
 
     <style jsx>{`
       .work-description-content {
-        display: flex;
-        justify-content: space-between;
         padding-top: 2.3rem;
         padding-left: 2.3rem;
         padding-right: 3.5rem;
         border-radius: 38px;
+        display: flex;
+        justify-content: space-around;
+      }
 
-        ${imagePosition === 'left' ? 'flex-direction: row-reverse;' : ''}
+      .title-description {
+        display: block;
       }
 
       .stacked-content {
@@ -49,9 +55,22 @@ const Content = ({ imagePosition = 'right', children }) => (
     `}</style>
   </div>
 )
+// Name -------------------------------------
+export const Name = ({ children }) => <div>{children}</div>
 
+Name.displayName = 'WorkDescriptionName'
+Name.propTypes = propTypes
 // Title -------------------------------------
-export const Title = ({ children }) => <div>{children}</div>
+export const Title = ({ children }) => (
+  <div className="hi">
+    {children}
+    <style jsx>{`
+      .hi {
+        width: 45ch;
+      }
+    `}</style>
+  </div>
+)
 
 Title.displayName = 'WorkDescriptionTitle'
 Title.propTypes = propTypes
@@ -65,7 +84,6 @@ export const Image = ({ children }) => (
       .image {
         width: 100%;
         height: 30%;
-        display: inline-block;
 
         margin-top: 1em;
       }
@@ -88,11 +106,11 @@ export const Description = ({ children }) => (
     <style jsx>{`
       .description {
         color: black;
-        padding-top: 5.5rem;
         width: 50%;
         float: right;
-
         white-space: pre-line;
+        padding-top: 4.8rem;
+        padding-left: 2rem;
       }
     `}</style>
   </div>
@@ -100,7 +118,7 @@ export const Description = ({ children }) => (
 
 Description.displayName = 'WorkDescriptionDescription'
 Description.propTypes = propTypes
-
+Content.Name = Name
 Content.Title = Title
 Content.Image = Image
 Content.Description = Description

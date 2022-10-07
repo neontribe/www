@@ -7,13 +7,7 @@ import Text from '../components/Text'
 import BlueText from '../components/BlueText'
 import Good from '../components/Good'
 import VerticalSpacing from '../components/VerticalSpacing'
-import H from '../components/Heading'
-import Section from '../components/Section'
-import { InternalLink, ExternalLink } from '../components/Link'
-import arc from '../components/pinkArc.png'
 import Container from '../components/Container'
-import StoryCarousel from '../components/StoryCarousel'
-import HomePageWorkSummary from '../components/HomePageWorkSummary'
 import PageMeta from '../components/PageMeta'
 import StyledLink from '../components/Button'
 import Smile from '../components/Smile'
@@ -39,10 +33,10 @@ const IndexPage = () => (
         </BlueText>
         <VerticalSpacing size={3.5} />
 
-        <Container paddingTop="1rem">
-          <Text size="large" color="#48e9ce">
+        <Container paddingTop="1rem" justifyContent="space-between">
+          <Text size="large" color="#48e9ce" weight="600">
             {' '}
-            <h2>We work with you to solve problems through</h2>{' '}
+            <h2>We work with you to solve problems through </h2>{' '}
           </Text>
         </Container>
         <Text size="large" color="#48e9ce">

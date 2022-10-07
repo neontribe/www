@@ -21,28 +21,55 @@ const imageStyles = css.resolve`
   }
 `
 
-const WorkDescription = ({ id, title, client, fluid, problem, solution }) => (
+const WorkDescription = ({
+  id,
+  title,
+  client,
+  fluid,
+  problem,
+  solution,
+  fund,
+  budget,
+  timescale,
+}) => (
   <section id={id}>
     <ProjectConstrainedWidth background="white">
       <Content>
-        <Content.Title>
-          <Section>
-            <Text size="normal">
-              <div className="leaf">
-                <H>{client}</H>
-              </div>
-            </Text>
-
-            <VerticalSpacing size={1} />
-            <div className="title">
-              <Text size="medium" color="black" weight={700}>
-                <H>{title}</H>
-              </Text>
-              <Content.Image>
-                <Img className={imageStyles.className} fluid={fluid} />
-              </Content.Image>
+        <Content.Name>
+          <Text size="normal">
+            <div className="leaf">
+              <H>{client}</H>
             </div>
-          </Section>
+          </Text>
+        </Content.Name>
+        <VerticalSpacing size={20} />
+
+        <Content.Title>
+          <div className="title">
+            <Text size="medium" color="black" weight={700}>
+              <H>{title}</H>
+            </Text>
+          </div>
+          <VerticalSpacing size={5} />
+          <Content.Image>
+            <Img className={imageStyles.className} fluid={fluid} />
+          </Content.Image>
+          <VerticalSpacing size={5} />
+
+          <Text color="#561dee" size="normal" weight="400">
+            {' '}
+            <b>Funded by:</b> {fund}
+          </Text>
+          <VerticalSpacing size={1} />
+          <Text color="#561dee" size="normal">
+            {' '}
+            <b>Project cost:</b> {budget}{' '}
+          </Text>
+          <VerticalSpacing size={1} />
+          <Text color="#561dee" size="normal">
+            {' '}
+            <b>Timescale:</b> {timescale}{' '}
+          </Text>
         </Content.Title>
 
         <Content.Description>
@@ -65,14 +92,16 @@ const WorkDescription = ({ id, title, client, fluid, problem, solution }) => (
 
       .title {
         max-width: 45ch;
+        display: block;
       }
 
       .leaf {
         background-color: #561dee;
-        margin: 0 250px 23px 0;
+        margin-bottom: 1rem;
         padding: 12px 24px 13px 21px;
         float: left;
         font-size: 22px;
+        max-width: 60ch;
 
         border-radius: 0 0 38px 0;
         display: inline-block;

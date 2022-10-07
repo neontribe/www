@@ -16,13 +16,6 @@ const ConstrainedWidth = ({
     <style jsx>{`
       .constrained-container {
         width: 100%;
-        max-width: ${PAGE_WIDTH_REM};
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 0 0 38px 0;
-        padding-bottom:2rem;
-       
-
         ${background ? `background-color: ${background};` : ''}
         ${paddingTop ? `padding-top: ${paddingTop};` : ''}
         ${paddingLeft ? `padding-left: ${paddingLeft};` : ''} 

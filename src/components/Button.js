@@ -1,10 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import classNames from 'classnames'
-
-import css from 'styled-jsx/css'
 import Text from './Text'
-
 import { navigate as NavTrial } from 'gatsby'
 
 const StyledLink = ({
@@ -30,7 +26,7 @@ const StyledLink = ({
         border-radius: 350px;
 
         cursor: pointer;
-        width: 15rem;
+        max-width: 200ch;
         height: 3rem;
         text-align: center;
         border-style: solid;
@@ -40,7 +36,8 @@ const StyledLink = ({
         padding-bottom: 2rem;
         ${margin_left ? `margin-left: ${margin_left};` : ''}
         font-size:1.25rem;
-        font-family: KeepCalm, sans-serif;
+        font-family: KeepCalm;
+        font-weight: bold;
       }
     `}</style>
   </>

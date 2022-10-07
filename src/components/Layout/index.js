@@ -57,7 +57,6 @@ const Layout = ({ children }) => (
       }
 
       body {
-        background-color: black;
         font-family: ${FONT_PRIMARY};
         color: ${c_TEXT_LIGHT};
         margin-top: 0.5rem;

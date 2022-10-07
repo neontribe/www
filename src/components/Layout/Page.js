@@ -15,12 +15,6 @@ const Page = ({ title, children }) => (
     </div>
     <main role="main">{children}</main>
 
-    <VerticalSpacing size={17} />
-
-    <Footer />
-
-    <VerticalSpacing size={8} />
-
     <style jsx>{`
       .page-layout {
         min-height: 100%;
