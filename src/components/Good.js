@@ -29,7 +29,20 @@ const Good = ({
       .hyphenation {
         word-break: break-word;
         overflow-wrap: break-word;
-        hyphens: auto;
+        hyphens: auto;}
+
+        @media (max-width:500px) { 
+          .text {
+            font-size:37px;
+          
+ 
+
+          }
+        }
+
+
+
+
       }
     `}</style>
   </span>

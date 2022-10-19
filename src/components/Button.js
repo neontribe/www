@@ -39,6 +39,13 @@ const StyledLink = ({
         font-family: KeepCalm;
         font-weight: bold;
       }
+
+      @media (max-width: 677px) {
+        button {
+          width: 120%;
+          margin-bottom: 2rem;
+        }
+      }
     `}</style>
   </>
 )

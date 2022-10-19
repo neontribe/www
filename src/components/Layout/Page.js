@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
 import Header from '../Header'
-import Footer from '../Footer'
 
 import VerticalSpacing from '../VerticalSpacing'
 
@@ -29,6 +27,13 @@ const Page = ({ title, children }) => (
 
       main {
         flex: 1 0 auto;
+      }
+
+      @media (max-width: 677px) {
+        .introduction {
+          max-height: 12rem;
+          background-color: black;
+        }
       }
     `}</style>
   </div>

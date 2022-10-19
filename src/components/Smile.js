@@ -49,6 +49,15 @@ const Good = ({
         overflow-wrap: break-word;
         hyphens: auto;
       }
+
+      @media (max-width: 500px) {
+        .text:after {
+          background-size: 90px 45px;
+          top: 3.5rem;
+          max-width: 90px;
+          left: 0.25rem;
+        }
+      }
     `}</style>
   </span>
 )
