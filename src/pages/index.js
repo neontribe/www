@@ -10,12 +10,12 @@ import Container from '../components/Container'
 import PageMeta from '../components/PageMeta'
 import StyledLink from '../components/Button'
 import Smile from '../components/Smile'
-import Top from '../components/Top'
+import HomeTop from '../components/Top'
 
 const IndexPage = () => (
   <Layout>
     <PageMeta title="Welcome" />
-    <Top>
+    <HomeTop>
       <ConstrainedWidth>
         <div>
           <Text size="title" align="left" color="white">
@@ -156,7 +156,7 @@ const IndexPage = () => (
           `}</style>
         </section>
       </ConstrainedWidth>
-    </Top>
+    </HomeTop>
   </Layout>
 )
 

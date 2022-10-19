@@ -1,13 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Top = ({ children }) => (
+const HomeTop = ({ children }) => (
   <div className="top">
     {children}
 
     <style jsx>{`
       .top {
         background-color: black;
+        min-height: 737px;
       }
 
       @media (max-width: 1000px) {
@@ -18,7 +19,7 @@ const Top = ({ children }) => (
     `}</style>
   </div>
 )
-Top.propTypes = {
+HomeTop.propTypes = {
   children: PropTypes.node,
   paddingTop: PropTypes.string,
   align: PropTypes.string,
@@ -27,4 +28,4 @@ Top.propTypes = {
   paddingBottom: PropTypes.string,
 }
 
-export default Top
+export default HomeTop
