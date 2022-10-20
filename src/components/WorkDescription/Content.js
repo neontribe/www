@@ -11,24 +11,21 @@ const findChild = (children, { displayName }) =>
 const cloneWithProps = (node, props) => node && React.cloneElement(node, props)
 
 const propTypes = {
-  imagePosition: PropTypes.oneOf(['left', 'right']),
   children: PropTypes.node,
 }
 
-const Content = ({ imagePosition = 'right', children }) => (
+const Content = ({ children }) => (
   <div className="work-description-content">
     <div className="stacked-content">
+      {cloneWithProps(findChild(children, Client), {
+        key: 'client',
+      })}
+
       {cloneWithProps(findChild(children, Title), {
         key: 'title',
       })}
 
       <VerticalSpacing size={3} />
-
-      {cloneWithProps(findChild(children, Image), {
-        key: 'image-middle',
-        middle: true,
-        imagePosition,
-      })}
 
       {cloneWithProps(findChild(children, Description), {
         key: 'description',
@@ -37,14 +34,12 @@ const Content = ({ imagePosition = 'right', children }) => (
 
     {cloneWithProps(findChild(children, Image), {
       key: 'image-bottom',
-      imagePosition,
     })}
 
     <style jsx>{`
       .work-description-content {
         display: flex;
         justify-content: space-between;
-        ${imagePosition === 'left' ? 'flex-direction: row-reverse;' : ''}
       }
 
       .stacked-content {
@@ -53,9 +48,39 @@ const Content = ({ imagePosition = 'right', children }) => (
     `}</style>
   </div>
 )
+// Client ----------------------------------
+
+export const Client = ({ children }) => (
+  <div>
+    {children}
+
+    <style jsx>{`
+      
+        background-color: rgb(86, 29, 238);
+        margin-bottom: 1rem;
+        padding: 12px 24px 13px 21px;
+        float: left;
+        max-width: 60ch;
+        border-radius: 0px 0px 38px;
+        display: inline-block;
+      }
+      
+    `}</style>
+  </div>
+)
+
+Client.displayName = 'WorkDescriptionClient'
+Client.propTypes = propTypes
 
 // Title -------------------------------------
-export const Title = ({ children }) => <div>{children}</div>
+export const Title = ({ children }) => (
+  <div className="project-title">
+    {children}
+    <style jsx>{`
+      color: black;
+    `}</style>
+  </div>
+)
 
 Title.displayName = 'WorkDescriptionTitle'
 Title.propTypes = propTypes
@@ -102,5 +127,6 @@ Description.propTypes = propTypes
 Content.Title = Title
 Content.Image = Image
 Content.Description = Description
+Content.Client = Client
 
 export default Content

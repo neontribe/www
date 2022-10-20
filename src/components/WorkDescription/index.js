@@ -34,19 +34,11 @@ const WorkDescription = ({
   <section id={id}>
     <ProjectContainer>
       <Content imagePosition={imagePosition}>
-        <Content.Title>
-          <Section>
-            <Text size="normal">
-              <H>{client}</H>
-            </Text>
-          </Section>
+        <div className="hello">
+          <Content.Client>{client}</Content.Client>
 
-          <VerticalSpacing size={1} />
-
-          <Text size="medium" weight={700}>
-            <H>{title}</H>
-          </Text>
-        </Content.Title>
+          <Content.Title>{title}</Content.Title>
+        </div>
 
         <Content.Image>
           <div className="image">
@@ -70,6 +62,9 @@ const WorkDescription = ({
       .image {
         height: 100%;
         max-height: 600px;
+      }
+
+      .heading {
       }
     `}</style>
   </section>
