@@ -1,8 +1,7 @@
 import React from 'react'
 import slugify from 'slugify'
-import Malarquee from 'react-malarquee'
+
 import { StaticQuery, graphql } from 'gatsby'
-import classNames from 'classnames'
 
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
@@ -14,18 +13,6 @@ import WorkDescription from '../components/WorkDescription'
 import { ExternalLink } from '../components/Link'
 import PageMeta from '../components/PageMeta'
 import Divider from '../components/Divider'
-
-import castLogo from '../data/funders/cast-logo.png'
-import comicReliefLogo from '../data/funders/comic-relief-logo.png'
-import mhfLogo from '../data/funders/mhf-logo.png'
-import phfLogo from '../data/funders/PHF-logo.jpg'
-
-const collaborationsMap = [
-  { id: 'cast', src: castLogo, alt: 'Cast' },
-  { id: 'comic-relief', src: comicReliefLogo, alt: 'Comic Relief' },
-  { id: 'mhf', src: mhfLogo, alt: 'Mental Health Foundation' },
-  { id: 'phf', src: phfLogo, alt: 'Paul Hamlyn Foundation' },
-]
 
 const WhatWeAreDoingPage = () => (
   <Layout>
@@ -53,21 +40,6 @@ const WhatWeAreDoingPage = () => (
     </ConstrainedWidth>
 
     <VerticalSpacing size={10} />
-
-    <div className="carousel">
-      <Malarquee fill hoverToPause rate={25}>
-        <div className="logos">
-          {collaborationsMap.map(({ id, ...item }) => (
-            <img
-              key={id}
-              className={classNames('logo', id)}
-              {...item}
-              alt={item.alt || ''}
-            />
-          ))}
-        </div>
-      </Malarquee>
-    </div>
 
     <VerticalSpacing size={10} />
 

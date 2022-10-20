@@ -6,6 +6,7 @@ import css from 'styled-jsx/css'
 
 import { breakpoint } from '../../theme'
 import ConstrainedWidth from '../Layout/ConstrainedWidth'
+import ProjectContainer from '../Layout/ProjectContainer'
 import H from '../Heading'
 import Section from '../Section'
 import Text from '../Text'
@@ -31,7 +32,7 @@ const WorkDescription = ({
   imagePosition,
 }) => (
   <section id={id}>
-    <ConstrainedWidth>
+    <ProjectContainer>
       <Content imagePosition={imagePosition}>
         <Content.Title>
           <Section>
@@ -61,7 +62,7 @@ const WorkDescription = ({
           </Section>
         </Content.Description>
       </Content>
-    </ConstrainedWidth>
+    </ProjectContainer>
 
     {imageStyles.styles}
 
