@@ -1,17 +1,13 @@
 import React from 'react'
-import slugify from 'slugify'
-import Malarquee from 'react-malarquee'
-import { StaticQuery, graphql } from 'gatsby'
-import classNames from 'classnames'
+
 import ContactFooter from '../components/Layout/ContactFooter'
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
-import H from '../components/Heading'
-import Section from '../components/Section'
+
 import Text from '../components/Text'
 import BlueText from '../components/BlueText'
 import VerticalSpacing from '../components/VerticalSpacing'
-import WorkDescription from '../components/WorkDescription'
+
 import { ExternalLink } from '../components/Link'
 import PageMeta from '../components/PageMeta'
 import logo from '../components/logo.svg'
@@ -19,20 +15,9 @@ import Container from '../components/Container'
 import ImageContainer from '../components/imageContainer'
 import Top from '../components/Top'
 import Twitter from '../components/twitter.svg'
-import circles from '../components/circle-progression.png'
 
-import castLogo from '../data/funders/cast-logo.png'
-import comicReliefLogo from '../data/funders/comic-relief-logo.png'
-import mhfLogo from '../data/funders/mhf-logo.png'
-import phfLogo from '../data/funders/PHF-logo.jpg'
 import StyledLink from '../components/Button'
 import Arcs from '../components/join.svg'
-const collaborationsMap = [
-  { id: 'cast', src: castLogo, alt: 'Cast' },
-  { id: 'comic-relief', src: comicReliefLogo, alt: 'Comic Relief' },
-  { id: 'mhf', src: mhfLogo, alt: 'Mental Health Foundation' },
-  { id: 'phf', src: phfLogo, alt: 'Paul Hamlyn Foundation' },
-]
 
 const WhatWeAreDoingPage = () => (
   <Layout>
@@ -160,13 +145,9 @@ const WhatWeAreDoingPage = () => (
     </ContactFooter>
 
     <style jsx>{`
-      
-
       .logo {
         height: 1.5rem;
-       
-      }
-
+        width: 100%;
       }
     `}</style>
   </Layout>

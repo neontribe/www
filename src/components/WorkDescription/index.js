@@ -54,6 +54,7 @@ const WorkDescription = ({
           <Content.Image>
             <Img className={imageStyles.className} fluid={fluid} />
           </Content.Image>
+
           <VerticalSpacing size={5} />
 
           <Text color="#561dee" size="normal" weight="400">

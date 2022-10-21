@@ -5,22 +5,19 @@ import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import H from '../components/Heading'
 import ContactFooter from '../components/Layout/ContactFooter'
 import Text from '../components/Text'
-import {
-  TheTribeTopParagraph,
-  TheTribeBottomParagraph,
-} from '../components/TheTribeParagraphs'
+import { TheTribeBottomParagraph } from '../components/TheTribeParagraphs'
 import TriberGrid from '../components/TriberGrid'
 import VerticalSpacing from '../components/VerticalSpacing'
-import { ExternalLink } from '../components/Link'
+
 import PageMeta from '../components/PageMeta'
-import Divider from '../components/Divider'
+
 import BlueText from '../components/BlueText'
 import Container from '../components/Container'
 import ImageContainer from '../components/imageContainer'
 import Top from '../components/Top'
 import StyledLink from '../components/Button'
 import TribeArc from '../components/tribeArcs.png'
-import { Image } from '../components/WorkDescription/Content'
+
 import logo from '../components/logo.svg'
 
 const TheTribePage = () => (
@@ -121,6 +118,12 @@ const TheTribePage = () => (
         </Container>
       </ConstrainedWidth>
     </ContactFooter>
+    <style jsx>{`
+      .logo {
+        height: 1.5rem;
+        width: 100%;
+      }
+    `}</style>
   </Layout>
 )
 

@@ -1,8 +1,7 @@
 import React from 'react'
 import slugify from 'slugify'
-import Malarquee from 'react-malarquee'
+
 import { StaticQuery, graphql } from 'gatsby'
-import classNames from 'classnames'
 import ContactFooter from '../components/Layout/ContactFooter'
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
@@ -20,18 +19,9 @@ import ImageContainer from '../components/imageContainer'
 import Top from '../components/Top'
 import circles from '../components/circle-progression.png'
 import logo from '../components/logo.svg'
-import castLogo from '../data/funders/cast-logo.png'
-import comicReliefLogo from '../data/funders/comic-relief-logo.png'
-import mhfLogo from '../data/funders/mhf-logo.png'
-import phfLogo from '../data/funders/PHF-logo.jpg'
+
 import StyledLink from '../components/Button'
-import Arcs from '../components/join.svg'
-const collaborationsMap = [
-  { id: 'cast', src: castLogo, alt: 'Cast' },
-  { id: 'comic-relief', src: comicReliefLogo, alt: 'Comic Relief' },
-  { id: 'mhf', src: mhfLogo, alt: 'Mental Health Foundation' },
-  { id: 'phf', src: phfLogo, alt: 'Paul Hamlyn Foundation' },
-]
+import Arcs from '../../public/neontribe mark.svg'
 
 const WhatWeAreDoingPage = () => (
   <Layout>
@@ -183,26 +173,9 @@ const WhatWeAreDoingPage = () => (
     </ContactFooter>
 
     <style jsx>{`
-      .carousel {
-        margin: 0 -2rem;
-      }
-
-      .logos {
-        display: flex;
-        align-items: center;
-      }
-
       .logo {
-        height: 4rem;
-        margin: 0 2rem;
-      }
-
-      .logo.comic-relief {
-        height: 8rem;
-      }
-
-      .logo.phf {
-        height: 5rem;
+        height: 1.5rem;
+        width: 100%;
       }
     `}</style>
   </Layout>
