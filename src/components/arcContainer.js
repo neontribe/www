@@ -19,30 +19,20 @@ const arcContainer = ({
         ${paddingLeft ? `padding-left: ${paddingLeft};` : ''}
         ${align ? `align-items: ${align};` : ''}
         ${paddingTop ? `padding-top: ${paddingTop};` : ''}
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
       }
 
-      @media (max-width:600px) {
+      @media (max-width: 860px) {
         .container {
-       
-          display:flex;
-          flex-direction:column;
-          justify-content:center;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          padding-top: 2rem;
+          padding-bottom: 1rem;
         }
-
-      
-      @media (max-width:500px) {
-        .container {
-          padding:0;
-          display:flex;
-          flex-direction:row;
-          justify-content:center;
-        }
-
       }
-
-
-
-
     `}</style>
   </div>
 )

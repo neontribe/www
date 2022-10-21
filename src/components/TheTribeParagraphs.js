@@ -12,19 +12,31 @@ export const TheTribeTopParagraph = () => (
 
 // TODO: drive this content from markdown
 export const TheTribeBottomParagraph = () => (
-  <div>
-    <Text maxCharacter="65ch" lineHeight={2}>
+  <div classname="hiring-text">
+    <Text lineHeight={2}>
       We’re always happy to hear from people who like the sound of Neontribe,
       and want to grow their skills as a developer, or in user research or
       product management.
     </Text>
     <VerticalSpacing size={2} />
-    <Text maxCharacter="65ch" lineHeight={2}>
+    <Text lineHeight={2}>
       Maybe you’re already experienced, or maybe you're just getting started. If
       you have an eagerness to learn more and want to be part of a great
       company, contact us with a short description of the skills you have and
       the skills you want to gain and we’ll let you know if we think there’s a
       place for us to start talking. That's it.
     </Text>
+
+    <style jsx>{`
+      .hiring-text {
+        max-width: 65ch;
+      }
+
+      @media (max-width: 860px) {
+        .hiring-text {
+          max-width: 90ch;
+        }
+      }
+    `}</style>
   </div>
 )

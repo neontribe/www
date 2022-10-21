@@ -1,5 +1,5 @@
 import React from 'react'
-import Arcs from '../arcs.png'
+import Arcs from '../../public/neontribe mark.svg'
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import H from '../components/Heading'
@@ -13,7 +13,10 @@ import PageMeta from '../components/PageMeta'
 
 import BlueText from '../components/BlueText'
 import Container from '../components/Container'
+import HireContainer from '../components/Hire-container'
+import About from '../components/About-you'
 import ImageContainer from '../components/imageContainer'
+import ArcContainer from '../components/arcContainer'
 import Top from '../components/Top'
 import StyledLink from '../components/Button'
 import TribeArc from '../components/tribeArcs.png'
@@ -81,13 +84,17 @@ const TheTribePage = () => (
         </Text>
 
         <VerticalSpacing size={2} />
-        <Container justify-content="space-between">
+        <About justifyContent="space-between">
           <TheTribeBottomParagraph />
-          <ImageContainer paddingTop="1rem"></ImageContainer>
-        </Container>
+          <ArcContainer>
+            {' '}
+            <img paddingTop="1rem" src={Arcs} />{' '}
+          </ArcContainer>
+        </About>
 
         <VerticalSpacing size={5} />
-        <Container justifyContent="start">
+
+        <HireContainer justifyContent="start">
           <StyledLink
             connect="https://docs.google.com/forms/d/e/1FAIpQLScThzeOla4FG2tEGfUVthAb8ZyTIzSGb0nB_tcqSlYSbrIjZA/viewform?usp=sf_link"
             background="#5600ee"
@@ -105,7 +112,7 @@ const TheTribePage = () => (
           >
             Or email: hello@neontribe.co.uk
           </Text>
-        </Container>
+        </HireContainer>
       </ConstrainedWidth>
     </Top>
     <ContactFooter background="#561dee">

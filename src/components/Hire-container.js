@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const About = ({
+const HireContainer = ({
   children,
   paddingRight,
   paddingLeft,
@@ -24,19 +24,16 @@ const About = ({
         display: flex;
       }
 
-      @media (max-width:860px) {
-        .container {
-          display:block;
-        
-          justify-content:center;
-          padding-right:1rem;
-        }
-
+      @media (max-width: 860px) {
+        display: flex;
+        flex-direction: column;
+        max-width: 80%;
+      }
     `}</style>
   </div>
 )
 
-About.propTypes = {
+HireContainer.propTypes = {
   children: PropTypes.node,
   paddingTop: PropTypes.string,
   justifyContent: PropTypes.string,
@@ -46,4 +43,4 @@ About.propTypes = {
   paddingBottom: PropTypes.string,
 }
 
-export default About
+export default HireContainer
