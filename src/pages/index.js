@@ -107,6 +107,7 @@ const IndexPage = () => (
             connect="/what-we-are-doing"
             background="#5600ee"
             border_color="#5600ee"
+            buttonWidth="120%"
           >
             See our work
           </StyledLink>
@@ -115,6 +116,7 @@ const IndexPage = () => (
             connect="/the-tribe"
             background="black"
             border_color="#48e9ce"
+            buttonWidth="120%"
           >
             Meet the tribe
           </StyledLink>

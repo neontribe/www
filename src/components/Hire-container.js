@@ -27,7 +27,7 @@ const HireContainer = ({
       @media (max-width: 860px) {
         display: flex;
         flex-direction: column;
-        max-width: 80%;
+        width: 100%;
       }
     `}</style>
   </div>

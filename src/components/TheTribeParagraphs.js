@@ -12,7 +12,7 @@ export const TheTribeTopParagraph = () => (
 
 // TODO: drive this content from markdown
 export const TheTribeBottomParagraph = () => (
-  <div classname="hiring-text">
+  <div className="hiring-text">
     <Text lineHeight={2}>
       We’re always happy to hear from people who like the sound of Neontribe,
       and want to grow their skills as a developer, or in user research or

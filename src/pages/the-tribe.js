@@ -19,7 +19,7 @@ import ImageContainer from '../components/imageContainer'
 import ArcContainer from '../components/arcContainer'
 import Top from '../components/Top'
 import StyledLink from '../components/Button'
-import TribeArc from '../components/tribeArcs.png'
+import TribeArc from '../components/semi-circle.svg'
 
 import logo from '../components/logo.svg'
 
@@ -32,41 +32,51 @@ const TheTribePage = () => (
 
     <Top>
       <ConstrainedWidth>
-        <Container justifyContent="space-between">
-          <div>
+        <HireContainer justifyContent="space-between">
+          <div className="tribe-info">
             <BlueText size="larger" color="#48e9ce">
               <h1>Working at Neontribe</h1>
             </BlueText>
             <VerticalSpacing size={3} />
-            <Text maxCharacter="60ch" size="normal" lineHeight={2}>
+
+            <Text size="normal" lineHeight={2}>
               Neontribe are a mixture of software developers, researchers,
               content and ux designers and security specialists.{' '}
             </Text>
             <VerticalSpacing size={2.5} />
-            <Text maxCharacter="60ch" size="normal" lineHeight={2}>
+            <Text size="normal" lineHeight={2}>
               We encourage unusual routes into digital careers (no degree
               required) and provide flexible support to parents and people
               developing side projects.{' '}
             </Text>
             <VerticalSpacing size={2.5} />
-            <Text maxCharacter="60ch" size="normal" lineHeight={2}>
+            <Text size="normal" lineHeight={2}>
               Find out more from the tribe members’ profiles.
             </Text>
           </div>
-          <ImageContainer paddingBottom="5rem" paddingRight="4rem">
+
+          <ImageContainer
+            paddingBottom="5rem"
+            paddingRight="9.5%"
+            marginTop="1rem"
+            windowJustifyContent="center"
+            mobilePaddingBottom="0"
+            mobilePaddingRight="0"
+          >
             <img src={TribeArc} height={166} width={118} />{' '}
           </ImageContainer>
-        </Container>
+        </HireContainer>
 
         <VerticalSpacing size={5} />
-
-        <StyledLink
-          connect="/what-we-are-doing"
-          background="#5600ee"
-          border_color="#5600ee"
-        >
-          Join the tribe
-        </StyledLink>
+        <div className="test">
+          <StyledLink
+            connect="/what-we-are-doing"
+            background="#5600ee"
+            border_color="#5600ee"
+          >
+            Join the tribe
+          </StyledLink>
+        </div>
       </ConstrainedWidth>
     </Top>
 
@@ -129,6 +139,22 @@ const TheTribePage = () => (
       .logo {
         height: 1.5rem;
         width: 100%;
+      }
+
+      .tribe-info {
+        max-width: 70ch;
+      }
+
+      @media (max-width: 860px) {
+        .tribe-info {
+          max-width: 120ch;
+        }
+
+        .test {
+          max-width: 100%;
+          display: flex;
+          flex-direction: column;
+        }
       }
     `}</style>
   </Layout>

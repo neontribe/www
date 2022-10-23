@@ -9,6 +9,7 @@ const StyledLink = ({
   connect,
   background,
   margin_left,
+  buttonWidth,
 }) => (
   <>
     <button
@@ -42,7 +43,7 @@ const StyledLink = ({
 
       @media (max-width: 677px) {
         button {
-          width: 120%;
+          ${buttonWidth ? `width: ${buttonWidth};` : ''}
           margin-bottom: 2rem;
         }
       }
@@ -55,6 +56,7 @@ Text.propTypes = {
   border_color: PropTypes.string,
   background: PropTypes.string,
   margin_left: PropTypes.string,
+  buttonWidth: PropTypes.string,
 }
 
 export default StyledLink
