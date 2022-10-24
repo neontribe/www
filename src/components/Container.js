@@ -9,6 +9,8 @@ const Container = ({
   paddingBottom,
   align,
   justifyContent,
+  mobileFlexDirection,
+  flexDirection,
 }) => (
   <div className="container">
     {children}
@@ -22,6 +24,17 @@ const Container = ({
         ${justifyContent ? `justify-content: ${justifyContent};` : ''}
         ${paddingTop ? `padding-top: ${paddingTop};` : ''}
         display: flex;
+        ${flexDirection ? `flex-direction: ${flexDirection};` : ''}
+      }
+      }
+
+
+      @media (max-width: 680px) {
+        .container {
+          ${
+            mobileFlexDirection ? `flex-direction: ${mobileFlexDirection};` : ''
+          }
+        }
       }
     `}</style>
   </div>
@@ -35,6 +48,7 @@ Container.propTypes = {
   paddingRight: PropTypes.string,
   paddingLeft: PropTypes.string,
   paddingBottom: PropTypes.string,
+  mobileFlexDirection: PropTypes.string,
 }
 
 export default Container

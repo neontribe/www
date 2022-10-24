@@ -19,7 +19,7 @@ import Twitter from '../components/twitter.svg'
 import StyledLink from '../components/Button'
 import Arcs from '../components/join.svg'
 
-const WhatWeAreDoingPage = () => (
+const ContactUs = () => (
   <Layout>
     <PageMeta title="Contact us" description="Enter in suitable description" />
     <Top>
@@ -29,24 +29,34 @@ const WhatWeAreDoingPage = () => (
         </BlueText>
         <VerticalSpacing size={4} />
 
-        <Container justifyContent="space-between">
-          <Text size="normal" maxCharacter="45ch">
-            Drop us an email. We’d love to have a conversation about how we
-            could work with you.
+        <div className="contact-header">
+          <Text size="normal">
+            <div className="subtitle">
+              Drop us an email. We’d love to have a conversation about how we
+              could work with you.
+            </div>
             <VerticalSpacing size={5} />
-            <StyledLink
-              connect="mailto:hello@neontribe.co.uk"
-              background="#5600ee"
-              border_color="#5600ee"
-            >
-              Email: hello@neontribe.co.uk
-            </StyledLink>
+
+            <div className="button">
+              <StyledLink
+                connect="mailto:hello@neontribe.co.uk"
+                background="#5600ee"
+                border_color="#5600ee"
+                mobileSize="0.9rem"
+              >
+                Email: hello@neontribe.co.uk
+              </StyledLink>
+            </div>
           </Text>
 
-          <ImageContainer paddingRight="3.5rem">
+          <ImageContainer
+            paddingRight="6rem"
+            windowJustifyContent="center"
+            mobilePaddingRight="0"
+          >
             <img src={Arcs} height={136} width={191} />
           </ImageContainer>
-        </Container>
+        </div>
       </ConstrainedWidth>
     </Top>
     <VerticalSpacing size={10} />
@@ -56,7 +66,7 @@ const WhatWeAreDoingPage = () => (
     <VerticalSpacing size={4} />
 
     <ConstrainedWidth>
-      <Container>
+      <div className="contact-container">
         <div>
           <Text size="normal" color="black" maxCharacter="49ch">
             Follow us on Twitter
@@ -67,20 +77,26 @@ const WhatWeAreDoingPage = () => (
             sector.
           </Text>
         </div>
-        <ImageContainer paddingLeft="10rem" paddingTop="1rem">
-          <img src={Twitter} height={42} width={42}></img>
-        </ImageContainer>
+        <div className="twitter-container">
+          <ImageContainer
+            paddingLeft="10rem"
+            mobilePaddingLeft="0"
+            paddingTop="1rem"
+          >
+            <img src={Twitter} height={42} width={42}></img>
+          </ImageContainer>
 
-        <Text
-          paddingLeft="1rem"
-          paddingTop="1.4rem"
-          color="#561dee"
-          size="normal"
-          align="center"
-        >
-          <h4>@neontribe</h4>
-        </Text>
-      </Container>
+          <Text
+            paddingLeft="1rem"
+            paddingTop="1.4rem"
+            color="#561dee"
+            size="normal"
+            align="center"
+          >
+            <h4>@neontribe</h4>
+          </Text>
+        </div>
+      </div>
 
       <Text size="medium">
         <ExternalLink href="mailto:hello@neontribe.co.uk">
@@ -90,7 +106,7 @@ const WhatWeAreDoingPage = () => (
     </ConstrainedWidth>
     <ContactFooter>
       <ConstrainedWidth paddingTop="3em">
-        <Container>
+        <Container mobileFlexDirection="column">
           <div>
             <Text color="black" size="normal" maxCharacter="53ch">
               We work from home as well as in the office. Please check before
@@ -113,15 +129,15 @@ const WhatWeAreDoingPage = () => (
             </Container>
           </div>
 
-          <Text paddingLeft="10rem">
-            <Text color="black" size="normal" maxCharacter="20ch">
+          <div className="answerphone-text">
+            <Text color="black" size="normal">
               Leave a message on our answerphone if you’d like us to call you
             </Text>
 
             <VerticalSpacing size={2}></VerticalSpacing>
 
             <Text color="#561dee">0845 689 0896</Text>
-          </Text>
+          </div>
         </Container>
 
         <VerticalSpacing size={9}></VerticalSpacing>
@@ -149,8 +165,64 @@ const WhatWeAreDoingPage = () => (
         height: 1.5rem;
         width: 100%;
       }
+
+      .contact-header {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .subtitle {
+        max-width: 45ch;
+      }
+
+      .button {
+        display: flex;
+      }
+
+      .contact-container {
+        display: flex;
+        padding-right: 2rem;
+      }
+
+      .twitter-container {
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 1rem;
+      }
+
+      .answerphone-text {
+        padding-left: 10rem;
+        max-width: 40ch;
+      }
+
+      @media (max-width: 680px) {
+        .contact-container {
+          display: block;
+        }
+
+        .answerphone-text {
+          padding-left: 0;
+          max-width: 53ch;
+          padding-top: 2rem;
+        }
+      }
+
+      @media (max-width: 820px) {
+        .contact-header {
+          flex-direction: column;
+        }
+
+        .subtitle {
+          max-width: 100%;
+        }
+
+        .button {
+          flex-direction: column;
+          max-width: 100%;
+        }
+      }
     `}</style>
   </Layout>
 )
 
-export default WhatWeAreDoingPage
+export default ContactUs

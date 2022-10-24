@@ -128,10 +128,6 @@ const IndexPage = () => (
             flex-direction: row;
 
             @media (max-width: 1000px) {
-              background-color: red;
-            }
-
-            @media (max-width: 1000px) {
               display: flex;
               justify-content: space-between;
               max-width: 60%;

@@ -10,6 +10,7 @@ const StyledLink = ({
   background,
   margin_left,
   buttonWidth,
+  mobileSize,
 }) => (
   <>
     <button
@@ -28,13 +29,13 @@ const StyledLink = ({
 
         cursor: pointer;
         max-width: 200ch;
-        height: 3rem;
+        max-height: 100%;
         text-align: center;
         border-style: solid;
         color: white;
         ${border_color ? `border-color: ${border_color};` : ''}
         font-weight:700;
-        padding-bottom: 2rem;
+
         ${margin_left ? `margin-left: ${margin_left};` : ''}
         font-size:1.25rem;
         font-family: KeepCalm;
@@ -45,6 +46,7 @@ const StyledLink = ({
         button {
           ${buttonWidth ? `width: ${buttonWidth};` : ''}
           margin-bottom: 2rem;
+          ${mobileSize ? `font-size: ${mobileSize};` : ''}
         }
       }
     `}</style>
@@ -57,6 +59,7 @@ Text.propTypes = {
   background: PropTypes.string,
   margin_left: PropTypes.string,
   buttonWidth: PropTypes.string,
+  mobileSize: PropTypes.string,
 }
 
 export default StyledLink

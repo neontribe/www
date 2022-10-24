@@ -1,5 +1,5 @@
 import React from 'react'
-import Arcs from '../../public/neontribe mark.svg'
+import Arcs from '../../public/neontribe-mark.svg'
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import H from '../components/Heading'

@@ -21,7 +21,7 @@ import circles from '../components/circle-progression.png'
 import logo from '../components/logo.svg'
 
 import StyledLink from '../components/Button'
-import Arcs from '../../public/neontribe mark.svg'
+import Arcs from '../../public/neontribe-mark.svg'
 
 const WhatWeAreDoingPage = () => (
   <Layout>

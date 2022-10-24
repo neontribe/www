@@ -12,6 +12,7 @@ const imageContainer = ({
   align,
   windowJustifyContent,
   mobilePaddingRight,
+  mobilePaddingLeft,
 }) => (
   <div className="container">
     {children}
@@ -39,8 +40,15 @@ const imageContainer = ({
             mobilePaddingBottom ? `padding-bottom: ${mobilePaddingBottom};` : ''
           }
           ${mobilePaddingRight ? `padding-right: ${mobilePaddingRight};` : ''}
+          
 
         }
+
+        @media (max-width: 680px) {
+          .container {
+            ${mobilePaddingLeft ? `padding-left: ${mobilePaddingLeft};` : ''}
+
+          }}
 
 
 
@@ -59,6 +67,7 @@ imageContainer.propTypes = {
   paddingBottom: PropTypes.string,
   windowJustifyContent: PropTypes.string,
   mobilePaddingRight: PropTypes.string,
+  mobilePaddingLeft: PropTypes.string,
 }
 
 export default imageContainer
