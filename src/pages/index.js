@@ -10,7 +10,7 @@ import Container from '../components/Container'
 import PageMeta from '../components/PageMeta'
 import StyledLink from '../components/Button'
 import Smile from '../components/Smile'
-import HomeTop from '../components/Top'
+import HomeTop from '../components/HomeTop'
 
 const IndexPage = () => (
   <Layout>

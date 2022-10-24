@@ -14,6 +14,9 @@ const HomeTop = ({ children }) => (
       @media (max-width: 1000px) {
         .top {
           padding-left: 2rem;
+          margin-right: auto;
+          margin-left: auto;
+          padding-right: 2rem;
         }
       }
     `}</style>

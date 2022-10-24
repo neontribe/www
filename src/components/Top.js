@@ -8,14 +8,11 @@ const Top = ({ children }) => (
     <style jsx>{`
       .top {
         background-color: black;
-        height: 46rem;
       }
 
       @media (max-width: 1000px) {
         .top {
           padding-left: 2rem;
-          margin-right: auto;
-          margin-left: auto;
           padding-right: 2rem;
         }
       }
