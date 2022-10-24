@@ -182,29 +182,14 @@ const Header = () => {
           display: none;
         }
 
-        @media (${breakpoint('lg')}) {
+        @media (min-width: 300px) {
           .header {
-            align-items: flex-end;
-            justify-content: space-between;
-          }
-        }
-
-        @media (min-width: 500px) {
-          .header {
-            padding-left: 2rem;
-            padding-right: 2rem;
             align-items: flex-end;
             justify-content: space-between;
           }
         }
 
         @media (max-width: 500px) {
-          .header {
-            justify-content: space-between;
-            padding-right: 2rem;
-            padding-left: 2rem;
-          }
-
           .hamburger {
             display: contents;
           }

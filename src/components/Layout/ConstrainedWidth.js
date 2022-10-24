@@ -28,9 +28,10 @@ const ConstrainedWidth = ({
         ${paddingRight ? `padding-right: ${paddingRight};` : ''}
       }
 
-      @media (max-width: 1100px) {
+      @media (max-width: 1120px) {
         .constrained-container {
-          padding-left: 1rem;
+          padding-left: 2rem;
+          padding-right: 2rem;
         }
       }
     `}</style>

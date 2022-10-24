@@ -31,7 +31,6 @@ const Page = ({ title, children }) => (
 
       @media (max-width: 677px) {
         .introduction {
-          max-height: 12rem;
           background-color: black;
         }
       }

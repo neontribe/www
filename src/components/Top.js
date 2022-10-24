@@ -9,13 +9,6 @@ const Top = ({ children }) => (
       .top {
         background-color: black;
       }
-
-      @media (max-width: 1000px) {
-        .top {
-          padding-left: 2rem;
-          padding-right: 2rem;
-        }
-      }
     `}</style>
   </div>
 )

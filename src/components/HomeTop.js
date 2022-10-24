@@ -10,15 +10,6 @@ const HomeTop = ({ children }) => (
         background-color: black;
         min-height: 737px;
       }
-
-      @media (max-width: 1000px) {
-        .top {
-          padding-left: 2rem;
-          margin-right: auto;
-          margin-left: auto;
-          padding-right: 2rem;
-        }
-      }
     `}</style>
   </div>
 )
