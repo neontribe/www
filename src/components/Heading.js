@@ -37,6 +37,12 @@ const H = ({ withArcs, ...props }) => {
           width: 2rem;
           margin-right: 1.5rem;
         }
+
+        @media (max-width: 860px) {
+          .heading {
+            line-height: 1.2;
+          }
+        }
       `}</style>
     </>
   )

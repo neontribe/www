@@ -52,6 +52,12 @@ const Content = ({ children }) => (
       .stacked-content {
         flex: 1;
       }
+
+      @media (max-width: 860px) {
+        .work-description-content {
+          flex-direction: column;
+        }
+      }
     `}</style>
   </div>
 )
@@ -64,11 +70,7 @@ Name.propTypes = propTypes
 export const Title = ({ children }) => (
   <div className="hi">
     {children}
-    <style jsx>{`
-      .hi {
-        width: 45ch;
-      }
-    `}</style>
+    <style jsx>{``}</style>
   </div>
 )
 
@@ -111,6 +113,14 @@ export const Description = ({ children }) => (
         white-space: pre-line;
         padding-top: 4.8rem;
         padding-left: 2rem;
+      }
+
+      @media (max-width: 860px) {
+        .description {
+          padding-left: 0;
+          width: 100%;
+          padding-top: 2rem;
+        }
       }
     `}</style>
   </div>

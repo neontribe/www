@@ -11,6 +11,7 @@ const Container = ({
   justifyContent,
   mobileFlexDirection,
   flexDirection,
+  projectFlex,
 }) => (
   <div className="container">
     {children}
@@ -36,6 +37,13 @@ const Container = ({
           }
         }
       }
+
+
+      @media (max-width: 680px) {
+        .container {
+          ${projectFlex ? `flex-direction: ${projectFlex};` : ''}
+        }
+      }
     `}</style>
   </div>
 )
@@ -49,6 +57,7 @@ Container.propTypes = {
   paddingLeft: PropTypes.string,
   paddingBottom: PropTypes.string,
   mobileFlexDirection: PropTypes.string,
+  projectFlex: PropTypes.string,
 }
 
 export default Container

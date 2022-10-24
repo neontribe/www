@@ -107,6 +107,12 @@ const WorkDescription = ({
         border-radius: 0 0 38px 0;
         display: inline-block;
       }
+
+      @media (max-width: 860px) {
+        .title {
+          max-width: 100%;
+        }
+      }
     `}</style>
   </section>
 )

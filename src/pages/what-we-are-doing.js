@@ -35,32 +35,28 @@ const WhatWeAreDoingPage = () => (
           <h1>Explore our projects</h1>
         </BlueText>
 
-        <Container align="center" justifyContent="space-between">
+        <Container
+          align="center"
+          justifyContent="space-between"
+          projectFlex="column"
+        >
           <Text size="normal">
-            <p>
+            <p className="sub-heading">
               Neontribe help people provide better digital services. We work
-              with you to{' '}
+              with you to understand your users' needs and we produce digital
+              tools including code,content and design
             </p>
-            <p>
-              understand your users' needs and we produce digital tools
-              including code
-            </p>
-            <p> content and design </p>
           </Text>
 
-          <Container
-            paddingBottom="0.5rem"
-            paddingRight="2rem"
-            justify-content="space-between"
-          >
+          <div className="heading-arc">
             <img src={circles} height={128} width={277} />{' '}
-          </Container>
+          </div>
         </Container>
 
-        <VerticalSpacing size={6} />
-        <Text>
+        <VerticalSpacing size={3} />
+        <div>
           <p>Browse our favourite projects to find out more</p>
-        </Text>
+        </div>
       </ConstrainedWidth>
     </Top>
     <VerticalSpacing size={10} />
@@ -133,7 +129,7 @@ const WhatWeAreDoingPage = () => (
         <H>Get in touch</H>
       </Text>
       <VerticalSpacing size={3} />
-      <Container>
+      <Container projectFlex="column">
         <div>
           <Text size="normal" color="black" maxCharacter="49ch">
             Filler copy- why/ when they should get in touch/ when to expect a
@@ -151,9 +147,9 @@ const WhatWeAreDoingPage = () => (
             Email: hello@neontribe.co.uk
           </StyledLink>
         </div>
-        <ImageContainer paddingLeft="10rem" paddingBottom="4rem">
+        <div className="footer-arc">
           <img src={Arcs} height={136} width={191} />
-        </ImageContainer>
+        </div>
       </Container>
       <Text size="medium">
         <ExternalLink href="mailto:hello@neontribe.co.uk">
@@ -176,6 +172,39 @@ const WhatWeAreDoingPage = () => (
       .logo {
         height: 1.5rem;
         width: 100%;
+      }
+
+      .sub-heading {
+        line-height: 2;
+        max-width: 56ch;
+      }
+
+      .heading-arc {
+        padding-bottom: 0.5rem;
+        padding-right: 2rem;
+        justify-content: space-between;
+      }
+
+      .footer-arc {
+        padding-left: 10rem;
+        padding-bottom: 4rem;
+      }
+
+      @media (max-width: 860px) {
+        .heading-arc {
+          padding-right: 0;
+          padding-top: 2rem;
+        }
+
+        .sub-heading {
+          padding-top: 1rem;
+        }
+
+        .footer-arc {
+          padding: 0;
+          display: flex;
+          justify-content: center;
+        }
       }
     `}</style>
   </Layout>
