@@ -42,7 +42,7 @@ const StyledLink = ({
         font-weight: bold;
       }
 
-      @media (max-width: 677px) {
+      @media (max-width: 860px) {
         button {
           ${buttonWidth ? `width: ${buttonWidth};` : ''}
           margin-bottom: 2rem;

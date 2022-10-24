@@ -8,6 +8,7 @@ const Top = ({ children }) => (
     <style jsx>{`
       .top {
         background-color: black;
+        height: 46rem;
       }
 
       @media (max-width: 1000px) {

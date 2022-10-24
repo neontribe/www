@@ -46,15 +46,11 @@ const IndexPage = () => (
               font-size: 37px;
               line-height: 3rem;
               max-width: fit-content(5em);
-
-              .line {
-                display: block;
-              }
             }
 
-            @media (max-width: 718px) {
+            @media (max-width: 760px) {
               .line {
-                display: block;
+                flex-direction: column;
               }
             }
           `}</style>
@@ -70,7 +66,7 @@ const IndexPage = () => (
                  padding-top: 0rem;
              
 
-                @media (max-width:840px) { {
+                @media (max-width:889px) { {
                   padding-top: 4rem;
                
                 }
@@ -107,7 +103,6 @@ const IndexPage = () => (
             connect="/what-we-are-doing"
             background="#5600ee"
             border_color="#5600ee"
-            buttonWidth="120%"
           >
             See our work
           </StyledLink>
@@ -116,7 +111,6 @@ const IndexPage = () => (
             connect="/the-tribe"
             background="black"
             border_color="#48e9ce"
-            buttonWidth="120%"
           >
             Meet the tribe
           </StyledLink>
@@ -134,22 +128,11 @@ const IndexPage = () => (
               flex-direction: row;
             }
 
-            @media (max-width: 798px) {
+            @media (max-width: 860px) {
               display: flex;
               justify-content: space-between;
-              max-width: 70%;
-              flex-direction: row;
-            }
-
-            @media (max-width: 677px) {
-              display: flex;
+              max-width: 100%;
               flex-direction: column;
-            }
-
-            @media (max-width: 500px) {
-              display: flex;
-              flex-direction: column;
-              max-width: 80%;
             }
           `}</style>
         </section>

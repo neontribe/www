@@ -15,13 +15,13 @@ import { ExternalLink } from '../components/Link'
 import PageMeta from '../components/PageMeta'
 
 import Container from '../components/Container'
-import ImageContainer from '../components/imageContainer'
+
 import Top from '../components/Top'
 import circles from '../components/circle-progression.png'
 import logo from '../components/logo.svg'
 
 import StyledLink from '../components/Button'
-import Arcs from '../../public/neontribe-mark.svg'
+import Arcs from '../components/neontribe-mark.svg'
 
 const WhatWeAreDoingPage = () => (
   <Layout>
