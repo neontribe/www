@@ -22,6 +22,7 @@ import logo from '../components/logo.svg'
 
 import StyledLink from '../components/Button'
 import Arcs from '../components/neontribe-mark.svg'
+import EmailLink from '../components/EmailLink'
 
 const WhatWeAreDoingPage = () => (
   <Layout>
@@ -139,23 +140,19 @@ const WhatWeAreDoingPage = () => (
 
           <VerticalSpacing size={5} />
 
-          <StyledLink
-            connect="mailto:hello@neontribe.co.uk"
+          <EmailLink
+            link="mailto:hello@neontribe.co.uk"
             background="#5600ee"
             border_color="#5600ee"
+            mobileSize="0.9rem"
           >
             Email: hello@neontribe.co.uk
-          </StyledLink>
+          </EmailLink>
         </div>
         <div className="footer-arc">
           <img src={Arcs} height={136} width={191} />
         </div>
       </Container>
-      <Text size="medium">
-        <ExternalLink href="mailto:hello@neontribe.co.uk">
-          hello@neontribe.co.uk
-        </ExternalLink>
-      </Text>
     </ConstrainedWidth>
     <ContactFooter background="#561dee">
       <ConstrainedWidth paddingTop="2rem">

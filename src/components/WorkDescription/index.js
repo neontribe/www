@@ -57,12 +57,12 @@ const WorkDescription = ({
 
           <VerticalSpacing size={5} />
 
-          <Text color="#561dee" size="normal" weight="400">
+          <Text color="#561dee" size="normal" weight="400" maxCharacter="45ch">
             {' '}
             <b>Funded by:</b> {fund}
           </Text>
           <VerticalSpacing size={1} />
-          <Text color="#561dee" size="normal">
+          <Text color="#561dee" size="normal" maxCharacter="30ch">
             {' '}
             <b>Project cost:</b> {budget}{' '}
           </Text>

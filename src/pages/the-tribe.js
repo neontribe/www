@@ -120,7 +120,10 @@ const TheTribePage = () => (
             color="#48e9ce"
             align="center"
           >
-            Or email: hello@neontribe.co.uk
+            <a href="mailto:hello@neontribe.co.uk">
+              {' '}
+              Or email: hello@neontribe.co.uk{' '}
+            </a>
           </Text>
         </HireContainer>
       </ConstrainedWidth>

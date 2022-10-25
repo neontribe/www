@@ -7,7 +7,6 @@ const EmailLink = ({
   border_color,
   background,
   margin_left,
-  buttonWidth,
   mobileSize,
   link,
 }) => (
@@ -22,7 +21,7 @@ const EmailLink = ({
         border-radius: 350px;
 
         cursor: pointer;
-        max-width: 200ch;
+        width: 80%;
         max-height: 100%;
         text-align: center;
         border-style: solid;
@@ -31,14 +30,14 @@ const EmailLink = ({
         font-weight:700;
 
         ${margin_left ? `margin-left: ${margin_left};` : ''}
-        font-size:1.25rem;
+        font-size:1.15rem;
         font-family: KeepCalm;
         font-weight: bold;
       }
 
       @media (max-width: 860px) {
         div {
-          ${buttonWidth ? `width: ${buttonWidth};` : ''}
+          width: 100%;
           margin-bottom: 2rem;
           ${mobileSize ? `font-size: ${mobileSize};` : ''}
         }
@@ -53,7 +52,6 @@ Text.propTypes = {
   border_color: PropTypes.string,
   background: PropTypes.string,
   margin_left: PropTypes.string,
-  buttonWidth: PropTypes.string,
   mobileSize: PropTypes.string,
 }
 

@@ -7,17 +7,13 @@ import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import Text from '../components/Text'
 import BlueText from '../components/BlueText'
 import VerticalSpacing from '../components/VerticalSpacing'
-
-import { ExternalLink } from '../components/Link'
 import PageMeta from '../components/PageMeta'
 import logo from '../components/logo.svg'
 import Container from '../components/Container'
 import ImageContainer from '../components/imageContainer'
 import Top from '../components/Top'
 import Twitter from '../components/twitter.svg'
-
-import StyledLink from '../components/Button'
-import EmailLink from '../components/Button copy'
+import EmailLink from '../components/EmailLink'
 import Arcs from '../components/join.svg'
 
 const ContactUs = () => (
@@ -39,14 +35,14 @@ const ContactUs = () => (
             <VerticalSpacing size={5} />
 
             <div className="button">
-              <StyledLink
-                connect="mailto:hello@neontribe.co.uk"
+              <EmailLink
+                link="mailto:hello@neontribe.co.uk"
                 background="#5600ee"
                 border_color="#5600ee"
                 mobileSize="0.9rem"
               >
                 Email: hello@neontribe.co.uk
-              </StyledLink>
+              </EmailLink>
             </div>
           </Text>
 
@@ -98,10 +94,6 @@ const ContactUs = () => (
           </Text>
         </div>
       </div>
-
-      <EmailLink link="mailto:hello@neontribe.co.uk">
-        hello@neontribe.co.uk
-      </EmailLink>
     </ConstrainedWidth>
     <ContactFooter>
       <ConstrainedWidth paddingTop="3em">
