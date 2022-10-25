@@ -17,8 +17,8 @@ const IndexPage = () => (
     <PageMeta title="Welcome" />
     <HomeTop>
       <ConstrainedWidth>
-        <div>
-          <Text size="title" align="left" color="white" paddingTop="7rem">
+        <div className="home-padding">
+          <Text size="title" align="left" color="white">
             {' '}
             <span className="line">
               {' '}
@@ -40,6 +40,16 @@ const IndexPage = () => (
               display: flex;
               justify-content: space-between;
               max-width: 41rem;
+            }
+
+            .home-padding {
+              padding-top: 7rem;
+            }
+
+            @media (max-width: 872px) {
+              .home-padding {
+                padding-top: 1rem;
+              }
             }
 
             @media (max-width: 500px) {
