@@ -17,6 +17,7 @@ import Top from '../components/Top'
 import Twitter from '../components/twitter.svg'
 
 import StyledLink from '../components/Button'
+import EmailLink from '../components/Button copy'
 import Arcs from '../components/join.svg'
 
 const ContactUs = () => (
@@ -98,11 +99,9 @@ const ContactUs = () => (
         </div>
       </div>
 
-      <Text size="medium">
-        <ExternalLink href="mailto:hello@neontribe.co.uk">
-          hello@neontribe.co.uk
-        </ExternalLink>
-      </Text>
+      <EmailLink link="mailto:hello@neontribe.co.uk">
+        hello@neontribe.co.uk
+      </EmailLink>
     </ConstrainedWidth>
     <ContactFooter>
       <ConstrainedWidth paddingTop="3em">
