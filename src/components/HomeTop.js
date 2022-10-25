@@ -8,7 +8,7 @@ const HomeTop = ({ children }) => (
     <style jsx>{`
       .top {
         background-color: black;
-        min-height: 737px;
+        min-height: 793px;
       }
     `}</style>
   </div>
