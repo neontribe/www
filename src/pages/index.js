@@ -18,7 +18,7 @@ const IndexPage = () => (
     <HomeTop>
       <ConstrainedWidth>
         <div>
-          <Text size="title" align="left" color="white">
+          <Text size="title" align="left" color="white" paddingTop="7rem">
             {' '}
             <span className="line">
               {' '}

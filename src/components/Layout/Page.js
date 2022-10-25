@@ -9,7 +9,7 @@ const Page = ({ title, children }) => (
     <div className="introduction">
       <Header siteTitle={title} />
 
-      <VerticalSpacing size={12} />
+      <VerticalSpacing size={5} />
     </div>
     <main role="main">{children}</main>
 
@@ -27,12 +27,6 @@ const Page = ({ title, children }) => (
 
       main {
         flex: 1 0 auto;
-      }
-
-      @media (max-width: 677px) {
-        .introduction {
-          background-color: black;
-        }
       }
     `}</style>
   </div>
