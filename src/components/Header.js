@@ -62,6 +62,11 @@ const Nav = ({ isOpen }) => (
         <li>
           <NavLink to="/the-tribe">The tribe</NavLink>
         </li>
+
+        <li>
+          <NavLink to="/blog">Our blog</NavLink>
+        </li>
+
         <li>
           <NavLink to="/contact-us">Contact</NavLink>
         </li>

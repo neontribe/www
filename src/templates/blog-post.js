@@ -7,7 +7,10 @@ import VerticalSpacing from '../components/VerticalSpacing'
 import PageMeta from '../components/PageMeta'
 import Text from '../components/Text'
 import RenderContent from '../components/RenderContent'
-
+import Top from '../components/Top'
+import BlueText from '../components/BlueText'
+import Container from '../components/Container'
+import arcs from '../components/blog-page-arcs.svg'
 const PublishedDate = ({ date }) => {
   const published = distanceInWordsToNow(date, {
     addSuffix: true,
@@ -33,30 +36,48 @@ export default ({ data }) => {
         publishedDate={parse(published_at)}
         modifiedDate={parse(updated_at)}
       />
+      <article>
+        <Top>
+          <ConstrainedWidth>
+            <Container
+              align="center"
+              justifyContent="space-between"
+              projectFlex="column"
+            >
+              <div>
+                <BlueText size="larger" color="#48e9ce">
+                  {title}
+                </BlueText>
+                <Text weight={700}>
+                  <h2>
+                    {' '}
+                    <address>By {author_name}</address>
+                    <PublishedDate date={parse(published_at)} />{' '}
+                  </h2>
+                </Text>
 
-      <ConstrainedWidth fullWidth={false}>
-        <article>
+                <VerticalSpacing size={5} />
+              </div>
+
+              <div className="heading-arc">
+                <img src={arcs} height={383} width={177} />
+              </div>
+            </Container>
+          </ConstrainedWidth>
+        </Top>
+
+        <ConstrainedWidth fullWidth={false}>
           <header>
-            <Text size="large" weight={700} align="center" hyphenation>
-              <h1>{title}</h1>
-            </Text>
+            <Text size="large" weight={700} align="center" hyphenation></Text>
 
             <VerticalSpacing size={4} />
-
-            <Text weight={700}>
-              <address>By {author_name}</address>
-
-              <VerticalSpacing size={2} />
-
-              <PublishedDate date={parse(published_at)} />
-            </Text>
 
             <VerticalSpacing size={4} />
           </header>
 
           <RenderContent htmlAst={htmlAst} />
-        </article>
-      </ConstrainedWidth>
+        </ConstrainedWidth>
+      </article>
     </Layout>
   )
 }

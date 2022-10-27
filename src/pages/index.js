@@ -22,7 +22,7 @@ const IndexPage = () => (
             {' '}
             <span className="line">
               {' '}
-              <h1>We are a </h1> <h1> digital agency</h1>
+              <h1>We are a digital agency</h1>
             </span>
           </Text>
 
