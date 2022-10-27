@@ -1,12 +1,10 @@
 import React from 'react'
-
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import Text from '../components/Text'
 import BlueText from '../components/BlueText'
 import Good from '../components/Good'
 import VerticalSpacing from '../components/VerticalSpacing'
-import Container from '../components/Container'
 import PageMeta from '../components/PageMeta'
 import StyledLink from '../components/Button'
 import Smile from '../components/Smile'
@@ -18,32 +16,36 @@ const IndexPage = () => (
     <HomeTop>
       <ConstrainedWidth>
         <div className="home-padding">
-          <Text size="title" align="left" color="white">
-            {' '}
-            <span className="line">
+          <h1>
+            <span className="heading-wrapper">
               {' '}
-              <h1>We are a </h1> <h1> digital agency</h1>
+              <span className="line"> We are a digital agency</span>
             </span>
-          </Text>
 
-          <BlueText size="title" align="left" color="white">
-            <Good>committed to tech for </Good>
-            <Smile>
-              <Good>g</Good>
-              <Good color="#48e9ce">oo</Good>
-              <Good>d</Good>{' '}
-            </Smile>
-          </BlueText>
+            <BlueText size="title" align="left" color="white">
+              <Good>committed to tech for </Good>
+              <Smile>
+                <Good>g</Good>
+                <Good color="#48e9ce">oo</Good>
+                <Good>d</Good>{' '}
+              </Smile>
+            </BlueText>
+          </h1>
 
           <style jsx>{`
             .line {
               display: flex;
               justify-content: space-between;
-              max-width: 41rem;
             }
 
             .home-padding {
               padding-top: 7rem;
+            }
+
+            .heading-wrapper {
+              text-align: left;
+              color: white;
+              font-size: 3.4rem;
             }
 
             @media (max-width: 872px) {
@@ -67,34 +69,28 @@ const IndexPage = () => (
         </div>
         <VerticalSpacing size={3.5} />
 
-        <Container paddingTop="1rem" justifyContent="space-between">
+        <div className="sub-header">
           <Text size="large" color="#48e9ce" weight="600">
             {' '}
             <h2>
-              We work with you to solve problems through
-              <style jsx>{`
-                 padding-top: 0rem;
-             
-
-                @media (max-width:889px) { {
-                  padding-top: 4rem;
-               
-                }
-
-                @media (max-width:550px) { {
-                  font-size:21px;
-                  padding-top:6rem;
-                  padding-right:0.5rem;
-               
-                }
-              `}</style>
-            </h2>{' '}
+              We work with you to solve problems through user research, software
+              development and design{' '}
+            </h2>
           </Text>
-        </Container>
-        <Text size="large" color="#48e9ce">
+
+          <style jsx>{`
+            max-width: 80%;
+            padding-top: 2rem;
+
+            @media (max-width: 860px) {
+              max-width: 100%;
+            }
+          `}</style>
+        </div>
+        {/* <Text size="large" color="#48e9ce">
           {' '}
           <h2>
-            user research, software development and design
+            
             <style jsx>{`
                 
                 @media (max-width:550px) { {
@@ -105,7 +101,7 @@ const IndexPage = () => (
                 }
               `}</style>
           </h2>{' '}
-        </Text>
+        </Text> */}
         <VerticalSpacing size={10} />
 
         <section>

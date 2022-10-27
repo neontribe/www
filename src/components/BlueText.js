@@ -14,7 +14,7 @@ const Text = ({
   hyphenation = false,
   lineHeight,
 }) => (
-  <h1 className={classNames('text', hyphenation && 'hyphenation')}>
+  <span className={classNames('text', hyphenation && 'hyphenation')}>
     {children}
 
     <style jsx>{`
@@ -32,7 +32,7 @@ const Text = ({
         hyphens: auto;
       }
     `}</style>
-  </h1>
+  </span>
 )
 
 Text.propTypes = {
