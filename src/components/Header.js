@@ -1,11 +1,15 @@
-import React, { useState } from 'react'
+// To do:
+// Make the mobile bar look good
+// Do logic to show one or the other depending on window size
+
+import React, { useState, useEffect } from 'react'
 import css from 'styled-jsx/css'
 
 import { breakpoint, c_NAV_ACTIVE, FONT_SECONDARY } from '../theme'
 import { InternalLink } from './Link'
 import Text from './Text'
 import ConstrainedWidth from './Layout/ConstrainedWidth'
-import { ExternalLink } from './Link'
+
 import classNames from 'classnames'
 import logo from './logo.svg'
 import menuActive from './menu-active.svg'
@@ -50,11 +54,11 @@ const NavLink = ({ children, active, ...props }) => (
   </Text>
 )
 
-const Nav = ({ isOpen }) => (
-  <>
-    <nav className={classNames('nav', !isOpen && 'hidden')}>
+const DesktopNav = () => {
+  return (
+    <nav className="nav">
       <ul className="list">
-        <li className="first-item">
+        <li>
           <NavLink active to="/what-we-are-doing">
             Our Work
           </NavLink>
@@ -68,6 +72,10 @@ const Nav = ({ isOpen }) => (
       </ul>
 
       <style jsx>{`
+        
+        .nav {
+          display:flex;
+        }
         .list {
           margin: 0;
           padding: 0;
@@ -77,6 +85,7 @@ const Nav = ({ isOpen }) => (
           justify-content: space-between;
           flex-direction: row;
           width: auto;
+     
 
           list-style: none;
 
@@ -88,117 +97,156 @@ const Nav = ({ isOpen }) => (
           margin-left: 3rem;
         }
 
-        .hamburger {
-          display: none;
-          curser: pointer;
-        }
 
-        @media (max-width: 500px) {
-          .hamburger {
-            display: block;
-          }
-
+        @media (min-width:500px) and (max-width:700px) {
           .list {
-            color: white;
-            position: absolute;
-            left: 0;
-            margin-left: 1rem;
-            top: 100px;
-            flex-direction: column;
-            justify-content: space-between;
-            width: 93%;
-            text-align: center;
-            gap: 0;
-            background-color: #5600ee;
-          }
-
-          .list > * + * {
-            margin-top: 0;
-            margin-left: 0;
-          }
-
-          .hidden {
-            display: none;
-          }
+          justify-content:flex-start;
+          
         }
       `}</style>
     </nav>
-  </>
-)
+  )
+}
 
-const Header = () => {
+const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false)
+
+  return (
+    <div className="testing">
+      <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+        &#8801;
+      </button>
+      <nav className="mobile-nav">
+        {isOpen && (
+          <ul className="list">
+            <li className="first-item">
+              <NavLink active to="/what-we-are-doing">
+                Our Work
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/the-tribe">The tribe</NavLink>
+            </li>
+            <li>
+              <NavLink to="/contact-us">Contact</NavLink>
+            </li>
+          </ul>
+        )}
+      </nav>
+
+      <style jsx>{`
+        .testing {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          left: 1.5rem;
+          width: 89%;
+          position: absolute;
+          align-items: center;
+          height: 100%;
+          z-index: 1;
+        }
+
+        li:not(:first-child) {
+          padding-top: 3rem;
+        }
+
+        .list {
+          background-color: black;
+          border: solid;
+          border-width: 2px;
+          border-color: white;
+          display: flex;
+          flex-direction: column;
+          height: 92%;
+          align-items: center;
+          justify-content: flex-start;
+          padding-top: 50%;
+          width: 100%;
+          list-style: none;
+          padding-inline-start: 0;
+        }
+
+        .mobile-nav {
+          width: 100%;
+          margin-right: 0.2rem;
+          height: 100%;
+          max-height: 100%;
+        }
+
+        .hamburger {
+          background: none;
+          color: white;
+          border: none;
+          font-size: 3rem;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          align-self: flex-end;
+        }
+      `}</style>
+    </div>
+  )
+}
+const isBrowser = typeof window !== 'undefined'
+const Header = () => {
+  // Hook to detect screen size and returns true if screen is a desktop/tablet size and false if it is a mobile
+
+  function checkScreenWidth() {
+    if (isBrowser) {
+      return window.innerWidth
+    }
+  }
+
+  const [windowSize, setWindowSize] = useState(checkScreenWidth())
+
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(checkScreenWidth())
+    }
+
+    window.addEventListener('resize', handleWindowResize)
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize)
+    }
+  }, [])
 
   return (
     <ConstrainedWidth>
       <header className="header">
-        <div>
+        <div className="logo-container">
           <InternalLink to="/" title="Link to Neontribe homepage">
             <img className="logo" src={logo} alt="Neontribe" />
           </InternalLink>
         </div>
-
-        <div className="nav-wrapper">
-          <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
-            <span className="bar"></span>
-            <span className="bar"></span>
-            <span className="bar"></span>
-          </button>
-          <Nav isOpen={isOpen} />
-        </div>
+        {windowSize > 500 && <DesktopNav />}
+        {windowSize < 500 && <MobileNav />}
       </header>
 
       <style jsx>{`
         .header {
           display: flex;
-          flex-wrap: wrap;
+          justify-content: space-between;
           margin: 1rem -1rem 0;
           font-family: ${FONT_SECONDARY};
         }
 
-        .header > * {
+        @media (max-width: 700px) and (min-width: 500px) {
+          .header {
+            display: block;
+          }
+        }
+
+        .logo-container {
+          height: 4rem;
           display: flex;
-          flex: 1 0 auto;
+          flex-direction: column;
           justify-content: center;
-          align-items: center;
-          margin: 1rem;
         }
 
         .logo {
           height: 2rem;
-        }
-
-        .bar {
-          display: block;
-          width: 25px;
-          height: 3px;
-          margin: 5px auto;
-          background-color: white;
-          -webkit-transition: all 0.3s ease-in-out;
-          transition: all 0.3s ease-in-out;
-        }
-
-        .hamburger {
-          display: none;
-        }
-
-        @media (min-width: 300px) {
-          .header {
-            align-items: flex-end;
-            justify-content: space-between;
-          }
-        }
-
-        @media (max-width: 500px) {
-          .hamburger {
-            display: contents;
-          }
-        }
-
-        .header > * {
-          flex-grow: 0;
-          flex-direction: column;
-          align-items: flex-start;
         }
       `}</style>
     </ConstrainedWidth>
