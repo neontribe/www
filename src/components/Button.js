@@ -33,6 +33,7 @@ const StyledLink = ({
         text-align: center;
         border-style: solid;
         color: white;
+
         ${border_color ? `border-color: ${border_color};` : ''}
         font-weight:700;
 
@@ -40,6 +41,11 @@ const StyledLink = ({
         font-size:1.25rem;
         font-family: KeepCalm;
         font-weight: bold;
+      }
+
+      button:hover {
+        background-color: #48e9ce;
+        border-color: #48e9ce;
       }
 
       @media (max-width: 860px) {

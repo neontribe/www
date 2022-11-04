@@ -10,34 +10,12 @@ import { InternalLink } from './Link'
 import Text from './Text'
 import ConstrainedWidth from './Layout/ConstrainedWidth'
 
-import classNames from 'classnames'
 import logo from './logo.svg'
-import menuActive from './menu-active.svg'
 
 const activeLinkStyles = css.resolve`
   a {
-    padding-bottom: 4px;
     border-bottom: 4px solid ${c_NAV_ACTIVE};
-  }
-
-  @media (${breakpoint('md')}) {
-    a {
-      position: relative;
-      border-bottom: none;
-    }
-
-    a:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -100%;
-      margin: auto;
-      height: 26px;
-      width: 50px;
-      background-image: url('${menuActive}');
-      background-repeat: no-repeat;
-    }
+    color: #48e9ce;
   }
 `
 
@@ -96,6 +74,8 @@ const DesktopNav = () => {
           margin-top: 0;
           margin-left: 3rem;
         }
+
+      
 
 
         @media (min-width:500px) and (max-width:700px) {

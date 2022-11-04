@@ -26,6 +26,9 @@ export const { className, styles } = css.resolve`
   a.button:hover {
     background-color: ${c_CALL_TO_ACTION_HOVER};
   }
+  a:hover {
+    color: #48e9ce;
+  }
 `
 
 export const LinkInternals = ({ button, children }) => {
