@@ -11,6 +11,15 @@ const Content = (props) => (
   <>
     <div className="content" {...props} />
     <style jsx global>{`
+      .content {
+        max-width: 95ch;
+        color: black;
+      }
+
+      .content p {
+        line-height: 1.5;
+      }
+
       .content * + * {
         margin-top: 1.5em;
       }
@@ -35,26 +44,12 @@ const Heading = ({ size, level, children, ...props }) => {
 
   return (
     <Text size={size}>
-      <H
-        className={classNames('heading', level === 2 && 'with-arcs')}
-        children={children}
-        {...props}
-      />
+      <H className="heading" children={children} {...props} />
 
       <style jsx>{`
         .heading {
           display: inline-flex;
-        }
-
-        .with-arcs:before {
-          content: '';
-          display: block;
-          background-image: url('${arcs}');
-          background-position: left center;
-          background-repeat: no-repeat;
-          height: 2rem;
-          width: 2rem;
-          margin-right: 1.5rem;
+          color: #561dee;
         }
       `}</style>
     </Text>

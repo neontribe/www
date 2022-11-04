@@ -9,6 +9,7 @@ const ConstrainedWidth = ({
   paddingTop,
   paddingLeft,
   paddingRight,
+  paddingBottom,
 }) => (
   <div className="constrained-container">
     {children}
@@ -26,6 +27,7 @@ const ConstrainedWidth = ({
         ${paddingTop ? `padding-top: ${paddingTop};` : ''}
         ${paddingLeft ? `padding-left: ${paddingLeft};` : ''} 
         ${paddingRight ? `padding-right: ${paddingRight};` : ''}
+        ${paddingBottom ? `padding-bottom: ${paddingBottom};` : ''}
       }
 
       @media (max-width: 1120px) {
@@ -44,6 +46,7 @@ ConstrainedWidth.propTypes = {
   paddingTop: PropTypes.string,
   paddingLeft: PropTypes.string,
   paddingRight: PropTypes.string,
+  paddingBottom: PropTypes.string,
 }
 
 export default ConstrainedWidth

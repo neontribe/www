@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import { distanceInWordsToNow, parse } from 'date-fns'
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
+import ContactFooter from '../components/Layout/ContactFooter'
 import VerticalSpacing from '../components/VerticalSpacing'
 import PageMeta from '../components/PageMeta'
 import Text from '../components/Text'
@@ -11,6 +12,7 @@ import Top from '../components/Top'
 import BlueText from '../components/BlueText'
 import Container from '../components/Container'
 import arcs from '../components/blog-page-arcs.svg'
+import logo from '../components/logo.svg'
 const PublishedDate = ({ date }) => {
   const published = distanceInWordsToNow(date, {
     addSuffix: true,
@@ -38,21 +40,21 @@ export default ({ data }) => {
       />
       <article>
         <Top>
-          <ConstrainedWidth>
-            <Container
-              align="center"
-              justifyContent="space-between"
-              projectFlex="column"
-            >
-              <div>
-                <BlueText size="larger" color="#48e9ce">
-                  {title}
-                </BlueText>
+          <ConstrainedWidth paddingBottom="0">
+            <Container justifyContent="space-between" projectFlex="column">
+              <div className="potential">
+                <h1>
+                  <Text size="larger" color="#48e9ce" maxCharacter="20ch">
+                    {title}
+                  </Text>
+                </h1>
+
+                <VerticalSpacing size={3} />
                 <Text weight={700}>
+                  {' '}
                   <h2>
-                    {' '}
-                    <address>By {author_name}</address>
                     <PublishedDate date={parse(published_at)} />{' '}
+                    <address>By {author_name}</address>
                   </h2>
                 </Text>
 
@@ -66,18 +68,41 @@ export default ({ data }) => {
           </ConstrainedWidth>
         </Top>
 
-        <ConstrainedWidth fullWidth={false}>
-          <header>
-            <Text size="large" weight={700} align="center" hyphenation></Text>
-
-            <VerticalSpacing size={4} />
-
-            <VerticalSpacing size={4} />
-          </header>
-
-          <RenderContent htmlAst={htmlAst} />
-        </ConstrainedWidth>
+        <div className="blog-post-container">
+          <div className="text-padding">
+            <RenderContent htmlAst={htmlAst} />
+          </div>
+        </div>
       </article>
+      <ContactFooter background="#561dee">
+        <ConstrainedWidth paddingTop="2rem">
+          <Container justifyContent="space-between">
+            <div>
+              <img className="logo" src={logo} alt="Neontribe" />
+            </div>
+            <Text size="normal">Privacy policy</Text>
+          </Container>
+        </ConstrainedWidth>
+      </ContactFooter>
+      <style jsx>{`
+        .potential {
+          padding-top: 1rem;
+        }
+        .logo {
+          height: 1.5rem;
+          width: 100%;
+        }
+        .blog-post-container {
+          background-color: white;
+          width: 80%;
+          padding-top: 2rem;
+          padding-bottom: 2rem;
+        }
+
+        .text-padding {
+          padding-left: 24%;
+        }
+      `}</style>
     </Layout>
   )
 }
