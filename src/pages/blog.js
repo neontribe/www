@@ -14,7 +14,12 @@ import VerticalSpacing from '../components/VerticalSpacing'
 import Top from '../components/Top'
 import BlueText from '../components/BlueText'
 import Container from '../components/Container'
+import HireContainer from '../components/Hire-container'
 import arcs from '../components/blogArcs.svg'
+import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
+import BlogHeader from '../components/Layout/BlogHeader'
+import logo from '../components/logo.svg'
+import ContactFooter from '../components/Layout/ContactFooter'
 
 const BlogPage = ({
   data: {
@@ -35,33 +40,29 @@ const BlogPage = ({
         description="Neontribe is a digital agency. We research for context. We design for use. We code to completion. We test to exhaustion. Then we engineer enhancement."
       />
       <Top>
-        <div className="blog-top">
-          <Container
-            align="center"
-            justifyContent="space-between"
-            projectFlex="column"
-          >
-            <div>
+        <BlogHeader>
+          <div>
+            <h1>
               <BlueText size="larger" color="#48e9ce">
                 Our Blog
               </BlueText>
-              <VerticalSpacing size={4} />
+            </h1>
+            <VerticalSpacing size={4} />
 
-              <Text size="normal">
-                <p className="sub-heading">
-                  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                  aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                  justo.
-                </p>
-              </Text>
-            </div>
+            <Text size="normal">
+              <p className="sub-heading">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et
+                justo.
+              </p>
+            </Text>
+          </div>
 
-            <div className="heading-arc">
-              <img src={arcs} height={173} width={375} />{' '}
-            </div>
-          </Container>
-        </div>
+          <div className="heading-arc">
+            <img src={arcs} height={173} width={375} />{' '}
+          </div>
+        </BlogHeader>
       </Top>
 
       <VerticalSpacing size={4} />
@@ -89,24 +90,38 @@ const BlogPage = ({
                     sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
                     ipsum dolor sit amet, consetetur
                   </div>
-
-                  <Text size="small" color="black">
-                    <h3>
+                  <h3>
+                    <Text size="small" color="black">
                       Posted:{' '}
                       {getDateString(parse(node.frontmatter.published_at))}
-                    </h3>
-                  </Text>
+                    </Text>
+
+                    <Text size="small" color="#561dee;">
+                      {node.frontmatter.author_name}
+                    </Text>
+                  </h3>
                 </Container>
               </BlogConstrainedWidth>
             </InternalLink>
           </li>
         ))}
       </ul>
+      <ContactFooter background="#561dee">
+        <ConstrainedWidth paddingTop="2rem">
+          <Container justifyContent="space-between">
+            <div>
+              <img className="logo" src={logo} alt="Neontribe" />
+            </div>
+            <Text size="normal">Privacy policy</Text>
+          </Container>
+        </ConstrainedWidth>
+      </ContactFooter>
       <style jsx>{`
         ul {
           list-style: none;
           padding: 0;
           margin: 0;
+          padding-bottom: 2rem;
         }
 
         li + li {
@@ -125,6 +140,11 @@ const BlogPage = ({
           padding-left: 2rem;
           padding-bottom: 2rem;
           max-width: 77ch;
+        }
+
+        .logo {
+          height: 1.5rem;
+          width: 100%;
         }
 
         .sub-heading {
@@ -160,6 +180,7 @@ export const pageQuery = graphql`
             slug
             title
             published_at
+            author_name
           }
         }
       }

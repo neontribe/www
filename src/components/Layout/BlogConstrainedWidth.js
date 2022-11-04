@@ -13,6 +13,7 @@ const BlogConstrainedWidth = ({ children, background }) => (
         max-width: ${PAGE_WIDTH_REM};
         margin-left: auto;
         margin-right: auto;
+        border-radius: 0 0 38px 0;
 
         ${background ? `background-color: ${background};` : ''}
       }
