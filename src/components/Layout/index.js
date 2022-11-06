@@ -103,7 +103,7 @@ const Layout = ({ children }) => (
       h6 {
         font: inherit;
 
-        font-weight: 900;
+        font-weight: 700;
 
         font-family: ${FONT_PRIMARY_BOLD};
       }
