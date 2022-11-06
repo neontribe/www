@@ -4,9 +4,9 @@ import Page from './Page'
 import {
   REM_PX,
   c_TEXT_LIGHT,
-  c_PRIMARY_BACKGROUND,
   FONT_PRIMARY,
   FONT_SECONDARY,
+  FONT_PRIMARY_BOLD,
 } from '../../theme'
 
 const Layout = ({ children }) => (
@@ -91,14 +91,21 @@ const Layout = ({ children }) => (
       }
 
       h1,
-      h2,
+      h2 {
+        font: inherit;
+        font-weight: normal;
+        font-family: ${FONT_SECONDARY};
+      }
+
       h3,
       h4,
       h5,
       h6 {
         font: inherit;
-        font-weight: normal;
-        font-family: ${FONT_SECONDARY};
+
+        font-weight: 900;
+
+        font-family: ${FONT_PRIMARY_BOLD};
       }
     `}</style>
 

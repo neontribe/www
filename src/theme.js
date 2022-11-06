@@ -72,6 +72,7 @@ export const c_NAV_ACTIVE = c_NEON_PINK
 
 // Typography
 export const FONT_PRIMARY = 'Muli, sans-serif'
+export const FONT_PRIMARY_BOLD = 'muli, sans-serif'
 export const FONT_SECONDARY = 'KeepCalm, sans-serif'
 
 export const fontSizes = {
