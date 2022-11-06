@@ -88,7 +88,7 @@ const TheTribePage = () => (
       <VerticalSpacing size={12} />
     </ConstrainedWidth>
     <Top>
-      <ConstrainedWidth paddingTop="2rem">
+      <ConstrainedWidth paddingTop="3rem">
         <Text size="large" lineHeight={2} color="#48e9ce">
           <H>Join The Tribe</H>
         </Text>
