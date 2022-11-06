@@ -38,7 +38,7 @@ const WorkDescription = ({
         <Content.Name>
           <Text size="normal">
             <div className="leaf">
-              <H>{client}</H>
+              <h2 className="special-font-case">{client}</h2>
             </div>
           </Text>
         </Content.Name>
@@ -106,6 +106,10 @@ const WorkDescription = ({
 
         border-radius: 0 0 38px 0;
         display: inline-block;
+      }
+      .special-font-case {
+        font-family: muli, sans-sarif;
+        font-weight: 700;
       }
 
       @media (max-width: 860px) {

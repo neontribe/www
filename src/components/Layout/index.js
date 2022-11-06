@@ -91,13 +91,13 @@ const Layout = ({ children }) => (
       }
 
       h1,
-      h2 {
+      h2,
+      h3 {
         font: inherit;
         font-weight: normal;
         font-family: ${FONT_SECONDARY};
       }
 
-      h3,
       h4,
       h5,
       h6 {
