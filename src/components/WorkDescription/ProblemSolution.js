@@ -25,14 +25,31 @@ const Content = (props) => (
         margin-block-end: 0;
         padding-inline-start: 0;
         white-space: normal;
+        list-style-position: outside;
+      }
+
+      li::marker {
+        color: hotpink;
+        padding-left: 2rem;
       }
 
       .content li {
         line-height: 1.5;
-        list-style: none;
+
+        margin-left: 2rem;
+
         padding: 0;
         margin: 0;
       }
+
+      // .content li::before {
+      //   color: #ff37ab;
+      //   content: '•';
+      //   display: inline-block;
+      //   width: 1em;
+
+      //   font-weight: bold;
+      // }
 
       .content > div > div:not(:first-child) {
         margin-top: 2rem;
@@ -69,11 +86,12 @@ export default ({ problem, solution }) => {
             <H>How we helped</H>
           </Text>
           <VerticalSpacing size={1} />
-
-          <Content
-            className="content"
-            dangerouslySetInnerHTML={{ __html: solution }}
-          />
+          <div className="extra-padding">
+            <Content
+              className="content"
+              dangerouslySetInnerHTML={{ __html: solution }}
+            />
+          </div>
         </>
       )}
       <style jsx>{`
@@ -81,6 +99,11 @@ export default ({ problem, solution }) => {
           max-width: 60ch;
           font-size: 18px;
           line-height: 1.5;
+        }
+
+        .extra-padding {
+          padding-left: 1rem;
+          font-size: 18px;
         }
       `}</style>
     </>
