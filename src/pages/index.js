@@ -23,12 +23,7 @@ const IndexPage = () => (
             </span>
 
             <BlueText size="title" align="left" color="white">
-              <Good>committed to tech for </Good>
-              <Smile>
-                <Good>g</Good>
-                <Good color="#48e9ce">oo</Good>
-                <Good>d</Good>{' '}
-              </Smile>
+              <Good />
             </BlueText>
           </h1>
 
@@ -87,21 +82,7 @@ const IndexPage = () => (
             }
           `}</style>
         </div>
-        {/* <Text size="large" color="#48e9ce">
-          {' '}
-          <h2>
-            
-            <style jsx>{`
-                
-                @media (max-width:550px) { {
-                  font-size:21px;
-                  padding-right:0.5rem;
-                 
-               
-                }
-              `}</style>
-          </h2>{' '}
-        </Text> */}
+
         <VerticalSpacing size={10} />
 
         <section>
