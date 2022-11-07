@@ -2,12 +2,10 @@ import React from 'react'
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import Text from '../components/Text'
-import BlueText from '../components/BlueText'
-import Good from '../components/Good'
+import Smile from '../components/Smile'
 import VerticalSpacing from '../components/VerticalSpacing'
 import PageMeta from '../components/PageMeta'
 import StyledLink from '../components/Button'
-import Smile from '../components/Smile'
 import HomeTop from '../components/HomeTop'
 
 const IndexPage = () => (
@@ -15,56 +13,42 @@ const IndexPage = () => (
     <PageMeta title="Welcome" />
     <HomeTop>
       <ConstrainedWidth>
-        <div className="home-padding">
+        <>
           <h1>
-            <span className="heading-wrapper">
+            <div className="heading-wrapper">
               {' '}
-              <span className="line"> We are a digital agency</span>
-            </span>
+              <span> We are a </span>
+              <span>digital agency</span>
+            </div>
 
-            <BlueText size="title" align="left" color="white">
-              <Good />
-            </BlueText>
+            <Text size="title" align="left" color="white">
+              <Smile />
+            </Text>
           </h1>
 
           <style jsx>{`
-            .line {
-              display: flex;
-              justify-content: space-between;
-            }
-
-            .home-padding {
-              padding-top: 7rem;
-            }
-
             .heading-wrapper {
               text-align: left;
               color: white;
               font-size: 3.4rem;
             }
 
-            @media (max-width: 872px) {
-              .home-padding {
-                padding-top: 1rem;
+            @media (max-width: 750px) {
+              .heading-wrapper {
+                display: flex;
+                flex-direction: column;
               }
             }
 
             @media (max-width: 500px) {
               font-size: 37px;
               line-height: 3rem;
-              max-width: fit-content(5em);
-            }
-
-            @media (max-width: 760px) {
-              .line {
-                flex-direction: column;
-              }
+              max-width: fit-content(5rem);
             }
           `}</style>
-        </div>
-        <VerticalSpacing size={3.5} />
+        </>
 
-        <div className="sub-header">
+        <div>
           <Text size="large" color="#48e9ce" weight="600">
             {' '}
             <h2>
@@ -79,11 +63,12 @@ const IndexPage = () => (
 
             @media (max-width: 860px) {
               max-width: 100%;
+              padding-top: 3rem;
             }
           `}</style>
         </div>
 
-        <VerticalSpacing size={10} />
+        <VerticalSpacing size={6} />
 
         <section>
           <StyledLink
