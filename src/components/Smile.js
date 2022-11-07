@@ -1,35 +1,31 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import classNames from 'classnames'
-import { fontSizes } from '../theme'
-
 import arc from '../components/pinkArc.png'
-
 // TODO: Should we have a block level version which uses a 0 margin p?
-const Good = ({
-  children,
-  weight,
-  size,
-  align,
-  color,
-  hyphenation = false,
-  lineHeight,
-}) => (
-  <span className={classNames('text', hyphenation && 'hyphenation')}>
-    {children}
-
+const Smile = ({ hyphenation = false }) => (
+  <>
+    <span>committed to tech for </span>
+    <span
+      className={classNames(
+        'smiley-face-container',
+        hyphenation && 'hyphenation'
+      )}
+    >
+      <span>g</span>
+      <span className={classNames('blue-text', hyphenation && 'hyphenation')}>
+        oo
+      </span>
+      <span>d</span>
+    </span>
     <style jsx>{`
-      .text {
-        ${weight ? `font-weight: ${weight};` : ''}
-        ${color ? `color: ${color};` : ''}
-        ${fontSizes[size] ? `font-size: ${fontSizes[size]};` : ''}
-        ${lineHeight ? `line-height: ${lineHeight};` : ''}
-        ${align ? `text-align: ${align};` : ''}
+
+      .smiley-face-container {
         position:relative;
         display: inline-block;
       }
 
-      .text:after {
+
+      .smiley-face-container:after {
         content: '';
         position: absolute;
 
@@ -45,31 +41,45 @@ const Good = ({
         left: 0.9rem;
       }
 
+
+
+      .text {
+   
+      }
+
+
+
+      .blue-text {
+        color: #48e9ce;
+      }
+
       .hyphenation {
         word-break: break-word;
         overflow-wrap: break-word;
-        hyphens: auto;
-      }
+        hyphens: auto;}
 
-      @media (max-width: 500px) {
-        .text:after {
-          background-size: 90px 45px;
-          top: 3.5rem;
-          max-width: 90px;
-          left: 0.25rem;
+        @media (max-width:500px) { 
+     
+            font-size:37px;
+
+            .smiley-face-container:after {
+              background-size: 90px 45px;
+              top: 3.5rem;
+              max-width: 90px;
+              left: 0.25rem;
+            }
+          
+ 
+
+          }
         }
+
+
+
+
       }
     `}</style>
-  </span>
+  </>
 )
 
-Good.propTypes = {
-  children: PropTypes.node,
-  weight: PropTypes.oneOf([400, 500, 700]),
-  align: PropTypes.string,
-  color: PropTypes.string,
-  lineHeight: PropTypes.number,
-  size: PropTypes.oneOf(Object.keys(fontSizes)),
-}
-
-export default Good
+export default Smile
