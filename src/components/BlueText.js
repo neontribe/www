@@ -13,26 +13,17 @@ const Text = ({
   color,
   hyphenation = false,
   lineHeight,
-  maxCharacter,
-  paddingRight,
-  paddingLeft,
-  paddingTop,
 }) => (
-  <div className={classNames('text', hyphenation && 'hyphenation')}>
+  <span className={classNames('text', hyphenation && 'hyphenation')}>
     {children}
 
     <style jsx>{`
       .text {
         ${weight ? `font-weight: ${weight};` : ''}
+        ${color ? `color: ${color};` : ''}
         ${fontSizes[size] ? `font-size: ${fontSizes[size]};` : ''}
         ${lineHeight ? `line-height: ${lineHeight};` : ''}
         ${align ? `text-align: ${align};` : ''}
-        ${color ? `color: ${color};` : ''}
-        ${paddingLeft ? `padding-left: ${paddingLeft};` : ''}
-        ${paddingTop ? `padding-top: ${paddingTop};` : ''}
-        ${paddingRight ? `padding-right: ${paddingRight};` : ''}
-
-        ${maxCharacter ? `max-width: ${maxCharacter};` : ''}
       }
 
       .hyphenation {
@@ -41,21 +32,16 @@ const Text = ({
         hyphens: auto;
       }
     `}</style>
-  </div>
+  </span>
 )
 
 Text.propTypes = {
   children: PropTypes.node,
   weight: PropTypes.string,
   align: PropTypes.string,
+  color: PropTypes.string,
   lineHeight: PropTypes.number,
   size: PropTypes.oneOf(Object.keys(fontSizes)),
-  color: PropTypes.string,
-  maxCharacter: PropTypes.string,
-  whiteSpace: PropTypes.string,
-  paddingLeft: PropTypes.string,
-  paddingTop: PropTypes.string,
-  paddingRight: PropTypes.string,
 }
 
 export default Text

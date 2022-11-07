@@ -79,4 +79,5 @@ export const fontSizes = {
   normal: '1rem',
   medium: '1.25rem',
   large: '1.5rem',
+  title: '3.4rem',
 }

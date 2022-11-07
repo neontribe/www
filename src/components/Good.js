@@ -5,7 +5,7 @@ import classNames from 'classnames'
 import { fontSizes } from '../theme'
 
 // TODO: Should we have a block level version which uses a 0 margin p?
-const Text = ({
+const Good = ({
   children,
   weight,
   size,
@@ -13,49 +13,48 @@ const Text = ({
   color,
   hyphenation = false,
   lineHeight,
-  maxCharacter,
-  paddingRight,
-  paddingLeft,
-  paddingTop,
 }) => (
-  <div className={classNames('text', hyphenation && 'hyphenation')}>
+  <span className={classNames('text', hyphenation && 'hyphenation')}>
     {children}
 
     <style jsx>{`
       .text {
         ${weight ? `font-weight: ${weight};` : ''}
+        ${color ? `color: ${color};` : ''}
         ${fontSizes[size] ? `font-size: ${fontSizes[size]};` : ''}
         ${lineHeight ? `line-height: ${lineHeight};` : ''}
         ${align ? `text-align: ${align};` : ''}
-        ${color ? `color: ${color};` : ''}
-        ${paddingLeft ? `padding-left: ${paddingLeft};` : ''}
-        ${paddingTop ? `padding-top: ${paddingTop};` : ''}
-        ${paddingRight ? `padding-right: ${paddingRight};` : ''}
-
-        ${maxCharacter ? `max-width: ${maxCharacter};` : ''}
       }
 
       .hyphenation {
         word-break: break-word;
         overflow-wrap: break-word;
-        hyphens: auto;
+        hyphens: auto;}
+
+        @media (max-width:500px) { 
+          .text {
+            font-size:37px;
+          
+ 
+
+          }
+        }
+
+
+
+
       }
     `}</style>
-  </div>
+  </span>
 )
 
-Text.propTypes = {
+Good.propTypes = {
   children: PropTypes.node,
-  weight: PropTypes.string,
+  weight: PropTypes.oneOf([400, 500, 700]),
   align: PropTypes.string,
+  color: PropTypes.string,
   lineHeight: PropTypes.number,
   size: PropTypes.oneOf(Object.keys(fontSizes)),
-  color: PropTypes.string,
-  maxCharacter: PropTypes.string,
-  whiteSpace: PropTypes.string,
-  paddingLeft: PropTypes.string,
-  paddingTop: PropTypes.string,
-  paddingRight: PropTypes.string,
 }
 
-export default Text
+export default Good
