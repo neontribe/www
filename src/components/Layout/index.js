@@ -1,13 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Page from './Page'
-import {
-  REM_PX,
-  c_TEXT_LIGHT,
-  FONT_PRIMARY,
-  FONT_SECONDARY,
-  FONT_PRIMARY_BOLD,
-} from '../../theme'
+import { REM_PX, c_TEXT_LIGHT, FONT_PRIMARY, FONT_SECONDARY } from '../../theme'
 
 const Layout = ({ children }) => (
   <>
