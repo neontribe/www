@@ -8,18 +8,18 @@ const HomeTop = ({ children }) => (
     <style jsx>{`
       .top {
         background-color: black;
-        min-height: 793px;
+        min-height: 80vh;
+        padding-top: 5vh;
+        padding-bottom: 5vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
     `}</style>
   </div>
 )
 HomeTop.propTypes = {
   children: PropTypes.node,
-  paddingTop: PropTypes.string,
-  align: PropTypes.string,
-  paddingRight: PropTypes.string,
-  paddingLeft: PropTypes.string,
-  paddingBottom: PropTypes.string,
 }
 
 export default HomeTop
