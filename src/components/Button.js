@@ -2,6 +2,12 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Text from './Text'
 import { navigate as NavTrial } from 'gatsby'
+import {
+  c_NEON_TEAL,
+  c_TEXT_DARK,
+  c_TEXT_LIGHT,
+  FONT_SECONDARY,
+} from '../theme'
 
 const StyledLink = ({
   children,
@@ -32,20 +38,22 @@ const StyledLink = ({
         max-height: 100%;
         text-align: center;
         border-style: solid;
-        color: white;
+        color: black;
 
         ${border_color ? `border-color: ${border_color};` : ''}
         font-weight:700;
 
         ${margin_left ? `margin-left: ${margin_left};` : ''}
         font-size:1.25rem;
-        font-family: KeepCalm;
+        font-family: ${FONT_SECONDARY};
         font-weight: bold;
+        color: ${c_TEXT_LIGHT};
       }
 
       button:hover {
-        background-color: #48e9ce;
-        border-color: #48e9ce;
+        background-color: ${c_NEON_TEAL};
+        border-color: ${c_NEON_TEAL};
+        color: ${c_TEXT_DARK};
       }
 
       @media (max-width: 860px) {

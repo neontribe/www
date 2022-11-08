@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import arc from '../components/pinkArc.png'
-// TODO: Should we have a block level version which uses a 0 margin p?
+
 const Smile = ({ hyphenation = false }) => (
   <>
     <span>committed to tech for </span>
