@@ -3,15 +3,15 @@ import PropTypes from 'prop-types'
 import classNames from 'classnames'
 
 import { fontSizes } from '../theme'
-
 // TODO: Should we have a block level version which uses a 0 margin p?
 const Text = ({
   children,
   weight,
   size,
   align,
-  hyphenation = false,
   lineHeight,
+  color,
+  hyphenation = false,
 }) => (
   <div className={classNames('text', hyphenation && 'hyphenation')}>
     {children}
@@ -20,8 +20,10 @@ const Text = ({
       .text {
         ${weight ? `font-weight: ${weight};` : ''}
         ${fontSizes[size] ? `font-size: ${fontSizes[size]};` : ''}
-        ${lineHeight ? `line-height: ${lineHeight};` : ''}
+
         ${align ? `text-align: ${align};` : ''}
+        ${color ? `color: ${color};` : ''}
+        ${lineHeight ? `line-height: ${lineHeight};` : ''}
       }
 
       .hyphenation {
@@ -35,10 +37,19 @@ const Text = ({
 
 Text.propTypes = {
   children: PropTypes.node,
-  weight: PropTypes.oneOf([400, 500, 700]),
+  weight: PropTypes.string,
   align: PropTypes.string,
   lineHeight: PropTypes.number,
   size: PropTypes.oneOf(Object.keys(fontSizes)),
+  color: PropTypes.string,
+}
+
+Text.defaultProps = {
+  weight: '400',
+  align: 'inherit',
+  lineHeight: 'inherit',
+  size: 'inherit',
+  color: 'inheirt',
 }
 
 export default Text

@@ -1,7 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-
 import { PAGE_WIDTH_REM } from '../../theme'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 const ConstrainedWidth = ({ children }) => (
   <div className="constrained-container">
@@ -13,6 +12,15 @@ const ConstrainedWidth = ({ children }) => (
         max-width: ${PAGE_WIDTH_REM};
         margin-left: auto;
         margin-right: auto;
+        border-radius: 0 0 38px 0;
+        padding-bottom: 2rem;
+      }
+
+      @media (max-width: 1120px) {
+        .constrained-container {
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
       }
     `}</style>
   </div>

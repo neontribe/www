@@ -61,6 +61,7 @@ const c_WHITE = '#fff'
 // Text + background colours
 export const c_TEXT_LIGHT = c_WHITE
 export const c_TEXT_DARK = c_BLACK
+export const c_NEON_TEAL = '#48e9ce'
 
 export const c_PRIMARY_BACKGROUND = c_BLACK
 export const c_SECONDARY_BACKGROUND = c_WHITE
@@ -79,4 +80,5 @@ export const fontSizes = {
   normal: '1rem',
   medium: '1.25rem',
   large: '1.5rem',
+  title: '3.4rem',
 }
