@@ -57,6 +57,8 @@ const IndexPage = () => (
             </h2>
           </Text>
 
+          {/* To do - add font sizes and screen sizes as variables under theme */}
+
           <style jsx>{`
             max-width: 80%;
             padding-top: 2rem;
@@ -64,6 +66,10 @@ const IndexPage = () => (
             @media (max-width: 860px) {
               max-width: 100%;
               padding-top: 3rem;
+              font-size:21px;
+           
+            }
+
             }
           `}</style>
         </div>
