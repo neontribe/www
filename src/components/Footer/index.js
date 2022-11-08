@@ -2,137 +2,39 @@ import React from 'react'
 
 import ConstrainedWidth from '../Layout/ConstrainedWidth'
 import Text from '../Text'
-import { InternalLink, ExternalLink } from '../Link'
-
-import { breakpoint } from '../../theme'
-
-import twitterlogo from './twitterlogo.svg'
+import logo from '../logo.svg'
+import { c_NEON_PURPLE } from '../../theme'
 
 export default () => (
-  <ConstrainedWidth>
-    <div className="container">
-      <Text lineHeight={2}>
-        <footer>
-          <div className="row addresses">
-            <div>
-              <Text lineHeight={1.5}>
-                <address>
-                  <b>Norwich Office</b>
-                  <br />
-                  Unit B, Seymour House
-                  <br />
-                  30-34 Muspole Street
-                  <br />
-                  Norwich
-                  <br />
-                  NR3 1DJ
-                </address>
-              </Text>
-            </div>
-
-            <div>
-              <Text lineHeight={1.5}>
-                <address>
-                  <b>Exeter Office</b>
-                  <br />
-                  Kaleider Studios
-                  <br />
-                  45 Preston Street
-                  <br />
-                  Exeter
-                  <br />
-                  EX1 1DF
-                </address>
-              </Text>
-            </div>
-          </div>
-
-          <div className="row">
-            <div>
-              <ExternalLink href="mailto:hello@neontribe.co.uk">
-                hello@neontribe.co.uk
-              </ExternalLink>
-            </div>
-
-            <div>
-              <ExternalLink href="tel:0845 689 0896">
-                0845 689 0896
-              </ExternalLink>
-            </div>
-
-            <div>
-              <ExternalLink href="http://twitter.com/neontribe">
-                <img src={twitterlogo} className="twitterlogo" alt="" />{' '}
-                @neontribe
-              </ExternalLink>
-            </div>
-
-            <div>
-              <Text lineHeight={2}>
-                <InternalLink
-                  to="/privacy-policy"
-                  title={`Link to privacy policy`}
-                >
-                  Privacy Policy
-                </InternalLink>
-              </Text>
-            </div>
-          </div>
-        </footer>
-      </Text>
-    </div>
+  <footer className="footer-container">
+    <ConstrainedWidth paddingTop="2rem">
+      {/* container */}
+      <div className="flex-container">
+        <div>
+          {' '}
+          <img className="logo" src={logo} alt="Neontribe" />{' '}
+        </div>
+        <Text size="normal">
+          <a href="/privacy-policy">Privacy policy</a>
+        </Text>
+      </div>
+    </ConstrainedWidth>
 
     <style jsx>{`
-      .row {
+      .footer-container {
+        width: 100%;
+        background-color: ${c_NEON_PURPLE};
+      }
+
+      .flex-container {
         display: flex;
-        flex-wrap: wrap;
         justify-content: space-between;
-        align-items: stretch;
       }
 
-      .container {
-      }
-
-      .row > * {
-      }
-
-      .row:last-child {
-        flex-direction: column;
-      }
-
-      .addresses > * {
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-      }
-
-      b {
-        font-weight: bold;
-      }
-
-      .twitterlogo {
-        display: inline-block;
-        height: 1rem;
-      }
-
-      @media (${breakpoint('sm')}) {
-        .row:last-child {
-          flex-direction: row;
-        }
-
-        .row {
-          margin-left: -1rem;
-          margin-right: -1rem;
-        }
-
-        .row > * {
-          margin-left: 1rem;
-          margin-right: 1rem;
-        }
-
-        .addresses {
-          justify-content: center;
-        }
+      .logo {
+        height: 1.5rem;
+        width: 100%;
       }
     `}</style>
-  </ConstrainedWidth>
+  </footer>
 )
