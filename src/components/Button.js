@@ -10,12 +10,12 @@ import {
 } from '../theme'
 
 const StyledLink = ({
-  children,
-  border_color,
-  connect,
   background,
-  margin_left,
+  border_color,
   buttonWidth,
+  children,
+  connect,
+  margin_left,
   mobileSize,
 }) => (
   <>
@@ -28,26 +28,20 @@ const StyledLink = ({
     </button>
     <style jsx>{`
       button {
-        vertical-align: middle;
-        padding: 0.5rem 2rem;
         ${background ? `background-color: ${background};` : ''}
-        border-radius: 350px;
-
-        cursor: pointer;
-        max-width: 200ch;
-        max-height: 100%;
-        text-align: center;
-        border-style: solid;
-        color: black;
-
         ${border_color ? `border-color: ${border_color};` : ''}
-        font-weight:700;
-
         ${margin_left ? `margin-left: ${margin_left};` : ''}
-        font-size:1.25rem;
-        font-family: ${FONT_SECONDARY};
-        font-weight: bold;
+        border-radius: 350px;
+        border-style: solid;
         color: ${c_TEXT_LIGHT};
+        cursor: pointer;
+        font-family: ${FONT_SECONDARY};
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-align: center;
+
+        max-width: 200ch;
+        padding: 0.5rem 2rem;
       }
 
       button:hover {
@@ -67,12 +61,12 @@ const StyledLink = ({
   </>
 )
 Text.propTypes = {
-  connect: PropTypes.string,
-  children: PropTypes.node,
-  border_color: PropTypes.string,
   background: PropTypes.string,
-  margin_left: PropTypes.string,
+  border_color: PropTypes.string,
   buttonWidth: PropTypes.string,
+  children: PropTypes.node,
+  connect: PropTypes.string,
+  margin_left: PropTypes.string,
   mobileSize: PropTypes.string,
 }
 
