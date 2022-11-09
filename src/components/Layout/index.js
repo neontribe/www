@@ -65,7 +65,7 @@ const Layout = ({ children }) => (
 
       p {
         margin: 0;
-        line-height: 1;
+        line-height: 1.8;
       }
 
       p + p {

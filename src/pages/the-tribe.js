@@ -12,7 +12,7 @@ import VerticalSpacing from '../components/VerticalSpacing'
 import StyledLink from '../components/Button'
 import PageMeta from '../components/PageMeta'
 import tribeArcs from '../components/tribeArcs.svg'
-
+import HireContainer from '../components/HireContainer'
 const TheTribePage = () => (
   <Layout>
     <PageMeta
@@ -67,15 +67,53 @@ const TheTribePage = () => (
       <TriberGrid />
     </ConstrainedWidth>
 
-    <VerticalSpacing size={12} />
-
-    <Text size="large">
-      <H withArcs>Join The Tribe</H>
-    </Text>
-
     <VerticalSpacing size={2} />
 
-    <TheTribeBottomParagraph />
+    <PageTop>
+      <ConstrainedWidth paddingTop="3rem">
+        <Text size="large" lineHeight={2} color="#48e9ce">
+          <H>Join The Tribe</H>
+        </Text>
+
+        <VerticalSpacing size={2} />
+        <div className="flex-box">
+          <div className="subtitle-restrict">
+            {' '}
+            <TheTribeBottomParagraph />
+          </div>
+
+          {/* <ArcContainer>
+            {' '}
+            <img paddingTop="1rem" src={Arcs} />{' '}
+          </ArcContainer> */}
+        </div>
+
+        <VerticalSpacing size={5} />
+
+        <HireContainer>
+          <StyledLink
+            connect="https://docs.google.com/forms/d/e/1FAIpQLScThzeOla4FG2tEGfUVthAb8ZyTIzSGb0nB_tcqSlYSbrIjZA/viewform?usp=sf_link"
+            background="#5600ee"
+            border_color="#5600ee"
+          >
+            Tell us about you
+          </StyledLink>
+
+          <Text
+            paddingLeft="2rem"
+            paddingTop="1rem"
+            size="normal"
+            color="#48e9ce"
+            align="center"
+          >
+            <a href="mailto:hello@neontribe.co.uk">
+              {' '}
+              Or email: hello@neontribe.co.uk{' '}
+            </a>
+          </Text>
+        </HireContainer>
+      </ConstrainedWidth>
+    </PageTop>
 
     <style jsx>{`
      
@@ -83,7 +121,7 @@ const TheTribePage = () => (
       max-width:70ch;
 
     }
-     
+   
      
      
      

@@ -11,6 +11,8 @@ const Text = ({
   align,
   lineHeight,
   color,
+  paddingTop,
+  paddingLeft,
   hyphenation = false,
 }) => (
   <div className={classNames('text', hyphenation && 'hyphenation')}>
@@ -24,6 +26,8 @@ const Text = ({
         ${align ? `text-align: ${align};` : ''}
         ${color ? `color: ${color};` : ''}
         ${lineHeight ? `line-height: ${lineHeight};` : ''}
+        ${paddingTop ? `padding-top: ${paddingTop};` : ''}
+        ${paddingLeft ? `padding-left: ${paddingLeft};` : ''}
       }
 
       .hyphenation {
@@ -42,6 +46,8 @@ Text.propTypes = {
   lineHeight: PropTypes.number,
   size: PropTypes.oneOf(Object.keys(fontSizes)),
   color: PropTypes.string,
+  paddingTop: PropTypes.string,
+  paddingLeft: PropTypes.string,
 }
 
 Text.defaultProps = {
