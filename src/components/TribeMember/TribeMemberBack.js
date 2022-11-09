@@ -13,7 +13,7 @@ const TribeMemberBack = ({
   bio,
   social,
   preventTabFocus,
-  display,
+
 }) => {
   const socialKeys = social ? Object.keys(social) : []
   var socialCount = 0
