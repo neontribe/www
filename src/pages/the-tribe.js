@@ -12,6 +12,7 @@ import VerticalSpacing from '../components/VerticalSpacing'
 import StyledLink from '../components/Button'
 import PageMeta from '../components/PageMeta'
 import tribeArcs from '../components/tribeArcs.svg'
+import circleArc from '../components/circleArc.svg'
 import HireContainer from '../components/HireContainer'
 const TheTribePage = () => (
   <Layout>
@@ -82,10 +83,10 @@ const TheTribePage = () => (
             <TheTribeBottomParagraph />
           </div>
 
-          {/* <ArcContainer>
+          <div className="arc-container">
             {' '}
-            <img paddingTop="1rem" src={Arcs} />{' '}
-          </ArcContainer> */}
+            <img src={circleArc} />{' '}
+          </div>
         </div>
 
         <VerticalSpacing size={5} />
@@ -121,7 +122,14 @@ const TheTribePage = () => (
       max-width:70ch;
 
     }
-   
+
+    .arc-container {
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      
+    }
+  
      
      
      
@@ -137,6 +145,8 @@ const TheTribePage = () => (
         padding-right:9.5%'
         // REMINDER TO SORT OUT MOBILE ADJUSTMENT
       }
+
+     
 
     `}</style>
   </Layout>
