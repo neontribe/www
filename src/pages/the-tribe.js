@@ -51,7 +51,7 @@ const TheTribePage = () => (
         </div>
 
         <VerticalSpacing size={5} />
-        <div className="test">
+        <HireContainer>
           <StyledLink
             connect="/what-we-are-doing"
             background="#5600ee"
@@ -59,7 +59,7 @@ const TheTribePage = () => (
           >
             Join the tribe
           </StyledLink>
-        </div>
+        </HireContainer>
       </ConstrainedWidth>
     </PageTop>
     <VerticalSpacing size={8} />
@@ -72,7 +72,7 @@ const TheTribePage = () => (
 
     <PageTop>
       <ConstrainedWidth paddingTop="3rem">
-        <Text size="large" lineHeight={2} color="#48e9ce">
+        <Text size="large" lineHeight={2} color="#48e9ce" paddingTop="2rem">
           <H>Join The Tribe</H>
         </Text>
 
@@ -117,37 +117,46 @@ const TheTribePage = () => (
     </PageTop>
 
     <style jsx>{`
-     
-     .subtitle-restrict {
-      max-width:70ch;
-
-    }
-
-    .arc-container {
-      display:flex;
-      flex-direction: column;
-      justify-content: center;
-      
-    }
-  
-     
-     
-     
-     .flex-box {
-        display:flex;
-        justify-content:space-between;
-
+      .arc-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
 
-      .image-container{
-        padding-bottom:5rem;
-        margin-top:1rem;
-        padding-right:9.5%'
-        // REMINDER TO SORT OUT MOBILE ADJUSTMENT
+      .subtitle-restrict {
+        max-width: 70ch;
       }
 
-     
+      .image-container {
+        padding-bottom: 5rem;
+        margin-top: 2rem;
+        padding-right: 9.5%;
+      }
 
+      .flex-box {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      @media (max-width: 860px) {
+        .image-container {
+          align-self: center;
+          display: flex;
+          flex-direction: column;
+          padding-bottom: 0rem;
+        }
+
+        .flex-box {
+          flex-direction: column;
+        }
+
+        .arc-container {
+          flex-direction: row;
+          justify-content: center;
+          padding-top: 2rem;
+          padding-bottom: 1rem;
+        }
+      }
     `}</style>
   </Layout>
 )
