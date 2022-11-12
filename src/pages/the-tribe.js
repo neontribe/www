@@ -67,9 +67,7 @@ const TheTribePage = () => (
       {' '}
       <TriberGrid />
     </ConstrainedWidth>
-
     <VerticalSpacing size={2} />
-
     <PageTop>
       <ConstrainedWidth paddingTop="3rem">
         <Text size="large" lineHeight={2} color="#48e9ce" paddingTop="2rem">
@@ -115,7 +113,7 @@ const TheTribePage = () => (
         </HireContainer>
       </ConstrainedWidth>
     </PageTop>
-
+    {/* TODO: Define variables for screensizes once all pages have been pushed */}
     <style jsx>{`
       .arc-container {
         display: flex;
