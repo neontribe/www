@@ -6,7 +6,10 @@ import H from '../components/Heading'
 import Text from '../components/Text'
 import TriberGrid from '../components/TriberGrid'
 import PageTop from '../components/PageTop'
-import { TheTribeBottomParagraph } from '../components/TheTribeParagraphs'
+import {
+  BottomParagraphOne,
+  BottomParagraphTwo,
+} from '../components/TheTribeParagraphs'
 
 import VerticalSpacing from '../components/VerticalSpacing'
 import StyledLink from '../components/Button'
@@ -75,10 +78,15 @@ const TheTribePage = () => (
         </Text>
 
         <VerticalSpacing size={2} />
+        <div className="subtitle-restrict">
+          {' '}
+          <BottomParagraphOne />
+        </div>
+        <VerticalSpacing size={5} />
         <div className="flex-box">
           <div className="subtitle-restrict">
             {' '}
-            <TheTribeBottomParagraph />
+            <BottomParagraphTwo />
           </div>
 
           <div className="arc-container">
