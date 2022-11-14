@@ -8,7 +8,6 @@ import { c_NEON_PURPLE } from '../../theme'
 export default () => (
   <footer className="footer-container">
     <ConstrainedWidth paddingTop="2rem">
-      {/* container */}
       <div className="flex-container">
         <div>
           {' '}
@@ -29,6 +28,7 @@ export default () => (
       .flex-container {
         display: flex;
         justify-content: space-between;
+        align-items: center;
       }
 
       .logo {
