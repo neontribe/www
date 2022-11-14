@@ -1,0 +1,215 @@
+import React from 'react'
+
+import Layout from '../components/Layout'
+import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
+
+import Text from '../components/Text'
+
+import VerticalSpacing from '../components/VerticalSpacing'
+import PageMeta from '../components/PageMeta'
+
+import Container from '../components/Container'
+import Twitter from '../components/twitter.svg'
+import PageTop from '../components/PageTop'
+import contactArcs from '../components/contactArcs.svg'
+import EmailLink from '../components/EmailLink'
+const ContactUs = () => (
+  <Layout>
+    <PageMeta title="Contact us" description="Enter in suitable description" />
+    <PageTop>
+      <ConstrainedWidth>
+        <Text size="xlarge" color="#48e9ce">
+          <h1>Get in touch</h1>
+        </Text>
+
+        <div className="contact-header">
+          <Text size="normal">
+            <div className="subtitle">
+              Drop us an email. We’d love to have a conversation about how we
+              could work with you.
+            </div>
+          </Text>
+          <div className="main-arc-container">
+            <img src={contactArcs} height={136} width={191} />
+          </div>
+        </div>
+
+        <EmailLink
+          link="/"
+          background="#5600ee"
+          border_color="#5600ee"
+          mobileSize="0.9rem"
+        >
+          Email: hello@neontribe.co.uk
+        </EmailLink>
+      </ConstrainedWidth>
+    </PageTop>
+    <VerticalSpacing size={5} />
+
+    <ConstrainedWidth>
+      <Text size="normal" color="black" maxCharacter="49ch">
+        Follow us on Twitter
+      </Text>
+
+      <div className="social-media-container">
+        <div className="social-media-labels">
+          <img src={Twitter} height={42} width={42}></img>
+
+          <Text color="#561dee" size="normal">
+            <h4>@neontribe</h4>
+          </Text>
+        </div>
+      </div>
+
+      <Text size="normal" color="black" maxCharacter="55ch">
+        We share our clients work and best practice in the tech for good sector.
+      </Text>
+    </ConstrainedWidth>
+
+    <VerticalSpacing size={3} />
+    <div className="white-background">
+      <ConstrainedWidth paddingTop="3em">
+        <Container mobileFlexDirection="column">
+          <div>
+            <Text color="black" size="normal" maxCharacter="53ch">
+              We work from home as well as in the office. Please check before
+              you plan a visit.
+            </Text>
+            <VerticalSpacing size={3}></VerticalSpacing>
+            <Container justifyContent="flex-start">
+              <Text color="#561dee">
+                <p>21 Colegate </p>
+                <p> Norwich</p>
+                <p>NR3 1BN </p>
+              </Text>
+
+              <Text paddingLeft="4rem" color="#561dee">
+                <p>Kaleider Studios </p>
+                <p> 45 Preston Street</p>
+                <p>Exeter</p>
+                <p>EX1 1DF </p>
+              </Text>
+            </Container>
+          </div>
+
+          <div className="answerphone-text">
+            <Text color="black" size="normal">
+              Leave a message on our answerphone if you’d like us to call you
+            </Text>
+
+            <VerticalSpacing size={2}></VerticalSpacing>
+
+            <Text color="#561dee">0845 689 0896</Text>
+          </div>
+        </Container>
+
+        <VerticalSpacing size={9}></VerticalSpacing>
+        <Text size="small" color="black">
+          <p>Neontribe Ltd</p>
+          <p>Registered in England & Wales Registration number: 06165574</p>
+          <p>Registered office: 106 Lincoln St. Norwich, Norfolk, NR2 3LB</p>
+        </Text>
+      </ConstrainedWidth>
+    </div>
+
+    <style jsx>{`
+      p {
+        line-height: 1;
+      }
+      .logo {
+        height: 1.5rem;
+        width: 100%;
+      }
+
+      .contact-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .subtitle {
+        max-width: 45ch;
+      }
+
+      .white-background {
+        background-color: white;
+        padding-top: 4rem;
+      }
+
+      .social-media-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .social-media-labels {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 4.9rem;
+        width: 15%;
+        align-items: center;
+      }
+
+      .button {
+        display: flex;
+      }
+
+      .main-arc-container {
+        display: flex;
+        padding-right: 6rem;
+      }
+
+      .contact-container {
+        display: flex;
+        padding-right: 2rem;
+      }
+
+      .twitter-container {
+        display: flex;
+        justify-content: flex-start;
+        padding-top: 1rem;
+      }
+
+      .answerphone-text {
+        padding-left: 10rem;
+        max-width: 40ch;
+      }
+
+      @media (max-width: 680px) {
+        .contact-container {
+          display: block;
+        }
+
+        .answerphone-text {
+          padding-left: 0;
+          max-width: 53ch;
+          padding-top: 2rem;
+        }
+      }
+
+      @media (max-width: 820px) {
+        .contact-header {
+          flex-direction: column;
+        }
+
+        .subtitle {
+          max-width: 100%;
+        }
+
+        .button {
+          flex-direction: column;
+          max-width: 100%;
+        }
+      }
+
+      @media (max-width: 860px) {
+        .main-arc-container {
+          justify-content: center;
+          padding-right: 0;
+        }
+      }
+    `}</style>
+  </Layout>
+)
+
+export default ContactUs
