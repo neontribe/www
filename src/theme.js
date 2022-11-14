@@ -54,7 +54,7 @@ export const breakpoint = (size) => {
 
 // ---------- COLOUR -----------
 const c_NEON_PINK = '#ff37ab'
-const c_NEON_PURPLE = '#5600ee'
+
 const c_BLACK = '#000'
 const c_WHITE = '#fff'
 
@@ -62,7 +62,7 @@ const c_WHITE = '#fff'
 export const c_TEXT_LIGHT = c_WHITE
 export const c_TEXT_DARK = c_BLACK
 export const c_NEON_TEAL = '#48e9ce'
-
+export const c_NEON_PURPLE = '#561dee'
 export const c_PRIMARY_BACKGROUND = c_BLACK
 export const c_SECONDARY_BACKGROUND = c_WHITE
 
