@@ -1,31 +1,23 @@
 import React from 'react'
 import slugify from 'slugify'
-import Malarquee from 'react-malarquee'
+
 import { StaticQuery, graphql } from 'gatsby'
-import classNames from 'classnames'
 
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import H from '../components/Heading'
 import Section from '../components/Section'
 import Text from '../components/Text'
+
 import VerticalSpacing from '../components/VerticalSpacing'
 import WorkDescription from '../components/WorkDescription'
 import { ExternalLink } from '../components/Link'
 import PageMeta from '../components/PageMeta'
-import Divider from '../components/Divider'
 
-import castLogo from '../data/funders/cast-logo.png'
-import comicReliefLogo from '../data/funders/comic-relief-logo.png'
-import mhfLogo from '../data/funders/mhf-logo.png'
-import phfLogo from '../data/funders/PHF-logo.jpg'
+import Container from '../components/Container'
 
-const collaborationsMap = [
-  { id: 'cast', src: castLogo, alt: 'Cast' },
-  { id: 'comic-relief', src: comicReliefLogo, alt: 'Comic Relief' },
-  { id: 'mhf', src: mhfLogo, alt: 'Mental Health Foundation' },
-  { id: 'phf', src: phfLogo, alt: 'Paul Hamlyn Foundation' },
-]
+import EmailLink from '../components/EmailLink'
+import PageTop from '../components/PageTop'
 
 const WhatWeAreDoingPage = () => (
   <Layout>
@@ -33,49 +25,35 @@ const WhatWeAreDoingPage = () => (
       title="What we do"
       description="Neontribe is a digital agency. We research for context. We design for use. We code to completion. We test to exhaustion. Then we engineer enhancement."
     />
+    <PageTop>
+      <ConstrainedWidth>
+        <Text size="xlarge" color="#48e9ce">
+          <h1>Explore our projects</h1>
+        </Text>
 
-    <ConstrainedWidth>
-      <Text size="large" align="center">
-        <h1>What we do</h1>
-      </Text>
+        <Container justifyContent="space-between" projectFlex="column">
+          <Text size="normal">
+            <p className="sub-heading">
+              Neontribe help people provide better digital services. We work
+              with you to understand your users' needs and we produce digital
+              tools including code,content and design
+            </p>
+          </Text>
 
-      <VerticalSpacing size={4} />
+          {/* <div className="heading-arc">
+            <img src={circles} height={128} width={277} />{' '}
+          </div> */}
+        </Container>
 
-      <Text size="medium">
-        <p>
-          Neontribe has a national reputation for our work in tech-for-good, and
-          an international reputation in travel and tourism. Our work identifies
-          the issues organisations have and finds ways to help them out. Our
-          design and development focuses on the people those organisations work
-          with, their situations and stories.
-        </p>
-      </Text>
-    </ConstrainedWidth>
-
-    <VerticalSpacing size={10} />
-
-    <div className="carousel">
-      <Malarquee fill hoverToPause rate={25}>
-        <div className="logos">
-          {collaborationsMap.map(({ id, ...item }) => (
-            <img
-              key={id}
-              className={classNames('logo', id)}
-              {...item}
-              alt={item.alt || ''}
-            />
-          ))}
+        <VerticalSpacing size={3} />
+        <div>
+          <p>Browse our favourite projects to find out more</p>
         </div>
-      </Malarquee>
-    </div>
-
+      </ConstrainedWidth>
+    </PageTop>
     <VerticalSpacing size={10} />
 
-    <ConstrainedWidth>
-      <Text size="large">
-        <H withArcs>Recent Projects</H>
-      </Text>
-    </ConstrainedWidth>
+    <VerticalSpacing size={10} />
 
     <VerticalSpacing size={4} />
 
@@ -92,6 +70,7 @@ const WhatWeAreDoingPage = () => (
                   problem
                   solution
                   client
+
                   image {
                     childImageSharp {
                       fluid(maxWidth: 768) {
@@ -110,7 +89,7 @@ const WhatWeAreDoingPage = () => (
               {index !== 0 ? (
                 <>
                   <VerticalSpacing size={8} />
-                  <Divider />
+
                   <VerticalSpacing size={8} />
                 </>
               ) : null}
@@ -123,6 +102,9 @@ const WhatWeAreDoingPage = () => (
                 imagePosition={index % 2 === 0 ? 'left' : 'right'}
                 problem={project.frontmatter.problem}
                 solution={project.frontmatter.solution}
+                // fund={project.frontmatter.fund}
+                // budget={project.frontmatter.budget}
+                // timescale={project.frontmatter.timescale}
               />
             </React.Fragment>
           ))
@@ -132,43 +114,73 @@ const WhatWeAreDoingPage = () => (
 
     <VerticalSpacing size={10} />
 
-    <ConstrainedWidth>
-      <Text align="center">
-        <Text size="large">
-          <H>Get in touch</H>
-        </Text>
-
-        <VerticalSpacing size={1} />
-
-        <Text size="medium">
-          <ExternalLink href="mailto:hello@neontribe.co.uk">
-            hello@neontribe.co.uk
-          </ExternalLink>
-        </Text>
+    <ConstrainedWidth paddingLeft="2.4rem">
+      <Text size="large" color="black">
+        <H>Get in touch</H>
       </Text>
+      <VerticalSpacing size={3} />
+      <Container projectFlex="column">
+        <div>
+          <Text size="normal" color="black" maxCharacter="49ch">
+            Filler copy- why/ when they should get in touch/ when to expect a
+            reply- do we have a multiple ways to contact block here or stick
+            with just the email funnel?
+          </Text>
+
+          <VerticalSpacing size={5} />
+
+          <EmailLink
+            link="mailto:hello@neontribe.co.uk"
+            background="#5600ee"
+            border_color="#5600ee"
+            mobileSize="0.9rem"
+          >
+            Email: hello@neontribe.co.uk
+          </EmailLink>
+        </div>
+        {/* <div className="footer-arc">
+          <img src={Arcs} height={136} width={191} />
+        </div> */}
+      </Container>
     </ConstrainedWidth>
 
     <style jsx>{`
-      .carousel {
-        margin: 0 -2rem;
-      }
-
-      .logos {
-        display: flex;
-        align-items: center;
-      }
-
       .logo {
-        height: 4rem;
-        margin: 0 2rem;
+        height: 1.5rem;
+        width: 100%;
       }
 
-      .logo.comic-relief {
-        height: 8rem;
+      .sub-heading {
+        line-height: 2;
+        max-width: 56ch;
       }
 
-      .logo.phf {
-        height: 5rem;
+      .heading-arc {
+        padding-bottom: 0.5rem;
+        padding-right: 2rem;
+        justify-content: space-between;
+      }
+
+      .footer-arc {
+        padding-left: 10rem;
+        padding-bottom: 4rem;
+      }
+
+      @media (max-width: 860px) {
+        .heading-arc {
+          padding-right: 0;
+          padding-top: 2rem;
+        }
+
+        .sub-heading {
+          padding-top: 1rem;
+        }
+
+        .footer-arc {
+          padding: 0;
+          display: flex;
+          justify-content: center;
+        }
       }
     `}</style>
   </Layout>
