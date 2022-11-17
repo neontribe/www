@@ -1,43 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Container = ({
-  children,
-  paddingRight,
-  paddingLeft,
-  paddingTop,
-  paddingBottom,
-  align,
-  justifyContent,
-  mobileFlexDirection,
-  flexDirection,
-  projectFlex,
-}) => (
+// TODO: replace all flex-box css classes with this component
+const Container = ({ children, justifyContent, mobileFlexDirection }) => (
   <div className="container">
     {children}
 
     <style jsx>{`
       .container {
-        ${paddingRight ? `padding-right: ${paddingRight};` : ''}
-        ${paddingBottom ? `padding-bottom: ${paddingBottom};` : ''}
-        ${paddingLeft ? `padding-left: ${paddingLeft};` : ''}
-        ${align ? `align-items: ${align};` : ''}
         ${justifyContent ? `justify-content: ${justifyContent};` : ''}
-        ${paddingTop ? `padding-top: ${paddingTop};` : ''}
+
         display: flex;
-        ${flexDirection ? `flex-direction: ${flexDirection};` : ''}
       }
-      }
-      @media (max-width: 680px) {
+
+      @media (max-width: 860px) {
         .container {
-          ${
-            mobileFlexDirection ? `flex-direction: ${mobileFlexDirection};` : ''
-          }
-        }
-      }
-      @media (max-width: 680px) {
-        .container {
-          ${projectFlex ? `flex-direction: ${projectFlex};` : ''}
+          ${mobileFlexDirection
+            ? `flex-direction: ${mobileFlexDirection};`
+            : ''}
         }
       }
     `}</style>
@@ -46,14 +26,8 @@ const Container = ({
 
 Container.propTypes = {
   children: PropTypes.node,
-  paddingTop: PropTypes.string,
   justifyContent: PropTypes.string,
-  align: PropTypes.string,
-  paddingRight: PropTypes.string,
-  paddingLeft: PropTypes.string,
-  paddingBottom: PropTypes.string,
   mobileFlexDirection: PropTypes.string,
-  projectFlex: PropTypes.string,
 }
 
 export default Container
