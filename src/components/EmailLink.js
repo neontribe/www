@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Text from './Text'
+import { c_NEON_TEAL, c_TEXT_DARK } from '../theme'
 
 const EmailLink = ({
   children,
@@ -31,6 +32,12 @@ const EmailLink = ({
         font-size:0.9rem;
         font-family: KeepCalm;
         font-weight: bold;
+      }
+
+      div:hover {
+        background-color: ${c_NEON_TEAL};
+        border-color: ${c_NEON_TEAL};
+        color: ${c_TEXT_DARK};
       }
       @media (max-width: 860px) {
         div {
