@@ -133,7 +133,8 @@ const ContactUs = () => (
 
       .white-background {
         background-color: white;
-        padding-top: 4rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
       }
 
       .social-media-container {
@@ -145,8 +146,8 @@ const ContactUs = () => (
       .social-media-labels {
         display: flex;
         justify-content: space-between;
-        margin-right: 4.9rem;
-        width: 15%;
+        margin-right: 10vh;
+        width: 15vh;
         align-items: center;
       }
 
@@ -166,7 +167,6 @@ const ContactUs = () => (
 
       .twitter-container {
         display: flex;
-        justify-content: flex-start;
         padding-top: 1rem;
       }
 
@@ -175,9 +175,9 @@ const ContactUs = () => (
         max-width: 40ch;
       }
 
-      @media (max-width: 680px) {
-        .contact-container {
-          display: block;
+      @media (max-width: 860px) {
+        .contact-header {
+          flex-direction: column;
         }
 
         .answerphone-text {
@@ -185,27 +185,41 @@ const ContactUs = () => (
           max-width: 53ch;
           padding-top: 2rem;
         }
-      }
 
-      @media (max-width: 820px) {
-        .contact-header {
+        .social-media-container {
+          width: 100%;
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+
           flex-direction: column;
+          align-items: start;
+        }
+
+        .contact-header {
+          align-items: start;
+        }
+
+        .social-media-labels {
+          margin-right: 0;
+          align-items: start;
+          display: block;
         }
 
         .subtitle {
           max-width: 100%;
+          padding-top: 2rem;
         }
 
         .button {
           flex-direction: column;
           max-width: 100%;
         }
-      }
-
-      @media (max-width: 860px) {
         .main-arc-container {
           justify-content: center;
           padding-right: 0;
+          margin-top: 3rem;
+          margin-bottom: 3rem;
+          width: 100%;
         }
       }
     `}</style>

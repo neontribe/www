@@ -14,8 +14,6 @@ const Page = ({ title, children }) => (
 
     <main role="main">{children}</main>
 
-    <VerticalSpacing size={8} />
-
     <Footer />
 
     <style jsx>{`
