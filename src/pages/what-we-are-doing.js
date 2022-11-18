@@ -124,9 +124,8 @@ const WhatWeAreDoingPage = () => (
       <Container mobileFlexDirection="column">
         <div>
           <Text size="normal" color="black" maxCharacter="49ch">
-            {/* Filler copy- why/ when they should get in touch/ when to expect a
-            reply- do we have a multiple ways to contact block here or stick
-            with just the email funnel? */}
+            Interested in working with us? Please feel free to get in touch via
+            email.
           </Text>
 
           <VerticalSpacing size={5} />
