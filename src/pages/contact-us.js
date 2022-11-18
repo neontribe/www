@@ -15,7 +15,10 @@ import contactArcs from '../components/contactArcs.svg'
 import EmailLink from '../components/EmailLink'
 const ContactUs = () => (
   <Layout>
-    <PageMeta title="Contact us" description="Enter in suitable description" />
+    <PageMeta
+      title="Contact us"
+      description="To get in touch, you can contact us via email or twitter."
+    />
     <PageTop>
       <ConstrainedWidth>
         <Text size="xlarge" color="#48e9ce">
@@ -56,7 +59,7 @@ const ContactUs = () => (
           <img src={Twitter} height={42} width={42}></img>
 
           <Text color="#561dee" size="normal">
-            <h4>@neontribe</h4>
+            @neontribe
           </Text>
         </div>
       </div>
@@ -78,16 +81,20 @@ const ContactUs = () => (
             <VerticalSpacing size={3}></VerticalSpacing>
             <Container justifyContent="flex-start">
               <Text color="#561dee">
-                <p>21 Colegate </p>
-                <p> Norwich</p>
-                <p>NR3 1BN </p>
+                <address>
+                  <p>21 Colegate </p>
+                  <p> Norwich</p>
+                  <p>NR3 1BN </p>
+                </address>
               </Text>
 
               <Text paddingLeft="4rem" color="#561dee">
-                <p>Kaleider Studios </p>
-                <p> 45 Preston Street</p>
-                <p>Exeter</p>
-                <p>EX1 1DF </p>
+                <address>
+                  <p>Kaleider Studios </p>
+                  <p> 45 Preston Street</p>
+                  <p>Exeter</p>
+                  <p>EX1 1DF </p>
+                </address>
               </Text>
             </Container>
           </div>
