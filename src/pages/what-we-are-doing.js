@@ -5,20 +5,21 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
+import contactArcs from '../components/contactArcs.svg'
 import H from '../components/Heading'
 import Section from '../components/Section'
 import Text from '../components/Text'
 
 import VerticalSpacing from '../components/VerticalSpacing'
 import WorkDescription from '../components/WorkDescription'
-import { ExternalLink } from '../components/Link'
+import threeArcs from '../components/threeArcs.svg'
 import PageMeta from '../components/PageMeta'
 
 import Container from '../components/Container'
 
 import EmailLink from '../components/EmailLink'
 import PageTop from '../components/PageTop'
-
+// TODO: Fill what is currently commented out with copy
 const WhatWeAreDoingPage = () => (
   <Layout>
     <PageMeta
@@ -30,19 +31,20 @@ const WhatWeAreDoingPage = () => (
         <Text size="xlarge" color="#48e9ce">
           <h1>Explore our projects</h1>
         </Text>
+        <VerticalSpacing size={3} />
 
-        <Container justifyContent="space-between" projectFlex="column">
+        <Container justifyContent="space-between" mobileFlexDirection="column">
           <Text size="normal">
             <p className="sub-heading">
               Neontribe help people provide better digital services. We work
               with you to understand your users' needs and we produce digital
-              tools including code,content and design
+              tools including code, content and design
             </p>
           </Text>
 
-          {/* <div className="heading-arc">
-            <img src={circles} height={128} width={277} />{' '}
-          </div> */}
+          <div className="heading-arc">
+            <img src={threeArcs} height={128} width={277} />{' '}
+          </div>
         </Container>
 
         <VerticalSpacing size={3} />
@@ -119,12 +121,12 @@ const WhatWeAreDoingPage = () => (
         <H>Get in touch</H>
       </Text>
       <VerticalSpacing size={3} />
-      <Container projectFlex="column">
+      <Container mobileFlexDirection="column">
         <div>
           <Text size="normal" color="black" maxCharacter="49ch">
-            Filler copy- why/ when they should get in touch/ when to expect a
+            {/* Filler copy- why/ when they should get in touch/ when to expect a
             reply- do we have a multiple ways to contact block here or stick
-            with just the email funnel?
+            with just the email funnel? */}
           </Text>
 
           <VerticalSpacing size={5} />
@@ -137,10 +139,11 @@ const WhatWeAreDoingPage = () => (
           >
             Email: hello@neontribe.co.uk
           </EmailLink>
+          <VerticalSpacing size={5} />
         </div>
-        {/* <div className="footer-arc">
-          <img src={Arcs} height={136} width={191} />
-        </div> */}
+        <div className="footer-arc">
+          <img src={contactArcs} height={136} width={191} />
+        </div>
       </Container>
     </ConstrainedWidth>
 
@@ -170,10 +173,12 @@ const WhatWeAreDoingPage = () => (
         .heading-arc {
           padding-right: 0;
           padding-top: 2rem;
+          align-self: center;
         }
 
         .sub-heading {
           padding-top: 1rem;
+          max-width: 100%;
         }
 
         .footer-arc {

@@ -42,15 +42,6 @@ const Content = (props) => (
         margin: 0;
       }
 
-      // .content li::before {
-      //   color: #ff37ab;
-      //   content: '•';
-      //   display: inline-block;
-      //   width: 1em;
-
-      //   font-weight: bold;
-      // }
-
       .content > div > div:not(:first-child) {
         margin-top: 2rem;
       }

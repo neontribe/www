@@ -1,7 +1,5 @@
 import React, { Children } from 'react'
 import PropTypes from 'prop-types'
-import { breakpoint } from '../../theme'
-import VerticalSpacing from '../VerticalSpacing'
 
 // Copied from FlipCard
 const findChild = (children, { displayName }) =>
@@ -40,6 +38,7 @@ const Content = ({ children }) => (
         padding-top: 2.3rem;
         padding-left: 2.3rem;
         padding-right: 3.5rem;
+        padding-bottom: 2rem;
         border-radius: 38px;
         display: flex;
         justify-content: space-around;

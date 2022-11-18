@@ -94,7 +94,10 @@ const WorkDescription = ({ id, title, client, fluid, problem, solution }) => (
 
       .title {
         max-width: 45ch;
-        display: block;
+
+        display: inline-flex;
+        align-items: center;
+        line-height: 1.5;
       }
 
       .leaf {
