@@ -89,6 +89,7 @@ const WorkDescription = ({ id, title, client, fluid, problem, solution }) => (
       }
       .white-background {
         background-color: white;
+        border-radius: 0 0 38px 0;
       }
 
       .title {
