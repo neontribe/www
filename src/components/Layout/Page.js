@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
+import { c_TEXT_DARK } from '../../theme'
 import Header from '../Header'
 import Footer from '../Footer'
 
@@ -8,9 +8,11 @@ import VerticalSpacing from '../VerticalSpacing'
 
 const Page = ({ title, children }) => (
   <div className="page-layout">
-    <Header siteTitle={title} />
+    <div className="introduction">
+      <Header siteTitle={title} />
 
-    <VerticalSpacing size={12} />
+      <VerticalSpacing size={5} />
+    </div>
 
     <main role="main">{children}</main>
 
@@ -21,6 +23,10 @@ const Page = ({ title, children }) => (
         min-height: 100%;
         display: flex;
         flex-direction: column;
+      }
+
+      .introduction {
+        background-color: ${c_TEXT_DARK};
       }
 
       main {

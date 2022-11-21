@@ -5,35 +5,14 @@ import { breakpoint, c_NAV_ACTIVE, FONT_SECONDARY } from '../theme'
 import { InternalLink } from './Link'
 import Text from './Text'
 import ConstrainedWidth from './Layout/ConstrainedWidth'
-import { ExternalLink } from './Link'
 
 import logo from './logo.svg'
-import menuActive from './menu-active.svg'
 
 const activeLinkStyles = css.resolve`
   a {
-    padding-bottom: 4px;
     border-bottom: 4px solid ${c_NAV_ACTIVE};
-  }
 
-  @media (${breakpoint('md')}) {
-    a {
-      position: relative;
-      border-bottom: none;
-    }
-
-    a:after {
-      content: '';
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: -100%;
-      margin: auto;
-      height: 26px;
-      width: 50px;
-      background-image: url('${menuActive}');
-      background-repeat: no-repeat;
-    }
+    color: #48e9ce;
   }
 `
 
@@ -54,17 +33,15 @@ const Nav = () => (
   <nav className="nav">
     <ul className="list">
       <li>
-        <NavLink active to="/what-we-are-doing">
-          What we're doing
+        <NavLink active to="/our-work">
+          Our work
         </NavLink>
       </li>
       <li>
         <NavLink to="/the-tribe">The tribe</NavLink>
       </li>
       <li>
-        <ExternalLink href="mailto:hello@neontribe.co.uk">
-          hello@neontribe.co.uk
-        </ExternalLink>
+        <NavLink to="/contact-us">Contact us</NavLink>
       </li>
     </ul>
 
@@ -75,27 +52,26 @@ const Nav = () => (
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        justify-content: center;
-        flex-direction: column;
+        flex-direction: row;
         list-style: none;
         width: 100%;
+        font-size: 20px;
       }
 
       .list > * + * {
-        margin-top: 1rem;
+        margin-top: 0;
+        margin-left: 3rem;
       }
 
-      @media (${breakpoint('md')}) {
-        /* Needs to be insync with the breakpoint below */
+      @media (max-width: 530px) {
         .list {
-          justify-content: space-between;
-          flex-direction: row;
-          width: auto;
+          flex-direction: column;
+          margin: 0;
         }
 
         .list > * + * {
           margin-top: 0;
-          margin-left: 3rem;
+          margin-left: 0;
         }
       }
     `}</style>
@@ -119,27 +95,33 @@ const Header = () => (
     <style jsx>{`
       .header {
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
         margin: 1rem -1rem 0;
         font-family: ${FONT_SECONDARY};
+        width: 100%;
       }
 
       .header > * {
         display: flex;
         flex: 1 0 auto;
-        justify-content: center;
+
         align-items: center;
         margin: 1rem;
+      }
+
+      .nav-wrapper {
+        display: flex;
+        justify-content: flex-end;
       }
 
       .logo {
         height: 2rem;
       }
 
-      @media (${breakpoint('lg')}) {
+      @media (max-width: 860px) {
         .header {
-          align-items: flex-end;
-          justify-content: space-between;
+          display: block;
         }
 
         .header > * {
