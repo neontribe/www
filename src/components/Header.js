@@ -79,7 +79,7 @@ const Nav = () => (
 )
 
 const Header = () => (
-  <ConstrainedWidth>
+  <ConstrainedWidth mobilePaddingBottom="0rem">
     <header className="header">
       <div>
         <InternalLink to="/" title="Link to Neontribe homepage">
