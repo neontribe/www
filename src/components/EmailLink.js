@@ -20,7 +20,7 @@ const EmailLink = ({
         ${background ? `background-color: ${background};` : ''}
         border-radius: 350px;
         cursor: pointer;
-        width: 31vh;
+        width: 18vw;
         max-height: 100%;
         text-align: center;
         border-style: solid;
