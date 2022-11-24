@@ -162,8 +162,8 @@ const ContactUs = () => (
       .social-media-labels {
         display: flex;
         justify-content: space-between;
-        margin-right: 6.5vw;
-        width: 9vw;
+        margin-right: 80px;
+        width: 150px;
         align-items: center;
       }
 
