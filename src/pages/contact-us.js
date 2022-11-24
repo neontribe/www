@@ -56,16 +56,15 @@ const ContactUs = () => (
 
       <div className="social-media-container">
         <div className="social-media-labels">
-          <img src={Twitter} height={42} width={42}></img>
+          <img
+            src={Twitter}
+            height={42}
+            width={42}
+            alt="This link navigates to the @neontribe twitter page"
+          />
 
           <Text color="#561dee" size="normal">
-            <a
-              href="https://twitter.com/neontribe"
-              alt="Follow us on Twitter at @neontribe"
-            >
-              {' '}
-              @neontribe
-            </a>
+            <a href="https://twitter.com/neontribe"> @neontribe</a>
           </Text>
         </div>
       </div>
