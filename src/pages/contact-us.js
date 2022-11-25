@@ -38,7 +38,7 @@ const ContactUs = () => (
         </div>
 
         <EmailLink
-          link="/"
+          link="mailto:hello@neontribe.co.uk"
           background="#5600ee"
           border_color="#5600ee"
           mobileSize="0.9rem"
@@ -56,10 +56,15 @@ const ContactUs = () => (
 
       <div className="social-media-container">
         <div className="social-media-labels">
-          <img src={Twitter} height={42} width={42}></img>
+          <img
+            src={Twitter}
+            height={42}
+            width={42}
+            alt="This link navigates to the @neontribe twitter page"
+          />
 
           <Text color="#561dee" size="normal">
-            @neontribe
+            <a href="https://twitter.com/neontribe"> @neontribe</a>
           </Text>
         </div>
       </div>
@@ -82,9 +87,12 @@ const ContactUs = () => (
             <Container justifyContent="flex-start">
               <Text color="#561dee">
                 <address>
-                  <p>21 Colegate </p>
-                  <p> Norwich</p>
-                  <p>NR3 1BN </p>
+                  <p>Norwich Office </p>
+                  <p> Unit B</p>
+                  <p>Seymour House </p>
+                  <p>30-34 Muspole Street</p>
+                  <p>Norwich</p>
+                  <p>NR3 1DJ</p>
                 </address>
               </Text>
 
@@ -153,8 +161,8 @@ const ContactUs = () => (
       .social-media-labels {
         display: flex;
         justify-content: space-between;
-        margin-right: 10vh;
-        width: 15vh;
+        margin-right: 80px;
+        width: 150px;
         align-items: center;
       }
 
