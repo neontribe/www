@@ -72,7 +72,7 @@ export const c_CALL_TO_ACTION_HOVER = '#620aff'
 export const c_NAV_ACTIVE = c_NEON_PINK
 
 // Typography
-export const FONT_PRIMARY = 'Muli, sans-serif'
+export const FONT_PRIMARY = 'muli, sans-serif'
 export const FONT_SECONDARY = 'KeepCalm, sans-serif'
 
 export const fontSizes = {
