@@ -7,7 +7,6 @@ const EmailLink = ({
   children,
   border_color,
   background,
-  margin_left,
   mobileSize,
   link,
 }) => (
@@ -21,15 +20,15 @@ const EmailLink = ({
         ${background ? `background-color: ${background};` : ''}
         border-radius: 350px;
         cursor: pointer;
-        width: 31vh;
+        width: 18vw;
         max-height: 100%;
         text-align: center;
         border-style: solid;
         color: white;
         ${border_color ? `border-color: ${border_color};` : ''}
         font-weight:700;
-        ${margin_left ? `margin-left: ${margin_left};` : ''}
-        font-size:0.9rem;
+
+        font-size: 0.9rem;
         font-family: KeepCalm;
         font-weight: bold;
       }
@@ -55,7 +54,6 @@ Text.propTypes = {
   children: PropTypes.node,
   border_color: PropTypes.string,
   background: PropTypes.string,
-  margin_left: PropTypes.string,
   mobileSize: PropTypes.string,
 }
 

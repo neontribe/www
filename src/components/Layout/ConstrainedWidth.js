@@ -2,7 +2,7 @@ import { PAGE_WIDTH_REM } from '../../theme'
 import PropTypes from 'prop-types'
 import React from 'react'
 
-const ConstrainedWidth = ({ children, paddingTop }) => (
+const ConstrainedWidth = ({ children, paddingTop, mobilePaddingBottom }) => (
   <div className="constrained-container">
     {children}
 
@@ -23,6 +23,14 @@ const ConstrainedWidth = ({ children, paddingTop }) => (
           padding-right: 2rem;
         }
       }
+
+      @media (max-width: 530px) {
+        .constrained-container {
+          ${mobilePaddingBottom
+            ? `padding-bottom: ${mobilePaddingBottom};`
+            : ''}
+        }
+      }
     `}</style>
   </div>
 )
@@ -30,6 +38,7 @@ const ConstrainedWidth = ({ children, paddingTop }) => (
 ConstrainedWidth.propTypes = {
   children: PropTypes.node,
   paddingTop: PropTypes.string,
+  mobilePaddingBottom: PropTypes.string,
 }
 
 export default ConstrainedWidth
