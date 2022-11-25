@@ -17,9 +17,6 @@ const Content = (props) => (
         border: none;
       }
 
-      .content li + li {
-      }
-
       .content ul {
         margin-block-start: 0;
         margin-block-end: 0;
