@@ -129,7 +129,7 @@ const Header = () => {
                 {isOpen && (
                   <ul className="list">
                     <li className="first-item">
-                      <NavLink active to="/what-we-are-doing">
+                      <NavLink active to="/our-work">
                         Our Work
                       </NavLink>
                     </li>

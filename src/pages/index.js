@@ -78,7 +78,7 @@ const IndexPage = () => (
 
         <section>
           <StyledLink
-            connect="/what-we-are-doing"
+            connect="/our-work"
             background="#5600ee"
             border_color="#5600ee"
           >
