@@ -56,7 +56,7 @@ const TheTribePage = () => (
         <VerticalSpacing size={5} />
         <HireContainer>
           <StyledLink
-            connect="/what-we-are-doing"
+            connect="https://docs.google.com/forms/d/e/1FAIpQLScThzeOla4FG2tEGfUVthAb8ZyTIzSGb0nB_tcqSlYSbrIjZA/viewform?usp=sf_link"
             background="#5600ee"
             border_color="#5600ee"
           >
