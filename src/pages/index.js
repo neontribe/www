@@ -5,7 +5,7 @@ import Text from '../components/Text'
 import Smile from '../components/Smile'
 import VerticalSpacing from '../components/VerticalSpacing'
 import PageMeta from '../components/PageMeta'
-import StyledLink from '../components/Button'
+import EmailLink from '../components/Button'
 import HomeTop from '../components/HomeTop'
 
 const IndexPage = () => (
@@ -77,21 +77,21 @@ const IndexPage = () => (
         <VerticalSpacing size={6} />
 
         <section>
-          <StyledLink
-            connect="/what-we-are-doing"
+          <EmailLink
+            connect="/our-work"
             background="#5600ee"
             border_color="#5600ee"
           >
             See our work
-          </StyledLink>
+          </EmailLink>
 
-          <StyledLink
+          <EmailLink
             connect="/the-tribe"
             background="black"
             border_color="#48e9ce"
           >
             Meet the tribe
-          </StyledLink>
+          </EmailLink>
 
           <style jsx>{`
             display: flex;

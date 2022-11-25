@@ -12,7 +12,7 @@ import {
 } from '../components/TheTribeParagraphs'
 
 import VerticalSpacing from '../components/VerticalSpacing'
-import StyledLink from '../components/Button'
+import EmailLink from '../components/Button'
 import PageMeta from '../components/PageMeta'
 import tribeArcs from '../components/tribeArcs.svg'
 import circleArc from '../components/circleArc.svg'
@@ -55,13 +55,13 @@ const TheTribePage = () => (
 
         <VerticalSpacing size={5} />
         <HireContainer>
-          <StyledLink
-            connect="/what-we-are-doing"
+          <EmailLink
+            connect="https://docs.google.com/forms/d/e/1FAIpQLScThzeOla4FG2tEGfUVthAb8ZyTIzSGb0nB_tcqSlYSbrIjZA/viewform"
             background="#5600ee"
             border_color="#5600ee"
           >
             Join the tribe
-          </StyledLink>
+          </EmailLink>
         </HireContainer>
       </ConstrainedWidth>
     </PageTop>
@@ -98,13 +98,13 @@ const TheTribePage = () => (
         <VerticalSpacing size={5} />
 
         <HireContainer>
-          <StyledLink
+          <EmailLink
             connect="https://docs.google.com/forms/d/e/1FAIpQLScThzeOla4FG2tEGfUVthAb8ZyTIzSGb0nB_tcqSlYSbrIjZA/viewform?usp=sf_link"
             background="#5600ee"
             border_color="#5600ee"
           >
             Tell us about you
-          </StyledLink>
+          </EmailLink>
 
           <Text
             paddingLeft="2rem"
