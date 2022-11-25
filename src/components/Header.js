@@ -1,11 +1,7 @@
-// To do:
-// Make the mobile bar look good
-// Do logic to show one or the other depending on window size
-
 import React, { useState, useEffect } from 'react'
 import css from 'styled-jsx/css'
 
-import { breakpoint, c_NAV_ACTIVE, FONT_SECONDARY } from '../theme'
+import { c_NAV_ACTIVE, FONT_SECONDARY, c_NEON_PURPLE } from '../theme'
 import { InternalLink } from './Link'
 import Text from './Text'
 import ConstrainedWidth from './Layout/ConstrainedWidth'
@@ -89,85 +85,6 @@ const DesktopNav = () => {
   )
 }
 
-const MobileNav = () => {
-  const [isOpen, setIsOpen] = useState(false)
-
-  return (
-    <div className="testing">
-      <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
-        &#8801;
-      </button>
-      <nav className="mobile-nav">
-        {isOpen && (
-          <ul className="list">
-            <li className="first-item">
-              <NavLink active to="/what-we-are-doing">
-                Our Work
-              </NavLink>
-            </li>
-            <li>
-              <NavLink to="/the-tribe">The tribe</NavLink>
-            </li>
-            <li>
-              <NavLink to="/contact-us">Contact</NavLink>
-            </li>
-          </ul>
-        )}
-      </nav>
-
-      <style jsx>{`
-        .testing {
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          left: 0.6rem;
-
-          width: 96%;
-          position: absolute;
-          align-items: center;
-          height: 100%;
-          z-index: 1;
-        }
-
-        li:not(:first-child) {
-          padding-top: 3rem;
-        }
-
-        .list {
-          background-color: purple;
-          padding-right: 2rem;
-
-          display: flex;
-          flex-direction: column;
-          height: 100%;
-          align-items: center;
-          justify-content: flex-start;
-          padding-top: 50%;
-          width: 100%;
-          list-style: none;
-        }
-
-        .mobile-nav {
-          width: 100%;
-          margin-right: 0.2rem;
-          height: 100%;
-          max-height: 100%;
-        }
-
-        .hamburger {
-          background: none;
-          color: white;
-          border: none;
-          font-size: 3rem;
-          margin: 0;
-          padding-right: 1rem;
-          display: flex;
-          align-self: flex-end;
-        }
-      `}</style>
-    </div>
-  )
-}
 const isBrowser = typeof window !== 'undefined'
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -236,7 +153,7 @@ const Header = () => {
         }
 
         .other {
-          background-color: purple;
+          background-color: ${c_NEON_PURPLE};
         }
 
         .header {
@@ -281,7 +198,7 @@ const Header = () => {
         }
 
         .list {
-          background-color: purple;
+          background-color: ${c_NEON_PURPLE};
           padding-right: 2rem;
 
           display: flex;
