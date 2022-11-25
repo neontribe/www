@@ -50,12 +50,4 @@ Text.propTypes = {
   paddingLeft: PropTypes.string,
 }
 
-Text.defaultProps = {
-  weight: '400',
-  align: 'inherit',
-  lineHeight: 'inherit',
-  size: 'inherit',
-  color: 'inheirt',
-}
-
 export default Text
