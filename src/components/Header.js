@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import css from 'styled-jsx/css'
 
-import { c_NAV_ACTIVE, FONT_SECONDARY, c_NEON_PURPLE } from '../theme'
+import { c_NAV_ACTIVE, FONT_SECONDARY, c_TEXT_DARK } from '../theme'
 import { InternalLink } from './Link'
 import Text from './Text'
 import ConstrainedWidth from './Layout/ConstrainedWidth'
@@ -111,7 +111,7 @@ const Header = () => {
   }, [])
 
   return (
-    <div className={classNames('introduction', isOpen && 'other')}>
+    <div className="header-container">
       <ConstrainedWidth>
         <header className="header">
           <div className="logo-container">
@@ -153,26 +153,11 @@ const Header = () => {
       </ConstrainedWidth>
       <VerticalSpacing size={5} />
       <style jsx>{`
-        .introduction {
-          background-color: black;
-        }
-
-        .other {
-          background-color: ${c_NEON_PURPLE};
+        .header-container {
+          background-color: ${c_TEXT_DARK};
         }
 
         .z-value {
-          background-color: ${c_NEON_PURPLE};
-          padding-right: 2rem;
-          display: flex;
-          flex-direction: column;
-          height: 100%;
-          align-items: center;
-          justify-content: flex-start;
-          padding-top: 50%;
-          width: 100%;
-          list-style: none;
-          position: relative;
           z-index: 2;
         }
 
@@ -217,7 +202,7 @@ const Header = () => {
         }
 
         .list {
-          background-color: ${c_NEON_PURPLE};
+          background-color: ${c_TEXT_DARK};
           padding-right: 2rem;
 
           position: relative;
