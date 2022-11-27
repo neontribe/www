@@ -56,6 +56,7 @@ const Layout = ({ children }) => (
         margin-top: 0.5rem;
         display: flex;
         flex-direction: column;
+        margin: 0;
       }
 
       a {
