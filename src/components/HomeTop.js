@@ -14,6 +14,7 @@ const HomeTop = ({ children }) => (
         display: flex;
         flex-direction: column;
         justify-content: center;
+        position: relative;
       }
     `}</style>
   </div>
