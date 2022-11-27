@@ -127,7 +127,12 @@ const Header = () => {
               </button>
               <nav className="mobile-nav">
                 {isOpen && (
-                  <ul className="list">
+                  <ul
+                    className={classNames(
+                      'list',
+                      windowSize < 500 && 'z-value'
+                    )}
+                  >
                     <li className="first-item">
                       <NavLink active to="/our-work">
                         Our Work
@@ -154,6 +159,21 @@ const Header = () => {
 
         .other {
           background-color: ${c_NEON_PURPLE};
+        }
+
+        .z-value {
+          background-color: ${c_NEON_PURPLE};
+          padding-right: 2rem;
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+          align-items: center;
+          justify-content: flex-start;
+          padding-top: 50%;
+          width: 100%;
+          list-style: none;
+          position: relative;
+          z-index: 2;
         }
 
         .header {
@@ -190,7 +210,6 @@ const Header = () => {
           position: absolute;
           align-items: center;
           height: 100%;
-          z-index: 1;
         }
 
         li:not(:first-child) {
@@ -200,6 +219,8 @@ const Header = () => {
         .list {
           background-color: ${c_NEON_PURPLE};
           padding-right: 2rem;
+
+          position: relative;
 
           display: flex;
           flex-direction: column;

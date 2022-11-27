@@ -10,6 +10,7 @@ const PageTop = ({ children }) => (
         background-color: black;
         padding-top: 2rem;
         padding-bottom: 4rem;
+        position: relative;
       }
 
       @media (max-width: 530px) {
