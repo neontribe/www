@@ -134,7 +134,7 @@ const WhatWeAreDoingPage = () => (
             link="mailto:hello@neontribe.co.uk"
             background="#5600ee"
             border_color="#5600ee"
-            mobileSize="0.9rem"
+            fontSize="0.9rem"
           >
             Email: hello@neontribe.co.uk
           </EmailLink>

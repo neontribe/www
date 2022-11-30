@@ -41,7 +41,7 @@ const ContactUs = () => (
           link="mailto:hello@neontribe.co.uk"
           background="#5600ee"
           border_color="#5600ee"
-          mobileSize="0.9rem"
+          fontSize="0.9rem"
         >
           Email: hello@neontribe.co.uk
         </EmailLink>
@@ -129,8 +129,9 @@ const ContactUs = () => (
 
     <style jsx>{`
       p {
-        line-height: 1;
+        line-height: 1.1;
       }
+
       .logo {
         height: 1.5rem;
         width: 100%;
@@ -235,6 +236,12 @@ const ContactUs = () => (
           margin-top: 3rem;
           margin-bottom: 3rem;
           width: 100%;
+        }
+      }
+
+      @media (max-width: 500px) {
+        p {
+          line-height: 1.5;
         }
       }
     `}</style>

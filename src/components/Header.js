@@ -89,7 +89,7 @@ const isBrowser = typeof window !== 'undefined'
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
   // Hook to detect screen size and returns true if screen is a desktop/tablet size and false if it is a mobile
-  console.log({ isOpen })
+
   function checkScreenWidth() {
     if (isBrowser) {
       return window.innerWidth
@@ -121,7 +121,7 @@ const Header = () => {
           </div>
           {windowSize > 500 && <DesktopNav />}
           {windowSize < 500 && (
-            <div className="testing">
+            <div className="hamburger-menu-container">
               <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
                 &#8801;
               </button>
@@ -186,13 +186,13 @@ const Header = () => {
           height: 2rem;
         }
 
-        .testing {
+        .hamburger-menu-container {
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
-          left: 0.6rem;
+          left: 0.1rem;
 
-          width: 96%;
+          width: 100%;
           position: absolute;
           align-items: center;
           height: 100%;
