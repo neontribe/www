@@ -4,13 +4,18 @@ import classNames from 'classnames'
 
 import Text from '../components/Text'
 import { ExternalLink } from '../components/Link'
-
-import arcs from './arcs.svg'
+import { c_NEON_PURPLE } from '../theme'
 
 const Content = (props) => (
   <>
     <div className="content" {...props} />
     <style jsx global>{`
+      .content {
+        background-color: white;
+        color: black;
+        padding: 2rem;
+      }
+
       .content * + * {
         margin-top: 1.5em;
       }
@@ -44,17 +49,7 @@ const Heading = ({ size, level, children, ...props }) => {
       <style jsx>{`
         .heading {
           display: inline-flex;
-        }
-
-        .with-arcs:before {
-          content: '';
-          display: block;
-          background-image: url('${arcs}');
-          background-position: left center;
-          background-repeat: no-repeat;
-          height: 2rem;
-          width: 2rem;
-          margin-right: 1.5rem;
+          color: ${c_NEON_PURPLE};
         }
       `}</style>
     </Text>
@@ -66,7 +61,7 @@ const RenderAst = ({ htmlAst, components = {}, children }) => {
     createElement: React.createElement,
     components: {
       h1: (props) => (
-        <Text align="center">
+        <Text>
           <Heading {...props} level={1} size="large" />
         </Text>
       ),
