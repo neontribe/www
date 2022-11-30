@@ -39,7 +39,7 @@ const DesktopNav = () => {
           </NavLink>
         </li>
         <li>
-          <NavLink to="/the-tribe">The tribe</NavLink>
+          <NavLink to="/the-tribe">The team</NavLink>
         </li>
         <li>
           <NavLink to="/contact-us">Contact</NavLink>
@@ -139,7 +139,7 @@ const Header = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink to="/the-tribe">The tribe</NavLink>
+                      <NavLink to="/the-tribe">The team</NavLink>
                     </li>
                     <li>
                       <NavLink to="/contact-us">Contact</NavLink>

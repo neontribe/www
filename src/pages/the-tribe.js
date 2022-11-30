@@ -21,7 +21,7 @@ import EmailLink from '../components/EmailLink'
 const TheTribePage = () => (
   <Layout>
     <PageMeta
-      title="The Tribe"
+      title="The Team"
       description="Neontribe is a digital agency. Why neon? It’s the colour of tech. Why tribe? Individuals collaborating, hand-making useful tools that do a job of work."
     />
     <PageTop>
