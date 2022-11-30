@@ -120,7 +120,7 @@ const Header = () => {
             </InternalLink>
           </div>
           {windowSize > 500 && <DesktopNav />}
-          {windowSize < 500 && (
+          {windowSize <= 500 && (
             <div className="hamburger-menu-container">
               <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
                 &#8801;
@@ -168,7 +168,7 @@ const Header = () => {
           font-family: ${FONT_SECONDARY};
         }
 
-        @media (max-width: 700px) and (min-width: 500px) {
+        @media (max-width: 700px) and (min-width: 501px) {
           .header {
             display: block;
           }

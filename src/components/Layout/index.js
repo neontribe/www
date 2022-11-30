@@ -22,8 +22,8 @@ const Layout = ({ children }) => (
 
       @font-face {
         font-family: 'KeepCalm';
-        ///src: url('/fonts/keepcalmmediumitalic.woff2') format('woff2'),
-        ///url('/fonts/keepcalmmediumitalic.woff') format('woff');
+        src: url('/fonts/keepcalmmediumitalic.woff2') format('woff2'),
+          url('/fonts/keepcalmmediumitalic.woff') format('woff');
         font-style: italic;
         font-display: swap;
       }

@@ -6,11 +6,15 @@ import remarkHtml from 'remark-html'
 import H from '../Heading'
 import VerticalSpacing from '../VerticalSpacing'
 import Text from '../Text'
+import { fontSizes } from '../../theme'
 
 const Content = (props) => (
   <>
     <div className="content" {...props} />
     <style jsx global>{`
+      .content {
+        font-size: ${fontSizes['normal']};
+      }
       .content * + * {
         margin: 0;
         padding: 0;
@@ -59,7 +63,7 @@ export default ({ problem, solution }) => {
 
   return (
     <>
-      <Text size="normal" color="#561dee" weight={700}>
+      <Text size="medium" color="#561dee" weight={700}>
         <H>Challenges</H>
       </Text>
 
@@ -70,7 +74,7 @@ export default ({ problem, solution }) => {
       {solution && (
         <>
           <VerticalSpacing size={2} />
-          <Text size="normal" color="#561dee" weight={700}>
+          <Text size="medium" color="#561dee" weight={700}>
             <H>How we helped</H>
           </Text>
           <VerticalSpacing size={1} />
@@ -85,7 +89,7 @@ export default ({ problem, solution }) => {
       <style jsx>{`
         .challenge {
           max-width: 60ch;
-          font-size: 18px;
+          font-size: ${fontSizes['normal']};
           line-height: 1.5;
         }
 

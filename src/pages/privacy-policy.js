@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 import RenderContent from '../components/RenderContent'
 import { StaticQuery, graphql } from 'gatsby'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
-import { c_PRIMARY_BACKGROUND } from '../theme'
+import { c_TEXT_LIGHT } from '../theme'
 import PageMeta from '../components/PageMeta'
 import PageTop from '../components/PageTop'
 import Text from '../components/Text'
@@ -60,7 +60,8 @@ const PrivacyPolicy = () => (
           </div>
           <style jsx>{`
             .text-bg {
-              background-color: ${c_PRIMARY_BACKGROUND};
+              background-color: ${c_TEXT_LIGHT};
+              padding: 2rem;
             }
           `}</style>
         </ConstrainedWidth>
