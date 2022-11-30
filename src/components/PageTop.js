@@ -11,6 +11,7 @@ const PageTop = ({ children }) => (
         padding-top: 2rem;
         padding-bottom: 4rem;
         position: relative;
+        height: 100%;
       }
 
       @media (max-width: 530px) {

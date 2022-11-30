@@ -33,7 +33,6 @@ export default () => (
 
       .logo {
         height: 1.5rem;
-        width: 100%;
       }
     `}</style>
   </footer>

@@ -194,6 +194,7 @@ const Header = () => {
           display: flex;
           flex-direction: column;
           justify-content: center;
+          z-index: 3;
         }
 
         .logo {
