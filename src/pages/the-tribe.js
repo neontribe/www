@@ -17,6 +17,7 @@ import PageMeta from '../components/PageMeta'
 import tribeArcs from '../components/tribeArcs.svg'
 import circleArc from '../components/circleArc.svg'
 import HireContainer from '../components/HireContainer'
+import EmailLink from '../components/EmailLink'
 const TheTribePage = () => (
   <Layout>
     <PageMeta
@@ -55,13 +56,13 @@ const TheTribePage = () => (
 
         <VerticalSpacing size={5} />
         <HireContainer>
-          <StyledLink
-            connect="https://docs.google.com/forms/d/e/1FAIpQLScThzeOla4FG2tEGfUVthAb8ZyTIzSGb0nB_tcqSlYSbrIjZA/viewform?usp=sf_link"
+          <EmailLink
+            link="https://docs.google.com/forms/d/e/1FAIpQLScThzeOla4FG2tEGfUVthAb8ZyTIzSGb0nB_tcqSlYSbrIjZA/viewform?usp=sf_link"
             background="#5600ee"
             border_color="#5600ee"
           >
             Join the tribe
-          </StyledLink>
+          </EmailLink>
         </HireContainer>
       </ConstrainedWidth>
     </PageTop>

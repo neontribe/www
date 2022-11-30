@@ -11,16 +11,18 @@ const EmailLink = ({
   link,
 }) => (
   <div>
-    <a href={link}>{children}</a>
+    <a href={link} target="_blank">
+      {children}
+    </a>
 
     <style jsx>{`
-      div {
+      a {
         vertical-align: middle;
         padding: 0.5rem 2rem;
         ${background ? `background-color: ${background};` : ''}
         border-radius: 350px;
         cursor: pointer;
-        width: 18vw;
+        max-width: 20vw;
         max-height: 100%;
         text-align: center;
         border-style: solid;
@@ -28,20 +30,27 @@ const EmailLink = ({
         ${border_color ? `border-color: ${border_color};` : ''}
         font-weight:700;
 
-        font-size: 0.9rem;
+        font-size: 1.25rem;
         font-family: KeepCalm;
         font-weight: bold;
       }
 
-      div:hover {
+      a:hover {
         background-color: ${c_NEON_TEAL};
         border-color: ${c_NEON_TEAL};
         color: ${c_TEXT_DARK};
       }
       @media (max-width: 860px) {
-        div {
-          width: 100%;
+        a {
+          width: 70vw;
           margin-bottom: 2rem;
+        }
+      }
+
+      @media (max-width: 500px) {
+        a {
+          width: 100vw;
+
           ${mobileSize ? `font-size: ${mobileSize};` : ''}
         }
       }

@@ -9,12 +9,26 @@ const HomeTop = ({ children }) => (
       .top {
         background-color: black;
         min-height: 80vh;
-        padding-top: 5vh;
-        padding-bottom: 5vh;
+        padding-top: 15vh;
+
         display: flex;
         flex-direction: column;
-        justify-content: center;
+
         position: relative;
+        height: 95vh;
+      }
+
+      @media (max-width: 860px) {
+        .top {
+          padding-top: 5vh;
+        }
+      }
+
+      @media (max-width: 680px) {
+        .top {
+          padding-top: 0;
+          height: unset;
+        }
       }
     `}</style>
   </div>
