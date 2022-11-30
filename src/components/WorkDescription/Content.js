@@ -66,7 +66,7 @@ export const Name = ({ children }) => <div>{children}</div>
 Name.displayName = 'WorkDescriptionName'
 Name.propTypes = propTypes
 // Title -------------------------------------
-export const Title = ({ children }) => <div className="hi">{children}</div>
+export const Title = ({ children }) => <div>{children}</div>
 
 Title.displayName = 'WorkDescriptionTitle'
 Title.propTypes = propTypes
