@@ -35,7 +35,7 @@ const DesktopNav = () => {
       <ul className="list">
         <li>
           <NavLink active to="/our-work">
-            Our Work
+            Our work
           </NavLink>
         </li>
         <li>
