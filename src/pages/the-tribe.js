@@ -37,6 +37,7 @@ const TheTribePage = () => (
               Neontribe are a mixture of software developers, researchers,
               content and ux designers and security specialists.{' '}
             </Text>
+            <a name="testing">Hello</a>
             <VerticalSpacing size={2.5} />
             <Text size="normal" lineHeight={2}>
               We encourage unusual routes into digital careers (no degree
@@ -77,6 +78,7 @@ const TheTribePage = () => (
         <Text size="large" lineHeight={2} color="#48e9ce" paddingTop="2rem">
           <H>Join The Tribe</H>
         </Text>
+        <a href="#testing">Hello</a>
 
         <VerticalSpacing size={2} />
         <div className="subtitle-restrict">
