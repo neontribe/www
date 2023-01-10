@@ -7,6 +7,7 @@ import VerticalSpacing from '../components/VerticalSpacing'
 import PageMeta from '../components/PageMeta'
 import StyledLink from '../components/Button'
 import HomeTop from '../components/HomeTop'
+import { fontSizes } from '../theme'
 
 const IndexPage = () => (
   <Layout>
@@ -111,6 +112,28 @@ const IndexPage = () => (
               justify-content: space-between;
               max-width: 100%;
               flex-direction: column;
+            }
+          `}</style>
+        </section>
+        <section>
+          <div>
+            <span className="blue-underlined"> In January this year </span> we
+            became part of the <span className="blue-underlined">dxw </span>{' '}
+            family
+          </div>
+
+          <style jsx>{`
+            div {
+              width: 100%;
+              margin-left: auto;
+              margin-right: 0;
+              width: 20ch;
+              font-size: ${fontSizes['normal']};
+            }
+
+            .blue-underlined {
+              color: #48e9ce;
+              text-decoration: underline;
             }
           `}</style>
         </section>
