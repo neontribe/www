@@ -5,6 +5,14 @@ words:
   - UX Design
   - Sharpie-wielder
 image: images/Rose_new.jpg
+social: # Rob carries the burden of having every social, so that the schema is correctly generated
+  twitter: ''
+  github: ''
+  linkedin: 'https://www.linkedin.com/in/rose-b-21361b39/'
+  instagram: ''
+  twitch: ''
+  facebook: ''
+  youtube: ''
 story: stories/rose.md
 ---
 
