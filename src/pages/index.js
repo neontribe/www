@@ -30,6 +30,16 @@ const IndexPage = () => (
             development and design. We're agile by instinct, and user-centred in
             our practice. We work together to identify and deliver on user need.
           </p>
+          <p>
+            In January this year we became part of the{' '}
+            <a
+              href="https://www.dxw.com/"
+              style={{ 'text-decoration': 'underline' }}
+            >
+              dxw
+            </a>{' '}
+            family.
+          </p>
         </Text>
       </section>
 
