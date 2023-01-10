@@ -5,7 +5,7 @@ import css from 'styled-jsx/css'
 import H from '../Heading'
 import Text from '../Text'
 import VerticalSpacing from '../VerticalSpacing'
-
+import { c_TEXT_DARK } from '../../theme'
 const imageStyles = css.resolve`
   .gatsby-image-wrapper {
     flex-grow: 1;
@@ -67,6 +67,7 @@ const TribeMemberFront = ({ image, name, skills, onClick }) => (
 
       .name-skills {
         flex-shrink: 0;
+        color: ${c_TEXT_DARK};
       }
 
       .fallback-image {

@@ -11,6 +11,10 @@ export default function HTML(props) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <link
+          rel="stylesheet"
+          href="https://use.typekit.net/arb8tfr.css"
+        ></link>
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>

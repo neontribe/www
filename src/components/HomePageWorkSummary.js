@@ -45,10 +45,7 @@ export default () => (
           <VerticalSpacing size={5} />
 
           <InternalLink
-            to={`/what-we-are-doing#${slugify(
-              randProj.frontmatter.title,
-              '-'
-            )}`}
+            to={`/our-work#${slugify(randProj.frontmatter.title, '-')}`}
             button
           >
             View our solution
