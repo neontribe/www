@@ -6,21 +6,41 @@ import remarkHtml from 'remark-html'
 import H from '../Heading'
 import VerticalSpacing from '../VerticalSpacing'
 import Text from '../Text'
+import { fontSizes } from '../../theme'
 
 const Content = (props) => (
   <>
     <div className="content" {...props} />
     <style jsx global>{`
+      .content {
+        font-size: ${fontSizes['normal']};
+      }
       .content * + * {
-        margin-top: 1.5em;
+        margin: 0;
+        padding: 0;
+        border: none;
       }
 
-      .content li + li {
-        margin-top: 1em;
+      .content ul {
+        margin-block-start: 0;
+        margin-block-end: 0;
+        padding-inline-start: 0;
+        white-space: normal;
+        list-style-position: outside;
+      }
+
+      li::marker {
+        color: hotpink;
+        padding-left: 2rem;
       }
 
       .content li {
         line-height: 1.5;
+
+        margin-left: 2rem;
+
+        padding: 0;
+        margin: 0;
       }
 
       .content > div > div:not(:first-child) {
@@ -43,28 +63,41 @@ export default ({ problem, solution }) => {
 
   return (
     <>
-      <Text size="normal" weight={700}>
+      <Text size="medium" color="#561dee" weight={700}>
         <H>Challenges</H>
       </Text>
 
-      <VerticalSpacing size={1} />
+      <VerticalSpacing size={0.5} />
 
-      <p>{problem}</p>
+      <p className="challenge">{problem}</p>
 
       {solution && (
         <>
           <VerticalSpacing size={2} />
-          <Text size="normal" weight={700}>
+          <Text size="medium" color="#561dee" weight={700}>
             <H>How we helped</H>
           </Text>
           <VerticalSpacing size={1} />
-
-          <Content
-            className="content"
-            dangerouslySetInnerHTML={{ __html: solution }}
-          />
+          <div className="extra-padding">
+            <Content
+              className="content"
+              dangerouslySetInnerHTML={{ __html: solution }}
+            />
+          </div>
         </>
       )}
+      <style jsx>{`
+        .challenge {
+          max-width: 60ch;
+          font-size: ${fontSizes['normal']};
+          line-height: 1.5;
+        }
+
+        .extra-padding {
+          padding-left: 1rem;
+          font-size: 18px;
+        }
+      `}</style>
     </>
   )
 }

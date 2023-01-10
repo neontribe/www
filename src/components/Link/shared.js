@@ -5,6 +5,7 @@ import {
   FONT_SECONDARY,
   c_CALL_TO_ACTION,
   c_CALL_TO_ACTION_HOVER,
+  c_NEON_TEAL,
 } from '../../theme'
 
 import Text from '../Text'
@@ -22,6 +23,10 @@ export const { className, styles } = css.resolve`
 
   a.button:hover {
     background-color: ${c_CALL_TO_ACTION_HOVER};
+  }
+
+  a:hover {
+    color: ${c_NEON_TEAL};
   }
 `
 

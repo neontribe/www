@@ -1,5 +1,3 @@
-# Neontribe Privacy Policy and Cookies
-
 This policy relates to www.neontribe.co.uk and related sub-domains of neontribe.co.uk (“the Site”) which is owned by Neontribe ltd and related activity.
 Neontribe ltd trading as Neontribe
 Registered as a limited company in England & Wales

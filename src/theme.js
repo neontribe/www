@@ -54,14 +54,15 @@ export const breakpoint = (size) => {
 
 // ---------- COLOUR -----------
 const c_NEON_PINK = '#ff37ab'
-const c_NEON_PURPLE = '#5600ee'
+
 const c_BLACK = '#000'
 const c_WHITE = '#fff'
 
 // Text + background colours
 export const c_TEXT_LIGHT = c_WHITE
 export const c_TEXT_DARK = c_BLACK
-
+export const c_NEON_TEAL = '#48e9ce'
+export const c_NEON_PURPLE = '#561dee'
 export const c_PRIMARY_BACKGROUND = c_BLACK
 export const c_SECONDARY_BACKGROUND = c_WHITE
 
@@ -71,12 +72,14 @@ export const c_CALL_TO_ACTION_HOVER = '#620aff'
 export const c_NAV_ACTIVE = c_NEON_PINK
 
 // Typography
-export const FONT_PRIMARY = 'Muli, sans-serif'
+export const FONT_PRIMARY = 'muli, sans-serif'
 export const FONT_SECONDARY = 'KeepCalm, sans-serif'
 
 export const fontSizes = {
   small: '0.85rem',
-  normal: '1rem',
+  normal: '1.1rem',
   medium: '1.25rem',
   large: '1.5rem',
+  xlarge: '2.5rem',
+  title: '3.4rem',
 }
