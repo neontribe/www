@@ -84,15 +84,7 @@ export default () => (
                   }
                 }
               }
-              social {
-                twitter
-                github
-                youtube
-                instagram
-                facebook
-                linkedin
-                twitch
-              }
+             
             }
           }
         }
