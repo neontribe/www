@@ -13,6 +13,7 @@ const Content = (props) => (
       .content {
         background-color: ${c_TEXT_LIGHT};
         color: ${c_TEXT_DARK};
+        padding: 1rem;
       }
 
       .content * + * {

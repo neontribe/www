@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { distanceInWordsToNow, parse } from 'date-fns'
 
+import { c_TEXT_DARK } from '../theme'
 import { InternalLink } from '../components/Link'
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
@@ -29,7 +30,9 @@ const BlogPage = ({
     <Layout>
       <PageMeta title="Blogs" />
       <ConstrainedWidth>
-        <Text size="large" weight={700} align="center">
+        <VerticalSpacing size={4} />
+
+        <Text size="large" weight="700" align="center">
           <h1>Our Blog</h1>
         </Text>
 
@@ -45,7 +48,7 @@ const BlogPage = ({
                   </Text>
                 </Section>
 
-                <Text size="large" weight={700}>
+                <Text size="large" weight="700">
                   <H>{node.frontmatter.title}</H>
                 </Text>
               </InternalLink>
@@ -55,6 +58,8 @@ const BlogPage = ({
       </ConstrainedWidth>
 
       <style jsx>{`
+        color: ${c_TEXT_DARK};
+
         ul {
           list-style: none;
           padding: 0;
