@@ -21,46 +21,63 @@ const imageStyles = css.resolve`
   }
 `
 
-const WorkDescription = ({
-  id,
-  title,
-  client,
-  fluid,
-  problem,
-  solution,
-  imagePosition,
-}) => (
+const WorkDescription = ({ id, title, client, fluid, problem, solution }) => (
   <section id={id}>
     <ConstrainedWidth>
-      <Content imagePosition={imagePosition}>
-        <Content.Title>
-          <Section>
+      <div className="white-background">
+        <Content>
+          <Content.Name>
             <Text size="normal">
-              <H>{client}</H>
+              <div className="leaf">
+                <h2 className="special-font-case">{client}</h2>
+              </div>
             </Text>
-          </Section>
+          </Content.Name>
+          <VerticalSpacing size={20} />
 
-          <VerticalSpacing size={1} />
+          <Content.Title>
+            <div className="title">
+              <Text size="medium" color="black" weight={700}>
+                <H>{title}</H>
+              </Text>
+            </div>
+            <VerticalSpacing size={5} />
+            <Content.Image>
+              <Img className={imageStyles.className} fluid={fluid} />
+            </Content.Image>
 
-          <Text size="medium" weight={700}>
-            <H>{title}</H>
-          </Text>
-        </Content.Title>
+            <VerticalSpacing size={5} />
 
-        <Content.Image>
-          <div className="image">
-            <Img className={imageStyles.className} fluid={fluid} />
-          </div>
-        </Content.Image>
+            <Text
+              color="#561dee"
+              size="normal"
+              weight="400"
+              maxCharacter="45ch"
+            >
+              {' '}
+              {/* <b>Funded by:</b> {fund} */}
+            </Text>
+            <VerticalSpacing size={1} />
+            <Text color="#561dee" size="normal" maxCharacter="30ch">
+              {' '}
+              {/* <b>Project cost:</b> {budget}{' '} */}
+            </Text>
+            <VerticalSpacing size={1} />
+            <Text color="#561dee" size="normal">
+              {' '}
+              {/* <b>Timescale:</b> {timescale}{' '} */}
+            </Text>
+          </Content.Title>
 
-        <Content.Description>
-          <Section>
+          <Content.Description>
             <Section>
-              <ProblemSolution problem={problem} solution={solution} />
+              <Section>
+                <ProblemSolution problem={problem} solution={solution} />
+              </Section>
             </Section>
-          </Section>
-        </Content.Description>
-      </Content>
+          </Content.Description>
+        </Content>
+      </div>
     </ConstrainedWidth>
 
     {imageStyles.styles}
@@ -68,7 +85,41 @@ const WorkDescription = ({
     <style jsx>{`
       .image {
         height: 100%;
-        max-height: 600px;
+        max-height: 200px;
+      }
+      .white-background {
+        background-color: white;
+        border-radius: 0 0 38px 0;
+      }
+
+      .title {
+        max-width: 45ch;
+
+        display: inline-flex;
+        align-items: center;
+        line-height: 1.5;
+      }
+
+      .leaf {
+        background-color: #561dee;
+        margin-bottom: 1rem;
+        padding: 12px 24px 13px 21px;
+        float: left;
+        font-size: 22px;
+        max-width: 60ch;
+
+        border-radius: 0 0 38px 0;
+        display: inline-block;
+      }
+      .special-font-case {
+        font-family: muli, sans-sarif;
+        font-weight: 700;
+      }
+
+      @media (max-width: 860px) {
+        .title {
+          max-width: 100%;
+        }
       }
     `}</style>
   </section>

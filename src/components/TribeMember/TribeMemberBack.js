@@ -13,6 +13,7 @@ const TribeMemberBack = ({
   bio,
   social,
   preventTabFocus,
+
 }) => {
   const socialKeys = social ? Object.keys(social) : []
   var socialCount = 0
@@ -35,14 +36,14 @@ const TribeMemberBack = ({
             {skills.join(' | ')}
           </Text>
         </div>
-        <div className="back-content">{bio}</div>
+        {!preventTabFocus && <div className="back-content">{bio}</div>}
       </div>
 
       {socialCount ? (
         <div className="social-icons">
           {socialKeys
-            .filter(site => social[site])
-            .map(site => (
+            .filter((site) => social[site])
+            .map((site) => (
               <SocialIcon
                 site={site}
                 handle={social[site]}
@@ -75,6 +76,16 @@ const TribeMemberBack = ({
         .back-content {
           margin-top: 1em;
           overflow: auto;
+          animation: fadein 4s;
+        }
+
+        @keyframes fadein {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
         }
 
         .social-icons {

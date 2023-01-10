@@ -4,7 +4,7 @@ import css from 'styled-jsx/css'
 
 const findChild = (children, { displayName }) =>
   Children.toArray(children).find(
-    child => child.type.displayName === displayName
+    (child) => child.type.displayName === displayName
   )
 const cloneWithProps = (node, props) => node && React.cloneElement(node, props)
 

@@ -4,21 +4,13 @@ import PropTypes from 'prop-types'
 import Header from '../Header'
 import Footer from '../Footer'
 
-import VerticalSpacing from '../VerticalSpacing'
-
 const Page = ({ title, children }) => (
   <div className="page-layout">
     <Header siteTitle={title} />
 
-    <VerticalSpacing size={12} />
-
     <main role="main">{children}</main>
 
-    <VerticalSpacing size={8} />
-
     <Footer />
-
-    <VerticalSpacing size={8} />
 
     <style jsx>{`
       .page-layout {

@@ -1,12 +1,10 @@
 import React, { Children } from 'react'
 import PropTypes from 'prop-types'
-import { breakpoint } from '../../theme'
-import VerticalSpacing from '../VerticalSpacing'
 
 // Copied from FlipCard
 const findChild = (children, { displayName }) =>
   Children.toArray(children).find(
-    child => child.type && child.type.displayName === displayName
+    (child) => child.type && child.type.displayName === displayName
   )
 const cloneWithProps = (node, props) => node && React.cloneElement(node, props)
 
@@ -15,45 +13,58 @@ const propTypes = {
   children: PropTypes.node,
 }
 
-const Content = ({ imagePosition = 'right', children }) => (
+const Content = ({ children }) => (
   <div className="work-description-content">
-    <div className="stacked-content">
+    <div className="title-description">
+      {cloneWithProps(findChild(children, Name), {
+        key: 'client',
+      })}
+
       {cloneWithProps(findChild(children, Title), {
         key: 'title',
-      })}
-
-      <VerticalSpacing size={3} />
-
-      {cloneWithProps(findChild(children, Image), {
-        key: 'image-middle',
-        middle: true,
-        imagePosition,
-      })}
-
-      {cloneWithProps(findChild(children, Description), {
-        key: 'description',
       })}
     </div>
 
     {cloneWithProps(findChild(children, Image), {
-      key: 'image-bottom',
-      imagePosition,
+      key: 'image',
+    })}
+
+    {cloneWithProps(findChild(children, Description), {
+      key: 'description',
     })}
 
     <style jsx>{`
       .work-description-content {
+        padding-top: 2.3rem;
+        padding-left: 2.3rem;
+        padding-right: 3.5rem;
+        padding-bottom: 2rem;
+        border-radius: 38px;
         display: flex;
-        justify-content: space-between;
-        ${imagePosition === 'left' ? 'flex-direction: row-reverse;' : ''}
+        justify-content: space-around;
+      }
+
+      .title-description {
+        display: block;
       }
 
       .stacked-content {
         flex: 1;
       }
+
+      @media (max-width: 860px) {
+        .work-description-content {
+          flex-direction: column;
+        }
+      }
     `}</style>
   </div>
 )
+// Name -------------------------------------
+export const Name = ({ children }) => <div>{children}</div>
 
+Name.displayName = 'WorkDescriptionName'
+Name.propTypes = propTypes
 // Title -------------------------------------
 export const Title = ({ children }) => <div>{children}</div>
 
@@ -61,24 +72,16 @@ Title.displayName = 'WorkDescriptionTitle'
 Title.propTypes = propTypes
 
 // Image -------------------------------------
-export const Image = ({ middle, imagePosition, children }) => (
+export const Image = ({ children }) => (
   <div className="image">
     {children}
 
     <style jsx>{`
       .image {
-        display: ${middle ? 'block' : 'none'};
-        margin-bottom: 2rem;
-      }
+        width: 100%;
+        height: 30%;
 
-      @media (${breakpoint('md')}) {
-        .image {
-          display: ${middle ? 'none' : 'block'};
-          flex-shrink: 0;
-          width: 33.33%;
-          margin-bottom: 0;
-          margin-${imagePosition === 'right' ? 'left' : 'right'}: 2rem;
-        }
+        margin-top: 1em;
       }
     `}</style>
   </div>
@@ -87,18 +90,39 @@ export const Image = ({ middle, imagePosition, children }) => (
 Image.displayName = 'WorkDescriptionImage'
 Image.propTypes = {
   ...propTypes,
-  middle: PropTypes.bool,
+
   imagePosition: PropTypes.oneOf(['left', 'right']),
 }
 
 // Description -------------------------------------
 export const Description = ({ children }) => (
-  <div className="description">{children}</div>
+  <div className="description">
+    {children}
+
+    <style jsx>{`
+      .description {
+        color: black;
+        width: 50%;
+        float: right;
+        white-space: pre-line;
+        padding-top: 4.8rem;
+        padding-left: 2rem;
+      }
+
+      @media (max-width: 860px) {
+        .description {
+          padding-left: 0;
+          width: 100%;
+          padding-top: 2rem;
+        }
+      }
+    `}</style>
+  </div>
 )
 
 Description.displayName = 'WorkDescriptionDescription'
 Description.propTypes = propTypes
-
+Content.Name = Name
 Content.Title = Title
 Content.Image = Image
 Content.Description = Description

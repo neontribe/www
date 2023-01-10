@@ -14,13 +14,13 @@ const Carousel = ({ children }) => {
   const [activeItem, setActiveItem] = React.useState(0)
 
   const nextItem = () => {
-    setActiveItem(prevActiveItem =>
+    setActiveItem((prevActiveItem) =>
       moduloWithMax(prevActiveItem + 1, children.length)
     )
   }
 
   const prevItem = () => {
-    setActiveItem(prevActiveItem =>
+    setActiveItem((prevActiveItem) =>
       moduloWithMax(prevActiveItem - 1, children.length)
     )
   }
@@ -32,7 +32,7 @@ const Carousel = ({ children }) => {
           <img className="arrow previous-arrow" src={Arrow} alt="" />
         </CarouselControl>
         <CarouselImages
-          images={React.Children.map(children, child => ({
+          images={React.Children.map(children, (child) => ({
             src: child.props.image,
             title: child.props.imageTitle,
           }))}

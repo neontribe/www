@@ -8,10 +8,7 @@ import { className, styles, LinkInternals } from './shared'
 const InternalLink = ({ button, children, ...linkProps }) => (
   <GatsbyLink
     {...linkProps}
-    className={classNames(
-      className,
-      button && 'button'
-    )}
+    className={classNames(className, button && 'button')}
   >
     <LinkInternals button={button}>{children}</LinkInternals>
 

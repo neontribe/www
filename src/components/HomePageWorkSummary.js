@@ -6,7 +6,7 @@ import VerticalSpacing from '../components/VerticalSpacing'
 import { WorkSummary } from '../components/WorkDescription'
 import { InternalLink } from '../components/Link'
 
-const randomItem = items => items[Math.floor(Math.random() * items.length)]
+const randomItem = (items) => items[Math.floor(Math.random() * items.length)]
 
 export default () => (
   <StaticQuery
@@ -31,7 +31,7 @@ export default () => (
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       const randProj = randomItem(data.projects.nodes)
 
       return (
@@ -45,10 +45,7 @@ export default () => (
           <VerticalSpacing size={5} />
 
           <InternalLink
-            to={`/what-we-are-doing#${slugify(
-              randProj.frontmatter.title,
-              '-'
-            )}`}
+            to={`/our-work#${slugify(randProj.frontmatter.title, '-')}`}
             button
           >
             View our solution

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Text from './Text'
 // TODO: drive this content from markdown
 export const TheTribeTopParagraph = () => (
   <p>
@@ -9,14 +9,24 @@ export const TheTribeTopParagraph = () => (
 )
 
 // TODO: drive this content from markdown
-export const TheTribeBottomParagraph = () => (
-  <p>
-    We’re always happy to hear from people who like the sound of Neontribe, and
-    want to grow their skills as a developer, or in user research or product
-    management. Maybe you’re already experienced, or maybe you're just getting
-    started. If you have an eagerness to learn more and want to be part of a
-    great company, contact us with a short description of the skills you have
-    and the skills you want to gain and we’ll let you know if we think there’s a
-    place for us to start talking. That's it.
-  </p>
+export const BottomParagraphOne = () => (
+  <Text size="normal">
+    <p>
+      We’re always happy to hear from people who like the sound of Neontribe,
+      and want to grow their skills as a developer, or in user research or
+      product management.{' '}
+    </p>
+  </Text>
+)
+
+export const BottomParagraphTwo = () => (
+  <Text size="normal">
+    <p>
+      Maybe you’re already experienced, or maybe you're just getting started. If
+      you have an eagerness to learn more and want to be part of a great
+      company, contact us with a short description of the skills you have and
+      the skills you want to gain and we’ll let you know if we think there’s a
+      place for us to start talking. That's it.
+    </p>
+  </Text>
 )
