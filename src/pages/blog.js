@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { distanceInWordsToNow, parse } from 'date-fns'
 
-import { c_TEXT_DARK } from '../theme'
+import { c_NEON_PURPLE, c_TEXT_DARK } from '../theme'
 import { InternalLink } from '../components/Link'
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
@@ -40,7 +40,7 @@ const BlogPage = ({
 
         <ul>
           {edges.map(({ node }) => (
-            <li key={node.id}>
+            <li key={node.id} className="blog">
               <InternalLink to={`/blog/${node.frontmatter.slug}`}>
                 <Section>
                   <Text size="normal">
@@ -68,6 +68,10 @@ const BlogPage = ({
 
         li + li {
           margin-top: 2rem;
+        }
+
+        ul :global(.blog > a:hover) {
+          color: ${c_NEON_PURPLE};
         }
       `}</style>
     </Layout>

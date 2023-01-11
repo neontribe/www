@@ -31,6 +31,10 @@ const Content = (props) => (
       .content a {
         text-decoration: underline;
       }
+
+      .content a:hover {
+        color: ${c_NEON_PURPLE};
+      }
     `}</style>
   </>
 )
