@@ -26,11 +26,11 @@ author_facebook: null
 author_twitter: null
 ---
 
-## Neontribe joins dxw in a move that will strengthen both agencies digital offers to third sector and public good organisations
+## Neontribe joins dxw in a move that will strengthen both agencies’ digital offers to third sector and public good organisations
 
-11 January 2023 – dxw, an employee-owned digital agency that designs, builds and runs digital public services today announces that Neontribe has joined the dxw family.
+11 January 2023 – [dxw](https://www.dxw.com/), an employee-owned digital agency that designs, builds and runs digital public services today announces that [Neontribe](https://www.neontribe.co.uk/) has joined the dxw family.
 
-Neontribe is a digital agency with 15 years of expertise in the third sector and, like dxw, is committed to delivering digital services that make a difference. Having developed a successful partnership and working together on projects including the recent creation of a new user-centred website for The Judiciary, the time was right for Neontribe to join dxw.
+Neontribe is a digital agency with 15 years of expertise in the third sector and, like dxw, is committed to delivering digital services that make a difference. Having developed a successful partnership and worked together on projects including the recent creation of a new user-centred website for The Judiciary, the time was right for Neontribe to join dxw.
 
 As agencies with aligned values, similar ways of working and a shared commitment to their people, this transition unlocks new opportunities to reach organisations working for public good. In coming together, dxw and Neontribe will share expertise and resources to increase their impact and deliver more digital services that improve lives.
 
@@ -40,10 +40,16 @@ With a well established and trusted reputation in the third sector, Neontribe wi
 
 Harry Harrold, Director at Neontribe, added: “Having worked with dxw over the years, we know the quality of the work we can do together. We understand how to create and run multidisciplinary teams that make an impact. Working in the best interests of service users is at the core of everything we do and, as part of the dxw family, we are even better placed to make that happen and help those who need it most.”
 
-## About dxw:
+[ENDS]
+
+Notes to editors
+
+Yorkshire law firm Berwins acted as legal advisers to dxw on the acquisition, Norwich lawyers Howes Percival advised the Neontribe shareholders.
+
+### About dxw:
 
 dxw is a leading employee-owned digital agency that creates better public services. dxw works with organisations in the public and charity sectors that are committed to improving people's lives, helping them to develop digital strategies, build their own digital capability, and research, design and operate better services. With its headquarters in Leeds and working nationwide, dxw has been delivering positive, sustainable change in the sector for over a decade.
 
-## About Neontribe:
+### About Neontribe:
 
-Neontribe is a digital agency that specialises in user research, software development and design for organisations in the third sector. Based in Norwich, Neontribe works with a number of charity and tech-for-good organisations including the National Council for Voluntary Organisations, the Alexandra Rose Charity, and Mind of my Own. Agile by instinct and user-centred in its practice, Neontribe works alongside its customers to identify and deliver services that meet users' needs and make a real difference.
+Neontribe is a digital agency that specialises in user research, software development and design for organisations in the third sector. Based in Norwich, Neontribe works with a number of charity and tech-for-good organisations including [NCVO](https://www.ncvo.org.uk/#/), [Alexandra Rose Charity](https://www.alexandrarose.org.uk/), and [Mind Of My Own](https://mindofmyown.org.uk/). Agile by instinct and user-centred in its practice, Neontribe works alongside its customers to identify and deliver services that meet users' needs and make a real difference.
