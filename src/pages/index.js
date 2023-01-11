@@ -1,98 +1,121 @@
 import React from 'react'
-
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import Text from '../components/Text'
+import Smile from '../components/Smile'
 import VerticalSpacing from '../components/VerticalSpacing'
-import H from '../components/Heading'
-import Section from '../components/Section'
-import { InternalLink, ExternalLink } from '../components/Link'
-
-import StoryCarousel from '../components/StoryCarousel'
-import HomePageWorkSummary from '../components/HomePageWorkSummary'
 import PageMeta from '../components/PageMeta'
+import StyledLink from '../components/Button'
+import HomeTop from '../components/HomeTop'
 
 const IndexPage = () => (
   <Layout>
     <PageMeta title="Welcome" />
+    <HomeTop>
+      <ConstrainedWidth>
+        <>
+          <h1>
+            <div className="heading-wrapper">
+              {' '}
+              <span> We are a </span>
+              <span>digital agency</span>
+            </div>
 
-    <ConstrainedWidth>
-      <section>
-        <Text size="large" align="center">
-          <h1>We solve problems</h1>
-        </Text>
+            <Text size="title" align="left" color="white">
+              <Smile />
+            </Text>
+          </h1>
 
-        <VerticalSpacing size={2} />
+          <style jsx>{`
+            .heading-wrapper {
+              text-align: left;
+              color: white;
+              font-size: 3.4rem;
+            }
 
-        <Text size="medium">
-          <p>
-            Neontribe is a digital agency working in user research, software
-            development and design. We're agile by instinct, and user-centred in
-            our practice. We work together to identify and deliver on user need.
-          </p>
-          <p>
-            In January this year we became part of the{' '}
-            <a
-              href="https://www.dxw.com/"
-              style={{ 'text-decoration': 'underline' }}
-            >
-              dxw
-            </a>{' '}
-            family.
-          </p>
-        </Text>
-      </section>
+            @media (max-width: 750px) {
+              .heading-wrapper {
+                display: flex;
+                flex-direction: column;
+              }
+            }
 
-      <VerticalSpacing size={16} />
+            @media (max-width: 500px) {
+              font-size: 37px;
+              line-height: 3rem;
+              max-width: fit-content(5rem);
+            }
+          `}</style>
+        </>
 
-      <section>
-        <Text size="large">
-          <H withArcs>What we're doing</H>
-        </Text>
-
-        <VerticalSpacing size={4} />
-
-        <Section>
-          <HomePageWorkSummary />
-        </Section>
-      </section>
-
-      <VerticalSpacing size={16} />
-
-      <section>
-        <Text size="large">
-          <H withArcs>Journeys to the Tribe</H>
-        </Text>
-
-        <VerticalSpacing size={4} />
-
-        <Section>
-          <StoryCarousel />
-        </Section>
-
-        <VerticalSpacing size={4} />
-
-        <InternalLink button to="/the-tribe">
-          Meet the tribe
-        </InternalLink>
-      </section>
-
-      <VerticalSpacing size={16} />
-
-      <section>
-        <Text align="center">
-          <Text size="large">
-            <H>Get in touch</H>
+        <div>
+          <Text size="large" color="#48e9ce" weight="600">
+            {' '}
+            <h2>
+              We work with you to solve problems through user research, software
+              development and design{' '}
+            </h2>
           </Text>
 
-          <VerticalSpacing size={1} />
+          {/* To do - add font sizes and screen sizes as variables under theme */}
 
-          <ExternalLink href="mailto:hello@neontribe.co.uk">
-            <Text size="medium">hello@neontribe.co.uk</Text>
-          </ExternalLink>
-        </Text>
-      </section>
-    </ConstrainedWidth>
+          <style jsx>{`
+            max-width: 80%;
+            padding-top: 2rem;
+
+            @media (max-width: 860px) {
+              max-width: 100%;
+              padding-top: 3rem;
+              font-size:21px;
+
+            }
+
+            }
+          `}</style>
+        </div>
+
+        <VerticalSpacing size={6} />
+
+        <section>
+          <StyledLink
+            connect="/our-work"
+            background="#5600ee"
+            border_color="#5600ee"
+          >
+            See our work
+          </StyledLink>
+
+          <StyledLink
+            connect="/the-tribe"
+            background="black"
+            border_color="#48e9ce"
+          >
+            Meet the tribe
+          </StyledLink>
+
+          <style jsx>{`
+            display: flex;
+            justify-content: space-between;
+            max-width: 50%;
+            flex-direction: row;
+
+            @media (max-width: 1000px) {
+              display: flex;
+              justify-content: space-between;
+              max-width: 60%;
+              flex-direction: row;
+            }
+
+            @media (max-width: 860px) {
+              display: flex;
+              justify-content: space-between;
+              max-width: 100%;
+              flex-direction: column;
+            }
+          `}</style>
+        </section>
+      </ConstrainedWidth>
+    </HomeTop>
   </Layout>
 )
 

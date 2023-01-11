@@ -35,7 +35,7 @@ const TribeMemberBack = ({
             {skills.join(' | ')}
           </Text>
         </div>
-        <div className="back-content">{bio}</div>
+        {!preventTabFocus && <div className="back-content">{bio}</div>}
       </div>
 
       {socialCount ? (
@@ -75,6 +75,16 @@ const TribeMemberBack = ({
         .back-content {
           margin-top: 1em;
           overflow: auto;
+          animation: fadein 4s;
+        }
+
+        @keyframes fadein {
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
         }
 
         .social-icons {
