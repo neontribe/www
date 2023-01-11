@@ -68,7 +68,6 @@ const IndexPage = () => (
               max-width: 100%;
               padding-top: 3rem;
               font-size:21px;
-           
             }
 
             }
