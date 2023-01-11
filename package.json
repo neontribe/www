@@ -23,7 +23,7 @@
     "gatsby-remark-prismjs": "3.5.6",
     "gatsby-remark-source-name": "1.0.0",
     "gatsby-source-filesystem": "2.3.14",
-    "gatsby-transformer-remark": "2.8.19",
+    "gatsby-transformer-remark": "5.25.1",
     "gatsby-transformer-sharp": "2.5.7",
     "lodash.get": "4.4.2",
     "prismjs": "1.28.0",
