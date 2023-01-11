@@ -117,8 +117,17 @@ const IndexPage = () => (
         </section>
         <section>
           <div>
-            <span className="blue-underlined"> In January this year </span> we
-            became part of the <span className="blue-underlined">dxw </span>{' '}
+            <a
+              href="https://www.dxw.com/2023/01/neontribe-joins-the-dxw-family/"
+              className="blue-underlined"
+            >
+              {' '}
+              In January this year{' '}
+            </a>{' '}
+            we became part of the{' '}
+            <a href="https://www.dxw.com" className="blue-underlined">
+              dxw{' '}
+            </a>{' '}
             family
           </div>
 
