@@ -137,7 +137,7 @@ const Header = () => {
                     <ul
                       className={classNames(
                         'list',
-                        windowSize < 500 && 'z-value'
+                        windowSize <= 500 && 'z-value'
                       )}
                     >
                       <li className="first-item">
