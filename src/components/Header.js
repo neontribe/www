@@ -47,7 +47,7 @@ const DesktopNav = () => {
       </ul>
 
       <style jsx>{`
-        
+
         .nav {
           display:flex;
         }
@@ -60,7 +60,7 @@ const DesktopNav = () => {
           justify-content: space-between;
           flex-direction: row;
           width: auto;
-     
+
 
           list-style: none;
 
@@ -72,13 +72,13 @@ const DesktopNav = () => {
           margin-left: 3rem;
         }
 
-      
+
 
 
         @media (min-width:500px) and (max-width:700px) {
           .list {
           justify-content:flex-start;
-          
+
         }
       `}</style>
     </nav>
@@ -121,33 +121,41 @@ const Header = () => {
           </div>
           {windowSize > 500 && <DesktopNav />}
           {windowSize <= 500 && (
-            <div className="hamburger-menu-container">
-              <button className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+            <>
+              <button
+                className="hamburger"
+                onClick={() => setIsOpen(!isOpen)}
+                aria-label="Menu"
+                aria-expanded={isOpen}
+                aria-controls={isOpen ? 'menu' : null}
+              >
                 &#8801;
               </button>
-              <nav className="mobile-nav">
-                {isOpen && (
-                  <ul
-                    className={classNames(
-                      'list',
-                      windowSize < 500 && 'z-value'
-                    )}
-                  >
-                    <li className="first-item">
-                      <NavLink active to="/our-work">
-                        Our Work
-                      </NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/the-tribe">The team</NavLink>
-                    </li>
-                    <li>
-                      <NavLink to="/contact-us">Contact</NavLink>
-                    </li>
-                  </ul>
-                )}
-              </nav>
-            </div>
+              {isOpen && (
+                <div className="hamburger-menu-container" id="menu">
+                  <nav className="mobile-nav">
+                    <ul
+                      className={classNames(
+                        'list',
+                        windowSize < 500 && 'z-value'
+                      )}
+                    >
+                      <li className="first-item">
+                        <NavLink active to="/our-work">
+                          Our Work
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink to="/the-tribe">The team</NavLink>
+                      </li>
+                      <li>
+                        <NavLink to="/contact-us">Contact</NavLink>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              )}
+            </>
           )}
         </header>
       </ConstrainedWidth>
@@ -226,14 +234,14 @@ const Header = () => {
         }
 
         .hamburger {
+          align-self: flex-end;
           background: none;
-          color: white;
           border: none;
+          color: white;
+          display: flex;
           font-size: 3rem;
           margin: 0;
-          padding-right: 1rem;
-          display: flex;
-          align-self: flex-end;
+          z-index: 5;
         }
       `}</style>
     </div>
