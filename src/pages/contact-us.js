@@ -107,22 +107,13 @@ const ContactUs = () => (
             </Container>
           </div>
 
-          <div className="answerphone-text">
-            <Text color="black" size="normal">
-              Leave a message on our answerphone if you’d like us to call you
-            </Text>
-
-            <VerticalSpacing size={2}></VerticalSpacing>
-
-            <Text color="#561dee">0845 689 0896</Text>
-          </div>
         </Container>
 
         <VerticalSpacing size={9}></VerticalSpacing>
         <Text size="small" color="black">
           <p>Neontribe Ltd</p>
           <p>Registered in England & Wales Registration number: 06165574</p>
-          <p>Registered office: 106 Lincoln St. Norwich, Norfolk, NR2 3LB</p>
+          <p>Registered office: 36-38 Calls Landing, The Calls, Leeds, England, LS2 7EW</p>
         </Text>
       </ConstrainedWidth>
     </div>
