@@ -7,6 +7,7 @@ import VerticalSpacing from '../components/VerticalSpacing'
 import PageMeta from '../components/PageMeta'
 import StyledLink from '../components/Button'
 import HomeTop from '../components/HomeTop'
+import { fontSizes } from '../theme'
 
 const IndexPage = () => (
   <Layout>
@@ -67,7 +68,6 @@ const IndexPage = () => (
               max-width: 100%;
               padding-top: 3rem;
               font-size:21px;
-           
             }
 
             }
@@ -111,6 +111,37 @@ const IndexPage = () => (
               justify-content: space-between;
               max-width: 100%;
               flex-direction: column;
+            }
+          `}</style>
+        </section>
+        <section>
+          <div>
+            <a
+              href="https://www.dxw.com/2023/01/neontribe-joins-the-dxw-family/"
+              className="blue-underlined"
+            >
+              {' '}
+              In January this year{' '}
+            </a>{' '}
+            we became part of the{' '}
+            <a href="https://www.dxw.com" className="blue-underlined">
+              dxw{' '}
+            </a>{' '}
+            family
+          </div>
+
+          <style jsx>{`
+            div {
+              width: 100%;
+              margin-left: auto;
+              margin-right: 0;
+              width: 20ch;
+              font-size: ${fontSizes['normal']};
+            }
+
+            .blue-underlined {
+              color: #48e9ce;
+              text-decoration: underline;
             }
           `}</style>
         </section>
