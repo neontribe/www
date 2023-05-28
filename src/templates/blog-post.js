@@ -7,6 +7,7 @@ import VerticalSpacing from '../components/VerticalSpacing'
 import PageMeta from '../components/PageMeta'
 import Text from '../components/Text'
 import RenderContent from '../components/RenderContent'
+import { c_TEXT_DARK } from '../theme'
 
 const PublishedDate = ({ date }) => {
   const published = distanceInWordsToNow(date, {
@@ -37,6 +38,8 @@ export default ({ data }) => {
       <ConstrainedWidth fullWidth={false}>
         <article>
           <header>
+            <VerticalSpacing size={4} />
+
             <Text size="large" weight={700} align="center" hyphenation>
               <h1>{title}</h1>
             </Text>
@@ -57,6 +60,10 @@ export default ({ data }) => {
           <RenderContent htmlAst={htmlAst} />
         </article>
       </ConstrainedWidth>
+
+      <style jsx>{`
+        color: ${c_TEXT_DARK};
+      `}</style>
     </Layout>
   )
 }
