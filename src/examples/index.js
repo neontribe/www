@@ -10,7 +10,7 @@ import VerticalSpacing from '../components/VerticalSpacing'
 
 import kenneth from '../data/tribers/images/kenneth.jpg'
 import harry from '../data/tribers/images/collins.jpg'
-import kat from '../data/tribers/images/Kat.jpg'
+import nick from '../data/tribers/images/Nick.jpg'
 
 export { default as TribeMemberExample } from './TribeMemberExample'
 export { default as WorkDescriptionExample } from './WorkDescriptionExample'
@@ -75,7 +75,7 @@ export const CarouselExamples = () => (
           <H>Harry</H>
         </Carousel.Item>
 
-        <Carousel.Item image={kat}>
+        <Carousel.Item image={nick}>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -87,7 +87,7 @@ export const CarouselExamples = () => (
 
           <VerticalSpacing size={1} />
 
-          <H>Kat</H>
+          <H>Nick</H>
         </Carousel.Item>
       </Carousel>
     </Section>
