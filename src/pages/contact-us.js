@@ -7,7 +7,7 @@ import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import Container from '../components/Container'
 import VerticalSpacing from '../components/VerticalSpacing'
 import PageMeta from '../components/PageMeta'
-
+import LinkedInIcon from '../components/linkedin.png'
 import PageTop from '../components/PageTop'
 import Text from '../components/Text'
 import contactArcs from '../components/contactArcs.svg'
@@ -57,7 +57,6 @@ const ContactUs = () => (
             className="linkedin-link"
             target="_blank"
             href="https://www.linkedin.com/company/neontribe-ltd/"
-            aria-label="This link navigates to the Neontribe LinkedIn page"
           >
             LinkedIn.
           </a>
@@ -72,7 +71,7 @@ const ContactUs = () => (
             href="https://www.linkedin.com/company/neontribe-ltd/"
           >
             <img
-              src="/icons/linkedin.png"
+              src={LinkedInIcon}
               height={60}
               width={70}
               alt="This link navigates to Neontribe's LinkedIn page"
