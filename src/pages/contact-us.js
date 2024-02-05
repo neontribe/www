@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { c_NEON_PURPLE } from '../theme'
+import { c_NEON_PURPLE, c_NAV_ACTIVE } from '../theme'
 
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
@@ -74,14 +74,15 @@ const ContactUs = () => (
               src={LinkedInIcon}
               height={60}
               width={70}
-              alt="This link navigates to Neontribe's LinkedIn page"
+              alt="Navigates to Neontribe's LinkedIn page"
             />
           </a>
         </div>
       </div>
 
       <Text size="normal" color="black" maxCharacter="55ch">
-        We share our clients work and best practice in the tech for good sector.
+        We share our clients' work and best practice in the tech for good
+        sector.
       </Text>
     </ConstrainedWidth>
 
@@ -183,10 +184,11 @@ const ContactUs = () => (
 
       .linkedin-link {
         color: ${c_NEON_PURPLE};
+        text-decoration: underline;
       }
 
       .linkedin-link:hover {
-        text-decoration: underline;
+        color: ${c_NAV_ACTIVE};
       }
 
       .linkedin-logo:focus {
