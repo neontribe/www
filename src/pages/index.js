@@ -121,7 +121,7 @@ const IndexPage = () => (
               className="blue-underlined"
             >
               {' '}
-              In January this year{' '}
+              In January 2023{' '}
             </a>{' '}
             we became part of the{' '}
             <a href="https://www.dxw.com" className="blue-underlined">

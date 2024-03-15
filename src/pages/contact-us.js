@@ -1,18 +1,18 @@
 import React from 'react'
 
+import { c_NEON_PURPLE, c_NAV_ACTIVE } from '../theme'
+
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
-
-import Text from '../components/Text'
-
+import Container from '../components/Container'
 import VerticalSpacing from '../components/VerticalSpacing'
 import PageMeta from '../components/PageMeta'
-
-import Container from '../components/Container'
-import Twitter from '../components/twitter.svg'
+import LinkedInIcon from '../components/linkedin.png'
 import PageTop from '../components/PageTop'
+import Text from '../components/Text'
 import contactArcs from '../components/contactArcs.svg'
 import EmailLink from '../components/EmailLink'
+
 const ContactUs = () => (
   <Layout>
     <PageMeta
@@ -51,26 +51,38 @@ const ContactUs = () => (
 
     <ConstrainedWidth>
       <Text size="normal" color="black" maxCharacter="49ch">
-        Follow us on Twitter
+        <p>
+          Follow us on {''}
+          <a
+            className="linkedin-link"
+            target="_blank"
+            href="https://www.linkedin.com/company/neontribe-ltd/"
+          >
+            LinkedIn.
+          </a>
+        </p>
       </Text>
 
       <div className="social-media-container">
         <div className="social-media-labels">
-          <img
-            src={Twitter}
-            height={42}
-            width={42}
-            alt="This link navigates to the @neontribe twitter page"
-          />
-
-          <Text color="#561dee" size="normal">
-            <a href="https://twitter.com/neontribe"> @neontribe</a>
-          </Text>
+          <a
+            className="linkedin-logo"
+            target="_blank"
+            href="https://www.linkedin.com/company/neontribe-ltd/"
+          >
+            <img
+              src={LinkedInIcon}
+              height={60}
+              width={70}
+              alt="Navigates to Neontribe's LinkedIn page"
+            />
+          </a>
         </div>
       </div>
 
       <Text size="normal" color="black" maxCharacter="55ch">
-        We share our clients work and best practice in the tech for good sector.
+        We share our clients' work and best practice in the tech for good
+        sector.
       </Text>
     </ConstrainedWidth>
 
@@ -159,6 +171,19 @@ const ContactUs = () => (
         margin-right: 80px;
         width: 150px;
         align-items: center;
+      }
+
+      .linkedin-link {
+        color: ${c_NEON_PURPLE};
+        text-decoration: underline;
+      }
+
+      .linkedin-link:hover {
+        color: ${c_NAV_ACTIVE};
+      }
+
+      .linkedin-logo:focus {
+        outline-color: ${c_NEON_PURPLE};
       }
 
       .button {
