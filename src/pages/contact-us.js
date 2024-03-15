@@ -119,15 +119,6 @@ const ContactUs = () => (
             </Container>
           </div>
 
-          <div className="answerphone-text">
-            <Text color="black" size="normal">
-              Leave a message on our answerphone if you’d like us to call you
-            </Text>
-
-            <VerticalSpacing size={2}></VerticalSpacing>
-
-            <Text color="#561dee">0845 689 0896</Text>
-          </div>
         </Container>
 
         <VerticalSpacing size={9}></VerticalSpacing>
