@@ -99,26 +99,15 @@ const ContactUs = () => (
             <Container justifyContent="flex-start">
               <Text color="#561dee">
                 <address>
-                  <p>Norwich Office </p>
-                  <p> Unit B</p>
+                  <p>Unit B</p>
                   <p>Seymour House </p>
                   <p>30-34 Muspole Street</p>
                   <p>Norwich</p>
                   <p>NR3 1DJ</p>
                 </address>
               </Text>
-
-              <Text paddingLeft="4rem" color="#561dee">
-                <address>
-                  <p>Kaleider Studios </p>
-                  <p> 45 Preston Street</p>
-                  <p>Exeter</p>
-                  <p>EX1 1DF </p>
-                </address>
-              </Text>
             </Container>
           </div>
-
         </Container>
 
         <VerticalSpacing size={9}></VerticalSpacing>
