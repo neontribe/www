@@ -57,6 +57,7 @@ const ContactUs = () => (
             className="linkedin-link"
             target="_blank"
             href="https://www.linkedin.com/company/neontribe-ltd/"
+            rel="noopener noreferrer"
           >
             LinkedIn.
           </a>
@@ -69,6 +70,7 @@ const ContactUs = () => (
             className="linkedin-logo"
             target="_blank"
             href="https://www.linkedin.com/company/neontribe-ltd/"
+            rel="noopener noreferrer"
           >
             <img
               src={LinkedInIcon}
@@ -109,7 +111,6 @@ const ContactUs = () => (
             </Container>
           </div>
         </Container>
-
         <VerticalSpacing size={9}></VerticalSpacing>
         <Text size="small" color="black">
           <p>Neontribe Ltd</p>
@@ -189,25 +190,9 @@ const ContactUs = () => (
         padding-right: 2rem;
       }
 
-      .twitter-container {
-        display: flex;
-        padding-top: 1rem;
-      }
-
-      .answerphone-text {
-        padding-left: 10rem;
-        max-width: 40ch;
-      }
-
       @media (max-width: 860px) {
         .contact-header {
           flex-direction: column;
-        }
-
-        .answerphone-text {
-          padding-left: 0;
-          max-width: 53ch;
-          padding-top: 2rem;
         }
 
         .social-media-container {
