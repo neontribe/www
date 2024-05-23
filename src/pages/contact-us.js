@@ -4,7 +4,7 @@ import { c_NEON_PURPLE, c_NAV_ACTIVE } from '../theme'
 
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
-import Container from '../components/Container'
+// import Container from '../components/Container'
 import VerticalSpacing from '../components/VerticalSpacing'
 import PageMeta from '../components/PageMeta'
 import LinkedInIcon from '../components/linkedin.png'
@@ -33,7 +33,7 @@ const ContactUs = () => (
             </div>
           </Text>
           <div className="main-arc-container">
-            <img src={contactArcs} height={136} width={191} />
+            <img src={contactArcs} alt="" height={136} width={191} />
           </div>
         </div>
 
@@ -90,8 +90,8 @@ const ContactUs = () => (
 
     <VerticalSpacing size={3} />
     <div className="white-background">
-      <ConstrainedWidth paddingTop="3em">
-        <Container mobileFlexDirection="column">
+      <ConstrainedWidth>
+        {/* <Container mobileFlexDirection="column">
           <div>
             <Text color="black" size="normal" maxCharacter="53ch">
               We work from home as well as in the office. Please check before
@@ -101,17 +101,14 @@ const ContactUs = () => (
             <Container justifyContent="flex-start">
               <Text color="#561dee">
                 <address>
-                  <p>Unit B</p>
-                  <p>Seymour House </p>
-                  <p>30-34 Muspole Street</p>
                   <p>Norwich</p>
-                  <p>NR3 1DJ</p>
                 </address>
               </Text>
             </Container>
           </div>
         </Container>
         <VerticalSpacing size={9}></VerticalSpacing>
+        */}
         <Text size="small" color="black">
           <p>Neontribe Ltd</p>
           <p>Registered in England & Wales Registration number: 06165574</p>
