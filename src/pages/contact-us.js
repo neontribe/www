@@ -113,8 +113,7 @@ const ContactUs = () => (
           <p>Neontribe Ltd</p>
           <p>Registered in England & Wales Registration number: 06165574</p>
           <p>
-            Registered office: 36-38 Calls Landing, The Calls, Leeds, England,
-            LS2 7EW
+            Registered office: Studio 1.05c Level 1 Department Leeds Dock, The Boulevard, Leeds, England, LS10 1PZ
           </p>
         </Text>
       </ConstrainedWidth>
