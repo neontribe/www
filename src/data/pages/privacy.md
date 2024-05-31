@@ -4,7 +4,7 @@ This policy relates to www.neontribe.co.uk and related sub-domains of neontribe.
 
 Business registration: 06165574
 
-Registered office: 36-38 Calls Landing, The Calls, Leeds, England, LS2 7EW
+Registered office: Studio 1.05c Level 1 Department Leeds Dock, The Boulevard, Leeds, England, LS10 1PZ
 
 ## What information is collected?
 
