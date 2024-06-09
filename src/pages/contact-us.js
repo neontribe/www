@@ -91,11 +91,10 @@ const ContactUs = () => (
     <VerticalSpacing size={3} />
     <div className="white-background">
       <ConstrainedWidth>
-        {/* <Container mobileFlexDirection="column">
+        <Container mobileFlexDirection="column">
           <div>
             <Text color="black" size="normal" maxCharacter="53ch">
-              We work from home as well as in the office. Please check before
-              you plan a visit.
+              We work from home as well as in the office. Please check before you plan a visit.
             </Text>
             <VerticalSpacing size={3}></VerticalSpacing>
             <Container justifyContent="flex-start">
@@ -108,7 +107,6 @@ const ContactUs = () => (
           </div>
         </Container>
         <VerticalSpacing size={9}></VerticalSpacing>
-        */}
         <Text size="small" color="black">
           <p>Neontribe Ltd</p>
           <p>Registered in England & Wales Registration number: 06165574</p>
