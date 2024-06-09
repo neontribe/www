@@ -100,7 +100,10 @@ const ContactUs = () => (
             <Container justifyContent="flex-start">
               <Text color="#561dee">
                 <address>
+                  <p>Neontribe Ltd</p>
+                  <p>21 Colegate</p>
                   <p>Norwich</p>
+                  <p>NR3 1BN</p>
                 </address>
               </Text>
             </Container>
