@@ -4,7 +4,7 @@ import { c_NEON_PURPLE, c_NAV_ACTIVE } from '../theme'
 
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
-// import Container from '../components/Container'
+import Container from '../components/Container'
 import VerticalSpacing from '../components/VerticalSpacing'
 import PageMeta from '../components/PageMeta'
 import LinkedInIcon from '../components/linkedin.png'
@@ -94,7 +94,8 @@ const ContactUs = () => (
         <Container mobileFlexDirection="column">
           <div>
             <Text color="black" size="normal" maxCharacter="53ch">
-              We work from home as well as in the office. Please check before you plan a visit.
+              We work from home as well as in the office. Please check before
+              you plan a visit.
             </Text>
             <VerticalSpacing size={3}></VerticalSpacing>
             <Container justifyContent="flex-start">
@@ -114,7 +115,8 @@ const ContactUs = () => (
           <p>Neontribe Ltd</p>
           <p>Registered in England & Wales Registration number: 06165574</p>
           <p>
-            Registered office: Studio 1.05c Level 1 Department Leeds Dock, The Boulevard, Leeds, England, LS10 1PZ
+            Registered office: Studio 1.05c Level 1 Department Leeds Dock, The
+            Boulevard, Leeds, England, LS10 1PZ
           </p>
         </Text>
       </ConstrainedWidth>
