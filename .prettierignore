@@ -1,4 +1,5 @@
 .yarn/
+.idea
 .cache
 .git
 build
