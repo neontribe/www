@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-import { c_TEXT_DARK, c_SECONDARY_BACKGROUND } from '../../theme'
-import H from '../Heading'
-import Text from '../Text'
-import SocialIcon from '../SocialIcon'
-import VerticalSpacing from '../VerticalSpacing'
+import { c_TEXT_DARK, c_SECONDARY_BACKGROUND } from '../../theme';
+import H from '../Heading';
+import Text from '../Text';
+import SocialIcon from '../SocialIcon';
+import VerticalSpacing from '../VerticalSpacing';
 
 const TribeMemberBack = ({
   onClick,
@@ -14,11 +14,11 @@ const TribeMemberBack = ({
   social,
   preventTabFocus,
 }) => {
-  const socialKeys = social ? Object.keys(social) : []
-  var socialCount = 0
+  const socialKeys = social ? Object.keys(social) : [];
+  var socialCount = 0;
 
   for (var site in social) {
-    if (social[site]) socialCount++
+    if (social[site]) socialCount++;
   }
 
   return (
@@ -96,7 +96,7 @@ const TribeMemberBack = ({
         }
       `}</style>
     </div>
-  )
-}
+  );
+};
 
-export default TribeMemberBack
+export default TribeMemberBack;

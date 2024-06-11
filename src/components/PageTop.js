@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const PageTop = ({ children }) => (
   <div className="top">
@@ -21,9 +21,9 @@ const PageTop = ({ children }) => (
       }
     `}</style>
   </div>
-)
+);
 PageTop.propTypes = {
   children: PropTypes.node,
-}
+};
 
-export default PageTop
+export default PageTop;

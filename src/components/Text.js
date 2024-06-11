@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import classNames from 'classnames'
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-import { fontSizes } from '../theme'
+import { fontSizes } from '../theme';
 // TODO: Should we have a block level version which uses a 0 margin p?
 const Text = ({
   children,
@@ -37,7 +37,7 @@ const Text = ({
       }
     `}</style>
   </div>
-)
+);
 
 Text.propTypes = {
   children: PropTypes.node,
@@ -48,6 +48,6 @@ Text.propTypes = {
   color: PropTypes.string,
   paddingTop: PropTypes.string,
   paddingLeft: PropTypes.string,
-}
+};
 
-export default Text
+export default Text;

@@ -1,17 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Img from 'gatsby-image/withIEPolyfill'
-import ShimlessImg from 'gatsby-image'
-import css from 'styled-jsx/css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Img from 'gatsby-image/withIEPolyfill';
+import ShimlessImg from 'gatsby-image';
+import css from 'styled-jsx/css';
 
-import { breakpoint } from '../../theme'
-import ConstrainedWidth from '../Layout/ConstrainedWidth'
-import H from '../Heading'
-import Section from '../Section'
-import Text from '../Text'
-import VerticalSpacing from '../VerticalSpacing'
-import ProblemSolution from './ProblemSolution'
-import Content from './Content'
+import { breakpoint } from '../../theme';
+import ConstrainedWidth from '../Layout/ConstrainedWidth';
+import H from '../Heading';
+import Section from '../Section';
+import Text from '../Text';
+import VerticalSpacing from '../VerticalSpacing';
+import ProblemSolution from './ProblemSolution';
+import Content from './Content';
 
 const imageStyles = css.resolve`
   @media (${breakpoint('md')}) {
@@ -19,7 +19,7 @@ const imageStyles = css.resolve`
       height: 100%;
     }
   }
-`
+`;
 
 const WorkDescription = ({ id, title, client, fluid, problem, solution }) => (
   <section id={id}>
@@ -123,7 +123,7 @@ const WorkDescription = ({ id, title, client, fluid, problem, solution }) => (
       }
     `}</style>
   </section>
-)
+);
 
 WorkDescription.propTypes = {
   fluid: ShimlessImg.propTypes.fluid,
@@ -133,7 +133,7 @@ WorkDescription.propTypes = {
   subtitle: PropTypes.node,
   problem: PropTypes.node,
   solution: PropTypes.node,
-}
+};
 
-export { default as WorkSummary } from './WorkSummary'
-export default WorkDescription
+export { default as WorkSummary } from './WorkSummary';
+export default WorkDescription;

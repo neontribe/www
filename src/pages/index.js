@@ -1,13 +1,13 @@
-import React from 'react'
-import Layout from '../components/Layout'
-import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
-import Text from '../components/Text'
-import Smile from '../components/Smile'
-import VerticalSpacing from '../components/VerticalSpacing'
-import PageMeta from '../components/PageMeta'
-import StyledLink from '../components/Button'
-import HomeTop from '../components/HomeTop'
-import { fontSizes } from '../theme'
+import React from 'react';
+import Layout from '../components/Layout';
+import ConstrainedWidth from '../components/Layout/ConstrainedWidth';
+import Text from '../components/Text';
+import Smile from '../components/Smile';
+import VerticalSpacing from '../components/VerticalSpacing';
+import PageMeta from '../components/PageMeta';
+import StyledLink from '../components/Button';
+import HomeTop from '../components/HomeTop';
+import { fontSizes } from '../theme';
 
 const IndexPage = () => (
   <Layout>
@@ -148,6 +148,6 @@ const IndexPage = () => (
       </ConstrainedWidth>
     </HomeTop>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;

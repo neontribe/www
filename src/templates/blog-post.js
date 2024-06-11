@@ -1,31 +1,31 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import { distanceInWordsToNow, parse } from 'date-fns'
-import Layout from '../components/Layout'
-import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
-import VerticalSpacing from '../components/VerticalSpacing'
-import PageMeta from '../components/PageMeta'
-import Text from '../components/Text'
-import RenderContent from '../components/RenderContent'
-import { c_TEXT_DARK } from '../theme'
+import React from 'react';
+import { graphql } from 'gatsby';
+import { distanceInWordsToNow, parse } from 'date-fns';
+import Layout from '../components/Layout';
+import ConstrainedWidth from '../components/Layout/ConstrainedWidth';
+import VerticalSpacing from '../components/VerticalSpacing';
+import PageMeta from '../components/PageMeta';
+import Text from '../components/Text';
+import RenderContent from '../components/RenderContent';
+import { c_TEXT_DARK } from '../theme';
 
 const PublishedDate = ({ date }) => {
   const published = distanceInWordsToNow(date, {
     addSuffix: true,
-  })
+  });
 
   return (
     <span>
       Published <time dateTime={date}>{published}</time>
     </span>
-  )
-}
+  );
+};
 
 export default ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter, htmlAst } = markdownRemark
+  const { markdownRemark } = data;
+  const { frontmatter, htmlAst } = markdownRemark;
 
-  const { title, published_at, updated_at, author_name } = frontmatter
+  const { title, published_at, updated_at, author_name } = frontmatter;
 
   return (
     <Layout>
@@ -65,8 +65,8 @@ export default ({ data }) => {
         color: ${c_TEXT_DARK};
       `}</style>
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query ($slug: String!) {
@@ -80,4 +80,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

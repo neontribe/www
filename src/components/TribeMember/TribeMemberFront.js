@@ -1,11 +1,11 @@
-import React from 'react'
-import Img from 'gatsby-image/withIEPolyfill'
-import css from 'styled-jsx/css'
+import React from 'react';
+import Img from 'gatsby-image/withIEPolyfill';
+import css from 'styled-jsx/css';
 
-import H from '../Heading'
-import Text from '../Text'
-import VerticalSpacing from '../VerticalSpacing'
-import { c_TEXT_DARK } from '../../theme'
+import H from '../Heading';
+import Text from '../Text';
+import VerticalSpacing from '../VerticalSpacing';
+import { c_TEXT_DARK } from '../../theme';
 const imageStyles = css.resolve`
   .gatsby-image-wrapper {
     flex-grow: 1;
@@ -15,7 +15,7 @@ const imageStyles = css.resolve`
     height: 100%;
     width: 100%;
   }
-`
+`;
 
 const TribeMemberFront = ({ image, name, skills, onClick }) => (
   <figure className="tribe-figure" onClick={onClick}>
@@ -77,6 +77,6 @@ const TribeMemberFront = ({ image, name, skills, onClick }) => (
       }
     `}</style>
   </figure>
-)
+);
 
-export default TribeMemberFront
+export default TribeMemberFront;

@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const HireContainer = ({ children }) => (
   <div className="container">
@@ -17,10 +17,10 @@ const HireContainer = ({ children }) => (
       }
     `}</style>
   </div>
-)
+);
 
 HireContainer.propTypes = {
   children: PropTypes.node,
-}
+};
 
-export default HireContainer
+export default HireContainer;

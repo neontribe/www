@@ -1,23 +1,23 @@
-import React from 'react'
+import React from 'react';
 
-import Layout from '../components/Layout'
-import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
-import H from '../components/Heading'
-import Text from '../components/Text'
-import TriberGrid from '../components/TriberGrid'
-import PageTop from '../components/PageTop'
+import Layout from '../components/Layout';
+import ConstrainedWidth from '../components/Layout/ConstrainedWidth';
+import H from '../components/Heading';
+import Text from '../components/Text';
+import TriberGrid from '../components/TriberGrid';
+import PageTop from '../components/PageTop';
 import {
   BottomParagraphOne,
   BottomParagraphTwo,
-} from '../components/TheTribeParagraphs'
+} from '../components/TheTribeParagraphs';
 
-import VerticalSpacing from '../components/VerticalSpacing'
-import StyledLink from '../components/Button'
-import PageMeta from '../components/PageMeta'
-import tribeArcs from '../components/tribeArcs.svg'
-import circleArc from '../components/circleArc.svg'
-import HireContainer from '../components/HireContainer'
-import EmailLink from '../components/EmailLink'
+import VerticalSpacing from '../components/VerticalSpacing';
+import StyledLink from '../components/Button';
+import PageMeta from '../components/PageMeta';
+import tribeArcs from '../components/tribeArcs.svg';
+import circleArc from '../components/circleArc.svg';
+import HireContainer from '../components/HireContainer';
+import EmailLink from '../components/EmailLink';
 const TheTribePage = () => (
   <Layout>
     <PageMeta
@@ -53,7 +53,7 @@ const TheTribePage = () => (
             <img src={tribeArcs} height={166} width={118} />{' '}
           </div>
         </div>
-{/* 
+        {/* 
         <VerticalSpacing size={5} />
         <HireContainer>
           <EmailLink
@@ -166,6 +166,6 @@ const TheTribePage = () => (
       }
     `}</style>
   </Layout>
-)
+);
 
-export default TheTribePage
+export default TheTribePage;

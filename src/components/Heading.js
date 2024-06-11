@@ -1,18 +1,18 @@
-import React, { createContext, useContext } from 'react'
-import PropTypes from 'prop-types'
-import classNames from 'classnames'
+import React, { createContext, useContext } from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-import arcs from './arcs.svg'
+import arcs from './arcs.svg';
 
-const HeadingContext = createContext(2)
+const HeadingContext = createContext(2);
 
 const H = ({ withArcs, ...props }) => {
-  const headingLevel = useContext(HeadingContext)
-  const Heading = 'h' + Math.min(headingLevel, 6)
+  const headingLevel = useContext(HeadingContext);
+  const Heading = 'h' + Math.min(headingLevel, 6);
 
   const className = classNames('heading', {
     'with-arcs': withArcs,
-  })
+  });
 
   return (
     <>
@@ -39,12 +39,12 @@ const H = ({ withArcs, ...props }) => {
         }
       `}</style>
     </>
-  )
-}
+  );
+};
 
 H.propTypes = {
   withArcs: PropTypes.bool,
-}
+};
 
-export { HeadingContext }
-export default H
+export { HeadingContext };
+export default H;

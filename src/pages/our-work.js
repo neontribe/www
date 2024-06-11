@@ -1,24 +1,24 @@
-import React from 'react'
-import slugify from 'slugify'
+import React from 'react';
+import slugify from 'slugify';
 
-import { StaticQuery, graphql } from 'gatsby'
+import { StaticQuery, graphql } from 'gatsby';
 
-import Layout from '../components/Layout'
-import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
-import contactArcs from '../components/contactArcs.svg'
-import H from '../components/Heading'
-import Section from '../components/Section'
-import Text from '../components/Text'
+import Layout from '../components/Layout';
+import ConstrainedWidth from '../components/Layout/ConstrainedWidth';
+import contactArcs from '../components/contactArcs.svg';
+import H from '../components/Heading';
+import Section from '../components/Section';
+import Text from '../components/Text';
 
-import VerticalSpacing from '../components/VerticalSpacing'
-import WorkDescription from '../components/WorkDescription'
-import threeArcs from '../components/threeArcs.svg'
-import PageMeta from '../components/PageMeta'
+import VerticalSpacing from '../components/VerticalSpacing';
+import WorkDescription from '../components/WorkDescription';
+import threeArcs from '../components/threeArcs.svg';
+import PageMeta from '../components/PageMeta';
 
-import Container from '../components/Container'
+import Container from '../components/Container';
 
-import EmailLink from '../components/EmailLink'
-import PageTop from '../components/PageTop'
+import EmailLink from '../components/EmailLink';
+import PageTop from '../components/PageTop';
 // TODO: Fill what is currently commented out with copy
 const WhatWeAreDoingPage = () => (
   <Layout>
@@ -109,7 +109,7 @@ const WhatWeAreDoingPage = () => (
                 // timescale={project.frontmatter.timescale}
               />
             </React.Fragment>
-          ))
+          ));
         }}
       />
     </Section>
@@ -188,6 +188,6 @@ const WhatWeAreDoingPage = () => (
       }
     `}</style>
   </Layout>
-)
+);
 
-export default WhatWeAreDoingPage
+export default WhatWeAreDoingPage;

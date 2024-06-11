@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const VerticalSpacing = ({ size = 1 }) => (
   <div className="vertical-spacing">
@@ -9,10 +9,10 @@ const VerticalSpacing = ({ size = 1 }) => (
       }
     `}</style>
   </div>
-)
+);
 
 VerticalSpacing.propTypes = {
   size: PropTypes.number,
-}
+};
 
-export default VerticalSpacing
+export default VerticalSpacing;

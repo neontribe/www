@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Text from './Text'
-import { c_NEON_TEAL, c_TEXT_DARK } from '../theme'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Text from './Text';
+import { c_NEON_TEAL, c_TEXT_DARK } from '../theme';
 
 const EmailLink = ({ children, border_color, background, fontSize, link }) => (
   <div>
@@ -57,7 +57,7 @@ const EmailLink = ({ children, border_color, background, fontSize, link }) => (
       }
     `}</style>
   </div>
-)
+);
 EmailLink.propTypes = {
   connect: PropTypes.string,
   link: PropTypes.string.isRequired,
@@ -65,10 +65,10 @@ EmailLink.propTypes = {
   border_color: PropTypes.string,
   background: PropTypes.string,
   fontSize: PropTypes.string,
-}
+};
 
 EmailLink.defaultProps = {
   fontSize: '1.25rem',
-}
+};
 
-export default EmailLink
+export default EmailLink;

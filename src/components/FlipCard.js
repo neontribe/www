@@ -1,12 +1,12 @@
-import React, { Children } from 'react'
-import PropTypes from 'prop-types'
-import css from 'styled-jsx/css'
+import React, { Children } from 'react';
+import PropTypes from 'prop-types';
+import css from 'styled-jsx/css';
 
 const findChild = (children, { displayName }) =>
   Children.toArray(children).find(
     (child) => child.type.displayName === displayName
-  )
-const cloneWithProps = (node, props) => node && React.cloneElement(node, props)
+  );
+const cloneWithProps = (node, props) => node && React.cloneElement(node, props);
 
 const FlipCard = ({ children, isFlipped, animTime }) => (
   <div className="card-container">
@@ -36,7 +36,7 @@ const FlipCard = ({ children, isFlipped, animTime }) => (
       }
     `}</style>
   </div>
-)
+);
 
 FlipCard.propTypes = {
   // Whether the card is flipped or not
@@ -45,11 +45,11 @@ FlipCard.propTypes = {
   children: PropTypes.node,
   // The time it should take for the animation to complete (in seconds)
   animTime: PropTypes.number,
-}
+};
 
 FlipCard.defaultProps = {
   animTime: 0.7,
-}
+};
 
 // Card sides, TODO: move to another file ---------------------
 const cardSideStyles = css`
@@ -64,7 +64,7 @@ const cardSideStyles = css`
   .card-side + .card-side {
     margin-left: -100%;
   }
-`
+`;
 
 // Card front
 const CardFront = ({ children, isFlipped, animTime }) => (
@@ -80,14 +80,14 @@ const CardFront = ({ children, isFlipped, animTime }) => (
       }
     `}</style>
   </div>
-)
-CardFront.displayName = 'FlipCardFront'
+);
+CardFront.displayName = 'FlipCardFront';
 CardFront.propTypes = {
   // Whether the card is flipped or not
   isFlipped: PropTypes.bool,
   // The children, should be CardFront and CardBack
   children: PropTypes.node,
-}
+};
 
 // Card back
 const CardBack = ({ children, isFlipped, animTime }) => (
@@ -103,17 +103,17 @@ const CardBack = ({ children, isFlipped, animTime }) => (
       }
     `}</style>
   </div>
-)
-CardBack.displayName = 'FlipCardBack'
+);
+CardBack.displayName = 'FlipCardBack';
 CardBack.propTypes = {
   // Whether the card is flipped or not
   isFlipped: PropTypes.bool,
   // The children, should be CardFront and CardBack
   children: PropTypes.node,
-}
+};
 
-FlipCard.CardBack = CardBack
-FlipCard.CardFront = CardFront
+FlipCard.CardBack = CardBack;
+FlipCard.CardFront = CardFront;
 
-export { CardBack, CardFront }
-export default FlipCard
+export { CardBack, CardFront };
+export default FlipCard;

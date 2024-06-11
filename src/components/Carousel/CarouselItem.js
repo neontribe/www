@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const CarouselItem = ({ children }) => {
   return (
@@ -12,14 +12,14 @@ const CarouselItem = ({ children }) => {
         }
       `}</style>
     </div>
-  )
-}
+  );
+};
 
 CarouselItem.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
-}
+};
 
-export default CarouselItem
+export default CarouselItem;

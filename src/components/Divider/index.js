@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import divider from './divider.svg'
+import divider from './divider.svg';
 
 const Divider = () => (
   <>
@@ -16,6 +16,6 @@ const Divider = () => (
       }
     `}</style>
   </>
-)
+);
 
-export default Divider
+export default Divider;

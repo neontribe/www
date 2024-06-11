@@ -1,18 +1,18 @@
-import React from 'react'
-import { graphql } from 'gatsby'
-import { distanceInWordsToNow, parse } from 'date-fns'
+import React from 'react';
+import { graphql } from 'gatsby';
+import { distanceInWordsToNow, parse } from 'date-fns';
 
-import { c_NEON_PURPLE, c_TEXT_DARK } from '../theme'
-import { InternalLink } from '../components/Link'
-import Layout from '../components/Layout'
-import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
-import H from '../components/Heading'
-import Text from '../components/Text'
+import { c_NEON_PURPLE, c_TEXT_DARK } from '../theme';
+import { InternalLink } from '../components/Link';
+import Layout from '../components/Layout';
+import ConstrainedWidth from '../components/Layout/ConstrainedWidth';
+import H from '../components/Heading';
+import Text from '../components/Text';
 
-import { capitalizeFirstLetter } from '../helpers'
-import PageMeta from '../components/PageMeta'
-import Section from '../components/Section'
-import VerticalSpacing from '../components/VerticalSpacing'
+import { capitalizeFirstLetter } from '../helpers';
+import PageMeta from '../components/PageMeta';
+import Section from '../components/Section';
+import VerticalSpacing from '../components/VerticalSpacing';
 
 const BlogPage = ({
   data: {
@@ -24,7 +24,7 @@ const BlogPage = ({
       distanceInWordsToNow(date, {
         addSuffix: true,
       })
-    )
+    );
 
   return (
     <Layout>
@@ -75,8 +75,8 @@ const BlogPage = ({
         }
       `}</style>
     </Layout>
-  )
-}
+  );
+};
 
 export const pageQuery = graphql`
   query {
@@ -96,6 +96,6 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default BlogPage
+export default BlogPage;

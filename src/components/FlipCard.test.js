@@ -1,7 +1,7 @@
-import React from 'react'
-import { render } from '@testing-library/react'
+import React from 'react';
+import { render } from '@testing-library/react';
 
-import FlipCard, { CardFront, CardBack } from './FlipCard'
+import FlipCard, { CardFront, CardBack } from './FlipCard';
 
 const TestFlipCard = () => (
   <FlipCard>
@@ -9,24 +9,24 @@ const TestFlipCard = () => (
     <CardBack>back 2</CardBack>
     Anything else
   </FlipCard>
-)
+);
 
 test('displays the front and back', () => {
-  const { getByText, queryByText } = render(<TestFlipCard />)
+  const { getByText, queryByText } = render(<TestFlipCard />);
 
-  expect(getByText('front 1')).toBeInTheDocument()
-  expect(getByText('back 2')).toBeInTheDocument()
-  expect(queryByText('Anything else')).toBeNull()
-})
+  expect(getByText('front 1')).toBeInTheDocument();
+  expect(getByText('back 2')).toBeInTheDocument();
+  expect(queryByText('Anything else')).toBeNull();
+});
 
 test('default render matches snapshot', () => {
-  const { container } = render(<TestFlipCard />)
+  const { container } = render(<TestFlipCard />);
 
-  expect(container).toMatchSnapshot()
-})
+  expect(container).toMatchSnapshot();
+});
 
 test('isFlipped render matches snapshot', () => {
-  const { container } = render(<TestFlipCard isFlipped />)
+  const { container } = render(<TestFlipCard isFlipped />);
 
-  expect(container).toMatchSnapshot()
-})
+  expect(container).toMatchSnapshot();
+});

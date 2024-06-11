@@ -1,17 +1,17 @@
-import React, { Children } from 'react'
-import PropTypes from 'prop-types'
+import React, { Children } from 'react';
+import PropTypes from 'prop-types';
 
 // Copied from FlipCard
 const findChild = (children, { displayName }) =>
   Children.toArray(children).find(
     (child) => child.type && child.type.displayName === displayName
-  )
-const cloneWithProps = (node, props) => node && React.cloneElement(node, props)
+  );
+const cloneWithProps = (node, props) => node && React.cloneElement(node, props);
 
 const propTypes = {
   imagePosition: PropTypes.oneOf(['left', 'right']),
   children: PropTypes.node,
-}
+};
 
 const Content = ({ children }) => (
   <div className="work-description-content">
@@ -59,17 +59,17 @@ const Content = ({ children }) => (
       }
     `}</style>
   </div>
-)
+);
 // Name -------------------------------------
-export const Name = ({ children }) => <div>{children}</div>
+export const Name = ({ children }) => <div>{children}</div>;
 
-Name.displayName = 'WorkDescriptionName'
-Name.propTypes = propTypes
+Name.displayName = 'WorkDescriptionName';
+Name.propTypes = propTypes;
 // Title -------------------------------------
-export const Title = ({ children }) => <div>{children}</div>
+export const Title = ({ children }) => <div>{children}</div>;
 
-Title.displayName = 'WorkDescriptionTitle'
-Title.propTypes = propTypes
+Title.displayName = 'WorkDescriptionTitle';
+Title.propTypes = propTypes;
 
 // Image -------------------------------------
 export const Image = ({ children }) => (
@@ -85,14 +85,14 @@ export const Image = ({ children }) => (
       }
     `}</style>
   </div>
-)
+);
 
-Image.displayName = 'WorkDescriptionImage'
+Image.displayName = 'WorkDescriptionImage';
 Image.propTypes = {
   ...propTypes,
 
   imagePosition: PropTypes.oneOf(['left', 'right']),
-}
+};
 
 // Description -------------------------------------
 export const Description = ({ children }) => (
@@ -118,13 +118,13 @@ export const Description = ({ children }) => (
       }
     `}</style>
   </div>
-)
+);
 
-Description.displayName = 'WorkDescriptionDescription'
-Description.propTypes = propTypes
-Content.Name = Name
-Content.Title = Title
-Content.Image = Image
-Content.Description = Description
+Description.displayName = 'WorkDescriptionDescription';
+Description.propTypes = propTypes;
+Content.Name = Name;
+Content.Title = Title;
+Content.Image = Image;
+Content.Description = Description;
 
-export default Content
+export default Content;

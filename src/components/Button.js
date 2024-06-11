@@ -1,13 +1,13 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Text from './Text'
-import { navigate as NavTrial } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Text from './Text';
+import { navigate as NavTrial } from 'gatsby';
 import {
   c_NEON_TEAL,
   c_TEXT_DARK,
   c_TEXT_LIGHT,
   FONT_SECONDARY,
-} from '../theme'
+} from '../theme';
 
 const StyledLink = ({
   background,
@@ -21,7 +21,7 @@ const StyledLink = ({
   <>
     <button
       onClick={() => {
-        NavTrial(connect)
+        NavTrial(connect);
       }}
     >
       {children}
@@ -59,7 +59,7 @@ const StyledLink = ({
       }
     `}</style>
   </>
-)
+);
 Text.propTypes = {
   background: PropTypes.string,
   border_color: PropTypes.string,
@@ -68,6 +68,6 @@ Text.propTypes = {
   connect: PropTypes.string,
   margin_left: PropTypes.string,
   mobileSize: PropTypes.string,
-}
+};
 
-export default StyledLink
+export default StyledLink;

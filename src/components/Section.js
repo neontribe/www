@@ -1,11 +1,13 @@
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
 
-import { HeadingContext } from './Heading'
+import { HeadingContext } from './Heading';
 
 const Section = (props) => {
-  const level = useContext(HeadingContext)
+  const level = useContext(HeadingContext);
 
-  return <HeadingContext.Provider value={level + 1} children={props.children} />
-}
+  return (
+    <HeadingContext.Provider value={level + 1} children={props.children} />
+  );
+};
 
-export default Section
+export default Section;

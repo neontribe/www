@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 const HomeTop = ({ children }) => (
   <div className="top">
@@ -32,9 +32,9 @@ const HomeTop = ({ children }) => (
       }
     `}</style>
   </div>
-)
+);
 HomeTop.propTypes = {
   children: PropTypes.node,
-}
+};
 
-export default HomeTop
+export default HomeTop;

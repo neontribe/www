@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link as GatsbyLink } from 'gatsby'
-import classNames from 'classnames'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Link as GatsbyLink } from 'gatsby';
+import classNames from 'classnames';
 
-import { className, styles, LinkInternals } from './shared'
+import { className, styles, LinkInternals } from './shared';
 
 const InternalLink = ({ button, children, ...linkProps }) => (
   <GatsbyLink
@@ -14,11 +14,11 @@ const InternalLink = ({ button, children, ...linkProps }) => (
 
     {styles}
   </GatsbyLink>
-)
+);
 
 InternalLink.propTypes = {
   ...GatsbyLink.propTypes,
   button: PropTypes.bool,
-}
+};
 
-export default InternalLink
+export default InternalLink;

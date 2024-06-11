@@ -1,6 +1,6 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import classNames from 'classnames'
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 const CarouselControl = ({ children, onClick, label }) => (
   <button
@@ -23,12 +23,12 @@ const CarouselControl = ({ children, onClick, label }) => (
       }
     `}</style>
   </button>
-)
+);
 
 CarouselControl.propTypes = {
   children: PropTypes.node,
   onClick: PropTypes.func.isRequired,
   label: PropTypes.string,
-}
+};
 
-export default CarouselControl
+export default CarouselControl;

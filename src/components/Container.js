@@ -1,5 +1,5 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
 // TODO: replace all flex-box css classes with this component
 const Container = ({ children, justifyContent, mobileFlexDirection }) => (
@@ -22,12 +22,12 @@ const Container = ({ children, justifyContent, mobileFlexDirection }) => (
       }
     `}</style>
   </div>
-)
+);
 
 Container.propTypes = {
   children: PropTypes.node,
   justifyContent: PropTypes.string,
   mobileFlexDirection: PropTypes.string,
-}
+};
 
-export default Container
+export default Container;

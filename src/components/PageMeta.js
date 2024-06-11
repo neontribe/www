@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { Location } from '@reach/router'
-import { StaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { Location } from '@reach/router';
+import { StaticQuery, graphql } from 'gatsby';
 
 const PageMeta = ({
   type = 'website',
@@ -83,7 +83,7 @@ const PageMeta = ({
       </Location>
     )}
   />
-)
+);
 
 PageMeta.propTypes = {
   type: PropTypes.oneOf(['website', 'article']),
@@ -92,6 +92,6 @@ PageMeta.propTypes = {
   image: PropTypes.string,
   publishedDate: PropTypes.instanceOf(Date),
   modifiedDate: PropTypes.instanceOf(Date),
-}
+};
 
-export default PageMeta
+export default PageMeta;

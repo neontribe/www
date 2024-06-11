@@ -1,28 +1,36 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Page from './Page'
-import { REM_PX, c_TEXT_LIGHT, FONT_PRIMARY, FONT_SECONDARY } from '../../theme'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Page from './Page';
+import {
+  REM_PX,
+  c_TEXT_LIGHT,
+  FONT_PRIMARY,
+  FONT_SECONDARY,
+} from '../../theme';
 
 const Layout = ({ children }) => (
   <>
     <style jsx global>{`
       @font-face {
         font-family: 'Muli';
-        src: url('/fonts/muli-light-webfont.woff2') format('woff2'),
+        src:
+          url('/fonts/muli-light-webfont.woff2') format('woff2'),
           url('/fonts/muli-light-webfont.woff') format('woff');
         font-display: swap;
       }
 
       @font-face {
         font-family: 'KeepCalm';
-        src: url('/fonts/keepcalmmedium-webfont.woff2') format('woff2'),
+        src:
+          url('/fonts/keepcalmmedium-webfont.woff2') format('woff2'),
           url('/fonts/keepcalmmedium-webfont.woff') format('woff');
         font-display: swap;
       }
 
       @font-face {
         font-family: 'KeepCalm';
-        src: url('/fonts/keepcalmmediumitalic.woff2') format('woff2'),
+        src:
+          url('/fonts/keepcalmmediumitalic.woff2') format('woff2'),
           url('/fonts/keepcalmmediumitalic.woff') format('woff');
         font-style: italic;
         font-display: swap;
@@ -104,10 +112,10 @@ const Layout = ({ children }) => (
 
     <Page>{children}</Page>
   </>
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.node,
-}
+};
 
-export default Layout
+export default Layout;

@@ -1,6 +1,6 @@
-import { PAGE_WIDTH_REM } from '../../theme'
-import PropTypes from 'prop-types'
-import React from 'react'
+import { PAGE_WIDTH_REM } from '../../theme';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const ConstrainedWidth = ({ children, paddingTop, mobilePaddingBottom }) => (
   <div className="constrained-container">
@@ -33,12 +33,12 @@ const ConstrainedWidth = ({ children, paddingTop, mobilePaddingBottom }) => (
       }
     `}</style>
   </div>
-)
+);
 
 ConstrainedWidth.propTypes = {
   children: PropTypes.node,
   paddingTop: PropTypes.string,
   mobilePaddingBottom: PropTypes.string,
-}
+};
 
-export default ConstrainedWidth
+export default ConstrainedWidth;

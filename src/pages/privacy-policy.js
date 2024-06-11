@@ -1,15 +1,15 @@
-import React from 'react'
-import Layout from '../components/Layout'
-import RenderContent from '../components/RenderContent'
-import { StaticQuery, graphql } from 'gatsby'
-import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
-import { c_TEXT_LIGHT } from '../theme'
-import PageMeta from '../components/PageMeta'
-import PageTop from '../components/PageTop'
-import Text from '../components/Text'
-import Container from '../components/Container'
-import VerticalSpacing from '../components/VerticalSpacing'
-import circleArc from '../components/circleArc.svg'
+import React from 'react';
+import Layout from '../components/Layout';
+import RenderContent from '../components/RenderContent';
+import { StaticQuery, graphql } from 'gatsby';
+import ConstrainedWidth from '../components/Layout/ConstrainedWidth';
+import { c_TEXT_LIGHT } from '../theme';
+import PageMeta from '../components/PageMeta';
+import PageTop from '../components/PageTop';
+import Text from '../components/Text';
+import Container from '../components/Container';
+import VerticalSpacing from '../components/VerticalSpacing';
+import circleArc from '../components/circleArc.svg';
 
 const PrivacyPolicy = () => (
   <Layout>
@@ -68,6 +68,6 @@ const PrivacyPolicy = () => (
       )}
     />
   </Layout>
-)
+);
 
-export default PrivacyPolicy
+export default PrivacyPolicy;

@@ -1,13 +1,13 @@
-import React, { useState } from 'react'
-import PropTypes from 'prop-types'
-import ShimlessImg from 'gatsby-image'
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import ShimlessImg from 'gatsby-image';
 
-import FlipCard, { CardFront, CardBack } from '../FlipCard'
-import TribeMemberFront from './TribeMemberFront'
-import TribeMemberBack from './TribeMemberBack'
+import FlipCard, { CardFront, CardBack } from '../FlipCard';
+import TribeMemberFront from './TribeMemberFront';
+import TribeMemberBack from './TribeMemberBack';
 
 const TribeMember = ({ image, name, skills, bio, social }) => {
-  const [isFlipped, setFlipped] = useState(false)
+  const [isFlipped, setFlipped] = useState(false);
 
   return (
     <section className="tribe-member">
@@ -64,8 +64,8 @@ const TribeMember = ({ image, name, skills, bio, social }) => {
         }
       `}</style>
     </section>
-  )
-}
+  );
+};
 
 TribeMember.propTypes = {
   name: PropTypes.string.isRequired,
@@ -73,10 +73,10 @@ TribeMember.propTypes = {
   bio: PropTypes.node,
   // Inherited prop types
   image: ShimlessImg.propTypes.fluid,
-}
+};
 
 TribeMember.defaultProps = {
   skills: [],
-}
+};
 
-export default TribeMember
+export default TribeMember;

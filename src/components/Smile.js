@@ -1,6 +1,6 @@
-import React from 'react'
-import classNames from 'classnames'
-import arc from '../components/pinkArc.png'
+import React from 'react';
+import classNames from 'classnames';
+import arc from '../components/pinkArc.png';
 
 const Smile = ({ hyphenation = false }) => (
   <>
@@ -80,6 +80,6 @@ const Smile = ({ hyphenation = false }) => (
       }
     `}</style>
   </>
-)
+);
 
-export default Smile
+export default Smile;

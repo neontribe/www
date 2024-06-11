@@ -1,13 +1,13 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import get from 'lodash.get'
-import TribeMember from './TribeMember'
-import RenderContent from './RenderContent'
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import get from 'lodash.get';
+import TribeMember from './TribeMember';
+import RenderContent from './RenderContent';
 
-const CONTAINER_WIDTH = 1020 // px
-const COLUMN_HEIGHT = 420 // px
-const COLUMN_WIDTH = 260 // px
-const MAX_COLUMNS = 3
+const CONTAINER_WIDTH = 1020; // px
+const COLUMN_HEIGHT = 420; // px
+const COLUMN_WIDTH = 260; // px
+const MAX_COLUMNS = 3;
 
 const TriberGridComponent = ({ tribers }) => (
   <div className="triber-grid">
@@ -59,7 +59,7 @@ const TriberGridComponent = ({ tribers }) => (
       }
     `}</style>
   </div>
-)
+);
 
 export default () => (
   <StaticQuery
@@ -97,4 +97,4 @@ export default () => (
     `}
     render={(data) => <TriberGridComponent tribers={data.tribers} />}
   />
-)
+);

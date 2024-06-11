@@ -1,17 +1,17 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
 
-import WorkDescription, { WorkSummary } from '../components/WorkDescription'
-import H from '../components/Heading'
-import Text from '../components/Text'
-import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
+import WorkDescription, { WorkSummary } from '../components/WorkDescription';
+import H from '../components/Heading';
+import Text from '../components/Text';
+import ConstrainedWidth from '../components/Layout/ConstrainedWidth';
 
 const loremIpsum = `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-`
+`;
 
 const WorkDescriptionExample = ({ fluid }) => (
   <div className="work-description">
@@ -46,7 +46,7 @@ const WorkDescriptionExample = ({ fluid }) => (
       solution={loremIpsum + ' ' + loremIpsum}
     />
   </div>
-)
+);
 
 export default () => (
   <StaticQuery
@@ -68,4 +68,4 @@ export default () => (
       <WorkDescriptionExample fluid={data.file.childImageSharp.fluid} />
     )}
   />
-)
+);

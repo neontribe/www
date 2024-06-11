@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import Layout from '../components/Layout'
-import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
-import Text from '../components/Text'
-import PageMeta from '../components/PageMeta'
+import Layout from '../components/Layout';
+import ConstrainedWidth from '../components/Layout/ConstrainedWidth';
+import Text from '../components/Text';
+import PageMeta from '../components/PageMeta';
 
 const NotFoundPage = () => (
   <Layout>
@@ -28,6 +28,6 @@ const NotFoundPage = () => (
       }
     `}</style>
   </Layout>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;

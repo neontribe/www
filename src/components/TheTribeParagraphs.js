@@ -1,12 +1,12 @@
-import React from 'react'
-import Text from './Text'
+import React from 'react';
+import Text from './Text';
 // TODO: drive this content from markdown
 export const TheTribeTopParagraph = () => (
   <p>
     Neontribe is an eclectic group of individuals with interlocking skills and
     enthusiasms. Without our differences, we'd not have our strength.
   </p>
-)
+);
 
 // TODO: drive this content from markdown
 export const BottomParagraphOne = () => (
@@ -17,7 +17,7 @@ export const BottomParagraphOne = () => (
       product management.{' '}
     </p>
   </Text>
-)
+);
 
 export const BottomParagraphTwo = () => (
   <Text size="normal">
@@ -29,4 +29,4 @@ export const BottomParagraphTwo = () => (
       place for us to start talking. That's it.
     </p>
   </Text>
-)
+);

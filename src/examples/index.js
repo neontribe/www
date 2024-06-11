@@ -1,19 +1,19 @@
-import React from 'react'
+import React from 'react';
 
-import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
-import Text from '../components/Text'
-import H from '../components/Heading'
-import Section from '../components/Section'
-import { InternalLink, ExternalLink } from '../components/Link'
-import Carousel from '../components/Carousel'
-import VerticalSpacing from '../components/VerticalSpacing'
+import ConstrainedWidth from '../components/Layout/ConstrainedWidth';
+import Text from '../components/Text';
+import H from '../components/Heading';
+import Section from '../components/Section';
+import { InternalLink, ExternalLink } from '../components/Link';
+import Carousel from '../components/Carousel';
+import VerticalSpacing from '../components/VerticalSpacing';
 
-import kenneth from '../data/tribers/images/kenneth.jpg'
-import harry from '../data/tribers/images/collins.jpg'
-import neil from '../data/tribers/images/neil.jpg'
+import kenneth from '../data/tribers/images/kenneth.jpg';
+import harry from '../data/tribers/images/collins.jpg';
+import neil from '../data/tribers/images/neil.jpg';
 
-export { default as TribeMemberExample } from './TribeMemberExample'
-export { default as WorkDescriptionExample } from './WorkDescriptionExample'
+export { default as TribeMemberExample } from './TribeMemberExample';
+export { default as WorkDescriptionExample } from './WorkDescriptionExample';
 
 export const LinkExamples = () => (
   <ConstrainedWidth>
@@ -35,7 +35,7 @@ export const LinkExamples = () => (
       </ExternalLink>
     </div>
   </ConstrainedWidth>
-)
+);
 
 export const CarouselExamples = () => (
   <ConstrainedWidth>
@@ -92,4 +92,4 @@ export const CarouselExamples = () => (
       </Carousel>
     </Section>
   </ConstrainedWidth>
-)
+);

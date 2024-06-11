@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import classNames from 'classnames'
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-import { className, styles, LinkInternals } from './shared'
+import { className, styles, LinkInternals } from './shared';
 
 const ExternalLink = ({ button, children, newTab, ...linkProps }) => (
   <a
@@ -15,13 +15,13 @@ const ExternalLink = ({ button, children, newTab, ...linkProps }) => (
 
     {styles}
   </a>
-)
+);
 
 ExternalLink.propTypes = {
   href: PropTypes.string.isRequired,
   button: PropTypes.bool,
   newTab: PropTypes.bool,
   underline: PropTypes.bool,
-}
+};
 
-export default ExternalLink
+export default ExternalLink;

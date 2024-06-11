@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import Header from '../Header'
-import Footer from '../Footer'
+import Header from '../Header';
+import Footer from '../Footer';
 
 const Page = ({ title, children }) => (
   <div className="page-layout">
@@ -24,11 +24,11 @@ const Page = ({ title, children }) => (
       }
     `}</style>
   </div>
-)
+);
 
 Page.propTypes = {
   title: PropTypes.string,
   children: PropTypes.node,
-}
+};
 
-export default Page
+export default Page;

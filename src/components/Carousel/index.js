@@ -1,29 +1,29 @@
-import React from 'react'
+import React from 'react';
 
-import CarouselControl from './CarouselControl'
-import CarouselImages from './CarouselImages'
-import CarouselItem from './CarouselItem'
+import CarouselControl from './CarouselControl';
+import CarouselImages from './CarouselImages';
+import CarouselItem from './CarouselItem';
 
-import { breakpoint, c_TEXT_LIGHT } from '../../theme'
+import { breakpoint, c_TEXT_LIGHT } from '../../theme';
 
-import Arrow from './arrow.svg'
+import Arrow from './arrow.svg';
 
-const moduloWithMax = (num, max) => ((num % max) + max) % max
+const moduloWithMax = (num, max) => ((num % max) + max) % max;
 
 const Carousel = ({ children }) => {
-  const [activeItem, setActiveItem] = React.useState(0)
+  const [activeItem, setActiveItem] = React.useState(0);
 
   const nextItem = () => {
     setActiveItem((prevActiveItem) =>
       moduloWithMax(prevActiveItem + 1, children.length)
-    )
-  }
+    );
+  };
 
   const prevItem = () => {
     setActiveItem((prevActiveItem) =>
       moduloWithMax(prevActiveItem - 1, children.length)
-    )
-  }
+    );
+  };
 
   return (
     <div className="carousel">
@@ -77,23 +77,23 @@ const Carousel = ({ children }) => {
         }
       `}</style>
     </div>
-  )
-}
+  );
+};
 
 const arrayOfLength = (expectedLength, props, propName, componentName) => {
-  const arrayPropLength = props[propName].length
+  const arrayPropLength = props[propName].length;
   if (arrayPropLength !== expectedLength) {
     return new Error(
       `Invalid array length ${arrayPropLength} (expected ${expectedLength}) for prop ${propName} supplied to ${componentName}. Validation failed.`
-    )
+    );
   }
-}
+};
 
 Carousel.propTypes = {
   // Should have 3 children, currently only 2
   children: arrayOfLength.bind(null, 2),
-}
+};
 
-Carousel.Item = CarouselItem
+Carousel.Item = CarouselItem;
 
-export default Carousel
+export default Carousel;

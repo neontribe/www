@@ -1,17 +1,17 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Img from 'gatsby-image/withIEPolyfill'
-import ShimlessImg from 'gatsby-image'
-import css from 'styled-jsx/css'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Img from 'gatsby-image/withIEPolyfill';
+import ShimlessImg from 'gatsby-image';
+import css from 'styled-jsx/css';
 
-import { breakpoint } from '../../theme'
-import ConstrainedWidth from '../Layout/ConstrainedWidth'
-import H from '../Heading'
-import Text from '../Text'
-import ProblemSolution from './ProblemSolution'
-import Content from './Content'
-import VerticalSpacing from '../VerticalSpacing'
-import Section from '../Section'
+import { breakpoint } from '../../theme';
+import ConstrainedWidth from '../Layout/ConstrainedWidth';
+import H from '../Heading';
+import Text from '../Text';
+import ProblemSolution from './ProblemSolution';
+import Content from './Content';
+import VerticalSpacing from '../VerticalSpacing';
+import Section from '../Section';
 
 const imageStyles = css.resolve`
   @media (${breakpoint('md')}) {
@@ -19,7 +19,7 @@ const imageStyles = css.resolve`
       height: 100%;
     }
   }
-`
+`;
 
 const WorkSummary = ({ title, fluid, problem }) => {
   return (
@@ -48,13 +48,13 @@ const WorkSummary = ({ title, fluid, problem }) => {
 
       {imageStyles.styles}
     </div>
-  )
-}
+  );
+};
 
 WorkSummary.propTypes = {
   fluid: ShimlessImg.propTypes.fluid,
   title: PropTypes.node,
   problem: PropTypes.node,
-}
+};
 
-export default WorkSummary
+export default WorkSummary;

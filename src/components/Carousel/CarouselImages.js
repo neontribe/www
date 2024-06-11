@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import classNames from 'classnames'
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-import { breakpoint } from '../../theme'
+import { breakpoint } from '../../theme';
 
 const CarouselImage = ({ image, i, activeImage, goToItem }) => (
   <div
@@ -59,7 +59,7 @@ const CarouselImage = ({ image, i, activeImage, goToItem }) => (
       }
     `}</style>
   </div>
-)
+);
 
 const CarouselImages = ({ images, activeImage, goToItem }) => (
   <div className="carousel__images">
@@ -80,17 +80,17 @@ const CarouselImages = ({ images, activeImage, goToItem }) => (
       }
     `}</style>
   </div>
-)
+);
 
 CarouselImages.propTypes = {
   images: PropTypes.array,
   activeImage: PropTypes.number,
   goToItem: PropTypes.func,
-}
+};
 
 CarouselImage.propTypes = {
   ...CarouselImages.propTypes,
   i: PropTypes.number,
-}
+};
 
-export default CarouselImages
+export default CarouselImages;

@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-import Layout from '../components/Layout'
-import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
-import Text from '../components/Text'
+import Layout from '../components/Layout';
+import ConstrainedWidth from '../components/Layout/ConstrainedWidth';
+import Text from '../components/Text';
 
-import * as examples from '../examples'
+import * as examples from '../examples';
 
 export default () => (
   <Layout>
@@ -19,4 +19,4 @@ export default () => (
       .sort()
       .map((key) => React.createElement(examples[key], { key }))}
   </Layout>
-)
+);

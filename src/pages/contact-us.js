@@ -1,17 +1,17 @@
-import React from 'react'
+import React from 'react';
 
-import { c_NEON_PURPLE, c_NAV_ACTIVE } from '../theme'
+import { c_NEON_PURPLE, c_NAV_ACTIVE } from '../theme';
 
-import Layout from '../components/Layout'
-import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
-import Container from '../components/Container'
-import VerticalSpacing from '../components/VerticalSpacing'
-import PageMeta from '../components/PageMeta'
-import LinkedInIcon from '../components/linkedin.png'
-import PageTop from '../components/PageTop'
-import Text from '../components/Text'
-import contactArcs from '../components/contactArcs.svg'
-import EmailLink from '../components/EmailLink'
+import Layout from '../components/Layout';
+import ConstrainedWidth from '../components/Layout/ConstrainedWidth';
+import Container from '../components/Container';
+import VerticalSpacing from '../components/VerticalSpacing';
+import PageMeta from '../components/PageMeta';
+import LinkedInIcon from '../components/linkedin.png';
+import PageTop from '../components/PageTop';
+import Text from '../components/Text';
+import contactArcs from '../components/contactArcs.svg';
+import EmailLink from '../components/EmailLink';
 
 const ContactUs = () => (
   <Layout>
@@ -238,6 +238,6 @@ const ContactUs = () => (
       }
     `}</style>
   </Layout>
-)
+);
 
-export default ContactUs
+export default ContactUs;

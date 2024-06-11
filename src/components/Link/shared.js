@@ -1,14 +1,14 @@
-import React from 'react'
-import css from 'styled-jsx/css'
+import React from 'react';
+import css from 'styled-jsx/css';
 
 import {
   FONT_SECONDARY,
   c_CALL_TO_ACTION,
   c_CALL_TO_ACTION_HOVER,
   c_NEON_TEAL,
-} from '../../theme'
+} from '../../theme';
 
-import Text from '../Text'
+import Text from '../Text';
 
 export const { className, styles } = css.resolve`
   a.button {
@@ -28,12 +28,12 @@ export const { className, styles } = css.resolve`
   a:hover {
     color: ${c_NEON_TEAL};
   }
-`
+`;
 
 export const LinkInternals = ({ button, children }) => {
   if (button) {
-    return <Text size="medium">{children}</Text>
+    return <Text size="medium">{children}</Text>;
   }
 
-  return children
-}
+  return children;
+};

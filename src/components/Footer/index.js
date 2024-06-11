@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import ConstrainedWidth from '../Layout/ConstrainedWidth'
-import Text from '../Text'
-import logo from '../logo.svg'
-import { c_NEON_PURPLE } from '../../theme'
+import ConstrainedWidth from '../Layout/ConstrainedWidth';
+import Text from '../Text';
+import logo from '../logo.svg';
+import { c_NEON_PURPLE } from '../../theme';
 
 export default () => (
   <footer className="footer-container">
@@ -36,4 +36,4 @@ export default () => (
       }
     `}</style>
   </footer>
-)
+);

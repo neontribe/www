@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react'
-import css from 'styled-jsx/css'
+import React, { useState, useEffect } from 'react';
+import css from 'styled-jsx/css';
 
-import { c_NAV_ACTIVE, FONT_SECONDARY, c_TEXT_DARK } from '../theme'
-import { InternalLink } from './Link'
-import Text from './Text'
-import ConstrainedWidth from './Layout/ConstrainedWidth'
-import VerticalSpacing from '../components/VerticalSpacing'
-import logo from './logo.svg'
-import classNames from 'classnames'
+import { c_NAV_ACTIVE, FONT_SECONDARY, c_TEXT_DARK } from '../theme';
+import { InternalLink } from './Link';
+import Text from './Text';
+import ConstrainedWidth from './Layout/ConstrainedWidth';
+import VerticalSpacing from '../components/VerticalSpacing';
+import logo from './logo.svg';
+import classNames from 'classnames';
 
 const activeLinkStyles = css.resolve`
   a {
     border-bottom: 4px solid ${c_NAV_ACTIVE};
     color: #48e9ce;
   }
-`
+`;
 
 const NavLink = ({ children, active, ...props }) => (
   <Text lineHeight={2}>
@@ -27,7 +27,7 @@ const NavLink = ({ children, active, ...props }) => (
 
     {activeLinkStyles.styles}
   </Text>
-)
+);
 
 const DesktopNav = () => {
   return (
@@ -82,33 +82,33 @@ const DesktopNav = () => {
         }
       `}</style>
     </nav>
-  )
-}
+  );
+};
 
-const isBrowser = typeof window !== 'undefined'
+const isBrowser = typeof window !== 'undefined';
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   // Hook to detect screen size and returns true if screen is a desktop/tablet size and false if it is a mobile
 
   function checkScreenWidth() {
     if (isBrowser) {
-      return window.innerWidth
+      return window.innerWidth;
     }
   }
 
-  const [windowSize, setWindowSize] = useState(checkScreenWidth())
+  const [windowSize, setWindowSize] = useState(checkScreenWidth());
 
   useEffect(() => {
     function handleWindowResize() {
-      setWindowSize(checkScreenWidth())
+      setWindowSize(checkScreenWidth());
     }
 
-    window.addEventListener('resize', handleWindowResize)
+    window.addEventListener('resize', handleWindowResize);
 
     return () => {
-      window.removeEventListener('resize', handleWindowResize)
-    }
-  }, [])
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
 
   return (
     <div className="header-container">
@@ -245,7 +245,7 @@ const Header = () => {
         }
       `}</style>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

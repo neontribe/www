@@ -1,12 +1,12 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import slugify from 'slugify'
+import React from 'react';
+import { StaticQuery, graphql } from 'gatsby';
+import slugify from 'slugify';
 
-import VerticalSpacing from '../components/VerticalSpacing'
-import { WorkSummary } from '../components/WorkDescription'
-import { InternalLink } from '../components/Link'
+import VerticalSpacing from '../components/VerticalSpacing';
+import { WorkSummary } from '../components/WorkDescription';
+import { InternalLink } from '../components/Link';
 
-const randomItem = (items) => items[Math.floor(Math.random() * items.length)]
+const randomItem = (items) => items[Math.floor(Math.random() * items.length)];
 
 export default () => (
   <StaticQuery
@@ -32,7 +32,7 @@ export default () => (
       }
     `}
     render={(data) => {
-      const randProj = randomItem(data.projects.nodes)
+      const randProj = randomItem(data.projects.nodes);
 
       return (
         <React.Fragment>
@@ -51,7 +51,7 @@ export default () => (
             View our solution
           </InternalLink>
         </React.Fragment>
-      )
+      );
     }}
   />
-)
+);

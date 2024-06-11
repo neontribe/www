@@ -1,10 +1,10 @@
-import React from 'react'
-import RehypeReact from 'rehype-react'
-import classNames from 'classnames'
+import React from 'react';
+import RehypeReact from 'rehype-react';
+import classNames from 'classnames';
 
-import Text from '../components/Text'
-import { ExternalLink } from '../components/Link'
-import { c_NEON_PURPLE, c_TEXT_DARK, c_TEXT_LIGHT } from '../theme'
+import Text from '../components/Text';
+import { ExternalLink } from '../components/Link';
+import { c_NEON_PURPLE, c_TEXT_DARK, c_TEXT_LIGHT } from '../theme';
 
 const Content = (props) => (
   <>
@@ -37,10 +37,10 @@ const Content = (props) => (
       }
     `}</style>
   </>
-)
+);
 
 const Heading = ({ size, level, children, ...props }) => {
-  const H = 'h' + Math.min(level, 6)
+  const H = 'h' + Math.min(level, 6);
 
   return (
     <Text size={size}>
@@ -57,8 +57,8 @@ const Heading = ({ size, level, children, ...props }) => {
         }
       `}</style>
     </Text>
-  )
-}
+  );
+};
 
 const RenderAst = ({ htmlAst, components = {}, children }) => {
   const renderAst = new RehypeReact({
@@ -80,20 +80,20 @@ const RenderAst = ({ htmlAst, components = {}, children }) => {
       a: (props) => <ExternalLink {...props} />,
       ...components,
     },
-  }).Compiler
+  }).Compiler;
 
   if (htmlAst) {
-    return renderAst(htmlAst)
+    return renderAst(htmlAst);
   }
 
   // TODO: Support passing markdown to this as children and rendering it?
-  return children
-}
+  return children;
+};
 
 const RenderContent = (props) => (
   <Content>
     <RenderAst {...props} />
   </Content>
-)
+);
 
-export default RenderContent
+export default RenderContent;

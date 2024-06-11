@@ -1,12 +1,12 @@
-import React from 'react'
-import remark from 'remark'
-import recommended from 'remark-preset-lint-recommended'
-import remarkHtml from 'remark-html'
+import React from 'react';
+import remark from 'remark';
+import recommended from 'remark-preset-lint-recommended';
+import remarkHtml from 'remark-html';
 
-import H from '../Heading'
-import VerticalSpacing from '../VerticalSpacing'
-import Text from '../Text'
-import { fontSizes } from '../../theme'
+import H from '../Heading';
+import VerticalSpacing from '../VerticalSpacing';
+import Text from '../Text';
+import { fontSizes } from '../../theme';
 
 const Content = (props) => (
   <>
@@ -52,14 +52,14 @@ const Content = (props) => (
       }
     `}</style>
   </>
-)
+);
 
 export default ({ problem, solution }) => {
   solution = remark()
     .use(recommended)
     .use(remarkHtml)
     .processSync(solution)
-    .toString()
+    .toString();
 
   return (
     <>
@@ -99,5 +99,5 @@ export default ({ problem, solution }) => {
         }
       `}</style>
     </>
-  )
-}
+  );
+};
