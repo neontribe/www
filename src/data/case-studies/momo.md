@@ -15,7 +15,6 @@ introduction: |
 result: |
   Mind Of My Own is now a sustainable business with a team of 25, and a vision that has social good at its heart. We were there from the start in 2013, and helped them transition to an internal development team in 2024. Mind Of My Own’s products help young people speak for themselves, to those responsible for their experiences, at times that suit them. Hundreds of customers across Europe, New Zealand, and Australia embed the voice of many tens of thousands of young people into the heart of their work using these products.
 conclusion: |
-  testing
 whatWeDid: |
   We started by using the research Mind Of My Own had done to prototype an interface that helped young people speak for themselves to local authority workers. It provided suggestions for what to say about the experiences they’d had, the meetings they’d been to, and the decisions made about them. These prompts were informed by professional practice, and tested with young people. That prototype then became a web app and was soon being used by young people. Our team included user researchers, designers, product managers, and developers.
 
