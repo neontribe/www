@@ -1,18 +1,18 @@
 import React from 'react'
 
+import { c_NEON_PURPLE, c_NAV_ACTIVE } from '../theme'
+
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
-
-import Text from '../components/Text'
-
+import Container from '../components/Container'
 import VerticalSpacing from '../components/VerticalSpacing'
 import PageMeta from '../components/PageMeta'
-
-import Container from '../components/Container'
-import Twitter from '../components/twitter.svg'
+import LinkedInIcon from '../components/linkedin.png'
 import PageTop from '../components/PageTop'
+import Text from '../components/Text'
 import contactArcs from '../components/contactArcs.svg'
 import EmailLink from '../components/EmailLink'
+
 const ContactUs = () => (
   <Layout>
     <PageMeta
@@ -33,7 +33,7 @@ const ContactUs = () => (
             </div>
           </Text>
           <div className="main-arc-container">
-            <img src={contactArcs} height={136} width={191} />
+            <img src={contactArcs} alt="" height={136} width={191} />
           </div>
         </div>
 
@@ -51,32 +51,46 @@ const ContactUs = () => (
 
     <ConstrainedWidth>
       <Text size="normal" color="black" maxCharacter="49ch">
-        Follow us on Twitter
+        <p>
+          Follow us on {''}
+          <a
+            className="linkedin-link"
+            target="_blank"
+            href="https://www.linkedin.com/company/neontribe-ltd/"
+            rel="noopener noreferrer"
+          >
+            LinkedIn.
+          </a>
+        </p>
       </Text>
 
       <div className="social-media-container">
         <div className="social-media-labels">
-          <img
-            src={Twitter}
-            height={42}
-            width={42}
-            alt="This link navigates to the @neontribe twitter page"
-          />
-
-          <Text color="#561dee" size="normal">
-            <a href="https://twitter.com/neontribe"> @neontribe</a>
-          </Text>
+          <a
+            className="linkedin-logo"
+            target="_blank"
+            href="https://www.linkedin.com/company/neontribe-ltd/"
+            rel="noopener noreferrer"
+          >
+            <img
+              src={LinkedInIcon}
+              height={60}
+              width={70}
+              alt="Navigates to Neontribe's LinkedIn page"
+            />
+          </a>
         </div>
       </div>
 
       <Text size="normal" color="black" maxCharacter="55ch">
-        We share our clients work and best practice in the tech for good sector.
+        We share our clients' work and best practice in the tech for good
+        sector.
       </Text>
     </ConstrainedWidth>
 
     <VerticalSpacing size={3} />
     <div className="white-background">
-      <ConstrainedWidth paddingTop="3em">
+      <ConstrainedWidth>
         <Container mobileFlexDirection="column">
           <div>
             <Text color="black" size="normal" maxCharacter="53ch">
@@ -87,42 +101,23 @@ const ContactUs = () => (
             <Container justifyContent="flex-start">
               <Text color="#561dee">
                 <address>
-                  <p>Norwich Office </p>
-                  <p> Unit B</p>
-                  <p>Seymour House </p>
-                  <p>30-34 Muspole Street</p>
+                  <p>Neontribe Ltd</p>
+                  <p>21 Colegate</p>
                   <p>Norwich</p>
-                  <p>NR3 1DJ</p>
-                </address>
-              </Text>
-
-              <Text paddingLeft="4rem" color="#561dee">
-                <address>
-                  <p>Kaleider Studios </p>
-                  <p> 45 Preston Street</p>
-                  <p>Exeter</p>
-                  <p>EX1 1DF </p>
+                  <p>NR3 1BN</p>
                 </address>
               </Text>
             </Container>
           </div>
-
-          <div className="answerphone-text">
-            <Text color="black" size="normal">
-              Leave a message on our answerphone if you’d like us to call you
-            </Text>
-
-            <VerticalSpacing size={2}></VerticalSpacing>
-
-            <Text color="#561dee">0845 689 0896</Text>
-          </div>
         </Container>
-
         <VerticalSpacing size={9}></VerticalSpacing>
         <Text size="small" color="black">
           <p>Neontribe Ltd</p>
           <p>Registered in England & Wales Registration number: 06165574</p>
-          <p>Registered office: 106 Lincoln St. Norwich, Norfolk, NR2 3LB</p>
+          <p>
+            Registered office: Studio 1.05c Level 1 Department Leeds Dock, The
+            Boulevard, Leeds, England, LS10 1PZ
+          </p>
         </Text>
       </ConstrainedWidth>
     </div>
@@ -167,6 +162,19 @@ const ContactUs = () => (
         align-items: center;
       }
 
+      .linkedin-link {
+        color: ${c_NEON_PURPLE};
+        text-decoration: underline;
+      }
+
+      .linkedin-link:hover {
+        color: ${c_NAV_ACTIVE};
+      }
+
+      .linkedin-logo:focus {
+        outline-color: ${c_NEON_PURPLE};
+      }
+
       .button {
         display: flex;
       }
@@ -181,25 +189,9 @@ const ContactUs = () => (
         padding-right: 2rem;
       }
 
-      .twitter-container {
-        display: flex;
-        padding-top: 1rem;
-      }
-
-      .answerphone-text {
-        padding-left: 10rem;
-        max-width: 40ch;
-      }
-
       @media (max-width: 860px) {
         .contact-header {
           flex-direction: column;
-        }
-
-        .answerphone-text {
-          padding-left: 0;
-          max-width: 53ch;
-          padding-top: 2rem;
         }
 
         .social-media-container {

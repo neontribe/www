@@ -66,10 +66,7 @@ export default () => (
     query={graphql`
       query {
         tribers: allMarkdownRemark(
-          filter: {
-            fields: { sourceName: { eq: "tribers" } }
-            frontmatter: { type: { ne: "story" } }
-          }
+          filter: { fields: { sourceName: { eq: "tribers" } } }
           sort: { fields: [fileAbsolutePath] }
         ) {
           nodes {

@@ -53,7 +53,7 @@ const TheTribePage = () => (
             <img src={tribeArcs} height={166} width={118} />{' '}
           </div>
         </div>
-
+{/* 
         <VerticalSpacing size={5} />
         <HireContainer>
           <EmailLink
@@ -63,7 +63,7 @@ const TheTribePage = () => (
           >
             Join the tribe
           </EmailLink>
-        </HireContainer>
+        </HireContainer> */}
       </ConstrainedWidth>
     </PageTop>
     <VerticalSpacing size={8} />
@@ -99,13 +99,13 @@ const TheTribePage = () => (
         <VerticalSpacing size={5} />
 
         <HireContainer>
-          <StyledLink
+          {/* <StyledLink
             connect="https://docs.google.com/forms/d/e/1FAIpQLScThzeOla4FG2tEGfUVthAb8ZyTIzSGb0nB_tcqSlYSbrIjZA/viewform?usp=sf_link"
             background="#5600ee"
             border_color="#5600ee"
           >
             Tell us about you
-          </StyledLink>
+          </StyledLink> */}
 
           <Text
             paddingLeft="2rem"
@@ -116,7 +116,7 @@ const TheTribePage = () => (
           >
             <a href="mailto:hello@neontribe.co.uk">
               {' '}
-              Or email: hello@neontribe.co.uk{' '}
+              Email: hello@neontribe.co.uk{' '}
             </a>
           </Text>
         </HireContainer>

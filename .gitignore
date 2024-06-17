@@ -71,3 +71,4 @@ yarn-error.log
 
 # Editor files
 .vscode
+.idea

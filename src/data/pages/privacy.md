@@ -1,8 +1,10 @@
-This policy relates to www.neontribe.co.uk and related sub-domains of neontribe.co.uk (“the Site”) which is owned by Neontribe ltd and related activity.
-Neontribe ltd trading as Neontribe
-Registered as a limited company in England & Wales
+# Neontribe Privacy Policy and Cookies
+
+This policy relates to www.neontribe.co.uk and related sub-domains of neontribe.co.uk (“the Site”) which is owned by Neontribe ltd and related activity. Neontribe ltd trading as Neontribe. Registered as a limited company in England & Wales.
+
 Business registration: 06165574
-Registered office: 106 Lincoln St. Norwich, Norfolk, NR2 3LB.
+
+Registered office: Studio 1.05c Level 1 Department Leeds Dock, The Boulevard, Leeds, England, LS10 1PZ
 
 ## What information is collected?
 
