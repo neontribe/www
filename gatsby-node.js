@@ -44,7 +44,7 @@ exports.createPages = async ({ actions, graphql }) => {
   // Create pages for case studies
   await createPagesFromSource(
     'case-studies',
-    'case-studies',
+    '',
     'src/templates/case-study/index.js'
   )
 
