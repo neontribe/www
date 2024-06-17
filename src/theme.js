@@ -1,5 +1,5 @@
 // SIZE contstants
-const PAGE_WIDTH_PX = 1020
+const PAGE_WIDTH_PX = 1120
 
 export const REM_PX = 16
 export const GUTTER_PX = 10

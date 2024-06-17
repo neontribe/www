@@ -12,12 +12,10 @@ import {
 } from '../components/TheTribeParagraphs'
 
 import VerticalSpacing from '../components/VerticalSpacing'
-import StyledLink from '../components/Button'
 import PageMeta from '../components/PageMeta'
 import tribeArcs from '../components/tribeArcs.svg'
 import circleArc from '../components/circleArc.svg'
 import HireContainer from '../components/HireContainer'
-import EmailLink from '../components/EmailLink'
 const TheTribePage = () => (
   <Layout>
     <PageMeta
@@ -53,7 +51,7 @@ const TheTribePage = () => (
             <img src={tribeArcs} height={166} width={118} />{' '}
           </div>
         </div>
-{/* 
+        {/* 
         <VerticalSpacing size={5} />
         <HireContainer>
           <EmailLink
