@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const HomeTop = ({ children }) => (
+const FullScreenHeader = ({ children }) => (
   <div className="top">
     {children}
 
@@ -33,8 +33,8 @@ const HomeTop = ({ children }) => (
     `}</style>
   </div>
 )
-HomeTop.propTypes = {
+FullScreenHeader.propTypes = {
   children: PropTypes.node,
 }
 
-export default HomeTop
+export default FullScreenHeader
