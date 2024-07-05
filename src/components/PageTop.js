@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const PageTop = ({ children }) => (
+const PageTop = ({ children, bannerPresent }) => (
   <div className="top">
     {children}
 
@@ -9,7 +9,7 @@ const PageTop = ({ children }) => (
       .top {
         background-color: black;
         padding-top: 2rem;
-        padding-bottom: 4rem;
+        padding-bottom: ${bannerPresent ? '0' : '4rem'};
         position: relative;
         height: 100%;
       }

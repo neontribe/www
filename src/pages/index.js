@@ -6,13 +6,13 @@ import Smile from '../components/Smile'
 import VerticalSpacing from '../components/VerticalSpacing'
 import PageMeta from '../components/PageMeta'
 import StyledLink from '../components/Button'
-import HomeTop from '../components/HomeTop'
+import FullScreenHeader from '../components/FullScreenHeader'
 import { fontSizes } from '../theme'
 
 const IndexPage = () => (
   <Layout>
     <PageMeta title="Welcome" />
-    <HomeTop>
+    <FullScreenHeader>
       <ConstrainedWidth>
         <>
           <h1>
@@ -146,7 +146,7 @@ const IndexPage = () => (
           `}</style>
         </section>
       </ConstrainedWidth>
-    </HomeTop>
+    </FullScreenHeader>
   </Layout>
 )
 
