@@ -1,7 +1,7 @@
 ---
 title: 'Infosecurity that’s grounded in practical experience'
 description: 'Human-centered support with information security governance, policy documentation and process implementation'
-slug: 'infosecurity-grounded-in-practical-experience'
+slug: 'infosecurity-at-neontribe-case-study'
 customer: 'Alexandra Rose Charity, Mind Of My Own, Norfolk Community Arts'
 categories: 'Information Security, Data Protection, Charity Sector'
 statistic: null

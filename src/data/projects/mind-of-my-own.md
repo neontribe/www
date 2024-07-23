@@ -12,4 +12,5 @@ solution: |
   - Building and improving the apps which are now used by over 100 organisations to talk with the young people in their care.
 
 image: images/mind-of-my-own.jpg
+caseStudy: '/mind-of-my-own-case-study'
 ---
