@@ -6,14 +6,12 @@ import remarkHtml from 'remark-html'
 import Container from '../../components/Container'
 import Text from '../../components/Text'
 
-
 import {
   c_SECONDARY_BACKGROUND,
   c_TEXT_DARK,
   c_CALL_TO_ACTION_HOVER,
-  fontSizes
+  fontSizes,
 } from '../../theme'
-
 
 import tribeArcs from '../../components/tribeArcs.svg'
 
@@ -112,16 +110,15 @@ const RenderCaseStudy = ({
           position: relative;
           margin-left: 5rem;
           padding: 1rem 0;
+          display: flex;
+          align-items: center;
         }
 
         .case-study blockquote::before {
           content: url('/blueArc.svg');
-          top: 50%;
-          bottom: 50%;
 
           position: absolute;
           left: -80px;
-          align-self: center;
         }
 
         .case-study a {
@@ -142,7 +139,7 @@ const RenderCaseStudy = ({
             transform: rotate(90deg);
             left: 50%;
             right: 50%;
-            top: -130px;
+            top: -100px;
             bottom: auto;
           }
         }
