@@ -6,7 +6,14 @@ import remarkHtml from 'remark-html'
 import Container from '../../components/Container'
 import Text from '../../components/Text'
 
-import { c_SECONDARY_BACKGROUND, c_TEXT_DARK, fontSizes } from '../../theme'
+
+import {
+  c_SECONDARY_BACKGROUND,
+  c_TEXT_DARK,
+  c_CALL_TO_ACTION_HOVER,
+  fontSizes
+} from '../../theme'
+
 
 import tribeArcs from '../../components/tribeArcs.svg'
 
@@ -84,7 +91,7 @@ const RenderCaseStudy = ({
 
       <style jsx global>{`
         .case-study {
-          color: black;
+          color: ${c_TEXT_DARK};
         }
 
         .case-study * + * {
@@ -115,6 +122,15 @@ const RenderCaseStudy = ({
           position: absolute;
           left: -80px;
           align-self: center;
+        }
+
+        .case-study a {
+          text-decoration: underline;
+          color: #0000ee;
+        }
+
+        .case-study a:hover {
+          color: ${c_CALL_TO_ACTION_HOVER};
         }
 
         @media (max-width: 860px) {

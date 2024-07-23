@@ -29,6 +29,7 @@ const CaseStudy = ({ data }) => {
     statistic,
     description,
     image,
+    imageAltText,
     whatWeDid,
     result,
     introduction,
@@ -46,17 +47,24 @@ const CaseStudy = ({ data }) => {
             mobileFlexDirection="column"
           >
             <Container restrictWidth flex={false}>
-              <Text size="xlarge" color={c_TEXT_LIGHT}>
-                <h1>{title}</h1>
-              </Text>
-              <VerticalSpacing size={3} />
-              <Text size="medium" weight="bold" color={c_NEON_TEAL}>
-                <p>{customer}</p>
-              </Text>
+              {title && (
+                <Text size="xlarge" color={c_TEXT_LIGHT}>
+                  <h1>{title}</h1>
+                </Text>
+              )}
 
-              <Text size="medium" color={c_TEXT_LIGHT}>
-                <p>{categories}</p>
-              </Text>
+              <VerticalSpacing size={3} />
+              {customer && (
+                <Text size="medium" weight="bold" color={c_NEON_TEAL}>
+                  <p>{customer}</p>
+                </Text>
+              )}
+
+              {categories && (
+                <Text size="medium" color={c_TEXT_LIGHT}>
+                  <p>{categories}</p>
+                </Text>
+              )}
               <VerticalSpacing size={3} />
             </Container>
             {image && (
@@ -64,7 +72,7 @@ const CaseStudy = ({ data }) => {
                 <Img
                   fluid={image.childImageSharp.fluid}
                   objectFit="contain"
-                  alt="Descriptive text"
+                  alt={imageAltText ? imageAltText : ''}
                   style={{ width: '100%', minWidth: '250px', height: '100%' }}
                 />
               </div>
@@ -154,7 +162,6 @@ export const query = graphql`
         challenge
         whatWeDid
         conclusion
-
         image {
           childImageSharp {
             fluid(maxWidth: 380) {
@@ -162,6 +169,7 @@ export const query = graphql`
             }
           }
         }
+        imageAltText
       }
     }
   }
