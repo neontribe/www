@@ -4,7 +4,7 @@ import Img from 'gatsby-image/withIEPolyfill'
 import ShimlessImg from 'gatsby-image'
 import css from 'styled-jsx/css'
 
-import { breakpoint } from '../../theme'
+import { breakpoint, c_NEON_PURPLE, c_NAV_ACTIVE } from '../../theme'
 import ConstrainedWidth from '../Layout/ConstrainedWidth'
 import H from '../Heading'
 import Section from '../Section'
@@ -21,7 +21,15 @@ const imageStyles = css.resolve`
   }
 `
 
-const WorkDescription = ({ id, title, client, fluid, problem, solution }) => (
+const WorkDescription = ({
+  id,
+  title,
+  client,
+  fluid,
+  problem,
+  solution,
+  caseStudy,
+}) => (
   <section id={id}>
     <ConstrainedWidth>
       <div className="white-background">
@@ -46,27 +54,21 @@ const WorkDescription = ({ id, title, client, fluid, problem, solution }) => (
               <Img className={imageStyles.className} fluid={fluid} />
             </Content.Image>
 
-            <VerticalSpacing size={5} />
-
-            <Text
-              color="#561dee"
-              size="normal"
-              weight="400"
-              maxCharacter="45ch"
-            >
-              {' '}
-              {/* <b>Funded by:</b> {fund} */}
-            </Text>
-            <VerticalSpacing size={1} />
-            <Text color="#561dee" size="normal" maxCharacter="30ch">
-              {' '}
-              {/* <b>Project cost:</b> {budget}{' '} */}
-            </Text>
-            <VerticalSpacing size={1} />
-            <Text color="#561dee" size="normal">
-              {' '}
-              {/* <b>Timescale:</b> {timescale}{' '} */}
-            </Text>
+            {caseStudy && (
+              <>
+                <VerticalSpacing size={2} />
+                <Text
+                  color={c_NEON_PURPLE}
+                  size="normal"
+                  weight="400"
+                  maxCharacter="45ch"
+                >
+                  <a href={caseStudy} className="case-study-link">
+                    More about our work with {client}
+                  </a>
+                </Text>
+              </>
+            )}
           </Content.Title>
 
           <Content.Description>
@@ -107,10 +109,17 @@ const WorkDescription = ({ id, title, client, fluid, problem, solution }) => (
         float: left;
         font-size: 22px;
         max-width: 60ch;
-
         border-radius: 0 0 38px 0;
         display: inline-block;
       }
+
+      .case-study-link {
+        text-decoration: underline;
+      }
+      .case-study-link:hover {
+        color: ${c_NAV_ACTIVE};
+      }
+
       .special-font-case {
         font-family: muli, sans-sarif;
         font-weight: 700;
