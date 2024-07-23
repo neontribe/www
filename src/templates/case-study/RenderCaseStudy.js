@@ -6,7 +6,7 @@ import remarkHtml from 'remark-html'
 import Container from '../../components/Container'
 import Text from '../../components/Text'
 
-import { c_SECONDARY_BACKGROUND, c_TEXT_DARK } from '../../theme'
+import { c_SECONDARY_BACKGROUND, c_TEXT_DARK, fontSizes } from '../../theme'
 
 import tribeArcs from '../../components/tribeArcs.svg'
 
@@ -42,12 +42,14 @@ const RenderCaseStudy = ({
   whatWeDid,
   conclusion,
   statistic,
+  challenge,
 }) => {
   const renderContent = (content) =>
     remark().use(recommended).use(remarkHtml).processSync(content).toString()
 
   const sections = [
     { title: null, content: introduction },
+    { title: 'Challenge', content: challenge },
     { title: 'Result', content: result },
     { title: 'What we did', content: whatWeDid },
     { title: null, content: conclusion },
@@ -95,9 +97,14 @@ const RenderCaseStudy = ({
           flex-wrap: wrap;
         }
 
+        .case-study h2 {
+          font-size: ${fontSizes['medium']};
+        }
+
         .case-study blockquote {
           position: relative;
           margin-left: 5rem;
+          padding: 1rem 0;
         }
 
         .case-study blockquote::before {

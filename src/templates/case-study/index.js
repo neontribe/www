@@ -33,6 +33,7 @@ const CaseStudy = ({ data }) => {
     result,
     introduction,
     conclusion,
+    challenge,
   } = frontmatter
 
   return (
@@ -89,6 +90,7 @@ const CaseStudy = ({ data }) => {
           whatWeDid={whatWeDid}
           conclusion={conclusion}
           statistic={statistic}
+          challenge={challenge}
         />
       </ConstrainedWidth>
 
@@ -149,6 +151,7 @@ export const query = graphql`
         problem
         introduction
         result
+        challenge
         whatWeDid
         conclusion
 
