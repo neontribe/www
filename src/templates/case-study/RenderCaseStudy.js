@@ -10,6 +10,7 @@ import {
   c_SECONDARY_BACKGROUND,
   c_TEXT_DARK,
   c_CALL_TO_ACTION_HOVER,
+  fontSizes,
 } from '../../theme'
 
 import tribeArcs from '../../components/tribeArcs.svg'
@@ -46,12 +47,14 @@ const RenderCaseStudy = ({
   whatWeDid,
   conclusion,
   statistic,
+  challenge,
 }) => {
   const renderContent = (content) =>
     remark().use(recommended).use(remarkHtml).processSync(content).toString()
 
   const sections = [
     { title: null, content: introduction },
+    { title: 'Challenge', content: challenge },
     { title: 'Result', content: result },
     { title: 'What we did', content: whatWeDid },
     { title: null, content: conclusion },
@@ -99,19 +102,23 @@ const RenderCaseStudy = ({
           flex-wrap: wrap;
         }
 
+        .case-study h2 {
+          font-size: ${fontSizes['medium']};
+        }
+
         .case-study blockquote {
           position: relative;
           margin-left: 5rem;
+          padding: 1rem 0;
+          display: flex;
+          align-items: center;
         }
 
         .case-study blockquote::before {
           content: url('/blueArc.svg');
-          top: 50%;
-          bottom: 50%;
 
           position: absolute;
           left: -80px;
-          align-self: center;
         }
 
         .case-study a {
@@ -132,7 +139,7 @@ const RenderCaseStudy = ({
             transform: rotate(90deg);
             left: 50%;
             right: 50%;
-            top: -130px;
+            top: -100px;
             bottom: auto;
           }
         }
