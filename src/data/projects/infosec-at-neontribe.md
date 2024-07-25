@@ -11,4 +11,5 @@ solution: |
   - In teaching the basics of information security
 
 image: images/infosec.png
+caseStudy: '/infosecurity-at-neontribe-case-study'
 ---

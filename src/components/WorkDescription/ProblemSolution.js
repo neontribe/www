@@ -6,7 +6,7 @@ import remarkHtml from 'remark-html'
 import H from '../Heading'
 import VerticalSpacing from '../VerticalSpacing'
 import Text from '../Text'
-import { fontSizes } from '../../theme'
+import { fontSizes, c_NAV_ACTIVE, c_NEON_PURPLE } from '../../theme'
 
 const Content = (props) => (
   <>
@@ -54,7 +54,7 @@ const Content = (props) => (
   </>
 )
 
-export default ({ problem, solution }) => {
+export default ({ problem, solution, caseStudy, client }) => {
   solution = remark()
     .use(recommended)
     .use(remarkHtml)
@@ -86,11 +86,39 @@ export default ({ problem, solution }) => {
           </div>
         </>
       )}
+
+      {caseStudy && (
+        <>
+          <VerticalSpacing size={2} />
+          <div className="case-study-link">
+            <a href={caseStudy} className="">
+              Learn more about {client}
+            </a>
+          </div>
+        </>
+      )}
       <style jsx>{`
         .challenge {
           max-width: 60ch;
           font-size: ${fontSizes['normal']};
           line-height: 1.5;
+        }
+
+        .case-study-link {
+          text-decoration: bold;
+          border-radius: 350px;
+          background-color: ${c_NEON_PURPLE};
+          font-size: ${fontSizes['normal']};
+          color: white;
+          font-weight: 600;
+          padding: 0.6rem 0.8rem;
+          text-wrap: wrap;
+          width: fit-content;
+          text-align: center;
+        }
+
+        .case-study-link:hover {
+          background-color: ${c_NAV_ACTIVE};
         }
 
         .extra-padding {
