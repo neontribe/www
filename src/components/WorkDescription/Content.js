@@ -15,7 +15,7 @@ const propTypes = {
 
 const Content = ({ children }) => (
   <div className="work-description-content">
-    <div className="title-description">
+    <div className="title-image-container">
       {cloneWithProps(findChild(children, Name), {
         key: 'client',
       })}
@@ -42,10 +42,13 @@ const Content = ({ children }) => (
         border-radius: 38px;
         display: flex;
         justify-content: space-around;
+        gap: 20px;
       }
 
-      .title-description {
+      .title-image-container {
         display: block;
+        max-width: 500px;
+        width: 100%;
       }
 
       .stacked-content {
@@ -55,6 +58,8 @@ const Content = ({ children }) => (
       @media (max-width: 860px) {
         .work-description-content {
           flex-direction: column;
+          padding-left: 1.5rem;
+          padding-right: 1.5rem;
         }
       }
     `}</style>
@@ -102,7 +107,7 @@ export const Description = ({ children }) => (
     <style jsx>{`
       .description {
         color: black;
-        width: 50%;
+        width: auto;
         float: right;
         white-space: pre-line;
         padding-top: 4.8rem;

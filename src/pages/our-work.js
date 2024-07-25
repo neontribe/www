@@ -72,6 +72,7 @@ const WhatWeAreDoingPage = () => (
                   problem
                   solution
                   client
+                  caseStudy
 
                   image {
                     childImageSharp {
@@ -104,9 +105,7 @@ const WhatWeAreDoingPage = () => (
                 imagePosition={index % 2 === 0 ? 'left' : 'right'}
                 problem={project.frontmatter.problem}
                 solution={project.frontmatter.solution}
-                // fund={project.frontmatter.fund}
-                // budget={project.frontmatter.budget}
-                // timescale={project.frontmatter.timescale}
+                caseStudy={project.frontmatter.caseStudy}
               />
             </React.Fragment>
           ))
