@@ -4,8 +4,13 @@ import Img from 'gatsby-image/withIEPolyfill'
 import ShimlessImg from 'gatsby-image'
 import css from 'styled-jsx/css'
 
-import { breakpoint } from '../../theme'
-import ConstrainedWidth from '../Layout/ConstrainedWidth'
+import {
+  breakpoint,
+  c_NEON_PURPLE,
+  c_NAV_ACTIVE,
+  fontSizes,
+  PAGE_WIDTH_REM,
+} from '../../theme'
 import H from '../Heading'
 import Section from '../Section'
 import Text from '../Text'
@@ -21,9 +26,17 @@ const imageStyles = css.resolve`
   }
 `
 
-const WorkDescription = ({ id, title, client, fluid, problem, solution }) => (
+const WorkDescription = ({
+  id,
+  title,
+  client,
+  fluid,
+  problem,
+  solution,
+  caseStudy,
+}) => (
   <section id={id}>
-    <ConstrainedWidth>
+    <div className="card-container">
       <div className="white-background">
         <Content>
           <Content.Name>
@@ -37,7 +50,7 @@ const WorkDescription = ({ id, title, client, fluid, problem, solution }) => (
 
           <Content.Title>
             <div className="title">
-              <Text size="medium" color="black" weight={700}>
+              <Text color="black" weight={700}>
                 <H>{title}</H>
               </Text>
             </div>
@@ -45,44 +58,36 @@ const WorkDescription = ({ id, title, client, fluid, problem, solution }) => (
             <Content.Image>
               <Img className={imageStyles.className} fluid={fluid} />
             </Content.Image>
-
-            <VerticalSpacing size={5} />
-
-            <Text
-              color="#561dee"
-              size="normal"
-              weight="400"
-              maxCharacter="45ch"
-            >
-              {' '}
-              {/* <b>Funded by:</b> {fund} */}
-            </Text>
-            <VerticalSpacing size={1} />
-            <Text color="#561dee" size="normal" maxCharacter="30ch">
-              {' '}
-              {/* <b>Project cost:</b> {budget}{' '} */}
-            </Text>
-            <VerticalSpacing size={1} />
-            <Text color="#561dee" size="normal">
-              {' '}
-              {/* <b>Timescale:</b> {timescale}{' '} */}
-            </Text>
           </Content.Title>
 
           <Content.Description>
             <Section>
               <Section>
-                <ProblemSolution problem={problem} solution={solution} />
+                <ProblemSolution
+                  problem={problem}
+                  solution={solution}
+                  caseStudy={caseStudy}
+                  client={client}
+                />
               </Section>
             </Section>
           </Content.Description>
         </Content>
       </div>
-    </ConstrainedWidth>
+    </div>
 
     {imageStyles.styles}
 
     <style jsx>{`
+      .card-container {
+        width: 100%;
+        max-width: ${PAGE_WIDTH_REM};
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 0 0 38px 0;
+        padding-bottom: 2rem;
+      }
+
       .image {
         height: 100%;
         max-height: 200px;
@@ -94,7 +99,7 @@ const WorkDescription = ({ id, title, client, fluid, problem, solution }) => (
 
       .title {
         max-width: 45ch;
-
+        font-size: 2rem;
         display: inline-flex;
         align-items: center;
         line-height: 1.5;
@@ -107,10 +112,22 @@ const WorkDescription = ({ id, title, client, fluid, problem, solution }) => (
         float: left;
         font-size: 22px;
         max-width: 60ch;
-
         border-radius: 0 0 38px 0;
         display: inline-block;
       }
+
+      .case-study-link {
+        text-decoration: bold;
+        border-radius: 350px;
+        border: solid 3px ${c_NEON_PURPLE};
+        color: black;
+        font-weight: 600;
+        padding: 0.5rem 0.8rem;
+      }
+      .case-study-link:hover {
+        background-color: ${c_NAV_ACTIVE};
+      }
+
       .special-font-case {
         font-family: muli, sans-sarif;
         font-weight: 700;
@@ -119,6 +136,17 @@ const WorkDescription = ({ id, title, client, fluid, problem, solution }) => (
       @media (max-width: 860px) {
         .title {
           max-width: 100%;
+        }
+      }
+
+      @media (max-width: 530px) {
+        .title {
+          font-size: ${fontSizes['large']};
+        }
+
+        .card-container {
+          padding-left: 0;
+          padding: right;
         }
       }
     `}</style>
