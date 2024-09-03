@@ -7,12 +7,12 @@ customer: 'New Philanthropy Capital'
 categories: 'Discovery'
 statistic: null
 image: images/npc-phone.png
-imageAltText: 'A graphic of the New Philanthropy Capital Signpost+ document'
+imageAltText: 'A graphic of the New Philanthropy Capital Signposting+ document'
 
 problem: null
 
 introduction: |
-  Neontribe has been involved with [NPC’s “Signpost+”](https://www.thinknpc.org/examples-of-our-work/initiatives-were-working-on/signpost/) project since it began. Its core objective “to improve the quality of life for young people and communities, and the value that technology and data can bring to this” is dear to our hearts. We’ve been working on projects to benefit young people since we started up as an agency, and we’re proud of the impact we’ve helped deliver.
+  Neontribe has been involved with [NPC’s “Signposting+”](https://www.thinknpc.org/examples-of-our-work/initiatives-were-working-on/signpost/) project since it began. Its core objective “to improve the quality of life for young people and communities, and the value that technology and data can bring to this” is dear to our hearts. We’ve been working on projects to benefit young people since we started up as an agency, and we’re proud of the impact we’ve helped deliver.
 
   In the first phase of the project, we researched, designed, and delivered “My Best Life”, a signposting site to help young people find services in Lambeth. NPC passed it on to young people’s advocacy organisation, Mind of my Own, and we helped them [rewrite it as a commercial product.](https://mindofmyown.org.uk/my-best-life/)
 
