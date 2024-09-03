@@ -90,6 +90,7 @@ const RenderCaseStudy = ({
       <style jsx global>{`
         .case-study {
           color: ${c_TEXT_DARK};
+          position: relative;
         }
 
         .case-study * + * {
