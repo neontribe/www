@@ -51,23 +51,32 @@ const ContactUs = () => (
 
     <ConstrainedWidth>
       <Text size="normal" color="black" maxCharacter="49ch">
-        <p>
-          Follow us on {''}
+        <span>
+          Follow us on{' '}
           <a
-            className="linkedin-link"
+            className="social-media-link"
             target="_blank"
             href="https://www.linkedin.com/company/neontribe-ltd/"
             rel="noopener noreferrer"
           >
-            LinkedIn.
+            LinkedIn
+          </a>{' '}
+          and{' '}
+          <a
+            className="social-media-link"
+            target="_blank"
+            href="https://bsky.app/profile/neontribe.bsky.social"
+            rel="noopener noreferrer"
+          >
+            BlueSky
           </a>
-        </p>
+        </span>
       </Text>
 
       <div className="social-media-container">
         <div className="social-media-labels">
           <a
-            className="linkedin-logo"
+            className="social-media-logo"
             target="_blank"
             href="https://www.linkedin.com/company/neontribe-ltd/"
             rel="noopener noreferrer"
@@ -77,6 +86,20 @@ const ContactUs = () => (
               height={60}
               width={70}
               alt="Navigates to Neontribe's LinkedIn page"
+            />
+          </a>
+
+          <a
+            className="social-media-logo"
+            target="_blank"
+            href="https://bsky.app/profile/neontribe.bsky.social"
+            rel="noopener noreferrer"
+          >
+            <img
+              src="/blueSkyLogo.svg"
+              height={60}
+              width={70}
+              alt="Navigates to Neontribe's BlueSky page"
             />
           </a>
         </div>
@@ -162,16 +185,16 @@ const ContactUs = () => (
         align-items: center;
       }
 
-      .linkedin-link {
+      .social-media-link {
         color: ${c_NEON_PURPLE};
         text-decoration: underline;
       }
 
-      .linkedin-link:hover {
+      .social-media-link:hover {
         color: ${c_NAV_ACTIVE};
       }
 
-      .linkedin-logo:focus {
+      .social-media-logo:focus {
         outline-color: ${c_NEON_PURPLE};
       }
 
