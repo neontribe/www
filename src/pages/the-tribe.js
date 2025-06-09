@@ -48,10 +48,10 @@ const TheTribePage = () => (
           </div>
 
           <div className="image-container">
-            <img src={tribeArcs} height={166} width={118} />{' '}
+            <img alt="" src={tribeArcs} height={166} width={118} />{' '}
           </div>
         </div>
-        {/* 
+        {/*
         <VerticalSpacing size={5} />
         <HireContainer>
           <EmailLink
@@ -90,7 +90,7 @@ const TheTribePage = () => (
 
           <div className="arc-container">
             {' '}
-            <img src={circleArc} />{' '}
+            <img alt="" src={circleArc} />{' '}
           </div>
         </div>
 

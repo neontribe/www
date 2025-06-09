@@ -24,7 +24,7 @@ const PrivacyPolicy = () => (
           <VerticalSpacing size={3} />
 
           <div className="heading-arc">
-            <img src={circleArc} height={128} width={277} />{' '}
+            <img alt="" src={circleArc} height={128} width={277} />{' '}
           </div>
         </Container>
       </ConstrainedWidth>

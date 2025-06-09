@@ -43,7 +43,7 @@ const WhatWeAreDoingPage = () => (
           </Text>
 
           <div className="heading-arc">
-            <img src={threeArcs} height={128} width={277} />{' '}
+            <img alt="" src={threeArcs} height={128} width={277} />{' '}
           </div>
         </Container>
 
@@ -140,7 +140,7 @@ const WhatWeAreDoingPage = () => (
           <VerticalSpacing size={5} />
         </div>
         <div className="footer-arc">
-          <img src={contactArcs} height={136} width={191} />
+          <img alt="" src={contactArcs} height={136} width={191} />
         </div>
       </Container>
     </ConstrainedWidth>

@@ -4,7 +4,7 @@ import { c_NEON_TEAL, c_TEXT_DARK } from '../theme'
 
 const EmailLink = ({ children, border_color, background, fontSize, link }) => (
   <div>
-    <a href={link} target="_blank">
+    <a href={link} target="_blank" rel="noreferrer">
       {children}
     </a>
 
