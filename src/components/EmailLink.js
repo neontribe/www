@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Text from './Text'
 import { c_NEON_TEAL, c_TEXT_DARK } from '../theme'
 
 const EmailLink = ({ children, border_color, background, fontSize, link }) => (

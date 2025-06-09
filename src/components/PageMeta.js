@@ -57,7 +57,7 @@ const PageMeta = ({
                 content={modifiedDate.toISOString()}
               />
             )}
-            <meta property="og:url" content={location.href} />}
+            <meta property="og:url" content={location.href} />
             <meta name="twitter:site" content="@neontribe" />
             <meta
               name="twitter:card"
