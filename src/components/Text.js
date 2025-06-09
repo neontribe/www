@@ -41,13 +41,14 @@ const Text = ({
 
 Text.propTypes = {
   children: PropTypes.node,
-  weight: PropTypes.string,
+  weight: PropTypes.number,
   align: PropTypes.string,
   lineHeight: PropTypes.number,
   size: PropTypes.oneOf(Object.keys(fontSizes)),
   color: PropTypes.string,
   paddingTop: PropTypes.string,
   paddingLeft: PropTypes.string,
+  hyphenation: PropTypes.bool,
 }
 
 export default Text

@@ -131,7 +131,7 @@ const WhatWeAreDoingPage = () => (
 
           <EmailLink
             link="mailto:hello@neontribe.co.uk"
-            background="#5600ee"
+            background_color="#5600ee"
             border_color="#5600ee"
             fontSize="0.9rem"
           >

@@ -54,8 +54,8 @@ const { className, styles } = css.resolve`
 `
 
 const SocialIcon = ({ site, handle, count, preventTabFocus }) => {
-  var icon
-  var href
+  let icon
+  let href
 
   if (iconMap.hasOwnProperty(site) && linkMap.hasOwnProperty(site)) {
     icon = iconMap[site]
@@ -92,6 +92,7 @@ const SocialIcon = ({ site, handle, count, preventTabFocus }) => {
 SocialIcon.propTypes = {
   site: PropTypes.string.isRequired,
   handle: PropTypes.string.isRequired,
+  preventTabFocus: PropTypes.bool,
 }
 
 export default SocialIcon

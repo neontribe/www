@@ -15,9 +15,9 @@ const TribeMemberBack = ({
   preventTabFocus,
 }) => {
   const socialKeys = social ? Object.keys(social) : []
-  var socialCount = 0
+  let socialCount = 0
 
-  for (var site in social) {
+  for (let site in social) {
     if (social[site]) socialCount++
   }
 

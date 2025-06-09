@@ -56,7 +56,7 @@ const TheTribePage = () => (
         <HireContainer>
           <EmailLink
             link="https://docs.google.com/forms/d/e/1FAIpQLScThzeOla4FG2tEGfUVthAb8ZyTIzSGb0nB_tcqSlYSbrIjZA/viewform?usp=sf_link"
-            background="#5600ee"
+            background_color="#5600ee"
             border_color="#5600ee"
           >
             Join the tribe
@@ -99,7 +99,7 @@ const TheTribePage = () => (
         <HireContainer>
           {/* <StyledLink
             connect="https://docs.google.com/forms/d/e/1FAIpQLScThzeOla4FG2tEGfUVthAb8ZyTIzSGb0nB_tcqSlYSbrIjZA/viewform?usp=sf_link"
-            background="#5600ee"
+            background_color="#5600ee"
             border_color="#5600ee"
           >
             Tell us about you

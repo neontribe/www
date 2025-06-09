@@ -47,9 +47,8 @@ const DesktopNav = () => {
       </ul>
 
       <style jsx>{`
-
         .nav {
-          display:flex;
+          display: flex;
         }
         .list {
           margin: 0;
@@ -61,7 +60,6 @@ const DesktopNav = () => {
           flex-direction: row;
           width: auto;
 
-
           list-style: none;
 
           font-size: 20px;
@@ -72,13 +70,10 @@ const DesktopNav = () => {
           margin-left: 3rem;
         }
 
-
-
-
-        @media (min-width:500px) and (max-width:700px) {
+        @media (min-width: 500px) and (max-width: 700px) {
           .list {
-          justify-content:flex-start;
-
+            justify-content: flex-start;
+          }
         }
       `}</style>
     </nav>

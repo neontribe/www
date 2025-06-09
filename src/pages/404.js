@@ -21,7 +21,11 @@ const NotFoundPage = () => (
 
             <VerticalSpacing size={5} />
 
-            <StyledLink connect="/" background="black" border_color="#48e9ce">
+            <StyledLink
+              connect="/"
+              background_color="black"
+              border_color="#48e9ce"
+            >
               Return to home page
             </StyledLink>
           </div>
