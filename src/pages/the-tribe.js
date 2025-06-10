@@ -148,7 +148,7 @@ const TheTribePage = () => (
           align-self: center;
           display: flex;
           flex-direction: column;
-          padding-bottom: 0rem;
+          padding-bottom: 0;
         }
 
         .flex-box {

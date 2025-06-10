@@ -61,6 +61,11 @@ const IndexPage = () => (
           {/* To do - add font sizes and screen sizes as variables under theme */}
 
           <style jsx>{`
+            @media (min-width: 860px) {
+              max-width: 80%;
+              padding-top: 2rem;
+            }
+
             @media (max-width: 860px) {
               max-width: 100%;
               padding-top: 3rem;
@@ -89,6 +94,12 @@ const IndexPage = () => (
           </StyledLink>
 
           <style jsx>{`
+            @media (min-width: 1000px) {
+              display: flex;
+              justify-content: space-between;
+              max-width: 50%;
+              flex-direction: row;
+            }
             @media (max-width: 1000px) {
               display: flex;
               justify-content: space-between;
