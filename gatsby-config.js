@@ -9,7 +9,6 @@ module.exports = {
     image: '/site-meta-image.png',
   },
   plugins: [
-    'gatsby-remark-source-name',
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,

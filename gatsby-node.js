@@ -1,5 +1,20 @@
 const path = require('path')
 
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNode, createNodeField } = actions
+  // We only care about MarkdownRemark content.
+  if (node.internal.type !== 'MarkdownRemark') {
+    return
+  }
+  const fileNode = getNode(node.parent)
+
+  createNodeField({
+    node,
+    name: 'sourceName',
+    value: fileNode.sourceInstanceName,
+  })
+}
+
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
