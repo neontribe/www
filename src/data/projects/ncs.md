@@ -13,7 +13,7 @@ problem: |
 solution: |
   - Co-created a digital tool with young people
   - Developed a website that wrapped AI output with critical context
-  - Showed an AIs critique of its own responses
+  - Showed an AI's critique of its own responses
   - Built in robust safeguards for privacy and safety
   - Focused on clear, accessible language.
 
