@@ -21,7 +21,7 @@ const PublishedDate = ({ date }) => {
   )
 }
 
-export default ({ data }) => {
+const BlogPost = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, htmlAst } = markdownRemark
 
@@ -81,3 +81,5 @@ export const query = graphql`
     }
   }
 `
+
+export default BlogPost
