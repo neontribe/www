@@ -1,11 +1,12 @@
 import React from 'react'
-import Img from 'gatsby-image/withIEPolyfill'
 import css from 'styled-jsx/css'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 import H from '../Heading'
 import Text from '../Text'
 import VerticalSpacing from '../VerticalSpacing'
 import { c_TEXT_DARK } from '../../theme'
+
 const imageStyles = css.resolve`
   .gatsby-image-wrapper {
     flex-grow: 1;
@@ -21,9 +22,9 @@ const TribeMemberFront = ({ image, name, skills, onClick }) => (
   <figure className="tribe-figure" onClick={onClick}>
     <div className="image-container">
       {image ? (
-        <Img
+        <GatsbyImage
           className={imageStyles.className}
-          fluid={image}
+          image={image}
           alt={`${name}'s profile`}
           objectFit="cover"
         />

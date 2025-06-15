@@ -1,5 +1,6 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+import { getImage } from 'gatsby-plugin-image'
 import get from 'lodash.get'
 import TribeMember from './TribeMember'
 import RenderContent from './RenderContent'
@@ -15,7 +16,9 @@ const TriberGridComponent = ({ tribers }) => (
       <div key={triber.frontmatter.name}>
         <div className="triber-sizer">
           <TribeMember
-            image={get(triber, 'frontmatter.image.childImageSharp.fluid')}
+            image={getImage(
+              triber.frontmatter.image.childImageSharp.gatsbyImageData
+            )}
             name={triber.frontmatter.name}
             skills={triber.frontmatter.words}
             bio={
@@ -76,9 +79,11 @@ export default () => (
               words
               image {
                 childImageSharp {
-                  fluid(maxWidth: 768) {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(
+                    width: 768
+                    placeholder: BLURRED
+                    formats: [AUTO, WEBP]
+                  )
                 }
               }
               social {
