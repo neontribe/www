@@ -41,7 +41,8 @@ const Text = ({
 
 Text.propTypes = {
   children: PropTypes.node,
-  weight: PropTypes.number,
+  // could be a number or string, eg 900 or "bold"
+  weight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   align: PropTypes.string,
   lineHeight: PropTypes.number,
   size: PropTypes.oneOf(Object.keys(fontSizes)),
