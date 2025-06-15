@@ -8,7 +8,7 @@ import { InternalLink } from '../components/Link'
 
 const randomItem = (items) => items[Math.floor(Math.random() * items.length)]
 
-export default () => (
+const Query = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -55,3 +55,5 @@ export default () => (
     }}
   />
 )
+
+export default Query

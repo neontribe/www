@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { getImage } from 'gatsby-plugin-image'
-import get from 'lodash.get'
+
 import TribeMember from './TribeMember'
 import RenderContent from './RenderContent'
 
@@ -64,7 +64,7 @@ const TriberGridComponent = ({ tribers }) => (
   </div>
 )
 
-export default () => (
+const Query = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -103,3 +103,5 @@ export default () => (
     render={(data) => <TriberGridComponent tribers={data.tribers} />}
   />
 )
+
+export default Query

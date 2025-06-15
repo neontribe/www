@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import ShimlessImg from 'gatsby-image'
 
 import FlipCard, { CardFront, CardBack } from '../FlipCard'
 import TribeMemberFront from './TribeMemberFront'

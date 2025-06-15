@@ -1,7 +1,7 @@
 const path = require('path')
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNode, createNodeField } = actions
+  const { createNodeField } = actions
   // We only care about MarkdownRemark content.
   if (node.internal.type !== 'MarkdownRemark') {
     return

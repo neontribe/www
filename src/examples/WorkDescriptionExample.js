@@ -48,7 +48,7 @@ const WorkDescriptionExample = ({ fluid }) => (
   </div>
 )
 
-export default () => (
+const Query = () => (
   <StaticQuery
     query={graphql`
       {
@@ -69,3 +69,5 @@ export default () => (
     )}
   />
 )
+
+export default Query

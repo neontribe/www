@@ -25,7 +25,7 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
  * - `StaticQuery`: https://gatsby.app/staticquery
  */
 
-export default () => (
+const Query = () => (
   <StaticQuery
     query={graphql`
       query {
@@ -99,3 +99,5 @@ export default () => (
     )}
   />
 )
+
+export default Query
