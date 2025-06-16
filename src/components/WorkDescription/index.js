@@ -1,7 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Img from 'gatsby-image/withIEPolyfill'
-import ShimlessImg from 'gatsby-image'
 import css from 'styled-jsx/css'
 
 import {
