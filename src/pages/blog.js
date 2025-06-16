@@ -79,9 +79,9 @@ const BlogPage = ({
 }
 
 export const pageQuery = graphql`
-  query {
+  {
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___published_at] }
+      sort: { frontmatter: { published_at: DESC } }
       filter: { fields: { sourceName: { eq: "blog-posts" } } }
     ) {
       edges {

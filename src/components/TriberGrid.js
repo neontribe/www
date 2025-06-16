@@ -67,10 +67,10 @@ const TriberGridComponent = ({ tribers }) => (
 const Query = () => (
   <StaticQuery
     query={graphql`
-      query {
+      {
         tribers: allMarkdownRemark(
           filter: { fields: { sourceName: { eq: "tribers" } } }
-          sort: { fields: [fileAbsolutePath] }
+          sort: { fileAbsolutePath: ASC }
         ) {
           nodes {
             htmlAst
