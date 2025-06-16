@@ -6,6 +6,7 @@ import Text from '../components/Text'
 import TribeMember from '../components/TribeMember'
 import { GUTTER_PX } from '../theme'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
+import { getImage } from 'gatsby-plugin-image'
 
 const loremIpsum = `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -34,9 +35,7 @@ const Query = () => (
           sourceInstanceName: { eq: "tribers" }
         ) {
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
           }
         }
       }
@@ -50,7 +49,9 @@ const Query = () => (
         <div className="person-example">
           <div className="person-wrapper">
             <TribeMember
-              fluid={data.placeholderImage.childImageSharp.fluid}
+              image={getImage(
+                data.placeholderImage.childImageSharp.gatsbyImageData
+              )}
               name="Kenneth the Shark"
               skills={['Support', 'Cuddle', 'Spying']}
               bio={loremIpsum}
@@ -59,7 +60,9 @@ const Query = () => (
 
           <div className="person-wrapper">
             <TribeMember
-              fluid={data.placeholderImage.childImageSharp.fluid}
+              image={getImage(
+                data.placeholderImage.childImageSharp.gatsbyImageData
+              )}
               name="Kenneth the Shark"
               skills={['Support', 'Cuddle', 'Spying']}
               bio={loremIpsum}
@@ -68,7 +71,9 @@ const Query = () => (
 
           <div className="person-wrapper">
             <TribeMember
-              fluid={data.placeholderImage.childImageSharp.fluid}
+              image={getImage(
+                data.placeholderImage.childImageSharp.gatsbyImageData
+              )}
               name="Kenneth the Shark"
               skills={['Support', 'Cuddle', 'Spying']}
               bio={loremIpsum}

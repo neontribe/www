@@ -5,6 +5,7 @@ import slugify from 'slugify'
 import VerticalSpacing from '../components/VerticalSpacing'
 import { WorkSummary } from '../components/WorkDescription'
 import { InternalLink } from '../components/Link'
+import { getImage } from 'gatsby-plugin-image'
 
 const randomItem = (items) => items[Math.floor(Math.random() * items.length)]
 
@@ -21,9 +22,11 @@ const Query = () => (
               problem
               image {
                 childImageSharp {
-                  fluid(maxWidth: 768) {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(
+                    width: 768
+                    placeholder: BLURRED
+                    formats: [AUTO, WEBP]
+                  )
                 }
               }
             }
@@ -39,7 +42,9 @@ const Query = () => (
           <WorkSummary
             title={randProj.frontmatter.title}
             problem={randProj.frontmatter.problem}
-            fluid={randProj.frontmatter.image.childImageSharp.fluid}
+            image={getImage(
+              randProj.frontmatter.image.childImageSharp.gatsbyImageData
+            )}
           />
 
           <VerticalSpacing size={5} />

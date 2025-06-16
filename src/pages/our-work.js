@@ -14,6 +14,7 @@ import VerticalSpacing from '../components/VerticalSpacing'
 import WorkDescription from '../components/WorkDescription'
 import threeArcs from '../components/threeArcs.svg'
 import PageMeta from '../components/PageMeta'
+import { getImage } from 'gatsby-plugin-image'
 
 import Container from '../components/Container'
 
@@ -76,9 +77,11 @@ const WhatWeAreDoingPage = () => (
 
                   image {
                     childImageSharp {
-                      fluid(maxWidth: 768) {
-                        ...GatsbyImageSharpFluid
-                      }
+                      gatsbyImageData(
+                        width: 768
+                        placeholder: BLURRED
+                        formats: [AUTO, WEBP]
+                      )
                     }
                   }
                 }
@@ -99,7 +102,9 @@ const WhatWeAreDoingPage = () => (
 
               <WorkDescription
                 id={slugify(project.frontmatter.title, '-')}
-                fluid={project.frontmatter.image.childImageSharp.fluid}
+                image={getImage(
+                  project.frontmatter.image.childImageSharp.gatsbyImageData
+                )}
                 title={project.frontmatter.title}
                 client={project.frontmatter.client}
                 imagePosition={index % 2 === 0 ? 'left' : 'right'}

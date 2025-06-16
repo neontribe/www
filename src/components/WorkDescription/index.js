@@ -17,6 +17,7 @@ import Text from '../Text'
 import VerticalSpacing from '../VerticalSpacing'
 import ProblemSolution from './ProblemSolution'
 import Content from './Content'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 const imageStyles = css.resolve`
   @media (${breakpoint('md')}) {
@@ -30,7 +31,7 @@ const WorkDescription = ({
   id,
   title,
   client,
-  fluid,
+  image,
   problem,
   solution,
   caseStudy,
@@ -56,7 +57,11 @@ const WorkDescription = ({
             </div>
             <VerticalSpacing size={5} />
             <Content.Image>
-              <Img className={imageStyles.className} fluid={fluid} />
+              <GatsbyImage
+                className={imageStyles.className}
+                alt={title}
+                image={image}
+              />
             </Content.Image>
           </Content.Title>
 
@@ -154,8 +159,12 @@ const WorkDescription = ({
 )
 
 WorkDescription.propTypes = {
-  fluid: ShimlessImg.propTypes.fluid,
-  image: PropTypes.node,
+  image: PropTypes.shape({
+    images: PropTypes.object,
+    layout: PropTypes.string,
+    width: PropTypes.number,
+    height: PropTypes.number,
+  }),
   imagePosition: PropTypes.oneOf(['left', 'right']),
   title: PropTypes.node,
   subtitle: PropTypes.node,

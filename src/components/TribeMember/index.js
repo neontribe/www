@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { GatsbyImage } from 'gatsby-plugin-image'
 
 import FlipCard, { CardFront, CardBack } from '../FlipCard'
 import TribeMemberFront from './TribeMemberFront'
@@ -71,8 +70,13 @@ TribeMember.propTypes = {
   name: PropTypes.string.isRequired,
   skills: PropTypes.array,
   bio: PropTypes.node,
-  // Inherited prop types
-  image: GatsbyImage.propTypes.image,
+  // Proptypes for gatsby-plugin-images
+  image: PropTypes.shape({
+    images: PropTypes.object,
+    layout: PropTypes.string,
+    width: PropTypes.number,
+    height: PropTypes.number,
+  }),
 }
 
 TribeMember.defaultProps = {
