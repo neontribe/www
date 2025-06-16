@@ -120,19 +120,19 @@ const WorkDescription = ({
       }
 
       .case-study-link {
-        text-decoration: bold;
         border-radius: 350px;
         border: solid 3px ${c_NEON_PURPLE};
         color: black;
         font-weight: 600;
         padding: 0.5rem 0.8rem;
       }
+
       .case-study-link:hover {
         background-color: ${c_NAV_ACTIVE};
       }
 
       .special-font-case {
-        font-family: muli, sans-sarif;
+        font-family: muli, sans-serif;
         font-weight: 700;
       }
 
@@ -149,7 +149,6 @@ const WorkDescription = ({
 
         .card-container {
           padding-left: 0;
-          padding: right;
         }
       }
     `}</style>
