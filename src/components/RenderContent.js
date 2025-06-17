@@ -46,9 +46,8 @@ const Heading = ({ size, level, children, ...props }) => {
     <Text size={size}>
       <H
         className={classNames('heading', level === 2 && 'with-arcs')}
-        children={children}
         {...props}
-      />
+      >{children}</H>
 
       <style jsx>{`
         .heading {
@@ -73,7 +72,7 @@ const RenderAst = ({ htmlAst, components = {}, children }) => {
       h3: (props) => <Heading {...props} level={3} size="normal" />,
       li: ({ children, ...props }) => (
         <li {...props}>
-          <Text children={children} />
+          <Text>{children}</Text>
         </li>
       ),
       // TODO: Discern external vs external links?

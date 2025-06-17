@@ -53,11 +53,11 @@ const { className, styles } = css.resolve`
   }
 `
 
-const SocialIcon = ({ site, handle, count, preventTabFocus }) => {
+const SocialIcon = ({ site, handle, preventTabFocus }) => {
   let icon
   let href
 
-  if (iconMap.hasOwnProperty(site) && linkMap.hasOwnProperty(site)) {
+  if (Object.hasOwn(iconMap, site) && Object.hasOwn(linkMap, site)) {
     icon = iconMap[site]
     href = linkMap[site].replace('???', handle)
   }

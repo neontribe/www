@@ -16,14 +16,14 @@ const activeLinkStyles = css.resolve`
   }
 `
 
-const NavLink = ({ children, active, ...props }) => (
+const NavLink = ({ children, ...props }) => (
   <Text lineHeight={2}>
     <InternalLink
       {...props}
       activeClassName={activeLinkStyles.className}
       partiallyActive={true}
-      children={children}
-    />
+    >{children}
+    </InternalLink>
 
     {activeLinkStyles.styles}
   </Text>
@@ -34,7 +34,7 @@ const DesktopNav = () => {
     <nav className="nav">
       <ul className="list">
         <li>
-          <NavLink active to="/our-work">
+          <NavLink to="/our-work">
             Our work
           </NavLink>
         </li>
@@ -136,7 +136,7 @@ const Header = () => {
                       )}
                     >
                       <li className="first-item">
-                        <NavLink active to="/our-work">
+                        <NavLink to="/our-work">
                           Our Work
                         </NavLink>
                       </li>

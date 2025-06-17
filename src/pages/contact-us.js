@@ -106,7 +106,7 @@ const ContactUs = () => (
       </div>
 
       <Text size="normal" color="black" maxCharacter="55ch">
-        We share our clients' work and best practice in the tech for good
+        We share our clients&#39; work and best practice in the tech for good
         sector.
       </Text>
     </ConstrainedWidth>

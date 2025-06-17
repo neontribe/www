@@ -46,7 +46,6 @@ const TribeMemberBack = ({
               <SocialIcon
                 site={site}
                 handle={social[site]}
-                count={socialCount}
                 key={site}
                 preventTabFocus={preventTabFocus}
               />

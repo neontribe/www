@@ -2,7 +2,8 @@
   "root": true,
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "node": true
   },
   "extends": [
     "eslint:recommended",
@@ -29,6 +30,6 @@
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
-    "react/no-unknown-property": [2, {"ignore": ["jsx"]}]
+    "react/no-unknown-property": [2, {"ignore": ["jsx", "global"]}]
   }
 }
