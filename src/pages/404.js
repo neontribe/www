@@ -12,7 +12,6 @@ import { fontSizes } from '../theme'
 
 const NotFoundPage = () => (
   <Layout>
-    <PageMeta title="Page not found" />
     <FullScreenHeader>
       <ConstrainedWidth>
         <Container justifyContent="space-around" mobileFlexDirection="column">
@@ -67,6 +66,13 @@ const NotFoundPage = () => (
       }
     `}</style>
   </Layout>
+)
+
+export const Head = ({ location }) => (
+  <PageMeta
+    title="Page not found"
+    location={location}
+  />
 )
 
 export default NotFoundPage

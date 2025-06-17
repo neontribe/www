@@ -47,11 +47,6 @@ const WhatWeAreDoingPage = () => {
 
   return (
     <Layout>
-      <PageMeta
-        title="What we do"
-        description="Neontribe is a digital agency. We research for context. We design for use. We code to completion. We test to exhaustion. Then we engineer enhancement."
-      />
-
       <PageTop>
         <ConstrainedWidth>
           <Text size="xlarge" color="#48e9ce">
@@ -185,5 +180,13 @@ const WhatWeAreDoingPage = () => {
     </Layout>
   )
 }
+
+export const Head = ({ location }) => (
+  <PageMeta
+    title="What we do"
+    description="Neontribe is a digital agency. We research for context. We design for use. We code to completion. We test to exhaustion. Then we engineer enhancement."
+    location={location}
+  />
+)
 
 export default WhatWeAreDoingPage

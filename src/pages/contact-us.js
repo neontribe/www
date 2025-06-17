@@ -15,10 +15,6 @@ import EmailLink from '../components/EmailLink'
 
 const ContactUs = () => (
   <Layout>
-    <PageMeta
-      title="Contact us"
-      description="To get in touch, you can contact us via email or twitter."
-    />
     <PageTop>
       <ConstrainedWidth>
         <Text size="xlarge" color="#48e9ce">
@@ -261,6 +257,14 @@ const ContactUs = () => (
       }
     `}</style>
   </Layout>
+)
+
+export const Head = ({ location }) => (
+  <PageMeta
+    title="Contact us"
+    description="To get in touch, you can contact us via email or twitter."
+    location={location}
+  />
 )
 
 export default ContactUs

@@ -18,10 +18,6 @@ import circleArc from '../components/circleArc.svg'
 import HireContainer from '../components/HireContainer'
 const TheTribePage = () => (
   <Layout>
-    <PageMeta
-      title="The Team"
-      description="Neontribe is a digital agency. Why neon? It’s the colour of tech. Why tribe? Individuals collaborating, hand-making useful tools that do a job of work."
-    />
     <PageTop>
       <ConstrainedWidth>
         <div className="flex-box">
@@ -164,6 +160,14 @@ const TheTribePage = () => (
       }
     `}</style>
   </Layout>
+)
+
+export const Head = ({ location }) => (
+  <PageMeta
+    title="The Team"
+    description="Neontribe is a digital agency. Why neon? It’s the colour of tech. Why tribe? Individuals collaborating, hand-making useful tools that do a job of work."
+    location={location}
+  />
 )
 
 export default TheTribePage

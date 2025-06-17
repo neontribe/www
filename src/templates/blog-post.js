@@ -29,11 +29,6 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
-      <PageMeta
-        title={title}
-        publishedDate={parse(published_at)}
-        modifiedDate={parse(updated_at)}
-      />
 
       <ConstrainedWidth fullWidth={false}>
         <article>
@@ -81,5 +76,17 @@ export const query = graphql`
     }
   }
 `
+
+export const Head = ({ data, location }) => {
+  const { frontmatter } = data.markdownRemark
+  return (
+    <PageMeta
+      title={frontmatter.title}
+      publishedDate={parse(frontmatter.published_at)}
+      modifiedDate={parse(frontmatter.updated_at)}
+      location={location}
+    />
+  )
+}
 
 export default BlogPost

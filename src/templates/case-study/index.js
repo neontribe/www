@@ -40,7 +40,6 @@ const CaseStudy = ({ data }) => {
 
   return (
     <Layout>
-      <PageMeta title={title} description={description} />
       <PageTop bannerPresent>
         <ConstrainedWidth>
           <Container
@@ -177,3 +176,17 @@ export const query = graphql`
     }
   }
 `
+
+export const Head = ({ data, location }) => {
+  const { frontmatter } = data.markdownRemark
+
+  return (
+    <PageMeta
+      title={frontmatter.title}
+      description={frontmatter.description}
+      image={frontmatter.image?.childImageSharp?.gatsbyImageData?.images?.fallback?.src}
+      type="article"
+      location={location}
+    />
+  )
+}

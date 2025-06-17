@@ -28,8 +28,6 @@ const PrivacyPolicy = () => {
 
   return (
     <Layout>
-      <PageMeta title="Privacy" />
-
       <PageTop>
         <ConstrainedWidth>
           <Container justifyContent="space-between" mobileFlexDirection="column">
@@ -70,5 +68,12 @@ const PrivacyPolicy = () => {
     </Layout>
   )
 }
+
+export const Head = ({ location }) => (
+  <PageMeta
+    title="Privacy"
+    location={location}
+  />
+)
 
 export default PrivacyPolicy

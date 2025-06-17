@@ -11,7 +11,6 @@ import { fontSizes } from '../theme'
 
 const IndexPage = () => (
   <Layout>
-    <PageMeta title="Welcome" />
     <FullScreenHeader>
       <ConstrainedWidth>
         <>
@@ -149,6 +148,13 @@ const IndexPage = () => (
       </ConstrainedWidth>
     </FullScreenHeader>
   </Layout>
+)
+
+export const Head = ({ location }) => (
+  <PageMeta
+    title="Welcome"
+    location={location}
+  />
 )
 
 export default IndexPage
