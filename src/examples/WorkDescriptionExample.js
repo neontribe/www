@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 
 import WorkDescription, { WorkSummary } from '../components/WorkDescription'
 import H from '../components/Heading'
@@ -49,9 +49,8 @@ const WorkDescriptionExample = ({ image }) => (
   </div>
 )
 
-const Query = () => (
-  <StaticQuery
-    query={graphql`
+const Query = () => {
+  const data= useStaticQuery(graphql`
       {
         file(
           relativePath: { eq: "images/arc.jpg" }
@@ -66,13 +65,13 @@ const Query = () => (
           }
         }
       }
-    `}
-    render={(data) => (
+    `)
+
+    return (
       <WorkDescriptionExample
         image={getImage(data.file.childImageSharp.gatsbyImageData)}
       />
-    )}
-  />
-)
+    )
+}
 
 export default Query

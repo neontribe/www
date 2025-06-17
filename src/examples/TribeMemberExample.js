@@ -1,5 +1,5 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 
 import H from '../components/Heading'
 import Text from '../components/Text'
@@ -26,9 +26,8 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
  * - `StaticQuery`: https://gatsby.app/staticquery
  */
 
-const Query = () => (
-  <StaticQuery
-    query={graphql`
+const Query = () => {
+    const data = useStaticQuery(graphql`
       query {
         placeholderImage: file(
           relativePath: { eq: "images/kenneth.jpg" }
@@ -39,8 +38,9 @@ const Query = () => (
           }
         }
       }
-    `}
-    render={(data) => (
+    `)
+
+    return (
       <ConstrainedWidth>
         <Text size="medium" weight={700}>
           <H>TribeMember</H>
@@ -101,8 +101,7 @@ const Query = () => (
           }
         `}</style>
       </ConstrainedWidth>
-    )}
-  />
-)
+    )
+}
 
 export default Query
