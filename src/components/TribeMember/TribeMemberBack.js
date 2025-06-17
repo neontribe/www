@@ -22,7 +22,18 @@ const TribeMemberBack = ({
   }
 
   return (
-    <div className="bio" onClick={onClick}>
+    <div
+      className="bio"
+      role="button"
+      tabIndex={0}
+      onClick={onClick}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          onClick?.(e)
+        }
+      }}
+    >
       <div className="bio-content">
         <div role="presentation">
           <Text type="secondary" weight={700} size="medium">

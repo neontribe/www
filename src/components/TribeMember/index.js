@@ -5,7 +5,7 @@ import FlipCard, { CardFront, CardBack } from '../FlipCard'
 import TribeMemberFront from './TribeMemberFront'
 import TribeMemberBack from './TribeMemberBack'
 
-const TribeMember = ({ image, name, skills, bio, social }) => {
+const TribeMember = ({ image, name, skills = [], bio, social }) => {
   const [isFlipped, setFlipped] = useState(false)
 
   return (
@@ -77,10 +77,6 @@ TribeMember.propTypes = {
     width: PropTypes.number,
     height: PropTypes.number,
   }),
-}
-
-TribeMember.defaultProps = {
-  skills: [],
 }
 
 export default TribeMember

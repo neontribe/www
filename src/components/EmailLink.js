@@ -6,7 +6,7 @@ const EmailLink = ({
   children,
   border_color,
   background_color,
-  fontSize,
+  fontSize = '1.25rem',
   link,
 }) => (
   <div>
@@ -67,10 +67,6 @@ EmailLink.propTypes = {
   border_color: PropTypes.string,
   background_color: PropTypes.string,
   fontSize: PropTypes.string,
-}
-
-EmailLink.defaultProps = {
-  fontSize: '1.25rem',
 }
 
 export default EmailLink
