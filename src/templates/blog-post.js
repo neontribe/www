@@ -25,7 +25,7 @@ const BlogPost = ({ data }) => {
   const { markdownRemark } = data
   const { frontmatter, htmlAst } = markdownRemark
 
-  const { title, published_at, updated_at, author_name } = frontmatter
+  const { title, published_at, author_name } = frontmatter
 
   return (
     <Layout>
