@@ -27,81 +27,81 @@ Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deseru
  */
 
 const Query = () => {
-    const data = useStaticQuery(graphql`
-      query {
-        placeholderImage: file(
-          relativePath: { eq: "images/kenneth.jpg" }
-          sourceInstanceName: { eq: "tribers" }
-        ) {
-          childImageSharp {
-            gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
-          }
+  const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(
+        relativePath: { eq: "images/kenneth.jpg" }
+        sourceInstanceName: { eq: "tribers" }
+      ) {
+        childImageSharp {
+          gatsbyImageData(placeholder: BLURRED, formats: [AUTO, WEBP])
         }
       }
-    `)
+    }
+  `)
 
-    return (
-      <ConstrainedWidth>
-        <Text size="medium" weight={700}>
-          <H>TribeMember</H>
-        </Text>
+  return (
+    <ConstrainedWidth>
+      <Text size="medium" weight={700}>
+        <H>TribeMember</H>
+      </Text>
 
-        <div className="person-example">
-          <div className="person-wrapper">
-            <TribeMember
-              image={getImage(
-                data.placeholderImage.childImageSharp.gatsbyImageData
-              )}
-              name="Kenneth the Shark"
-              skills={['Support', 'Cuddle', 'Spying']}
-              bio={loremIpsum}
-            />
-          </div>
-
-          <div className="person-wrapper">
-            <TribeMember
-              image={getImage(
-                data.placeholderImage.childImageSharp.gatsbyImageData
-              )}
-              name="Kenneth the Shark"
-              skills={['Support', 'Cuddle', 'Spying']}
-              bio={loremIpsum}
-            />
-          </div>
-
-          <div className="person-wrapper">
-            <TribeMember
-              image={getImage(
-                data.placeholderImage.childImageSharp.gatsbyImageData
-              )}
-              name="Kenneth the Shark"
-              skills={['Support', 'Cuddle', 'Spying']}
-              bio={loremIpsum}
-            />
-          </div>
+      <div className="person-example">
+        <div className="person-wrapper">
+          <TribeMember
+            image={getImage(
+              data.placeholderImage.childImageSharp.gatsbyImageData
+            )}
+            name="Kenneth the Shark"
+            skills={['Support', 'Cuddle', 'Spying']}
+            bio={loremIpsum}
+          />
         </div>
 
-        <style jsx>{`
-          .person-example {
-            display: flex;
-            flex-wrap: wrap;
-          }
-          .person-wrapper {
-            width: 300px;
-            height: 300px;
-          }
-          .person-wrapper:nth-child(2) {
-            height: 400px;
-          }
-          .person-wrapper:nth-child(3) {
-            height: 500px;
-          }
-          .person-wrapper + .person-wrapper {
-            margin-left: ${3 * GUTTER_PX}px;
-          }
-        `}</style>
-      </ConstrainedWidth>
-    )
+        <div className="person-wrapper">
+          <TribeMember
+            image={getImage(
+              data.placeholderImage.childImageSharp.gatsbyImageData
+            )}
+            name="Kenneth the Shark"
+            skills={['Support', 'Cuddle', 'Spying']}
+            bio={loremIpsum}
+          />
+        </div>
+
+        <div className="person-wrapper">
+          <TribeMember
+            image={getImage(
+              data.placeholderImage.childImageSharp.gatsbyImageData
+            )}
+            name="Kenneth the Shark"
+            skills={['Support', 'Cuddle', 'Spying']}
+            bio={loremIpsum}
+          />
+        </div>
+      </div>
+
+      <style jsx>{`
+        .person-example {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .person-wrapper {
+          width: 300px;
+          height: 300px;
+        }
+        .person-wrapper:nth-child(2) {
+          height: 400px;
+        }
+        .person-wrapper:nth-child(3) {
+          height: 500px;
+        }
+        .person-wrapper + .person-wrapper {
+          margin-left: ${3 * GUTTER_PX}px;
+        }
+      `}</style>
+    </ConstrainedWidth>
+  )
 }
 
 export default Query

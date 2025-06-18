@@ -98,10 +98,7 @@ export const pageQuery = graphql`
 `
 
 export const Head = ({ location }) => (
-  <PageMeta
-    title="Blogs"
-    location={location}
-  />
+  <PageMeta title="Blogs" location={location} />
 )
 
 export default BlogPage

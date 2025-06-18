@@ -47,7 +47,9 @@ const Heading = ({ size, level, children, ...props }) => {
       <H
         className={classNames('heading', level === 2 && 'with-arcs')}
         {...props}
-      >{children}</H>
+      >
+        {children}
+      </H>
 
       <style jsx>{`
         .heading {

@@ -151,10 +151,7 @@ const IndexPage = () => (
 )
 
 export const Head = ({ location }) => (
-  <PageMeta
-    title="Welcome"
-    location={location}
-  />
+  <PageMeta title="Welcome" location={location} />
 )
 
 export default IndexPage

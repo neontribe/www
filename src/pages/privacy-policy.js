@@ -30,7 +30,10 @@ const PrivacyPolicy = () => {
     <Layout>
       <PageTop>
         <ConstrainedWidth>
-          <Container justifyContent="space-between" mobileFlexDirection="column">
+          <Container
+            justifyContent="space-between"
+            mobileFlexDirection="column"
+          >
             <Text size="xlarge" color="#48e9ce">
               <h1>Neontribe Privacy Policy</h1>
             </Text>
@@ -70,10 +73,7 @@ const PrivacyPolicy = () => {
 }
 
 export const Head = ({ location }) => (
-  <PageMeta
-    title="Privacy"
-    location={location}
-  />
+  <PageMeta title="Privacy" location={location} />
 )
 
 export default PrivacyPolicy

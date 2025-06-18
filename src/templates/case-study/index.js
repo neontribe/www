@@ -184,7 +184,10 @@ export const Head = ({ data, location }) => {
     <PageMeta
       title={frontmatter.title}
       description={frontmatter.description}
-      image={frontmatter.image?.childImageSharp?.gatsbyImageData?.images?.fallback?.src}
+      image={
+        frontmatter.image?.childImageSharp?.gatsbyImageData?.images?.fallback
+          ?.src
+      }
       type="article"
       location={location}
     />

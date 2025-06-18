@@ -50,28 +50,28 @@ const WorkDescriptionExample = ({ image }) => (
 )
 
 const Query = () => {
-  const data= useStaticQuery(graphql`
-      {
-        file(
-          relativePath: { eq: "images/arc.jpg" }
-          sourceInstanceName: { eq: "projects" }
-        ) {
-          childImageSharp {
-            gatsbyImageData(
-              width: 768
-              placeholder: BLURRED
-              formats: [AUTO, WEBP]
-            )
-          }
+  const data = useStaticQuery(graphql`
+    {
+      file(
+        relativePath: { eq: "images/arc.jpg" }
+        sourceInstanceName: { eq: "projects" }
+      ) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 768
+            placeholder: BLURRED
+            formats: [AUTO, WEBP]
+          )
         }
       }
-    `)
+    }
+  `)
 
-    return (
-      <WorkDescriptionExample
-        image={getImage(data.file.childImageSharp.gatsbyImageData)}
-      />
-    )
+  return (
+    <WorkDescriptionExample
+      image={getImage(data.file.childImageSharp.gatsbyImageData)}
+    />
+  )
 }
 
 export default Query

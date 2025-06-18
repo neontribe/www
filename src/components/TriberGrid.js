@@ -83,7 +83,9 @@ const TriberGrid = () => {
         @supports (display: grid) {
           .triber-grid {
             display: grid;
-            grid-gap: 6rem ${(CONTAINER_WIDTH - COLUMN_WIDTH * MAX_COLUMNS) / (MAX_COLUMNS - 1)}px;
+            grid-gap: 6rem
+              ${(CONTAINER_WIDTH - COLUMN_WIDTH * MAX_COLUMNS) /
+              (MAX_COLUMNS - 1)}px;
             grid-template-columns: repeat(auto-fill, ${COLUMN_WIDTH}px);
             justify-content: center;
           }

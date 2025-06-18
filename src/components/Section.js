@@ -8,7 +8,8 @@ const Section = (props) => {
   return (
     <HeadingContext.Provider value={level + 1}>
       {props.children}
-    </HeadingContext.Provider>)
+    </HeadingContext.Provider>
+  )
 }
 
 export default Section

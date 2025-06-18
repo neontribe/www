@@ -29,7 +29,6 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
-
       <ConstrainedWidth fullWidth={false}>
         <article>
           <header>

@@ -54,12 +54,15 @@ const WhatWeAreDoingPage = () => {
           </Text>
           <VerticalSpacing size={3} />
 
-          <Container justifyContent="space-between" mobileFlexDirection="column">
+          <Container
+            justifyContent="space-between"
+            mobileFlexDirection="column"
+          >
             <Text size="normal">
               <p className="sub-heading">
                 Neontribe help people provide better digital services. We work
-                with you to understand your users&#39; needs and we produce digital
-                tools including code, content and design
+                with you to understand your users&#39; needs and we produce
+                digital tools including code, content and design
               </p>
             </Text>
 
@@ -114,8 +117,8 @@ const WhatWeAreDoingPage = () => {
         <Container mobileFlexDirection="column">
           <div>
             <Text size="normal" color="black" maxCharacter="49ch">
-              Interested in working with us? Please feel free to get in touch via
-              email.
+              Interested in working with us? Please feel free to get in touch
+              via email.
             </Text>
 
             <VerticalSpacing size={5} />

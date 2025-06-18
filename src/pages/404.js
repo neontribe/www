@@ -69,10 +69,7 @@ const NotFoundPage = () => (
 )
 
 export const Head = ({ location }) => (
-  <PageMeta
-    title="Page not found"
-    location={location}
-  />
+  <PageMeta title="Page not found" location={location} />
 )
 
 export default NotFoundPage

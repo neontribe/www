@@ -22,7 +22,8 @@ const NavLink = ({ children, ...props }) => (
       {...props}
       activeClassName={activeLinkStyles.className}
       partiallyActive={true}
-    >{children}
+    >
+      {children}
     </InternalLink>
 
     {activeLinkStyles.styles}
@@ -34,9 +35,7 @@ const DesktopNav = () => {
     <nav className="nav">
       <ul className="list">
         <li>
-          <NavLink to="/our-work">
-            Our work
-          </NavLink>
+          <NavLink to="/our-work">Our work</NavLink>
         </li>
         <li>
           <NavLink to="/the-tribe">The team</NavLink>
@@ -136,9 +135,7 @@ const Header = () => {
                       )}
                     >
                       <li className="first-item">
-                        <NavLink to="/our-work">
-                          Our Work
-                        </NavLink>
+                        <NavLink to="/our-work">Our Work</NavLink>
                       </li>
                       <li>
                         <NavLink to="/the-tribe">The team</NavLink>
