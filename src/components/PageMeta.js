@@ -31,7 +31,6 @@ const PageMeta = ({
   const metaDescription = description || siteMetadata.description
   const metaImage = `${siteMetadata.siteUrl}${image || siteMetadata.image}`
   const pageUrl = `${siteMetadata.siteUrl}${location?.pathname || ''}`
-  console.log(metaTitle)
   return (
     <>
       <title>{metaTitle} | Neontribe</title>
