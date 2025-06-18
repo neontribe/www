@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { distanceInWordsToNow, parse } from 'date-fns'
+import { formatDistanceToNow, parseISO } from 'date-fns'
 import Layout from '../components/Layout'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
 import VerticalSpacing from '../components/VerticalSpacing'
@@ -10,7 +10,7 @@ import RenderContent from '../components/RenderContent'
 import { c_TEXT_DARK } from '../theme'
 
 const PublishedDate = ({ date }) => {
-  const published = distanceInWordsToNow(date, {
+  const published = formatDistanceToNow(date, {
     addSuffix: true,
   })
 
@@ -45,7 +45,7 @@ const BlogPost = ({ data }) => {
 
               <VerticalSpacing size={2} />
 
-              <PublishedDate date={parse(published_at)} />
+              <PublishedDate date={parseISO(published_at)} />
             </Text>
 
             <VerticalSpacing size={4} />
@@ -81,8 +81,8 @@ export const Head = ({ data, location }) => {
   return (
     <PageMeta
       title={frontmatter.title}
-      publishedDate={parse(frontmatter.published_at)}
-      modifiedDate={parse(frontmatter.updated_at)}
+      publishedDate={parseISO(frontmatter.published_at)}
+      modifiedDate={parseISO(frontmatter.updated_at)}
       location={location}
     />
   )

@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { distanceInWordsToNow, parse } from 'date-fns'
+import { formatDistanceToNow, parseISO } from 'date-fns'
 
 import { c_NEON_PURPLE, c_TEXT_DARK } from '../theme'
 import { InternalLink } from '../components/Link'
@@ -21,7 +21,7 @@ const BlogPage = ({
 }) => {
   const getDateString = (date) =>
     capitalizeFirstLetter(
-      distanceInWordsToNow(date, {
+      formatDistanceToNow(date, {
         addSuffix: true,
       })
     )
@@ -43,7 +43,9 @@ const BlogPage = ({
               <InternalLink to={`/blog/${node.frontmatter.slug}`}>
                 <Section>
                   <Text size="normal">
-                    <H>{getDateString(parse(node.frontmatter.published_at))}</H>
+                    <H>
+                      {getDateString(parseISO(node.frontmatter.published_at))}
+                    </H>
                   </Text>
                 </Section>
 
