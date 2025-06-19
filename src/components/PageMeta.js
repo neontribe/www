@@ -1,97 +1,78 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { Location } from '@reach/router'
-import { StaticQuery, graphql } from 'gatsby'
+import * as React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 
 const PageMeta = ({
-  type = 'website',
   title,
   description,
   image,
+  type = 'website',
   publishedDate,
   modifiedDate,
-}) => (
-  <StaticQuery
-    query={graphql`
-      query {
-        site {
-          siteMetadata {
-            defaultTitle
-            siteUrl
-            siteName
-            titleTemplate
-            description
-            image
-          }
+  location,
+}) => {
+  const {
+    site: { siteMetadata },
+  } = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          defaultTitle
+          siteUrl
+          siteName
+          titleTemplate
+          description
+          image
         }
       }
-    `}
-    render={({ site: { siteMetadata } }) => (
-      <Location>
-        {({ location }) => (
-          <Helmet
-            title={title || siteMetadata.defaultTitle}
-            titleTemplate={siteMetadata.titleTemplate}
-          >
-            <meta property="og:site_name" content="Neontribe" />
-            <meta property="og:type" content={type} />
-            <meta property="og:title" content={title} />
-            <meta
-              property="og:description"
-              content={description || siteMetadata.description}
-            />
-            <meta
-              property="og:image"
-              content={`${siteMetadata.siteUrl}${image || siteMetadata.image}`}
-            />
-            {type === 'article' && publishedDate && (
-              <meta
-                property="article:published_time"
-                content={publishedDate.toISOString()}
-              />
-            )}
-            {type === 'article' && modifiedDate && (
-              <meta
-                property="article:modified_time"
-                content={modifiedDate.toISOString()}
-              />
-            )}
-            <meta property="og:url" content={location.href} />}
-            <meta name="twitter:site" content="@neontribe" />
-            <meta
-              name="twitter:card"
-              content={image ? 'summary_large_image' : 'summary'}
-            />
-            <meta name="twitter:title" content={title} />
-            <meta
-              name="twitter:description"
-              content={description || siteMetadata.description}
-            />
-            <meta
-              name="twitter:image"
-              content={`${siteMetadata.siteUrl}${image || siteMetadata.image}`}
-            />
-            <meta property="twitter:url" content={location.href} />
-            <script
-              defer
-              data-domain="neontribe.co.uk"
-              src="https://plausible.io/js/plausible.js"
-            />
-          </Helmet>
-        )}
-      </Location>
-    )}
-  />
-)
+    }
+  `)
 
-PageMeta.propTypes = {
-  type: PropTypes.oneOf(['website', 'article']),
-  title: PropTypes.string,
-  description: PropTypes.string,
-  image: PropTypes.string,
-  publishedDate: PropTypes.instanceOf(Date),
-  modifiedDate: PropTypes.instanceOf(Date),
+  const metaTitle = title || siteMetadata.defaultTitle
+  const metaDescription = description || siteMetadata.description
+  const metaImage = `${siteMetadata.siteUrl}${image || siteMetadata.image}`
+  const pageUrl = `${siteMetadata.siteUrl}${location?.pathname || ''}`
+  return (
+    <>
+      <title>{metaTitle + ' | Neontribe'}</title>
+      <meta name="description" content={metaDescription} />
+
+      <meta property="og:site_name" content={siteMetadata.siteName} />
+      <meta property="og:type" content={type} />
+      <meta property="og:title" content={metaTitle} />
+      <meta property="og:description" content={metaDescription} />
+      <meta property="og:image" content={metaImage} />
+      <meta property="og:url" content={pageUrl} />
+
+      {type === 'article' && publishedDate && (
+        <meta
+          property="article:published_time"
+          content={new Date(publishedDate).toISOString()}
+        />
+      )}
+      {type === 'article' && modifiedDate && (
+        <meta
+          property="article:modified_time"
+          content={new Date(modifiedDate).toISOString()}
+        />
+      )}
+
+      <meta name="twitter:site" content="@neontribe" />
+      <meta
+        name="twitter:card"
+        content={image ? 'summary_large_image' : 'summary'}
+      />
+      <meta name="twitter:title" content={metaTitle} />
+      <meta name="twitter:description" content={metaDescription} />
+      <meta name="twitter:image" content={metaImage} />
+      <meta property="twitter:url" content={pageUrl} />
+
+      <script
+        defer
+        data-domain="neontribe.co.uk"
+        src="https://plausible.io/js/plausible.js"
+      />
+    </>
+  )
 }
 
 export default PageMeta

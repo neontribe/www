@@ -58,7 +58,7 @@ $ sudo apt install python-wxgtk3.0 python-wxtools python-wxversion python-xlib
 Then retrieve and install the missing obapps package.
 
 ```
-$ wget http://packages.crunchbangplusplus.org/jessie/pool/main/o/obapps/obapps_0.1.7_all.deb
+$ wget https://packages.crunchbangplusplus.org/jessie/pool/main/o/obapps/obapps_0.1.7_all.deb
 $ sudo dpkg -i obapps_0.1.7_all.deb
 ```
 

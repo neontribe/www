@@ -15,14 +15,25 @@ const TribeMemberBack = ({
   preventTabFocus,
 }) => {
   const socialKeys = social ? Object.keys(social) : []
-  var socialCount = 0
+  let socialCount = 0
 
-  for (var site in social) {
+  for (let site in social) {
     if (social[site]) socialCount++
   }
 
   return (
-    <div className="bio" onClick={onClick}>
+    <div
+      className="bio"
+      role="button"
+      tabIndex={0}
+      onClick={onClick}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          onClick?.(e)
+        }
+      }}
+    >
       <div className="bio-content">
         <div role="presentation">
           <Text type="secondary" weight={700} size="medium">
@@ -46,7 +57,6 @@ const TribeMemberBack = ({
               <SocialIcon
                 site={site}
                 handle={social[site]}
-                count={socialCount}
                 key={site}
                 preventTabFocus={preventTabFocus}
               />

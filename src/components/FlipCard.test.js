@@ -16,7 +16,7 @@ test('displays the front and back', () => {
 
   expect(getByText('front 1')).toBeInTheDocument()
   expect(getByText('back 2')).toBeInTheDocument()
-  expect(queryByText('Anything else')).toBeNull()
+  expect(queryByText('Anything else')).not.toBeInTheDocument()
 })
 
 test('default render matches snapshot', () => {

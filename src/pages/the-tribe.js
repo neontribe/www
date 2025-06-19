@@ -18,10 +18,6 @@ import circleArc from '../components/circleArc.svg'
 import HireContainer from '../components/HireContainer'
 const TheTribePage = () => (
   <Layout>
-    <PageMeta
-      title="The Team"
-      description="Neontribe is a digital agency. Why neon? It’s the colour of tech. Why tribe? Individuals collaborating, hand-making useful tools that do a job of work."
-    />
     <PageTop>
       <ConstrainedWidth>
         <div className="flex-box">
@@ -48,15 +44,15 @@ const TheTribePage = () => (
           </div>
 
           <div className="image-container">
-            <img src={tribeArcs} height={166} width={118} />{' '}
+            <img alt="" src={tribeArcs} height={166} width={118} />{' '}
           </div>
         </div>
-        {/* 
+        {/*
         <VerticalSpacing size={5} />
         <HireContainer>
           <EmailLink
             link="https://docs.google.com/forms/d/e/1FAIpQLScThzeOla4FG2tEGfUVthAb8ZyTIzSGb0nB_tcqSlYSbrIjZA/viewform?usp=sf_link"
-            background="#5600ee"
+            background_color="#5600ee"
             border_color="#5600ee"
           >
             Join the tribe
@@ -90,7 +86,7 @@ const TheTribePage = () => (
 
           <div className="arc-container">
             {' '}
-            <img src={circleArc} />{' '}
+            <img alt="" src={circleArc} />{' '}
           </div>
         </div>
 
@@ -99,7 +95,7 @@ const TheTribePage = () => (
         <HireContainer>
           {/* <StyledLink
             connect="https://docs.google.com/forms/d/e/1FAIpQLScThzeOla4FG2tEGfUVthAb8ZyTIzSGb0nB_tcqSlYSbrIjZA/viewform?usp=sf_link"
-            background="#5600ee"
+            background_color="#5600ee"
             border_color="#5600ee"
           >
             Tell us about you
@@ -148,7 +144,7 @@ const TheTribePage = () => (
           align-self: center;
           display: flex;
           flex-direction: column;
-          padding-bottom: 0rem;
+          padding-bottom: 0;
         }
 
         .flex-box {
@@ -164,6 +160,14 @@ const TheTribePage = () => (
       }
     `}</style>
   </Layout>
+)
+
+export const Head = ({ location }) => (
+  <PageMeta
+    title="The Team"
+    description="Neontribe is a digital agency. Why neon? It’s the colour of tech. Why tribe? Individuals collaborating, hand-making useful tools that do a job of work."
+    location={location}
+  />
 )
 
 export default TheTribePage

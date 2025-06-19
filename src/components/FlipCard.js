@@ -8,7 +8,7 @@ const findChild = (children, { displayName }) =>
   )
 const cloneWithProps = (node, props) => node && React.cloneElement(node, props)
 
-const FlipCard = ({ children, isFlipped, animTime }) => (
+const FlipCard = ({ children, isFlipped, animTime = 0.7 }) => (
   <div className="card-container">
     <div className="card-body">
       {cloneWithProps(findChild(children, CardBack), { isFlipped, animTime })}
@@ -45,10 +45,6 @@ FlipCard.propTypes = {
   children: PropTypes.node,
   // The time it should take for the animation to complete (in seconds)
   animTime: PropTypes.number,
-}
-
-FlipCard.defaultProps = {
-  animTime: 0.7,
 }
 
 // Card sides, TODO: move to another file ---------------------

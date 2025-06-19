@@ -11,7 +11,6 @@ import { fontSizes } from '../theme'
 
 const IndexPage = () => (
   <Layout>
-    <PageMeta title="Welcome" />
     <FullScreenHeader>
       <ConstrainedWidth>
         <>
@@ -61,15 +60,15 @@ const IndexPage = () => (
           {/* To do - add font sizes and screen sizes as variables under theme */}
 
           <style jsx>{`
-            max-width: 80%;
-            padding-top: 2rem;
+            @media (min-width: 860px) {
+              max-width: 80%;
+              padding-top: 2rem;
+            }
 
             @media (max-width: 860px) {
               max-width: 100%;
               padding-top: 3rem;
-              font-size:21px;
-            }
-
+              font-size: 21px;
             }
           `}</style>
         </div>
@@ -79,7 +78,7 @@ const IndexPage = () => (
         <section>
           <StyledLink
             connect="/our-work"
-            background="#5600ee"
+            background_color="#5600ee"
             border_color="#5600ee"
           >
             See our work
@@ -87,18 +86,19 @@ const IndexPage = () => (
 
           <StyledLink
             connect="/the-tribe"
-            background="black"
+            background_color="black"
             border_color="#48e9ce"
           >
             Meet the tribe
           </StyledLink>
 
           <style jsx>{`
-            display: flex;
-            justify-content: space-between;
-            max-width: 50%;
-            flex-direction: row;
-
+            @media (min-width: 1000px) {
+              display: flex;
+              justify-content: space-between;
+              max-width: 50%;
+              flex-direction: row;
+            }
             @media (max-width: 1000px) {
               display: flex;
               justify-content: space-between;
@@ -148,6 +148,10 @@ const IndexPage = () => (
       </ConstrainedWidth>
     </FullScreenHeader>
   </Layout>
+)
+
+export const Head = ({ location }) => (
+  <PageMeta title="Welcome" location={location} />
 )
 
 export default IndexPage

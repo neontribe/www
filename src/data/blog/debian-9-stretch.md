@@ -48,14 +48,14 @@ Ensure that the `contrib` repository is enabled in APT.
 
 ```
 $ sudo vim /etc/apt/sources.list
-+ deb http://ftp.uk.debian.org/debian/ stretch main contrib non-free
++ deb https://ftp.uk.debian.org/debian/ stretch main contrib non-free
 ```
 
 Then add the following to enable the stretch-backports.
 
 ```
 + # stretch-backports
-+ deb http://ftp.uk.debian.org/debian/ stretch-backports main contrib
++ deb https://ftp.uk.debian.org/debian/ stretch-backports main contrib
 ```
 
 **Installation**

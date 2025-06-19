@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Text from './Text'
 import { navigate as NavTrial } from 'gatsby'
 import {
   c_NEON_TEAL,
@@ -10,7 +9,7 @@ import {
 } from '../theme'
 
 const StyledLink = ({
-  background,
+  background_color,
   border_color,
   buttonWidth,
   children,
@@ -21,14 +20,14 @@ const StyledLink = ({
   <>
     <button
       onClick={() => {
-        NavTrial(connect)
+        void NavTrial(connect)
       }}
     >
       {children}
     </button>
     <style jsx>{`
       button {
-        ${background ? `background-color: ${background};` : ''}
+        ${background_color ? `background-color: ${background_color};` : ''}
         ${border_color ? `border-color: ${border_color};` : ''}
         ${margin_left ? `margin-left: ${margin_left};` : ''}
         border-radius: 350px;
@@ -60,8 +59,8 @@ const StyledLink = ({
     `}</style>
   </>
 )
-Text.propTypes = {
-  background: PropTypes.string,
+StyledLink.propTypes = {
+  background_color: PropTypes.string,
   border_color: PropTypes.string,
   buttonWidth: PropTypes.string,
   children: PropTypes.node,

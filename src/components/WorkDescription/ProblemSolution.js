@@ -54,7 +54,7 @@ const Content = (props) => (
   </>
 )
 
-export default ({ problem, solution, caseStudy, client }) => {
+const ProblemSolution = ({ problem, solution, caseStudy, client }) => {
   solution = remark()
     .use(recommended)
     .use(remarkHtml)
@@ -129,3 +129,5 @@ export default ({ problem, solution, caseStudy, client }) => {
     </>
   )
 }
+
+export default ProblemSolution
