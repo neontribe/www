@@ -13,6 +13,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-fix-fouc',
+    'gatsby-plugin-no-sourcemaps',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
