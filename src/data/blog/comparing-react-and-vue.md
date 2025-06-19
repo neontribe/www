@@ -36,7 +36,7 @@ It's very clear that both projects are broadly similar and are closely monitorin
 
 <table>
 <tr><th>React</th><th>Vue<th></tr>
-<tr><td><i>tl;dr - code based with many choices, unlikely to hit technical, HR or market limits</I></td><td><I>tl;dr; declarative, more opinionated/structured, easier onramp and potential faster dev<I></td></tr>
+<tr><td>tl;dr - code based with many choices, unlikely to hit technical, HR or market limits</td><td>tl;dr; declarative, more opinionated/structured, easier onramp and potential faster dev</td></tr>
 <tr><td>Massive, mature ecosystem provides many learning resources, strong support and wide component choices</td><td>Smaller ecosystem, newer but growing fast and looks sustainable. Relatively opinionated means less choice</td></tr>
 <tr><td>Everything is just Javascript</td><td>Declarative HTML based - Single File Components</td></tr>
 <tr><td>View is Render functions or JSX</td><td>Optional view templates with DSL - somewhat simpler for common cases</td></tr>

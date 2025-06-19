@@ -1,10 +1,11 @@
 import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 
 import WorkDescription, { WorkSummary } from '../components/WorkDescription'
 import H from '../components/Heading'
 import Text from '../components/Text'
 import ConstrainedWidth from '../components/Layout/ConstrainedWidth'
+import { getImage } from 'gatsby-plugin-image'
 
 const loremIpsum = `
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -13,7 +14,7 @@ Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 `
 
-const WorkDescriptionExample = ({ fluid }) => (
+const WorkDescriptionExample = ({ image }) => (
   <div className="work-description">
     <ConstrainedWidth>
       <Text size="medium">
@@ -22,24 +23,24 @@ const WorkDescriptionExample = ({ fluid }) => (
     </ConstrainedWidth>
 
     <WorkSummary
-      fluid={fluid}
+      image={image}
       title="Helping more young families get fresh fruit and veg"
       problem={loremIpsum}
     />
     <WorkSummary
-      fluid={fluid}
+      image={image}
       title="Helping more young families get fresh fruit and veg"
       problem={loremIpsum}
     />
     <WorkDescription
-      fluid={fluid}
+      image={image}
       title="Helping more young families get fresh fruit and veg"
       subtitle="Delivering simple technology for the Rose Voucher scheme"
       problem={loremIpsum}
       solution={loremIpsum}
     />
     <WorkDescription
-      fluid={fluid}
+      image={image}
       title="Quis nostrud exercitation ullamco laboris nisi u"
       subtitle="Delivering simple technology for the Rose Voucher scheme"
       problem={loremIpsum + ' ' + loremIpsum}
@@ -48,24 +49,29 @@ const WorkDescriptionExample = ({ fluid }) => (
   </div>
 )
 
-export default () => (
-  <StaticQuery
-    query={graphql`
-      {
-        file(
-          relativePath: { eq: "images/arc.jpg" }
-          sourceInstanceName: { eq: "projects" }
-        ) {
-          childImageSharp {
-            fluid(maxWidth: 768) {
-              ...GatsbyImageSharpFluid
-            }
-          }
+const Query = () => {
+  const data = useStaticQuery(graphql`
+    {
+      file(
+        relativePath: { eq: "images/arc.jpg" }
+        sourceInstanceName: { eq: "projects" }
+      ) {
+        childImageSharp {
+          gatsbyImageData(
+            width: 768
+            placeholder: BLURRED
+            formats: [AUTO, WEBP]
+          )
         }
       }
-    `}
-    render={(data) => (
-      <WorkDescriptionExample fluid={data.file.childImageSharp.fluid} />
-    )}
-  />
-)
+    }
+  `)
+
+  return (
+    <WorkDescriptionExample
+      image={getImage(data.file.childImageSharp.gatsbyImageData)}
+    />
+  )
+}
+
+export default Query

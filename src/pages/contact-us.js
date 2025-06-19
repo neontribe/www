@@ -15,10 +15,6 @@ import EmailLink from '../components/EmailLink'
 
 const ContactUs = () => (
   <Layout>
-    <PageMeta
-      title="Contact us"
-      description="To get in touch, you can contact us via email or twitter."
-    />
     <PageTop>
       <ConstrainedWidth>
         <Text size="xlarge" color="#48e9ce">
@@ -39,7 +35,7 @@ const ContactUs = () => (
 
         <EmailLink
           link="mailto:hello@neontribe.co.uk"
-          background="#5600ee"
+          background_color="#5600ee"
           border_color="#5600ee"
           fontSize="0.9rem"
         >
@@ -106,7 +102,7 @@ const ContactUs = () => (
       </div>
 
       <Text size="normal" color="black" maxCharacter="55ch">
-        We share our clients' work and best practice in the tech for good
+        We share our clients&#39; work and best practice in the tech for good
         sector.
       </Text>
     </ConstrainedWidth>
@@ -261,6 +257,14 @@ const ContactUs = () => (
       }
     `}</style>
   </Layout>
+)
+
+export const Head = ({ location }) => (
+  <PageMeta
+    title="Contact us"
+    description="To get in touch, you can contact us via email or twitter."
+    location={location}
+  />
 )
 
 export default ContactUs

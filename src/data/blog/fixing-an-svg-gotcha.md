@@ -49,10 +49,10 @@ This is good, we have an SVG where we can and a PNG where we just can’t. Now c
 
 ```
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:dc="https://purl.org/dc/elements/1.1/"
+   xmlns:cc="https://creativecommons.org/ns#"
+   xmlns:rdf="https://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="https://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
    version="1.1"
    width="541.02563"

@@ -5,7 +5,7 @@ import Text from '../Text'
 import logo from '../logo.svg'
 import { c_NEON_PURPLE } from '../../theme'
 
-export default () => (
+const Footer = () => (
   <footer className="footer-container">
     <ConstrainedWidth paddingTop="2rem">
       <div className="flex-container">
@@ -37,3 +37,5 @@ export default () => (
     `}</style>
   </footer>
 )
+
+export default Footer

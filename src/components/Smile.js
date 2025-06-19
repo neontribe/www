@@ -18,36 +18,26 @@ const Smile = ({ hyphenation = false }) => (
       <span>d</span>
     </span>
     <style jsx>{`
-
       .smiley-face-container {
-        position:relative;
+        position: relative;
         display: inline-block;
       }
-
 
       .smiley-face-container:after {
         content: '';
         position: absolute;
-
         background-size: 128px 65px;
         background-position: left;
         background-image: url('${arc}');
-
         width: 8.1rem;
         height: 4.1rem;
         background-repeat: no-repeat;
         top: 6rem;
-
         left: 0.9rem;
       }
 
-
-
       .text {
-   
       }
-
-
 
       .blue-text {
         color: #48e9ce;
@@ -56,27 +46,18 @@ const Smile = ({ hyphenation = false }) => (
       .hyphenation {
         word-break: break-word;
         overflow-wrap: break-word;
-        hyphens: auto;}
+        hyphens: auto;
+      }
 
-        @media (max-width:500px) { 
-     
-            font-size:37px;
+      @media (max-width: 500px) {
+        font-size: 37px;
 
-            .smiley-face-container:after {
-              background-size: 90px 45px;
-              top: 3.5rem;
-              max-width: 90px;
-              left: 0.25rem;
-            }
-          
- 
-
-          }
+        .smiley-face-container:after {
+          background-size: 90px 45px;
+          top: 3.5rem;
+          max-width: 90px;
+          left: 0.25rem;
         }
-
-
-
-
       }
     `}</style>
   </>

@@ -6,7 +6,7 @@ import Text from '../components/Text'
 
 import * as examples from '../examples'
 
-export default () => (
+const Symbols = () => (
   <Layout>
     <ConstrainedWidth>
       <Text weight={700} size="large">
@@ -20,3 +20,5 @@ export default () => (
       .map((key) => React.createElement(examples[key], { key }))}
   </Layout>
 )
+
+export default Symbols

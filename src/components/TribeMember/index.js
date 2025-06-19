@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import ShimlessImg from 'gatsby-image'
 
 import FlipCard, { CardFront, CardBack } from '../FlipCard'
 import TribeMemberFront from './TribeMemberFront'
 import TribeMemberBack from './TribeMemberBack'
 
-const TribeMember = ({ image, name, skills, bio, social }) => {
+const TribeMember = ({ image, name, skills = [], bio, social }) => {
   const [isFlipped, setFlipped] = useState(false)
 
   return (
@@ -71,12 +70,13 @@ TribeMember.propTypes = {
   name: PropTypes.string.isRequired,
   skills: PropTypes.array,
   bio: PropTypes.node,
-  // Inherited prop types
-  image: ShimlessImg.propTypes.fluid,
-}
-
-TribeMember.defaultProps = {
-  skills: [],
+  // Proptypes for gatsby-plugin-images
+  image: PropTypes.shape({
+    images: PropTypes.object,
+    layout: PropTypes.string,
+    width: PropTypes.number,
+    height: PropTypes.number,
+  }),
 }
 
 export default TribeMember

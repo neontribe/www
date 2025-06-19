@@ -7,7 +7,8 @@ import PageMeta from '../../components/PageMeta'
 import PageTop from '../../components/PageTop'
 import Container from '../../components/Container'
 import RenderCaseStudy from './RenderCaseStudy'
-import Img from 'gatsby-image/withIEPolyfill'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+
 import Text from '../../components/Text'
 import VerticalSpacing from '../../components/VerticalSpacing'
 
@@ -39,7 +40,6 @@ const CaseStudy = ({ data }) => {
 
   return (
     <Layout>
-      <PageMeta title={title} description={description} />
       <PageTop bannerPresent>
         <ConstrainedWidth>
           <Container
@@ -69,10 +69,10 @@ const CaseStudy = ({ data }) => {
             </Container>
             {image && (
               <div className="image-container">
-                <Img
-                  fluid={image.childImageSharp.fluid}
+                <GatsbyImage
+                  image={getImage(image.childImageSharp.gatsbyImageData)}
                   objectFit="contain"
-                  alt={imageAltText ? imageAltText : ''}
+                  alt={imageAltText || ''}
                   style={{ width: '100%', minWidth: '250px', height: '100%' }}
                 />
               </div>
@@ -164,9 +164,11 @@ export const query = graphql`
         conclusion
         image {
           childImageSharp {
-            fluid(maxWidth: 380) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(
+              width: 380
+              placeholder: BLURRED
+              formats: [AUTO, WEBP]
+            )
           }
         }
         imageAltText
@@ -174,3 +176,20 @@ export const query = graphql`
     }
   }
 `
+
+export const Head = ({ data, location }) => {
+  const { frontmatter } = data.markdownRemark
+
+  return (
+    <PageMeta
+      title={frontmatter.title}
+      description={frontmatter.description}
+      image={
+        frontmatter.image?.childImageSharp?.gatsbyImageData?.images?.fallback
+          ?.src
+      }
+      type="article"
+      location={location}
+    />
+  )
+}

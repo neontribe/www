@@ -63,9 +63,9 @@ const RenderCaseStudy = ({
   return (
     <article className="case-study">
       {sections.map(
-        (section) =>
+        (section, index) =>
           section.content && (
-            <section>
+            <section key={'key_' + index}>
               <Container flex={false} restrictWidth={true}>
                 {section.title && (
                   <Text size="medium">
