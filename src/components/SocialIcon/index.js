@@ -53,11 +53,11 @@ const { className, styles } = css.resolve`
   }
 `
 
-const SocialIcon = ({ site, handle, count, preventTabFocus }) => {
-  var icon
-  var href
+const SocialIcon = ({ site, handle, preventTabFocus }) => {
+  let icon
+  let href
 
-  if (iconMap.hasOwnProperty(site) && linkMap.hasOwnProperty(site)) {
+  if (Object.hasOwn(iconMap, site) && Object.hasOwn(linkMap, site)) {
     icon = iconMap[site]
     href = linkMap[site].replace('???', handle)
   }
@@ -92,6 +92,7 @@ const SocialIcon = ({ site, handle, count, preventTabFocus }) => {
 SocialIcon.propTypes = {
   site: PropTypes.string.isRequired,
   handle: PropTypes.string.isRequired,
+  preventTabFocus: PropTypes.bool,
 }
 
 export default SocialIcon

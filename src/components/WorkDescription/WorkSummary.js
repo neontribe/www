@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Img from 'gatsby-image/withIEPolyfill'
-import ShimlessImg from 'gatsby-image'
+
+import { GatsbyImage } from 'gatsby-plugin-image'
 import css from 'styled-jsx/css'
 
 import { breakpoint } from '../../theme'
@@ -21,7 +21,7 @@ const imageStyles = css.resolve`
   }
 `
 
-const WorkSummary = ({ title, fluid, problem }) => {
+const WorkSummary = ({ title, image, problem }) => {
   return (
     <div>
       <ConstrainedWidth>
@@ -35,7 +35,11 @@ const WorkSummary = ({ title, fluid, problem }) => {
           </Content.Title>
 
           <Content.Image>
-            <Img className={imageStyles.className} fluid={fluid} />
+            <GatsbyImage
+              className={imageStyles.className}
+              image={image}
+              alt={title}
+            />
           </Content.Image>
 
           <Content.Description>
@@ -52,7 +56,12 @@ const WorkSummary = ({ title, fluid, problem }) => {
 }
 
 WorkSummary.propTypes = {
-  fluid: ShimlessImg.propTypes.fluid,
+  image: PropTypes.shape({
+    images: PropTypes.object,
+    layout: PropTypes.string,
+    width: PropTypes.number,
+    height: PropTypes.number,
+  }),
   title: PropTypes.node,
   problem: PropTypes.node,
 }

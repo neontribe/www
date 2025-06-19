@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import { distanceInWordsToNow, parse } from 'date-fns'
+import { formatDistanceToNow, parseISO } from 'date-fns'
 
 import { c_NEON_PURPLE, c_TEXT_DARK } from '../theme'
 import { InternalLink } from '../components/Link'
@@ -21,14 +21,13 @@ const BlogPage = ({
 }) => {
   const getDateString = (date) =>
     capitalizeFirstLetter(
-      distanceInWordsToNow(date, {
+      formatDistanceToNow(date, {
         addSuffix: true,
       })
     )
 
   return (
     <Layout>
-      <PageMeta title="Blogs" />
       <ConstrainedWidth>
         <VerticalSpacing size={4} />
 
@@ -44,7 +43,9 @@ const BlogPage = ({
               <InternalLink to={`/blog/${node.frontmatter.slug}`}>
                 <Section>
                   <Text size="normal">
-                    <H>{getDateString(parse(node.frontmatter.published_at))}</H>
+                    <H>
+                      {getDateString(parseISO(node.frontmatter.published_at))}
+                    </H>
                   </Text>
                 </Section>
 
@@ -79,9 +80,9 @@ const BlogPage = ({
 }
 
 export const pageQuery = graphql`
-  query {
+  {
     allMarkdownRemark(
-      sort: { order: DESC, fields: [frontmatter___published_at] }
+      sort: { frontmatter: { published_at: DESC } }
       filter: { fields: { sourceName: { eq: "blog-posts" } } }
     ) {
       edges {
@@ -97,5 +98,9 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export const Head = ({ location }) => (
+  <PageMeta title="Blogs" location={location} />
+)
 
 export default BlogPage
