@@ -33,7 +33,7 @@ const PageMeta = ({
   const pageUrl = `${siteMetadata.siteUrl}${location?.pathname || ''}`
   return (
     <>
-      <title>{metaTitle} | Neontribe</title>
+      <title>{metaTitle + ' | Neontribe'}</title>
       <meta name="description" content={metaDescription} />
 
       <meta property="og:site_name" content={siteMetadata.siteName} />

@@ -30,79 +30,80 @@ const NavLink = ({ children, ...props }) => (
   </Text>
 )
 
-const DesktopNav = () => {
-  return (
-    <nav className="nav">
-      <ul className="list">
-        <li>
-          <NavLink to="/our-work">Our work</NavLink>
-        </li>
-        <li>
-          <NavLink to="/the-tribe">The team</NavLink>
-        </li>
-        <li>
-          <NavLink to="/contact-us">Contact</NavLink>
-        </li>
-      </ul>
-
-      <style jsx>{`
-        .nav {
-          display: flex;
-        }
-        .list {
-          margin: 0;
-          padding: 0;
-          display: flex;
-          align-items: center;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          flex-direction: row;
-          width: auto;
-
-          list-style: none;
-
-          font-size: 20px;
-        }
-
-        .list > * + * {
-          margin-top: 0;
-          margin-left: 3rem;
-        }
-
-        @media (min-width: 500px) and (max-width: 700px) {
-          .list {
-            justify-content: flex-start;
-          }
-        }
-      `}</style>
-    </nav>
-  )
-}
-
-const isBrowser = typeof window !== 'undefined'
-const Header = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  // Hook to detect screen size and returns true if screen is a desktop/tablet size and false if it is a mobile
-
-  function checkScreenWidth() {
-    if (isBrowser) {
-      return window.innerWidth
-    }
-  }
-
-  const [windowSize, setWindowSize] = useState(checkScreenWidth())
+/**
+ * Custom hook that always initializes to 0
+ * and only reads from `window` inside useEffect.
+ */
+function useWindowWidth() {
+  const [width, setWidth] = useState(0)
 
   useEffect(() => {
-    function handleWindowResize() {
-      setWindowSize(checkScreenWidth())
+    if (typeof window === 'undefined') return
+
+    const handleResize = () => {
+      setWidth(window.innerWidth)
     }
 
-    window.addEventListener('resize', handleWindowResize)
-
-    return () => {
-      window.removeEventListener('resize', handleWindowResize)
-    }
+    // read once on mount
+    handleResize()
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
   }, [])
+
+  return width
+}
+
+const DesktopNav = () => (
+  <nav className="nav">
+    <ul className="list">
+      <li>
+        <NavLink to="/our-work">Our work</NavLink>
+      </li>
+      <li>
+        <NavLink to="/the-tribe">The team</NavLink>
+      </li>
+      <li>
+        <NavLink to="/contact-us">Contact</NavLink>
+      </li>
+    </ul>
+
+    <style jsx>{`
+      .nav {
+        display: flex;
+      }
+      .list {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: row;
+        width: auto;
+
+        list-style: none;
+
+        font-size: 20px;
+      }
+
+      .list > * + * {
+        margin-top: 0;
+        margin-left: 3rem;
+      }
+
+      @media (min-width: 500px) and (max-width: 700px) {
+        .list {
+          justify-content: flex-start;
+        }
+      }
+    `}</style>
+  </nav>
+)
+
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const windowWidth = useWindowWidth()
+  const isDesktop = windowWidth > 500
 
   return (
     <div className="header-container">
@@ -113,25 +114,28 @@ const Header = () => {
               <img className="logo" src={logo} alt="Neontribe" />
             </InternalLink>
           </div>
-          {windowSize > 500 && <DesktopNav />}
-          {windowSize <= 500 && (
+
+          {isDesktop ? (
+            <DesktopNav />
+          ) : (
             <>
               <button
                 className="hamburger"
                 onClick={() => setIsOpen(!isOpen)}
                 aria-label="Menu"
                 aria-expanded={isOpen}
-                aria-controls={isOpen ? 'menu' : null}
+                aria-controls={isOpen ? 'menu' : undefined}
               >
                 &#8801;
               </button>
+
               {isOpen && (
                 <div className="hamburger-menu-container" id="menu">
                   <nav className="mobile-nav">
                     <ul
                       className={classNames(
                         'list',
-                        windowSize <= 500 && 'z-value'
+                        windowWidth <= 500 && 'z-value'
                       )}
                     >
                       <li className="first-item">
@@ -152,6 +156,7 @@ const Header = () => {
         </header>
       </ConstrainedWidth>
       <VerticalSpacing size={5} />
+
       <style jsx>{`
         .header-container {
           background-color: ${c_TEXT_DARK};
