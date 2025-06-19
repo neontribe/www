@@ -12,6 +12,7 @@ module.exports = {
     'gatsby-plugin-image',
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    'gatsby-plugin-fix-fouc',
     {
       resolve: `gatsby-source-filesystem`,
       options: {

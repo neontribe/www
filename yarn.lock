@@ -6701,6 +6701,11 @@ gatsby-parcel-config@1.14.0:
     "@parcel/transformer-js" "2.8.3"
     "@parcel/transformer-json" "2.8.3"
 
+gatsby-plugin-fix-fouc@1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-fix-fouc/-/gatsby-plugin-fix-fouc-1.1.2.tgz#501bb66fd52e147367cdb1644545bbbbfaa4a853"
+  integrity sha512-hsykXNAFupzV3G2KDRLaZ6Xq0iof0xxzr5FVgJh3Qk6QEMqs+t7ndt8fmGiby4brh8uqjfPdGSa/TcdN8Vtm5w==
+
 gatsby-plugin-image@3.14.0:
   version "3.14.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-3.14.0.tgz#a5a67be6cd460effa0ea70a4fdcdd8baa4a0c380"
