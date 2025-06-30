@@ -7,7 +7,7 @@ categories: 'Discovery, Alpha, Beta, Live'
 statistic: 'Helped 15-17 year olds understand and use generative AI.'
 image: images/ncs-realchatai-phone.png
 problem: |
-  The Alexandra Rose Charity needed to scale their service to reach more families. We worked with traders, families and the staff administering the scheme to understand their pain points and develop digital systems to help.
+  Helping 15-17 year olds understand, examine and use generative AI in positive ways through enrichment activities
 
 introduction: |
 
