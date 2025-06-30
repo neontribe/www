@@ -12,6 +12,6 @@ solution: |
   - Explored optimal content, format and tone
   - Developed an online repository of advice in video and text format
 
-image: images/arc.jpg
+image: images/parenting-smart-in-use.png
 caseStudy: '/place2be-case-study'
 ---
