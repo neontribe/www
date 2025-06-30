@@ -17,6 +17,6 @@ solution: |
   - Built in robust safeguards for privacy and safety
   - Focused on clear, accessible language.
 
-image: images/arc.jpg
+image: images/ncs-realchat-ai-in-use.png
 caseStudy: '/ncs-realchat-ai'
 ---
