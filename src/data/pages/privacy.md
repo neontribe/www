@@ -1,10 +1,10 @@
 # Neontribe Privacy Policy and Cookies
 
-This policy relates to www.neontribe.co.uk and related sub-domains of neontribe.co.uk (“the Site”) which is owned by Neontribe ltd and related activity. Neontribe ltd trading as Neontribe. Registered as a limited company in England & Wales.
+This policy relates to www.neontribe.co.uk and related sub-domains of neontribe.co.uk (“the Site”) which is owned by DXW ltd and related activity. DXW ltd trading as Neontribe. Registered as a limited company in England & Wales.
 
-Business registration: 06165574
+Business registration: 09421914
 
-Registered office: Studio 1.05c Level 1 Department Leeds Dock, The Boulevard, Leeds, England, LS10 1PZ
+Registered office: 131 Coombe Lane, London, England, SW20 0QY
 
 ## What information is collected?
 
