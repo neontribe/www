@@ -120,7 +120,7 @@ const ContactUs = () => (
             <Container justifyContent="flex-start">
               <Text color="#561dee">
                 <address>
-                  <p>Neontribe Ltd</p>
+                  <p>Neontribe</p>
                   <p>21 Colegate</p>
                   <p>Norwich</p>
                   <p>NR3 1BN</p>
@@ -131,11 +131,10 @@ const ContactUs = () => (
         </Container>
         <VerticalSpacing size={9}></VerticalSpacing>
         <Text size="small" color="black">
-          <p>Neontribe Ltd</p>
-          <p>Registered in England & Wales Registration number: 06165574</p>
+          <p>dxw ltd, trading as Neontribe</p>
+          <p>Registered in England & Wales Registration number: 09421914</p>
           <p>
-            Registered office: Studio 1.05c Level 1 Department Leeds Dock, The
-            Boulevard, Leeds, England, LS10 1PZ
+            Registered office: 131 Coombe Lane, London, England, SW20 0QY
           </p>
         </Text>
       </ConstrainedWidth>
